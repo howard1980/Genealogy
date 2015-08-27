@@ -84,7 +84,7 @@
 		2928144D1B8E029A008AEC55 /* Genealogy */ = {
 			isa = PBXGroup;
 			children = (
-				2928149D1B8EAA22008AEC55 /* FramWork */,
+				2928149D1B8EAA22008AEC55 /* FrameWork */,
 				292814521B8E029A008AEC55 /* AppDelegate.h */,
 				292814531B8E029A008AEC55 /* AppDelegate.m */,
 				292814551B8E029A008AEC55 /* FirstViewController.h */,
@@ -125,11 +125,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2928149D1B8EAA22008AEC55 /* FramWork */ = {
+		2928149D1B8EAA22008AEC55 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = FramWork;
+			name = FrameWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +430,7 @@
 				292814731B8E029A008AEC55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		292814741B8E029A008AEC55 /* Build configuration list for PBXNativeTarget "GenealogyTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +439,7 @@
 				292814761B8E029A008AEC55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
