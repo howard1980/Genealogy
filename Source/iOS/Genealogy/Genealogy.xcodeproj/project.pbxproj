@@ -15,6 +15,7 @@
 		2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2928145E1B8E029A008AEC55 /* Images.xcassets */; };
 		292814621B8E029A008AEC55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292814601B8E029A008AEC55 /* LaunchScreen.xib */; };
 		2928146E1B8E029A008AEC55 /* GenealogyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2928146D1B8E029A008AEC55 /* GenealogyTests.m */; };
+		297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F870B1B8ED34E0056A89A /* MXHFrameWork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		292814671B8E029A008AEC55 /* GenealogyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenealogyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2928146C1B8E029A008AEC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2928146D1B8E029A008AEC55 /* GenealogyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenealogyTests.m; sourceTree = "<group>"; };
+		297F870A1B8ED33A0056A89A /* MXHFrameWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MXHFrameWork.h; path = FrameWork/MXHFrameWork.h; sourceTree = "<group>"; };
+		297F870B1B8ED34E0056A89A /* MXHFrameWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXHFrameWork.m; path = FrameWork/MXHFrameWork.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 		2928149D1B8EAA22008AEC55 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				297F870A1B8ED33A0056A89A /* MXHFrameWork.h */,
+				297F870B1B8ED34E0056A89A /* MXHFrameWork.m */,
 			);
 			name = FrameWork;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2928145A1B8E029A008AEC55 /* SecondViewController.m in Sources */,
+				297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */,
 				292814541B8E029A008AEC55 /* AppDelegate.m in Sources */,
 				292814571B8E029A008AEC55 /* FirstViewController.m in Sources */,
 				292814511B8E029A008AEC55 /* main.m in Sources */,

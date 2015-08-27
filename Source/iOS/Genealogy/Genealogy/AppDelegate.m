@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MXHFrameWork.h"
+#import "FirstViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 登陆画面
+    MXHFrameWork.obj.loginViewController    = [[FirstViewController alloc] init];
+    
+    // 主画面
+    MXHFrameWork.obj.mainViewController     = [[FirstViewController alloc] init];
+    
+    // 导航页
+//    MXHFrameWork.obj.navigationController   = [[LTKNavigationViewController alloc]initWithRootViewController:MXHFrameWork.obj.rootViewController];
+    
+    // 启动程序
+    self.window = MXHFrameWork.obj.window;
+    
+    
     return YES;
 }
 
