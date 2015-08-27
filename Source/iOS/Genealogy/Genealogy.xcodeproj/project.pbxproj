@@ -84,6 +84,7 @@
 		2928144D1B8E029A008AEC55 /* Genealogy */ = {
 			isa = PBXGroup;
 			children = (
+				2928149D1B8EAA22008AEC55 /* FramWork */,
 				292814521B8E029A008AEC55 /* AppDelegate.h */,
 				292814531B8E029A008AEC55 /* AppDelegate.m */,
 				292814551B8E029A008AEC55 /* FirstViewController.h */,
@@ -122,6 +123,13 @@
 				2928146C1B8E029A008AEC55 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2928149D1B8EAA22008AEC55 /* FramWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FramWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
