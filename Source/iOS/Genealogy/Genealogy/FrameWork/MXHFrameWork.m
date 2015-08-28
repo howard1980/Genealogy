@@ -31,13 +31,11 @@
 }
 
 -(UIWindow*) window{
-    if (!_mxhWindow) {
-        [self.navigationController pushViewController:self.rootViewController animated:true];
-        _mxhWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        _mxhWindow.rootViewController=self.navigationController;
-        _mxhWindow.backgroundColor = [UIColor whiteColor];
-        [_mxhWindow makeKeyAndVisible];
-    }
+//    [self.navigationController pushViewController:self.rootViewController animated:true];
+    _mxhWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _mxhWindow.rootViewController=self.rootViewController;
+    _mxhWindow.backgroundColor = [UIColor whiteColor];
+    [_mxhWindow makeKeyAndVisible];
     return _mxhWindow;
 }
 
@@ -56,8 +54,8 @@
             [[NSUserDefaults standardUserDefaults]setObject:@"false" forKey:@"isFirst"];
             
             // Added Introduction View Controller
-            NSArray *coverImageNames = @[@"img_index_01txt", @"img_index_02txt", @"img_index_03txt"];
-            NSArray *backgroundImageNames = @[@"img_index_01bg", @"img_index_02bg", @"img_index_03bg"];
+            NSArray *coverImageNames = [dict objectForKey:@"CoverImage"];
+            NSArray *backgroundImageNames = [dict objectForKey:@"BackgroundImage"];
             IntroductionViewController *introductionView = [[IntroductionViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
     
             
@@ -76,6 +74,7 @@
         }
     }
     
+    self.navigationController = [[UINavigationController alloc]initWithRootViewController:_mainViewController];
     return _mainViewController;
     
     

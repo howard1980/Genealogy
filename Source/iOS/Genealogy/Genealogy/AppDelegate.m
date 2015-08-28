@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "MXHFrameWork.h"
 #import "LoginViewController.h"
-#import "WelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,30 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // 欢迎画面
-    MXHFrameWork.obj.welcomeViewController  = [[WelcomeViewController alloc] init];
-    
     // 登陆画面
     MXHFrameWork.obj.loginViewController    = [[LoginViewController alloc] init];
     
     // 主画面
     MXHFrameWork.obj.mainViewController     = [[LoginViewController alloc] init];
     
-    // 导航页
-    MXHFrameWork.obj.navigationController   = [[UINavigationController alloc] init];
-    
     // 启动程序
     self.window = MXHFrameWork.obj.window;
-    
-//    UINavigationController *navigationController;
-//    
-//    UIViewController *rootViewController;
-//    rootViewController=[[LoginViewController alloc] init];
-//    navigationController=[[UINavigationController alloc]initWithRootViewController:rootViewController];
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController=navigationController;
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
     
     return YES;
 }

@@ -8,6 +8,7 @@
 
 #import "IntroductionViewController.h"
 #import "MXHFrameWork.h"
+#import "AppDelegate.h"
 
 
 @interface IntroductionViewController () <UIScrollViewDelegate>
@@ -236,13 +237,8 @@
 
 - (void)enter:(id)object
 {
-    [MXHFrameWork.obj.navigationController pushViewController:MXHFrameWork.obj.rootViewController animated:true];
-    //self.didSelectedEnter();
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    app.window =MXHFrameWork.obj.window;
 }
 
 @end

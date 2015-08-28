@@ -16,8 +16,6 @@
 		297F870E1B8EE1C40056A89A /* configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297F870D1B8EE1C40056A89A /* configure.plist */; };
 		297F871A1B8F3B7A0056A89A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F87181B8F3B7A0056A89A /* LoginViewController.m */; };
 		297F871B1B8F3B7A0056A89A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F87191B8F3B7A0056A89A /* LoginViewController.xib */; };
-		297F872B1B8F478E0056A89A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F87291B8F478E0056A89A /* WelcomeViewController.m */; };
-		297F872C1B8F478E0056A89A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F872A1B8F478E0056A89A /* WelcomeViewController.xib */; };
 		297F872F1B8F56680056A89A /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F872E1B8F56680056A89A /* IntroductionViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,9 +47,6 @@
 		297F87181B8F3B7A0056A89A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		297F87191B8F3B7A0056A89A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		297F87271B8F46DE0056A89A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Protocal/Constant.h; sourceTree = "<group>"; };
-		297F87281B8F478E0056A89A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
-		297F87291B8F478E0056A89A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		297F872A1B8F478E0056A89A /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		297F872D1B8F56680056A89A /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroductionViewController.h; path = FrameWork/GuidViewController/IntroductionViewController.h; sourceTree = "<group>"; };
 		297F872E1B8F56680056A89A /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroductionViewController.m; path = FrameWork/GuidViewController/IntroductionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,9 +99,6 @@
 				297F87171B8F3B7A0056A89A /* LoginViewController.h */,
 				297F87181B8F3B7A0056A89A /* LoginViewController.m */,
 				297F87191B8F3B7A0056A89A /* LoginViewController.xib */,
-				297F87281B8F478E0056A89A /* WelcomeViewController.h */,
-				297F87291B8F478E0056A89A /* WelcomeViewController.m */,
-				297F872A1B8F478E0056A89A /* WelcomeViewController.xib */,
 			);
 			path = Genealogy;
 			sourceTree = "<group>";
@@ -254,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297F872C1B8F478E0056A89A /* WelcomeViewController.xib in Resources */,
 				297F871B1B8F3B7A0056A89A /* LoginViewController.xib in Resources */,
 				292814621B8E029A008AEC55 /* LaunchScreen.xib in Resources */,
 				2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */,
@@ -276,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				297F872B1B8F478E0056A89A /* WelcomeViewController.m in Sources */,
 				297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */,
 				297F872F1B8F56680056A89A /* IntroductionViewController.m in Sources */,
 				292814541B8E029A008AEC55 /* AppDelegate.m in Sources */,
