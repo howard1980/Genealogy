@@ -7,9 +7,10 @@
 //
 
 #import "MXHFrameWork.h"
+#import "IntroductionViewController.h"
 
 @interface MXHFrameWork ()
-
+@property (nonatomic, readonly) UIWindow *mxhWindow;
 @end
 
 @implementation MXHFrameWork
@@ -30,13 +31,54 @@
 }
 
 -(UIWindow*) window{
-    if (!_window) {
-        _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-        _window.rootViewController=self.navigationController;
-        _window.backgroundColor = [UIColor whiteColor];
-        [_window makeKeyAndVisible];
+    if (!_mxhWindow) {
+        [self.navigationController pushViewController:self.rootViewController animated:true];
+        _mxhWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        _mxhWindow.rootViewController=self.navigationController;
+        _mxhWindow.backgroundColor = [UIColor whiteColor];
+        [_mxhWindow makeKeyAndVisible];
     }
-    return _window;
+    return _mxhWindow;
+}
+
+-(UIViewController*)rootViewController{
+    //读取plist文件：
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"configure" ofType:@"plist"];
+    NSMutableDictionary* dict =  [[NSMutableDictionary alloc] initWithContentsOfFile:path ];
+    
+    // 首次打开确认
+    int iFirst = [[dict objectForKey:@"AppFirstRun"] intValue];
+    
+    if (iFirst == 1) {
+        // 确认是否已打开过
+        if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"isFirst"]isEqualToString:@"false"])
+        {
+            [[NSUserDefaults standardUserDefaults]setObject:@"false" forKey:@"isFirst"];
+            
+            // Added Introduction View Controller
+            NSArray *coverImageNames = @[@"img_index_01txt", @"img_index_02txt", @"img_index_03txt"];
+            NSArray *backgroundImageNames = @[@"img_index_01bg", @"img_index_02bg", @"img_index_03bg"];
+            IntroductionViewController *introductionView = [[IntroductionViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
+    
+            
+            return introductionView;
+        }
+    }
+
+    // 是否需要登录确认
+    Boolean bLogin = (Boolean)[dict objectForKey:@"IsLogin"];
+    
+    if(bLogin){
+        // 确认是否已登录
+        if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"]isEqualToString:@"true"])
+        {
+            return _loginViewController;
+        }
+    }
+    
+    return _mainViewController;
+    
+    
 }
 
 @end

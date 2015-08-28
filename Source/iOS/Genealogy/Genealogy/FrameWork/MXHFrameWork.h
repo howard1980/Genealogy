@@ -10,11 +10,12 @@
 
 @interface MXHFrameWork: NSObject
 
+@property (strong, nonatomic) UIViewController *welcomeViewController;
 @property (strong, nonatomic) UIViewController *loginViewController;
 @property (strong, nonatomic) UIViewController *mainViewController;
 @property (strong, nonatomic) UINavigationController *navigationController;
-@property (readonly) UIViewController *rootViewController;
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, readonly) UIViewController *rootViewController;
+@property (nonatomic, readonly) UIWindow *window;
 
 +(MXHFrameWork *)obj;
 

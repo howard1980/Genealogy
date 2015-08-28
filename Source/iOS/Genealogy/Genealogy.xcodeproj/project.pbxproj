@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		292814511B8E029A008AEC55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814501B8E029A008AEC55 /* main.m */; };
 		292814541B8E029A008AEC55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814531B8E029A008AEC55 /* AppDelegate.m */; };
-		292814571B8E029A008AEC55 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814561B8E029A008AEC55 /* FirstViewController.m */; };
-		2928145A1B8E029A008AEC55 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814591B8E029A008AEC55 /* SecondViewController.m */; };
-		2928145D1B8E029A008AEC55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2928145B1B8E029A008AEC55 /* Main.storyboard */; };
 		2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2928145E1B8E029A008AEC55 /* Images.xcassets */; };
 		292814621B8E029A008AEC55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292814601B8E029A008AEC55 /* LaunchScreen.xib */; };
 		2928146E1B8E029A008AEC55 /* GenealogyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2928146D1B8E029A008AEC55 /* GenealogyTests.m */; };
 		297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F870B1B8ED34E0056A89A /* MXHFrameWork.m */; };
+		297F870E1B8EE1C40056A89A /* configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297F870D1B8EE1C40056A89A /* configure.plist */; };
+		297F871A1B8F3B7A0056A89A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F87181B8F3B7A0056A89A /* LoginViewController.m */; };
+		297F871B1B8F3B7A0056A89A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F87191B8F3B7A0056A89A /* LoginViewController.xib */; };
+		297F872B1B8F478E0056A89A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F87291B8F478E0056A89A /* WelcomeViewController.m */; };
+		297F872C1B8F478E0056A89A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 297F872A1B8F478E0056A89A /* WelcomeViewController.xib */; };
+		297F872F1B8F56680056A89A /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F872E1B8F56680056A89A /* IntroductionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +37,6 @@
 		292814501B8E029A008AEC55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		292814521B8E029A008AEC55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		292814531B8E029A008AEC55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		292814551B8E029A008AEC55 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		292814561B8E029A008AEC55 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		292814581B8E029A008AEC55 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		292814591B8E029A008AEC55 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		2928145C1B8E029A008AEC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2928145E1B8E029A008AEC55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		292814611B8E029A008AEC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		292814671B8E029A008AEC55 /* GenealogyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenealogyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +44,16 @@
 		2928146D1B8E029A008AEC55 /* GenealogyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenealogyTests.m; sourceTree = "<group>"; };
 		297F870A1B8ED33A0056A89A /* MXHFrameWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MXHFrameWork.h; path = FrameWork/MXHFrameWork.h; sourceTree = "<group>"; };
 		297F870B1B8ED34E0056A89A /* MXHFrameWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXHFrameWork.m; path = FrameWork/MXHFrameWork.m; sourceTree = "<group>"; };
+		297F870D1B8EE1C40056A89A /* configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configure.plist; path = Resources/configure.plist; sourceTree = "<group>"; };
+		297F87171B8F3B7A0056A89A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		297F87181B8F3B7A0056A89A /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		297F87191B8F3B7A0056A89A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		297F87271B8F46DE0056A89A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Protocal/Constant.h; sourceTree = "<group>"; };
+		297F87281B8F478E0056A89A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		297F87291B8F478E0056A89A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		297F872A1B8F478E0056A89A /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		297F872D1B8F56680056A89A /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroductionViewController.h; path = FrameWork/GuidViewController/IntroductionViewController.h; sourceTree = "<group>"; };
+		297F872E1B8F56680056A89A /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroductionViewController.m; path = FrameWork/GuidViewController/IntroductionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,14 +98,15 @@
 				2928149D1B8EAA22008AEC55 /* FrameWork */,
 				292814521B8E029A008AEC55 /* AppDelegate.h */,
 				292814531B8E029A008AEC55 /* AppDelegate.m */,
-				292814551B8E029A008AEC55 /* FirstViewController.h */,
-				292814561B8E029A008AEC55 /* FirstViewController.m */,
-				292814581B8E029A008AEC55 /* SecondViewController.h */,
-				292814591B8E029A008AEC55 /* SecondViewController.m */,
-				2928145B1B8E029A008AEC55 /* Main.storyboard */,
 				2928145E1B8E029A008AEC55 /* Images.xcassets */,
 				292814601B8E029A008AEC55 /* LaunchScreen.xib */,
 				2928144E1B8E029A008AEC55 /* Supporting Files */,
+				297F87171B8F3B7A0056A89A /* LoginViewController.h */,
+				297F87181B8F3B7A0056A89A /* LoginViewController.m */,
+				297F87191B8F3B7A0056A89A /* LoginViewController.xib */,
+				297F87281B8F478E0056A89A /* WelcomeViewController.h */,
+				297F87291B8F478E0056A89A /* WelcomeViewController.m */,
+				297F872A1B8F478E0056A89A /* WelcomeViewController.xib */,
 			);
 			path = Genealogy;
 			sourceTree = "<group>";
@@ -107,6 +116,7 @@
 			children = (
 				2928144F1B8E029A008AEC55 /* Info.plist */,
 				292814501B8E029A008AEC55 /* main.m */,
+				297F870D1B8EE1C40056A89A /* configure.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,10 +141,37 @@
 		2928149D1B8EAA22008AEC55 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				297F87261B8F468C0056A89A /* Protocal */,
+				297F87101B8F276F0056A89A /* UtilityViewController */,
 				297F870A1B8ED33A0056A89A /* MXHFrameWork.h */,
 				297F870B1B8ED34E0056A89A /* MXHFrameWork.m */,
 			);
 			name = FrameWork;
+			sourceTree = "<group>";
+		};
+		297F870F1B8F27550056A89A /* GuidViewController */ = {
+			isa = PBXGroup;
+			children = (
+				297F872D1B8F56680056A89A /* IntroductionViewController.h */,
+				297F872E1B8F56680056A89A /* IntroductionViewController.m */,
+			);
+			name = GuidViewController;
+			sourceTree = "<group>";
+		};
+		297F87101B8F276F0056A89A /* UtilityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				297F870F1B8F27550056A89A /* GuidViewController */,
+			);
+			name = UtilityViewController;
+			sourceTree = "<group>";
+		};
+		297F87261B8F468C0056A89A /* Protocal */ = {
+			isa = PBXGroup;
+			children = (
+				297F87271B8F46DE0056A89A /* Constant.h */,
+			);
+			name = Protocal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2928145D1B8E029A008AEC55 /* Main.storyboard in Resources */,
+				297F872C1B8F478E0056A89A /* WelcomeViewController.xib in Resources */,
+				297F871B1B8F3B7A0056A89A /* LoginViewController.xib in Resources */,
 				292814621B8E029A008AEC55 /* LaunchScreen.xib in Resources */,
 				2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */,
+				297F870E1B8EE1C40056A89A /* configure.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,11 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2928145A1B8E029A008AEC55 /* SecondViewController.m in Sources */,
+				297F872B1B8F478E0056A89A /* WelcomeViewController.m in Sources */,
 				297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */,
+				297F872F1B8F56680056A89A /* IntroductionViewController.m in Sources */,
 				292814541B8E029A008AEC55 /* AppDelegate.m in Sources */,
-				292814571B8E029A008AEC55 /* FirstViewController.m in Sources */,
 				292814511B8E029A008AEC55 /* main.m in Sources */,
+				297F871A1B8F3B7A0056A89A /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2928145B1B8E029A008AEC55 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2928145C1B8E029A008AEC55 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		292814601B8E029A008AEC55 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
