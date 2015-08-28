@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MXHFrameWork.h"
-#import "LoginViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // 登陆画面
-    MXHFrameWork.obj.loginViewController    = [[LoginViewController alloc] init];
+//    // 登陆画面
+//    MXHFrameWork.obj.loginViewController    = [[LoginViewController alloc] init];
     
     // 主画面
-    MXHFrameWork.obj.mainViewController     = [[LoginViewController alloc] init];
+    MXHFrameWork.obj.mainViewController     = [[MainViewController alloc] init];
     
     // 启动程序
     self.window = MXHFrameWork.obj.window;

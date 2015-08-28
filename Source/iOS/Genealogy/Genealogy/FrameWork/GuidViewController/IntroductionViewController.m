@@ -144,7 +144,7 @@
 {
     if ([scrollView.panGestureRecognizer translationInView:scrollView.superview].x < 0) {
         if (![self hasNext:self.pageControl]) {
-            [self enter:nil];
+//            [self enter:nil];
         }
     }
 }
@@ -241,4 +241,8 @@
     app.window =MXHFrameWork.obj.window;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 @end

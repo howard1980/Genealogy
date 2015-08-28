@@ -57,7 +57,6 @@
             NSArray *coverImageNames = [dict objectForKey:@"CoverImage"];
             NSArray *backgroundImageNames = [dict objectForKey:@"BackgroundImage"];
             IntroductionViewController *introductionView = [[IntroductionViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
-    
             
             return introductionView;
         }
@@ -70,7 +69,9 @@
         // 确认是否已登录
         if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"]isEqualToString:@"true"])
         {
-            return _loginViewController;
+            if (_loginViewController){
+                return _loginViewController;
+            }
         }
     }
     
