@@ -30,7 +30,8 @@
     NSDictionary *postJsonDic =[self buildRequestData];
     NSLog(@"post json == %@", postJsonDic);
     
-    [manager POST:MXHFrameWork.obj.baseURL parameters:postJsonDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString* url = [NSString stringWithFormat:@"%@%@", MXHFrameWork.obj.baseURL, serviceMethod ];
+    [manager POST:url parameters:postJsonDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@",operation.responseString);
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:operation.responseData options:kNilOptions error:nil];
         

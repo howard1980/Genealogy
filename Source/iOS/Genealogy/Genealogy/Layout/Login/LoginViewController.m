@@ -37,7 +37,9 @@
 }
 
 - (void)successMethd:(BaseModel *)model{
-    
+    if([model.className isEqualToString:@"XXXXX"]){
+        
+    }
 }
 
 - (void)errorMethd{

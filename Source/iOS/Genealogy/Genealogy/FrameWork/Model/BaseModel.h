@@ -11,8 +11,10 @@
 @interface BaseModel : NSObject
 {
     NSString *serviceMethod;
-    NSString *className;
+    
 }
+
+@property (nonatomic) NSString *className;
 
 
 @property (nonatomic) BOOL success;

@@ -19,7 +19,7 @@
     self = [super init];
     if (self) {
         serviceMethod = @"SsValidCode";
-        className = @"ValidCode";
+        self.className = @"ValidCode";
     }
     return self;
 }
