@@ -48,17 +48,6 @@
             if (faild) {
                 faild();
             }
-            
-//            if (exceptionsArray.count>0) {
-//                NSDictionary *exceptionDic = exceptionsArray[0];
-//                if ([exceptionDic[@"type"] isEqualToString:@"E"]) {
-////                    ALERT_VIEW(exceptionDic[@"message"]);
-//                }else{
-//                    
-//                }
-//
-//            }
-            
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         self.exceptions = [NSArray arrayWithObject:@"网络连接失败！"];
@@ -66,10 +55,6 @@
             faild();
         }
         NSLog(@"%@",error);
-        //EndLoading;
     }];
-//    if (!self.notShowLoading) {
-//        BeginLoading(self.loadingString);
-//    }
 }
 @end

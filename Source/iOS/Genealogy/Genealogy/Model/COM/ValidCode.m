@@ -9,7 +9,6 @@
 #import "ValidCode.h"
 
 @interface ValidCode()
-//ValidCodeOutDTO *dto;
 @property (strong, nonatomic) NSString* phone;
 @end
 
