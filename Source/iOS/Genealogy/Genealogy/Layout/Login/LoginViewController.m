@@ -2,11 +2,12 @@
 //  LoginViewController.m
 //  Genealogy
 //
-//  Created by xiao huama on 15/8/27.
+//  Created by xiao huama on 15/8/28.
 //  Copyright (c) 2015年 xiao huama. All rights reserved.
 //
 
 #import "LoginViewController.h"
+#import "ValidCode.h"
 
 @interface LoginViewController ()
 
@@ -16,13 +17,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = NO;
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)getValidCode:(id)sender {
+    
+    ValidCode *vc = [[ValidCode alloc] init];
+    vc.delegate = self;
+    [vc postData:self.txtPhone.text];
+}
+
+- (IBAction)login:(id)sender {
+    
+}
+
+- (void)successMethd:(BaseModel *)model{
+    
+}
+
+- (void)errorMethd{
+    
 }
 
 /*

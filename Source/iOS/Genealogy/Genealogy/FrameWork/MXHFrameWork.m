@@ -11,6 +11,7 @@
 
 @interface MXHFrameWork ()
 @property (nonatomic, readonly) UIWindow *mxhWindow;
+@property (readwrite, nonatomic, strong) NSString *baseURL;
 @end
 
 @implementation MXHFrameWork
@@ -27,15 +28,21 @@
 
 -(id) init
 {
+    //读取plist文件：
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"configure" ofType:@"plist"];
+    NSMutableDictionary* dict =  [[NSMutableDictionary alloc] initWithContentsOfFile:path ];
+    self.baseURL = [dict objectForKey:@"BaseURL"];
     return [super init] ;
+    
 }
 
 -(UIWindow*) window{
-//    [self.navigationController pushViewController:self.rootViewController animated:true];
+
     _mxhWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _mxhWindow.rootViewController=self.rootViewController;
     _mxhWindow.backgroundColor = [UIColor whiteColor];
     [_mxhWindow makeKeyAndVisible];
+    
     return _mxhWindow;
 }
 

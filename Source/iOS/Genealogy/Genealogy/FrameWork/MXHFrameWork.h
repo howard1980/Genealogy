@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 xiao huama. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @interface MXHFrameWork: NSObject
@@ -15,6 +16,7 @@
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (nonatomic, readonly) UIViewController *rootViewController;
 @property (nonatomic, readonly) UIWindow *window;
+@property (readonly, nonatomic, strong) NSString *baseURL;
 
 +(MXHFrameWork *)obj;
 
