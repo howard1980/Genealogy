@@ -17,17 +17,17 @@ import javax.ws.rs.core.MediaType;
 import com.maxiaohua.genealogy.fw.core.dao.CISSqlSessionFactory;
 
 
-@Path("app")
+@Path("sxxc")
 public class GenealogyRestController extends AbstractRestController {
 
 	
 	private static final String SLASH = "/";
 
 	
-	private static final String ROOT_PATH = "/app/";
+	private static final String ROOT_PATH = "/sxxc/";
 
 	
-	private static final int ROOT_LENGTH = 5;
+	private static final int ROOT_LENGTH = 6;
 
 	
 	public GenealogyRestController() {

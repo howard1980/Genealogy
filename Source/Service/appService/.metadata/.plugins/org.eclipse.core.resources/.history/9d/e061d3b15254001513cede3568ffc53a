@@ -20,7 +20,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>Genealogy REST Service</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/rest/*</url-pattern>
   </servlet-mapping>
   <resource-ref>
     <description>Datasource connection to GenealogyDataSourceRefer</description>
