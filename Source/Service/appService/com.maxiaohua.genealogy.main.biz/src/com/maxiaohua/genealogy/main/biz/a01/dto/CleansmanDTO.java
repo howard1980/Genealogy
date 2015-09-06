@@ -1,6 +1,6 @@
 ﻿/*
- * SXXC
- * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ * Genealogy
+ * Xiao Hua Ma personal studio 2015.
  */
 package com.maxiaohua.genealogy.main.biz.a01.dto;
 
@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/01             TOOL                Create
+ * 1.0          2015/09/06             TOOL                Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.AliasKanJi("家族用户单点信息")

@@ -1,6 +1,6 @@
 ﻿/*
- * CCIS
- * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ * Genealogy
+ * Xiao Hua Ma personal studio 2015.
  */
 package com.maxiaohua.genealogy.main.db.tbl.support;
 
@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/01             TOOL                 Create
+ * 1.0          2015/09/06             TOOL                 Create
 *
  */
 public abstract class T13NoticeDTOSupport extends BaseTableDTO {

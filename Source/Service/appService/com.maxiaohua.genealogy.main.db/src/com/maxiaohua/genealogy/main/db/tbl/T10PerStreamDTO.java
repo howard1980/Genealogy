@@ -1,6 +1,6 @@
 ﻿/*
- * CCIS
- * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ * Genealogy
+ * Xiao Hua Ma personal studio 2015.
  */
 package com.maxiaohua.genealogy.main.db.tbl;
 
@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T10PerStreamDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/01             TOOL                 Create
+ * 1.0          2015/09/06             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T10_PER_STREAM")

@@ -1,5 +1,5 @@
-﻿/* SXXC
-* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+﻿/* Genealogy
+* Xiao Hua Ma personal studio 2015.
 */
 package com.maxiaohua.genealogy.main.service.a03.dto;
 
@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.biz.com.dto.AddressInfoDTO;
  * 变更履历
  * REV.         变更日期           变更者              变更内容
  * -------      ---------------    ----------------    ------------------
- * 1.0          2015/09/01         TOOL                初次作成
+ * 1.0          2015/09/06         TOOL                初次作成
  *
  */
 @com.maxiaohua.genealogy.fw.core.type.AliasKanJi("增加家族事件通告")

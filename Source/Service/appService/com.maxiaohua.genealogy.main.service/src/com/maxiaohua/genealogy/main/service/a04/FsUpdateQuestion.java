@@ -1,6 +1,6 @@
 ﻿/*
- * SXXC
- * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ * Genealogy
+ * Xiao Hua Ma personal studio 2015.
  */
 package com.maxiaohua.genealogy.main.service.a04;
 
