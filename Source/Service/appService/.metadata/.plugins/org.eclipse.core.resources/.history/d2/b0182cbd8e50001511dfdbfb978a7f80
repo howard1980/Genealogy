@@ -1,0 +1,23 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.AutoBrandDTO;
+import com.maxiaohua.genealogy.main.biz.a01.dto.CarManufacturerDTO;
+import com.maxiaohua.genealogy.main.biz.a01.dto.CarModelDTO;
+import com.maxiaohua.genealogy.main.biz.a01.dto.CarSeriesDTO;
+
+/**
+ * 取汽车品牌 车系 车型 等信息
+ * @author shaolizhi
+ *
+ */
+public interface HbCar {
+	List<AutoBrandDTO> getBrands();
+	List<CarManufacturerDTO> getManufacturers();
+	List<CarSeriesDTO> getSeries();
+	List<CarModelDTO> getModels();
+	
+	CarSeriesDTO getCarSeries();
+	CarModelDTO getCarModel();
+}

@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="18" timestamp="1441103225687" analysisTimestamp="1441103225156" release="">
+  <Project projectName="com.maxiaohua.genealogy.main.service">
+    <Jar>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.service\bin\com\maxiaohua\genealogy\main\service\com\dto\FsLoginOutDTO.class</Jar>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.service\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\annotations-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ha.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-tribes.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc_license_cu.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\ecj-3.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\el-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper-el.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jsp-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-coyote.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-es.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-fr.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-ja.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-jdbc.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-util.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jedis-2.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\gson-2.2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jpush-client-3.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\slf4j-api-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.biz\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.db\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_20\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.service\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoInDTO" sourcefile="FsAddFamilyInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsAddFamilyInfoInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsAddFamilyInfoInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoInDTO" start="103" end="103" startBytecode="0" endBytecode="76" sourcefile="FsAddFamilyInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsAddFamilyInfoInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoOutDTO" sourcefile="FsAddFamilyInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsAddFamilyInfoOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsAddFamilyInfoOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsAddFamilyInfoOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsAddFamilyInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsAddFamilyInfoOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoInDTO" sourcefile="FsDeleteFamilyInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsDeleteFamilyInfoInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsDeleteFamilyInfoInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoInDTO" start="77" end="77" startBytecode="0" endBytecode="76" sourcefile="FsDeleteFamilyInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsDeleteFamilyInfoInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoOutDTO" sourcefile="FsDeleteFamilyInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsDeleteFamilyInfoOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsDeleteFamilyInfoOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsDeleteFamilyInfoOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsDeleteFamilyInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsDeleteFamilyInfoOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanInDTO" sourcefile="FsGetClansmanInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetClansmanInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" name="getCleansmen" signature="()[Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" name="cleansmen" signature="[Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" name="setCleansmen" signature="([Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" name="cleansmen" signature="[Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Field>
+    <LocalVariable name="cleansmen" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeInDTO" sourcefile="FsGetClansmanTreeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanTreeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanTreeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsGetClansmanTreeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanTreeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeOutDTO" sourcefile="FsGetClansmanTreeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanTreeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanTreeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetClansmanTreeOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetClansmanTreeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetClansmanTreeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListInDTO" sourcefile="FsGetCleansmanListInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsGetCleansmanListInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" name="getFamilyList" signature="()[Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" name="familyList" signature="[Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" name="setFamilyList" signature="([Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" name="familyList" signature="[Lcom/maxiaohua/genealogy/main/biz/a01/dto/CleansmanDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Field>
+    <LocalVariable name="familyList" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetCleansmanListOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetCleansmanListOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetCleansmanListOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanInDTO" sourcefile="FsGetFamilyOtherClansmanInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetFamilyOtherClansmanInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetFamilyOtherClansmanInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanInDTO" start="77" end="77" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyOtherClansmanInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetFamilyOtherClansmanInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanOutDTO" sourcefile="FsGetFamilyOtherClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetFamilyOtherClansmanOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetFamilyOtherClansmanOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetFamilyOtherClansmanOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyOtherClansmanOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetFamilyOtherClansmanOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleInDTO" sourcefile="FsGetPeopleInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetPeopleInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetPeopleInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetPeopleInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetPeopleInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleOutDTO" sourcefile="FsGetPeopleOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetPeopleOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsGetPeopleOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsGetPeopleOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetPeopleOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsGetPeopleOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleInDTO" sourcefile="FsRemovPeopleInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsRemovPeopleInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsRemovPeopleInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsRemovPeopleInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsRemovPeopleInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleOutDTO" sourcefile="FsRemovPeopleOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsRemovPeopleOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsRemovPeopleOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsRemovPeopleOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsRemovPeopleOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsRemovPeopleOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoInDTO" sourcefile="FsUpdateFamilyInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdateFamilyInfoInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsUpdateFamilyInfoInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoInDTO" start="79" end="79" startBytecode="0" endBytecode="76" sourcefile="FsUpdateFamilyInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdateFamilyInfoInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoOutDTO" sourcefile="FsUpdateFamilyInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdateFamilyInfoOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsUpdateFamilyInfoOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdateFamilyInfoOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdateFamilyInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdateFamilyInfoOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoInDTO" sourcefile="FsUpdatePeopleInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleInfoInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleInfoInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoInDTO" start="79" end="79" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePeopleInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleInfoInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoOutDTO" sourcefile="FsUpdatePeopleInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleInfoOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleInfoOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleInfoOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePeopleInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleInfoOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalInDTO" sourcefile="FsUpdatePeopleLocalInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleLocalInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleLocalInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalInDTO" start="125" end="125" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePeopleLocalInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleLocalInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="7">
+    <Class classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalOutDTO" sourcefile="FsUpdatePeopleLocalOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleLocalOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleLocalOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a01.dto.FsUpdatePeopleLocalOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePeopleLocalOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a01/dto/FsUpdatePeopleLocalOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentInDTO" sourcefile="FsGetActionCommentInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsGetActionCommentInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" name="getComments" signature="()[Lcom/maxiaohua/genealogy/main/biz/a02/dto/CommentDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" name="comments" signature="[Lcom/maxiaohua/genealogy/main/biz/a02/dto/CommentDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" name="setComments" signature="([Lcom/maxiaohua/genealogy/main/biz/a02/dto/CommentDTO;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" name="comments" signature="[Lcom/maxiaohua/genealogy/main/biz/a02/dto/CommentDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Field>
+    <LocalVariable name="comments" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetActionCommentOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetActionCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetActionCommentOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionInDTO" sourcefile="FsGetFamilyActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" name="getActions" signature="()[Lcom/maxiaohua/genealogy/main/biz/a02/dto/ActionDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" name="actions" signature="[Lcom/maxiaohua/genealogy/main/biz/a02/dto/ActionDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" name="setActions" signature="([Lcom/maxiaohua/genealogy/main/biz/a02/dto/ActionDTO;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" name="actions" signature="[Lcom/maxiaohua/genealogy/main/biz/a02/dto/ActionDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Field>
+    <LocalVariable name="actions" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsGetFamilyActionOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsGetFamilyActionOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseInDTO" sourcefile="FsUpdatePraiseInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUpdatePraiseInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsUpdatePraiseInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePraiseInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUpdatePraiseInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseOutDTO" sourcefile="FsUpdatePraiseOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUpdatePraiseOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsUpdatePraiseOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUpdatePraiseOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePraiseOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUpdatePraiseOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentInDTO" sourcefile="FsUploadCommentInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUploadCommentInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsUploadCommentInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsUploadCommentInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUploadCommentInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="6">
+    <Class classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentOutDTO" sourcefile="FsUploadCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUploadCommentOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a02/dto/FsUploadCommentOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a02.dto.FsUploadCommentOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUploadCommentOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a02/dto/FsUploadCommentOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="getClansmanID" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="153" end="153" startBytecode="0" endBytecode="46" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="clansmanID" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="153" end="153" startBytecode="4" endBytecode="4" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="153" end="153" startBytecode="4" endBytecode="4" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="getDate" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="84" end="84" startBytecode="0" endBytecode="46" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="date" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="84" end="84" startBytecode="4" endBytecode="4" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="84" end="84" startBytecode="4" endBytecode="4" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="setClansmanID" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="162" end="163" startBytecode="0" endBytecode="61" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="clansmanID" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Field>
+    <LocalVariable name="clansmanID" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="162" end="162" startBytecode="2" endBytecode="2" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="162" end="162" startBytecode="2" endBytecode="2" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="setDate" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="93" end="94" startBytecode="0" endBytecode="61" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="date" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Field>
+    <LocalVariable name="date" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="93" end="93" startBytecode="2" endBytecode="2" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="93" end="93" startBytecode="2" endBytecode="2" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeInDTO" start="171" end="171" startBytecode="0" endBytecode="76" sourcefile="FsAddFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeOutDTO" sourcefile="FsAddFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAddFamilyNoticeOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsAddFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAddFamilyNoticeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeInDTO" sourcefile="FsAttentionNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAttentionNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsAttentionNoticeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsAttentionNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAttentionNoticeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeOutDTO" sourcefile="FsAttentionNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAttentionNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsAttentionNoticeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsAttentionNoticeOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsAttentionNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsAttentionNoticeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeInDTO" sourcefile="FsCommentNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsCommentNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsCommentNoticeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsCommentNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsCommentNoticeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeOutDTO" sourcefile="FsCommentNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsCommentNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsCommentNoticeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsCommentNoticeOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsCommentNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsCommentNoticeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInDTO" sourcefile="FsGetFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInDTO" start="101" end="101" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoInDTO" sourcefile="FsGetFamilyNoticeInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInfoInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInfoInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyNoticeInfoInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInfoInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoOutDTO" sourcefile="FsGetFamilyNoticeInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInfoOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInfoOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeInfoOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyNoticeInfoOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeInfoOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" name="getNoticeArray" signature="()[Lcom/maxiaohua/genealogy/main/biz/a03/dto/NoticeDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" name="noticeArray" signature="[Lcom/maxiaohua/genealogy/main/biz/a03/dto/NoticeDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" name="setNoticeArray" signature="([Lcom/maxiaohua/genealogy/main/biz/a03/dto/NoticeDTO;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" name="noticeArray" signature="[Lcom/maxiaohua/genealogy/main/biz/a03/dto/NoticeDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Field>
+    <LocalVariable name="noticeArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsGetFamilyNoticeOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsGetFamilyNoticeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="getClansmanID" signature="()[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="176" end="176" startBytecode="0" endBytecode="46" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="clansmanID" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="176" end="176" startBytecode="4" endBytecode="4" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="176" end="176" startBytecode="4" endBytecode="4" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="getDate" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="107" end="107" startBytecode="0" endBytecode="46" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="date" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="107" end="107" startBytecode="4" endBytecode="4" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="107" end="107" startBytecode="4" endBytecode="4" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="setClansmanID" signature="([Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="185" end="186" startBytecode="0" endBytecode="61" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="clansmanID" signature="[Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Field>
+    <LocalVariable name="clansmanID" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="185" end="185" startBytecode="2" endBytecode="2" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="185" end="185" startBytecode="2" endBytecode="2" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="15">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="setDate" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="116" end="117" startBytecode="0" endBytecode="61" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="date" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Field>
+    <LocalVariable name="date" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="116" end="116" startBytecode="2" endBytecode="2" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="116" end="116" startBytecode="2" endBytecode="2" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeInDTO" start="194" end="194" startBytecode="0" endBytecode="76" sourcefile="FsUpdateFamilyNoticeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="5">
+    <Class classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeOutDTO" sourcefile="FsUpdateFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a03.dto.FsUpdateFamilyNoticeOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdateFamilyNoticeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a03/dto/FsUpdateFamilyNoticeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionInDTO" sourcefile="FsAddActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsAddActionInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsAddActionInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionInDTO" start="79" end="79" startBytecode="0" endBytecode="76" sourcefile="FsAddActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsAddActionInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionOutDTO" sourcefile="FsAddActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsAddActionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsAddActionOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsAddActionOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsAddActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsAddActionOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionInDTO" sourcefile="FsDeleteActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsDeleteActionInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsDeleteActionInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsDeleteActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsDeleteActionInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionOutDTO" sourcefile="FsDeleteActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsDeleteActionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsDeleteActionOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsDeleteActionOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsDeleteActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsDeleteActionOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingInDTO" sourcefile="FsGetSettingInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsGetSettingInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsGetSettingInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetSettingInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsGetSettingInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingOutDTO" sourcefile="FsGetSettingOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsGetSettingOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsGetSettingOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsGetSettingOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetSettingOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsGetSettingOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionInDTO" sourcefile="FsUpdateActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateActionInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdateActionInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionInDTO" start="79" end="79" startBytecode="0" endBytecode="76" sourcefile="FsUpdateActionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateActionInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionOutDTO" sourcefile="FsUpdateActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateActionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdateActionOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateActionOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdateActionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateActionOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneInDTO" sourcefile="FsUpdatePhoneInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdatePhoneInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdatePhoneInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePhoneInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdatePhoneInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneOutDTO" sourcefile="FsUpdatePhoneOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdatePhoneOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdatePhoneOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdatePhoneOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdatePhoneOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdatePhoneOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionInDTO" sourcefile="FsUpdateQuestionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateQuestionInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdateQuestionInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionInDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsUpdateQuestionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateQuestionInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionOutDTO" sourcefile="FsUpdateQuestionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateQuestionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdateQuestionOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateQuestionOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdateQuestionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateQuestionOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingInDTO" sourcefile="FsUpdateSettingInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateSettingInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdateSettingInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingInDTO" start="79" end="79" startBytecode="0" endBytecode="76" sourcefile="FsUpdateSettingInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateSettingInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="3">
+    <Class classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingOutDTO" sourcefile="FsUpdateSettingOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateSettingOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/a04/dto/FsUpdateSettingOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.a04.dto.FsUpdateSettingOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsUpdateSettingOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/a04/dto/FsUpdateSettingOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionInDTO" sourcefile="FsGetAppVersionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetAppVersionInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsGetAppVersionInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionInDTO" start="102" end="102" startBytecode="0" endBytecode="76" sourcefile="FsGetAppVersionInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetAppVersionInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionOutDTO" sourcefile="FsGetAppVersionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetAppVersionOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsGetAppVersionOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetAppVersionOutDTO" start="99" end="99" startBytecode="0" endBytecode="76" sourcefile="FsGetAppVersionOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetAppVersionOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeInDTO" sourcefile="FsGetValidCodeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetValidCodeInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsGetValidCodeInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsGetValidCodeInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetValidCodeInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeOutDTO" sourcefile="FsGetValidCodeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetValidCodeOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsGetValidCodeOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsGetValidCodeOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsGetValidCodeOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginInDTO" sourcefile="FsLoginInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsLoginInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginInDTO" start="216" end="216" startBytecode="0" endBytecode="76" sourcefile="FsLoginInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="18">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" name="getFamilyInfoArray" signature="()[Lcom/maxiaohua/genealogy/main/biz/a01/dto/FamilyInfoDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="60" end="60" startBytecode="0" endBytecode="46" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" name="familyInfoArray" signature="[Lcom/maxiaohua/genealogy/main/biz/a01/dto/FamilyInfoDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="60" end="60" startBytecode="4" endBytecode="4" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="60" end="60" startBytecode="4" endBytecode="4" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="18">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" name="setFamilyInfoArray" signature="([Lcom/maxiaohua/genealogy/main/biz/a01/dto/FamilyInfoDTO;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="69" end="70" startBytecode="0" endBytecode="61" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" name="familyInfoArray" signature="[Lcom/maxiaohua/genealogy/main/biz/a01/dto/FamilyInfoDTO;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Field>
+    <LocalVariable name="familyInfoArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="69" end="69" startBytecode="2" endBytecode="2" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="69" end="69" startBytecode="2" endBytecode="2" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" start="78" end="78" startBytecode="0" endBytecode="76" sourcefile="FsLoginOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLoginOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutInDTO" sourcefile="FsLogoutInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLogoutInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsLogoutInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="FsLogoutInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLogoutInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutOutDTO" sourcefile="FsLogoutOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLogoutOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsLogoutOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsLogoutOutDTO" start="29" end="29" startBytecode="0" endBytecode="76" sourcefile="FsLogoutOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsLogoutOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistInDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistInDTO" sourcefile="FsRegistInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsRegistInDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistInDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsRegistInDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistInDTO" start="194" end="194" startBytecode="0" endBytecode="76" sourcefile="FsRegistInDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsRegistInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistOutDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistOutDTO" sourcefile="FsRegistOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsRegistOutDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistOutDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/service/com/dto/FsRegistOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.service.com.dto.FsRegistOutDTO" start="53" end="53" startBytecode="0" endBytecode="76" sourcefile="FsRegistOutDTO.java" sourcepath="com/maxiaohua/genealogy/main/service/com/dto/FsRegistOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 1 Sep 2015 18:27:05 +0800" total_classes="1" referenced_classes="15" total_bugs="86" total_size="22" num_packages="5" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="1.06" clock_seconds="0.55" peak_mbytes="474.95" alloc_mbytes="455.50" gc_seconds="0.01" priority_2="86">
+    <PackageStats package="com.maxiaohua.genealogy.main.service.com.dto" total_bugs="12" total_types="10" total_size="22" priority_2="12">
+      <ClassStats class="com.maxiaohua.genealogy.main.service.com.dto.FsLoginOutDTO" sourceFile="FsLoginOutDTO.java" interface="false" size="22" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="313" invocations="2" avgMicrosecondsPerInvocation="156678" maxMicrosecondsPerInvocation="306423" standardDeviationMircosecondsPerInvocation="149745"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="67" invocations="302" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="3774" standardDeviationMircosecondsPerInvocation="431"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1441102677451" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1441102677451" release="" codeSize="256" numClasses="10"/>
+    <AppVersion sequence="2" timestamp="1441102680560" release="" codeSize="31" numClasses="5"/>
+    <AppVersion sequence="3" timestamp="1441102689935" release="" codeSize="207" numClasses="14"/>
+    <AppVersion sequence="4" timestamp="1441102698717" release="" codeSize="38" numClasses="7"/>
+    <AppVersion sequence="5" timestamp="1441102708279" release="" codeSize="274" numClasses="18"/>
+    <AppVersion sequence="6" timestamp="1441102714436" release="" codeSize="181" numClasses="12"/>
+    <AppVersion sequence="7" timestamp="1441102724717" release="" codeSize="421" numClasses="33"/>
+    <AppVersion sequence="8" timestamp="1441102833842" release="" codeSize="24" numClasses="3"/>
+    <AppVersion sequence="9" timestamp="1441102843045" release="" codeSize="56" numClasses="7"/>
+    <AppVersion sequence="10" timestamp="1441102849233" release="" codeSize="48" numClasses="6"/>
+    <AppVersion sequence="11" timestamp="1441102855295" release="" codeSize="16" numClasses="2"/>
+    <AppVersion sequence="12" timestamp="1441102861592" release="" codeSize="88" numClasses="11"/>
+    <AppVersion sequence="13" timestamp="1441102899233" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1441102906389" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="15" timestamp="1441102940217" release="" codeSize="163" numClasses="5"/>
+    <AppVersion sequence="16" timestamp="1441103180609" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="17" timestamp="1441103190843" release="" codeSize="22" numClasses="1"/>
+  </History>
+</BugCollection>

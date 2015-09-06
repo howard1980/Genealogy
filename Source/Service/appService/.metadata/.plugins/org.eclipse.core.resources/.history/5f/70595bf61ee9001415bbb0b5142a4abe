@@ -1,0 +1,48 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.com.HbCustomer;
+import com.beetlestech.nfe.main.biz.com.dto.LoginDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsRegistCustomerInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsRegistCustomerOutDTO;
+
+public class SsRegistCustomer extends AbstractService<SsRegistCustomerOutDTO, SsRegistCustomerInDTO> {
+	@AutoInject
+	private HbCustomer hbCustomer;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsRegistCustomerOutDTO execute(
+			SsRegistCustomerInDTO ssRegistCustomerInDTO) {
+		
+		//StringUtils.isNotBlank(message) && java.nio.charset.Charset.forName("GBK").newEncoder().canEncode(message);
+		
+		SsRegistCustomerOutDTO ssRegistCustomerOutDTO = new SsRegistCustomerOutDTO();
+		LoginDTO login = hbCustomer.registCustomer(
+				ssRegistCustomerInDTO.getMobile(), 
+				ssRegistCustomerInDTO.getValidCode(), 
+				ssRegistCustomerInDTO.getLicencePlate(), 
+				//ssRegistCustomerInDTO.getPassword(), 
+				ssRegistCustomerInDTO.getLongitude(), 
+				ssRegistCustomerInDTO.getLatitude(), 
+				ssRegistCustomerInDTO.getCityCode(),
+				ssRegistCustomerInDTO.getRegistrationID());
+		ssRegistCustomerOutDTO.setUserID(login.getUserID());
+		ssRegistCustomerOutDTO.setUserName(login.getUserName());
+		ssRegistCustomerOutDTO.setMobile(login.getMobile());
+		ssRegistCustomerOutDTO.setLicensePlates(login.getLicensePlates());
+		return ssRegistCustomerOutDTO;
+	}
+}

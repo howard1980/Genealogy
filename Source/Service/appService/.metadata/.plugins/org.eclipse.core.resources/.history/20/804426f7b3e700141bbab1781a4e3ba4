@@ -1,0 +1,53 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import java.net.MalformedURLException;
+
+import com.beetlestech.nfe.fw.core.exception.ApplicationException;
+import com.beetlestech.nfe.fw.core.message.MessageCode;
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.a01.HbGetCidtyCode;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetCityCodeInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetCityCodeOutDTO;
+
+
+public class SsGetCityCode extends AbstractService<SsGetCityCodeOutDTO, SsGetCityCodeInDTO> {
+
+	@AutoInject
+	private HbGetCidtyCode hbGetCidtyCode;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetCityCodeOutDTO execute(
+			SsGetCityCodeInDTO ssGetCityCodeInDTO) {
+		SsGetCityCodeOutDTO ssGetCityCodeOutDTO = new SsGetCityCodeOutDTO();
+		
+		if(ssGetCityCodeInDTO.getLatitude()==null){
+			throw new ApplicationException(MessageCode.M11001WC);
+		}
+		if(ssGetCityCodeInDTO.getLongitude()==null){
+			throw new ApplicationException(MessageCode.M11002WC);
+		}
+		
+		String cityCode;
+		try {
+			cityCode = hbGetCidtyCode.getCode(ssGetCityCodeInDTO.getLatitude(), ssGetCityCodeInDTO.getLongitude());
+			ssGetCityCodeOutDTO.setCityCode(cityCode);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return ssGetCityCodeOutDTO;
+	}
+}

@@ -1,0 +1,6 @@
+1414725273355	Rename package 'mz.code.ccis.fw.core.connection.impl'
+1414725282348	Rename package 'mz.code.ccis.fw.core.dao.impl'
+1414725292520	Rename package 'mz.code.ccis.fw.core.dao.lob.ex'
+1414725308611	Rename package 'mz.code.ccis.fw.core.dao.mybatis.ex'
+1414725317377	Rename package 'mz.code.ccis.fw.core.dao.util'
+1414725325361	Rename package 'mz.code.ccis.fw.core.transaction.impl'

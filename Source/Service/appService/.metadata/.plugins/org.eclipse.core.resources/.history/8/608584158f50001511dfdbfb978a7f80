@@ -1,0 +1,43 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.main.biz.a01.dto.AutoBrandDTO;
+import com.maxiaohua.genealogy.main.service.a01.dto.SsGetBrandsInDTO;
+import com.maxiaohua.genealogy.main.service.a01.dto.SsGetBrandsOutDTO;
+
+public class SsGetBrands extends AbstractService<SsGetBrandsOutDTO, SsGetBrandsInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetBrandsOutDTO execute(
+			SsGetBrandsInDTO ssGetBrandsInDTO) {
+		SsGetBrandsOutDTO ssGetBrandsOutDTO = new SsGetBrandsOutDTO();
+		
+		AutoBrandDTO d1 = new AutoBrandDTO();
+		d1.setAutomobileBrandID(1);
+		d1.setLogoPath("");
+		d1.setName("福特");
+		d1.setSpell("ford");
+		
+		AutoBrandDTO d2 = new AutoBrandDTO();
+		d2.setAutomobileBrandID(2);
+		d2.setLogoPath("");
+		d2.setName("本田");
+		d2.setSpell("Honda");
+		
+		AutoBrandDTO[] brandArray = {d1,d2};
+		
+		ssGetBrandsOutDTO.setBrandArray(brandArray);
+		
+		return ssGetBrandsOutDTO;
+	}
+}

@@ -1,0 +1,102 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 获得工作组订单信息的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得工作组订单信息")
+public class SsGetWorkerPlanInDTO implements java.io.Serializable, Comparable<SsGetWorkerPlanInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 工作组ID  
+	*/
+	@Alias("工作组ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer workerID = null;
+
+	/**
+	* <code>工作组ID</code>返回
+	* @return <code>工作组ID</code>
+	*/
+	public Integer getWorkerID() {
+		return this.workerID;
+	}
+
+	/**
+	* <code>workerID</code>设定
+	* @param workerID　<code>workerID</code>设定值
+	*/
+	public void setWorkerID(
+			Integer workerID) {
+		this.workerID = workerID;
+	}
+
+	/**
+	* 开始日  
+	*/
+	@Alias("开始日")
+	private java.sql.Date start = null;
+
+	/**
+	* <code>开始日</code>返回
+	* @return <code>开始日</code>
+	*/
+	public java.sql.Date getStart() {
+		return this.start;
+	}
+
+	/**
+	* <code>start</code>设定
+	* @param start　<code>start</code>设定值
+	*/
+	public void setStart(
+			java.sql.Date start) {
+		this.start = start;
+	}
+
+	/**
+	* 结束日  
+	*/
+	@Alias("结束日")
+	private java.sql.Date end = null;
+
+	/**
+	* <code>结束日</code>返回
+	* @return <code>结束日</code>
+	*/
+	public java.sql.Date getEnd() {
+		return this.end;
+	}
+
+	/**
+	* <code>end</code>设定
+	* @param end　<code>end</code>设定值
+	*/
+	public void setEnd(
+			java.sql.Date end) {
+		this.end = end;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetWorkerPlanInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

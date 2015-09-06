@@ -1,0 +1,75 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.biz.a01.dto;
+
+/**
+ * OrderResultDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("创建订单结果")
+public class OrderResultDTO implements java.io.Serializable, Comparable<OrderResultDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Boolean result = null;
+
+	public Boolean getResult() {
+		return this.result;
+	}
+
+	public void setResult(
+			Boolean result) {
+		this.result = result;
+	}
+
+	private OrderInfoDTO orderInfo = null;
+
+	public OrderInfoDTO getOrderInfo() {
+		return this.orderInfo;
+	}
+
+	public void setOrderInfo(
+			OrderInfoDTO orderInfo) {
+		this.orderInfo = orderInfo;
+	}
+
+	private Integer openCap = null;
+
+	public Integer getOpenCap() {
+		return this.openCap;
+	}
+
+	public void setOpenCap(
+			Integer openCap) {
+		this.openCap = openCap;
+	}
+
+	private Integer lackCount = null;
+
+	public Integer getLackCount() {
+		return this.lackCount;
+	}
+
+	public void setLackCount(
+			Integer lackCount) {
+		this.lackCount = lackCount;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		OrderResultDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

@@ -1,0 +1,132 @@
+package com.maxiaohua.genealogy.fw.web.rest;
+
+import java.util.Map;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.wink.server.internal.servlet.RestServlet;
+
+import com.beetlestech.nfe.fw.core.bean.BeanFactory;
+import com.beetlestech.nfe.fw.core.config.SystemContext;
+import com.beetlestech.nfe.fw.core.context.RequestContext;
+import com.beetlestech.nfe.fw.core.dao.CISSqlSessionFactory;
+import com.beetlestech.nfe.fw.core.dao.QueryDAO;
+import com.beetlestech.nfe.fw.core.log.DebugLogger;
+import com.beetlestech.nfe.fw.core.log.ErrorLogger;
+import com.beetlestech.nfe.fw.core.log.LogFactory;
+import com.beetlestech.nfe.fw.core.log.Logger;
+import com.beetlestech.nfe.fw.core.message.MessageCode;
+import com.beetlestech.nfe.fw.core.properties.MessageProperties;
+
+
+public class CISRestServlet extends RestServlet {
+    
+    private static final long serialVersionUID = 1L;
+
+    
+    private static final Logger appLogger = LogFactory.getLogger();
+
+    
+    private static final DebugLogger debugLogger = LogFactory.getDebugLogger();
+
+    
+    private static final ErrorLogger errorLogger = LogFactory.getErrorLogger();
+    
+    private static final String KEY_SYSTEM_CONTEXT_LOCATION = "systemContextLocation";
+    
+    private static final String MESSAGE_PROPERTIES_NAME = "messageProperties";
+    
+    private static final String SERVICE_MAPPING_PROPERTIES_NAME = "serviceMappingProperties";
+    
+    private static final String SQL_SESSION_FACTORY_NAME = "cisSqlSessionFactory";
+    
+    private static final String QUERY_DAO_NAME = "queryDAO";
+    
+    private static final String DB_CONNECTION_TEST_SQL_ID = "comm.INIT_CHECK_DB_CONNECTION";
+
+    
+    @Override
+    public void init(
+            ServletConfig servletConfig) throws ServletException {
+        
+        super.init(servletConfig);
+
+        
+        SqlSession sqlSession = null;
+        
+        MessageProperties messageProperties = null;
+        
+        MessageProperties serviceMappingProperties = null;
+        try {
+            
+            String systemCtxRes = servletConfig.getInitParameter(KEY_SYSTEM_CONTEXT_LOCATION);
+            
+            SystemContext.init(systemCtxRes);
+
+            BeanFactory beanFactory = SystemContext.getBeanFactory();
+            messageProperties = beanFactory.beanOfName(MESSAGE_PROPERTIES_NAME);
+
+            
+            org.apache.ibatis.logging.LogFactory.useLog4JLogging();
+
+            
+            serviceMappingProperties = beanFactory.beanOfName(SERVICE_MAPPING_PROPERTIES_NAME);
+            for (String serviceId : serviceMappingProperties.keySet()) {
+                String serviceClazzName = serviceMappingProperties.get(serviceId);
+                try {
+                    Class<?> clazz = Class.forName(serviceClazzName);
+                    Object serviceInstance = beanFactory.beanOfType(clazz);
+                    beanFactory.putBean(serviceId, serviceInstance);
+                } catch (Exception e) {
+                    throw new Exception("No found class " + serviceClazzName, e);
+                }
+            }
+            debugLogger.info(messageProperties.get(MessageCode.M10010CM));
+
+            
+            String environmentId = null;
+            try {
+                CISSqlSessionFactory cisSqlSessionFactory = beanFactory.beanOfName(SQL_SESSION_FACTORY_NAME);
+                cisSqlSessionFactory.load();
+                Map<String, SqlSessionFactory> sqlSessionFactories = cisSqlSessionFactory.getSqlSessionFactories();
+                SqlSessionFactory sqlSessionFactory = null;
+                for (String envId : sqlSessionFactories.keySet()) {
+                    sqlSessionFactory = sqlSessionFactories.get(envId);
+                    environmentId = envId;
+                    sqlSession = sqlSessionFactory.openSession();
+                    
+                    RequestContext.open().putElement(RequestContext.Key.SQLSession, sqlSession);
+                    QueryDAO queryDAO = beanFactory.beanOfName(QUERY_DAO_NAME);
+                    queryDAO.queryForObject(DB_CONNECTION_TEST_SQL_ID, null);
+                    debugLogger.info(messageProperties.get(MessageCode.M10020CM));
+                }
+            } catch (Exception e) {
+                if (environmentId == null) {
+                    throw new Exception(messageProperties.get(MessageCode.M10030CM), e);
+                } else {
+                    throw new Exception(messageProperties.get(MessageCode.E_DB2_CONNECT_FAILED) + ": " + environmentId, e);
+                }
+            }
+
+        } catch (Exception e) {
+            if (messageProperties != null) {
+            	errorLogger.writeErrorLog(messageProperties.get(MessageCode.M10180CM));
+                appLogger.error(messageProperties.get(MessageCode.M10180CM), e);
+                debugLogger.error(messageProperties.get(MessageCode.M10180CM), e);
+            } else {
+                e.printStackTrace();
+            }
+        } finally {
+            
+            if (sqlSession != null) {
+                sqlSession.close();
+            }
+            
+            RequestContext.close();
+        }
+    }
+
+}

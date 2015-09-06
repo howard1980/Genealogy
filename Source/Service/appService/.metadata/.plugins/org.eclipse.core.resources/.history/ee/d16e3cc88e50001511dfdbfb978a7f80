@@ -1,0 +1,156 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import java.util.Hashtable;
+
+import javax.naming.Context;
+import javax.naming.directory.DirContext;
+import javax.naming.directory.InitialDirContext;
+
+import com.maxiaohua.genealogy.fw.core.bean.LDAPFactory;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.biz.com.HbComblcmMaster;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO;
+
+/**
+ * LDAPを管理する工場の実装クラスです。
+ *
+ * @author Ma Ji Ao
+ */
+public class HbLDAPFactoryImpl implements LDAPFactory, CtgCodeConstant {
+	/**
+	* ベースDNです。
+	*/
+	private String root;
+
+	/**
+	* LDAPサーバのIPアドレスです。
+	*/
+	private String ldapHostIP;
+
+	/**
+	* LDAPの管理者パスワードです。
+	*/
+	private String adminPassword;
+
+	/**
+	* LDAPのFactoryです。
+	*/
+	private static final String INITIAL_CONTEXT_FACTORY = "com.sun.jndi.ldap.LdapCtxFactory";
+
+	/**
+	* LDAPの認証タイプです。
+	*/
+	private static final String SECURITY_AUTHENTICATION = "simple";
+
+	/**
+	* LDAPのURL接頭語です。
+	*/
+	private static final String LDAP_URL = "ldap://";
+
+	/**
+	* LDAPの管理者ドメインです。
+	*/
+	private static final String MANAGER_DOMAIN = "cn=Manager,";
+
+	/**
+	* APPL_ID:COM
+	*/
+	private static final String APPL_ID_COM = "COM";
+
+	/**
+	* FUNCTION_ID:Mode
+	*/
+	private static final String FUNCTION_ID_MODE = "Mode";
+
+	/**
+	* ITEM_ID:AuthenticationType
+	*/
+	private static final String ITEM_ID_AUTHENTICATION_TYPE = "AuthenticationType";
+
+	/**
+	 *  ビジネスロジック設定マスター情報を取得 Bizロジック
+	 */
+	@AutoInject
+	protected HbComblcmMaster hbComblcmMaster;
+
+	/* (non-Javadoc)
+	 * @see com.maxiaohua.genealogy.fw.core.bean.LDAPFactory#initialLDAPContext()
+	 */
+	@Override
+	public DirContext initialLDAPContext() {
+		DirContext ctx = null;
+
+		// 共通メソッドを呼び出して、「認証タイプ」を取得する
+		TcomblcmDTO authType = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_MODE, ITEM_ID_AUTHENTICATION_TYPE);
+
+		if (authType != null) {
+			if (TCOMBLCM_MODE.AUTHENTICATION_TYPE_LDAP.toString().equals(StringUtil.trim(authType.getValue()))) {
+				Hashtable<String, String> env = new Hashtable<String, String>();
+				env.put(Context.INITIAL_CONTEXT_FACTORY, INITIAL_CONTEXT_FACTORY);
+				env.put(Context.PROVIDER_URL, LDAP_URL + ldapHostIP + "/" + root);
+				env.put(Context.SECURITY_AUTHENTICATION, SECURITY_AUTHENTICATION);
+				env.put(Context.SECURITY_PRINCIPAL, MANAGER_DOMAIN + root);
+				env.put(Context.SECURITY_CREDENTIALS, adminPassword);
+
+				try {
+					ctx = new InitialDirContext(env);
+
+				} catch (javax.naming.AuthenticationException e) {
+					e.printStackTrace();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return ctx;
+	}
+
+	/**
+	 * @return the root
+	 */
+	public String getRoot() {
+		return root;
+	}
+
+	/**
+	 * @param root the root to set
+	 */
+	public void setRoot(
+			String root) {
+		this.root = root;
+	}
+
+	/**
+	 * @return the ldapHostIP
+	 */
+	public String getLdapHostIP() {
+		return ldapHostIP;
+	}
+
+	/**
+	 * @param ldapHostIP the ldapHostIP to set
+	 */
+	public void setLdapHostIP(
+			String ldapHostIP) {
+		this.ldapHostIP = ldapHostIP;
+	}
+
+	/**
+	 * @return the adminPassword
+	 */
+	public String getAdminPassword() {
+		return adminPassword;
+	}
+
+	/**
+	 * @param adminPassword the adminPassword to set
+	 */
+	public void setAdminPassword(
+			String adminPassword) {
+		this.adminPassword = adminPassword;
+	}
+
+}

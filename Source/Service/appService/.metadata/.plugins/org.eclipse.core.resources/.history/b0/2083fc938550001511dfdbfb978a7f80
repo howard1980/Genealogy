@@ -1,0 +1,68 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.TechnicianCarDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class TechnicianCarDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "TECHNICIAN_CAR_INSERT";
+
+	public static final String FULL_UPDATE = "TECHNICIAN_CAR_FULL_UPDATE";
+
+	public static final String UPDATE = "TECHNICIAN_CAR_UPDATE";
+
+	public static final String DELETE = "TECHNICIAN_CAR_DELETE";
+
+	public static final String FIND = "TECHNICIAN_CAR_FIND";
+
+	public static final String FIND_FOR_UPDATE = "TECHNICIAN_CAR_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "TECHNICIAN_CAR_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "TECHNICIAN_CAR_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "TECHNICIAN_CAR_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "TECHNICIAN_CAR_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "TECHNICIAN_CAR_SQL_SEARCH";
+
+	public static final String COUNT = "TECHNICIAN_CAR_COUNT";
+
+	public static final String COUNT_OR = "TECHNICIAN_CAR_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "TECHNICIAN_CAR_COUNT_SEARCH";
+
+	public static final String COLUMN_TECHNICIAN_CAR_ID = "TECHNICIAN_CAR_ID";
+
+	public static final String COLUMN_TECHNICIAN_ID = "TECHNICIAN_ID";
+
+	public static final String COLUMN_AUTOMOTIVE_MANUFACTURER_ID = "AUTOMOTIVE_MANUFACTURER_ID";
+
+	public static final String TABLE = "TECHNICIAN_CAR";
+
+	public static TechnicianCarDTO setDefaultValue() {
+		TechnicianCarDTO defaultDTO = new TechnicianCarDTO();
+
+		defaultDTO.settechniciancarID(0l);
+
+		defaultDTO.setTechnicianID(0l);
+
+		defaultDTO.setAutomotiveManufacturerID(0l);
+
+		return defaultDTO;
+	}
+}

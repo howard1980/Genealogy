@@ -1,0 +1,118 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.RepairOrderDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class RepairOrderDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "REPAIR_ORDER_INSERT";
+
+	public static final String FULL_UPDATE = "REPAIR_ORDER_FULL_UPDATE";
+
+	public static final String UPDATE = "REPAIR_ORDER_UPDATE";
+
+	public static final String DELETE = "REPAIR_ORDER_DELETE";
+
+	public static final String FIND = "REPAIR_ORDER_FIND";
+
+	public static final String FIND_FOR_UPDATE = "REPAIR_ORDER_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "REPAIR_ORDER_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "REPAIR_ORDER_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "REPAIR_ORDER_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "REPAIR_ORDER_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "REPAIR_ORDER_SQL_SEARCH";
+
+	public static final String COUNT = "REPAIR_ORDER_COUNT";
+
+	public static final String COUNT_OR = "REPAIR_ORDER_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "REPAIR_ORDER_COUNT_SEARCH";
+
+	public static final String COLUMN_REPAIR_ORDER_ID = "REPAIR_ORDER_ID";
+
+	public static final String COLUMN_REPAIR_ORDER_NO = "REPAIR_ORDER_NO";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_AMOUNT = "AMOUNT";
+
+	public static final String COLUMN_PAMENT = "PAMENT";
+
+	public static final String COLUMN_TYPE = "TYPE";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
+	public static final String COLUMN_LAST_DATE = "LAST_DATE";
+
+	public static final String COLUMN_LAST_TIME = "LAST_TIME";
+
+	public static final String COLUMN_STATUS = "STATUS";
+
+	public static final String COLUMN_ENSURINGAMOUNT = "ENSURINGAMOUNT";
+
+	public static final String COLUMN_REPAIR_SHOP_ID = "REPAIR_SHOP_ID";
+
+	public static final String COLUMN_APPOINTMENT_DATE = "APPOINTMENT_DATE";
+
+	public static final String COLUMN_APPOINTMENT_TIME = "APPOINTMENT_TIME";
+
+	public static final String TABLE = "REPAIR_ORDER";
+
+	public static RepairOrderDTO setDefaultValue() {
+		RepairOrderDTO defaultDTO = new RepairOrderDTO();
+
+		defaultDTO.setRepairOrderID(0l);
+
+		defaultDTO.setRepairOrderNO(StringUtil.EMPTY);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setAmount(new java.math.BigDecimal(0));
+
+		defaultDTO.setPament(new java.math.BigDecimal(0));
+
+		defaultDTO.setType(0);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setLastDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setLastTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setStatus(0);
+
+		defaultDTO.setEnsuringAmount(new java.math.BigDecimal(0));
+
+		defaultDTO.setRepairShopID(0l);
+
+		defaultDTO.setAppointmentDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setAppointmentTime(DateUtil.getDefaultTime());
+
+		return defaultDTO;
+	}
+}

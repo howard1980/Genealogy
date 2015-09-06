@@ -1,0 +1,90 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.JpushDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class JpushDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "JPUSH_INSERT";
+
+	public static final String FULL_UPDATE = "JPUSH_FULL_UPDATE";
+
+	public static final String UPDATE = "JPUSH_UPDATE";
+
+	public static final String DELETE = "JPUSH_DELETE";
+
+	public static final String FIND = "JPUSH_FIND";
+
+	public static final String FIND_FOR_UPDATE = "JPUSH_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "JPUSH_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "JPUSH_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "JPUSH_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "JPUSH_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "JPUSH_SQL_SEARCH";
+
+	public static final String COUNT = "JPUSH_COUNT";
+
+	public static final String COUNT_OR = "JPUSH_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "JPUSH_COUNT_SEARCH";
+
+	public static final String COLUMN_JPUSH_ID = "JPUSH_ID";
+
+	public static final String COLUMN_REGISITRATIONID = "REGISITRATIONID";
+
+	public static final String COLUMN_UID = "UID";
+
+	public static final String COLUMN_TYPE = "TYPE";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
+	public static final String COLUMN_UPDATE_DATE = "UPDATE_DATE";
+
+	public static final String COLUMN_UPDATE_TIME = "UPDATE_TIME";
+
+	public static final String TABLE = "JPUSH";
+
+	public static JpushDTO setDefaultValue() {
+		JpushDTO defaultDTO = new JpushDTO();
+
+		defaultDTO.setJPushID(0l);
+
+		defaultDTO.setRegisitrationID(StringUtil.EMPTY);
+
+		defaultDTO.setUID(0l);
+
+		defaultDTO.setType(0);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setUpdateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setUpdateTime(DateUtil.getDefaultTime());
+
+		return defaultDTO;
+	}
+}

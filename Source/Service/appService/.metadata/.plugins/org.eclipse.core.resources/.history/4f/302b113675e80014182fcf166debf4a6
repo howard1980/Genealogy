@@ -1,0 +1,55 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.beetlestech.nfe.fw.core.type.Alias;
+
+/**
+ * 获得工作组订单信息的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/04/21         TOOL                初次作成
+ *
+ */
+@com.beetlestech.nfe.fw.core.type.AliasKanJi("获得工作组订单信息")
+public class SsGetWorkerPlanOutDTO implements java.io.Serializable, Comparable<SsGetWorkerPlanOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 计划列表  
+	*/
+	@Alias("计划列表")
+	private WorkerPlanInfoDTO[] workerPlanInfoArray = null;
+
+	/**
+	* <code>计划列表</code>返回
+	* @return <code>计划列表</code>
+	*/
+	public WorkerPlanInfoDTO[] getWorkerPlanInfoArray() {
+		return this.workerPlanInfoArray;
+	}
+
+	/**
+	* <code>workerPlanInfoArray</code>设定
+	* @param workerPlanInfoArray　<code>workerPlanInfoArray</code>设定值
+	*/
+	public void setWorkerPlanInfoArray(
+			WorkerPlanInfoDTO[] workerPlanInfoArray) {
+		this.workerPlanInfoArray = workerPlanInfoArray;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetWorkerPlanOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

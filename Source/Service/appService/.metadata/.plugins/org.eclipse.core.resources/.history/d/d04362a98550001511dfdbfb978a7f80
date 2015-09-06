@@ -1,0 +1,125 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.maxiaohua.genealogy.main.biz.a01.dto.OrderInfoDTO;
+
+/**
+ * 创建文字订单的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/25         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("创建文字订单")
+public class SsCreateTextOrderOutDTO implements java.io.Serializable, Comparable<SsCreateTextOrderOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 是否成功  
+	*/
+	@Alias("是否成功")
+	private Boolean createResult = null;
+
+	/**
+	* <code>是否成功</code>返回
+	* @return <code>是否成功</code>
+	*/
+	public Boolean getCreateResult() {
+		return this.createResult;
+	}
+
+	/**
+	* <code>createResult</code>设定
+	* @param createResult　<code>createResult</code>设定值
+	*/
+	public void setCreateResult(
+			Boolean createResult) {
+		this.createResult = createResult;
+	}
+
+	/**
+	* 订单ID  
+	*/
+	@Alias("订单ID")
+	private OrderInfoDTO orderInfo = null;
+
+	/**
+	* <code>订单ID</code>返回
+	* @return <code>订单ID</code>
+	*/
+	public OrderInfoDTO getOrderInfo() {
+		return this.orderInfo;
+	}
+
+	/**
+	* <code>orderInfo</code>设定
+	* @param orderInfo　<code>orderInfo</code>设定值
+	*/
+	public void setOrderInfo(
+			OrderInfoDTO orderInfo) {
+		this.orderInfo = orderInfo;
+	}
+
+	/**
+	* 开通人数  
+	*/
+	@Alias("开通人数")
+	private Integer openCap = null;
+
+	/**
+	* <code>开通人数</code>返回
+	* @return <code>开通人数</code>
+	*/
+	public Integer getOpenCap() {
+		return this.openCap;
+	}
+
+	/**
+	* <code>openCap</code>设定
+	* @param openCap　<code>openCap</code>设定值
+	*/
+	public void setOpenCap(
+			Integer openCap) {
+		this.openCap = openCap;
+	}
+
+	/**
+	* 还需要人数  
+	*/
+	@Alias("还需要人数")
+	private Integer lackCount = null;
+
+	/**
+	* <code>还需要人数</code>返回
+	* @return <code>还需要人数</code>
+	*/
+	public Integer getLackCount() {
+		return this.lackCount;
+	}
+
+	/**
+	* <code>lackCount</code>设定
+	* @param lackCount　<code>lackCount</code>设定值
+	*/
+	public void setLackCount(
+			Integer lackCount) {
+		this.lackCount = lackCount;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsCreateTextOrderOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

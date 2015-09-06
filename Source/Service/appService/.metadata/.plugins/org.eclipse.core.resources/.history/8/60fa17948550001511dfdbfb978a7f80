@@ -1,0 +1,68 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.UsergroupRoleDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class UsergroupRoleDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "USERGROUP_ROLE_INSERT";
+
+	public static final String FULL_UPDATE = "USERGROUP_ROLE_FULL_UPDATE";
+
+	public static final String UPDATE = "USERGROUP_ROLE_UPDATE";
+
+	public static final String DELETE = "USERGROUP_ROLE_DELETE";
+
+	public static final String FIND = "USERGROUP_ROLE_FIND";
+
+	public static final String FIND_FOR_UPDATE = "USERGROUP_ROLE_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "USERGROUP_ROLE_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "USERGROUP_ROLE_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "USERGROUP_ROLE_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "USERGROUP_ROLE_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "USERGROUP_ROLE_SQL_SEARCH";
+
+	public static final String COUNT = "USERGROUP_ROLE_COUNT";
+
+	public static final String COUNT_OR = "USERGROUP_ROLE_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "USERGROUP_ROLE_COUNT_SEARCH";
+
+	public static final String COLUMN_ROLE_ID = "ROLE_ID";
+
+	public static final String COLUMN_GROUP_ROLE_ID = "GROUP_ROLE_ID";
+
+	public static final String COLUMN_GROUP_ID = "GROUP_ID";
+
+	public static final String TABLE = "USERGROUP_ROLE";
+
+	public static UsergroupRoleDTO setDefaultValue() {
+		UsergroupRoleDTO defaultDTO = new UsergroupRoleDTO();
+
+		defaultDTO.setroleid(0l);
+
+		defaultDTO.setgrouproleid(0l);
+
+		defaultDTO.setgroupid(0l);
+
+		return defaultDTO;
+	}
+}

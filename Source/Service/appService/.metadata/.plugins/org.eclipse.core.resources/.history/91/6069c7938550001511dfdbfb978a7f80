@@ -1,0 +1,65 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.RoleFunctionsDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("ROLE_FUNCTIONS")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class RoleFunctionsDTO extends RoleFunctionsDTOSupport implements java.io.Serializable, Comparable<RoleFunctionsDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ROLE_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long roleid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("FUNCTIONS_MODULES_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long functionsmodulesid = null;
+
+	public Long getroleid() {
+		return this.roleid;
+	}
+
+	public void setroleid(
+			Long roleid) {
+		this.roleid = roleid;
+	}
+
+	public Long getfunctionsmodulesid() {
+		return this.functionsmodulesid;
+	}
+
+	public void setfunctionsmodulesid(
+			Long functionsmodulesid) {
+		this.functionsmodulesid = functionsmodulesid;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			RoleFunctionsDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

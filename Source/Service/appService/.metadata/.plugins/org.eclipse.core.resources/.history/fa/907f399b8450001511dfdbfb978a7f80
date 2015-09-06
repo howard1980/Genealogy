@@ -1,0 +1,77 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.AutomobileSeriesDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class AutomobileSeriesDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "AUTOMOBILE_SERIES_INSERT";
+
+	public static final String FULL_UPDATE = "AUTOMOBILE_SERIES_FULL_UPDATE";
+
+	public static final String UPDATE = "AUTOMOBILE_SERIES_UPDATE";
+
+	public static final String DELETE = "AUTOMOBILE_SERIES_DELETE";
+
+	public static final String FIND = "AUTOMOBILE_SERIES_FIND";
+
+	public static final String FIND_FOR_UPDATE = "AUTOMOBILE_SERIES_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "AUTOMOBILE_SERIES_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "AUTOMOBILE_SERIES_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "AUTOMOBILE_SERIES_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "AUTOMOBILE_SERIES_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "AUTOMOBILE_SERIES_SQL_SEARCH";
+
+	public static final String COUNT = "AUTOMOBILE_SERIES_COUNT";
+
+	public static final String COUNT_OR = "AUTOMOBILE_SERIES_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "AUTOMOBILE_SERIES_COUNT_SEARCH";
+
+	public static final String COLUMN_AUTOMOBILE_SERIES_ID = "AUTOMOBILE_SERIES_ID";
+
+	public static final String COLUMN_AUTOMOTIVE_MANUFACTURER_ID = "AUTOMOTIVE_MANUFACTURER_ID";
+
+	public static final String COLUMN_NAME = "NAME";
+
+	public static final String COLUMN_LOGO_PATH = "LOGO_PATH";
+
+	public static final String COLUMN_SPELL = "SPELL";
+
+	public static final String TABLE = "AUTOMOBILE_SERIES";
+
+	public static AutomobileSeriesDTO setDefaultValue() {
+		AutomobileSeriesDTO defaultDTO = new AutomobileSeriesDTO();
+
+		defaultDTO.setAutomobileSeriesID(0l);
+
+		defaultDTO.setAutomotiveManufacturerID(0l);
+
+		defaultDTO.setNAME(StringUtil.EMPTY);
+
+		defaultDTO.setLogoPath(StringUtil.EMPTY);
+
+		defaultDTO.setSpell(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

@@ -1,0 +1,37 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.a01.impl.HbOrderImpl;
+import com.beetlestech.nfe.main.service.a01.dto.SsUpdateOrderEvidenceInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsUpdateOrderEvidenceOutDTO;
+
+public class SsUpdateOrderEvidence extends AbstractService<SsUpdateOrderEvidenceOutDTO, SsUpdateOrderEvidenceInDTO> {
+
+	@AutoInject
+	private HbOrderImpl hbOrderImpl;
+	
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsUpdateOrderEvidenceOutDTO execute(
+			SsUpdateOrderEvidenceInDTO ssUpdateOrderEvidenceInDTO) {
+		SsUpdateOrderEvidenceOutDTO ssUpdateOrderEvidenceOutDTO = new SsUpdateOrderEvidenceOutDTO();
+		
+		hbOrderImpl.updateOrderEvidence(ssUpdateOrderEvidenceInDTO.getWorkerID(), ssUpdateOrderEvidenceInDTO.getOrderNO(), 
+				ssUpdateOrderEvidenceInDTO.getBeforePic(), ssUpdateOrderEvidenceInDTO.getAfterPic());
+		
+		return ssUpdateOrderEvidenceOutDTO;
+	}
+}

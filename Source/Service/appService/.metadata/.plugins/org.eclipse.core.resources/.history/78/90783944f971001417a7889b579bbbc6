@@ -1,0 +1,52 @@
+/* CIS
+* (C) Copyright IBM Japan, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.com.HbCourseRecommend;
+import com.beetlestech.nfe.main.biz.com.HbOrder;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.service.com.dto.HsGetCourseRecommendInDTO;
+import com.beetlestech.nfe.main.service.com.dto.HsGetCourseRecommendOutDTO;
+import com.beetlestech.nfe.main.service.com.dto.HsGetOrderListInDTO;
+import com.beetlestech.nfe.main.service.com.dto.HsGetOrderListOutDTO;
+
+/**
+ * Get Message Service
+ *
+ * History
+ * REV.         Date               Updates             Remake
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2014/11/11         mxh                 Create
+ *
+ */
+public class HsGetCourseRecommend extends AbstractService<HsGetCourseRecommendOutDTO, HsGetCourseRecommendInDTO> implements HbMessageCode, CommonConstant, CtgCodeConstant {
+
+	/**
+	 * Get Message of BIZ Logic
+	 */
+	@AutoInject
+	private HbCourseRecommend hbCourseRecommend;
+
+	/*(non-Javadoc)
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public HsGetCourseRecommendOutDTO execute(
+			HsGetCourseRecommendInDTO hsGetCourseRecommendInDTO) {
+		HsGetCourseRecommendOutDTO hsGetCourseRecommendOutDTO = new HsGetCourseRecommendOutDTO();
+		hsGetCourseRecommendOutDTO.setCourseInfoArray(
+				hbCourseRecommend.getCourseList(hsGetCourseRecommendInDTO.getRowStar(), 
+						hsGetCourseRecommendInDTO.getRowEnd(),
+						hsGetCourseRecommendInDTO.getStarDate(),
+						hsGetCourseRecommendInDTO.getSort()));
+		return hsGetCourseRecommendOutDTO;
+	}
+}

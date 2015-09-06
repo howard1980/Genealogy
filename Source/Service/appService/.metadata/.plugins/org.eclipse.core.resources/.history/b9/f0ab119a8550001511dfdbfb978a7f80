@@ -1,0 +1,93 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.view.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.view.VCarInfoDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VCarInfoDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VCAR_INFO_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VCAR_INFO_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VCAR_INFO_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VCAR_INFO_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VCAR_INFO_SQL_SEARCH";
+
+	public static final String COUNT = "VCAR_INFO_COUNT";
+
+	public static final String COUNT_OR = "VCAR_INFO_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VCAR_INFO_COUNT_SEARCH";
+
+	public static final String COLUMN_CAR_ID = "CAR_ID";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_CAR_MODEL_ID = "CAR_MODEL_ID";
+
+	public static final String COLUMN_COLOR_ID = "COLOR_ID";
+
+	public static final String COLUMN_LICENCE_PLATE = "LICENCE_PLATE";
+
+	public static final String COLUMN_VIN = "VIN";
+
+	public static final String COLUMN_PHOTO = "PHOTO";
+
+	public static final String COLUMN_MILEAGE = "MILEAGE";
+
+	public static final String COLUMN_COLOR = "COLOR";
+
+	public static final String COLUMN_LOCATION = "LOCATION";
+
+	public static final String COLUMN_MOTOR_NUMBER = "MOTOR_NUMBER";
+
+	public static final String COLUMN_CAR_MODEL_NAME = "CAR_MODEL_NAME";
+
+	public static final String TABLE = "VCAR_INFO";
+
+	public static VCarInfoDTO setDefaultValue() {
+		VCarInfoDTO defaultDTO = new VCarInfoDTO();
+
+		defaultDTO.setCarID(0l);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setCarModelID(0l);
+
+		defaultDTO.setColorID(StringUtil.EMPTY);
+
+		defaultDTO.setLicencePlate(StringUtil.EMPTY);
+
+		defaultDTO.setVIN(StringUtil.EMPTY);
+
+		defaultDTO.setPhoto(StringUtil.EMPTY);
+
+		defaultDTO.setMileage(0);
+
+		defaultDTO.setColor(StringUtil.EMPTY);
+
+		defaultDTO.setLocation(StringUtil.EMPTY);
+
+		defaultDTO.setMotorNumber(StringUtil.EMPTY);
+
+		defaultDTO.setCarModelName(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

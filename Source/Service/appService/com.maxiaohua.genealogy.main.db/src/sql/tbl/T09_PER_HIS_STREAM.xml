@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sql">
+
+  <!-- Table Insert -->
+  <insert id="T09_PER_HIS_STREAM_INSERT" parameterType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    INSERT INTO T09_PER_HIS_STREAM (
+      HIS_ID ,
+      TYPE ,
+      PATH ,
+      REMARKS ,
+      CREATE_TIME 
+    ) VALUES (
+      #{hISID} ,
+      #{tYPE} ,
+      #{pATH} ,
+      #{rEMARKS} ,
+      #{cREATETIME} 
+    )
+    <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
+    SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
+  </insert>
+
+  <!-- Table Update -->
+  <update id="T09_PER_HIS_STREAM_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    UPDATE T09_PER_HIS_STREAM SET
+      HIS_ID = #{hISID} ,
+      TYPE = #{tYPE} ,
+      PATH = #{pATH} ,
+      REMARKS = #{rEMARKS} ,
+      CREATE_TIME = #{cREATETIME} 
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <update id="T09_PER_HIS_STREAM_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    UPDATE T09_PER_HIS_STREAM
+    <set>
+      <if test="hISID!=null">HIS_ID = #{hISID},</if>
+      <if test="tYPE!=null">TYPE = #{tYPE},</if>
+      <if test="pATH!=null">PATH = #{pATH},</if>
+      <if test="rEMARKS!=null">REMARKS = #{rEMARKS},</if>
+      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
+    </set>
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <!-- Key Delete -->
+  <delete id="T09_PER_HIS_STREAM_DELETE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    DELETE FROM T09_PER_HIS_STREAM
+    WHERE
+      ID = #{iD} 
+  </delete>
+
+  <!-- Key Search -->
+  <select id="T09_PER_HIS_STREAM_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    WHERE
+      ID = #{iD} 
+  </select>
+
+  <!-- Key Search（For Update） -->
+  <select id="T09_PER_HIS_STREAM_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    WHERE
+      ID = #{iD} 
+    FOR UPDATE
+  </select>
+
+  <!-- AND Search -->
+  <select id="T09_PER_HIS_STREAM_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+      <if test="hISID != null">AND HIS_ID = #{hISID}</if>
+      <if test="tYPE != null">AND TYPE = #{tYPE}</if>
+      <if test="pATH != null">AND PATH = #{pATH}</if>
+      <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search(OR) -->
+  <select id="T09_PER_HIS_STREAM_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+      <if test="hISID != null">OR HIS_ID = #{hISID}</if>
+      <if test="tYPE != null">OR TYPE = #{tYPE}</if>
+      <if test="pATH != null">OR PATH = #{pATH}</if>
+      <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE -->
+  <select id="T09_PER_HIS_STREAM_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    <where>
+      <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
+      <if test="hISID != null">AND HIS_ID LIKE '%'|| #{hISID} ||'%'</if>
+      <if test="tYPE != null">AND TYPE LIKE '%'|| #{tYPE} ||'%'</if>
+      <if test="pATH != null">AND PATH LIKE '%'|| #{pATH} ||'%'</if>
+      <if test="rEMARKS != null">AND REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
+      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE(OR) -->
+  <select id="T09_PER_HIS_STREAM_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    <where>
+      <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
+      <if test="hISID != null">OR HIS_ID LIKE '%'|| #{hISID} ||'%'</if>
+      <if test="tYPE != null">OR TYPE LIKE '%'|| #{tYPE} ||'%'</if>
+      <if test="pATH != null">OR PATH LIKE '%'|| #{pATH} ||'%'</if>
+      <if test="rEMARKS != null">OR REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
+      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Customize Search -->
+  <select id="T09_PER_HIS_STREAM_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" parameterType="java.util.Map">
+    SELECT
+      ID AS "iD" ,
+      HIS_ID AS "hISID" ,
+      TYPE AS "tYPE" ,
+      PATH AS "pATH" ,
+      REMARKS AS "rEMARKS" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T09_PER_HIS_STREAM
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Count -->
+  <select id="T09_PER_HIS_STREAM_COUNT" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM T09_PER_HIS_STREAM
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+      <if test="hISID != null">AND HIS_ID = #{hISID}</if>
+      <if test="tYPE != null">AND TYPE = #{tYPE}</if>
+      <if test="pATH != null">AND PATH = #{pATH}</if>
+      <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+    </where>
+  </select>
+
+  <!-- Count OR -->
+  <select id="T09_PER_HIS_STREAM_COUNT_OR" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM T09_PER_HIS_STREAM
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+      <if test="hISID != null">OR HIS_ID = #{hISID}</if>
+      <if test="tYPE != null">OR TYPE = #{tYPE}</if>
+      <if test="pATH != null">OR PATH = #{pATH}</if>
+      <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+    </where>
+  </select>
+
+  <!-- Count Customize -->
+  <select id="T09_PER_HIS_STREAM_COUNT_SEARCH" resultType="java.lang.Integer" parameterType="java.util.Map">
+    SELECT count(*)
+    FROM T09_PER_HIS_STREAM
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+  </select>
+</mapper>

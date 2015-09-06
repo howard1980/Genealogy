@@ -1,0 +1,80 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerPlanInfoDTO;
+
+/**
+ * 更新工作组位置的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("更新工作组位置")
+public class SsUpdateWorkerPlanInDTO implements java.io.Serializable, Comparable<SsUpdateWorkerPlanInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 工作组ID  
+	*/
+	@Alias("工作组ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer workerID = null;
+
+	/**
+	* <code>工作组ID</code>返回
+	* @return <code>工作组ID</code>
+	*/
+	public Integer getWorkerID() {
+		return this.workerID;
+	}
+
+	/**
+	* <code>workerID</code>设定
+	* @param workerID　<code>workerID</code>设定值
+	*/
+	public void setWorkerID(
+			Integer workerID) {
+		this.workerID = workerID;
+	}
+
+	/**
+	* 计划列表  
+	*/
+	@Alias("计划列表")
+	private WorkerPlanInfoDTO[] workerPlanInfoArray = null;
+
+	/**
+	* <code>计划列表</code>返回
+	* @return <code>计划列表</code>
+	*/
+	public WorkerPlanInfoDTO[] getWorkerPlanInfoArray() {
+		return this.workerPlanInfoArray;
+	}
+
+	/**
+	* <code>workerPlanInfoArray</code>设定
+	* @param workerPlanInfoArray　<code>workerPlanInfoArray</code>设定值
+	*/
+	public void setWorkerPlanInfoArray(
+			WorkerPlanInfoDTO[] workerPlanInfoArray) {
+		this.workerPlanInfoArray = workerPlanInfoArray;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsUpdateWorkerPlanInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

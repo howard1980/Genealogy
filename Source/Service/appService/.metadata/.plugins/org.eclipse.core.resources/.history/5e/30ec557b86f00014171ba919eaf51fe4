@@ -1,0 +1,319 @@
+package com.beetlestech.nfe.fw.web.interceptor.impl;
+
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.Array;
+import java.lang.reflect.Method;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.beetlestech.nfe.fw.core.ajax.AJAXParser;
+import com.beetlestech.nfe.fw.core.ajax.AJAXRender;
+import com.beetlestech.nfe.fw.core.config.SystemContext;
+import com.beetlestech.nfe.fw.core.exception.ApplicationException;
+import com.beetlestech.nfe.fw.core.exception.ValidationException;
+import com.beetlestech.nfe.fw.core.interceptor.Interceptor;
+import com.beetlestech.nfe.fw.core.interceptor.InterceptorChain;
+import com.beetlestech.nfe.fw.core.message.MessageCode;
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.web.util.ReflectUtil;
+
+import org.apache.commons.beanutils.BeanUtils;
+
+
+public class ServiceInputParamInterceptor implements Interceptor {
+    
+    private static final String SERVICE_TARGET_METHOD = "execute";
+    
+//    private static final String KEY_FILE_CONSTRAINTS = "fileConstraints";
+    
+//    private static final String KEY_JSON_STRING = "JSON_STRING";
+//    
+//    private static final String KEY_ARRAY_IDENTIFIED_FLAG = "s[]";
+//    
+//    private static final String SPACE_STR = "";
+    
+    private static final String DOT_TRANSFER_STR = "\\.";
+
+    
+    private AJAXParser ajaxParser;
+    
+    private AJAXRender ajaxRender;
+
+    @Override
+    public void intercept(
+            InterceptorChain chain) throws Exception {
+        String serviceName = chain.getServiceId();
+        String jsonInput = chain.getJsonInput();
+
+        
+        @SuppressWarnings("rawtypes")
+        AbstractService service = (AbstractService) (SystemContext.getBeanFactory().getBean(serviceName));
+        Class<?> serviceClazz = service.getClass();
+
+        
+        Method executeMethod = ReflectUtil.getNonBridgeMethod(serviceClazz, SERVICE_TARGET_METHOD);
+        
+        Class<?>[] inParamTypes = executeMethod.getParameterTypes();
+        Type[] genericParamTypes = executeMethod.getGenericParameterTypes();
+        if (inParamTypes.length != 1) {
+            throw new RuntimeException("It is invalid for more than 1 input parameter in service method:" + executeMethod);
+        }
+
+        
+        Object methodParam = null;
+        Map<String, Object> beanDataExceptFile = new HashMap<String, Object>();
+        Map<String, String> beanDataOnlyFile = new HashMap<String, String>();
+
+//        HttpServletRequest request = chain.getRequest();
+//        if (ServletFileUpload.isMultipartContent(request)) {
+//            FileConstraint fileConstraint = getFileConstraint(serviceName);
+//            ServletFileUpload upload = new ServletFileUpload();
+//            DiskFileItemFactory fileItemFactory = new DiskFileItemFactory();
+//            
+//            fileItemFactory.setSizeThreshold(fileConstraint.getSizeThreshold());
+//            
+//            fileItemFactory.setRepository(new File(fileConstraint.getRepository()));
+//            upload.setFileItemFactory(fileItemFactory);
+//            upload.setHeaderEncoding(request.getCharacterEncoding());
+//            
+//            upload.setFileSizeMax(fileConstraint.getFileSizeMax());
+//            
+//            upload.setSizeMax(fileConstraint.getSizeMax());
+//            List<FileItem> items = new ArrayList<FileItem>();
+//            try {
+//                items = upload.parseRequest(request);
+//                if (items != null && items.size() > 0) {
+//                    String fieldName = null;
+//                    
+//                    for (FileItem fileItem : items) {
+//                        if (fileItem.isFormField()) {
+//                            String value = fileItem.getString();
+//                            if (StringUtil.isEmpty(value)) {
+//                                value = SPACE_STR;
+//                            }
+//                            if (KEY_JSON_STRING.equals(fileItem.getFieldName())) {
+//                                jsonInput = value;
+//                            } else {
+//                                setValueIntoBean(fileItem.getFieldName(), value, beanDataExceptFile);
+//                            }
+//                        } else {
+//                            InputStream in = fileItem.getInputStream();
+//                            if (in != null && in.available() > 0) {
+//                                fieldName = fileItem.getFieldName();
+//                                if (fieldName.indexOf(KEY_ARRAY_IDENTIFIED_FLAG) > 0) {
+//                                    fieldName = fieldName.substring(0, fieldName.indexOf(KEY_ARRAY_IDENTIFIED_FLAG));
+//                                }
+//                                byte[] fileContent = new byte[in.available()];
+//                                try {
+//                                    in.read(fileContent);
+//                                    setValueIntoBean(fieldName, SPACE_STR, beanDataExceptFile);
+//                                    beanDataOnlyFile.put(fieldName, new String(StringUtil.encodeBase64(fileContent)));
+//                                } catch (IOException ioe) {
+//                                    throw new ApplicationException(ioe, MessageCode.M10060CM);
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//            } catch (FileUploadException fue) {
+//                throw new ApplicationException(fue, MessageCode.E_EXR_UNKNOWN_ERROR_DURING_UPLOAD);
+//            }
+//        }
+
+        if (jsonInput == null) {
+            jsonInput = ajaxRender.render(beanDataExceptFile);
+        }
+
+        try {
+
+            methodParam = ajaxParser.parse(jsonInput, inParamTypes[0], genericParamTypes[0]);
+            setFileIntoBean(methodParam, beanDataOnlyFile);
+        } catch (Exception e) {
+            if (e instanceof ValidationException) {
+                throw e;
+            } else {
+                throw new ApplicationException(MessageCode.M10160CM, e);
+            }
+        }
+
+        chain.setServiceInput(methodParam);
+        chain.next();
+    }
+
+    @SuppressWarnings("unchecked")
+    private void setFileIntoBean(
+            Object methodParam,
+            Map<String, String> beanDataOnlyFile) throws Exception {
+        Class<?> methodParamType = methodParam.getClass();
+        BeanInfo info = Introspector.getBeanInfo(methodParamType);
+        PropertyDescriptor[] propDescriptors = null;
+        info.getPropertyDescriptors();
+        for (String key : beanDataOnlyFile.keySet()) {
+            propDescriptors = info.getPropertyDescriptors();
+            String[] subKeys = key.split(DOT_TRANSFER_STR);
+            if (subKeys.length > 1) {
+                Integer index = -1;
+                Object lastObject = methodParam;
+                Object targetObject = null;
+                PropertyDescriptor targetProperty = null;
+                for (int i = 0; i < subKeys.length; i++) {
+                    index = -1;
+                    try {
+                        index = Integer.parseInt(subKeys[i]);
+                    } catch (Exception e) {
+                    }
+                    if (i + 1 < subKeys.length) {
+                        if (index > -1) {
+                            Class<?> clazz = targetObject.getClass();
+                            if (clazz.isArray()) {
+                                targetObject = Array.get(targetObject, index);
+                            } else if (List.class.isAssignableFrom(clazz)) {
+                                List<Object> tempObjList = (List<Object>) targetObject;
+                                targetObject = tempObjList.get(index);
+                            } else {
+                                Map<Integer, Object> tempObjMap = (Map<Integer, Object>) targetObject;
+                                targetObject = tempObjMap.get(index);
+                            }
+                            propDescriptors = Introspector.getBeanInfo(targetObject.getClass()).getPropertyDescriptors();
+                            lastObject = targetObject;
+                        } else {
+                            for (PropertyDescriptor property : propDescriptors) {
+                                if (property.getName().equals(subKeys[i])) {
+                                    targetObject = property.getReadMethod().invoke(lastObject);
+                                    propDescriptors = Introspector.getBeanInfo(targetObject.getClass()).getPropertyDescriptors();
+                                    lastObject = targetObject;
+                                    break;
+                                }
+                            }
+                        }
+                    } else {
+                        if (index > -1) {
+                            for (PropertyDescriptor property : propDescriptors) {
+                                if (property.getName().equals(subKeys[i - 1])) {
+                                    targetProperty = property;
+                                    break;
+                                }
+                            }
+                        } else {
+                            for (PropertyDescriptor property : propDescriptors) {
+                                if (property.getName().equals(subKeys[i])) {
+                                    targetProperty = property;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                if (targetObject != null && targetProperty != null) {
+                    targetProperty.getWriteMethod().invoke(targetObject, beanDataOnlyFile.get(key));
+                }
+            } else {
+                for (PropertyDescriptor property : propDescriptors) {
+                    if (property.getName().equals(key)) {
+                        property.getWriteMethod().invoke(methodParam, beanDataOnlyFile.get(key));
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+//    
+//    @SuppressWarnings("unchecked")
+//    private void setValueIntoBean(
+//            String key,
+//            String value,
+//            Map<String, Object> mappedBeanData) {
+//        String[] subKeys = key.split(DOT_TRANSFER_STR);
+//        if (subKeys.length > 1) {
+//            Integer index = -1;
+//            List<Object> lastKey4Array = null;
+//            Map<String, Object> lastKey4Object = null;
+//            for (int i = 0; i < subKeys.length; i++) {
+//                index = -1;
+//                try {
+//                    index = Integer.parseInt(subKeys[i]);
+//                } catch (Exception e) {
+//                }
+//                if (i + 1 < subKeys.length) {
+//                    if (index > -1) {
+//                        lastKey4Array = (List<Object>) mappedBeanData.get(subKeys[i - 1]);
+//                        if (lastKey4Array.size() <= index || lastKey4Array.get(index) == null) {
+//                            if (i + 1 < subKeys.length) {
+//                                lastKey4Object = new HashMap<String, Object>();
+//                                lastKey4Array.add(index, lastKey4Object);
+//                            } else {
+//                                lastKey4Array.add(index, value);
+//                            }
+//                        } else {
+//                            if (i + 1 < subKeys.length) {
+//                                lastKey4Object = (Map<String, Object>) lastKey4Array.get(index);
+//                            }
+//                        }
+//                    } else {
+//                        if (!mappedBeanData.containsKey(subKeys[i])) {
+//                            if ((i + 1 < subKeys.length) && StringUtil.isNumeric(subKeys[i + 1])) {
+//                                lastKey4Array = new ArrayList<Object>();
+//                                mappedBeanData.put(subKeys[i], lastKey4Array);
+//                            } else {
+//                                lastKey4Object = new HashMap<String, Object>();
+//                                mappedBeanData.put(subKeys[i], lastKey4Object);
+//                            }
+//                        } else {
+//                            if ((i + 1 < subKeys.length) && StringUtil.isNumeric(subKeys[i + 1])) {
+//                                lastKey4Array = (List<Object>) mappedBeanData.get(subKeys[i]);
+//                            } else {
+//                                lastKey4Object = (Map<String, Object>) mappedBeanData.get(subKeys[i]);
+//                            }
+//                        }
+//                    }
+//                } else {
+//                    if (index > -1) {
+//                        lastKey4Array.add(index, value);
+//                    } else {
+//                        lastKey4Object.put(subKeys[i], value);
+//                    }
+//                }
+//            }
+//        } else {
+//            mappedBeanData.put(key, value);
+//        }
+//    }
+
+    
+    public void setAjaxRender(
+            AJAXRender ajaxRender) {
+        this.ajaxRender = ajaxRender;
+    }
+
+    
+    public void setAjaxParser(
+            AJAXParser ajaxParser) {
+        this.ajaxParser = ajaxParser;
+    }
+
+    
+//    private FileConstraint getFileConstraint(
+//            String serviceId) {
+//        FileConstraint fileConstraint = null;
+//        try {
+//            List<FileConstraint> fileConstraints = SystemContext.getBeanFactory().beanOfName(KEY_FILE_CONSTRAINTS);
+//            if (fileConstraints != null && !fileConstraints.isEmpty()) {
+//                for (FileConstraint iter : fileConstraints) {
+//                    String targetServiceId = iter.getTargetServiceId();
+//                    if (targetServiceId.equals(FileConstraint.DEFAULT_TARGET_SERVICE_ID) || serviceId.equals(targetServiceId)) {
+//                        fileConstraint = iter;
+//                        break;
+//                    }
+//                }
+//            }
+//        } catch (Exception e) {
+//            throw new ApplicationException(MessageCode.M10070CM, e);
+//        }
+//        return fileConstraint;
+//    }
+}

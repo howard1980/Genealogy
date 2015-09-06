@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sql">
+
+  <!-- Table Insert -->
+  <insert id="TCOMBLCM_INSERT" parameterType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    INSERT INTO TCOMBLCM (
+      APPL_ID ,
+      FUNCTION_ID ,
+      ITEM_ID ,
+      VALUE ,
+      NOTES ,
+      LAST_OP_ID ,
+      LAST_DATE ,
+      LAST_TIME 
+    ) VALUES (
+      #{applId} ,
+      #{functionId} ,
+      #{itemId} ,
+      #{value} ,
+      #{notes} ,
+      #{lastOpId} ,
+      curdate() ,
+      curtime() 
+    )
+  </insert>
+
+  <!-- Table Update -->
+  <update id="TCOMBLCM_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    UPDATE TCOMBLCM SET
+      VALUE = #{value} ,
+      NOTES = #{notes} ,
+      LAST_OP_ID = #{lastOpId} ,
+      LAST_DATE = curdate() ,
+      LAST_TIME = curtime() 
+    WHERE
+      APPL_ID = #{applId} AND
+      FUNCTION_ID = #{functionId} AND
+      ITEM_ID = #{itemId} 
+  </update>
+
+  <update id="TCOMBLCM_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    UPDATE TCOMBLCM
+    <set>
+      <if test="value!=null">VALUE = #{value},</if>
+      <if test="notes!=null">NOTES = #{notes},</if>
+      <if test="lastOpId!=null">LAST_OP_ID = #{lastOpId},</if>
+      <if test="lastDate!=null">LAST_DATE = curdate(),</if>
+      <if test="lastTime!=null">LAST_TIME = curtime(),</if>
+    </set>
+    WHERE
+      APPL_ID = #{applId} AND
+      FUNCTION_ID = #{functionId} AND
+      ITEM_ID = #{itemId} 
+  </update>
+
+  <!-- Key Delete -->
+  <delete id="TCOMBLCM_DELETE" parameterType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    DELETE FROM TCOMBLCM
+    WHERE
+      APPL_ID = #{applId} AND
+      FUNCTION_ID = #{functionId} AND
+      ITEM_ID = #{itemId} 
+  </delete>
+
+  <!-- Key Search -->
+  <select id="TCOMBLCM_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    WHERE
+      APPL_ID = #{applId} AND
+      FUNCTION_ID = #{functionId} AND
+      ITEM_ID = #{itemId} 
+  </select>
+
+  <!-- Key Search（For Update） -->
+  <select id="TCOMBLCM_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    WHERE
+      APPL_ID = #{applId} AND
+      FUNCTION_ID = #{functionId} AND
+      ITEM_ID = #{itemId} 
+    FOR UPDATE
+  </select>
+
+  <!-- AND Search -->
+  <select id="TCOMBLCM_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    <where>
+      <if test="applId != null">AND APPL_ID = #{applId}</if>
+      <if test="functionId != null">AND FUNCTION_ID = #{functionId}</if>
+      <if test="itemId != null">AND ITEM_ID = #{itemId}</if>
+      <if test="value != null">AND VALUE = #{value}</if>
+      <if test="notes != null">AND NOTES = #{notes}</if>
+      <if test="lastOpId != null">AND LAST_OP_ID = #{lastOpId}</if>
+      <if test="lastDate != null">AND LAST_DATE = #{lastDate}</if>
+      <if test="lastTime != null">AND LAST_TIME = #{lastTime}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY APPL_ID, FUNCTION_ID, ITEM_ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search(OR) -->
+  <select id="TCOMBLCM_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    <where>
+      <if test="applId != null">OR APPL_ID = #{applId}</if>
+      <if test="functionId != null">OR FUNCTION_ID = #{functionId}</if>
+      <if test="itemId != null">OR ITEM_ID = #{itemId}</if>
+      <if test="value != null">OR VALUE = #{value}</if>
+      <if test="notes != null">OR NOTES = #{notes}</if>
+      <if test="lastOpId != null">OR LAST_OP_ID = #{lastOpId}</if>
+      <if test="lastDate != null">OR LAST_DATE = #{lastDate}</if>
+      <if test="lastTime != null">OR LAST_TIME = #{lastTime}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY APPL_ID, FUNCTION_ID, ITEM_ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE -->
+  <select id="TCOMBLCM_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    <where>
+      <if test="applId != null">AND APPL_ID LIKE '%'|| #{applId} ||'%'</if>
+      <if test="functionId != null">AND FUNCTION_ID LIKE '%'|| #{functionId} ||'%'</if>
+      <if test="itemId != null">AND ITEM_ID LIKE '%'|| #{itemId} ||'%'</if>
+      <if test="value != null">AND VALUE LIKE '%'|| #{value} ||'%'</if>
+      <if test="notes != null">AND NOTES LIKE '%'|| #{notes} ||'%'</if>
+      <if test="lastOpId != null">AND LAST_OP_ID LIKE '%'|| #{lastOpId} ||'%'</if>
+      <if test="lastDate != null">AND LAST_DATE LIKE '%'|| #{lastDate} ||'%'</if>
+      <if test="lastTime != null">AND LAST_TIME LIKE '%'|| #{lastTime} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY APPL_ID, FUNCTION_ID, ITEM_ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE(OR) -->
+  <select id="TCOMBLCM_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    <where>
+      <if test="applId != null">OR APPL_ID LIKE '%'|| #{applId} ||'%'</if>
+      <if test="functionId != null">OR FUNCTION_ID LIKE '%'|| #{functionId} ||'%'</if>
+      <if test="itemId != null">OR ITEM_ID LIKE '%'|| #{itemId} ||'%'</if>
+      <if test="value != null">OR VALUE LIKE '%'|| #{value} ||'%'</if>
+      <if test="notes != null">OR NOTES LIKE '%'|| #{notes} ||'%'</if>
+      <if test="lastOpId != null">OR LAST_OP_ID LIKE '%'|| #{lastOpId} ||'%'</if>
+      <if test="lastDate != null">OR LAST_DATE LIKE '%'|| #{lastDate} ||'%'</if>
+      <if test="lastTime != null">OR LAST_TIME LIKE '%'|| #{lastTime} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY APPL_ID, FUNCTION_ID, ITEM_ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Customize Search -->
+  <select id="TCOMBLCM_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" parameterType="java.util.Map">
+    SELECT
+      APPL_ID AS "applId" ,
+      FUNCTION_ID AS "functionId" ,
+      ITEM_ID AS "itemId" ,
+      VALUE AS "value" ,
+      NOTES AS "notes" ,
+      LAST_OP_ID AS "lastOpId" ,
+      LAST_DATE AS "lastDate" ,
+      LAST_TIME AS "lastTime" 
+    FROM TCOMBLCM
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+    <if test="_orderByCondition == null">ORDER BY APPL_ID, FUNCTION_ID, ITEM_ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Count -->
+  <select id="TCOMBLCM_COUNT" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM TCOMBLCM
+    <where>
+      <if test="applId != null">AND APPL_ID = #{applId}</if>
+      <if test="functionId != null">AND FUNCTION_ID = #{functionId}</if>
+      <if test="itemId != null">AND ITEM_ID = #{itemId}</if>
+      <if test="value != null">AND VALUE = #{value}</if>
+      <if test="notes != null">AND NOTES = #{notes}</if>
+      <if test="lastOpId != null">AND LAST_OP_ID = #{lastOpId}</if>
+      <if test="lastDate != null">AND LAST_DATE = #{lastDate}</if>
+      <if test="lastTime != null">AND LAST_TIME = #{lastTime}</if>
+    </where>
+  </select>
+
+  <!-- Count OR -->
+  <select id="TCOMBLCM_COUNT_OR" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM TCOMBLCM
+    <where>
+      <if test="applId != null">OR APPL_ID = #{applId}</if>
+      <if test="functionId != null">OR FUNCTION_ID = #{functionId}</if>
+      <if test="itemId != null">OR ITEM_ID = #{itemId}</if>
+      <if test="value != null">OR VALUE = #{value}</if>
+      <if test="notes != null">OR NOTES = #{notes}</if>
+      <if test="lastOpId != null">OR LAST_OP_ID = #{lastOpId}</if>
+      <if test="lastDate != null">OR LAST_DATE = #{lastDate}</if>
+      <if test="lastTime != null">OR LAST_TIME = #{lastTime}</if>
+    </where>
+  </select>
+
+  <!-- Count Customize -->
+  <select id="TCOMBLCM_COUNT_SEARCH" resultType="java.lang.Integer" parameterType="java.util.Map">
+    SELECT count(*)
+    FROM TCOMBLCM
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+  </select>
+</mapper>

@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sql">
+
+  <!-- Table Insert -->
+  <insert id="T16_NOTICE_COMMENT_INSERT" parameterType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    INSERT INTO T16_NOTICE_COMMENT (
+      NOT_ID ,
+      PER_ID ,
+      COMMENT ,
+      CREATE_DATE ,
+      CREATE_TIME 
+    ) VALUES (
+      #{nOTID} ,
+      #{pERID} ,
+      #{cOMMENT} ,
+      #{cREATEDATE} ,
+      #{cREATETIME} 
+    )
+    <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
+    SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
+  </insert>
+
+  <!-- Table Update -->
+  <update id="T16_NOTICE_COMMENT_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    UPDATE T16_NOTICE_COMMENT SET
+      NOT_ID = #{nOTID} ,
+      PER_ID = #{pERID} ,
+      COMMENT = #{cOMMENT} ,
+      CREATE_DATE = #{cREATEDATE} ,
+      CREATE_TIME = #{cREATETIME} 
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <update id="T16_NOTICE_COMMENT_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    UPDATE T16_NOTICE_COMMENT
+    <set>
+      <if test="nOTID!=null">NOT_ID = #{nOTID},</if>
+      <if test="pERID!=null">PER_ID = #{pERID},</if>
+      <if test="cOMMENT!=null">COMMENT = #{cOMMENT},</if>
+      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
+      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
+    </set>
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <!-- Key Delete -->
+  <delete id="T16_NOTICE_COMMENT_DELETE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    DELETE FROM T16_NOTICE_COMMENT
+    WHERE
+      ID = #{iD} 
+  </delete>
+
+  <!-- Key Search -->
+  <select id="T16_NOTICE_COMMENT_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    WHERE
+      ID = #{iD} 
+  </select>
+
+  <!-- Key Search（For Update） -->
+  <select id="T16_NOTICE_COMMENT_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    WHERE
+      ID = #{iD} 
+    FOR UPDATE
+  </select>
+
+  <!-- AND Search -->
+  <select id="T16_NOTICE_COMMENT_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+      <if test="nOTID != null">AND NOT_ID = #{nOTID}</if>
+      <if test="pERID != null">AND PER_ID = #{pERID}</if>
+      <if test="cOMMENT != null">AND COMMENT = #{cOMMENT}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search(OR) -->
+  <select id="T16_NOTICE_COMMENT_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+      <if test="nOTID != null">OR NOT_ID = #{nOTID}</if>
+      <if test="pERID != null">OR PER_ID = #{pERID}</if>
+      <if test="cOMMENT != null">OR COMMENT = #{cOMMENT}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE -->
+  <select id="T16_NOTICE_COMMENT_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    <where>
+      <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
+      <if test="nOTID != null">AND NOT_ID LIKE '%'|| #{nOTID} ||'%'</if>
+      <if test="pERID != null">AND PER_ID LIKE '%'|| #{pERID} ||'%'</if>
+      <if test="cOMMENT != null">AND COMMENT LIKE '%'|| #{cOMMENT} ||'%'</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
+      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE(OR) -->
+  <select id="T16_NOTICE_COMMENT_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    <where>
+      <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
+      <if test="nOTID != null">OR NOT_ID LIKE '%'|| #{nOTID} ||'%'</if>
+      <if test="pERID != null">OR PER_ID LIKE '%'|| #{pERID} ||'%'</if>
+      <if test="cOMMENT != null">OR COMMENT LIKE '%'|| #{cOMMENT} ||'%'</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
+      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Customize Search -->
+  <select id="T16_NOTICE_COMMENT_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" parameterType="java.util.Map">
+    SELECT
+      ID AS "iD" ,
+      NOT_ID AS "nOTID" ,
+      PER_ID AS "pERID" ,
+      COMMENT AS "cOMMENT" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
+    FROM T16_NOTICE_COMMENT
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Count -->
+  <select id="T16_NOTICE_COMMENT_COUNT" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM T16_NOTICE_COMMENT
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+      <if test="nOTID != null">AND NOT_ID = #{nOTID}</if>
+      <if test="pERID != null">AND PER_ID = #{pERID}</if>
+      <if test="cOMMENT != null">AND COMMENT = #{cOMMENT}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+    </where>
+  </select>
+
+  <!-- Count OR -->
+  <select id="T16_NOTICE_COMMENT_COUNT_OR" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM T16_NOTICE_COMMENT
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+      <if test="nOTID != null">OR NOT_ID = #{nOTID}</if>
+      <if test="pERID != null">OR PER_ID = #{pERID}</if>
+      <if test="cOMMENT != null">OR COMMENT = #{cOMMENT}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+    </where>
+  </select>
+
+  <!-- Count Customize -->
+  <select id="T16_NOTICE_COMMENT_COUNT_SEARCH" resultType="java.lang.Integer" parameterType="java.util.Map">
+    SELECT count(*)
+    FROM T16_NOTICE_COMMENT
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+  </select>
+</mapper>

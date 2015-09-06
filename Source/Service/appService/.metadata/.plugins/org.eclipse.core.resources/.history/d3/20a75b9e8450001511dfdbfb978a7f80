@@ -1,0 +1,38 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.a01.HbWorkerPlan;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerPlanInfoDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsUpdateWorkerPlanInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsUpdateWorkerPlanOutDTO;
+
+public class SsUpdateWorkerPlan extends AbstractService<SsUpdateWorkerPlanOutDTO, SsUpdateWorkerPlanInDTO> {
+
+	@AutoInject
+	private HbWorkerPlan workerPlan;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsUpdateWorkerPlanOutDTO execute(
+			SsUpdateWorkerPlanInDTO ssUpdateWorkerPlanInDTO) {
+		SsUpdateWorkerPlanOutDTO ssUpdateWorkerPlanOutDTO = new SsUpdateWorkerPlanOutDTO();
+		
+		WorkerPlanInfoDTO[]  WorkerPlanInfoArray = ssUpdateWorkerPlanInDTO.getWorkerPlanInfoArray();
+		
+		workerPlan.updateWorkerPlan(ssUpdateWorkerPlanInDTO.getWorkerID(), WorkerPlanInfoArray, null);//Remark ? TODO
+		
+		return ssUpdateWorkerPlanOutDTO;
+	}
+}

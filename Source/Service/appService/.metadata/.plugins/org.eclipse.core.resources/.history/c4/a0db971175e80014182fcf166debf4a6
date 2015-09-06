@@ -1,0 +1,78 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.beetlestech.nfe.fw.core.type.Alias;
+
+/**
+ * 获得订单列表的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/04/21         TOOL                初次作成
+ *
+ */
+@com.beetlestech.nfe.fw.core.type.AliasKanJi("获得订单列表")
+public class SsGetOrdersOutDTO implements java.io.Serializable, Comparable<SsGetOrdersOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 是否结束  
+	*/
+	@Alias("是否结束")
+	private Boolean isEnd = null;
+
+	/**
+	* <code>是否结束</code>返回
+	* @return <code>是否结束</code>
+	*/
+	public Boolean getIsEnd() {
+		return this.isEnd;
+	}
+
+	/**
+	* <code>isEnd</code>设定
+	* @param isEnd　<code>isEnd</code>设定值
+	*/
+	public void setIsEnd(
+			Boolean isEnd) {
+		this.isEnd = isEnd;
+	}
+
+	/**
+	* 订单详细信息  
+	*/
+	@Alias("订单详细信息")
+	private OrderInfoDTO[] orderInfoArray = null;
+
+	/**
+	* <code>订单详细信息</code>返回
+	* @return <code>订单详细信息</code>
+	*/
+	public OrderInfoDTO[] getOrderInfoArray() {
+		return this.orderInfoArray;
+	}
+
+	/**
+	* <code>orderInfoArray</code>设定
+	* @param orderInfoArray　<code>orderInfoArray</code>设定值
+	*/
+	public void setOrderInfoArray(
+			OrderInfoDTO[] orderInfoArray) {
+		this.orderInfoArray = orderInfoArray;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetOrdersOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="2" timestamp="1441095282958" analysisTimestamp="1441095282626" release="">
+  <Project projectName="com.beetlestech.nfe.fw.web">
+    <Jar>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.web\bin\com\maxiaohua</Jar>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.web\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-common-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jedis-2.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\gson-2.2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jpush-client-3.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\slf4j-api-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_20\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.web\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="ajaxRender" signature="LAJAXRender;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="32" end="32" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="caughtExpectedException" signature="Z" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="58" end="58" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="code" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="67" end="67" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="connectionManager" signature="LConnectionManager;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="55" end="55" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="context" signature="Ljavax/servlet/ServletContext;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="26" end="26" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="count" signature="I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="28" end="28" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="61" end="61" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="exceptionHandlers" signature="Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="30" end="30" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="interceptors" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="34" end="34" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="isExceptionHandled" signature="Z" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="36" end="36" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="jsonInput" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="50" end="50" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="jsonOutput" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="52" end="52" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="locale" signature="Ljava/util/Locale;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="38" end="38" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="request" signature="Ljavax/servlet/http/HttpServletRequest;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="40" end="40" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="response" signature="Ljavax/servlet/http/HttpServletResponse;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="42" end="42" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="serviceId" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="44" end="44" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="serviceInput" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="46" end="46" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="serviceOutput" signature="LServiceResponse;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="48" end="48" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="sysId" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="24" end="24" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="timestamp" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="65" end="65" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" name="userID" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" start="63" end="63" startBytecode="0" endBytecode="0" sourcefile="CISInterceptorChain.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="appLogger" signature="LLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" start="20" end="20" startBytecode="0" endBytecode="0" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" start="22" end="22" startBytecode="0" endBytecode="0" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="errorLogger" signature="LErrorLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" start="24" end="24" startBytecode="0" endBytecode="0" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.LDAPInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.LDAPInterceptor" sourcefile="LDAPInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/LDAPInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.LDAPInterceptor" name="ldapFactory" signature="LLDAPFactory;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.LDAPInterceptor" start="13" end="13" startBytecode="0" endBytecode="0" sourcefile="LDAPInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/LDAPInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="ajaxParser" signature="LAJAXParser;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="53" end="53" startBytecode="0" endBytecode="0" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="ajaxRender" signature="LAJAXRender;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="55" end="55" startBytecode="0" endBytecode="0" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInterceptor" sourcefile="ServiceInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInterceptor" name="transactionManager" signature="LTransactionManager;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInterceptor" start="22" end="22" startBytecode="0" endBytecode="0" sourcefile="ServiceInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" name="ajaxRender" signature="LAJAXRender;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" start="21" end="21" startBytecode="0" endBytecode="0" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.SqlSessionControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.SqlSessionControlInterceptor" sourcefile="SqlSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/SqlSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.SqlSessionControlInterceptor" name="connectionManager" signature="LConnectionManager;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.SqlSessionControlInterceptor" start="15" end="15" startBytecode="0" endBytecode="0" sourcefile="SqlSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/SqlSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" sourcefile="WechetPayControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/WechetPayControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" name="appLogger" signature="LLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" start="18" end="18" startBytecode="0" endBytecode="0" sourcefile="WechetPayControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/WechetPayControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" sourcefile="WechetPayControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/WechetPayControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" start="20" end="20" startBytecode="0" endBytecode="0" sourcefile="WechetPayControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/WechetPayControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" sourcefile="WechetPayControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/WechetPayControlInterceptor.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" name="errorLogger" signature="LErrorLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.WechetPayControlInterceptor" start="22" end="22" startBytecode="0" endBytecode="0" sourcefile="WechetPayControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/WechetPayControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="com/beetlestech/nfe/fw/web/rest/AbstractRestController.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" name="appLogger" signature="LLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" start="20" end="20" startBytecode="0" endBytecode="0" sourcefile="AbstractRestController.java" sourcepath="com/beetlestech/nfe/fw/web/rest/AbstractRestController.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="com/beetlestech/nfe/fw/web/rest/AbstractRestController.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" start="22" end="22" startBytecode="0" endBytecode="0" sourcefile="AbstractRestController.java" sourcepath="com/beetlestech/nfe/fw/web/rest/AbstractRestController.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="com/beetlestech/nfe/fw/web/rest/AbstractRestController.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" name="errorLogger" signature="LErrorLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.AbstractRestController" start="24" end="24" startBytecode="0" endBytecode="0" sourcefile="AbstractRestController.java" sourcepath="com/beetlestech/nfe/fw/web/rest/AbstractRestController.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 1 Sep 2015 16:14:42 +0800" total_classes="0" referenced_classes="0" total_bugs="9" total_size="0" num_packages="2" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="0.75" clock_seconds="0.33" peak_mbytes="534.98" alloc_mbytes="455.50" gc_seconds="0.03" priority_2="9">
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="191" invocations="2" avgMicrosecondsPerInvocation="95706" maxMicrosecondsPerInvocation="185624" standardDeviationMircosecondsPerInvocation="89917"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="71" invocations="153" avgMicrosecondsPerInvocation="470" maxMicrosecondsPerInvocation="7031" standardDeviationMircosecondsPerInvocation="866"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1441095227178" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1441095227178" release="" codeSize="252" numClasses="13"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,130 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.WashOrderDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class WashOrderDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "WASH_ORDER_INSERT";
+
+	public static final String FULL_UPDATE = "WASH_ORDER_FULL_UPDATE";
+
+	public static final String UPDATE = "WASH_ORDER_UPDATE";
+
+	public static final String DELETE = "WASH_ORDER_DELETE";
+
+	public static final String FIND = "WASH_ORDER_FIND";
+
+	public static final String FIND_FOR_UPDATE = "WASH_ORDER_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "WASH_ORDER_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "WASH_ORDER_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "WASH_ORDER_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "WASH_ORDER_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "WASH_ORDER_SQL_SEARCH";
+
+	public static final String COUNT = "WASH_ORDER_COUNT";
+
+	public static final String COUNT_OR = "WASH_ORDER_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "WASH_ORDER_COUNT_SEARCH";
+
+	public static final String COLUMN_WASH_ORDER_ID = "WASH_ORDER_ID";
+
+	public static final String COLUMN_ORDER_NO = "ORDER_NO";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_CAR_WASH_ID = "CAR_WASH_ID";
+
+	public static final String COLUMN_WORKER_GROUP_ID = "WORKER_GROUP_ID";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
+	public static final String COLUMN_REMARKS = "REMARKS";
+
+	public static final String COLUMN_REQUEST_DATE = "REQUEST_DATE";
+
+	public static final String COLUMN_REQUEST_TIME = "REQUEST_TIME";
+
+	public static final String COLUMN_WASH_ADDRESS = "WASH_ADDRESS";
+
+	public static final String COLUMN_LATITUDE = "LATITUDE";
+
+	public static final String COLUMN_LONGITUDE = "LONGITUDE";
+
+	public static final String COLUMN_SCORE = "SCORE";
+
+	public static final String COLUMN_EVALUATION = "EVALUATION";
+
+	public static final String COLUMN_DEL_FLG = "DEL_FLG";
+
+	public static final String COLUMN_LAST_DATE = "LAST_DATE";
+
+	public static final String COLUMN_LAST_TIME = "LAST_TIME";
+
+	public static final String TABLE = "WASH_ORDER";
+
+	public static WashOrderDTO setDefaultValue() {
+		WashOrderDTO defaultDTO = new WashOrderDTO();
+
+		defaultDTO.setWashOrderID(0l);
+
+		defaultDTO.setOrderNO(StringUtil.EMPTY);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setCarWashID(0l);
+
+		defaultDTO.setWorkerGroupID(0);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setRemarks(StringUtil.EMPTY);
+
+		defaultDTO.setRequestDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setRequestTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setWashAddress(StringUtil.EMPTY);
+
+		defaultDTO.setLatitude(0.0);
+
+		defaultDTO.setLongitude(0.0);
+
+		defaultDTO.setScore(0);
+
+		defaultDTO.setEvaluation(StringUtil.EMPTY);
+
+		defaultDTO.setDelFlg(0);
+
+		defaultDTO.setLastDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setLastTime(DateUtil.getDefaultTime());
+
+		return defaultDTO;
+	}
+}

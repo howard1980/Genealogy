@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="1" timestamp="1414724787549" analysisTimestamp="1414724743106" release="">
+  <Project projectName="mz.code.ccis.fw.web">
+    <Jar>C:\ccis\NFEService\mz.code.ccis.fw.web\bin</Jar>
+    <AuxClasspathEntry>C:\ccis\NFEService\mz.code.ccis.fw.web\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-common-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\eclipse\j9-6\jre\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\ccis\NFEService\mz.code.ccis.fw.web\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="ajaxRender" signature="LAJAXRender;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="caughtExpectedException" signature="Z" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="connectionManager" signature="LConnectionManager;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="context" signature="Ljavax/servlet/ServletContext;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="count" signature="I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="exceptionHandlers" signature="Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="interceptors" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="isExceptionHandled" signature="Z" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="jsonInput" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="jsonOutput" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="locale" signature="Ljava/util/Locale;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="request" signature="Ljavax/servlet/http/HttpServletRequest;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="response" signature="Ljavax/servlet/http/HttpServletResponse;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="serviceId" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="serviceInput" signature="Ljava/lang/Object;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="serviceOutput" signature="LServiceResponse;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" name="sysId" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourcefile="CISInterceptorChain.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/CISInterceptorChain.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="appLogger" signature="LLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="errorLogger" signature="LErrorLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.LDAPInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.LDAPInterceptor" sourcefile="LDAPInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/LDAPInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.LDAPInterceptor" name="ldapFactory" signature="LLDAPFactory;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.LDAPInterceptor" sourcefile="LDAPInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/LDAPInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="ajaxParser" signature="LAJAXParser;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="ajaxRender" signature="LAJAXRender;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInterceptor" sourcefile="ServiceInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInterceptor" name="transactionManager" signature="LTransactionManager;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceInterceptor" sourcefile="ServiceInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.ServiceOutputParamInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceOutputParamInterceptor" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.ServiceOutputParamInterceptor" name="ajaxRender" signature="LAJAXRender;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.ServiceOutputParamInterceptor" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.fw.web.interceptor.impl.SqlSessionControlInterceptor">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.SqlSessionControlInterceptor" sourcefile="SqlSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/SqlSessionControlInterceptor.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.interceptor.impl.SqlSessionControlInterceptor" name="connectionManager" signature="LConnectionManager;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.fw.web.interceptor.impl.SqlSessionControlInterceptor" sourcefile="SqlSessionControlInterceptor.java" sourcepath="mz/code/ccis/fw/web/interceptor/impl/SqlSessionControlInterceptor.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.fw.web.rest.AbstractRestController">
+      <SourceLine classname="mz.code.ccis.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="mz/code/ccis/fw/web/rest/AbstractRestController.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.rest.AbstractRestController" name="appLogger" signature="LLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="mz/code/ccis/fw/web/rest/AbstractRestController.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.fw.web.rest.AbstractRestController">
+      <SourceLine classname="mz.code.ccis.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="mz/code/ccis/fw/web/rest/AbstractRestController.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.rest.AbstractRestController" name="debugLogger" signature="LDebugLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="mz/code/ccis/fw/web/rest/AbstractRestController.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.fw.web.rest.AbstractRestController">
+      <SourceLine classname="mz.code.ccis.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="mz/code/ccis/fw/web/rest/AbstractRestController.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.fw.web.rest.AbstractRestController" name="errorLogger" signature="LErrorLogger;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.fw.web.rest.AbstractRestController" sourcefile="AbstractRestController.java" sourcepath="mz/code/ccis/fw/web/rest/AbstractRestController.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 31 Oct 2014 11:05:43 +0800" total_classes="12" referenced_classes="75" total_bugs="30" total_size="229" num_packages="3" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="25.42" clock_seconds="44.44" peak_mbytes="506.12" alloc_mbytes="455.50" gc_seconds="0.28" priority_2="30">
+    <PackageStats package="mz.code.ccis.fw.web.interceptor.impl" total_bugs="27" total_types="8" total_size="173" priority_2="27">
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.CISInterceptorChain" sourceFile="CISInterceptorChain.java" interface="false" size="83" bugs="18" priority_2="18"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourceFile="ContextSessionControlInterceptor.java" interface="false" size="20" bugs="3" priority_2="3"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.ContextSessionControlInterceptor4Test" sourceFile="ContextSessionControlInterceptor4Test.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.LDAPInterceptor" sourceFile="LDAPInterceptor.java" interface="false" size="8" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourceFile="ServiceInputParamInterceptor.java" interface="false" size="23" bugs="2" priority_2="2"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.ServiceInterceptor" sourceFile="ServiceInterceptor.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.ServiceOutputParamInterceptor" sourceFile="ServiceOutputParamInterceptor.java" interface="false" size="11" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.fw.web.interceptor.impl.SqlSessionControlInterceptor" sourceFile="SqlSessionControlInterceptor.java" interface="false" size="8" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="mz.code.ccis.fw.web.rest" total_bugs="3" total_types="3" total_size="51" priority_2="3">
+      <ClassStats class="mz.code.ccis.fw.web.rest.AbstractRestController" sourceFile="AbstractRestController.java" interface="false" size="10" bugs="3" priority_2="3"/>
+      <ClassStats class="mz.code.ccis.fw.web.rest.CISRestController" sourceFile="CISRestController.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="mz.code.ccis.fw.web.rest.CISRestServlet" sourceFile="CISRestServlet.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="mz.code.ccis.fw.web.util" total_bugs="0" total_types="1" total_size="5">
+      <ClassStats class="mz.code.ccis.fw.web.util.ReflectUtil" sourceFile="ReflectUtil.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="41931" invocations="2" avgMicrosecondsPerInvocation="20965613" maxMicrosecondsPerInvocation="41911470" standardDeviationMircosecondsPerInvocation="20945857"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1414724787549" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

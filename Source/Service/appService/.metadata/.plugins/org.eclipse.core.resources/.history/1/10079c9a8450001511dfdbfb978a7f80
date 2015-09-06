@@ -1,0 +1,73 @@
+/* CIS
+* (C) Copyright IBM Japan, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.biz.com.impl;
+
+import javax.naming.NamingEnumeration;
+import javax.naming.NamingException;
+import javax.naming.directory.Attributes;
+import javax.naming.directory.DirContext;
+import javax.naming.directory.SearchControls;
+import javax.naming.directory.SearchResult;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.fw.core.context.RequestContext;
+import com.beetlestech.nfe.main.biz.com.HbLDAPAccess;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+
+/**
+ * HbLDAPアクセス Bizロジックの実装ロジック
+ *
+ * 変更履歴
+ * REV.         変更日付           変更者              変更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2013/12/17         GD 馬継お           新規作成
+ *
+ */
+public class HbLDAPAccessImpl extends AbstractDBLogic implements HbLDAPAccess,HbMessageCode {
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbLDAPAccess#find(java.lang.String, java.lang.String, java.lang.String[])
+	 */
+	@Override
+	public Attributes find(
+			String scope,
+			String filter,
+			String[] attrIDs) {
+		DirContext dirContext = (DirContext) RequestContext.open().getElement(RequestContext.Key.LDAPContext);
+		Attributes result = null;
+		if (dirContext != null) {
+			SearchControls ctls = new SearchControls();
+			ctls.setReturningAttributes(attrIDs);
+			try {
+				NamingEnumeration<SearchResult> resultList = dirContext.search(scope, filter, ctls);
+				while (resultList.hasMore()) {
+					SearchResult searchResult = resultList.next();
+					result = searchResult.getAttributes();
+				}
+			} catch (NamingException e) {
+				createApplicationException(M10590WS);
+			}
+		}
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbLDAPAccess#update(java.lang.String, int, javax.naming.directory.Attributes)
+	 */
+	@Override
+	public void update(
+			String scope,
+			int updateType,
+			Attributes attrs) {
+		DirContext dirContext = (DirContext) RequestContext.open().getElement(RequestContext.Key.LDAPContext);
+		if (dirContext != null) {
+			try {
+				dirContext.modifyAttributes(scope, updateType, attrs);
+			} catch (NamingException e) {
+				createApplicationException(M10600WS);
+			}
+		}
+	}
+
+}

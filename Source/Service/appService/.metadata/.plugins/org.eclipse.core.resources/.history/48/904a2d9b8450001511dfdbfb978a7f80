@@ -1,0 +1,129 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.AdministratorDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class AdministratorDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "ADMINISTRATOR_INSERT";
+
+	public static final String FULL_UPDATE = "ADMINISTRATOR_FULL_UPDATE";
+
+	public static final String UPDATE = "ADMINISTRATOR_UPDATE";
+
+	public static final String DELETE = "ADMINISTRATOR_DELETE";
+
+	public static final String FIND = "ADMINISTRATOR_FIND";
+
+	public static final String FIND_FOR_UPDATE = "ADMINISTRATOR_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "ADMINISTRATOR_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "ADMINISTRATOR_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "ADMINISTRATOR_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "ADMINISTRATOR_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "ADMINISTRATOR_SQL_SEARCH";
+
+	public static final String COUNT = "ADMINISTRATOR_COUNT";
+
+	public static final String COUNT_OR = "ADMINISTRATOR_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "ADMINISTRATOR_COUNT_SEARCH";
+
+	public static final String COLUMN_ADMINISTRATOR_ID = "ADMINISTRATOR_ID";
+
+	public static final String COLUMN_ORGANIZATION_ID = "ORGANIZATION_ID";
+
+	public static final String COLUMN_ADMINISTRATOR_CODE = "ADMINISTRATOR_CODE";
+
+	public static final String COLUMN_ADMINISTRATOR_NAME = "ADMINISTRATOR_NAME";
+
+	public static final String COLUMN_PASSWORD = "PASSWORD";
+
+	public static final String COLUMN_STAFF_NO = "STAFF_NO";
+
+	public static final String COLUMN_ADMINISTRATOR_STATUS = "ADMINISTRATOR_STATUS";
+
+	public static final String COLUMN_SEX = "SEX";
+
+	public static final String COLUMN_CERTIFICATETYPE = "CERTIFICATETYPE";
+
+	public static final String COLUMN_CERTIFICATENO = "CERTIFICATENO";
+
+	public static final String COLUMN_EMAIL = "EMAIL";
+
+	public static final String COLUMN_MOBILE = "MOBILE";
+
+	public static final String COLUMN_ORGNAME = "ORGNAME";
+
+	public static final String COLUMN_CHANNELNAME = "CHANNELNAME";
+
+	public static final String COLUMN_BPL = "BPL";
+
+	public static final String COLUMN_SELL_PRODUCT_ID = "SELL_PRODUCT_ID";
+
+	public static final String COLUMN_RANK_ID = "RANK_ID";
+
+	public static final String COLUMN_CREDENTIALNO = "CREDENTIALNO";
+
+	public static final String TABLE = "ADMINISTRATOR";
+
+	public static AdministratorDTO setDefaultValue() {
+		AdministratorDTO defaultDTO = new AdministratorDTO();
+
+		defaultDTO.setadministratorid(0l);
+
+		defaultDTO.setorganizationid(0l);
+
+		defaultDTO.setadministratorcode(StringUtil.EMPTY);
+
+		defaultDTO.setadministratorname(StringUtil.EMPTY);
+
+		defaultDTO.setpassword(StringUtil.EMPTY);
+
+		defaultDTO.setstaffno(StringUtil.EMPTY);
+
+		defaultDTO.setadministratorstatus(StringUtil.EMPTY);
+
+		defaultDTO.setsex(StringUtil.EMPTY);
+
+		defaultDTO.setcertificatetype(new java.math.BigDecimal(0));
+
+		defaultDTO.setcertificateno(StringUtil.EMPTY);
+
+		defaultDTO.setemail(StringUtil.EMPTY);
+
+		defaultDTO.setmobile(StringUtil.EMPTY);
+
+		defaultDTO.setorgname(StringUtil.EMPTY);
+
+		defaultDTO.setchannelname(StringUtil.EMPTY);
+
+		defaultDTO.setbpl(StringUtil.EMPTY);
+
+		defaultDTO.setsellproductid(new java.math.BigDecimal(0));
+
+		defaultDTO.setrankid(StringUtil.EMPTY);
+
+		defaultDTO.setcredentialno(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

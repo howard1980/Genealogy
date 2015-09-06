@@ -1,0 +1,35 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.beetlestech.nfe.main.biz.a01.dto.RepairServiceDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetOneRepairServiceInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetOneRepairServiceOutDTO;
+
+public class SsGetOneRepairService extends AbstractService<SsGetOneRepairServiceOutDTO, SsGetOneRepairServiceInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetOneRepairServiceOutDTO execute(
+			SsGetOneRepairServiceInDTO ssGetOneRepairServiceInDTO) {
+		SsGetOneRepairServiceOutDTO ssGetOneRepairServiceOutDTO = new SsGetOneRepairServiceOutDTO();
+		
+		RepairServiceDTO dto1 = new RepairServiceDTO();
+		dto1.setDescription("机油和机油滤芯更换");
+		dto1.setName("机油和机油滤芯更换");
+		dto1.setPrice(30.00);
+		dto1.setServiceID(1L);
+		
+		ssGetOneRepairServiceOutDTO.setRepairService(dto1);
+		
+		return ssGetOneRepairServiceOutDTO;
+	}
+}

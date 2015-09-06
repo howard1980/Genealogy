@@ -1,0 +1,33 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.com.HbJPush;
+import com.beetlestech.nfe.main.service.com.dto.SsUpdateJPushInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsUpdateJPushOutDTO;
+
+public class SsUpdateJPush extends AbstractService<SsUpdateJPushOutDTO, SsUpdateJPushInDTO> {
+
+	@AutoInject
+	private HbJPush hbJPush;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsUpdateJPushOutDTO execute(
+			SsUpdateJPushInDTO ssUpdateJPushInDTO) {
+		SsUpdateJPushOutDTO ssUpdateJPushOutDTO = new SsUpdateJPushOutDTO();
+		hbJPush.updateCustomerJPush(ssUpdateJPushInDTO.getCustomerID(), ssUpdateJPushInDTO.getRegistrationID());
+		return ssUpdateJPushOutDTO;
+	}
+}

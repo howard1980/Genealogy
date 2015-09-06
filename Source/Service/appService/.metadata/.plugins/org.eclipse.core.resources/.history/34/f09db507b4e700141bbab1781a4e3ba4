@@ -1,0 +1,8 @@
+package com.beetlestech.nfe.main.biz.a01;
+
+import java.net.MalformedURLException;
+
+public interface HbGetCidtyCode {
+	String getCode( Double latitude, Double longitude );
+
+}

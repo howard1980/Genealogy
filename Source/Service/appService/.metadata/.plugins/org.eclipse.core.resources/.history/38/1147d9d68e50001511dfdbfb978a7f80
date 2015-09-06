@@ -1,0 +1,284 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * OrderInfoDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("订单明细相关信息")
+public class OrderInfoDTO implements java.io.Serializable, Comparable<OrderInfoDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Long orderID = null;
+
+	public Long getOrderID() {
+		return this.orderID;
+	}
+
+	public void setOrderID(
+			Long orderID) {
+		this.orderID = orderID;
+	}
+
+	private String orderNO = null;
+
+	public String getOrderNO() {
+		return this.orderNO;
+	}
+
+	public void setOrderNO(
+			String orderNO) {
+		this.orderNO = orderNO;
+	}
+
+	private java.sql.Date createDate = null;
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	private java.sql.Time createTime = null;
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
+	}
+
+	private String licencePlate = null;
+
+	public String getLicencePlate() {
+		return this.licencePlate;
+	}
+
+	public void setLicencePlate(
+			String licencePlate) {
+		this.licencePlate = licencePlate;
+	}
+
+	private java.sql.Date requestDate = null;
+
+	public java.sql.Date getRequestDate() {
+		return this.requestDate;
+	}
+
+	public void setRequestDate(
+			java.sql.Date requestDate) {
+		this.requestDate = requestDate;
+	}
+
+	private java.sql.Time requestTime = null;
+
+	public java.sql.Time getRequestTime() {
+		return this.requestTime;
+	}
+
+	public void setRequestTime(
+			java.sql.Time requestTime) {
+		this.requestTime = requestTime;
+	}
+
+	private java.sql.Date washDate = null;
+
+	public java.sql.Date getWashDate() {
+		return this.washDate;
+	}
+
+	public void setWashDate(
+			java.sql.Date washDate) {
+		this.washDate = washDate;
+	}
+
+	private java.sql.Time washTime = null;
+
+	public java.sql.Time getWashTime() {
+		return this.washTime;
+	}
+
+	public void setWashTime(
+			java.sql.Time washTime) {
+		this.washTime = washTime;
+	}
+
+	private String washAddress = null;
+
+	public String getWashAddress() {
+		return this.washAddress;
+	}
+
+	public void setWashAddress(
+			String washAddress) {
+		this.washAddress = washAddress;
+	}
+
+	private OrderItemDTO[] orderItems = null;
+
+	public OrderItemDTO[] getOrderItems() {
+		return this.orderItems;
+	}
+
+	public void setOrderItems(
+			OrderItemDTO[] orderItems) {
+		this.orderItems = orderItems;
+	}
+
+	private String mobile = null;
+
+	public String getMobile() {
+		return this.mobile;
+	}
+
+	public void setMobile(
+			String mobile) {
+		this.mobile = mobile;
+	}
+
+	private Integer evaluation = null;
+
+	public Integer getEvaluation() {
+		return this.evaluation;
+	}
+
+	public void setEvaluation(
+			Integer evaluation) {
+		this.evaluation = evaluation;
+	}
+
+	private String[] evidence = null;
+
+	public String[] getEvidence() {
+		return this.evidence;
+	}
+
+	public void setEvidence(
+			String[] evidence) {
+		this.evidence = evidence;
+	}
+
+	private String[] evidenceafter = null;
+
+	public String[] getEvidenceafter() {
+		return this.evidenceafter;
+	}
+
+	public void setEvidenceafter(
+			String[] evidenceafter) {
+		this.evidenceafter = evidenceafter;
+	}
+
+	private Double price = null;
+
+	public Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			Double price) {
+		this.price = price;
+	}
+
+	private Integer workerID = null;
+
+	public Integer getWorkerID() {
+		return this.workerID;
+	}
+
+	public void setWorkerID(
+			Integer workerID) {
+		this.workerID = workerID;
+	}
+
+	private String worker = null;
+
+	public String getWorker() {
+		return this.worker;
+	}
+
+	public void setWorker(
+			String worker) {
+		this.worker = worker;
+	}
+
+	private Integer status = null;
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	private Double longitude = null;
+
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
+	}
+
+	private Double latitude = null;
+
+	public Double getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
+	}
+
+	private CashCouponDTO cashCoupon = null;
+
+	public CashCouponDTO getCashCoupon() {
+		return this.cashCoupon;
+	}
+
+	public void setCashCoupon(
+			CashCouponDTO cashCoupon) {
+		this.cashCoupon = cashCoupon;
+	}
+
+	private Double payment = null;
+
+	public Double getPayment() {
+		return this.payment;
+	}
+
+	public void setPayment(
+			Double payment) {
+		this.payment = payment;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		OrderInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

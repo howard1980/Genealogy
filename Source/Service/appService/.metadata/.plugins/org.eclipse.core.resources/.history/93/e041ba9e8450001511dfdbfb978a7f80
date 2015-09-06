@@ -1,0 +1,40 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import java.util.Map;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.com.HbSystemInfo;
+import com.beetlestech.nfe.main.service.com.dto.SsGetOSSKeyInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsGetOSSKeyOutDTO;
+
+public class SsGetOSSKey extends AbstractService<SsGetOSSKeyOutDTO, SsGetOSSKeyInDTO> {
+
+	@AutoInject
+	private HbSystemInfo hbSystemInfo;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetOSSKeyOutDTO execute(
+			SsGetOSSKeyInDTO ssGetOSSKeyInDTO) {
+		SsGetOSSKeyOutDTO ssGetOSSKeyOutDTO = new SsGetOSSKeyOutDTO();
+		
+		Map<String,String> map = hbSystemInfo.getOssKey();
+		
+		
+		ssGetOSSKeyOutDTO.setAk(map.get("ak")); //"G519MH7jgh3uuBUJ"
+		ssGetOSSKeyOutDTO.setSk(map.get("sk"));
+		ssGetOSSKeyOutDTO.setBucketname(map.get("bucketname"));
+		
+		return ssGetOSSKeyOutDTO;
+	}
+}

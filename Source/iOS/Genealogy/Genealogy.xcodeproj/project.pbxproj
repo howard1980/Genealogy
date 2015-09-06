@@ -12,9 +12,12 @@
 		2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2928145E1B8E029A008AEC55 /* Images.xcassets */; };
 		292814621B8E029A008AEC55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292814601B8E029A008AEC55 /* LaunchScreen.xib */; };
 		2928146E1B8E029A008AEC55 /* GenealogyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2928146D1B8E029A008AEC55 /* GenealogyTests.m */; };
+		296FE8491B9347F00029CD2F /* FileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FE8481B9347F00029CD2F /* FileTest.swift */; };
+		296FE84B1B934A9F0029CD2F /* ParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FE84A1B934A9F0029CD2F /* ParallaxItem.swift */; };
+		296FE84D1B934ACB0029CD2F /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FE84C1B934ACB0029CD2F /* RMParallax.swift */; };
+		296FE8531B934D900029CD2F /* GuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296FE8521B934D900029CD2F /* GuidViewController.m */; };
 		297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F870B1B8ED34E0056A89A /* MXHFrameWork.m */; };
 		297F870E1B8EE1C40056A89A /* configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 297F870D1B8EE1C40056A89A /* configure.plist */; };
-		297F872F1B8F56680056A89A /* IntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 297F872E1B8F56680056A89A /* IntroductionViewController.m */; };
 		29A1BC561B9040AB001AE4B5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1BC551B9040AB001AE4B5 /* MainViewController.m */; };
 		29A1BC5C1B904421001AE4B5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1BC5A1B904421001AE4B5 /* LoginViewController.m */; };
 		29A1BC5D1B904421001AE4B5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29A1BC5B1B904421001AE4B5 /* LoginViewController.xib */; };
@@ -38,6 +41,7 @@
 		29EC19AC1B9095ED002204D9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC199A1B9095ED002204D9 /* UIRefreshControl+AFNetworking.m */; };
 		29EC19AD1B9095ED002204D9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC199C1B9095ED002204D9 /* UIWebView+AFNetworking.m */; };
 		29EC19C51B91AB79002204D9 /* ServiceBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC19C41B91AB79002204D9 /* ServiceBaseModel.m */; };
+		29EC19C91B91B2C3002204D9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC19C81B91B2C3002204D9 /* BaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +65,16 @@
 		292814671B8E029A008AEC55 /* GenealogyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GenealogyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2928146C1B8E029A008AEC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2928146D1B8E029A008AEC55 /* GenealogyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenealogyTests.m; sourceTree = "<group>"; };
+		296FE8471B9347F00029CD2F /* Genealogy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Genealogy-Bridging-Header.h"; sourceTree = "<group>"; };
+		296FE8481B9347F00029CD2F /* FileTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTest.swift; sourceTree = "<group>"; };
+		296FE84A1B934A9F0029CD2F /* ParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxItem.swift; path = FrameWork/UtilityViewController/GuidViewController/ParallaxItem.swift; sourceTree = "<group>"; };
+		296FE84C1B934ACB0029CD2F /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMParallax.swift; path = FrameWork/UtilityViewController/GuidViewController/RMParallax.swift; sourceTree = "<group>"; };
+		296FE8511B934D900029CD2F /* GuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuidViewController.h; path = Layout/Guid/GuidViewController.h; sourceTree = "<group>"; };
+		296FE8521B934D900029CD2F /* GuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GuidViewController.m; path = Layout/Guid/GuidViewController.m; sourceTree = "<group>"; };
 		297F870A1B8ED33A0056A89A /* MXHFrameWork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MXHFrameWork.h; path = FrameWork/MXHFrameWork.h; sourceTree = "<group>"; };
 		297F870B1B8ED34E0056A89A /* MXHFrameWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXHFrameWork.m; path = FrameWork/MXHFrameWork.m; sourceTree = "<group>"; };
 		297F870D1B8EE1C40056A89A /* configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = configure.plist; path = Resources/configure.plist; sourceTree = "<group>"; };
 		297F87271B8F46DE0056A89A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constant.h; path = Protocal/Constant.h; sourceTree = "<group>"; };
-		297F872D1B8F56680056A89A /* IntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IntroductionViewController.h; path = FrameWork/GuidViewController/IntroductionViewController.h; sourceTree = "<group>"; };
-		297F872E1B8F56680056A89A /* IntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IntroductionViewController.m; path = FrameWork/GuidViewController/IntroductionViewController.m; sourceTree = "<group>"; };
 		29A1BC541B9040AB001AE4B5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		29A1BC551B9040AB001AE4B5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		29A1BC591B904421001AE4B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Layout/Login/LoginViewController.h; sourceTree = "<group>"; };
@@ -115,6 +123,8 @@
 		29EC19C21B91A674002204D9 /* ModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ModelProtocol.h; path = Protocal/ModelProtocol.h; sourceTree = "<group>"; };
 		29EC19C31B91AB79002204D9 /* ServiceBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceBaseModel.h; path = FrameWork/Model/ServiceBaseModel.h; sourceTree = "<group>"; };
 		29EC19C41B91AB79002204D9 /* ServiceBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceBaseModel.m; path = FrameWork/Model/ServiceBaseModel.m; sourceTree = "<group>"; };
+		29EC19C71B91B2C3002204D9 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = FrameWork/ViewController/BaseViewController.h; sourceTree = "<group>"; };
+		29EC19C81B91B2C3002204D9 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = FrameWork/ViewController/BaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +176,8 @@
 				2928144E1B8E029A008AEC55 /* Supporting Files */,
 				29A1BC541B9040AB001AE4B5 /* MainViewController.h */,
 				29A1BC551B9040AB001AE4B5 /* MainViewController.m */,
+				296FE8481B9347F00029CD2F /* FileTest.swift */,
+				296FE8471B9347F00029CD2F /* Genealogy-Bridging-Header.h */,
 			);
 			path = Genealogy;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 		2928149D1B8EAA22008AEC55 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				29EC19C61B91B28B002204D9 /* ViewController */,
 				29EC193A1B9094DF002204D9 /* OpenSource */,
 				29EC19361B9087BB002204D9 /* Model */,
 				297F87261B8F468C0056A89A /* Protocal */,
@@ -210,11 +223,20 @@
 			name = FrameWork;
 			sourceTree = "<group>";
 		};
+		296FE84E1B934AF00029CD2F /* Guid */ = {
+			isa = PBXGroup;
+			children = (
+				296FE8511B934D900029CD2F /* GuidViewController.h */,
+				296FE8521B934D900029CD2F /* GuidViewController.m */,
+			);
+			name = Guid;
+			sourceTree = "<group>";
+		};
 		297F870F1B8F27550056A89A /* GuidViewController */ = {
 			isa = PBXGroup;
 			children = (
-				297F872D1B8F56680056A89A /* IntroductionViewController.h */,
-				297F872E1B8F56680056A89A /* IntroductionViewController.m */,
+				296FE84A1B934A9F0029CD2F /* ParallaxItem.swift */,
+				296FE84C1B934ACB0029CD2F /* RMParallax.swift */,
 			);
 			name = GuidViewController;
 			sourceTree = "<group>";
@@ -239,6 +261,7 @@
 		29A1BC571B904399001AE4B5 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				296FE84E1B934AF00029CD2F /* Guid */,
 				29A1BC581B9043B8001AE4B5 /* Login */,
 			);
 			name = Layout;
@@ -341,6 +364,15 @@
 			);
 			name = "UIKit+AFNetworking";
 			path = "FrameWork/OpenSource/UIKit+AFNetworking";
+			sourceTree = "<group>";
+		};
+		29EC19C61B91B28B002204D9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				29EC19C71B91B2C3002204D9 /* BaseViewController.h */,
+				29EC19C81B91B2C3002204D9 /* BaseViewController.m */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,22 +485,26 @@
 				297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */,
 				29EC19A81B9095ED002204D9 /* UIAlertView+AFNetworking.m in Sources */,
 				29EC199E1B9095ED002204D9 /* AFHTTPRequestOperationManager.m in Sources */,
+				296FE8491B9347F00029CD2F /* FileTest.swift in Sources */,
 				29A1BC561B9040AB001AE4B5 /* MainViewController.m in Sources */,
+				296FE84D1B934ACB0029CD2F /* RMParallax.swift in Sources */,
 				29EC19391B9087F3002204D9 /* BaseModel.m in Sources */,
 				29EC19AA1B9095ED002204D9 /* UIImageView+AFNetworking.m in Sources */,
 				29EC199F1B9095ED002204D9 /* AFHTTPSessionManager.m in Sources */,
 				29EC19A71B9095ED002204D9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				29EC19C51B91AB79002204D9 /* ServiceBaseModel.m in Sources */,
 				29EC19A61B9095ED002204D9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				296FE84B1B934A9F0029CD2F /* ParallaxItem.swift in Sources */,
 				29A1BC5C1B904421001AE4B5 /* LoginViewController.m in Sources */,
 				29A1BC611B904E7B001AE4B5 /* ValidCode.m in Sources */,
-				297F872F1B8F56680056A89A /* IntroductionViewController.m in Sources */,
+				29EC19C91B91B2C3002204D9 /* BaseViewController.m in Sources */,
 				29EC19A11B9095ED002204D9 /* AFSecurityPolicy.m in Sources */,
 				292814541B8E029A008AEC55 /* AppDelegate.m in Sources */,
 				29EC19A31B9095ED002204D9 /* AFURLRequestSerialization.m in Sources */,
 				29EC19A01B9095ED002204D9 /* AFNetworkReachabilityManager.m in Sources */,
 				29EC19AD1B9095ED002204D9 /* UIWebView+AFNetworking.m in Sources */,
 				29EC19A41B9095ED002204D9 /* AFURLResponseSerialization.m in Sources */,
+				296FE8531B934D900029CD2F /* GuidViewController.m in Sources */,
 				292814511B8E029A008AEC55 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,9 +623,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Genealogy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Genealogy/Genealogy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -597,9 +636,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Genealogy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Genealogy/Genealogy-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -1,0 +1,73 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.OrderWorksheetDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class OrderWorksheetDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "ORDER_WORKSHEET_INSERT";
+
+	public static final String FULL_UPDATE = "ORDER_WORKSHEET_FULL_UPDATE";
+
+	public static final String UPDATE = "ORDER_WORKSHEET_UPDATE";
+
+	public static final String DELETE = "ORDER_WORKSHEET_DELETE";
+
+	public static final String FIND = "ORDER_WORKSHEET_FIND";
+
+	public static final String FIND_FOR_UPDATE = "ORDER_WORKSHEET_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "ORDER_WORKSHEET_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "ORDER_WORKSHEET_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "ORDER_WORKSHEET_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "ORDER_WORKSHEET_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "ORDER_WORKSHEET_SQL_SEARCH";
+
+	public static final String COUNT = "ORDER_WORKSHEET_COUNT";
+
+	public static final String COUNT_OR = "ORDER_WORKSHEET_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "ORDER_WORKSHEET_COUNT_SEARCH";
+
+	public static final String COLUMN_WORKSHEET_ID = "WORKSHEET_ID";
+
+	public static final String COLUMN_REPAIR_ORDER_ID = "REPAIR_ORDER_ID";
+
+	public static final String COLUMN_PICPATH = "PICPATH";
+
+	public static final String COLUMN_WORKERPRICE = "WORKERPRICE";
+
+	public static final String TABLE = "ORDER_WORKSHEET";
+
+	public static OrderWorksheetDTO setDefaultValue() {
+		OrderWorksheetDTO defaultDTO = new OrderWorksheetDTO();
+
+		defaultDTO.setWorksheetID(0l);
+
+		defaultDTO.setRepairOrderID(0l);
+
+		defaultDTO.setpicPath(StringUtil.EMPTY);
+
+		defaultDTO.setworkerPrice(new java.math.BigDecimal(0));
+
+		return defaultDTO;
+	}
+}

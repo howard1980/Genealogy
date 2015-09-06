@@ -1,0 +1,6 @@
+1441096024617	Rename package 'com.beetlestech.nfe.fw.core.connection.impl'
+1441096039263	Rename package 'com.beetlestech.nfe.fw.core.transaction.impl'
+1441096049519	Rename package 'com.beetlestech.nfe.fw.core.dao.util'
+1441096061037	Rename package 'com.beetlestech.nfe.fw.core.dao.mybatis.ex'
+1441096079800	Rename package 'com.beetlestech.nfe.fw.core.dao.lob.ex'
+1441096087854	Rename package 'com.beetlestech.nfe.fw.core.dao.impl'

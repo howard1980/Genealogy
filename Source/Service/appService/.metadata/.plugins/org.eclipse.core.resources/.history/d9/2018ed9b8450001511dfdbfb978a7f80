@@ -1,0 +1,69 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.view.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerCityDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VWorkerCityDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VWORKER_CITY_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VWORKER_CITY_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VWORKER_CITY_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VWORKER_CITY_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VWORKER_CITY_SQL_SEARCH";
+
+	public static final String COUNT = "VWORKER_CITY_COUNT";
+
+	public static final String COUNT_OR = "VWORKER_CITY_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VWORKER_CITY_COUNT_SEARCH";
+
+	public static final String COLUMN_WORKER_GROUP_ID = "WORKER_GROUP_ID";
+
+	public static final String COLUMN_NAME = "NAME";
+
+	public static final String COLUMN_STATUS = "STATUS";
+
+	public static final String COLUMN_CITY_CODE = "CITY_CODE";
+
+	public static final String COLUMN_LATITUDE = "LATITUDE";
+
+	public static final String COLUMN_LONGITUDE = "LONGITUDE";
+
+	public static final String TABLE = "VWORKER_CITY";
+
+	public static VWorkerCityDTO setDefaultValue() {
+		VWorkerCityDTO defaultDTO = new VWorkerCityDTO();
+
+		defaultDTO.setWorkerGroupID(0);
+
+		defaultDTO.setName(StringUtil.EMPTY);
+
+		defaultDTO.setStatus(0);
+
+		defaultDTO.setCityCode(StringUtil.EMPTY);
+
+		defaultDTO.setLatitude(0.0);
+
+		defaultDTO.setLongitude(0.0);
+
+		return defaultDTO;
+	}
+}

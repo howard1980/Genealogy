@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="8" timestamp="1399260809707" analysisTimestamp="1399260807965" release="">
+  <Project projectName="com.ibm.jp.cis.fw.core">
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\bin\com\ibm\jp\cis\fw\core\dao\UpdateDAO.class</Jar>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 5 May 2014 11:33:26 +0800" total_classes="1" referenced_classes="9" total_bugs="0" total_size="6" num_packages="1" vm_version="24.55-b03" cpu_seconds="1.34" clock_seconds="1.75" peak_mbytes="312.91" alloc_mbytes="494.94" gc_seconds="0.02">
+    <PackageStats package="com.ibm.jp.cis.fw.core.dao" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="com.ibm.jp.cis.fw.core.dao.UpdateDAO" sourceFile="UpdateDAO.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="226" invocations="2" avgMicrosecondsPerInvocation="113009" maxMicrosecondsPerInvocation="125856" standardDeviationMircosecondsPerInvocation="12850"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="117" invocations="258" avgMicrosecondsPerInvocation="455" maxMicrosecondsPerInvocation="734" standardDeviationMircosecondsPerInvocation="117"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="105" invocations="256" avgMicrosecondsPerInvocation="411" maxMicrosecondsPerInvocation="9337" standardDeviationMircosecondsPerInvocation="887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="49" invocations="248" avgMicrosecondsPerInvocation="198" maxMicrosecondsPerInvocation="25904" standardDeviationMircosecondsPerInvocation="1643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="28" invocations="9" avgMicrosecondsPerInvocation="3188" maxMicrosecondsPerInvocation="13459" standardDeviationMircosecondsPerInvocation="4320"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1398650192268" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1398650192276" release="" codeSize="758" numClasses="36"/>
+    <AppVersion sequence="2" timestamp="1398771185864" release="" codeSize="23" numClasses="1"/>
+    <AppVersion sequence="3" timestamp="1398771225682" release="" codeSize="23" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1398771370318" release="" codeSize="23" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1398908989830" release="" codeSize="153" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1398928873607" release="" codeSize="42" numClasses="2"/>
+    <AppVersion sequence="7" timestamp="1399107053342" release="" codeSize="12" numClasses="2"/>
+  </History>
+</BugCollection>

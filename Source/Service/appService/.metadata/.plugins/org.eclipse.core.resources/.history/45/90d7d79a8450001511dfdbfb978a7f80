@@ -1,0 +1,196 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.CarInfoDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CAR_INFO")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CarInfoDTO extends CarInfoDTOSupport implements java.io.Serializable, Comparable<CarInfoDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CAR_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long carID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CAR_MODEL_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long carModelID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("COLOR_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String colorID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LICENCE_PLATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
+	private String licencePlate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("VIN")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 17, max = 17)
+	private String vIN = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PHOTO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 80, max = 80)
+	private String photo = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MILEAGE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer mileage = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("COLOR")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String color = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LOCATION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String location = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MOTOR_NUMBER")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String motorNumber = null;
+
+	public Long getCarID() {
+		return this.carID;
+	}
+
+	public void setCarID(
+			Long carID) {
+		this.carID = carID;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getCarModelID() {
+		return this.carModelID;
+	}
+
+	public void setCarModelID(
+			Long carModelID) {
+		this.carModelID = carModelID;
+	}
+
+	public String getColorID() {
+		return this.colorID;
+	}
+
+	public void setColorID(
+			String colorID) {
+		this.colorID = colorID;
+	}
+
+	public String getLicencePlate() {
+		return this.licencePlate;
+	}
+
+	public void setLicencePlate(
+			String licencePlate) {
+		this.licencePlate = licencePlate;
+	}
+
+	public String getVIN() {
+		return this.vIN;
+	}
+
+	public void setVIN(
+			String vIN) {
+		this.vIN = vIN;
+	}
+
+	public String getPhoto() {
+		return this.photo;
+	}
+
+	public void setPhoto(
+			String photo) {
+		this.photo = photo;
+	}
+
+	public Integer getMileage() {
+		return this.mileage;
+	}
+
+	public void setMileage(
+			Integer mileage) {
+		this.mileage = mileage;
+	}
+
+	public String getColor() {
+		return this.color;
+	}
+
+	public void setColor(
+			String color) {
+		this.color = color;
+	}
+
+	public String getLocation() {
+		return this.location;
+	}
+
+	public void setLocation(
+			String location) {
+		this.location = location;
+	}
+
+	public String getMotorNumber() {
+		return this.motorNumber;
+	}
+
+	public void setMotorNumber(
+			String motorNumber) {
+		this.motorNumber = motorNumber;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CarInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

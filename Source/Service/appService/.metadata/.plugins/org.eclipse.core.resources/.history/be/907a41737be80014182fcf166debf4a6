@@ -1,0 +1,50 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.a01.HbOrder;
+import com.beetlestech.nfe.main.biz.a01.dto.OrderResultDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsCreateTextOrderInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsCreateTextOrderOutDTO;
+
+public class SsCreateTextOrder extends AbstractService<SsCreateTextOrderOutDTO, SsCreateTextOrderInDTO> {
+	@AutoInject
+	private HbOrder hbOrder;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsCreateTextOrderOutDTO execute(
+			SsCreateTextOrderInDTO ssCreateTextOrderInDTO) {
+		SsCreateTextOrderOutDTO ssCreateTextOrderOutDTO = new SsCreateTextOrderOutDTO();
+		OrderResultDTO orderResult = hbOrder.createOrder(
+				ssCreateTextOrderInDTO.getCustomerID(), 
+				ssCreateTextOrderInDTO.getLicencePlate(), 
+				ssCreateTextOrderInDTO.getCarModel(), 
+				ssCreateTextOrderInDTO.getCarColor(), 
+				ssCreateTextOrderInDTO.getDate(), 
+				ssCreateTextOrderInDTO.getTime(), 
+				ssCreateTextOrderInDTO.getAddress(), 
+				ssCreateTextOrderInDTO.getServiceItems(), 
+				ssCreateTextOrderInDTO.getLongitude(), 
+				ssCreateTextOrderInDTO.getLatitude(), 
+				ssCreateTextOrderInDTO.getCityCode(), 
+				ssCreateTextOrderInDTO.getRemark());
+		ssCreateTextOrderOutDTO.setAmmount(orderResult.getAmmount());
+		ssCreateTextOrderOutDTO.setLackCount(orderResult.getLackCount());
+		ssCreateTextOrderOutDTO.setOpenCap(orderResult.getOpenCap());
+		ssCreateTextOrderOutDTO.setOrderID(orderResult.getOrderID());
+		ssCreateTextOrderOutDTO.setCreateResult(orderResult.getResult());
+		return ssCreateTextOrderOutDTO;
+	}
+}

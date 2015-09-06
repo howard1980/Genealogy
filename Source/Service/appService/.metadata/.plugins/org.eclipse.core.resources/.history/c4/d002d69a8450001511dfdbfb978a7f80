@@ -1,0 +1,108 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.AutomotiveManufacturerDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("AUTOMOTIVE_MANUFACTURER")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class AutomotiveManufacturerDTO extends AutomotiveManufacturerDTOSupport implements java.io.Serializable, Comparable<AutomotiveManufacturerDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AUTOMOTIVE_MANUFACTURER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long automotiveManufacturerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AUTOMOBILE_BRAND_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long automobileBrandID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 20, max = 20)
+	private String name = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LOGO_PATH")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 80, max = 80)
+	private String logoPath = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SPELL")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String spell = null;
+
+	public Long getAutomotiveManufacturerID() {
+		return this.automotiveManufacturerID;
+	}
+
+	public void setAutomotiveManufacturerID(
+			Long automotiveManufacturerID) {
+		this.automotiveManufacturerID = automotiveManufacturerID;
+	}
+
+	public Long getAutomobileBrandID() {
+		return this.automobileBrandID;
+	}
+
+	public void setAutomobileBrandID(
+			Long automobileBrandID) {
+		this.automobileBrandID = automobileBrandID;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	public String getLogoPath() {
+		return this.logoPath;
+	}
+
+	public void setLogoPath(
+			String logoPath) {
+		this.logoPath = logoPath;
+	}
+
+	public String getSpell() {
+		return this.spell;
+	}
+
+	public void setSpell(
+			String spell) {
+		this.spell = spell;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			AutomotiveManufacturerDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

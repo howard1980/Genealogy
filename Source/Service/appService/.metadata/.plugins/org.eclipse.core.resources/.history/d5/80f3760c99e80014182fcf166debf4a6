@@ -1,0 +1,32 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com.dto;
+
+import com.beetlestech.nfe.fw.core.type.Alias;
+
+/**
+ * 获得密码的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/04/21         TOOL                初次作成
+ *
+ */
+@com.beetlestech.nfe.fw.core.type.AliasKanJi("获得密码")
+public class SsGetPasswordOutDTO implements java.io.Serializable, Comparable<SsGetPasswordOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetPasswordOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

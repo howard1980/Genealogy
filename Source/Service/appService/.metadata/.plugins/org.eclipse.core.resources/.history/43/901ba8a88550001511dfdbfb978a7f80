@@ -1,0 +1,55 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 创建代金卷订单的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/21         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("创建代金卷订单")
+public class SsCreateCashCouponOrderOutDTO implements java.io.Serializable, Comparable<SsCreateCashCouponOrderOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 代金券号  
+	*/
+	@Alias("代金券号")
+	private String cashCouponNO = null;
+
+	/**
+	* <code>代金券号</code>返回
+	* @return <code>代金券号</code>
+	*/
+	public String getCashCouponNO() {
+		return this.cashCouponNO;
+	}
+
+	/**
+	* <code>cashCouponNO</code>设定
+	* @param cashCouponNO　<code>cashCouponNO</code>设定值
+	*/
+	public void setCashCouponNO(
+			String cashCouponNO) {
+		this.cashCouponNO = cashCouponNO;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsCreateCashCouponOrderOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

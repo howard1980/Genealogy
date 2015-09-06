@@ -1,0 +1,13 @@
+1415064022512	Delete element
+1415064027106	Delete element
+1415246196487	Rename type 'HiWebServiceRequester'
+1415261215867	Delete element
+1415269408316	Rename type 'CWebServiceExecuter'
+1415329085936	Extract local variable 'parse'
+1415329170967	Extract local variable 'getObj'
+1415332093208	Rename type 'CLoginRequester'
+1415332702177	Delete element
+1415337692602	Rename package 'nfetest'
+1415344028865	Rename package 'DTO'
+1415346834370	Rename package 'Fw.Utility.WebService'
+1415346845246	Rename package 'Fw.Utility'

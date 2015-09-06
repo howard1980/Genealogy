@@ -1,0 +1,68 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.OrderDetailRepairDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class OrderDetailRepairDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "ORDER_DETAIL_REPAIR_INSERT";
+
+	public static final String FULL_UPDATE = "ORDER_DETAIL_REPAIR_FULL_UPDATE";
+
+	public static final String UPDATE = "ORDER_DETAIL_REPAIR_UPDATE";
+
+	public static final String DELETE = "ORDER_DETAIL_REPAIR_DELETE";
+
+	public static final String FIND = "ORDER_DETAIL_REPAIR_FIND";
+
+	public static final String FIND_FOR_UPDATE = "ORDER_DETAIL_REPAIR_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "ORDER_DETAIL_REPAIR_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "ORDER_DETAIL_REPAIR_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "ORDER_DETAIL_REPAIR_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "ORDER_DETAIL_REPAIR_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "ORDER_DETAIL_REPAIR_SQL_SEARCH";
+
+	public static final String COUNT = "ORDER_DETAIL_REPAIR_COUNT";
+
+	public static final String COUNT_OR = "ORDER_DETAIL_REPAIR_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "ORDER_DETAIL_REPAIR_COUNT_SEARCH";
+
+	public static final String COLUMN_ORDER_DETAIL_REPAIR_ID = "ORDER_DETAIL_REPAIR_ID";
+
+	public static final String COLUMN_TECHNICIANID = "TECHNICIANID";
+
+	public static final String COLUMN_REPAIR_CAR_INQUIRY_ID = "REPAIR_CAR_INQUIRY_ID";
+
+	public static final String TABLE = "ORDER_DETAIL_REPAIR";
+
+	public static OrderDetailRepairDTO setDefaultValue() {
+		OrderDetailRepairDTO defaultDTO = new OrderDetailRepairDTO();
+
+		defaultDTO.setOrderDetailRepairID(0l);
+
+		defaultDTO.setTechnicianID(0l);
+
+		defaultDTO.setRepairCarInquiryID(0l);
+
+		return defaultDTO;
+	}
+}

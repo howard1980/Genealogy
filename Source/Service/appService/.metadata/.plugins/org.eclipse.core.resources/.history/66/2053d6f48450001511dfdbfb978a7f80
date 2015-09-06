@@ -1,0 +1,119 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * CashCouponDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("代金券")
+public class CashCouponDTO implements java.io.Serializable, Comparable<CashCouponDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Integer cashCouponID = null;
+
+	public Integer getCashCouponID() {
+		return this.cashCouponID;
+	}
+
+	public void setCashCouponID(
+			Integer cashCouponID) {
+		this.cashCouponID = cashCouponID;
+	}
+
+	private String name = null;
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	private String cashdescription = null;
+
+	public String getCashdescription() {
+		return this.cashdescription;
+	}
+
+	public void setCashdescription(
+			String cashdescription) {
+		this.cashdescription = cashdescription;
+	}
+
+	private Double amount = null;
+
+	public Double getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(
+			Double amount) {
+		this.amount = amount;
+	}
+
+	private java.sql.Date start = null;
+
+	public java.sql.Date getStart() {
+		return this.start;
+	}
+
+	public void setStart(
+			java.sql.Date start) {
+		this.start = start;
+	}
+
+	private java.sql.Date end = null;
+
+	public java.sql.Date getEnd() {
+		return this.end;
+	}
+
+	public void setEnd(
+			java.sql.Date end) {
+		this.end = end;
+	}
+
+	private Integer status = null;
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	private Double price = null;
+
+	public Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			Double price) {
+		this.price = price;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		CashCouponDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

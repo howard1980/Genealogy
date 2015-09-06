@@ -1,0 +1,93 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.CitiesDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CITIES")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CitiesDTO extends CitiesDTOSupport implements java.io.Serializable, Comparable<CitiesDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CITY_CODE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 4, max = 4)
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private String cityCode = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
+	private String name = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDUE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
+	private Double latitudue = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
+	private Double longitude = null;
+
+	public String getCityCode() {
+		return this.cityCode;
+	}
+
+	public void setCityCode(
+			String cityCode) {
+		this.cityCode = cityCode;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	public Double getLatitudue() {
+		return this.latitudue;
+	}
+
+	public void setLatitudue(
+			Double latitudue) {
+		this.latitudue = latitudue;
+	}
+
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CitiesDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

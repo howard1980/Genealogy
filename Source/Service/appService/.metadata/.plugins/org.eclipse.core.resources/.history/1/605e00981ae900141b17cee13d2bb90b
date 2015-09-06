@@ -1,0 +1,56 @@
+package com.beetlestech.nfe.main.biz.com.impl;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.main.biz.com.HbJPush;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.db.tbl.JpushDTO;
+
+public class HbJPushImpl extends AbstractDBLogic implements HbJPush, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+	protected static final String SH_INFO = "极光推送情报表";
+
+	@Override
+	public void updateCustomerJPush(Long customerID, String regisitrationID) {
+		Integer type = Integer.parseInt(PUSH_USER_TYPE.CLIENT.toString());
+		if (customerID == null){
+			// 追加RegisitrationID
+			this.insertJpush(customerID, regisitrationID, type);
+		}
+		else{
+			// 修改用户RegisitrationID
+			this.updateJpush(customerID, regisitrationID, type);
+		}
+	}
+	
+	@Override
+	public void updateWorkerGroupJPush(Long workerID, String regisitrationID) {
+		Integer type = Integer.parseInt(PUSH_USER_TYPE.SERVICE.toString());
+		// 修改工作组RegisitrationID
+		this.updateJpush(workerID, regisitrationID, type);
+	}
+	
+	private void insertJpush(Long userID, String registrationID, Integer type){
+		JpushDTO jPush = new JpushDTO();
+		jPush.setRegisitrationID(registrationID);
+		jPush.setUID(userID);
+		jPush.setType(type);
+		jPush.setCreateDate(this.getCurrentDate());
+		jPush.setCreateTime(this.getCurrentTime());
+		jPush.setUpdateDate(this.getCurrentDate());
+		jPush.setUpdateTime(this.getCurrentTime());
+		this.updateDAO.updateOne(JpushDTO.INSERT, jPush, M10190WS, SH_INFO);
+	}
+	
+	private void updateJpush(Long userID, String registrationID, Integer type){
+		JpushDTO jPush = new JpushDTO();
+		jPush.setRegisitrationID(registrationID);
+		this.updateDAO.update(JpushDTO.DELETE, jPush);
+		jPush = new JpushDTO();
+		jPush.setUID(userID);
+		jPush.setType(type);
+		this.updateDAO.update(JpushDTO.DELETE, jPush);
+		this.insertJpush(userID, registrationID, type);
+	}
+}

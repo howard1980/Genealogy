@@ -1,0 +1,75 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.biz.a01.dto;
+
+/**
+ * OrderItemDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("订单项目")
+public class OrderItemDTO implements java.io.Serializable, Comparable<OrderItemDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Integer groupServiceID = null;
+
+	public Integer getGroupServiceID() {
+		return this.groupServiceID;
+	}
+
+	public void setGroupServiceID(
+			Integer groupServiceID) {
+		this.groupServiceID = groupServiceID;
+	}
+
+	private String name = null;
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	private Double price = null;
+
+	public Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			Double price) {
+		this.price = price;
+	}
+
+	private String explain = null;
+
+	public String getExplain() {
+		return this.explain;
+	}
+
+	public void setExplain(
+			String explain) {
+		this.explain = explain;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		OrderItemDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

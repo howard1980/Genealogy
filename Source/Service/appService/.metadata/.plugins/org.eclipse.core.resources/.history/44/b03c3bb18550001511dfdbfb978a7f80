@@ -1,0 +1,47 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.type.Transactional;
+import com.maxiaohua.genealogy.main.biz.com.HbCustomer;
+import com.maxiaohua.genealogy.main.biz.com.dto.LoginDTO;
+import com.maxiaohua.genealogy.main.service.com.dto.SsRegistCustomerInDTO;
+import com.maxiaohua.genealogy.main.service.com.dto.SsRegistCustomerOutDTO;
+
+public class SsRegistCustomer extends AbstractService<SsRegistCustomerOutDTO, SsRegistCustomerInDTO> {
+	@AutoInject
+	private HbCustomer hbCustomer;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsRegistCustomerOutDTO execute(
+			SsRegistCustomerInDTO ssRegistCustomerInDTO) {
+		
+		//StringUtils.isNotBlank(message) && java.nio.charset.Charset.forName("GBK").newEncoder().canEncode(message);
+		
+		SsRegistCustomerOutDTO ssRegistCustomerOutDTO = new SsRegistCustomerOutDTO();
+		LoginDTO login = hbCustomer.registCustomer(
+				ssRegistCustomerInDTO.getMobile(), 
+				ssRegistCustomerInDTO.getValidCode(), 
+				ssRegistCustomerInDTO.getLicencePlate(), 
+				ssRegistCustomerInDTO.getLongitude(), 
+				ssRegistCustomerInDTO.getLatitude(), 
+				ssRegistCustomerInDTO.getCityCode(),
+				ssRegistCustomerInDTO.getRegisitrationID(),
+				ssRegistCustomerInDTO.getImsi());
+		ssRegistCustomerOutDTO.setUserID(login.getUserID());
+		ssRegistCustomerOutDTO.setMobile(login.getMobile());
+		ssRegistCustomerOutDTO.setLicensePlates(login.getLicensePlates());
+		return ssRegistCustomerOutDTO;
+	}
+}

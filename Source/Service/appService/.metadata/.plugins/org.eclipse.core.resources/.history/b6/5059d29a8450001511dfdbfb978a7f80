@@ -1,0 +1,94 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.AutomobileBrandDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("AUTOMOBILE_BRAND")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class AutomobileBrandDTO extends AutomobileBrandDTOSupport implements java.io.Serializable, Comparable<AutomobileBrandDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AUTOMOBILE_BRAND_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long automobileBrandID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 20, max = 20)
+	private String nAME = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LOGO_PATH")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 80, max = 80)
+	private String logoPath = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SPELL")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String spell = null;
+
+	public Long getAutomobileBrandID() {
+		return this.automobileBrandID;
+	}
+
+	public void setAutomobileBrandID(
+			Long automobileBrandID) {
+		this.automobileBrandID = automobileBrandID;
+	}
+
+	public String getNAME() {
+		return this.nAME;
+	}
+
+	public void setNAME(
+			String nAME) {
+		this.nAME = nAME;
+	}
+
+	public String getLogoPath() {
+		return this.logoPath;
+	}
+
+	public void setLogoPath(
+			String logoPath) {
+		this.logoPath = logoPath;
+	}
+
+	public String getSpell() {
+		return this.spell;
+	}
+
+	public void setSpell(
+			String spell) {
+		this.spell = spell;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			AutomobileBrandDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

@@ -1,0 +1,78 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.GroupServiceDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("GROUP_SERVICE")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class GroupServiceDTO extends GroupServiceDTOSupport implements java.io.Serializable, Comparable<GroupServiceDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("GROUP_SERVICE_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Integer groupServiceID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WORKER_GROUP_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer workerGroupID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_ITEMS_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String serviceItemsID = null;
+
+	public Integer getGroupServiceID() {
+		return this.groupServiceID;
+	}
+
+	public void setGroupServiceID(
+			Integer groupServiceID) {
+		this.groupServiceID = groupServiceID;
+	}
+
+	public Integer getWorkerGroupID() {
+		return this.workerGroupID;
+	}
+
+	public void setWorkerGroupID(
+			Integer workerGroupID) {
+		this.workerGroupID = workerGroupID;
+	}
+
+	public String getServiceItemsID() {
+		return this.serviceItemsID;
+	}
+
+	public void setServiceItemsID(
+			String serviceItemsID) {
+		this.serviceItemsID = serviceItemsID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			GroupServiceDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

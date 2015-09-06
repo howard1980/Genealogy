@@ -1,0 +1,81 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.MobileInfoDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class MobileInfoDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "MOBILE_INFO_INSERT";
+
+	public static final String FULL_UPDATE = "MOBILE_INFO_FULL_UPDATE";
+
+	public static final String UPDATE = "MOBILE_INFO_UPDATE";
+
+	public static final String DELETE = "MOBILE_INFO_DELETE";
+
+	public static final String FIND = "MOBILE_INFO_FIND";
+
+	public static final String FIND_FOR_UPDATE = "MOBILE_INFO_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "MOBILE_INFO_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "MOBILE_INFO_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "MOBILE_INFO_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "MOBILE_INFO_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "MOBILE_INFO_SQL_SEARCH";
+
+	public static final String COUNT = "MOBILE_INFO_COUNT";
+
+	public static final String COUNT_OR = "MOBILE_INFO_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "MOBILE_INFO_COUNT_SEARCH";
+
+	public static final String COLUMN_MOBILE_INFO_ID = "MOBILE_INFO_ID";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_IMSI = "IMSI";
+
+	public static final String COLUMN_DEVICE_TOKEN = "DEVICE_TOKEN";
+
+	public static final String COLUMN_STATUS = "STATUS";
+
+	public static final String COLUMN_VERSION = "VERSION";
+
+	public static final String TABLE = "MOBILE_INFO";
+
+	public static MobileInfoDTO setDefaultValue() {
+		MobileInfoDTO defaultDTO = new MobileInfoDTO();
+
+		defaultDTO.setMobileInfoID(0l);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setIMSI(0);
+
+		defaultDTO.setDeviceToken(StringUtil.EMPTY);
+
+		defaultDTO.setStatus(0);
+
+		defaultDTO.setVersion(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

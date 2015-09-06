@@ -1,0 +1,699 @@
+package com.beetlestech.nfe.main.biz.com.impl;
+
+//import java.sql.Date;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+//import com.maxiaohua.genealogy.fw.core.validator.CommonValidationUtil;
+import com.beetlestech.nfe.main.biz.com.HbAuthentication;
+import com.beetlestech.nfe.main.biz.com.HbComblcmMaster;
+import com.beetlestech.nfe.main.biz.com.HbLDAPAccess;
+import com.beetlestech.nfe.main.biz.com.dto.AuthResultDTO;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+//import com.beetlestech.nfe.main.db.tbl.EmployeeDTO;
+//import com.maxiaohua.genealogy.fw.core.util.CompareUtil;
+
+/**
+ * 認証する Bizロジックの実装ロジック
+ *
+ * 変更履歴
+ * REV.         変更日付           変更者              変更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2013/06/11         GD 趙晨             新規作成
+ * 1.1          2013/06/11         GD 季超             認証する
+ * 1.2          2013/08/27		   GD 王勇             変更管理No48対応
+ * 1.3          2013/09/02		   GD 白学峰           欠陥197対応
+ * 1.4          2013/09/05		   GD 王勇             変更管理No98対応
+ * 1.5          2013/11/19         GD 賈博             変更管理No111、No75対応
+ * 1.6          2013/12/19         GD 左鉄民           変更管理No147対応
+ * 1.7          2014/01/16         GD 賈博             変更管理No157対応
+ * 1.8          2014/02/24         GD 王昕	           変更管理No174対応
+ */
+public class HbAuthenticationImpl extends AbstractDBLogic implements HbAuthentication, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+
+	/**
+	* APPL_ID:COM
+	*/
+	protected static final String APPL_ID_COM = "COM";
+
+	/**
+	* FUNCTION_ID:Mode
+	*/
+	protected static final String FUNCTION_ID_MODE = "Mode";
+
+	/**
+	* FUNCTION_ID:PasswordPolicy
+	*/
+	protected static final String FUNCTION_ID_PASSWORD_POLICY = "PasswordPolicy";
+
+	/**
+	* ITEM_ID:LoginUserIdMode
+	*/
+	protected static final String ITEM_ID_LOGIN_USER_ID_MODE = "LoginUserIdMode";
+
+	/**
+	* ITEM_ID:PwMinLength
+	*/
+	protected static final String ITEM_ID_PW_MIN_LENGTH = "PwMinLength";
+
+	/**
+	* ITEM_ID:PwCharPattern
+	*/
+	protected static final String ITEM_ID_PW_CHAR_PATTERN = "PwCharPattern";
+
+	/**
+	* ITEM_ID:PwExpiration
+	*/
+	protected static final String ITEM_ID_PW_EXPIRATION = "PwExpiration";
+
+	/**
+	* ITEM_ID:AdvNoticeOfExpiration
+	*/
+	protected static final String ITEM_ID_ADV_NOTICE_EXPIRATION = "AdvNoticeOfExpiration";
+
+	/**
+	* ITEM_ID:PwSync
+	*/
+	protected static final String ITEM_ID_PWSYNC = "PwSync";
+
+	/**
+	* 処理結果0: 更新成功
+	*/
+	protected static final String UPDATE_RESULT_0 = "0";
+
+	/**
+	* 処理結果1: 旧パスワード不一致
+	*/
+	protected static final String UPDATE_RESULT_1 = "1";
+
+	/**
+	* 処理結果2: パスワードポリシー違反1
+	*/
+	protected static final String UPDATE_RESULT_2 = "2";
+
+	/**
+	* 処理結果3: パスワードポリシー違反2
+	*/
+	protected static final String UPDATE_RESULT_3 = "3";
+
+	/**
+	* 処理結果4: パスワードポリシー違反3
+	*/
+	protected static final String UPDATE_RESULT_4 = "4";
+
+	/**
+	* 処理結果5: パスワードポリシー違反4
+	*/
+	protected static final String UPDATE_RESULT_5 = "5";
+
+	/**
+	 * 職員情報データ
+	 */
+	protected static final String SH_INFO = "職員情報データ";
+
+	/**
+	 * LDAPアクセス-スコープ-ピープル
+	 */
+	protected static final String LDAP_SCOPE_PEOPLE = "ou=People";
+
+	/**
+	 * LDAPアクセス-スコープ-ピープル
+	 */
+	protected static final String LDAP_SCOPE_PWD_POLICY = "ou=DefaultPolicy";
+
+	/**
+	 * LDAPアクセス-フィルター-UID
+	 */
+	protected static final String LDAP_FILTER_PEOPLE = "uid=";
+
+	/**
+	 * LDAPアクセス-フィルター-パスワード・ポリシー
+	 */
+	protected static final String LDAP_FILTER_PWD_POLICY = "cn=PasswordPolicy";
+
+	/**
+	 * LDAPアクセス-属性-ピープル
+	 */
+	protected static final String[] LDAP_ATTRS_PEOPLE = { "uid", "userPassword", "pwdChangedTime", "pwdReset" };
+
+	/**
+	 * LDAPアクセス-属性-パスワード・ポリシー
+	 */
+	protected static final String[] LDAP_ATTRS_PWD_POLICY = { "pwdCheckQuality", "pwdExpireWarning", "pwdInHistory", "pwdMaxAge", "pwdMinLength",
+			"pwdMustChange", "pwdReset" };
+
+//	/**
+//	 * ユーザー情報 Bizロジック
+//	 */
+//	@AutoInject
+//	protected HbUser hbUser;
+
+	/**
+	 *  ビジネスロジック設定マスター情報を取得 Bizロジック
+	 */
+	@AutoInject
+	protected HbComblcmMaster hbComblcmMaster;
+
+	/**
+	 *  LDAPアクセス Bizロジック
+	 */
+	@AutoInject
+	protected HbLDAPAccess hbLDAPAccess;
+
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#authenticate(java.lang.String, java.lang.String)
+	 */
+	/*@Override
+	public String authenticate(
+			String loginId,
+			String password,
+			EmployeeDTO employeeDTO) {
+
+		String authResult = EMPTY;
+
+		if (employeeDTO != null) {
+			// 「職員基本情報」が取得できる場合に、上記で取得した「職員基本情報」で認証する
+			Boolean authenticateResult = CompareUtil.equalTo(employeeDTO.getPassWord().trim(), password);
+
+			if (authenticateResult) {
+				// 認証成功の場合に、パスワードのチェックを行う。
+				// パスワードが初期値から変更されているか確認する
+				Boolean pwUpdateResult = checkPwUpdate(employeeDTO);
+
+				// セッションにデータを格納する。
+				// 認証結果を返す。
+				if (!pwUpdateResult) {
+					// パスワードが初期値から変更されていない場合に
+					//「認証の可否結果」を'2'にセットする
+					authResult = TLOGINLG_RESULT.NOT_UPDATE.toString();
+
+					// パスワードの期限切れでないかを確認する
+				} else if (!validatePwExpiration(employeeDTO)) {
+					// パスワード期限が切れている場合に
+					//「認証の可否結果」を'3'にセットする
+					authResult = TLOGINLG_RESULT.EXPIRED.toString();
+				} else {
+					// 「認証の可否結果」を'0'にセットする
+					authResult = TLOGINLG_RESULT.LOGIN_SUCCESS.toString();
+				}
+			} else {
+				// 「職員基本情報.パスワード」は入力値「パスワード」と一致しない場合、「認証の可否結果」を'1'にセットする
+				authResult = TLOGINLG_RESULT.LOGIN_FAIL.toString();
+			}
+
+			// ログインログを登録する為の必要な情報をプットする
+
+		} else {
+			//「職員基本情報」は取得できない場合、「認証の可否結果」を'1'にセットする
+			authResult = TLOGINLG_RESULT.LOGIN_FAIL.toString();
+		}
+
+		//認証結果を返す
+		return authResult;
+	}*/
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#authenticateLDAP(java.lang.String, java.lang.String)
+	 */
+	@Override
+	public AuthResultDTO authenticateLDAP(
+			String loginId,
+			String password) {
+
+		AuthResultDTO authResult = new AuthResultDTO();
+		/*
+		// 「職員基本情報」が取得できる場合に、LDAPサーバーからユーザー情報とパスワード・ポリシーを取得する。
+		// LDAPサーバーから「ユーザー情報」を取得する。
+		Attributes people = hbLDAPAccess.find(LDAP_SCOPE_PEOPLE, LDAP_FILTER_PEOPLE + loginId, LDAP_ATTRS_PEOPLE);
+		// LDAPサーバーから「パスワード・ポリシー」を取得する。
+		Attributes pwdPolicy = hbLDAPAccess.find(LDAP_SCOPE_PWD_POLICY, LDAP_FILTER_PWD_POLICY, LDAP_ATTRS_PWD_POLICY);
+
+		if (people == null) {
+			//LDAP「職員基本情報」は取得できない場合、「認証の可否結果」を'1'にセットする
+			authResult.setAuthresult(TLOGINLG_RESULT.LOGIN_FAIL.toString());
+		} else if (pwdPolicy == null) {
+			try {
+				// 「ユーザー情報」が取得できる場合に、上記で取得した「職員基本情報」で認証する
+				byte[] userPasswordBytes = (byte[]) people.get(LDAP_ATTRS_PEOPLE[1]).get();
+				Boolean authenticateResult = LDAPUtil.verifyPassword(new String(userPasswordBytes), password);
+				if (authenticateResult) {
+					//「認証の可否結果」を'0'にセットする
+					authResult.setAuthresult(TLOGINLG_RESULT.LOGIN_SUCCESS.toString());
+				} else {
+					//「職員基本情報.パスワード」は入力値「パスワード」と一致しない場合、「認証の可否結果」を'1'にセットする
+					authResult.setAuthresult(TLOGINLG_RESULT.LOGIN_FAIL.toString());
+				}
+			} catch (NamingException e) {
+				createApplicationException(M10610WS);
+			}
+		} else {
+			try {
+				// 「ユーザー情報」が取得できる場合に、上記で取得した「職員基本情報」で認証する
+				byte[] userPasswordBytes = (byte[]) people.get(LDAP_ATTRS_PEOPLE[1]).get();
+				Boolean authenticateResult = LDAPUtil.verifyPassword(new String(userPasswordBytes), password);
+				if (authenticateResult) {
+					Boolean pwUpdateResult = false;
+					Boolean pwExpirationResult = false;
+					Boolean pwExpirationNeedCheck = false;
+					Boolean pwNearToExpirationResult = false;
+					Boolean pwdMustChange = StringUtil.toBool(pwdPolicy.get(LDAP_ATTRS_PWD_POLICY[5]).get().toString());
+					if (pwdMustChange) {
+
+						// 認証成功 かつ　「パスワード・ポリシー」.pwdMustChangeがtrueの場合に、パスワードのチェックを行う。
+						// パスワードが初期値から変更されているか確認する
+						Attribute pwdReset = people.get(LDAP_ATTRS_PEOPLE[3]);
+						pwUpdateResult = pwdReset == null || !Boolean.parseBoolean(pwdReset.get().toString());
+
+						if (pwUpdateResult) {
+							//パスワード期限日 = パスワード最終更新日(「ユーザー情報」.pwdChangedTime) ＋ パスワード有効期限(「パスワード・ポリシー」.pwdMaxAge)
+							String pwdChangeDateStr = people.get(LDAP_ATTRS_PEOPLE[2]).get().toString();
+							if (pwdChangeDateStr.length() > 8) {
+								pwdChangeDateStr = pwdChangeDateStr.substring(0, 8);
+							}
+							// パスワード最終更新日
+							java.util.Date pwdChangeDate = DateUtil.parseToDate(pwdChangeDateStr, DateUtil.FORMAT.YYYYMMDD);
+							// 取得した「パスワード有効期限(秒数)｣を86400で除算し小数点以下を切り捨て、「パスワード有効期限(日数)」を算出する
+							int pwdExpiredDays = NumberUtil.toInt(pwdPolicy.get(LDAP_ATTRS_PWD_POLICY[3]).get().toString()) / 86400;
+
+							// パスワード期限満了日
+							java.util.Date pwExpirationDate = null;
+
+							// 日数差分
+							Integer dayDiv = null;
+
+							// 「パスワード有効期限(日数)」が1以上の場合
+							pwExpirationNeedCheck = pwdExpiredDays >= 1;
+							if (pwExpirationNeedCheck) {
+
+								// パスワード期限満了日 = パスワード最終更新日 ＋ パスワード有効期限(日数)
+								pwExpirationDate = DateUtil.getDateAfterDay(pwdChangeDate, pwdExpiredDays);
+
+								// 日数差分
+								dayDiv = DateUtil.getDifferenceDay(getCurrentDate(), pwExpirationDate);
+
+								// パスワードの期限切れでないかを確認する
+								pwExpirationResult = dayDiv > 0;
+
+								if (pwExpirationResult) {
+
+									// パスワードの有効期限間近かを確認する
+									int pwdWaringDays = NumberUtil.toInt(pwdPolicy.get(LDAP_ATTRS_PWD_POLICY[1]).get().toString()) / 86400;
+
+									if (pwdWaringDays >= 1) {
+										java.util.Date startToWarningDate = DateUtil.getDateAfterDay(pwExpirationDate, 0 - pwdWaringDays);
+
+										//パスワード期限情報
+										PwExpirationInfoDTO pwdExpire = new PwExpirationInfoDTO();
+
+										pwdExpire.setExpirationYear(String.valueOf(DateUtil.getYear(pwExpirationDate)));
+										pwdExpire.setExpirationMonth(String.valueOf(DateUtil.getMonth(pwExpirationDate)));
+										pwdExpire.setExpirationDay(String.valueOf(DateUtil.getDay(pwExpirationDate)));
+										pwdExpire.setDays(String.valueOf(dayDiv));
+
+										pwNearToExpirationResult = startToWarningDate.compareTo(getCurrentDate()) > 0;
+										pwdExpire.setResult(pwNearToExpirationResult);
+										authResult.setPwExpInfo(pwdExpire);
+									}
+								}
+							}
+						}
+					}
+
+					// セッションにデータを格納する。
+					// 認証結果を返す。
+					if (!pwUpdateResult) {
+						// パスワードが初期値から変更されていない場合に
+						//「認証の可否結果」を'2'にセットする
+						authResult.setAuthresult(TLOGINLG_RESULT.NOT_UPDATE.toString());
+					} else if (!pwExpirationResult && pwExpirationNeedCheck) {
+						// パスワード期限が切れている場合に
+						//「認証の可否結果」を'3'にセットする
+						authResult.setAuthresult(TLOGINLG_RESULT.EXPIRED.toString());
+					} else {
+						//「認証の可否結果」を'0'にセットする
+						authResult.setAuthresult(TLOGINLG_RESULT.LOGIN_SUCCESS.toString());
+					}
+				} else {
+					//「職員基本情報.パスワード」は入力値「パスワード」と一致しない場合、「認証の可否結果」を'1'にセットする
+					authResult.setAuthresult(TLOGINLG_RESULT.LOGIN_FAIL.toString());
+				}
+			} catch (NamingException e) {
+				createApplicationException(M10610WS);
+			}
+		}
+		// ログインログを登録する為の必要な情報をプットする
+*/
+		//認証結果を返す
+		return authResult;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#checkPwUpdate(com.beetlestech.nfe.main.db.view.Vstaffm2DTO)
+	 */
+	/*@Override
+	public Boolean checkPwUpdate(
+			EmployeeDTO staffInfo) {
+
+		// 「職員基本情報」の「パスワード更新日(PW_UPDATE_DATE)」と現在日の「月数差分」を計算する
+		Date pwUpdateDate = staffInfo.getLastDate();
+
+		Boolean result = true;
+		// 「パスワード更新日」を判断する
+		// 「パスワード更新日」 ＝　"1000-01-01" の場合
+		if (getMinDate().equals(pwUpdateDate)) {
+			result = false;
+		}
+
+		return result;
+	}*/
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#noticePwExpiration(com.beetlestech.nfe.main.db.view.Vstaffm2DTO)
+	 */
+	/*@Override
+	public PwExpirationInfoDTO notifyPwExpDate(
+			EmployeeDTO staffInfo) {
+
+		PwExpirationInfoDTO pwExpirationInfoDTO = null;
+
+		// HbComblcmMaster.getComblcmInfo()より、「パスワード有効期間日数」を取得する
+		TcomblcmDTO tcomblcmDTO = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_PW_EXPIRATION);
+
+		Boolean result = true;
+		if (tcomblcmDTO != null) {
+
+			// パスワード更新日
+			Date pwUpdateDate = staffInfo.getLastDate();
+
+			// パスワード期限日
+			Date pwExpirationDate = DateUtil.getDateAfterDay(pwUpdateDate, NumberUtil.toInt(tcomblcmDTO.getValue()));
+
+			if (DateUtil.getDifferenceDay(pwUpdateDate, getMaxDate()) < NumberUtil.toInt(tcomblcmDTO.getValue())) {
+				pwExpirationDate = getMaxDate();
+			}
+
+			// HbComblcmMaster.getComblcmInfo()より、「パスワード期限切れ事前通知開始日」を取得する
+			TcomblcmDTO tcomblcmDTOAdvNotice = hbComblcmMaster
+					.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_ADV_NOTICE_EXPIRATION);
+
+			if (tcomblcmDTOAdvNotice != null) {
+				// 日数差分
+				String dayDivS = null;
+
+				// 取得した「パスワード期限満了警告日数」が0より大きい場合
+				if (NumberUtil.toInt(tcomblcmDTOAdvNotice.getValue()) > 0) {
+
+					Integer dayDiv = DateUtil.getDifferenceDay(getCurrentDate(), pwExpirationDate);
+					dayDivS = dayDiv.toString();
+
+					// 「パスワード期限切れ事前通知開始日」 ≧ 「日数差分」の場合
+					if (NumberUtil.toInt(tcomblcmDTOAdvNotice.getValue()) >= dayDiv) {
+						result = false;
+					}
+
+				}
+
+				pwExpirationInfoDTO = new PwExpirationInfoDTO();
+
+				// パスワード期限日
+				pwExpirationInfoDTO.setExpirationDay(DateUtil.getDay(pwExpirationDate));
+				// パスワード期限月
+				pwExpirationInfoDTO.setExpirationMonth(DateUtil.getMonth(pwExpirationDate));
+				// パスワード期限年
+				pwExpirationInfoDTO.setExpirationYear(DateUtil.getYear(pwExpirationDate));
+				// パスワード期限切れまでの日数
+				pwExpirationInfoDTO.setDays(dayDivS);
+				// チェック結果
+				pwExpirationInfoDTO.setResult(result);
+			}
+		}
+
+		return pwExpirationInfoDTO;
+	}*/
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#validatePwExpiration(com.beetlestech.nfe.main.db.view.Vstaffm2DTO)
+	 */
+	/*@Override
+	public Boolean validatePwExpiration(
+			EmployeeDTO staffInfo) {
+
+		// HbComblcmMaster.getComblcmInfo()より、「パスワード有効期間日数」を取得する
+		TcomblcmDTO tcomblcmDTO = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_PW_EXPIRATION);
+
+		Boolean result = true;
+		if (tcomblcmDTO != null) {
+
+			// パスワード更新日
+			Date pwUpdateDate = staffInfo.getLastDate();
+
+			// 取得した「パスワード有効期間日数」が0より大きい場合
+			if (NumberUtil.toInt(tcomblcmDTO.getValue()) > 0) {
+
+				// パスワード期限日
+				Date pwExpirationDate = DateUtil.getDateAfterDay(pwUpdateDate, NumberUtil.toInt(tcomblcmDTO.getValue()));
+
+				// 「パスワード期限日」 ≦ 現在日 の場合
+				if (DateUtil.compare(pwExpirationDate, getCurrentDate()) <= 0) {
+					result = false;
+				}
+			}
+		}
+
+		return result;
+	}*/
+
+	/* (non-Javadoc)
+	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#updatePassword(java.lang.String, java.lang.String, java.lang.String)
+	 */
+	@Override
+	public String updatePassword(
+			String oldPassword,
+			String newPassword) {
+
+		// セッションから「職員ID」を取得できない場合は、アプリケーション例外を返す
+		if (StringUtil.isEmpty(getUserId())) {
+			createApplicationException(M10560WS);
+		}
+
+		// HbUserのgetValidStaffInfo()を呼び出し、「職員基本情報」を取得する
+		/*EmployeeDTO employeeDTO = hbUser.getValidStaffInfo(Integer.parseInt(getUserId()), getCurrentDate());
+		String updateResult = EMPTY;
+		if (employeeDTO == null) {
+			// 検出件数が0件の場合
+			createApplicationException(M10190WS, SH_INFO);
+		} else {
+			// 1.で取得した「職員基本情報」のパスワードと、旧パスワードとが一致することを比較する
+			if (oldPassword.equals(StringUtil.trim(employeeDTO.getPassWord()))) {
+
+				// 新パスワードがパスワードポリシーに沿っているかチェックする
+				updateResult = passwordPolicyCheck(oldPassword, newPassword, employeeDTO);
+				if (StringUtil.isEmpty(updateResult)) {
+					// 以下のようにTSTAFFMを更新する
+					EmployeeDTO tstaffmDTO = new EmployeeDTO();
+					tstaffmDTO.setPassWord(newPassword);
+					tstaffmDTO.setEmployeeID(employeeDTO.getEmployeeID());
+					tstaffmDTO.setLastDate(getCurrentDate());
+					tstaffmDTO.setLastTime(getCurrentTime());
+					updateDAO.updateOne(EmployeeDTO.UPDATE, tstaffmDTO, M10190WS, SH_INFO);
+					updateResult = UPDATE_RESULT_0;
+				}
+			} else {
+				updateResult = UPDATE_RESULT_1;
+			}
+		}*/
+		// 更新結果で返る
+		//return updateResult;
+		
+		return "";
+	}
+
+	/**
+	 * パスワードポリシーチェックする
+	 * @param oldPassword 旧パスワード
+	 * @param newPassword 新パスワード
+	 * @param vstaffmDTO 職員基本情報
+	 * @return result チェック結果
+	 */
+	/*protected String passwordPolicyCheck(
+			String oldPassword,
+			String newPassword,
+			EmployeeDTO employeeDTO) {
+
+		String result = EMPTY;
+
+		// 新パスワードがパスワードポリシーに沿っているかチェックする
+		// HbComblcmMaster.getComblcmInfo()より「パスワードの最小文字数」を取得する
+		TcomblcmDTO pwMinLength = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_PW_MIN_LENGTH);
+
+		// HbComblcmMaster.getComblcmInfo()より「パスワードに用いる文字種」を取得する
+		TcomblcmDTO pwCharPattern = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_PW_CHAR_PATTERN);
+
+		// パスワードの最小文字数チェック
+		if (pwMinLength != null) {
+			if (newPassword.length() < NumberUtil.toInt(pwMinLength.getValue())) {
+				result = UPDATE_RESULT_2;
+				return result;
+			}
+		}
+
+		// パスワードに用いる文字種
+		if (pwCharPattern != null) {
+			if (!TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_0.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_1.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_2.toString().equals(StringUtil.trim(pwCharPattern.getValue()))) {
+				result = UPDATE_RESULT_3;
+				return result;
+			} else if (TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_1.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !CommonValidationUtil.isHasAlphaNumericString(newPassword)) {
+				result = UPDATE_RESULT_3;
+				return result;
+
+			} else if (TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_2.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !CommonValidationUtil.isAllAlphaNumericString(newPassword)) {
+				result = UPDATE_RESULT_3;
+				return result;
+			}
+		}
+		// 新パスワードが、旧パスワードと一致しないこと
+		if (!newPassword.equals(oldPassword)) {
+			String shId = StringUtil.trim(employeeDTO.getEmployeeNO());
+
+			// 新パスワードが、職員ID･ユーザーID・メールアドレス のいずれにも一致しないこと
+			if (newPassword.equals(shId)) {
+				result = UPDATE_RESULT_5;
+			}
+		} else {
+			result = UPDATE_RESULT_4;
+		}
+
+		return result;
+	}*/
+
+	/**
+	 * LDAPのについてのチェックする
+	 * @param oldPassword 旧パスワード
+	 * @param newPassword 新パスワード
+	 * @param vstaffmDTO 職員基本情報
+	 * @return result チェック結果
+	 */
+	/*protected String passwordPolicyCheckForLDAP(
+			String oldPassword,
+			String newPassword,
+			EmployeeDTO employeeDTO) {
+		String checkResult = EMPTY;
+
+		// 新パスワードが、旧パスワードと一致しないこと
+		String shId = StringUtil.trim(employeeDTO.getEmployeeNO());
+
+		// 新パスワードが、職員ID･ユーザーID・メールアドレス のいずれにも一致しないこと
+		if (newPassword.equals(shId)) {
+
+			checkResult = UPDATE_RESULT_5;
+			return checkResult;
+		}
+		Attributes attributes = hbLDAPAccess.find(LDAP_SCOPE_PEOPLE, LDAP_FILTER_PEOPLE + getLoginId(), LDAP_ATTRS_PEOPLE);
+		Attribute LDAPPassWord = attributes.get(LDAP_ATTRS_PEOPLE[1]);
+		try {
+			byte[] ldapPWByte = (byte[]) LDAPPassWord.get();
+
+			if (!LDAPUtil.verifyPassword(new String(ldapPWByte), oldPassword)) {
+				checkResult = UPDATE_RESULT_1;
+				return checkResult;
+			}
+		} catch (NamingException e) {
+			createApplicationException(M10610WS);
+		}
+		// 新パスワードが、旧パスワードと一致しないこと
+		if (newPassword.equals(oldPassword)) {
+			checkResult = UPDATE_RESULT_4;
+			return checkResult;
+		}
+		// LDAPサーバーから「パスワード・ポリシー」を取得する。
+		Attributes pwdPolicy = hbLDAPAccess.find(LDAP_SCOPE_PWD_POLICY, LDAP_FILTER_PWD_POLICY, LDAP_ATTRS_PWD_POLICY);
+		Attribute pwMinLength = pwdPolicy.get(LDAP_ATTRS_PWD_POLICY[4]);
+		try {
+			// パスワードの最小文字数チェック
+			if (pwMinLength != null) {
+				if (newPassword.length() < NumberUtil.toInt(pwMinLength.get().toString())) {
+					checkResult = UPDATE_RESULT_2;
+					return checkResult;
+				}
+			}
+		} catch (NamingException e) {
+			createApplicationException(M10610WS);
+		}
+
+		// HbComblcmMaster.getComblcmInfo()より「パスワードに用いる文字種」を取得する
+		TcomblcmDTO pwCharPattern = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_PW_CHAR_PATTERN);
+		// パスワードに用いる文字種
+		if (pwCharPattern != null) {
+			if (!TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_0.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_1.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_2.toString().equals(StringUtil.trim(pwCharPattern.getValue()))) {
+				checkResult = UPDATE_RESULT_3;
+			} else if (TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_1.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !CommonValidationUtil.isHasAlphaNumericString(newPassword)) {
+				checkResult = UPDATE_RESULT_3;
+
+			} else if (TCOMBLCM_PASSWORD_POLICY.PW_CHAR_PATTERN_2.toString().equals(StringUtil.trim(pwCharPattern.getValue()))
+					&& !CommonValidationUtil.isAllAlphaNumericString(newPassword)) {
+				checkResult = UPDATE_RESULT_3;
+			}
+		}
+		return checkResult;
+	}*/
+
+//	/* (non-Javadoc)
+//	 * @see com.beetlestech.nfe.main.biz.com.HbAuthentication#updatePasswordLDAP(java.lang.String, java.lang.String)
+//	 */
+//	@Override
+//	public String updatePasswordLDAP(
+//			String oldPassword,
+//			String newPassword) {
+//		String updateResult = null;
+//		// セッションから「職員ID」を取得できない場合は、アプリケーション例外を返す
+//		if (StringUtil.isEmpty(getUserId())) {
+//			createApplicationException(M10560WS);
+//		}
+//		// HbUserのgetValidStaffInfo()を呼び出し、「職員基本情報」を取得する
+//		/*EmployeeDTO employeeDTO = hbUser.getValidStaffInfo(Integer.parseInt(getUserId()), getCurrentDate());
+//		if (employeeDTO == null) {
+//			// 検出件数が0件の場合
+//			createApplicationException(M10190WS, SH_INFO);
+//		} else {
+//			updateResult = passwordPolicyCheckForLDAP(oldPassword, newPassword, employeeDTO);
+//		}*/
+//
+//		if (StringUtil.isEmpty(updateResult)) {
+//			Attributes attrs = new BasicAttributes();
+//			String encodePassword = new String(LDAPUtil.generateDigest(newPassword, "saltHex", "SHA-1"));
+//			Attribute attr = new BasicAttribute(LDAP_ATTRS_PEOPLE[1], encodePassword);
+//			attrs.put(attr);
+//			hbLDAPAccess.update(LDAP_FILTER_PEOPLE + getLoginId() + CommonConstant.COMMON_COMMA + LDAP_SCOPE_PEOPLE, DirContext.REPLACE_ATTRIBUTE,
+//					attrs);
+//			//パスワード同期要否が "1"(同期する) の場合に、以下のようにTSTAFFMを更新する。
+//			TcomblcmDTO pwsync = hbComblcmMaster.getComblcmInfo(APPL_ID_COM, FUNCTION_ID_PASSWORD_POLICY, ITEM_ID_PWSYNC);
+//			if (pwsync != null) {
+//				//if (TCOMBLCM_PWSYNC.PW_SYNC_PATTERN_1.toString().equals(StringUtil.trim(pwsync.getValue()))) {
+//					// 以下のようにTSTAFFMを更新する
+//					/*EmployeeDTO tstaffmDTO = new EmployeeDTO();
+//					tstaffmDTO.setPassWord(newPassword);
+//					tstaffmDTO.setEmployeeID(employeeDTO.getEmployeeID());
+//					tstaffmDTO.setLastDate(getCurrentDate());
+//					tstaffmDTO.setLastTime(getCurrentTime());
+//					updateDAO.updateOne(EmployeeDTO.UPDATE, tstaffmDTO, M10190WS, SH_INFO);
+//					updateResult = UPDATE_RESULT_0;*/
+//				//}
+//			}
+//		}
+//		// 更新結果で返る
+//		return updateResult;
+//	}
+}
+

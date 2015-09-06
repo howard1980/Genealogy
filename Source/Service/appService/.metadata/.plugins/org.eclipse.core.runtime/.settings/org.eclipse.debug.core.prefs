@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="jsonObject2.getString(&quot;ret_code&quot;)"/>\n<expression enabled\="true" text\="beanName"/>\n<expression enabled\="true" text\="messageFile"/>\n</watchExpressions>\n

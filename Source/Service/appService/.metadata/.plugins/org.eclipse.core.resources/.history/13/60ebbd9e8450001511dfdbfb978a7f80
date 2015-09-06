@@ -1,0 +1,31 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.com.HbCustomer;
+import com.beetlestech.nfe.main.service.com.dto.SsGetPasswordInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsGetPasswordOutDTO;
+
+public class SsGetPassword extends AbstractService<SsGetPasswordOutDTO, SsGetPasswordInDTO> {
+
+	@AutoInject
+	private HbCustomer hbCustomer;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetPasswordOutDTO execute(
+			SsGetPasswordInDTO ssGetPasswordInDTO) {
+		SsGetPasswordOutDTO ssGetPasswordOutDTO = new SsGetPasswordOutDTO();
+		hbCustomer.sendPassword(ssGetPasswordInDTO.getUser());
+		return ssGetPasswordOutDTO;
+	}
+}

@@ -1,0 +1,17 @@
+/* NFE
+* (C) Copyright Beetlestech , Ltd. 2014, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.biz.com;
+
+import com.beetlestech.nfe.main.biz.com.dto.LoginDTO;
+
+public interface HbJPush {
+	void sendPassword(String mobile);
+	
+	void updatePassword(Long customerID, String password);
+	
+	LoginDTO registCustomer(String mobile, String validCode, String licencePlate, 
+			Double longitude, Double latitude, String cityCode);
+	
+	LoginDTO login(String mobile, String validCode);
+}

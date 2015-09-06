@@ -1,0 +1,50 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.beetlestech.nfe.main.biz.a01.dto.RepairServiceDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.ServiceProductDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetOneServiceProductInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetOneServiceProductOutDTO;
+
+public class SsGetOneServiceProduct extends AbstractService<SsGetOneServiceProductOutDTO, SsGetOneServiceProductInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetOneServiceProductOutDTO execute(
+			SsGetOneServiceProductInDTO ssGetOneServiceProductInDTO) {
+		SsGetOneServiceProductOutDTO ssGetOneServiceProductOutDTO = new SsGetOneServiceProductOutDTO();
+		
+		ServiceProductDTO dto1 = new ServiceProductDTO();
+		dto1.setDescription("每5000公里或3个月【二者以先到者为准】");
+		dto1.setName("每5000公里保养");
+		dto1.setPrice(118.0);
+		dto1.setProductID(1L);
+		
+		RepairServiceDTO r1 = new RepairServiceDTO();
+		r1.setDescription("机油和机油滤芯更换");
+		r1.setName("机油和机油滤芯更换");
+		r1.setPrice(30.00);
+		r1.setServiceID(1L);
+		
+		RepairServiceDTO r2 = new RepairServiceDTO();
+		r2.setDescription("火花塞更换");
+		r2.setName("火花塞更换");
+		r2.setPrice(224.00);
+		r2.setServiceID(2L);
+		
+		RepairServiceDTO[]  repairServiceArray = {r1,r2};
+		
+		ssGetOneServiceProductOutDTO.setServiceProduct(dto1);
+		
+		return ssGetOneServiceProductOutDTO;
+	}
+}

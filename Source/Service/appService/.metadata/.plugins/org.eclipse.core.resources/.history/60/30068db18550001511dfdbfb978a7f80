@@ -1,0 +1,80 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.com.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 订单支付查询的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("订单支付查询")
+public class SsWechetQueryOrderInDTO implements java.io.Serializable, Comparable<SsWechetQueryOrderInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 客户ID  
+	*/
+	@Alias("客户ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long customerID = null;
+
+	/**
+	* <code>客户ID</code>返回
+	* @return <code>客户ID</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* 订单NO  
+	*/
+	@Alias("订单NO")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private String orderNO = null;
+
+	/**
+	* <code>订单NO</code>返回
+	* @return <code>订单NO</code>
+	*/
+	public String getOrderNO() {
+		return this.orderNO;
+	}
+
+	/**
+	* <code>orderNO</code>设定
+	* @param orderNO　<code>orderNO</code>设定值
+	*/
+	public void setOrderNO(
+			String orderNO) {
+		this.orderNO = orderNO;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsWechetQueryOrderInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

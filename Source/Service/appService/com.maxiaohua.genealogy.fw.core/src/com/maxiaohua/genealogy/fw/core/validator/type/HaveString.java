@@ -1,0 +1,28 @@
+
+package com.maxiaohua.genealogy.fw.core.validator.type;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+import com.maxiaohua.genealogy.fw.core.message.MessageCode;
+import com.maxiaohua.genealogy.fw.core.validator.impl.HaveStringValidator;
+
+
+@RuleDescriptor("HaveString")
+@Constraint(validator = HaveStringValidator.class)
+@Target({ java.lang.annotation.ElementType.ANNOTATION_TYPE, java.lang.annotation.ElementType.FIELD })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface HaveString {
+    
+    public static final String DEFAULT_ERROR_CODE = MessageCode.M10510CM;
+
+    
+    public int junban() default 1;
+
+    
+    public String value();
+
+    
+    public String errorCode() default DEFAULT_ERROR_CODE;
+}

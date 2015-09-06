@@ -1,0 +1,92 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.WashItemBeyondDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("WASH_ITEM_BEYOND")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class WashItemBeyondDTO extends WashItemBeyondDTOSupport implements java.io.Serializable, Comparable<WashItemBeyondDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ITEM_BEYOND_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long itemBeyondID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("BEYOND_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long beyondID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_ITEMS_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String serviceItemsID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_COUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer serviceCount = null;
+
+	public Long getItemBeyondID() {
+		return this.itemBeyondID;
+	}
+
+	public void setItemBeyondID(
+			Long itemBeyondID) {
+		this.itemBeyondID = itemBeyondID;
+	}
+
+	public Long getBeyondID() {
+		return this.beyondID;
+	}
+
+	public void setBeyondID(
+			Long beyondID) {
+		this.beyondID = beyondID;
+	}
+
+	public String getServiceItemsID() {
+		return this.serviceItemsID;
+	}
+
+	public void setServiceItemsID(
+			String serviceItemsID) {
+		this.serviceItemsID = serviceItemsID;
+	}
+
+	public Integer getServiceCount() {
+		return this.serviceCount;
+	}
+
+	public void setServiceCount(
+			Integer serviceCount) {
+		this.serviceCount = serviceCount;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			WashItemBeyondDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

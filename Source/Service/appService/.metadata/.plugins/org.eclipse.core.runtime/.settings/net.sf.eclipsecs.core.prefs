@@ -1,0 +1,6 @@
+#Mon May 05 14:01:32 CST 2014
+include.rule.names=false
+include.module.ids=false
+eclipse.preferences.version=1
+marker.amount.limit=100
+limit.markers.per.resource=false

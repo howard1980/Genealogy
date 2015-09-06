@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="1" timestamp="1415592162793" analysisTimestamp="1415592112528" release="">
+  <Project projectName="com.beetlestech.nfe.fw.web">
+    <Jar>C:\ccis\NFEService\com.beetlestech.nfe.fw.web\bin</Jar>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.fw.web\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\annotations-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ha.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-tribes.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc_license_cu.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\ecj-3.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\el-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper-el.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jsp-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-coyote.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-es.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-fr.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-ja.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-jdbc.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-util.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-common-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\eclipse\j9-6\jre\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\ccis\NFEService\com.beetlestech.nfe.fw.web\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" name="intercept" signature="(Lcom/beetlestech/nfe/fw/core/interceptor/InterceptorChain;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" start="50" end="125" startBytecode="0" endBytecode="954" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java"/>
+    </Method>
+    <LocalVariable name="service" register="7" pc="487" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="com.beetlestech.nfe.fw.core.bean.BeanFactory" name="getBean" signature="(Ljava/lang/String;)Ljava/lang/Object;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.bean.BeanFactory" sourcefile="BeanFactory.java" sourcepath="com/beetlestech/nfe/fw/core/bean/BeanFactory.java"/>
+    </Method>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" start="116" end="116" startBytecode="489" endBytecode="489" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" start="116" end="116" startBytecode="489" endBytecode="489" sourcefile="ContextSessionControlInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ContextSessionControlInterceptor.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="intercept" signature="(Lcom/beetlestech/nfe/fw/core/interceptor/InterceptorChain;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="85" end="181" startBytecode="0" endBytecode="257" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Method>
+    <LocalVariable name="items" register="16" pc="236" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="122" end="122" startBytecode="234" endBytecode="234" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="122" end="122" startBytecode="234" endBytecode="234" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.KILLED_BY_SUBSEQUENT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="items"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="intercept" signature="(Lcom/beetlestech/nfe/fw/core/interceptor/InterceptorChain;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="85" end="181" startBytecode="0" endBytecode="1657" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+    </Method>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="150" end="150" startBytecode="453" endBytecode="453" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="150" end="150" startBytecode="453" endBytecode="453" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" name="setFileIntoBean" signature="(Ljava/lang/Object;Ljava/util/Map;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="187" end="259" startBytecode="0" endBytecode="1635" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    </Method>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="248" end="248" startBytecode="490" endBytecode="490" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" start="248" end="248" startBytecode="490" endBytecode="490" sourcefile="ServiceInputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceInputParamInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" name="downloadFile" signature="(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;Ljava/lang/Object;Ljava/lang/Object;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" start="74" end="97" startBytecode="0" endBytecode="577" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+    </Method>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" start="87" end="87" startBytecode="122" endBytecode="122" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" start="87" end="87" startBytecode="122" endBytecode="122" sourcefile="ServiceOutputParamInterceptor.java" sourcepath="com/beetlestech/nfe/fw/web/interceptor/impl/ServiceOutputParamInterceptor.java"/>
+  </BugInstance>
+  <BugInstance type="WMI_WRONG_MAP_ITERATOR" priority="2" rank="18" abbrev="WMI" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.web.rest.CISRestServlet">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.CISRestServlet" sourcefile="CISRestServlet.java" sourcepath="com/beetlestech/nfe/fw/web/rest/CISRestServlet.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.fw.web.rest.CISRestServlet" name="init" signature="(Ljavax/servlet/ServletConfig;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.web.rest.CISRestServlet" start="83" end="158" startBytecode="0" endBytecode="1331" sourcefile="CISRestServlet.java" sourcepath="com/beetlestech/nfe/fw/web/rest/CISRestServlet.java"/>
+    </Method>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.rest.CISRestServlet" start="125" end="125" startBytecode="258" endBytecode="258" sourcefile="CISRestServlet.java" sourcepath="com/beetlestech/nfe/fw/web/rest/CISRestServlet.java"/>
+    <SourceLine classname="com.beetlestech.nfe.fw.web.rest.CISRestServlet" start="125" end="125" startBytecode="258" endBytecode="258" sourcefile="CISRestServlet.java" sourcepath="com/beetlestech/nfe/fw/web/rest/CISRestServlet.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 10 Nov 2014 12:01:52 +0800" total_classes="12" referenced_classes="131" total_bugs="6" total_size="749" num_packages="3" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="85.41" clock_seconds="50.28" peak_mbytes="626.32" alloc_mbytes="455.50" gc_seconds="0.75" priority_2="4" priority_1="2">
+    <PackageStats package="com.beetlestech.nfe.fw.web.interceptor.impl" total_bugs="5" total_types="8" total_size="579" priority_2="3" priority_1="2">
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.CISInterceptorChain" sourceFile="CISInterceptorChain.java" interface="false" size="136" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor" sourceFile="ContextSessionControlInterceptor.java" interface="false" size="113" bugs="1" priority_2="1"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.ContextSessionControlInterceptor4Test" sourceFile="ContextSessionControlInterceptor4Test.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.LDAPInterceptor" sourceFile="LDAPInterceptor.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInputParamInterceptor" sourceFile="ServiceInputParamInterceptor.java" interface="false" size="190" bugs="3" priority_2="2" priority_1="1"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceInterceptor" sourceFile="ServiceInterceptor.java" interface="false" size="46" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.ServiceOutputParamInterceptor" sourceFile="ServiceOutputParamInterceptor.java" interface="false" size="39" bugs="1" priority_1="1"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.interceptor.impl.SqlSessionControlInterceptor" sourceFile="SqlSessionControlInterceptor.java" interface="false" size="24" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.web.rest" total_bugs="1" total_types="3" total_size="161" priority_2="1">
+      <ClassStats class="com.beetlestech.nfe.fw.web.rest.AbstractRestController" sourceFile="AbstractRestController.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.rest.CISRestController" sourceFile="CISRestController.java" interface="false" size="61" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.web.rest.CISRestServlet" sourceFile="CISRestServlet.java" interface="false" size="67" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.web.util" total_bugs="0" total_types="1" total_size="9">
+      <ClassStats class="com.beetlestech.nfe.fw.web.util.ReflectUtil" sourceFile="ReflectUtil.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="27140" invocations="2" avgMicrosecondsPerInvocation="13570152" maxMicrosecondsPerInvocation="26422119" standardDeviationMircosecondsPerInvocation="12851967"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1415592162653" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

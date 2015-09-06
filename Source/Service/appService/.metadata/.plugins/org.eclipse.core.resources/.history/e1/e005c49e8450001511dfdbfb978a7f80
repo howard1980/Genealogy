@@ -1,0 +1,25 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.beetlestech.nfe.main.service.com.dto.SsGetShareInfoInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsGetShareInfoOutDTO;
+
+public class SsGetShareInfo extends AbstractService<SsGetShareInfoOutDTO, SsGetShareInfoInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetShareInfoOutDTO execute(
+			SsGetShareInfoInDTO ssGetShareInfoInDTO) {
+		SsGetShareInfoOutDTO ssGetShareInfoOutDTO = new SsGetShareInfoOutDTO();
+		return ssGetShareInfoOutDTO;
+	}
+}

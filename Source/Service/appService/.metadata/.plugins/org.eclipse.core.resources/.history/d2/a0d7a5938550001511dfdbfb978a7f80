@@ -1,0 +1,80 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.TechnicianServiceDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("TECHNICIAN_SERVICE")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class TechnicianServiceDTO extends TechnicianServiceDTOSupport implements java.io.Serializable, Comparable<TechnicianServiceDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long iD = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TECHNICIAN_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long technicianID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_ITEM_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String serviceItemID = null;
+
+	public Long getID() {
+		return this.iD;
+	}
+
+	public void setID(
+			Long iD) {
+		this.iD = iD;
+	}
+
+	public Long getTechnicianID() {
+		return this.technicianID;
+	}
+
+	public void setTechnicianID(
+			Long technicianID) {
+		this.technicianID = technicianID;
+	}
+
+	public String getServiceItemID() {
+		return this.serviceItemID;
+	}
+
+	public void setServiceItemID(
+			String serviceItemID) {
+		this.serviceItemID = serviceItemID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			TechnicianServiceDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

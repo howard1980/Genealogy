@@ -1,0 +1,52 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.view.support;
+
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.view.VCustomerAccountDetailDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VCustomerAccountDetailDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VCUSTOMER_ACCOUNT_DETAIL_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VCUSTOMER_ACCOUNT_DETAIL_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VCUSTOMER_ACCOUNT_DETAIL_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VCUSTOMER_ACCOUNT_DETAIL_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VCUSTOMER_ACCOUNT_DETAIL_SQL_SEARCH";
+
+	public static final String COUNT = "VCUSTOMER_ACCOUNT_DETAIL_COUNT";
+
+	public static final String COUNT_OR = "VCUSTOMER_ACCOUNT_DETAIL_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VCUSTOMER_ACCOUNT_DETAIL_COUNT_SEARCH";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_AMOUNT = "AMOUNT";
+
+	public static final String TABLE = "VCUSTOMER_ACCOUNT_DETAIL";
+
+	public static VCustomerAccountDetailDTO setDefaultValue() {
+		VCustomerAccountDetailDTO defaultDTO = new VCustomerAccountDetailDTO();
+
+		defaultDTO.setcustomerid(0l);
+
+		defaultDTO.setAmount(new java.math.BigDecimal(0));
+
+		return defaultDTO;
+	}
+}

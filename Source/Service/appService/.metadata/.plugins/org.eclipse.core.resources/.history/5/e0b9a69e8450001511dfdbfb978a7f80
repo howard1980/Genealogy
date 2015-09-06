@@ -1,0 +1,193 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 微信支付订单的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("微信支付订单")
+public class SsWechetPayOutDTO implements java.io.Serializable, Comparable<SsWechetPayOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 开放平台账户的唯一标识  
+	*/
+	@Alias("开放平台账户的唯一标识")
+	private String appid = null;
+
+	/**
+	* <code>开放平台账户的唯一标识</code>返回
+	* @return <code>开放平台账户的唯一标识</code>
+	*/
+	public String getAppid() {
+		return this.appid;
+	}
+
+	/**
+	* <code>appid</code>设定
+	* @param appid　<code>appid</code>设定值
+	*/
+	public void setAppid(
+			String appid) {
+		this.appid = appid;
+	}
+
+	/**
+	* 合作者身份ID  
+	*/
+	@Alias("合作者身份ID")
+	private String partnerid = null;
+
+	/**
+	* <code>合作者身份ID</code>返回
+	* @return <code>合作者身份ID</code>
+	*/
+	public String getPartnerid() {
+		return this.partnerid;
+	}
+
+	/**
+	* <code>partnerid</code>设定
+	* @param partnerid　<code>partnerid</code>设定值
+	*/
+	public void setPartnerid(
+			String partnerid) {
+		this.partnerid = partnerid;
+	}
+
+	/**
+	* 32 位内的随机串  
+	*/
+	@Alias("32 位内的随机串")
+	private String noncestr = null;
+
+	/**
+	* <code>32 位内的随机串</code>返回
+	* @return <code>32 位内的随机串</code>
+	*/
+	public String getNoncestr() {
+		return this.noncestr;
+	}
+
+	/**
+	* <code>noncestr</code>设定
+	* @param noncestr　<code>noncestr</code>设定值
+	*/
+	public void setNoncestr(
+			String noncestr) {
+		this.noncestr = noncestr;
+	}
+
+	/**
+	* 订单详情  
+	*/
+	@Alias("订单详情")
+	private String packageinfo = null;
+
+	/**
+	* <code>订单详情</code>返回
+	* @return <code>订单详情</code>
+	*/
+	public String getPackageinfo() {
+		return this.packageinfo;
+	}
+
+	/**
+	* <code>packageinfo</code>设定
+	* @param packageinfo　<code>packageinfo</code>设定值
+	*/
+	public void setPackageinfo(
+			String packageinfo) {
+		this.packageinfo = packageinfo;
+	}
+
+	/**
+	* 签名ID  
+	*/
+	@Alias("签名ID")
+	private String prepayid = null;
+
+	/**
+	* <code>签名ID</code>返回
+	* @return <code>签名ID</code>
+	*/
+	public String getPrepayid() {
+		return this.prepayid;
+	}
+
+	/**
+	* <code>prepayid</code>设定
+	* @param prepayid　<code>prepayid</code>设定值
+	*/
+	public void setPrepayid(
+			String prepayid) {
+		this.prepayid = prepayid;
+	}
+
+	/**
+	* 时间戳  
+	*/
+	@Alias("时间戳")
+	private String timestamp = null;
+
+	/**
+	* <code>时间戳</code>返回
+	* @return <code>时间戳</code>
+	*/
+	public String getTimestamp() {
+		return this.timestamp;
+	}
+
+	/**
+	* <code>timestamp</code>设定
+	* @param timestamp　<code>timestamp</code>设定值
+	*/
+	public void setTimestamp(
+			String timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	/**
+	* 签名  
+	*/
+	@Alias("签名")
+	private String sign = null;
+
+	/**
+	* <code>签名</code>返回
+	* @return <code>签名</code>
+	*/
+	public String getSign() {
+		return this.sign;
+	}
+
+	/**
+	* <code>sign</code>设定
+	* @param sign　<code>sign</code>设定值
+	*/
+	public void setSign(
+			String sign) {
+		this.sign = sign;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsWechetPayOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

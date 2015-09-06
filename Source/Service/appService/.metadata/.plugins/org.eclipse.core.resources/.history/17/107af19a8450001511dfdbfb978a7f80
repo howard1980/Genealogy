@@ -1,0 +1,194 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.CustomerInfoDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_INFO")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CustomerInfoDTO extends CustomerInfoDTOSupport implements java.io.Serializable, Comparable<CustomerInfoDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 40, max = 40)
+	private String name = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PASSWORD")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String password = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MOBILENO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 11, max = 11)
+	private String mobileNo = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LICENCE_PLATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
+	private String licencePlate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
+	private Double longitude = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
+	private Double latitude = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDITDATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date regeditDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDITTIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time regeditTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OLDUID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long oldUID = null;
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(
+			String password) {
+		this.password = password;
+	}
+
+	public String getMobileNo() {
+		return this.mobileNo;
+	}
+
+	public void setMobileNo(
+			String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
+
+	public String getLicencePlate() {
+		return this.licencePlate;
+	}
+
+	public void setLicencePlate(
+			String licencePlate) {
+		this.licencePlate = licencePlate;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
+	}
+
+	public Double getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
+	}
+
+	public java.sql.Date getRegeditDate() {
+		return this.regeditDate;
+	}
+
+	public void setRegeditDate(
+			java.sql.Date regeditDate) {
+		this.regeditDate = regeditDate;
+	}
+
+	public java.sql.Time getRegeditTime() {
+		return this.regeditTime;
+	}
+
+	public void setRegeditTime(
+			java.sql.Time regeditTime) {
+		this.regeditTime = regeditTime;
+	}
+
+	public Long getoldUID() {
+		return this.oldUID;
+	}
+
+	public void setoldUID(
+			Long oldUID) {
+		this.oldUID = oldUID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CustomerInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

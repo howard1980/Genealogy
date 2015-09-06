@@ -1,0 +1,136 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.CashCouponRecordDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_RECORD")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CashCouponRecordDTO extends CashCouponRecordDTOSupport implements java.io.Serializable, Comparable<CashCouponRecordDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_RECORD_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long cASHCOUPONRECORDID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Integer cASHCOUPONID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long orderID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("USE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date useDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("USE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time useTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	public Long getCASHCOUPONRECORDID() {
+		return this.cASHCOUPONRECORDID;
+	}
+
+	public void setCASHCOUPONRECORDID(
+			Long cASHCOUPONRECORDID) {
+		this.cASHCOUPONRECORDID = cASHCOUPONRECORDID;
+	}
+
+	public Integer getCASHCOUPONID() {
+		return this.cASHCOUPONID;
+	}
+
+	public void setCASHCOUPONID(
+			Integer cASHCOUPONID) {
+		this.cASHCOUPONID = cASHCOUPONID;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getOrderID() {
+		return this.orderID;
+	}
+
+	public void setOrderID(
+			Long orderID) {
+		this.orderID = orderID;
+	}
+
+	public java.sql.Date getUseDate() {
+		return this.useDate;
+	}
+
+	public void setUseDate(
+			java.sql.Date useDate) {
+		this.useDate = useDate;
+	}
+
+	public java.sql.Time getUseTime() {
+		return this.useTime;
+	}
+
+	public void setUseTime(
+			java.sql.Time useTime) {
+		this.useTime = useTime;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CashCouponRecordDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

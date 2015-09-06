@@ -1,0 +1,240 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.CashCouponDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CashCouponDTO extends CashCouponDTOSupport implements java.io.Serializable, Comparable<CashCouponDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Integer cASHCOUPONID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String name = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_NO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String cASHCOUPONNO = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DESCRIPTION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String description = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.math.BigDecimal amount = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PRICE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal price = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("START_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date startDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("END_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date endDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("EFFECT_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Date effectDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MIN_AMOUT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String minAmout = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICEID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String serviceID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(12)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("FLG")
+	@com.maxiaohua.genealogy.fw.core.type.Index(13)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer flg = null;
+
+	public Integer getCASHCOUPONID() {
+		return this.cASHCOUPONID;
+	}
+
+	public void setCASHCOUPONID(
+			Integer cASHCOUPONID) {
+		this.cASHCOUPONID = cASHCOUPONID;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	public String getCASHCOUPONNO() {
+		return this.cASHCOUPONNO;
+	}
+
+	public void setCASHCOUPONNO(
+			String cASHCOUPONNO) {
+		this.cASHCOUPONNO = cASHCOUPONNO;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(
+			String description) {
+		this.description = description;
+	}
+
+	public java.math.BigDecimal getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(
+			java.math.BigDecimal amount) {
+		this.amount = amount;
+	}
+
+	public java.math.BigDecimal getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			java.math.BigDecimal price) {
+		this.price = price;
+	}
+
+	public java.sql.Date getStartDate() {
+		return this.startDate;
+	}
+
+	public void setStartDate(
+			java.sql.Date startDate) {
+		this.startDate = startDate;
+	}
+
+	public java.sql.Date getEndDate() {
+		return this.endDate;
+	}
+
+	public void setEndDate(
+			java.sql.Date endDate) {
+		this.endDate = endDate;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Date getEffectDate() {
+		return this.effectDate;
+	}
+
+	public void setEffectDate(
+			java.sql.Date effectDate) {
+		this.effectDate = effectDate;
+	}
+
+	public String getMinAmout() {
+		return this.minAmout;
+	}
+
+	public void setMinAmout(
+			String minAmout) {
+		this.minAmout = minAmout;
+	}
+
+	public String getServiceID() {
+		return this.serviceID;
+	}
+
+	public void setServiceID(
+			String serviceID) {
+		this.serviceID = serviceID;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	public Integer getFlg() {
+		return this.flg;
+	}
+
+	public void setFlg(
+			Integer flg) {
+		this.flg = flg;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CashCouponDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

@@ -1,0 +1,6537 @@
+/* CIS
+* (C) Copyright IBM Japan, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.biz.constant;
+
+/**
+ * 类别管理class
+ *
+ * 変更履歴
+ * REV.         変更日付           変更者              変更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2014/04/29         GD                  新規作成
+ *
+ */
+public interface CtgCodeConstant {
+	/**
+	* SEX 性别
+	*/
+	public static enum SEX {
+		/**
+		* 1:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 0:男
+		*/
+		MALE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:女
+		*/
+		FEMALE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+
+	/**
+	* PAYMENT_TYPE 支付分类
+	*/
+	public static enum PAYMENT_TYPE {
+		/**
+		* 2:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 0:现金
+		*/
+		CASH {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:车管家
+		*/
+		SXXC {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:支付宝
+		*/
+		ALIPAY {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 3:银联
+		*/
+		UNIONPAY {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "3";
+			}
+		},
+		/**
+		* 4:微信
+		*/
+		WECHETPAY {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "4";
+			}
+		}
+	}
+	
+	/**
+	* TACCLOG_ACC_STATUS アクセス・ステータス TACCLOG.ACC_STATUS
+	*/
+	public static enum TACCLOG_ACC_STATUS {
+		/**
+		* 0:アクセス終了
+		*/
+		ACC_STATUS_0 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:アクセス中
+		*/
+		ACC_STATUS_1 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+	
+	/**
+	* TCOMBLCM_MODE ユーザー認証の方法 TCOMBLCM.MODE
+	*/
+	public static enum TCOMBLCM_MODE {
+		/**
+		* 0:CIS
+		*/
+		AUTHENTICATION_TYPE_CIS {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:LDAP
+		*/
+		AUTHENTICATION_TYPE_LDAP {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+	
+	/**
+	* TLOGINLG_RESULT ログインアウト成否 TLOGINLG.RESULT
+	*/
+	public static enum TLOGINLG_RESULT {
+		/**
+		* 0:認証成功
+		*/
+		LOGIN_SUCCESS {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:認証失敗
+		*/
+		LOGIN_FAIL {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:初期パスワード未変更
+		*/
+		NOT_UPDATE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 3:パスワード有効期限切れ
+		*/
+		EXPIRED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "3";
+			}
+		},
+		/**
+		* 8:ログアウト成功
+		*/
+		LOGOUT_SUCCESS {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "8";
+			}
+		},
+		/**
+		* 9:ログアウト失敗
+		*/
+		LOGOUT_FAIL {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "9";
+			}
+		}
+	}
+	
+	/**
+	* APP_SOFTWARE_TYPE 终端类型
+	*/
+	public static enum APP_SOFTWARE_TYPE {
+		/**
+		* 6:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "6";
+			}
+		},
+		/**
+		* 1:Android客户端
+		*/
+		ANDROID_CLIENT {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:IOS客户端
+		*/
+		IOS_CLIENT {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 3:Android工作端
+		*/
+		ANDROID_WOKER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "3";
+			}
+		}		
+	}
+	
+	/**
+	* AREA_OPEN_TYPE 区域开通类型
+	*/
+	public static enum AREA_OPEN_TYPE {
+		/**
+		* 7:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "7";
+			}
+		},
+		/**
+		* 0:未开通
+		*/
+		NOT_OPENED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},		
+		/**
+		* 1:开通中
+		*/
+		OPENING {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:关闭
+		*/
+		CLOSEED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 3:Android工作端
+		*/
+		ANDROID_WOKER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "3";
+			}
+		}		
+	}
+	
+	/**
+	* ORDER_STATUS 订单状态
+	*/
+	public static enum ORDER_STATUS {
+		/**
+		* 8:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "8";
+			}
+		},
+		/**
+		* 0:已取消
+		*/
+		CANCEL {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},		
+		/**
+		* 1:待支付
+		*/
+		CREATEED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:已付款
+		*/
+		PAID {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 3:处理中
+		*/
+		PROCESSING {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "3";
+			}
+		},
+		/**
+		* 4:已完成
+		*/
+		COMPLETED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "4";
+			}
+		},
+		/**
+		* 5:已评论
+		*/
+		COMMENTED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "5";
+			}
+		}
+	}
+	
+	/**
+	* WASH_FLG 清洗区分
+	*/
+	public static enum WASH_FLG {
+		/**
+		* 9:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "9";
+			}
+		},
+		/**
+		* 0:随行洗车
+		*/
+		SXXC {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},		
+		/**
+		* 1:到店洗车
+		*/
+		SHOP {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+	}
+	
+	/**
+	* DELETE_FLG 删除区分
+	*/
+	public static enum DELETE_FLG {
+		/**
+		* 10:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "10";
+			}
+		},
+		/**
+		* 0:未删除
+		*/
+		NO_DELETED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},		
+		/**
+		* 1:删除
+		*/
+		DELETED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+	}
+	
+//	/**
+//	* ACCOUNT_TYPE 账户区分
+//	*/
+//	public static enum ACCOUNT_TYPE {
+//		/**
+//		* 11:TopID
+//		*/
+//		OWNER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "11";
+//			}
+//		},
+//		/**
+//		* 0:车管家
+//		*/
+//		SXXC {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+	
+	/**
+	* RECHARGE_TYPE 充值区分
+	*/
+	public static enum RECHARGE_TYPE {
+		/**
+		* 12:TopID
+		*/
+		OWNER {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "12";
+			}
+		},
+		/**
+		* 0:消费
+		*/
+		CONSUMPTION {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:充值
+		*/
+		RECHARGE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+	
+	/**
+	* LOGIN_STATUS 登陆状态
+	*/
+	public static enum LOGIN_STATUS {
+		
+		/**
+		* 1:在线
+		*/		
+		ONLINE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+			
+		},
+		/**
+		* 0:离线
+		*/
+		OFFLINE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		}
+		 
+	}
+	
+	/**
+	* WORKER_PLAN_UPDATE_FLAG 更新 WorkerPlan 
+	*/
+	public static enum WORKER_PLAN_FLAG {
+		
+		/**
+		* 0:删除
+		*/		
+		DELETE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+			
+		},
+		/**
+		* 1:新增
+		*/
+		INSERT {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:修改
+		*/
+		UPDATE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		}		 
+	}
+	
+	/**
+	* WORKER_PLAN_UPDATE_FLAG 更新 WorkerPlan 
+	*/
+	public static enum WORKER_PLAN_STATUS {
+		
+		/**
+		* 0:未通过
+		*/		
+		REJECTED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+			
+		},
+		REQUEST
+		/**
+		* 1:已提出
+		*/
+		 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:已审批
+		*/
+		APPROVED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		}		 
+	}
+	
+	/**
+	* 洗车证明图片，0标识洗车前的图片 1标识洗车后的图片
+	*/
+	public static enum ORDER_EVIDENCE_STATUS {
+		
+		/**
+		* 0:洗车前
+		*/		
+		BEFORE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+			
+		},
+		AFTER
+		/**
+		* 1:洗车后
+		*/
+		 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		} 	 
+	}
+	
+	/*
+	public static final Integer CATAGORY_P_MESSAGE_STATE =2;
+	public static final Integer CATAGORY_P_USER_STATE =3;
+	public static final Integer CATAGORY_P_ORDER_STATE =4;
+	public static final Integer CATAGORY_P_COURSE_STATE =5;
+	public static final Integer CATAGORY_P_EVALUATION_STATE =6;
+	public static final Integer CATAGORY_P_HOMEWORK_STATE =7;
+	public static final Integer CATAGORY_P_COURESE_TYPE =8;
+	public static final Integer CATAGORY_P_PAYMENT_TYPE =9;
+	public static final Integer CATAGORY_P_COURESES =10;
+	*/
+
+//
+//	/**
+//	* TWSPROF_NYUGAI_KBN 入外区分 TWSPROF.NYUGAI_KBN
+//	*/
+//	public static enum TWSPROF_NYUGAI_KBN {
+//		/**
+//		* 1:外来
+//		*/
+//		GAIRAI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:入院
+//		*/
+//		NYUIN {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TKANJA_PT_STATUS 患者状態 TKANJA.PT_STATUS
+//	*/
+//	public static enum TKANJA_PT_STATUS {
+//		/**
+//		* 1:入院中
+//		*/
+//		NYUINCYU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:入院決定
+//		*/
+//		NYUINKETEI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 9:死亡
+//		*/
+//		SHIBOU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYOYAKU_YK_KJ_ST1 診療受付区分 TYOYAKU.YK_KJ_ST1
+//	*/
+//	public static enum TYOYAKU_YK_KJ_ST1 {
+//		/**
+//		* SPACE:未来院
+//		*/
+//		MIRAIIN {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "";
+//			}
+//		},
+//		/**
+//		* 1:病院到着
+//		*/
+//		BYOUINTOUCYAKU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:中待ち
+//		*/
+//		CYUMACHI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:診察中
+//		*/
+//		SHINSATUCYU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:保留
+//		*/
+//		HORYU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		},
+//		/**
+//		* 5:終了
+//		*/
+//		SYURYOU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYOYAKU_YK_CHIKOKU 遅刻フラグ TYOYAKU.YK_CHIKOKU
+//	*/
+//	public static enum TYOYAKU_YK_CHIKOKU {
+//		/**
+//		* SPACE:未遅刻
+//		*/
+//		MICHIKOKU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "";
+//			}
+//		},
+//		/**
+//		* 1:遅刻
+//		*/
+//		CHIKOKU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_YOYAKU_MODE 診療予約枠の管理方法を選択するモード TBYPROF.YOYAKU_MODE
+//	*/
+//	public static enum TBYPROF_YOYAKU_MODE {
+//		/**
+//		* 1:医師別予約枠
+//		*/
+//		ISHI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:ブース別予約枠
+//		*/
+//		BOOTH {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:診療科別予約枠
+//		*/
+//		SHINRYOUKA {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYKKMST_YK_SN_KBN 診療予約区分 TYKKMST.YK_SN_KBN
+//	*/
+//	public static enum TYKKMST_YK_SN_KBN {
+//		/**
+//		* 1:医師別予約
+//		*/
+//		ISHI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:ブース別予約
+//		*/
+//		BOOTH {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:診療科別予約
+//		*/
+//		SHINRYOUKA {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYOYAKU_YK_OD_KIND 予約種別 TYOYAKU.YK_OD_KIND
+//	*/
+//	public static enum TYOYAKU_YK_OD_KIND {
+//		/**
+//		* 51:診療予約
+//		*/
+//		SHINRYOUYOYAKU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "51";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_INDEX_KBN INDEX区分 TEMRIDX.INDEX_KBN
+//	*/
+//	public static enum TEMRIDX_INDEX_KBN {
+//		/**
+//		* 1:カルテ
+//		*/
+//		KARUTE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:オーダー
+//		*/
+//		ORDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:結果/レポート
+//		*/
+//		RESULT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* M:食事
+//		*/
+//		MEAL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "M";
+//			}
+//		},
+//		/**
+//		* N:入退院
+//		*/
+//		NYUUTAIIN {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "N";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_XX_KBN XX区分 TEMRIDX.XX_KBN
+//	*/
+//	public static enum TEMRIDX_XX_KBN {
+//		/**
+//		* 01:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_01 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "01";
+//			}
+//		},
+//		/**
+//		* 10:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_10 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "10";
+//			}
+//		},
+//		/**
+//		* 11:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_11 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "11";
+//			}
+//		},
+//		/**
+//		* 12:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_12 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "12";
+//			}
+//		},
+//		/**
+//		* 13:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_13 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "13";
+//			}
+//		},
+//		/**
+//		* 14:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_14 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "14";
+//			}
+//		},
+//		/**
+//		* 15:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_15 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "15";
+//			}
+//		},
+//		/**
+//		* 16:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_16 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "16";
+//			}
+//		},
+//		/**
+//		* 17:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_17 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "17";
+//			}
+//		},
+//		/**
+//		* 20:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_20 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "20";
+//			}
+//		},
+//		/**
+//		* 21:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_21 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "21";
+//			}
+//		},
+//		/**
+//		* 22:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_22 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "22";
+//			}
+//		},
+//		/**
+//		* 23:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_23 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "23";
+//			}
+//		},
+//		/**
+//		* 24:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_24 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "24";
+//			}
+//		},
+//		/**
+//		* 25:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_25 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "25";
+//			}
+//		},
+//		/**
+//		* 26:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_26 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "26";
+//			}
+//		},
+//		/**
+//		* 27:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_27 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "27";
+//			}
+//		},
+//		/**
+//		* 29:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_29 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "29";
+//			}
+//		},
+//		/**
+//		* 31:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_31 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "31";
+//			}
+//		},
+//		/**
+//		* 32:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_32 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "32";
+//			}
+//		},
+//		/**
+//		* 33:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_33 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "33";
+//			}
+//		},
+//		/**
+//		* 34:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_34 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "34";
+//			}
+//		},
+//		/**
+//		* 35:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_35 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "35";
+//			}
+//		},
+//		/**
+//		* 50:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_50 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "50";
+//			}
+//		},
+//		/**
+//		* 52:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_52 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "52";
+//			}
+//		},
+//		/**
+//		* 55:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_55 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "55";
+//			}
+//		},
+//		/**
+//		* 70:INDEX_KBNによって意味が変わる
+//		*/
+//		XX_KBN_70 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "70";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_STOP_FLG 中止フラグ TEMRIDX.STOP_FLG
+//	*/
+//	public static enum TEMRIDX_STOP_FLG {
+//		/**
+//		* 0:アクティブ
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:中止
+//		*/
+//		STOP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:変更による中止
+//		*/
+//		CHANGE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_ENT_NO_FUBAN_TYPE 受付番号付番タイプ TBYPROF.ENT_NO_FUBAN_TYPE
+//	*/
+//	public static enum TBYPROF_ENT_NO_FUBAN_TYPE {
+//		/**
+//		* 0:予約枠関係なし
+//		*/
+//		NO_RELATION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:同時間枠
+//		*/
+//		CONCURRENT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* ２～９:グルーピング
+//		*/
+//		GROUPING {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "２～９";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TUKLOG_UK_STS 受付け番号状況 TUKLOG.UK_STS
+//	*/
+//	public static enum TUKLOG_UK_STS {
+//		/**
+//		* 1:受付済み
+//		*/
+//		FINISHED {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 4:表示板連動
+//		*/
+//		GUIDEPANEL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		},
+//		/**
+//		* 5:保留
+//		*/
+//		HORYU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		},
+//		/**
+//		* 9:診察終了
+//		*/
+//		SHINSATUSYURYO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TUKLOG_UK_STS_FLG1 表示順ステータス１ TUKLOG.UK_STS_FLG1
+//	*/
+//	public static enum TUKLOG_UK_STS_FLG1 {
+//		/**
+//		* 00000:受付けｼｽﾃﾑ
+//		*/
+//		UKSYSTEM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "00000";
+//			}
+//		},
+//		/**
+//		* 00001:送信済 表示盤i/f PGM
+//		*/
+//		SENTIFPGM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "00001";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TUKLOG_UK_STS_FLG2 表示順ステータス２ TUKLOG.UK_STS_FLG2
+//	*/
+//	public static enum TUKLOG_UK_STS_FLG2 {
+//		/**
+//		* 00000:表示盤送信対象
+//		*/
+//		SENDOBJECT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "00000";
+//			}
+//		},
+//		/**
+//		* 00001:表示盤非送信対象(未使用) 
+//		*/
+//		UNSENDOBJECT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "00001";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYKNRI_YOTEI_FLG 予定フラグ TNYKNRI.YOTEI_FLG
+//	*/
+//	public static enum TNYKNRI_YOTEI_FLG {
+//		/**
+//		* 0:予定
+//		*/
+//		YOUTEI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:確定
+//		*/
+//		KAKUTEI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYTDR_S_DR_FLG 主治医フラグ TNYTDR.S_DR_FLG
+//	*/
+//	public static enum TNYTDR_S_DR_FLG {
+//		/**
+//		* 1:主治医
+//		*/
+//		SYUJII {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYTDR_ACTIVE_FLG ACTIVEフラグ TNYTDR.ACTIVE_FLG
+//	*/
+//	public static enum TNYTDR_ACTIVE_FLG {
+//		/**
+//		* 0:INACTIVE
+//		*/
+//		INACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYTNS_ACTIVE_FLG ACTIVEフラグ TNYTNS.ACTIVE_FLG
+//	*/
+//	public static enum TNYTNS_ACTIVE_FLG {
+//		/**
+//		* 0:INACTIVE
+//		*/
+//		INACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* THOKEN_KEIZOKU_KBN 継続保険区分 THOKEN.KEIZOKU_KBN
+//	*/
+//	public static enum THOKEN_KEIZOKU_KBN {
+//		/**
+//		* 1:継続保険
+//		*/
+//		KEIZOKU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCPDM_APPL_ID アプリケーションID TCOMCPDM.APPL_ID
+//	*/
+//	public static enum TCOMCPDM_APPL_ID {
+//		/**
+//		* K21:K21
+//		*/
+//		K21 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "K21";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCPDM_FUNCTION_ID 機能ID TCOMCPDM.FUNCTION_ID
+//	*/
+//	public static enum TCOMCPDM_FUNCTION_ID {
+//		/**
+//		* PatientSummary:機能ID：PatientSummary
+//		*/
+//		PATIENTSUMMARY {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "PatientSummary";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCPDM_ITEM_ID 項目ID TCOMCPDM.ITEM_ID
+//	*/
+//	public static enum TCOMCPDM_ITEM_ID {
+//		/**
+//		* WidgetDispConfig:項目ID：WidgetDispConfig
+//		*/
+//		WIDGETDISPCONFIG {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "WidgetDispConfig";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCPDM_CPTN_ID 設定パターンID TCOMCPDM.CPTN_ID
+//	*/
+//	public static enum TCOMCPDM_CPTN_ID {
+//		/**
+//		* 0000000000:デフォルト設定
+//		*/
+//		DEFAULT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0000000000";
+//			}
+//		},
+//		/**
+//		* 0000000001:外来患者共通設定
+//		*/
+//		OUTPATIENT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0000000001";
+//			}
+//		},
+//		/**
+//		* 0000000002:入院患者共通設定
+//		*/
+//		INPATIENT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0000000002";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCHD_CPTN_KBN 設定パターン区分 TCOMCCHD.CPTN_KBN
+//	*/
+//	public static enum TCOMCCHD_CPTN_KBN {
+//		/**
+//		* 1:ユーザー個別に設定
+//		*/
+//		INDIVIDUAL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSTAFFM_ACTIVE_FLG ACTIVEフラグ TSTAFFM.ACTIVE_FLG
+//	*/
+//	public static enum TSTAFFM_ACTIVE_FLG {
+//		/**
+//		* 0:INACTIVE
+//		*/
+//		INACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCPM_APPL_ID メニューAPPL_ID TCOMCCPM.APPL_ID
+//	*/
+//	public static enum TCOMCCPM_APPL_ID {
+//		/**
+//		* COM:COM
+//		*/
+//		COM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "COM";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCPM_FUNCTION_ID メニューFUNCTION_ID TCOMCCPM.FUNCTION_ID
+//	*/
+//	public static enum TCOMCCPM_FUNCTION_ID {
+//		/**
+//		* MainMenu:メインメニュー
+//		*/
+//		MAIN_MENU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "MainMenu";
+//			}
+//		},
+//		/**
+//		* OrderMenu:オーダーメニュー
+//		*/
+//		ORDER_MENU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "OrderMenu";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCPM_ITEM_ID メニューITEM_ID TCOMCCPM.ITEM_ID
+//	*/
+//	public static enum TCOMCCPM_ITEM_ID {
+//		/**
+//		* DefaultMenu:DefaultMenu
+//		*/
+//		DEFAULT_MENU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "DefaultMenu";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCPM_CTPN_ID メニューCTPN_ID TCOMCCPM.CTPN_ID
+//	*/
+//	public static enum TCOMCCPM_CTPN_ID {
+//		/**
+//		* 0000000000:Default
+//		*/
+//		DEFAULT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0000000000";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCPDM_CONF_VALUE2 メニューCONF_VALUE2 TCOMCPDM.CONF_VALUE2
+//	*/
+//	public static enum TCOMCPDM_CONF_VALUE2 {
+//		/**
+//		* 1:フォルダ
+//		*/
+//		FOLDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCPDM_CONF_VALUE2 メニューCONF_VALUE2 TCOMCCPDM.CONF_VALUE2
+//	*/
+//	public static enum TCOMCCPDM_CONF_VALUE2 {
+//		/**
+//		* 2:CISアプリ
+//		*/
+//		CIS_APP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:外部プログラム
+//		*/
+//		EXT_APP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCPDM_CONF_VALUE1 メニューCONF_VALUE1 TCOMCPDM.CONF_VALUE1
+//	*/
+//	public static enum TCOMCPDM_CONF_VALUE1 {
+//		/**
+//		* 0:上位メニューない場合使う
+//		*/
+//		TOP_LEVEL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCHD_APPL_ID メニューAPPL_ID TCOMCCHD.APPL_ID
+//	*/
+//	public static enum TCOMCCHD_APPL_ID {
+//		/**
+//		* COM:COM
+//		*/
+//		COM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "COM";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCHD_FUNCTION_ID メニューFUNCTION_ID TCOMCCHD.FUNCTION_ID
+//	*/
+//	public static enum TCOMCCHD_FUNCTION_ID {
+//		/**
+//		* MainMenu:メインメニュー
+//		*/
+//		MAIN_MENU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "MainMenu";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCHD_ITEM_ID メニューITEM_ID TCOMCCHD.ITEM_ID
+//	*/
+//	public static enum TCOMCCHD_ITEM_ID {
+//		/**
+//		* UserMenu:UserMenu
+//		*/
+//		USER_MENU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "UserMenu";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCDT_CONF_VALUE2 メニューCONF_VALUE2 TCOMCCDT.CONF_VALUE2
+//	*/
+//	public static enum TCOMCCDT_CONF_VALUE2 {
+//		/**
+//		* 1:フォルダ
+//		*/
+//		FOLDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:CISアプリ
+//		*/
+//		CIS_APP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:外部プログラム
+//		*/
+//		EXT_APP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCDT_CONF_VALUE1 メニューCONF_VALUE1 TCOMCCDT.CONF_VALUE1
+//	*/
+//	public static enum TCOMCCDT_CONF_VALUE1 {
+//		/**
+//		* 0:上位メニューない場合使う
+//		*/
+//		TOP_LEVEL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNSBASM_DISP_FLG 表示フラグ TNSBASM.DISP_FLG
+//	*/
+//	public static enum TNSBASM_DISP_FLG {
+//		/**
+//		* 1:表示
+//		*/
+//		EXPRESSION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:非表示
+//		*/
+//		UNEXPRESSION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNSBASM_NURS_MS_LVL 看護マスターレベル TNSBASM.NURS_MS_LVL
+//	*/
+//	public static enum TNSBASM_NURS_MS_LVL {
+//		/**
+//		* 0630:看護マスターレベル0630
+//		*/
+//		MS_LVL_0630 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0630";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCHD_CPTN_ID 設定パターンID TCOMCCHD.CPTN_ID
+//	*/
+//	public static enum TCOMCCHD_CPTN_ID {
+//		/**
+//		* 0000000000:デフォルト設定
+//		*/
+//		DEFAULT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0000000000";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMCCDT_APPL_ID アプリケーションID TCOMCCDT.APPL_ID
+//	*/
+//	public static enum TCOMCCDT_APPL_ID {
+//		/**
+//		* COM:COM
+//		*/
+//		COM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "COM";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TPROFIL_WEIGHTT 体重単位 TPROFIL.WEIGHTT
+//	*/
+//	public static enum TPROFIL_WEIGHTT {
+//		/**
+//		* 1:kg
+//		*/
+//		KILO_GRAM_UNIT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:g
+//		*/
+//		GRAM_UNIT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05SIJI_SIJI_FLG 指示受け状況フラグ TE05SIJI.SIJI_FLG
+//	*/
+//	public static enum TE05SIJI_SIJI_FLG {
+//		/**
+//		* 0:未受け
+//		*/
+//		UKE_MI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:指示受済
+//		*/
+//		UKE_ZIMI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* Z:指示受け不要データ
+//		*/
+//		UKE_FUYOU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "Z";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDXLNK_XX_KBN XX区分 TEMRIDXLNK.XX_KBN
+//	*/
+//	public static enum TEMRIDXLNK_XX_KBN {
+//		/**
+//		* 11:検体
+//		*/
+//		XX_KBN_11 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "11";
+//			}
+//		},
+//		/**
+//		* 12:細菌
+//		*/
+//		XX_KBN_12 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "12";
+//			}
+//		},
+//		/**
+//		* 13:病理
+//		*/
+//		XX_KBN_13 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "13";
+//			}
+//		},
+//		/**
+//		* 14:生理
+//		*/
+//		XX_KBN_14 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "14";
+//			}
+//		},
+//		/**
+//		* 15:内視鏡
+//		*/
+//		XX_KBN_15 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "15";
+//			}
+//		},
+//		/**
+//		* 16:放射線
+//		*/
+//		XX_KBN_16 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "16";
+//			}
+//		},
+//		/**
+//		* 17:ＲＩ
+//		*/
+//		XX_KBN_17 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "17";
+//			}
+//		},
+//		/**
+//		* 21:処方
+//		*/
+//		XX_KBN_21 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "21";
+//			}
+//		},
+//		/**
+//		* 22:注射
+//		*/
+//		XX_KBN_22 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "22";
+//			}
+//		},
+//		/**
+//		* 23:リハビリ
+//		*/
+//		XX_KBN_23 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "23";
+//			}
+//		},
+//		/**
+//		* 24:処置
+//		*/
+//		XX_KBN_24 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "24";
+//			}
+//		},
+//		/**
+//		* 25:手術
+//		*/
+//		XX_KBN_25 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "25";
+//			}
+//		},
+//		/**
+//		* 26:輸血
+//		*/
+//		XX_KBN_26 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "26";
+//			}
+//		},
+//		/**
+//		* 27:放治
+//		*/
+//		XX_KBN_27 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "27";
+//			}
+//		},
+//		/**
+//		* 31:食事
+//		*/
+//		XX_KBN_31 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "31";
+//			}
+//		},
+//		/**
+//		* 32:栄養指導
+//		*/
+//		XX_KBN_32 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "32";
+//			}
+//		},
+//		/**
+//		* 41:継続指示
+//		*/
+//		XX_KBN_41 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "41";
+//			}
+//		},
+//		/**
+//		* 51:診療予約
+//		*/
+//		XX_KBN_51 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "51";
+//			}
+//		},
+//		/**
+//		* 53:相談支援
+//		*/
+//		XX_KBN_53 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "53";
+//			}
+//		},
+//		/**
+//		* 55:DPC
+//		*/
+//		XX_KBN_55 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "55";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05SIJIR_SIJI_FLG 指示受け状況フラグ TE05SIJIR.SIJI_FLG
+//	*/
+//	public static enum TE05SIJIR_SIJI_FLG {
+//		/**
+//		* 0:未受け
+//		*/
+//		UKE_MI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:指示受済
+//		*/
+//		UKE_ZIMI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* Z:指示受け不要データ
+//		*/
+//		UKE_FUYOU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "Z";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05SIJIR_OTH_FLG5 その他フラグ5 TE05SIJIR.OTH_FLG5
+//	*/
+//	public static enum TE05SIJIR_OTH_FLG5 {
+//		/**
+//		* 0:指示受け対象
+//		*/
+//		UKE_YOU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:指示受け対象外
+//		*/
+//		UKE_FUYOU {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05SIJI_STOP_FLG 中止フラグ TE05SIJI.STOP_FLG
+//	*/
+//	public static enum TE05SIJI_STOP_FLG {
+//		/**
+//		* 0:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:中止
+//		*/
+//		STOP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:変更
+//		*/
+//		UPDATE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05SIJI_INDEX_KBN INDEX区分 TE05SIJI.INDEX_KBN
+//	*/
+//	public static enum TE05SIJI_INDEX_KBN {
+//		/**
+//		* M:食事
+//		*/
+//		MEAL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "M";
+//			}
+//		},
+//		/**
+//		* 2:オーダー
+//		*/
+//		ORDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05SIJI_XX_KBN XX区分 TE05SIJI.XX_KBN
+//	*/
+//	public static enum TE05SIJI_XX_KBN {
+//		/**
+//		* 21:処方
+//		*/
+//		XX_KBN_21 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "21";
+//			}
+//		},
+//		/**
+//		* 22:注射
+//		*/
+//		XX_KBN_22 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "22";
+//			}
+//		},
+//		/**
+//		* 17:ＲＩ
+//		*/
+//		XX_KBN_17 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "17";
+//			}
+//		},
+//		/**
+//		* 51:診療予約
+//		*/
+//		XX_KBN_51 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "51";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMMST_COM_KBN 共通コード区分 TCOMMST.COM_KBN
+//	*/
+//	public static enum TCOMMST_COM_KBN {
+//		/**
+//		* RS:共通コード区分RS
+//		*/
+//		COM_KBN_RS {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "RS";
+//			}
+//		},
+//		/**
+//		* CB:共通コード区分CB
+//		*/
+//		COM_KBN_CB {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "CB";
+//			}
+//		},
+//		/**
+//		* PB:共通コード区分PB
+//		*/
+//		COM_KBN_PB {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "PB";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMMST_COM_KYE1 共通コードKEY1 TCOMMST.COM_KYE1
+//	*/
+//	public static enum TCOMMST_COM_KYE1 {
+//		/**
+//		* 4:共通コードKEY1:4
+//		*/
+//		COM_KYE1_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TA31SYK_SYKR_NO 処理NO TA31SYK.SYKR_NO
+//	*/
+//	public static enum TA31SYK_SYKR_NO {
+//		/**
+//		* 1:朝 
+//		*/
+//		SYKR_NO_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:10時
+//		*/
+//		SYKR_NO_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:昼
+//		*/
+//		SYKR_NO_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:15時
+//		*/
+//		SYKR_NO_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		},
+//		/**
+//		* 5:夕
+//		*/
+//		SYKR_NO_5 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		},
+//		/**
+//		* 6:夜
+//		*/
+//		SYKR_NO_6 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "6";
+//			}
+//		},
+//		/**
+//		* 9:個別指定
+//		*/
+//		SYKR_NO_9 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TA31SYK_CHG_ST_KBN 変更開始区分 TA31SYK.CHG_ST_KBN
+//	*/
+//	public static enum TA31SYK_CHG_ST_KBN {
+//		/**
+//		* 1:朝 
+//		*/
+//		CHG_ST_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:10時
+//		*/
+//		CHG_ST_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:昼
+//		*/
+//		CHG_ST_KBN_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:15時
+//		*/
+//		CHG_ST_KBN_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		},
+//		/**
+//		* 5:夕
+//		*/
+//		CHG_ST_KBN_5 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		},
+//		/**
+//		* 6:夜
+//		*/
+//		CHG_ST_KBN_6 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "6";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRDAIKO_APPROVAL_KBN 承認区分 TEMRDAIKO.APPROVAL_KBN
+//	*/
+//	public static enum TEMRDAIKO_APPROVAL_KBN {
+//		/**
+//		* Z:承認対象外
+//		*/
+//		TAISYOUGAI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "Z";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_ORDER_MODE オーダーモード TEMRIDX.ORDER_MODE
+//	*/
+//	public static enum TEMRIDX_ORDER_MODE {
+//		/**
+//		* 0:中断、仮登録 
+//		*/
+//		ORDER_MODE_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:確定
+//		*/
+//		ORDER_MODE_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:未確定
+//		*/
+//		ORDER_MODE_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:事後入力
+//		*/
+//		ORDER_MODE_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:代行入力
+//		*/
+//		ORDER_MODE_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TA31SYK_CHG_ED_KBN 変更終了区分 TA31SYK.CHG_ED_KBN
+//	*/
+//	public static enum TA31SYK_CHG_ED_KBN {
+//		/**
+//		* 1:朝 
+//		*/
+//		CHG_ED_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:10時
+//		*/
+//		CHG_ED_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:昼
+//		*/
+//		CHG_ED_KBN_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:15時
+//		*/
+//		CHG_ED_KBN_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		},
+//		/**
+//		* 5:夕
+//		*/
+//		CHG_ED_KBN_5 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		},
+//		/**
+//		* 6:夜
+//		*/
+//		CHG_ED_KBN_6 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "6";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_DISP_FLG 表示フラグ TEMRIDX.DISP_FLG
+//	*/
+//	public static enum TEMRIDX_DISP_FLG {
+//		/**
+//		* 0:履歴サマリーに非表示  
+//		*/
+//		HIDEN {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:履歴サマリーに表示
+//		*/
+//		DISPLAY {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYKNRI_CHG_REASON_CD 変更理由コード TNYKNRI.CHG_REASON_CD
+//	*/
+//	public static enum TNYKNRI_CHG_REASON_CD {
+//		/**
+//		* 08:外出・外泊登録
+//		*/
+//		REASON_CD_08 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "08";
+//			}
+//		},
+//		/**
+//		* 11:退院決定
+//		*/
+//		REASON_CD_11 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "11";
+//			}
+//		},
+//		/**
+//		* 58:外出・外泊登録変更
+//		*/
+//		REASON_CD_58 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "58";
+//			}
+//		},
+//		/**
+//		* 61:退院決定変更
+//		*/
+//		REASON_CD_61 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "61";
+//			}
+//		},
+//		/**
+//		* 88:外出・外泊登録取消
+//		*/
+//		REASON_CD_88 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "88";
+//			}
+//		},
+//		/**
+//		* 91:退院決定取消
+//		*/
+//		REASON_CD_91 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "91";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRDAIKO_XX_SYBT XX種別 TEMRDAIKO.XX_SYBT
+//	*/
+//	public static enum TEMRDAIKO_XX_SYBT {
+//		/**
+//		* 000:入院予約
+//		*/
+//		ORDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "000";
+//			}
+//		},
+//		/**
+//		* 001:入院決定
+//		*/
+//		DECISION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "001";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMR_XX_SYBT XX種別 TEMR.XX_SYBT
+//	*/
+//	public static enum TEMR_XX_SYBT {
+//		/**
+//		* 002:XX種別002
+//		*/
+//		XX_SYBT_002 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "002";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYKNRI_ACTIVE_FLG ACTIVEフラグ TNYKNRI.ACTIVE_FLG
+//	*/
+//	public static enum TNYKNRI_ACTIVE_FLG {
+//		/**
+//		* 0:INACTIVE
+//		*/
+//		INACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:退院
+//		*/
+//		LEAVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRDAIKO_DAIKO_KBN 代行入力区分 TEMRDAIKO.DAIKO_KBN
+//	*/
+//	public static enum TEMRDAIKO_DAIKO_KBN {
+//		/**
+//		* 0:非代行入力
+//		*/
+//		DAIKO_KBN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:代行入力（未承認）
+//		*/
+//		DAIKO_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:代行入力（承認済み） 
+//		*/
+//		DAIKO_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_DAIKO_KBN 代行入力区分 TEMRIDX.DAIKO_KBN
+//	*/
+//	public static enum TEMRIDX_DAIKO_KBN {
+//		/**
+//		* 1:本人入力
+//		*/
+//		DAIKO_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:代行入力
+//		*/
+//		DAIKO_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TA31SYR_STOP_FLG 中止フラグ TA31SYR.STOP_FLG
+//	*/
+//	public static enum TA31SYR_STOP_FLG {
+//		/**
+//		* 0:なし
+//		*/
+//		STOP_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:中止
+//		*/
+//		STOP_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMR_RECORD_TYPE レコードタイプ TEMR.RECORD_TYPE
+//	*/
+//	public static enum TEMR_RECORD_TYPE {
+//		/**
+//		* M:ワープロ情報（定型文、クリップボードからのコピー含む）
+//		*/
+//		RECORD_TYPE_M {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "M";
+//			}
+//		},
+//		/**
+//		* R:HmRecordからのコピー情報（TEMRIDXのキー情報）
+//		*/
+//		RECORD_TYPE_R {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "R";
+//			}
+//		},
+//		/**
+//		* Y:HmReservationからのコピー情報（TYOYAKUのキー情報）
+//		*/
+//		RECORD_TYPE_Y {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "Y";
+//			}
+//		},
+//		/**
+//		* T:テンプレート情報（テンプレートマスターのキー情報）
+//		*/
+//		RECORD_TYPE_T {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "T";
+//			}
+//		},
+//		/**
+//		* I:画像情報（画像・シェーマなどのキー情報）
+//		*/
+//		RECORD_TYPE_I {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "I";
+//			}
+//		},
+//		/**
+//		* L:リンク情報（各種レポートのＵＲＬ情報）
+//		*/
+//		RECORD_TYPE_L {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "L";
+//			}
+//		},
+//		/**
+//		* C:ケアフローの結果情報（TNSFKKAのキー情報）
+//		*/
+//		RECORD_TYPE_C {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "C";
+//			}
+//		},
+//		/**
+//		* P:プラークチャート（歯科カルテ）
+//		*/
+//		RECORD_TYPE_P {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "P";
+//			}
+//		},
+//		/**
+//		* F:添付ファイル（ＰＤＦファイル等）
+//		*/
+//		RECORD_TYPE_F {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "F";
+//			}
+//		},
+//		/**
+//		* D:同意
+//		*/
+//		RECORD_TYPE_D {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "D";
+//			}
+//		},
+//		/**
+//		* O:その他
+//		*/
+//		RECORD_TYPE_O {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "O";
+//			}
+//		},
+//		/**
+//		* W:ワープロ情報
+//		*/
+//		RECORD_TYPE_W {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "W";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_BUMON_FLG5 部門フラグ5 TEMRIDX.BUMON_FLG5
+//	*/
+//	public static enum TEMRIDX_BUMON_FLG5 {
+//		/**
+//		* 0:診療関連検査：通常
+//		*/
+//		BUMON_FLG5_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:診療関連検査：診察前検査
+//		*/
+//		BUMON_FLG5_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:診療関連検査：当日２度診
+//		*/
+//		BUMON_FLG5_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMMENT_CODE1 コード１ TCOMMENT.CODE1
+//	*/
+//	public static enum TCOMMENT_CODE1 {
+//		/**
+//		* 31:機能
+//		*/
+//		CODE1_31 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "31";
+//			}
+//		},
+//		/**
+//		* 32:方向･方法
+//		*/
+//		CODE1_32 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "32";
+//			}
+//		},
+//		/**
+//		* 33:手技
+//		*/
+//		CODE1_33 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "33";
+//			}
+//		},
+//		/**
+//		* 34:修飾
+//		*/
+//		CODE1_34 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "34";
+//			}
+//		},
+//		/**
+//		* 35:部位コメント
+//		*/
+//		CODE1_35 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "35";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TC27ORD_XX_SYBT 検査種別 TC27ORD.XX_SYBT
+//	*/
+//	public static enum TC27ORD_XX_SYBT {
+//		/**
+//		* 100:治療基本
+//		*/
+//		XX_SYBT_100 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "100";
+//			}
+//		},
+//		/**
+//		* 300:CT
+//		*/
+//		XX_SYBT_300 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "300";
+//			}
+//		},
+//		/**
+//		* 400:Simulator
+//		*/
+//		XX_SYBT_400 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "400";
+//			}
+//		},
+//		/**
+//		* 500:治療
+//		*/
+//		XX_SYBT_500 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "500";
+//			}
+//		},
+//		/**
+//		* 600:Capture画像
+//		*/
+//		XX_SYBT_600 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "600";
+//			}
+//		},
+//		/**
+//		* 700:照合撮影
+//		*/
+//		XX_SYBT_700 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "700";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TC27ORD_STOP_FLG 中止フラグ TC27ORD.STOP_FLG
+//	*/
+//	public static enum TC27ORD_STOP_FLG {
+//		/**
+//		* 0:ACTIVE
+//		*/
+//		STOP_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:中止
+//		*/
+//		STOP_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:変更
+//		*/
+//		STOP_FLG_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TC24YKB_ZAIRYO_KBN 材料区分 TC24YKB.ZAIRYO_KBN
+//	*/
+//	public static enum TC24YKB_ZAIRYO_KBN {
+//		/**
+//		* 1:薬剤
+//		*/
+//		ZAIRYO_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:材料
+//		*/
+//		ZAIRYO_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:コメント
+//		*/
+//		ZAIRYO_KBN_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 9:加算
+//		*/
+//		ZAIRYO_KBN_9 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TKYKMST_XX_KBN XX区分 TKYKMST.XX_KBN
+//	*/
+//	public static enum TKYKMST_XX_KBN {
+//		/**
+//		* 14:生理
+//		*/
+//		XX_KBN_14 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "14";
+//			}
+//		},
+//		/**
+//		* 15:内視鏡
+//		*/
+//		XX_KBN_15 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "15";
+//			}
+//		},
+//		/**
+//		* 16:放射線
+//		*/
+//		XX_KBN_16 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "16";
+//			}
+//		},
+//		/**
+//		* 17:RI
+//		*/
+//		XX_KBN_17 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "17";
+//			}
+//		},
+//		/**
+//		* 24:処置
+//		*/
+//		XX_KBN_24 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "24";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TC24YKB_FLOW_FLG 流量フラグ TC24YKB.FLOW_FLG
+//	*/
+//	public static enum TC24YKB_FLOW_FLG {
+//		/**
+//		* 1:毎分(/min)
+//		*/
+//		FLOW_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:毎時(/h)
+//		*/
+//		FLOW_FLG_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 0:全量指定(デフォルト)
+//		*/
+//		FLOW_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TDPCSELM_SEL_KBN DPC選択肢マスター TDPCSELM.SEL_KBN
+//	*/
+//	public static enum TDPCSELM_SEL_KBN {
+//		/**
+//		* 00:選択肢区分
+//		*/
+//		SEL_KBN_00 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "00";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05MSTC_DISP_SEQ 指示受けオーダー種類 TE05MSTC.DISP_SEQ
+//	*/
+//	public static enum TE05MSTC_DISP_SEQ {
+//		/**
+//		* 0:表示SEQ
+//		*/
+//		DISP_SEQ_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TE05MSTC_SIJI_KBN 指示受けオーダー種類 TE05MSTC.SIJI_KBN
+//	*/
+//	public static enum TE05MSTC_SIJI_KBN {
+//		/**
+//		* 3:指示受け区分
+//		*/
+//		SIJI_KBN_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TC25ORD_ORD_FLG2 ｵｰﾀﾞﾌﾗｸﾞ2 TC25ORD.ORD_FLG2
+//	*/
+//	public static enum TC25ORD_ORD_FLG2 {
+//		/**
+//		* 5:麻酔科依頼がある
+//		*/
+//		ORD_FLG2_5 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRMSTK_FORMAT_KBN フォーマット区分 TEMRMSTK.FORMAT_KBN
+//	*/
+//	public static enum TEMRMSTK_FORMAT_KBN {
+//		/**
+//		* 0:フォーマット区分0
+//		*/
+//		FORMAT_KBN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* S:フォーマット区分S
+//		*/
+//		FORMAT_KBN_S {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "S";
+//			}
+//		},
+//		/**
+//		* F:フォーマット区分F
+//		*/
+//		FORMAT_KBN_F {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "F";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRMSTK_KA_CD 診療科コード TEMRMSTK.KA_CD
+//	*/
+//	public static enum TEMRMSTK_KA_CD {
+//		/**
+//		* 000:共通
+//		*/
+//		COM_CD {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "000";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRMSTK_SOAP_SYBT 電子カルテ種別 TEMRMSTK.SOAP_SYBT
+//	*/
+//	public static enum TEMRMSTK_SOAP_SYBT {
+//		/**
+//		* 20:経過記録・経時記録
+//		*/
+//		PROCESS_RECORD {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "20";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMR_YOBI_FLD 予備フィールド TEMR.YOBI_FLD
+//	*/
+//	public static enum TEMR_YOBI_FLD {
+//		/**
+//		* DE:歯科カルテ情報あり
+//		*/
+//		DENTAL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "DE";
+//			}
+//		},
+//		/**
+//		* BM:ブックマーク
+//		*/
+//		BOOK_MARK {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "BM";
+//			}
+//		},
+//		/**
+//		* KY:キー治療
+//		*/
+//		KEY_TREAT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "KY";
+//			}
+//		},
+//		/**
+//		* TM:経時記録の時刻 (時刻は'TM:HH:MM'の形式で格納)
+//		*/
+//		TIME {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "TM";
+//			}
+//		},
+//		/**
+//		* KL:科限定カルテ
+//		*/
+//		KA_LIMITED {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "KL";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_NYUGAI_KBN 入外区分 TEMRIDX.NYUGAI_KBN
+//	*/
+//	public static enum TEMRIDX_NYUGAI_KBN {
+//		/**
+//		* 1:外来
+//		*/
+//		GAIRAI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:入院
+//		*/
+//		NYUIN {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 0:全て
+//		*/
+//		ALL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCSYBT_YOYAKU_F 予約フラグ TCSYBT.YOYAKU_F
+//	*/
+//	public static enum TCSYBT_YOYAKU_F {
+//		/**
+//		* 0:予約不要検査 
+//		*/
+//		YOYAKU_F_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:予約検査
+//		*/
+//		YOYAKU_F_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:オーダー時検査日未指定（RadPanelにて枠取得）
+//		*/
+//		YOYAKU_F_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYOYAKU_YK_HEYA 部屋番号 TYOYAKU.YK_HEYA
+//	*/
+//	public static enum TYOYAKU_YK_HEYA {
+//		/**
+//		* 00:部屋番号(注射)
+//		*/
+//		YK_HEYA_00 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "00";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_CONTINUE_KBN 継続指導依頼使用有無区分 TBYPROF.CONTINUE_KBN
+//	*/
+//	public static enum TBYPROF_CONTINUE_KBN {
+//		/**
+//		* 0:使用しない
+//		*/
+//		DISUSE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:使用する
+//		*/
+//		USE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSEMRIDXC41_XX_SUM 電子カルテインデックスC41継続指示 TSEMRIDXC41.XX_SUM
+//	*/
+//	public static enum TSEMRIDXC41_XX_SUM {
+//		/**
+//		* 0:XX-SUM
+//		*/
+//		XX_SUM_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSC21YKHC41_TOKU_SJI 処方セット薬品詳細（継続指示) TSC21YKHC41.TOKU_SJI
+//	*/
+//	public static enum TSC21YKHC41_TOKU_SJI {
+//		/**
+//		* 11:特殊指示：粉砕かつ溶解
+//		*/
+//		TOKU_SJI_11 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "11";
+//			}
+//		},
+//		/**
+//		* 1:特殊指示：粉砕
+//		*/
+//		TOKU_SJI_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 1:特殊指示：溶解
+//		*/
+//		TOKU_SJI_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSC21YKHC41_MAYAKU_FLG 処方セット薬品詳細（継続指示) TSC21YKHC41.MAYAKU_FLG
+//	*/
+//	public static enum TSC21YKHC41_MAYAKU_FLG {
+//		/**
+//		* 1:麻薬フラグ
+//		*/
+//		MAYAKU_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSC21YKHC41_WARN_FLG 処方セット薬品詳細（継続指示) TSC21YKHC41.WARN_FLG
+//	*/
+//	public static enum TSC21YKHC41_WARN_FLG {
+//		/**
+//		* 1:警告強制指示
+//		*/
+//		WARN_FLG_8 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_PROF_KBN 病院プロファイル TBYPROF.PROF_KBN
+//	*/
+//	public static enum TBYPROF_PROF_KBN {
+//		/**
+//		* 0:プロファイル区分
+//		*/
+//		PROF_KBN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSC21RPC41_YOHO_SYBT 処方セットRP内容（継続指示) TSC21RPC41.YOHO_SYBT
+//	*/
+//	public static enum TSC21RPC41_YOHO_SYBT {
+//		/**
+//		* 6:用法種別:外用１日量
+//		*/
+//		YOHO_SYBT_6 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "6";
+//			}
+//		},
+//		/**
+//		* 7:用法種別:外用頓用
+//		*/
+//		YOHO_SYBT_7 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "7";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSC24YKBC41_ZAIRYO_KBN 処置オーダー明細（継続指示) TSC24YKBC41.ZAIRYO_KBN
+//	*/
+//	public static enum TSC24YKBC41_ZAIRYO_KBN {
+//		/**
+//		* 1:材料区分:薬剤
+//		*/
+//		ZAIRYO_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:材料区分:器材
+//		*/
+//		ZAIRYO_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:材料区分:コメント
+//		*/
+//		ZAIRYO_KBN_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 9:材料区分:加算
+//		*/
+//		ZAIRYO_KBN_9 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSC24YKBC41_FLOW_FLG 処置オーダー明細（継続指示) TSC24YKBC41.FLOW_FLG
+//	*/
+//	public static enum TSC24YKBC41_FLOW_FLG {
+//		/**
+//		* 1:流量指定：毎分(/min)
+//		*/
+//		FLOW_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:流量指定：毎時(/h)
+//		*/
+//		FLOW_FLG_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_BUMON_FLG2_C32 部門フラグ2 TEMRIDX.BUMON_FLG2_C32
+//	*/
+//	public static enum TEMRIDX_BUMON_FLG2_C32 {
+//		/**
+//		* 1:栄養指導：有り
+//		*/
+//		BUMON_FLG2_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:栄養指導：無し
+//		*/
+//		BUMON_FLG2_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYOYAKU_YK_PREKEN_FLG 診察前検査フラグ TYOYAKU.YK_PREKEN_FLG
+//	*/
+//	public static enum TYOYAKU_YK_PREKEN_FLG {
+//		/**
+//		* 0:なし
+//		*/
+//		YK_PREKEN_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:検査未
+//		*/
+//		YK_PREKEN_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:検査中
+//		*/
+//		YK_PREKEN_FLG_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:検査済
+//		*/
+//		YK_PREKEN_FLG_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:至急済
+//		*/
+//		YK_PREKEN_FLG_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRIDX_XX_SEQ XX-SEQ TEMRIDX.XX_SEQ
+//	*/
+//	public static enum TEMRIDX_XX_SEQ {
+//		/**
+//		* 1:貯血
+//		*/
+//		XX_SEQ_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCTLINPM_CTL_FLD 制御フィールド(フリー) TCTLINPM.CTL_FLD
+//	*/
+//	public static enum TCTLINPM_CTL_FLD {
+//		/**
+//		* 1:手術
+//		*/
+//		CTL_FLD_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_C26KSI_LEVEL 製剤レベル TBYPROF.C26KSI_LEVEL
+//	*/
+//	public static enum TBYPROF_C26KSI_LEVEL {
+//		/**
+//		* 1:製剤グループ
+//		*/
+//		LEVEL_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:製剤規格
+//		*/
+//		LEVEL_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCTLINPM_XX_KBN XX区分 TCTLINPM.XX_KBN
+//	*/
+//	public static enum TCTLINPM_XX_KBN {
+//		/**
+//		* 24:処置
+//		*/
+//		XX_KBN_24 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "24";
+//			}
+//		},
+//		/**
+//		* 26:輸血
+//		*/
+//		XX_KBN_26 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "26";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCTLINPM_NYUGAI_KBN 入外区分 TCTLINPM.NYUGAI_KBN
+//	*/
+//	public static enum TCTLINPM_NYUGAI_KBN {
+//		/**
+//		* 0:入外共通
+//		*/
+//		NYUGAI_KBN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:外来
+//		*/
+//		NYUGAI_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:入院
+//		*/
+//		NYUGAI_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCTLINPM_PHASE_NAME 局面名 TCTLINPM.PHASE_NAME
+//	*/
+//	public static enum TCTLINPM_PHASE_NAME {
+//		/**
+//		* ORDER:オーダ時の制御
+//		*/
+//		ORDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "ORDER";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCTLINPM_ITEM_NAME 項目名 TCTLINPM.ITEM_NAME
+//	*/
+//	public static enum TCTLINPM_ITEM_NAME {
+//		/**
+//		* JUTSUSHIKI:詳細画面の制御
+//		*/
+//		JUTSUSHIKI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "JUTSUSHIKI";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TC22YKH_MAYAKU_FLG 麻薬フラグ TC22YKH.MAYAKU_FLG
+//	*/
+//	public static enum TC22YKH_MAYAKU_FLG {
+//		/**
+//		* 1:麻薬
+//		*/
+//		MAYAKU_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 0:上記以外
+//		*/
+//		MAYAKU_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+
+//
+//	/**
+//	* TC22YKH_TOKU_SJI_BYTE1 特殊指示 TC22YKH.TOKU_SJI_BYTE1
+//	*/
+//	public static enum TC22YKH_TOKU_SJI_BYTE1 {
+//		/**
+//		* 1:抗がん剤
+//		*/
+//		TOKU_SJI_BYTE1_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//
+//
+//	/**
+//	* TACCAUT_PERMISSION 権限有無フラグ TACCAUT.PERMISSION
+//	*/
+//	public static enum TACCAUT_PERMISSION {
+//		/**
+//		* 0:権限なし
+//		*/
+//		PERMISSION_NOT_EXIST {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:権限あり
+//		*/
+//		PERMISSION_EXIST {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TACCUSR_PERMISSION 権限有無フラグ TACCUSR.PERMISSION
+//	*/
+//	public static enum TACCUSR_PERMISSION {
+//		/**
+//		* 0:権限なし
+//		*/
+//		PERMISSION_NOT_EXIST {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:権限あり
+//		*/
+//		PERMISSION_EXIST {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCANOPEN_ACTIVE_FLG アクティブフラグ TCANOPEN.ACTIVE_FLG
+//	*/
+//	public static enum TCANOPEN_ACTIVE_FLG {
+//		/**
+//		* 0:0:INACTIVE
+//		*/
+//		INACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:1:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TACCLOG_ACC_INFO アクセス情報 TACCLOG.ACC_INFO
+//	*/
+//	public static enum TACCLOG_ACC_INFO {
+//		/**
+//		* 0ERR:カルテ情報取得のアクセス情報
+//		*/
+//		KARTE_VIEW {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0ERR";
+//			}
+//		},
+//		/**
+//		* 0ISR:指示受け情報取得のアクセス情報
+//		*/
+//		SIJI_INFO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0ISR";
+//			}
+//		},
+//		/**
+//		* 100R:车辆基本情报取得
+//		*/
+//		CAR_INFO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "100R";
+//			}
+//		},
+//		/**
+//		* 101R:患者プロフィール取得のアクセス情報
+//		*/
+//		PATIENT_PROFILE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "101R";
+//			}
+//		},
+//		/**
+//		* C00R:当日診療内容取得のアクセス情報
+//		*/
+//		CURRENT_CHECK_INFO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "C00R";
+//			}
+//		},
+//		/**
+//		* 152R:カレント経過要約取得のアクセス情報
+//		*/
+//		CURRENT_PROCESS_SUMMARY {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "152R";
+//			}
+//		},
+//		/**
+//		* A02R:カレント入院情報取得のアクセス情報
+//		*/
+//		CURRENT_IN_PATIENT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "A02R";
+//			}
+//		},
+//		/**
+//		* 311R:直近検体検査結果取得のアクセス情報
+//		*/
+//		LATEST_EXAM_RESULT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "311R";
+//			}
+//		},
+//		/**
+//		* 0ISO:指示受け情報取得
+//		*/
+//		SIJI_INFO_GET {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0ISO";
+//			}
+//		},
+//		/**
+//		* 0ISU:指示受け更新
+//		*/
+//		SIJI_INFO_UPDATE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0ISU";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSMRYLST_SMRY_STATUS サマリー・ステータス TSMRYLST.SMRY_STATUS
+//	*/
+//	public static enum TSMRYLST_SMRY_STATUS {
+//		/**
+//		*  :未作成
+//		*/
+//		SMRY_STATUS_SPACE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return " ";
+//			}
+//		},
+//		/**
+//		* 0:中断
+//		*/
+//		SMRY_STATUS_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:作成済
+//		*/
+//		SMRY_STATUS_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:承認済み
+//		*/
+//		SMRY_STATUS_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:表示対象外
+//		*/
+//		SMRY_STATUS_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSMRYLST_CHG_REASON_CD 変更理由コード TSMRYLST.CHG_REASON_CD
+//	*/
+//	public static enum TSMRYLST_CHG_REASON_CD {
+//		/**
+//		* 02:入室登録
+//		*/
+//		CHG_REASON_CD_02 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "02";
+//			}
+//		},
+//		/**
+//		* 04:転出予定登録
+//		*/
+//		CHG_REASON_CD_04 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "04";
+//			}
+//		},
+//		/**
+//		* 05:転入登録
+//		*/
+//		CHG_REASON_CD_05 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "05";
+//			}
+//		},
+//		/**
+//		* 06:転科
+//		*/
+//		CHG_REASON_CD_06 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "06";
+//			}
+//		},
+//		/**
+//		* 54:転出予定変更
+//		*/
+//		CHG_REASON_CD_54 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "54";
+//			}
+//		},
+//		/**
+//		* B:転科
+//		*/
+//		CHG_REASON_CD_B {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "B";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSMRYLST_STOP_FLG 中止フラグ TSMRYLST.STOP_FLG
+//	*/
+//	public static enum TSMRYLST_STOP_FLG {
+//		/**
+//		* 0:ACTIVE
+//		*/
+//		STOP_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSELMST_SEL_SYBT 選択肢マスター TSELMST.SEL_SYBT
+//	*/
+//	public static enum TSELMST_SEL_SYBT {
+//		/**
+//		* 3001:選択肢種別3001
+//		*/
+//		SEL_SYBT_3001 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3001";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSMRYDR_ROLE_KBN 役割区分 TSMRYDR.ROLE_KBN
+//	*/
+//	public static enum TSMRYDR_ROLE_KBN {
+//		/**
+//		* 1:主治医
+//		*/
+//		ROLE_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TINTRARF_CONS_FLG 診察の必要性フラグ TINTRARF.CONS_FLG
+//	*/
+//	public static enum TINTRARF_CONS_FLG {
+//		/**
+//		* 0:なし
+//		*/
+//		CONS_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:あり
+//		*/
+//		CONS_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TINTRARF_REPLY_FLG 返信の必要性フラグ TINTRARF.REPLY_FLG
+//	*/
+//	public static enum TINTRARF_REPLY_FLG {
+//		/**
+//		* 0:不要
+//		*/
+//		REPLY_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:必要
+//		*/
+//		REPLY_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TINTRARF_INTER_RF_FLG 他病院への報告フラグ TINTRARF.INTER_RF_FLG
+//	*/
+//	public static enum TINTRARF_INTER_RF_FLG {
+//		/**
+//		* 0:不要
+//		*/
+//		INTER_RF_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:必要
+//		*/
+//		INTER_RF_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TINTRARF_REPLY_STATUS 返信ステータス TINTRARF.REPLY_STATUS
+//	*/
+//	public static enum TINTRARF_REPLY_STATUS {
+//		/**
+//		* 0:返信未
+//		*/
+//		REPLY_STATUS_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:返信済
+//		*/
+//		REPLY_STATUS_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TACCPATM_ACCTYPE アクセスタイプ TACCPATM.ACCTYPE
+//	*/
+//	public static enum TACCPATM_ACCTYPE {
+//		/**
+//		* A:通常
+//		*/
+//		ACCTYPE_A {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "A";
+//			}
+//		},
+//		/**
+//		* I:新規
+//		*/
+//		ACCTYPE_I {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "I";
+//			}
+//		},
+//		/**
+//		* R:参照
+//		*/
+//		ACCTYPE_R {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "R";
+//			}
+//		},
+//		/**
+//		* U:変更
+//		*/
+//		ACCTYPE_U {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "U";
+//			}
+//		},
+//		/**
+//		* P:印刷
+//		*/
+//		ACCTYPE_P {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "P";
+//			}
+//		},
+//		/**
+//		* T:仮登録
+//		*/
+//		ACCTYPE_T {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "T";
+//			}
+//		},
+//		/**
+//		* F:確定
+//		*/
+//		ACCTYPE_F {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "F";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TAUTHCKM_CATEGORY チェックカテゴリー TAUTHCKM.CATEGORY
+//	*/
+//	public static enum TAUTHCKM_CATEGORY {
+//		/**
+//		* 1:職員ID
+//		*/
+//		CATEGORY_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:診療科
+//		*/
+//		CATEGORY_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:所属部門
+//		*/
+//		CATEGORY_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 4:職種
+//		*/
+//		CATEGORY_4 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "4";
+//			}
+//		},
+//		/**
+//		* 5:病棟
+//		*/
+//		CATEGORY_5 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "5";
+//			}
+//		},
+//		/**
+//		* 6:場所
+//		*/
+//		CATEGORY_6 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "6";
+//			}
+//		},
+//		/**
+//		* A:診療科（端末）
+//		*/
+//		CATEGORY_A {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "A";
+//			}
+//		},
+//		/**
+//		* B:部門(端末)
+//		*/
+//		CATEGORY_B {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "B";
+//			}
+//		},
+//		/**
+//		* C:病棟（端末）
+//		*/
+//		CATEGORY_C {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "C";
+//			}
+//		},
+//		/**
+//		* -:タイトル
+//		*/
+//		CATEGORY_TITLE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "-";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TACCPATM_ACTIVE_FLG アクティブフラグ TACCPATM.ACTIVE_FLG
+//	*/
+//	public static enum TACCPATM_ACTIVE_FLG {
+//		/**
+//		* 1:有効
+//		*/
+//		ACTIVE_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_MODE_KBN 処方抗癌剤モード TBYPROF.MODE_KBN
+//	*/
+//	public static enum TBYPROF_MODE_KBN {
+//		/**
+//		* 0:0:通常モード(デフォルト)
+//		*/
+//		MODE_KBN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:1:抗癌剤モード            
+//		*/
+//		MODE_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_NOTATION_KBN ﾆｺﾁﾝﾊﾟｯﾁの院外処方箋への表記ﾓｰﾄﾞ  　 TBYPROF.NOTATION_KBN
+//	*/
+//	public static enum TBYPROF_NOTATION_KBN {
+//		/**
+//		* 0:0：表記無
+//		*/
+//		NOTATION_KBN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:1：表記有 
+//		*/
+//		NOTATION_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* NUMBERING_SEQUENCE 採番用のシーケンスID NUMBERING.SEQUENCE
+//	*/
+//	public static enum NUMBERING_SEQUENCE {
+//		/**
+//		* MAIL_ID_SEQ:MAIL_ID_SEQ：院内メールID用
+//		*/
+//		MAIL_ID {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "MAIL_ID_SEQ";
+//			}
+//		},
+//		/**
+//		* NTFY_ID_SEQ:NTFY_ID_SEQ：通知ID用
+//		*/
+//		NTFY_ID {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "NTFY_ID_SEQ";
+//			}
+//		}
+//	}
+//
+//
+//
+//	/**
+//	* TCOMBLCM_PASSWORD_POLICY パスワードに用いる文字種 TCOMBLCM.PASSWORD_POLICY
+//	*/
+//	public static enum TCOMBLCM_PASSWORD_POLICY {
+//		/**
+//		* 0:制限なし
+//		*/
+//		PW_CHAR_PATTERN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:英字・数字の組み合わせ
+//		*/
+//		PW_CHAR_PATTERN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:大文字英字・小文字英字・数字の組み合わせ
+//		*/
+//		PW_CHAR_PATTERN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TMSGNTFY_NTFY_STATUS 通知ステータス TMSGNTFY.NTFY_STATUS
+//	*/
+//	public static enum TMSGNTFY_NTFY_STATUS {
+//		/**
+//		* 0:未通知
+//		*/
+//		MITSUUCHI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:通知済み
+//		*/
+//		TSUUCHIZUMI {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRCS_IRAI_KBN 依頼区分 TEMRCS.IRAI_KBN
+//	*/
+//	public static enum TEMRCS_IRAI_KBN {
+//		/**
+//		* :空白
+//		*/
+//		BLANK {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "";
+//			}
+//		},
+//		/**
+//		* 1:確認
+//		*/
+//		CONFIRM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:最終更新
+//		*/
+//		UPDATE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSHTYPE_SH_KBN3 役職分類 TSHTYPE.SH_KBN3
+//	*/
+//	public static enum TSHTYPE_SH_KBN3 {
+//		/**
+//		* AD:指導医
+//		*/
+//		ADVISING_DOCTOR {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "AD";
+//			}
+//		},
+//		/**
+//		* RD:研修医
+//		*/
+//		RESIDENT_DOCTOR {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "RD";
+//			}
+//		},
+//		/**
+//		* SD:学生
+//		*/
+//		STUDENT_DOCTOR {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "SD";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRSTOP_XX_KBN XX区分 TEMRSTOP.XX_KBN
+//	*/
+//	public static enum TEMRSTOP_XX_KBN {
+//		/**
+//		* 01:患者プロフィール
+//		*/
+//		XX_KBN_01 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "01";
+//			}
+//		},
+//		/**
+//		* 02:既往歴
+//		*/
+//		XX_KBN_02 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "02";
+//			}
+//		},
+//		/**
+//		* 03:家族歴
+//		*/
+//		XX_KBN_03 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "03";
+//			}
+//		},
+//		/**
+//		* 10:初診時・入院時記録
+//		*/
+//		XX_KBN_10 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "10";
+//			}
+//		},
+//		/**
+//		* 20:経過記録(SOAP)
+//		*/
+//		XX_KBN_20 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "20";
+//			}
+//		},
+//		/**
+//		* 29:インフォームド・コンセント
+//		*/
+//		XX_KBN_29 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "29";
+//			}
+//		},
+//		/**
+//		* 30:サマリー
+//		*/
+//		XX_KBN_30 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "30";
+//			}
+//		},
+//		/**
+//		* 25:手術記録
+//		*/
+//		XX_KBN_25 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "25";
+//			}
+//		},
+//		/**
+//		* 50:病名
+//		*/
+//		XX_KBN_50 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "50";
+//			}
+//		},
+//		/**
+//		* 60:他科紹介
+//		*/
+//		XX_KBN_60 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "60";
+//			}
+//		},
+//		/**
+//		* 70:他病院紹介
+//		*/
+//		XX_KBN_70 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "70";
+//			}
+//		},
+//		/**
+//		* 80:文書作成
+//		*/
+//		XX_KBN_80 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "80";
+//			}
+//		},
+//		/**
+//		* 81:診断書
+//		*/
+//		XX_KBN_81 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "81";
+//			}
+//		},
+//		/**
+//		* 82:入院診療計画書
+//		*/
+//		XX_KBN_82 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "82";
+//			}
+//		},
+//		/**
+//		* 83:退院療養計画書
+//		*/
+//		XX_KBN_83 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "83";
+//			}
+//		},
+//		/**
+//		* 90:クリティカルパス
+//		*/
+//		XX_KBN_90 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "90";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMRDAIKO_INDEX_KBN INDEX区分 TEMRDAIKO.INDEX_KBN
+//	*/
+//	public static enum TEMRDAIKO_INDEX_KBN {
+//		/**
+//		* 1:カルテ
+//		*/
+//		INDEX_KBN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:オーダー
+//		*/
+//		INDEX_KBN_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:結果/レポート
+//		*/
+//		INDEX_KBN_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMBLCM_PWSYNC パスワード同期要否 TCOMBLCM.PWSYNC
+//	*/
+//	public static enum TCOMBLCM_PWSYNC {
+//		/**
+//		* 0:LDAP利用時、CISでも更新後のパスワードを保持しない
+//		*/
+//		PW_SYNC_PATTERN_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:LDAP利用時、CISでも更新後のパスワードを保持する
+//		*/
+//		PW_SYNC_PATTERN_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TSKCANCEL_STOP_FLG 中止フラグ TSKCANCEL.STOP_FLG
+//	*/
+//	public static enum TSKCANCEL_STOP_FLG {
+//		/**
+//		* 0:ACTIVE
+//		*/
+//		STOP_FLG_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TCOMBLCM_AUTHENTICATION_CONDITION 認証に使用する条件 TCOMBLCM.AUTHENTICATION_CONDITION
+//	*/
+//	public static enum TCOMBLCM_AUTHENTICATION_CONDITION {
+//		/**
+//		* 0:追加条件なし
+//		*/
+//		AUTHENTICATION_CONDITION_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:ACTIVE_FLGのみ
+//		*/
+//		AUTHENTICATION_CONDITION_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:システム利用停止年月日のみ
+//		*/
+//		AUTHENTICATION_CONDITION_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:両方
+//		*/
+//		AUTHENTICATION_CONDITION_3 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TBYPROF_SYOSAIKBN_MODE 初再診区分モード TBYPROF.SYOSAIKBN_MODE
+//	*/
+//	public static enum TBYPROF_SYOSAIKBN_MODE {
+//		/**
+//		* 0:初診、再診
+//		*/
+//		SYOSAIKBN_MODE_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:再診、初診、科初診、病院初診
+//		*/
+//		SYOSAIKBN_MODE_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:再診、初診、病院初診
+//		*/
+//		SYOSAIKBN_MODE_2 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TYOYAKU_YK_KJ_ZK1 初再診区分 TYOYAKU.YK_KJ_ZK1
+//	*/
+//	public static enum TYOYAKU_YK_KJ_ZK1 {
+//		/**
+//		*  :再診
+//		*/
+//		YK_KJ_ZK1_SPACE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return " ";
+//			}
+//		},
+//		/**
+//		* 1:初診
+//		*/
+//		YK_KJ_ZK1_SYO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:科初診
+//		*/
+//		YK_KJ_ZK1_KASYO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:病院初診
+//		*/
+//		YK_KJ_ZK1_BYSYO {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TEMR_CANCEL_FLG 取消フラグ TEMR.CANCEL_FLG
+//	*/
+//	public static enum TEMR_CANCEL_FLG {
+//		/**
+//		* 0:ACTIVE
+//		*/
+//		ACTIVE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:CANCEL
+//		*/
+//		CANCEL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TD97SGM_DISP_FLG 表示フラグ TD97SGM.DISP_FLG
+//	*/
+//	public static enum TD97SGM_DISP_FLG {
+//		/**
+//		* 0:非表示
+//		*/
+//		UNEXPRESSION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:表示
+//		*/
+//		EXPRESSION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TKACDM_DISP_FLG 表示フラグ TKACDM.DISP_FLG
+//	*/
+//	public static enum TKACDM_DISP_FLG {
+//		/**
+//		* 0:非表示
+//		*/
+//		UNEXPRESSION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:表示
+//		*/
+//		EXPRESSION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TNYTNS_P_NS_FLG ﾌﾟﾗｲﾏﾘｰﾅｰｽﾌﾗｸﾞ TNYTNS.P_NS_FLG
+//	*/
+//	public static enum TNYTNS_P_NS_FLG {
+//		/**
+//		* 1:プライマリーナース
+//		*/
+//		P_NS_FLG_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//
+//	/**
+//	* TA31SYK_ODR_TNI オーダー単位 TA31SYK.ODR_TNI
+//	*/
+//	public static enum TA31SYK_ODR_TNI {
+//		/**
+//		* 0:1食事区分指定オーダー
+//		*/
+//		ODR_TNI_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:1日パターン指定オーダー
+//		*/
+//		ODR_TNI_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+}

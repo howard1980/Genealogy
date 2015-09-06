@@ -1,0 +1,105 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.OrderDetailCareDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_DETAIL_CARE")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class OrderDetailCareDTO extends OrderDetailCareDTOSupport implements java.io.Serializable, Comparable<OrderDetailCareDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_DETAIL_CARE_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long orderDetailCareID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_PRODUCT_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long serviceProductID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time time = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date date = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MILEAGE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer mileage = null;
+
+	public Long getOrderDetailCareID() {
+		return this.orderDetailCareID;
+	}
+
+	public void setOrderDetailCareID(
+			Long orderDetailCareID) {
+		this.orderDetailCareID = orderDetailCareID;
+	}
+
+	public Long getServiceProductID() {
+		return this.serviceProductID;
+	}
+
+	public void setServiceProductID(
+			Long serviceProductID) {
+		this.serviceProductID = serviceProductID;
+	}
+
+	public java.sql.Time gettime() {
+		return this.time;
+	}
+
+	public void settime(
+			java.sql.Time time) {
+		this.time = time;
+	}
+
+	public java.sql.Date getdate() {
+		return this.date;
+	}
+
+	public void setdate(
+			java.sql.Date date) {
+		this.date = date;
+	}
+
+	public Integer getmileage() {
+		return this.mileage;
+	}
+
+	public void setmileage(
+			Integer mileage) {
+		this.mileage = mileage;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			OrderDetailCareDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

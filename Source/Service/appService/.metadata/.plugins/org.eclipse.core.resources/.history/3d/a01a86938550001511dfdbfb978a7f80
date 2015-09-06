@@ -1,0 +1,463 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.AliPayDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("ALI_PAY")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class AliPayDTO extends AliPayDTOSupport implements java.io.Serializable, Comparable<AliPayDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ALI_PAY_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long aliPayID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer orderType = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long orderID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NOTIFY_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 19, max = 19)
+	private String notifyTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NOTIFY_TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 25, max = 25)
+	private String notifytype = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NOTIFY_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 40, max = 40)
+	private String notifyid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SIGN_TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 3, max = 3)
+	private String signtype = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SIGN")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 255, max = 255)
+	private String sign = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OUT_TRADE_NO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 64, max = 64)
+	private String outtradeno = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SUBJECT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 128, max = 128)
+	private String subject = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PAYMENT_TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 4, max = 4)
+	private String paymenttype = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRADE_NO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(12)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 64, max = 64)
+	private String tradeno = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRADE_STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(13)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 64, max = 64)
+	private String tradestatus = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SELLER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(14)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
+	private String sellerid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SELLER_EMAIL")
+	@com.maxiaohua.genealogy.fw.core.type.Index(15)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 100, max = 100)
+	private String selleremail = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("BUYER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(16)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
+	private String buyerid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("BUYER_EMAIL")
+	@com.maxiaohua.genealogy.fw.core.type.Index(17)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 100, max = 100)
+	private String buyeremail = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TOTAL_FEE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(18)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float totalfee = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("QUANTITY")
+	@com.maxiaohua.genealogy.fw.core.type.Index(19)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float quantity = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PRICE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(20)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float price = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("BODY")
+	@com.maxiaohua.genealogy.fw.core.type.Index(21)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 512, max = 512)
+	private String body = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("GMT_CREATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(22)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 19, max = 19)
+	private String gmtcreate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("GMT_PAYMENT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(23)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 19, max = 19)
+	private String gmtpayment = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("IS_TOTAL_FEE_ADJUST")
+	@com.maxiaohua.genealogy.fw.core.type.Index(24)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 1, max = 1)
+	private String istotalfeeadjust = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("USE_COUPON")
+	@com.maxiaohua.genealogy.fw.core.type.Index(25)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 1, max = 1)
+	private String usecoupon = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DISCOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(26)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 20, max = 20)
+	private String discount = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REFUND_STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(27)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 64, max = 64)
+	private String refundstatus = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("GMT_REFUND")
+	@com.maxiaohua.genealogy.fw.core.type.Index(28)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 19, max = 19)
+	private String gmtrefund = null;
+
+	public Long getAliPayID() {
+		return this.aliPayID;
+	}
+
+	public void setAliPayID(
+			Long aliPayID) {
+		this.aliPayID = aliPayID;
+	}
+
+	public Integer getOrderType() {
+		return this.orderType;
+	}
+
+	public void setOrderType(
+			Integer orderType) {
+		this.orderType = orderType;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getOrderID() {
+		return this.orderID;
+	}
+
+	public void setOrderID(
+			Long orderID) {
+		this.orderID = orderID;
+	}
+
+	public String getNotifyTime() {
+		return this.notifyTime;
+	}
+
+	public void setNotifyTime(
+			String notifyTime) {
+		this.notifyTime = notifyTime;
+	}
+
+	public String getnotifytype() {
+		return this.notifytype;
+	}
+
+	public void setnotifytype(
+			String notifytype) {
+		this.notifytype = notifytype;
+	}
+
+	public String getnotifyid() {
+		return this.notifyid;
+	}
+
+	public void setnotifyid(
+			String notifyid) {
+		this.notifyid = notifyid;
+	}
+
+	public String getsigntype() {
+		return this.signtype;
+	}
+
+	public void setsigntype(
+			String signtype) {
+		this.signtype = signtype;
+	}
+
+	public String getsign() {
+		return this.sign;
+	}
+
+	public void setsign(
+			String sign) {
+		this.sign = sign;
+	}
+
+	public String getouttradeno() {
+		return this.outtradeno;
+	}
+
+	public void setouttradeno(
+			String outtradeno) {
+		this.outtradeno = outtradeno;
+	}
+
+	public String getsubject() {
+		return this.subject;
+	}
+
+	public void setsubject(
+			String subject) {
+		this.subject = subject;
+	}
+
+	public String getpaymenttype() {
+		return this.paymenttype;
+	}
+
+	public void setpaymenttype(
+			String paymenttype) {
+		this.paymenttype = paymenttype;
+	}
+
+	public String gettradeno() {
+		return this.tradeno;
+	}
+
+	public void settradeno(
+			String tradeno) {
+		this.tradeno = tradeno;
+	}
+
+	public String gettradestatus() {
+		return this.tradestatus;
+	}
+
+	public void settradestatus(
+			String tradestatus) {
+		this.tradestatus = tradestatus;
+	}
+
+	public String getsellerid() {
+		return this.sellerid;
+	}
+
+	public void setsellerid(
+			String sellerid) {
+		this.sellerid = sellerid;
+	}
+
+	public String getselleremail() {
+		return this.selleremail;
+	}
+
+	public void setselleremail(
+			String selleremail) {
+		this.selleremail = selleremail;
+	}
+
+	public String getbuyerid() {
+		return this.buyerid;
+	}
+
+	public void setbuyerid(
+			String buyerid) {
+		this.buyerid = buyerid;
+	}
+
+	public String getbuyeremail() {
+		return this.buyeremail;
+	}
+
+	public void setbuyeremail(
+			String buyeremail) {
+		this.buyeremail = buyeremail;
+	}
+
+	public Float gettotalfee() {
+		return this.totalfee;
+	}
+
+	public void settotalfee(
+			Float totalfee) {
+		this.totalfee = totalfee;
+	}
+
+	public Float getquantity() {
+		return this.quantity;
+	}
+
+	public void setquantity(
+			Float quantity) {
+		this.quantity = quantity;
+	}
+
+	public Float getprice() {
+		return this.price;
+	}
+
+	public void setprice(
+			Float price) {
+		this.price = price;
+	}
+
+	public String getbody() {
+		return this.body;
+	}
+
+	public void setbody(
+			String body) {
+		this.body = body;
+	}
+
+	public String getgmtcreate() {
+		return this.gmtcreate;
+	}
+
+	public void setgmtcreate(
+			String gmtcreate) {
+		this.gmtcreate = gmtcreate;
+	}
+
+	public String getgmtpayment() {
+		return this.gmtpayment;
+	}
+
+	public void setgmtpayment(
+			String gmtpayment) {
+		this.gmtpayment = gmtpayment;
+	}
+
+	public String getistotalfeeadjust() {
+		return this.istotalfeeadjust;
+	}
+
+	public void setistotalfeeadjust(
+			String istotalfeeadjust) {
+		this.istotalfeeadjust = istotalfeeadjust;
+	}
+
+	public String getusecoupon() {
+		return this.usecoupon;
+	}
+
+	public void setusecoupon(
+			String usecoupon) {
+		this.usecoupon = usecoupon;
+	}
+
+	public String getdiscount() {
+		return this.discount;
+	}
+
+	public void setdiscount(
+			String discount) {
+		this.discount = discount;
+	}
+
+	public String getrefundstatus() {
+		return this.refundstatus;
+	}
+
+	public void setrefundstatus(
+			String refundstatus) {
+		this.refundstatus = refundstatus;
+	}
+
+	public String getgmtrefund() {
+		return this.gmtrefund;
+	}
+
+	public void setgmtrefund(
+			String gmtrefund) {
+		this.gmtrefund = gmtrefund;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			AliPayDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

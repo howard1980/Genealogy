@@ -1,0 +1,29 @@
+package com.maxiaohua.genealogy.main.biz.constant;
+
+public interface CommonConfigConstant {
+
+	public static final String COMMON_CONFIG_FILENAME = "commonConfigproperties";
+	
+	public static final String SERVER_CONTEXT_URL = "servercontextURL";
+	
+	public static final String REST_VERSION = "rest_version";
+	
+	public static final String REST_SERVER = "rest_server";
+	
+	public static final String REST_HTTP_SSL_IP = "rest_http_ssl_ip";
+	
+	public static final String REST_HTTP_SSL_PORT = "rest_http_ssl_port";
+	
+	public static final String REST_ACCOUNTSID = "rest_accountSid";
+	
+	public static final String REST_TOKEN = "rest_token";
+	
+	public static final String REST_APPID = "rest_appId";
+
+	public static final String REST_TEMPLATEID = "rest_templateId";
+	
+	public static final String REST_ISTEST = "rest_isTest";
+	
+	public static final String SUCCESS_CODE = "000000";
+
+}

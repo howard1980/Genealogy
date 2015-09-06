@@ -1,0 +1,56 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerInfoDTO;
+
+/**
+ * 获得附近工作组的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得附近工作组")
+public class SsGetNearWorkerGroupOutDTO implements java.io.Serializable, Comparable<SsGetNearWorkerGroupOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 共组组列表  
+	*/
+	@Alias("共组组列表")
+	private WorkerInfoDTO[] workerInfoArray = null;
+
+	/**
+	* <code>共组组列表</code>返回
+	* @return <code>共组组列表</code>
+	*/
+	public WorkerInfoDTO[] getWorkerInfoArray() {
+		return this.workerInfoArray;
+	}
+
+	/**
+	* <code>workerInfoArray</code>设定
+	* @param workerInfoArray　<code>workerInfoArray</code>设定值
+	*/
+	public void setWorkerInfoArray(
+			WorkerInfoDTO[] workerInfoArray) {
+		this.workerInfoArray = workerInfoArray;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetNearWorkerGroupOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

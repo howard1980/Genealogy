@@ -1,0 +1,125 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.UniPayDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class UniPayDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "UNI_PAY_INSERT";
+
+	public static final String FULL_UPDATE = "UNI_PAY_FULL_UPDATE";
+
+	public static final String UPDATE = "UNI_PAY_UPDATE";
+
+	public static final String DELETE = "UNI_PAY_DELETE";
+
+	public static final String FIND = "UNI_PAY_FIND";
+
+	public static final String FIND_FOR_UPDATE = "UNI_PAY_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "UNI_PAY_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "UNI_PAY_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "UNI_PAY_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "UNI_PAY_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "UNI_PAY_SQL_SEARCH";
+
+	public static final String COUNT = "UNI_PAY_COUNT";
+
+	public static final String COUNT_OR = "UNI_PAY_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "UNI_PAY_COUNT_SEARCH";
+
+	public static final String COLUMN_UNI_PAY_ID = "UNI_PAY_ID";
+
+	public static final String COLUMN_UID = "UID";
+
+	public static final String COLUMN_OID = "OID";
+
+	public static final String COLUMN_ORDER_TIME = "ORDER_TIME";
+
+	public static final String COLUMN_ORDER_DATE = "ORDER_DATE";
+
+	public static final String COLUMN_MER_ORDER_ID = "MER_ORDER_ID";
+
+	public static final String COLUMN_TRANS_TYPE = "TRANS_TYPE";
+
+	public static final String COLUMN_TRANS_AMT = "TRANS_AMT";
+
+	public static final String COLUMN_MER_ID = "MER_ID";
+
+	public static final String COLUMN_TRANS_ID = "TRANS_ID";
+
+	public static final String COLUMN_TRANS_STATE = "TRANS_STATE";
+
+	public static final String COLUMN_REF_ID = "REF_ID";
+
+	public static final String COLUMN_ACCOUNT = "ACCOUNT";
+
+	public static final String COLUMN_TRANS_DESC = "TRANS_DESC";
+
+	public static final String COLUMN_LIQ_DATE = "LIQ_DATE";
+
+	public static final String COLUMN_RESERVE = "RESERVE";
+
+	public static final String COLUMN_SIGNATURE = "SIGNATURE";
+
+	public static final String TABLE = "UNI_PAY";
+
+	public static UniPayDTO setDefaultValue() {
+		UniPayDTO defaultDTO = new UniPayDTO();
+
+		defaultDTO.setUniPayID(0l);
+
+		defaultDTO.setuid(0l);
+
+		defaultDTO.setoid(0l);
+
+		defaultDTO.setordertime(StringUtil.EMPTY);
+
+		defaultDTO.setorderdate(StringUtil.EMPTY);
+
+		defaultDTO.setmerorderid(StringUtil.EMPTY);
+
+		defaultDTO.settranstype(StringUtil.EMPTY);
+
+		defaultDTO.settransamt(0);
+
+		defaultDTO.setmerid(StringUtil.EMPTY);
+
+		defaultDTO.settransid(StringUtil.EMPTY);
+
+		defaultDTO.settransstate(StringUtil.EMPTY);
+
+		defaultDTO.setrefid(StringUtil.EMPTY);
+
+		defaultDTO.setaccount(StringUtil.EMPTY);
+
+		defaultDTO.settransdesc(StringUtil.EMPTY);
+
+		defaultDTO.setliqdate(StringUtil.EMPTY);
+
+		defaultDTO.setreserve(StringUtil.EMPTY);
+
+		defaultDTO.setsignature(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

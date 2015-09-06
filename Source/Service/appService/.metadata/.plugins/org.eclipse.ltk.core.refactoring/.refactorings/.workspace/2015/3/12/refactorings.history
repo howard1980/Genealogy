@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;nfe-rest/src/redis.properties&apos;" deleteContents="false" description="Delete resource &apos;nfe-rest/src/redis.properties&apos;" element1="/nfe-rest/src/redis.properties" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1426572726019"/>
+</session>

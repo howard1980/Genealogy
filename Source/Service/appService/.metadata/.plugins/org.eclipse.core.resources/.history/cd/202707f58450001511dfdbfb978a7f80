@@ -1,0 +1,104 @@
+package com.maxiaohua.genealogy.main.biz.a01.impl;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.fw.core.log.LogFactory;
+import com.maxiaohua.genealogy.main.biz.a01.HBJPushUtils;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+import com.maxiaohua.genealogy.main.db.tbl.CustomerInfoDTO;
+import com.maxiaohua.genealogy.main.db.tbl.JpushDTO;
+import com.maxiaohua.genealogy.main.db.tbl.WashOrderDTO;
+
+public class HBJPushUtilsImpl extends AbstractDBLogic implements HBJPushUtils,
+		HbMessageCode, CommonConstant, CtgCodeConstant {
+
+	@Override
+	public JpushDTO getJpushInfoByCustomerID(long customerID) {
+
+		if (!checkCustomerOnline(customerID)) { // 如用户不在线，不发送
+			LogFactory.getDebugLogger().debug(
+					"HBJPushUtilsImpl :  getJpushInfoByCustomerID : 用户不在线，不进行推送。customerID = "
+							+ customerID);
+			return null;
+		}
+
+		JpushDTO jpush = new JpushDTO();
+		jpush.setType(Integer.parseInt(PUSH_USER_TYPE.CLIENT.toString()));
+		jpush.setUID(customerID);
+
+		jpush = this.queryDAO.queryForObject(JpushDTO.EQUAL_SEARCH, jpush);
+
+		if (jpush == null) {
+			// 没有Jpush信息，不推送
+			LogFactory.getDebugLogger().debug(
+					"HBJPushUtilsImpl : getJpushInfoByCustomerID :  Jpush中未找到中对应的信息,customerID = "
+							+ customerID);
+		}
+
+		return jpush;
+	}
+
+	@Override
+	public JpushDTO getJpushInfoByOrderID(long orderID) {
+
+		WashOrderDTO washOrderDTO = new WashOrderDTO();
+		washOrderDTO.setWashOrderID(orderID);
+		washOrderDTO = this.queryDAO.queryForObject(WashOrderDTO.EQUAL_SEARCH,
+				washOrderDTO);
+		if (washOrderDTO == null) { // 找不到order，则找不到订单的workerID
+			LogFactory.getDebugLogger().debug(
+					"用户已付款 推送 : 获取order信息失败,orderID = " + orderID);
+			return null;
+		}
+
+		int workerGroupID = washOrderDTO.getWorkerGroupID();
+		JpushDTO jpushInfo = getJpushInfoByWorkerID(workerGroupID);
+
+		return jpushInfo;
+	}
+
+	@Override
+	public JpushDTO getJpushInfoByWorkerID(long workerID) {
+
+		JpushDTO jpush = new JpushDTO();
+		jpush.setType(Integer.parseInt(PUSH_USER_TYPE.SERVICE.toString()));
+		jpush.setUID(workerID);
+
+		jpush = this.queryDAO.queryForObject(JpushDTO.EQUAL_SEARCH, jpush);
+
+		if (jpush == null) {
+			// 没有Jpush信息，不推送
+			LogFactory.getDebugLogger().debug(
+					"HBJPushUtilsImpl : getJpushInfoByWorkerID :  Jpush中未找到中对应的信息,workerID = "
+							+ workerID);
+		}
+
+		return jpush;
+	}
+
+	@Override
+	public boolean checkCustomerOnline(long customerID) {
+		CustomerInfoDTO customer = new CustomerInfoDTO();
+		customer.setCustomerID(customerID);
+		customer = this.queryDAO.queryForObject(CustomerInfoDTO.EQUAL_SEARCH,
+				customer);
+
+		if (customer == null) {
+			LogFactory.getDebugLogger().debug(
+					"HBJPushUtilsImpl : checkCustomerOnline :  未找到customer信息,customerID = "
+							+ customerID);
+			return false;
+		} else if (customer.getStatus() != Integer.parseInt(LOGIN_STATUS.ONLINE
+				.toString())) {
+			LogFactory.getDebugLogger().debug(
+					"HBJPushUtilsImpl : checkCustomerOnline :  customer不在线,customerID = "
+							+ customerID);
+			return false;
+		} else {
+			return true;
+		}
+
+	}
+
+}

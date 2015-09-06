@@ -1,0 +1,193 @@
+package com.beetlestech.nfe.main.biz.a01.impl;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.util.StringUtil;
+import com.beetlestech.nfe.fw.core.wechet.WechetPay;
+import com.beetlestech.nfe.main.biz.a01.HbAccount;
+import com.beetlestech.nfe.main.biz.a01.dto.AccountHistoryDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WechetInfoDTO;
+import com.beetlestech.nfe.main.biz.com.HbMasterCache;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.biz.constant.MasterCacheConstant.MASTER_NAME;
+import com.beetlestech.nfe.main.db.tbl.CarWashDTO;
+import com.beetlestech.nfe.main.db.tbl.CustomerAccountDTO;
+import com.beetlestech.nfe.main.db.view.VAccountHistoryDTO;
+import com.beetlestech.nfe.main.db.view.VOrderAmmountDTO;
+import com.beetlestech.nfe.main.db.view.VOrderInfoDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerServiceItemsDTO;
+
+public class HbAccountImpl extends AbstractDBLogic implements HbAccount, HbMessageCode, CommonConstant, CtgCodeConstant {
+	/**
+	 * 账户情报数据
+	 */
+	protected static final String SH_INFO = "账户情报数据";
+	
+	/**
+	 * Mast数据缓存Biz类
+	 */
+	@AutoInject
+	protected HbMasterCache hbMasterCache;
+	
+    @AutoInject(name = "wechetPay")
+    protected WechetPay wechetPay;
+	
+	@Override
+	public Double getAccountBalance(Long customerID) {
+		CustomerAccountDTO customerAccount = new CustomerAccountDTO();
+		customerAccount.setCustomerID(customerID);
+		customerAccount.setType(Integer.parseInt(PAYMENT_TYPE.SXXC.toString()));
+		customerAccount = this.queryDAO.queryForObject(CustomerAccountDTO.EQUAL_SEARCH, customerAccount);
+		if(customerAccount != null){
+			return customerAccount.getAmount().doubleValue();
+		}
+		else{
+			return null;
+		}
+	}
+
+	@Override
+	public AccountHistoryDTO[] getAccountHistory(Long customerID) {
+		VAccountHistoryDTO accountHistory = new VAccountHistoryDTO();
+		List<AccountHistoryDTO> accountHistories = new ArrayList<AccountHistoryDTO>();
+		accountHistory.setCustomerID(customerID);
+		List<VAccountHistoryDTO> lst = 
+				this.queryDAO.queryForObjectList(VAccountHistoryDTO.EQUAL_SEARCH, accountHistory);
+		
+		for(VAccountHistoryDTO item: lst){
+			AccountHistoryDTO account = new AccountHistoryDTO();
+			account.setDate(item.getOrderDate());
+			account.setTime(item.getOrderTime());
+			if(RECHARGE_TYPE.RECHARGE.toString().equals(item.getRecharge().toString())){
+				account.setIsRecharge(true);
+			}
+			else{
+				account.setIsRecharge(false);
+			}
+			
+			account.setOrderNO(item.getOrderNO());
+			account.setPrice(item.getAmmount().doubleValue());
+			accountHistories.add(account);
+		}
+		return accountHistories.toArray(new AccountHistoryDTO[accountHistories.size()]);
+	}
+
+	@Override
+	public void paySXXC(Long customerID, Long orderID) {
+		// 查询订单金额
+		VOrderAmmountDTO orderAmmounto = new VOrderAmmountDTO();
+		orderAmmounto.setWashOrderID(orderID);
+		orderAmmounto = this.queryDAO.queryForObject(VOrderAmmountDTO.EQUAL_SEARCH, orderAmmounto);
+		if(orderAmmounto == null){
+			createApplicationException(M10010WS);
+		}
+		
+		if(orderAmmounto.getStatus() >= Integer.parseInt(ORDER_STATUS.PAID.toString())){
+			createApplicationException(M10010WS);
+		}
+		
+		// 查询账户余额
+		CustomerAccountDTO customerAccount = new CustomerAccountDTO();
+		customerAccount.setCustomerID(customerID);
+		customerAccount.setType(Integer.parseInt(PAYMENT_TYPE.SXXC.toString()));
+		customerAccount = this.queryDAO.queryForObject(CustomerAccountDTO.EQUAL_SEARCH, customerAccount);
+		
+		if(customerAccount == null){
+			createApplicationException(M10010WS);
+		}
+		
+		// 是否够支付
+		if(customerAccount.getAmount().compareTo(orderAmmounto.getAmmount()) < 0 ){
+			createApplicationException(M10010WS);
+		}
+		
+		BigDecimal balance = customerAccount.getAmount().subtract(orderAmmounto.getAmmount());
+		customerAccount.setAmount(balance);
+		
+		// 更改账户金额
+		this.updateDAO.updateOne(CustomerAccountDTO.UPDATE, customerAccount, M10190WS, SH_INFO);
+		
+		// 更改订单状态
+		CarWashDTO carWash = new CarWashDTO();
+		carWash.setCarWashID(orderAmmounto.getCarWashID());
+		carWash.setPayType(Integer.parseInt(PAYMENT_TYPE.SXXC.toString()));
+		carWash.setStatus(Integer.parseInt(ORDER_STATUS.PAID.toString()));
+		this.updateDAO.updateOne(CarWashDTO.UPDATE, carWash, M10190WS, SH_INFO);
+	}
+
+	@Override
+	public WechetInfoDTO getWechetPay(Long customerID, Long orderID) {
+		// 订单取得
+		VOrderInfoDTO orderSeachDTO = new VOrderInfoDTO();
+		orderSeachDTO.setWashOrderID(orderID);
+		VOrderInfoDTO orderInfo = this.queryDAO.queryForObject(VOrderInfoDTO.EQUAL_SEARCH, orderSeachDTO);
+		if(orderInfo == null){
+			createApplicationException(M10010WS);
+		}
+		
+		// 获得商品信息
+		String[] serviceIDs = orderInfo.getGroupServiceID().split(",");
+		StringBuffer content = new StringBuffer();
+		for(String serviceID : serviceIDs){
+			List<VWorkerServiceItemsDTO> lstServiceItem =
+					hbMasterCache.getMasterData(MASTER_NAME.GROUP_SERVICE, serviceID);
+			if(lstServiceItem != null && lstServiceItem.size()>0){
+				if(content.length()>0){
+					content.append(" ");
+				}
+				content.append(lstServiceItem.get(0).getItemName());
+			}
+		}
+		
+		wechetPay.getPrepayID(content.toString(), 
+				orderID.toString(), 
+				orderInfo.getAmmount().multiply(new BigDecimal(100)).toString());
+		
+		if(StringUtil.isEmpty(wechetPay.getPrepayID())){
+			createApplicationException(M10109WC);
+		}
+
+		//输出参数
+		WechetInfoDTO wechetInfo = new WechetInfoDTO();
+		wechetInfo.setAppid(wechetPay.getAppID());
+		wechetInfo.setPartnerid(wechetPay.getPartnerID());
+		wechetInfo.setNoncestr(wechetPay.getNoncestr());
+		wechetInfo.setPackageinfo(wechetPay.getPackage());
+		wechetInfo.setPrepayid(wechetPay.getPrepayID());
+		wechetInfo.setTimestamp(wechetPay.getTimestamp());
+		wechetInfo.setSign(wechetPay.getSign());
+		
+		return wechetInfo;
+	}
+
+	@Override
+	public Boolean getWechetPaied(Long orderID) {
+		WechetPay.WechetQuery wechet = wechetPay.getOrderPaied(orderID.toString());
+		if(wechet != null){
+			// 订单取得
+			VOrderInfoDTO orderSeachDTO = new VOrderInfoDTO();
+			orderSeachDTO.setWashOrderID(orderID);
+			VOrderInfoDTO orderInfo = this.queryDAO.queryForObject(VOrderInfoDTO.EQUAL_SEARCH, orderSeachDTO);
+			// 更改订单状态
+			CarWashDTO carWash = new CarWashDTO();
+			carWash.setCarWashID(orderInfo.getCarWashID());
+			carWash.setPayType(Integer.parseInt(PAYMENT_TYPE.WECHETPAY.toString()));
+			carWash.setStatus(Integer.parseInt(ORDER_STATUS.PAID.toString()));
+			this.updateDAO.updateOne(CarWashDTO.UPDATE, carWash, M10190WS, SH_INFO);
+			
+			//WeixinPayDTO
+			
+			
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+}

@@ -1,0 +1,75 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * AutoBrandDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/11             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("汽车品牌")
+public class AutoBrandDTO implements java.io.Serializable, Comparable<AutoBrandDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Integer automobileBrandID = null;
+
+	public Integer getAutomobileBrandID() {
+		return this.automobileBrandID;
+	}
+
+	public void setAutomobileBrandID(
+			Integer automobileBrandID) {
+		this.automobileBrandID = automobileBrandID;
+	}
+
+	private String name = null;
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	private String logoPath = null;
+
+	public String getLogoPath() {
+		return this.logoPath;
+	}
+
+	public void setLogoPath(
+			String logoPath) {
+		this.logoPath = logoPath;
+	}
+
+	private String spell = null;
+
+	public String getSpell() {
+		return this.spell;
+	}
+
+	public void setSpell(
+			String spell) {
+		this.spell = spell;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		AutoBrandDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

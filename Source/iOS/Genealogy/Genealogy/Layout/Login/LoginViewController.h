@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ModelProtocol.h"
+#import "BaseViewController.h"
 
-@interface LoginViewController : UIViewController<ModelProtocol>
+@interface LoginViewController : BaseViewController
 @property (weak, nonatomic) IBOutlet UITextField *txtPhone;
 @property (weak, nonatomic) IBOutlet UITextField *txtValidCode;
 

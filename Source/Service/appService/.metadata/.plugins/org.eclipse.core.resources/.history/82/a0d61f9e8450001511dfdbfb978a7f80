@@ -1,0 +1,67 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import java.sql.Date;
+import java.sql.Time;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.beetlestech.nfe.main.biz.a01.dto.RepairOrderDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkSheetPartsDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetRepairOrdersInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetRepairOrdersOutDTO;
+
+public class SsGetRepairOrders extends AbstractService<SsGetRepairOrdersOutDTO, SsGetRepairOrdersInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetRepairOrdersOutDTO execute(
+			SsGetRepairOrdersInDTO ssGetRepairOrdersInDTO) {
+		SsGetRepairOrdersOutDTO ssGetRepairOrdersOutDTO = new SsGetRepairOrdersOutDTO();
+		
+		RepairOrderDTO o1 = new RepairOrderDTO();
+		o1.setAmount(900.0);
+		o1.setAppointmentDate(new Date(2015,5,15));
+		o1.setAppointmentTime(new Time(14, 0, 0));
+		o1.setCreateDate(new Date(2015,5,14));
+		o1.setCustomerID(1L);
+		o1.setCustomerName("王女士");
+		o1.setEnsuringAmount(900.0);
+		o1.setID(1L);
+		o1.setOrderNO("10212345678");
+		o1.setPament(900.0);
+		
+		WorkSheetPartsDTO part1 = new WorkSheetPartsDTO();
+		part1.setAmount(1);
+		part1.setID(1L);
+		part1.setName("机油");
+		part1.setPrice(40.0);
+		WorkSheetPartsDTO part2 = new WorkSheetPartsDTO();
+		part2.setAmount(1);
+		part2.setID(1L);
+		part2.setName("火花塞");
+		part2.setPrice(260.0);
+		WorkSheetPartsDTO[] parts = {part1,part2};
+		o1.setParts(parts );
+		o1.setProductID(1L);
+		o1.setProductName("50000公里保养");
+		o1.setShopID(1L);
+		o1.setShopName("随行第一修车厂");
+		o1.setType(0);
+		o1.setWorkerPrice(600.0);
+		
+		RepairOrderDTO[] repairOrderArray = {o1,o1};
+		
+		ssGetRepairOrdersOutDTO.setRepairOrderArray(repairOrderArray);
+		
+		
+		return ssGetRepairOrdersOutDTO;
+	}
+}

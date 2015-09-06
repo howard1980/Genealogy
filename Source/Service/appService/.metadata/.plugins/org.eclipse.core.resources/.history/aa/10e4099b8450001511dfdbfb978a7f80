@@ -1,0 +1,120 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.OrderEvidenceDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_EVIDENCE")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class OrderEvidenceDTO extends OrderEvidenceDTOSupport implements java.io.Serializable, Comparable<OrderEvidenceDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_EVIDENCE_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long orderEvidenceID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WASH_ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long washOrderID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("EVIDENCE_PATH")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 90, max = 90)
+	private String evidencePath = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UPDATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date updateDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UPDATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time updateTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("EVIDENCE_FLG")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer evidenceFlg = null;
+
+	public Long getOrderEvidenceID() {
+		return this.orderEvidenceID;
+	}
+
+	public void setOrderEvidenceID(
+			Long orderEvidenceID) {
+		this.orderEvidenceID = orderEvidenceID;
+	}
+
+	public Long getWashOrderID() {
+		return this.washOrderID;
+	}
+
+	public void setWashOrderID(
+			Long washOrderID) {
+		this.washOrderID = washOrderID;
+	}
+
+	public String getEvidencePath() {
+		return this.evidencePath;
+	}
+
+	public void setEvidencePath(
+			String evidencePath) {
+		this.evidencePath = evidencePath;
+	}
+
+	public java.sql.Date getUpdateDate() {
+		return this.updateDate;
+	}
+
+	public void setUpdateDate(
+			java.sql.Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public java.sql.Time getUpdateTime() {
+		return this.updateTime;
+	}
+
+	public void setUpdateTime(
+			java.sql.Time updateTime) {
+		this.updateTime = updateTime;
+	}
+
+	public Integer getEvidenceFlg() {
+		return this.evidenceFlg;
+	}
+
+	public void setEvidenceFlg(
+			Integer evidenceFlg) {
+		this.evidenceFlg = evidenceFlg;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			OrderEvidenceDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

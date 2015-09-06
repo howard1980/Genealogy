@@ -1,0 +1,93 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.RoleDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class RoleDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "ROLE_INSERT";
+
+	public static final String FULL_UPDATE = "ROLE_FULL_UPDATE";
+
+	public static final String UPDATE = "ROLE_UPDATE";
+
+	public static final String DELETE = "ROLE_DELETE";
+
+	public static final String FIND = "ROLE_FIND";
+
+	public static final String FIND_FOR_UPDATE = "ROLE_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "ROLE_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "ROLE_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "ROLE_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "ROLE_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "ROLE_SQL_SEARCH";
+
+	public static final String COUNT = "ROLE_COUNT";
+
+	public static final String COUNT_OR = "ROLE_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "ROLE_COUNT_SEARCH";
+
+	public static final String COLUMN_ROLE_ID = "ROLE_ID";
+
+	public static final String COLUMN_NAME = "NAME";
+
+	public static final String COLUMN_CODE = "CODE";
+
+	public static final String COLUMN_DESCRIPTION = "DESCRIPTION";
+
+	public static final String COLUMN_ROLE_STATUS = "ROLE_STATUS";
+
+	public static final String COLUMN_ROLE_TYPE = "ROLE_TYPE";
+
+	public static final String COLUMN_ROLE_LEVEL = "ROLE_LEVEL";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATOR = "CREATOR";
+
+	public static final String TABLE = "ROLE";
+
+	public static RoleDTO setDefaultValue() {
+		RoleDTO defaultDTO = new RoleDTO();
+
+		defaultDTO.setroleid(0l);
+
+		defaultDTO.setname(StringUtil.EMPTY);
+
+		defaultDTO.setcode(StringUtil.EMPTY);
+
+		defaultDTO.setdescription(StringUtil.EMPTY);
+
+		defaultDTO.setrolestatus(StringUtil.EMPTY);
+
+		defaultDTO.setroletype(StringUtil.EMPTY);
+
+		defaultDTO.setrolelevel(StringUtil.EMPTY);
+
+		defaultDTO.setcreatedate(new java.sql.Timestamp(System.currentTimeMillis()));
+
+		defaultDTO.setcreator(0l);
+
+		return defaultDTO;
+	}
+}

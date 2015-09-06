@@ -1,0 +1,25 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetNearWorkerGroupInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetNearWorkerGroupOutDTO;
+
+public class SsGetNearWorkerGroup extends AbstractService<SsGetNearWorkerGroupOutDTO, SsGetNearWorkerGroupInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetNearWorkerGroupOutDTO execute(
+			SsGetNearWorkerGroupInDTO ssGetNearWorkerGroupInDTO) {
+		SsGetNearWorkerGroupOutDTO ssGetNearWorkerGroupOutDTO = new SsGetNearWorkerGroupOutDTO();
+		return ssGetNearWorkerGroupOutDTO;
+	}
+}

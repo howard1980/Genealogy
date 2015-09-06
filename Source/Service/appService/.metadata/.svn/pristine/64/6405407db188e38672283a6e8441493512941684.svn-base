@@ -1,0 +1,3 @@
+SsGetMasterCache=com.beetlestech.nfe.main.service.com.HsGetMasterCache
+SsRefreshMasterCache=com.beetlestech.nfe.main.service.com.HsRefreshMasterCache
+SsGetNearWorker=com.beetlestech.nfe.main.service.com.SsGetNearWorker

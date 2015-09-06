@@ -1,0 +1,91 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.CustomerAccountDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ACCOUNT")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CustomerAccountDTO extends CustomerAccountDTOSupport implements java.io.Serializable, Comparable<CustomerAccountDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ACCOUNT_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long customerAccountID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal amount = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer type = null;
+
+	public Long getCustomerAccountID() {
+		return this.customerAccountID;
+	}
+
+	public void setCustomerAccountID(
+			Long customerAccountID) {
+		this.customerAccountID = customerAccountID;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public java.math.BigDecimal getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(
+			java.math.BigDecimal amount) {
+		this.amount = amount;
+	}
+
+	public Integer getType() {
+		return this.type;
+	}
+
+	public void setType(
+			Integer type) {
+		this.type = type;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CustomerAccountDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

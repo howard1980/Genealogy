@@ -1,0 +1,195 @@
+package com.maxiaohua.genealogy.fw.core.biz;
+
+import com.maxiaohua.genealogy.fw.core.context.RequestContext;
+import com.maxiaohua.genealogy.fw.core.exception.ApplicationException;
+import com.maxiaohua.genealogy.fw.core.message.Message;
+import com.maxiaohua.genealogy.fw.core.properties.MessageProperties;
+import com.maxiaohua.genealogy.fw.core.sys.SystemHandler;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+
+
+public abstract class AbstractComponent {
+	
+	@AutoInject(name = "messageProperties")
+	private MessageProperties messageProperties;
+
+	
+	@AutoInject(name = "systemHandler")
+	private SystemHandler systemHandler;
+
+	
+	public MessageProperties getMessageProperties() {
+		return messageProperties;
+	}
+
+	
+	protected void addApplicationMessage(
+			String messageId,
+			Object... messageParams) {
+		Message msg = new Message(messageId, messageParams);
+		RequestContext.open().addMessage(msg);
+	}
+
+	
+	protected void createApplicationException(
+			Throwable cause,
+			String messageId,
+			Object... messageParams) {
+		throw new ApplicationException(cause, messageId, messageParams);
+	}
+
+	
+	protected void createApplicationException(
+			String messageId,
+			Object... messageParams) {
+		throw new ApplicationException(messageId, messageParams);
+	}
+
+	
+	protected String getUserId() {
+		return systemHandler.getUserId();
+	}
+
+	
+	protected void setUserId(
+			String userId) {
+		systemHandler.setUserId(userId);
+	}
+
+	
+	protected java.sql.Date getCurrentDate() {
+		return systemHandler.getCurrentDate();
+	}
+
+	
+	protected java.sql.Time getCurrentTime() {
+		return systemHandler.getCurrentTime();
+	}
+
+	
+	protected java.sql.Timestamp getCurrentTimestamp() {
+		return systemHandler.getCurrentTimestamp();
+	}
+
+	
+	protected java.sql.Timestamp getServceStartTime() {
+		return systemHandler.getServceStartTime();
+	}
+
+	
+	protected java.sql.Date getDefaultDate() {
+		return systemHandler.getDefaultDate();
+	}
+
+	
+	protected java.sql.Time getDefaultTime() {
+		return systemHandler.getDefaultTime();
+	}
+
+	
+	protected java.sql.Date getMaxDate() {
+		return systemHandler.getMaxDate();
+	}
+
+	
+	protected java.sql.Date getMinDate() {
+		return systemHandler.getMinDate();
+	}
+
+	
+	protected java.sql.Timestamp getMaxTimestamp() {
+		return systemHandler.getMaxTimestamp();
+	}
+
+	
+	protected java.sql.Timestamp getMinTimestamp() {
+		return systemHandler.getMinTimestamp();
+	}
+
+	
+//	protected String getWsNo() {
+//		return systemHandler.getWsNo();
+//	}
+//
+//	
+//	protected void setWsNo(
+//			String wsNo) {
+//		systemHandler.setWsNo(wsNo);
+//	}
+
+	
+//	protected String getIpAddress() {
+//		return systemHandler.getIpAddress();
+//	}
+//
+//	
+//	protected void setIpAddress(
+//			String ipAddress) {
+//		systemHandler.setIpAddress(ipAddress);
+//	}
+
+	
+//	protected String getHostName() {
+//		return systemHandler.getHostName();
+//	}
+//
+//	
+//	protected void setHostName(
+//			String hostName) {
+//		systemHandler.setHostName(hostName);
+//	}
+
+	
+//	protected String getSessionId() {
+//		return systemHandler.getSessionId();
+//	}
+
+	
+//	protected Object getUserInfo() {
+//		return systemHandler.getUserInfo();
+//	}
+//
+//	
+//	protected void setUserInfo(
+//			Object userInfo) {
+//		systemHandler.setUserInfo(userInfo);
+//	}
+	
+	
+	protected void beginTransaction() {
+		systemHandler.beginTransaction();
+	}
+
+	
+	protected void commitTransaction() {
+		systemHandler.commitTransaction();
+	}
+
+	
+	protected void rollbackTransaction() {
+		systemHandler.rollbackTransaction();
+	}
+
+	
+//	protected String getLoginId() {
+//		return systemHandler.getLoginId();
+//	}
+//
+//	
+//	protected void setLoginId(
+//			String loginId) {
+//		systemHandler.setLoginId(loginId);
+//	}
+	
+	protected String getMessage(
+			String messageId) {
+		return systemHandler.getMessage(messageId);
+	}
+
+	
+	protected String getMessage(
+			String messageId,
+			Object... parameters) {
+		return systemHandler.getMessage(messageId, parameters);
+	}
+}

@@ -1,0 +1,29 @@
+package com.beetlestech.nfe.main.biz.a01.impl;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.util.StringUtil;
+import com.beetlestech.nfe.fw.core.wechet.WechetPay;
+import com.beetlestech.nfe.main.biz.a01.HbAccount;
+import com.beetlestech.nfe.main.biz.a01.HbAliPay;
+import com.beetlestech.nfe.main.biz.a01.dto.AccountHistoryDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WechetInfoDTO;
+import com.beetlestech.nfe.main.biz.com.HbMasterCache;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.biz.constant.MasterCacheConstant.MASTER_NAME;
+import com.beetlestech.nfe.main.db.tbl.CarWashDTO;
+import com.beetlestech.nfe.main.db.tbl.CustomerAccountDTO;
+import com.beetlestech.nfe.main.db.view.VAccountHistoryDTO;
+import com.beetlestech.nfe.main.db.view.VOrderAmmountDTO;
+import com.beetlestech.nfe.main.db.view.VOrderInfoDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerServiceItemsDTO;
+
+public class HbAliPayImpl extends AbstractDBLogic implements HbAliPay, HbMessageCode, CommonConstant, CtgCodeConstant {
+
+}

@@ -1,0 +1,104 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 创建代金卷订单的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("创建代金卷订单")
+public class SsCreateCashCouponOrderInDTO implements java.io.Serializable, Comparable<SsCreateCashCouponOrderInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 用户ID  
+	*/
+	@Alias("用户ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long customerID = null;
+
+	/**
+	* <code>用户ID</code>返回
+	* @return <code>用户ID</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* 代金卷ID  
+	*/
+	@Alias("代金卷ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer cashCouponID = null;
+
+	/**
+	* <code>代金卷ID</code>返回
+	* @return <code>代金卷ID</code>
+	*/
+	public Integer getCashCouponID() {
+		return this.cashCouponID;
+	}
+
+	/**
+	* <code>cashCouponID</code>设定
+	* @param cashCouponID　<code>cashCouponID</code>设定值
+	*/
+	public void setCashCouponID(
+			Integer cashCouponID) {
+		this.cashCouponID = cashCouponID;
+	}
+
+	/**
+	* 代金卷数量  
+	*/
+	@Alias("代金卷数量")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer count = null;
+
+	/**
+	* <code>代金卷数量</code>返回
+	* @return <code>代金卷数量</code>
+	*/
+	public Integer getCount() {
+		return this.count;
+	}
+
+	/**
+	* <code>count</code>设定
+	* @param count　<code>count</code>设定值
+	*/
+	public void setCount(
+			Integer count) {
+		this.count = count;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsCreateCashCouponOrderInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

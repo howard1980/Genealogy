@@ -1,0 +1,177 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.RepairInquiryDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("REPAIR_INQUIRY")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class RepairInquiryDTO extends RepairInquiryDTOSupport implements java.io.Serializable, Comparable<RepairInquiryDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REPAIR_INQUIRY_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long repairInquiryID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TECHNICIAN_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long technicianID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer type = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PARENT_INQUIRY_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long parentInquiryID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("VOICE_PATH")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String voicePath = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time createTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PRICE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal price = null;
+
+	public Long getRepairInquiryID() {
+		return this.repairInquiryID;
+	}
+
+	public void setRepairInquiryID(
+			Long repairInquiryID) {
+		this.repairInquiryID = repairInquiryID;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getTechnicianID() {
+		return this.technicianID;
+	}
+
+	public void setTechnicianID(
+			Long technicianID) {
+		this.technicianID = technicianID;
+	}
+
+	public Integer getType() {
+		return this.type;
+	}
+
+	public void setType(
+			Integer type) {
+		this.type = type;
+	}
+
+	public Long getParentInquiryID() {
+		return this.parentInquiryID;
+	}
+
+	public void setParentInquiryID(
+			Long parentInquiryID) {
+		this.parentInquiryID = parentInquiryID;
+	}
+
+	public String getVoicePath() {
+		return this.voicePath;
+	}
+
+	public void setVoicePath(
+			String voicePath) {
+		this.voicePath = voicePath;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	public java.math.BigDecimal getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			java.math.BigDecimal price) {
+		this.price = price;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			RepairInquiryDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syncparticipants>
+<participant displayName="SVN (/ccis-jar, /com.beetlestech.nfe.fw.core, /com.beetlestech.nfe.fw.dao, /com.beetlestech.nfe.fw.web, /com.beetlestech.nfe.main.biz, /com.beetlestech.nfe.main.db, /com.beetlestech.nfe.main.service, /nfe-rest)" id="org.tigris.subversion.subclipse.participant" secondary_id="1419017234648">
+<data root="false">
+<org.eclipse.team.ui.TEAMSUBSRCIBERSETTINGS org.eclipse.team.ui.SCOPE_TYPE="ResourceScope">
+<org.eclipse.team.ui.TEAMSUBSRCIBER_REFRESHSCHEDULE org.eclipse.team.ui.CTX_REFRESHSCHEDULE_ENABLED="false" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_INTERVAL="3600" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_RUNONCE="false"/>
+<resource_scope_roots resource_scope_root_resource="/ccis-jar"/>
+<resource_scope_roots resource_scope_root_resource="/com.beetlestech.nfe.fw.core"/>
+<resource_scope_roots resource_scope_root_resource="/com.beetlestech.nfe.fw.dao"/>
+<resource_scope_roots resource_scope_root_resource="/com.beetlestech.nfe.fw.web"/>
+<resource_scope_roots resource_scope_root_resource="/com.beetlestech.nfe.main.biz"/>
+<resource_scope_roots resource_scope_root_resource="/com.beetlestech.nfe.main.db"/>
+<resource_scope_roots resource_scope_root_resource="/com.beetlestech.nfe.main.service"/>
+<resource_scope_roots resource_scope_root_resource="/nfe-rest"/>
+</org.eclipse.team.ui.TEAMSUBSRCIBERSETTINGS>
+</data>
+</participant>
+</syncparticipants>

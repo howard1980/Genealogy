@@ -1,0 +1,16 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import java.sql.Date;
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO;
+import com.maxiaohua.genealogy.main.biz.a01.dto.CustomerCashCouponDTO;
+
+public interface HbCashCoupon {
+	List<CashCouponDTO> getCashCoupon(Long customerID, Date data, String[] serviceItemID,Integer dataType);
+	int updateCashCouponRecord(Long customerID,Long orderID,Integer status);
+	int InsertCashCouponRecord(Long customerID,Integer cashCouponID,Long orderID,Integer status);
+	List<CashCouponDTO> getCashCoupon(Long customerID);
+	CustomerCashCouponDTO getCustomCashCoupon(Long customerID);
+	String createOrder(Long customerID, Integer cashCouponID, Integer count);
+}

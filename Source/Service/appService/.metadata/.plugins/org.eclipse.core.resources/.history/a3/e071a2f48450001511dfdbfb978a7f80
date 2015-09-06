@@ -1,0 +1,10 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.ServiceProductDTO;
+
+public interface HbServiceProduct {
+	List<ServiceProductDTO> SsGetServiceProducts( Long carInfoID);
+	ServiceProductDTO getOneServiceProduct( Long serviceProductID);
+}

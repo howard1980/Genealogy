@@ -1,0 +1,18 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+
+import java.sql.Date;
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.WorkerPlanInfoDTO;
+
+public interface HbWorkerPlan {
+
+	void updateWorkerPlan(Integer workerID,
+			WorkerPlanInfoDTO[] WorkerPlanInfoDTO, String remarks);
+
+	List<WorkerPlanInfoDTO> getWorkerPlan(Integer workerID, Date start, Date end);
+	
+	
+
+}

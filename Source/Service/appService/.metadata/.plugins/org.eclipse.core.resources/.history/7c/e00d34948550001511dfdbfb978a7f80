@@ -1,0 +1,80 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.WashItemDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class WashItemDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "WASH_ITEM_INSERT";
+
+	public static final String FULL_UPDATE = "WASH_ITEM_FULL_UPDATE";
+
+	public static final String UPDATE = "WASH_ITEM_UPDATE";
+
+	public static final String DELETE = "WASH_ITEM_DELETE";
+
+	public static final String FIND = "WASH_ITEM_FIND";
+
+	public static final String FIND_FOR_UPDATE = "WASH_ITEM_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "WASH_ITEM_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "WASH_ITEM_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "WASH_ITEM_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "WASH_ITEM_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "WASH_ITEM_SQL_SEARCH";
+
+	public static final String COUNT = "WASH_ITEM_COUNT";
+
+	public static final String COUNT_OR = "WASH_ITEM_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "WASH_ITEM_COUNT_SEARCH";
+
+	public static final String COLUMN_WASH_ITEM_ID = "WASH_ITEM_ID";
+
+	public static final String COLUMN_CAR_WASH_ID = "CAR_WASH_ID";
+
+	public static final String COLUMN_GROUP_SERVICE_ID = "GROUP_SERVICE_ID";
+
+	public static final String COLUMN_SERVICE_COUNT = "SERVICE_COUNT";
+
+	public static final String COLUMN_PRICE = "PRICE";
+
+	public static final String COLUMN_TOTAL = "TOTAL";
+
+	public static final String TABLE = "WASH_ITEM";
+
+	public static WashItemDTO setDefaultValue() {
+		WashItemDTO defaultDTO = new WashItemDTO();
+
+		defaultDTO.setWashItemID(0l);
+
+		defaultDTO.setCarWashID(0l);
+
+		defaultDTO.setGroupServiceID(0);
+
+		defaultDTO.setServiceCount(0);
+
+		defaultDTO.setPrice(new java.math.BigDecimal(0));
+
+		defaultDTO.setTotal(new java.math.BigDecimal(0));
+
+		return defaultDTO;
+	}
+}

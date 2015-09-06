@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sql">
+
+  <!-- Table Insert -->
+  <insert id="T04_GEN_HISTORY_INSERT" parameterType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    INSERT INTO T04_GEN_HISTORY (
+
+    ) VALUES (
+
+    )
+    <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
+    SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
+  </insert>
+
+  <!-- Table Update -->
+  <update id="T04_GEN_HISTORY_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    UPDATE T04_GEN_HISTORY SET
+
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <update id="T04_GEN_HISTORY_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    UPDATE T04_GEN_HISTORY
+    <set>
+    </set>
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <!-- Key Delete -->
+  <delete id="T04_GEN_HISTORY_DELETE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    DELETE FROM T04_GEN_HISTORY
+    WHERE
+      ID = #{iD} 
+  </delete>
+
+  <!-- Key Search -->
+  <select id="T04_GEN_HISTORY_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    WHERE
+      ID = #{iD} 
+  </select>
+
+  <!-- Key Search（For Update） -->
+  <select id="T04_GEN_HISTORY_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    WHERE
+      ID = #{iD} 
+    FOR UPDATE
+  </select>
+
+  <!-- AND Search -->
+  <select id="T04_GEN_HISTORY_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search(OR) -->
+  <select id="T04_GEN_HISTORY_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE -->
+  <select id="T04_GEN_HISTORY_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    <where>
+      <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE(OR) -->
+  <select id="T04_GEN_HISTORY_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    <where>
+      <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Customize Search -->
+  <select id="T04_GEN_HISTORY_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO" parameterType="java.util.Map">
+    SELECT
+      ID AS "iD" 
+    FROM T04_GEN_HISTORY
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Count -->
+  <select id="T04_GEN_HISTORY_COUNT" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM T04_GEN_HISTORY
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+    </where>
+  </select>
+
+  <!-- Count OR -->
+  <select id="T04_GEN_HISTORY_COUNT_OR" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM T04_GEN_HISTORY
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+    </where>
+  </select>
+
+  <!-- Count Customize -->
+  <select id="T04_GEN_HISTORY_COUNT_SEARCH" resultType="java.lang.Integer" parameterType="java.util.Map">
+    SELECT count(*)
+    FROM T04_GEN_HISTORY
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+  </select>
+</mapper>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE digester-rules PUBLIC "-//Jakarta Apache //DTD digester-rules XML V1.0//EN" "digester-rules.dtd">
+
+<digester-rules>
+	<pattern value="beans">
+		<object-create-rule classname="com.maxiaohua.genealogy.fw.core.config.XMLBeans" />
+		<set-properties-rule />
+
+		<pattern value="bean">
+			<object-create-rule classname="com.maxiaohua.genealogy.fw.core.config.XMLBean" />
+			<set-next-rule methodname="addBean" />
+			<set-properties-rule />
+			<bean-property-setter-rule pattern="type" propertyname="type" />
+			<bean-property-setter-rule pattern="name" propertyname="name" />
+			<bean-property-setter-rule pattern="scope" propertyname="scope" />
+
+			<pattern value="property">
+				<object-create-rule classname="com.maxiaohua.genealogy.fw.core.config.XMLBeanProperty" />
+				<set-next-rule methodname="addProperty" />
+				<set-properties-rule />
+				<bean-property-setter-rule pattern="name" propertyname="name"/>
+				<bean-property-setter-rule pattern="value" propertyname="value"/>
+				<bean-property-setter-rule pattern="ref" propertyname="ref"/>
+			</pattern>
+			<pattern value="constructor-arg">
+				<object-create-rule classname="com.maxiaohua.genealogy.fw.core.config.XMLBeanConstructorArg" />
+				<set-next-rule methodname="addConstructorArg" />
+				<set-properties-rule />
+				<bean-property-setter-rule pattern="value" propertyname="value"/>
+				<bean-property-setter-rule pattern="ref" propertyname="ref"/>
+			</pattern>
+
+		</pattern>
+
+		<pattern value="import">
+			<object-create-rule classname="com.maxiaohua.genealogy.fw.core.config.XMLResource" />
+			<set-next-rule methodname="addResource" />
+			<set-properties-rule />
+			<bean-property-setter-rule pattern="resource" propertyname="resource" />
+		</pattern>
+
+	</pattern>
+</digester-rules>

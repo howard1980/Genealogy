@@ -1,0 +1,120 @@
+package com.beetlestech.nfe.main.biz.com.impl;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.fw.core.sms.SMSManager;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.biz.com.HbCustomer;
+import com.beetlestech.nfe.main.biz.com.HbJPush;
+import com.beetlestech.nfe.main.biz.com.dto.LoginDTO;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.db.tbl.CarInfoDTO;
+import com.beetlestech.nfe.main.db.tbl.CustomerInfoDTO;
+
+public class HbCustomerImpl extends AbstractDBLogic implements HbCustomer, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+	protected static final String SH_INFO = "用户情报表";
+	
+    @AutoInject(name = "sMSManger")
+    protected SMSManager sMSManger;
+    
+	@AutoInject
+	private HbJPush hbJPush;
+	
+	@Override
+	public void sendPassword(String mobile) {
+		CustomerInfoDTO customerinfoDTO = new CustomerInfoDTO();
+		customerinfoDTO.setMobileNo(mobile);
+		CustomerInfoDTO resultDTO = queryDAO.queryForObject(CustomerInfoDTO.EQUAL_SEARCH, customerinfoDTO);
+		
+		if(resultDTO!=null){
+			String message = 
+					String.format("尊敬的用户，您在随行洗车的密码是%s。如非本人操作，请及时修改登录密码；祝您生活愉快！【随行洗车】", resultDTO.getPassword());
+			sMSManger.sendSMS(mobile, message);
+		}
+	}
+
+	@Override
+	public void updatePassword(Long customerID, String password) {
+		CustomerInfoDTO customer = new CustomerInfoDTO();
+		customer.setCustomerID(customerID);
+		customer.setPassword(password);
+		updateDAO.updateOne(CustomerInfoDTO.UPDATE, customer, M10190WS, SH_INFO);
+	}
+
+	@Override
+	public LoginDTO registCustomer(String mobile, String validCode,
+			String licencePlate, Double longitude,
+			Double latitude, String cityCode, String registrationID) {
+		
+		LoginDTO login = new LoginDTO();
+		String code = null;
+		code = queryKeyValue.queryForString(mobile);
+		if(code == null || !code.equals(validCode)){
+			createApplicationException(M10640WS);
+		}
+		
+		CustomerInfoDTO customer = new CustomerInfoDTO();
+		customer.setMobileNo(mobile);
+		if(queryDAO.queryForObject(CustomerInfoDTO.EQUAL_SEARCH, customer) != null){
+			createApplicationException(M10050WC);
+		}
+		
+		customer.setMobileNo(mobile);
+		customer.setLatitude(latitude);
+		customer.setLongitude(longitude);
+		customer.setRegeditDate(this.getCurrentDate());
+		customer.setRegeditTime(this.getCurrentTime());
+		updateDAO.updateOne(CustomerInfoDTO.INSERT, customer, M10190WS, SH_INFO);
+		
+		CarInfoDTO car = new CarInfoDTO();
+		car.setCustomerID(customer.getCustomerID());
+		car.setLicencePlate(licencePlate);
+		updateDAO.updateOne(CarInfoDTO.INSERT, car, M10190WS, SH_INFO);
+		
+		login.setUserID(customer.getCustomerID());
+		login.setUserName(customer.getName());
+		login.setMobile(customer.getMobileNo());
+		login.setLicensePlates(car.getLicencePlate());
+		
+		hbJPush.updateCustomerJPush(customer.getCustomerID(), registrationID);
+		
+		return login;
+	}
+
+	@Override
+	public LoginDTO login(String mobile, String validCode, String registrationID) {
+		String code = this.queryKeyValue.queryForString(mobile);
+		if(StringUtil.isAllEmpty(code)){
+			createApplicationException(M00010WC, SH_INFO);
+		}
+		else if(!code.equals(validCode)){
+			createApplicationException(M00010WC, SH_INFO);
+		}
+
+		CustomerInfoDTO customerinfoDTO = new CustomerInfoDTO();
+		customerinfoDTO.setMobileNo(mobile);
+		CustomerInfoDTO resultDTO = queryDAO.queryForObject(CustomerInfoDTO.EQUAL_SEARCH, customerinfoDTO);
+		LoginDTO login = new LoginDTO();
+		if(resultDTO == null){
+			createApplicationException(M00010WC, SH_INFO);
+		}
+		else{
+			login.setMobile(resultDTO.getMobileNo());
+			login.setUserID(resultDTO.getCustomerID());
+			login.setUserName(resultDTO.getName());
+			CarInfoDTO car = new CarInfoDTO();
+			car.setCustomerID(resultDTO.getCustomerID());
+			
+			car = queryDAO.queryForObject(CarInfoDTO.EQUAL_SEARCH, car);
+			if(car != null){
+				login.setLicensePlates(car.getLicencePlate());
+			}
+		}
+		
+		return login;
+	}
+
+}

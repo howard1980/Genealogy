@@ -1,0 +1,35 @@
+what,kind,bundleId,bundleVersion,description,time
+os,sysinfo,,,"win32",1390363515925
+arch,sysinfo,,,"x86",1390363515925
+ws,sysinfo,,,"win32",1390363515925
+locale,sysinfo,,,"en_US",1390363515925
+processors,sysinfo,,,"8",1390363515925
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1390363515925
+java.runtime.version,sysinfo,,,"1.7.0_40-b43",1390363515925
+java.specification.name,sysinfo,,,"Java Platform API Specification",1390363515925
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1390363515925
+java.specification.version,sysinfo,,,"1.7",1390363515925
+java.vendor,sysinfo,,,"Oracle Corporation",1390363515925
+java.version,sysinfo,,,"1.7.0_40",1390363515925
+java.vm.info,sysinfo,,,"mixed mode, sharing",1390363515925
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1390363515925
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1390363515925
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1390363515925
+java.vm.specification.version,sysinfo,,,"1.7",1390363515925
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1390363515925
+java.vm.version,sysinfo,,,"24.0-b56",1390363515925
+started,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201102081640,"org.eclipse.epp.usagedata.ui",1390363516979
+started,bundle,org.eclipse.wst.dtd.core,1.1.401.v201101122255,"org.eclipse.wst.dtd.core",1390363518244
+started,bundle,org.eclipse.wst.sse.ui,1.2.3.v201102102045,"org.eclipse.wst.sse.ui",1390363518680
+started,bundle,org.eclipse.wst.html.ui,1.0.504.v201101122108,"org.eclipse.wst.html.ui",1390363518681
+started,bundle,org.eclipse.wst.sse.core,1.1.504.v201102160550,"org.eclipse.wst.sse.core",1390363518731
+started,bundle,org.eclipse.jst.jsf.common,1.2.2.v201101211220,"org.eclipse.jst.jsf.common",1390363518773
+started,bundle,org.eclipse.jst.jsf.core,1.3.3.v201102021253,"org.eclipse.jst.jsf.core",1390363518775
+started,bundle,org.eclipse.jst.jsp.core,1.2.304.v201102160550,"org.eclipse.jst.jsp.core",1390363519159
+started,bundle,edu.umd.cs.findbugs.plugin.eclipse,2.0.1.20120712,"edu.umd.cs.findbugs.plugin.eclipse",1390363519255
+started,bundle,org.eclipse.wst.wsdl.validation,1.1.501.v201004201506,"org.eclipse.wst.wsdl.validation",1390363519470
+started,bundle,org.eclipse.wst.xsd.core,1.1.503.v201011121919,"org.eclipse.wst.xsd.core",1390363519570
+started,bundle,org.eclipse.wst.xsl.core,1.1.0.v201004290328,"org.eclipse.wst.xsl.core",1390363519731
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1390363538596
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1390363549998
+started,bundle,org.eclipse.jst.servlet.ui,1.1.404.v201101270100,"org.eclipse.jst.servlet.ui",1390363554057

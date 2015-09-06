@@ -1,0 +1,35 @@
+package com.maxiaohua.genealogy.main.biz.a01.impl.vo;
+
+/**
+ * 按起始个结束日期 区间查询 所需参数对象
+ * @author shao
+ *
+ */
+public class WorkerPlanQueryVO{
+    
+	private Integer workerGroutID = null;
+	private java.sql.Date start = null;
+	private java.sql.Date end = null;
+	
+	public Integer getWorkerGroutID() {
+		return workerGroutID;
+	}
+	public void setWorkerGroutID(Integer workerGroutID) {
+		this.workerGroutID = workerGroutID;
+	}
+	public java.sql.Date getStart() {
+		return start;
+	}
+	public void setStart(java.sql.Date start) {
+		this.start = start;
+	}
+	public java.sql.Date getEnd() {
+		return end;
+	}
+	public void setEnd(java.sql.Date end) {
+		this.end = end;
+	}
+	
+	
+	
+}

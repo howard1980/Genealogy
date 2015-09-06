@@ -1,0 +1,23 @@
+#Sat May 03 16:57:36 CST 2014
+preference.repository.repositoryBrowser=false
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.width=640
+org.eclipse.team.svn.ui.panel.local.CommitPanel.height=406
+org.eclipse.team.svn.ui.panel.local.CommitPanel.width=600
+org.eclipse.team.svn.ui.panel.ListSelectionPanel.width=470
+org.eclipse.team.svn.ui.panel.callback.PromptCredentialsPanel.width=470
+eclipse.preferences.version=1
+org.eclipse.team.svn.ui.panel.local.RevertPanel.height=253
+firstStartup=false
+org.eclipse.team.svn.ui.panel.callback.PromptCredentialsPanel.height=216
+history.repositoryUser=enVvdGllbQ\=\=
+org.eclipse.team.svn.ui.compare.ComparePanel.height=500
+org.eclipse.team.svn.ui.panel.local.UpdateToRevisionPanel.height=203
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=137
+org.eclipse.team.svn.ui.panel.local.RevertPanel.width=600
+history.comment=77yIMzUwNTnvvIlbUFJPXVVFSE0t5ZWP6aGM5aCx5ZGK5pu4LTA0Nzfjga7lr77lv5zvvJrjg5Hjg5Xjgqnjg57jg7PjgrnmlLnlloQ\=;77yIMzQ3ODjvvIlbUFJPXVVFSE0t5ZWP6aGM5aCx5ZGK5pu4LTA0Mjbjga7lr77lv5zvvJrkuojntITmnqDmmYLliLvjga7liKXnp7DoqK3lrpo\=;44Oh44O844Or5LiA6Kan44Gu44OR44OV44Kp44Oe44Oz44K55pS55ZaE44Gr5Ly044Gj44Gf5pyq6Kqt57eK5oCl44Oh44O844Or5Y+W5b6X44Gu44Ot44K444OD44Kv5aSJ5pu0;KDMzMTgzKVtQUk9dVUVITS3llY/poYzloLHlkYrmm7gtMDEwMOOBruWvvuW/nO+8muaknOS9k+aknOafu+OAgee0sOiPjOaknOafu+OBruOCueODhuODvOOCv+OCueioreWumuODreOCuOODg+OCr+WkieabtA\=\=;5LiL5pu444GN5L+d5a2Y44Gu44Oh44O844Or44GM5Y+X5L+h5LiA6Kan44Gr6KGo56S644GX44Gm44GX44G+44GG5ZWP6aGM44KS6Kej5rG644GZ44KL;U09M5YG044Gu5aSJ5pu044KS5Y+N5pig
+org.eclipse.team.svn.ui.panel.local.UpdateToRevisionPanel.width=470
+org.eclipse.team.svn.ui.compare.ComparePanel.width=650
+org.eclipse.team.svn.ui.panel.local.OverrideResourcesPanel.height=224
+org.eclipse.team.svn.ui.panel.ListSelectionPanel.height=195
+history.repositoryURL=aHR0cDovLzkuMTg4LjgyLjE4MjoyMjIyMi9zdm4vY2lzcGx1cy90cnVuay9KQVZB
+org.eclipse.team.svn.ui.panel.local.OverrideResourcesPanel.width=600

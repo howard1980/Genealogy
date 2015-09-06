@@ -1,0 +1,61 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.view;
+
+import com.maxiaohua.genealogy.main.db.view.support.VCustomerAccountDetailDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("VCUSTOMER_ACCOUNT_DETAIL")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class VCustomerAccountDetailDTO extends VCustomerAccountDetailDTOSupport implements java.io.Serializable, Comparable<VCustomerAccountDetailDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal amount = null;
+
+	public Long getcustomerid() {
+		return this.customerid;
+	}
+
+	public void setcustomerid(
+			Long customerid) {
+		this.customerid = customerid;
+	}
+
+	public java.math.BigDecimal getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(
+			java.math.BigDecimal amount) {
+		this.amount = amount;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			VCustomerAccountDetailDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

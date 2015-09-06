@@ -1,0 +1,148 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.JpushDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("JPUSH")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class JpushDTO extends JpushDTOSupport implements java.io.Serializable, Comparable<JpushDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("JPUSH_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long jPushID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REGISITRATIONID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 15, max = 15)
+	private String regisitrationID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long uID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer type = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time createTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UPDATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date updateDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UPDATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time updateTime = null;
+
+	public Long getJPushID() {
+		return this.jPushID;
+	}
+
+	public void setJPushID(
+			Long jPushID) {
+		this.jPushID = jPushID;
+	}
+
+	public String getRegisitrationID() {
+		return this.regisitrationID;
+	}
+
+	public void setRegisitrationID(
+			String regisitrationID) {
+		this.regisitrationID = regisitrationID;
+	}
+
+	public Long getUID() {
+		return this.uID;
+	}
+
+	public void setUID(
+			Long uID) {
+		this.uID = uID;
+	}
+
+	public Integer getType() {
+		return this.type;
+	}
+
+	public void setType(
+			Integer type) {
+		this.type = type;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
+	}
+
+	public java.sql.Date getUpdateDate() {
+		return this.updateDate;
+	}
+
+	public void setUpdateDate(
+			java.sql.Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public java.sql.Time getUpdateTime() {
+		return this.updateTime;
+	}
+
+	public void setUpdateTime(
+			java.sql.Time updateTime) {
+		this.updateTime = updateTime;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			JpushDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

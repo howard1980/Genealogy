@@ -1,0 +1,15 @@
+/* NFE
+* (C) Copyright Beetlestech , Ltd. 2014, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.biz.com;
+
+import com.maxiaohua.genealogy.main.biz.com.dto.AuthResultDTO;
+
+public interface HbAuthentication {
+
+	AuthResultDTO authenticateLDAP(String loginId, String password);
+
+	String updatePassword(String oldPassword, String newPassword);
+
+
+}

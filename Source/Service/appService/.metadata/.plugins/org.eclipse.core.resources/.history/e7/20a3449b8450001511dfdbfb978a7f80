@@ -1,0 +1,98 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.CashCouponOrderDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class CashCouponOrderDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "CASH_COUPON_ORDER_INSERT";
+
+	public static final String FULL_UPDATE = "CASH_COUPON_ORDER_FULL_UPDATE";
+
+	public static final String UPDATE = "CASH_COUPON_ORDER_UPDATE";
+
+	public static final String DELETE = "CASH_COUPON_ORDER_DELETE";
+
+	public static final String FIND = "CASH_COUPON_ORDER_FIND";
+
+	public static final String FIND_FOR_UPDATE = "CASH_COUPON_ORDER_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "CASH_COUPON_ORDER_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "CASH_COUPON_ORDER_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "CASH_COUPON_ORDER_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "CASH_COUPON_ORDER_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "CASH_COUPON_ORDER_SQL_SEARCH";
+
+	public static final String COUNT = "CASH_COUPON_ORDER_COUNT";
+
+	public static final String COUNT_OR = "CASH_COUPON_ORDER_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "CASH_COUPON_ORDER_COUNT_SEARCH";
+
+	public static final String COLUMN_CASH_COUPON_ORDER_ID = "CASH_COUPON_ORDER_ID";
+
+	public static final String COLUMN_CASH_COUPON_ID = "CASH_COUPON_ID";
+
+	public static final String COLUMN_CNT = "CNT";
+
+	public static final String COLUMN_CASH_COUPON_RECORD_ID = "CASH_COUPON_RECORD_ID";
+
+	public static final String COLUMN_ORDER_NO = "ORDER_NO";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_AMOUNT = "AMOUNT";
+
+	public static final String COLUMN_STATUS = "STATUS";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
+	public static final String TABLE = "CASH_COUPON_ORDER";
+
+	public static CashCouponOrderDTO setDefaultValue() {
+		CashCouponOrderDTO defaultDTO = new CashCouponOrderDTO();
+
+		defaultDTO.setCashCouponOrderID(0l);
+
+		defaultDTO.setCashCouponID(0);
+
+		defaultDTO.setCnt(0);
+
+		defaultDTO.setCASHCOUPONRECORDID(0l);
+
+		defaultDTO.setOrderNO(StringUtil.EMPTY);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setAmount(new java.math.BigDecimal(0));
+
+		defaultDTO.setStatus(0);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
+
+		return defaultDTO;
+	}
+}

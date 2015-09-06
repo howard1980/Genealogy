@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;com.beetlestech.nfe.main.service&apos;&#x0A;- Original project: &apos;com.beetlestech.nfe.main.service&apos;&#x0A;- Original elements:&#x0A;     SsGetWashItemsOutDTO.java.mine&#x0A;     SsGetWashItemsOutDTO.java.r453&#x0A;     SsGetWashItemsOutDTO.java.r463" description="Delete elements" element1="src/com/beetlestech/nfe/main/service/a01/dto/SsGetWashItemsOutDTO.java.mine" element2="src/com/beetlestech/nfe/main/service/a01/dto/SsGetWashItemsOutDTO.java.r453" element3="src/com/beetlestech/nfe/main/service/a01/dto/SsGetWashItemsOutDTO.java.r463" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1427246906259" subPackages="false" version="1.0"/>
+</session>

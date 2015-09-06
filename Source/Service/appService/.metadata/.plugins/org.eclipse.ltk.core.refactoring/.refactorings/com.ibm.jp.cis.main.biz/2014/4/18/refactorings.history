@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.ibm.jp.cis.main.biz.e05.impl&apos; to &apos;com.ibm.jp.UEHM.main/src&apos;&#x0D;&#x0A;- Original project: &apos;com.ibm.jp.cis.main.biz&apos;&#x0D;&#x0A;- Destination element: &apos;com.ibm.jp.UEHM.main/src&apos;&#x0D;&#x0A;- Original element: &apos;com.ibm.jp.cis.main.biz/src/com.ibm.jp.cis.main.biz.e05.impl&apos;" description="Copy package" destination="=com.ibm.jp.UEHM.main/src" element1="/src&lt;com.ibm.jp.cis.main.biz.e05.impl" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1398772918453" version="1.0"/>
+</session>

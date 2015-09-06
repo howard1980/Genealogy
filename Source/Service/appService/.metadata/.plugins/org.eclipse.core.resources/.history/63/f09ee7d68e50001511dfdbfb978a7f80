@@ -1,0 +1,86 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * AccountHistoryDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("车管家账户履历信息")
+public class AccountHistoryDTO implements java.io.Serializable, Comparable<AccountHistoryDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private java.sql.Date date = null;
+
+	public java.sql.Date getDate() {
+		return this.date;
+	}
+
+	public void setDate(
+			java.sql.Date date) {
+		this.date = date;
+	}
+
+	private java.sql.Time time = null;
+
+	public java.sql.Time getTime() {
+		return this.time;
+	}
+
+	public void setTime(
+			java.sql.Time time) {
+		this.time = time;
+	}
+
+	private Boolean isRecharge = null;
+
+	public Boolean getIsRecharge() {
+		return this.isRecharge;
+	}
+
+	public void setIsRecharge(
+			Boolean isRecharge) {
+		this.isRecharge = isRecharge;
+	}
+
+	private String orderNO = null;
+
+	public String getOrderNO() {
+		return this.orderNO;
+	}
+
+	public void setOrderNO(
+			String orderNO) {
+		this.orderNO = orderNO;
+	}
+
+	private Double price = null;
+
+	public Double getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			Double price) {
+		this.price = price;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		AccountHistoryDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

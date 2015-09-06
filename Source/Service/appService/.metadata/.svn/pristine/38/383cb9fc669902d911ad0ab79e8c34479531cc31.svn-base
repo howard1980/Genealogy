@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Thu Feb 26 15:42:00 PST 2015
+org.eclipse.jst.j2ee.server\:com.beetlestech.nfe.main.db=WEB-INF/lib/com.beetlestech.nfe.main.db.jar
+org.eclipse.jst.j2ee.server\:com.beetlestech.nfe.main.biz=WEB-INF/lib/com.beetlestech.nfe.main.biz.jar
+org.eclipse.jst.j2ee.server\:com.beetlestech.nfe.fw.dao=WEB-INF/lib/com.beetlestech.nfe.fw.dao.jar
+org.eclipse.jst.j2ee.server\:com.beetlestech.nfe.main.service=WEB-INF/lib/com.beetlestech.nfe.main.service.jar
+org.eclipse.jst.j2ee.server\:com.beetlestech.nfe.fw.web=WEB-INF/lib/com.beetlestech.nfe.fw.web.jar
+org.eclipse.jst.j2ee.server\:com.beetlestech.nfe.fw.core=WEB-INF/lib/com.beetlestech.nfe.fw.core.jar

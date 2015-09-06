@@ -1,0 +1,94 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.ServiceItemsDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_ITEMS")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class ServiceItemsDTO extends ServiceItemsDTOSupport implements java.io.Serializable, Comparable<ServiceItemsDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_ITEMS_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private String serviceItemsID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ITEM_NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 20, max = 20)
+	private String itemName = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PRICE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal price = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("COMMENT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 500, max = 500)
+	private String comment = null;
+
+	public String getServiceItemsID() {
+		return this.serviceItemsID;
+	}
+
+	public void setServiceItemsID(
+			String serviceItemsID) {
+		this.serviceItemsID = serviceItemsID;
+	}
+
+	public String getItemName() {
+		return this.itemName;
+	}
+
+	public void setItemName(
+			String itemName) {
+		this.itemName = itemName;
+	}
+
+	public java.math.BigDecimal getPrice() {
+		return this.price;
+	}
+
+	public void setPrice(
+			java.math.BigDecimal price) {
+		this.price = price;
+	}
+
+	public String getComment() {
+		return this.comment;
+	}
+
+	public void setComment(
+			String comment) {
+		this.comment = comment;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			ServiceItemsDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

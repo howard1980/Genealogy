@@ -1,0 +1,31 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.main.biz.a01.HbAccount;
+import com.maxiaohua.genealogy.main.service.a01.dto.SsGetAccountInfoInDTO;
+import com.maxiaohua.genealogy.main.service.a01.dto.SsGetAccountInfoOutDTO;
+
+public class SsGetAccountInfo extends AbstractService<SsGetAccountInfoOutDTO, SsGetAccountInfoInDTO> {
+	@AutoInject
+	private HbAccount hbAccount;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetAccountInfoOutDTO execute(
+			SsGetAccountInfoInDTO ssGetAccountInfoInDTO) {
+		SsGetAccountInfoOutDTO ssGetAccountInfoOutDTO = new SsGetAccountInfoOutDTO();
+		ssGetAccountInfoOutDTO.setKeeperAccountHistoryArray(
+				hbAccount.getAccountHistory(ssGetAccountInfoInDTO.getCustomerID()));
+		return ssGetAccountInfoOutDTO;
+	}
+}

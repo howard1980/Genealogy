@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) UIViewController *loginViewController;
 @property (strong, nonatomic) UIViewController *mainViewController;
+@property (strong, nonatomic) UIViewController *guidViewController;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (nonatomic, readonly) UIViewController *rootViewController;
 @property (nonatomic, readonly) UIWindow *window;

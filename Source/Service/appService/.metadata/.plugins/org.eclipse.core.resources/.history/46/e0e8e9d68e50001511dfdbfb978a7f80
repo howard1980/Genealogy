@@ -1,0 +1,64 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * OrderWorkSheetDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("工单")
+public class OrderWorkSheetDTO implements java.io.Serializable, Comparable<OrderWorkSheetDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Long iD = null;
+
+	public Long getID() {
+		return this.iD;
+	}
+
+	public void setID(
+			Long iD) {
+		this.iD = iD;
+	}
+
+	private WorkSheetPartsDTO[] parts = null;
+
+	public WorkSheetPartsDTO[] getParts() {
+		return this.parts;
+	}
+
+	public void setParts(
+			WorkSheetPartsDTO[] parts) {
+		this.parts = parts;
+	}
+
+	private Double workerPrice = null;
+
+	public Double getWorkerPrice() {
+		return this.workerPrice;
+	}
+
+	public void setWorkerPrice(
+			Double workerPrice) {
+		this.workerPrice = workerPrice;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		OrderWorkSheetDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

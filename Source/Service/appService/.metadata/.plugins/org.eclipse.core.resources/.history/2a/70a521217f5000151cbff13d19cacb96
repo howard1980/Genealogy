@@ -1,0 +1,92 @@
+package com.beetlestech.nfe.fw.core.properties.impl;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
+import com.maxiaohua.genealogy.fw.core.properties.MessageProperties;
+
+
+public abstract class AbstractMessageProperties implements MessageProperties {
+    
+    protected static final String MESSAGE_GROUP_SPLIT_CHAR = "#";
+    
+    protected static final String MESSAGE_RESOURCE_SPLIT_CHAR = ",";
+    
+    protected Map<String, Map<String, String>> resourceMap;
+    
+    protected Locale locale = Locale.getDefault();
+
+    
+    public Locale getLocale() {
+        return locale;
+    }
+
+    
+    public void setLocale(
+            Locale locale) {
+        this.locale = locale;
+    }
+
+    
+    public AbstractMessageProperties(
+            String msgResources) {
+        init(msgResources);
+    }
+
+    
+    @Override
+    public Set<String> keySet() {
+        Set<String> keys = new HashSet<String>();
+        Set<String> groups = resourceMap.keySet();
+        for (String group : groups) {
+            Map<String, String> msgProp = resourceMap.get(group);
+            keys.addAll(msgProp.keySet());
+        }
+        return keys;
+    }
+
+    
+    @Override
+    public String get(
+            String messageId) {
+        if (messageId.contains(MESSAGE_GROUP_SPLIT_CHAR)) {
+            return resourceMap.get(messageId.substring(0, messageId.indexOf(MESSAGE_GROUP_SPLIT_CHAR))).get(messageId);
+        }
+        Set<String> groups = resourceMap.keySet();
+        for (String group : groups) {
+            Map<String, String> msgProp = resourceMap.get(group);
+            if (msgProp.containsKey(messageId)) {
+                return msgProp.get(messageId);
+            }
+        }
+        return messageId;
+    }
+
+    
+    @Override
+    public String get(
+            String messageId,
+            Object... parameters) {
+        return MessageUtil.replaceMessageOptions(get(messageId), parameters);
+    }
+
+    
+    protected void init(
+            String msgResources) {
+        String[] msgResourceElements = msgResources.contains(MESSAGE_RESOURCE_SPLIT_CHAR) ? msgResources.split(MESSAGE_RESOURCE_SPLIT_CHAR)
+                : new String[] { msgResources };
+        resourceMap = new HashMap<String, Map<String, String>>();
+        for (String messageFile : msgResourceElements) {
+            Map<String, String> resourceProperties = loadResourceAsMap(messageFile);
+            resourceMap.put(messageFile, resourceProperties);
+        }
+    }
+
+    
+    abstract protected Map<String, String> loadResourceAsMap(
+            String messageFile);
+
+}

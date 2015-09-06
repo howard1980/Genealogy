@@ -1,0 +1,69 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.TechnicianServiceDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class TechnicianServiceDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "TECHNICIAN_SERVICE_INSERT";
+
+	public static final String FULL_UPDATE = "TECHNICIAN_SERVICE_FULL_UPDATE";
+
+	public static final String UPDATE = "TECHNICIAN_SERVICE_UPDATE";
+
+	public static final String DELETE = "TECHNICIAN_SERVICE_DELETE";
+
+	public static final String FIND = "TECHNICIAN_SERVICE_FIND";
+
+	public static final String FIND_FOR_UPDATE = "TECHNICIAN_SERVICE_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "TECHNICIAN_SERVICE_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "TECHNICIAN_SERVICE_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "TECHNICIAN_SERVICE_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "TECHNICIAN_SERVICE_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "TECHNICIAN_SERVICE_SQL_SEARCH";
+
+	public static final String COUNT = "TECHNICIAN_SERVICE_COUNT";
+
+	public static final String COUNT_OR = "TECHNICIAN_SERVICE_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "TECHNICIAN_SERVICE_COUNT_SEARCH";
+
+	public static final String COLUMN_ID = "ID";
+
+	public static final String COLUMN_TECHNICIAN_ID = "TECHNICIAN_ID";
+
+	public static final String COLUMN_SERVICE_ITEM_ID = "SERVICE_ITEM_ID";
+
+	public static final String TABLE = "TECHNICIAN_SERVICE";
+
+	public static TechnicianServiceDTO setDefaultValue() {
+		TechnicianServiceDTO defaultDTO = new TechnicianServiceDTO();
+
+		defaultDTO.setID(0l);
+
+		defaultDTO.setTechnicianID(0l);
+
+		defaultDTO.setServiceItemID(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

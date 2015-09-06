@@ -1,0 +1,954 @@
+package com.maxiaohua.genealogy.fw.core.util;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.sql.Blob;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.lang.StringUtils;
+
+import com.maxiaohua.genealogy.fw.core.exception.SystemException;
+
+
+abstract public class StringUtil {
+	
+	private static final String LIKE_ESC_CHAR = "~";
+
+	
+	private static final String HANKAKU_LST = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGH" + "IJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnop"
+			+ "qrstuvwxyz{|}~锝★舰锝ｏ饯锝ワ涧锝僵锝将锝江锝蒋锝帮奖锝诧酱锝碉緟锞嗭緡锞堬緣" + "锞忥緪锞戯緬锞擄緮锞曪緰锞楋緲锞欙練锞涳緷锞烇緹 ";
+
+	
+	private static final String HANKAKU_KASATAHA_LST = "锝讹椒锝革焦锝猴交锝硷浇锝撅娇锞�锞侊緜锞冿緞锞婏緥锞岋緧锞庯匠";
+	
+	private static final String HANKAKU_HA_LST = "锞婏緥锞岋緧锞�";
+
+	
+	private static final String ZENKAKU_LST = "锛佲�濓純锛勶紖锛嗏�欙紙锛夛紛锛嬶紝锛嶏紟锛忥紣锛戯紥锛擄�?" + "锛曪紪锛楋紭锛欙細锛涳紲锛濓紴锛燂紶锛★饥锛ｏ激锛ワ鸡锛э�?" + "锛╋吉锛棘锛籍锛及锛憋疾锛筹即锛碉级锛凤几锛癸己锛伙骏" + "锛斤季锛匡絸锝侊絺锝冿絼锝咃絾锝囷綀锝夛綂锝嬶綄锝嶏綆锝忥綈"
+			+ "锝戯綊锝擄綌锝曪綎锝楋綐锝欙綒锝涳綔锝濓浚銆傘�屻�嶃�併兓" + "銈°偅銈ャ偋銈┿儯銉ャ儳銉冦兗銈€偆銈ㄣ偑銉娿儖銉屻儘銉�" + "銉炪儫銉犮儭銉€儰銉︺儴銉┿儶銉儸銉兂銈涖�?�銆�?";
+
+	
+	private static final String ZENKAKU_KASATAHA_LST = "銈偔銈偙銈炽偟銈枫偣銈汇偨銈裤儊銉勩儐銉堛儚銉掋儠銉樸儧銈�";
+
+	
+	private static final String ZENKAKU_GAZADABA_LST = "銈偖銈般偛銈淬偠銈搞偤銈笺偩銉�銉傘儏銉囥儔銉愩儞銉栥儥銉溿兇";
+
+	
+	private static final Character[] KANA_LOWER = {  };
+	
+	private static final Character[] KANA_UPPER = { };
+
+	
+	private static final Character ZENKAKU_WA_DAKUTEN_CHR = new Character('\u30f7');
+
+	
+	private static final Character ZENKAKU_WO_DAKUTEN_CHR = new Character('\u30fa');
+
+	
+	private static final String ZENKAKU_PA_LST = "銉戙償銉椼儦銉�";
+
+	
+	private static final String ONE = "1";
+	
+	private static final String ZERO = "0";
+	
+	private static final String TRUE = "true";
+	
+	public static final String EMPTY = "";
+	
+	private static final String PLUS_STR = "+";
+
+	
+	private static final String MINUS_STR = "-";
+
+	
+	private static final char SPACE_CHR = ' ';
+	
+	private static final char ZENKAKU_SPACE_CHR = ' ';
+
+	
+	private static final String DEFAULT_CHAR_SET = "UTF-8";
+
+	
+	private static final String WINDOWS_LINE_SEPARATOR_EXPR = "\\\\r\\\\n";
+
+	
+	private static final String LF = "\n";
+
+	
+	public static final String SPACE = " ";
+
+	
+	public static boolean isWhitespace(
+			char value) {
+		return value == SPACE_CHR;
+	}
+
+	
+	public static boolean isNumeric(
+			String value) {
+		if (value == null || EMPTY.equals(value)) {
+			return false;
+		}
+		for (int i = value.length(); --i >= 0;) {
+			if (!Character.isDigit(value.charAt(i))) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	
+	public static String trimRight(
+			String value) {
+		if (value == null) {
+			return null;
+		}
+
+		int length = value.length();
+		while ((0 < length) && isWhitespace(value.charAt(length - 1))) {
+			length--;
+		}
+
+		return length < value.length() ? value.substring(0, length) : value;
+	}
+
+	
+	public static String trimLeft(
+			String value) {
+		if (value == null) {
+			return null;
+		}
+
+		int start = 0;
+		int length = value.length();
+		while ((start < length) && isWhitespace(value.charAt(start))) {
+			start++;
+		}
+
+		return start > 0 ? value.substring(start, length) : value;
+	}
+
+	
+	public static String trim(
+			String value) {
+		if (value == null) {
+			return null;
+		}
+		return value.trim();
+	}
+
+	
+	public static String removeAllSpace(
+			String value) {
+		StringBuilder builder = new StringBuilder();
+		for (int i = 0; i < value.length(); i++) {
+			if (value.charAt(i) != SPACE_CHR) {
+				builder.append(value.charAt(i));
+			}
+		}
+		return builder.toString();
+	}
+	
+	public static String toHexString(
+			byte[] byteArray,
+			String delim) {
+		if (delim == null) {
+			delim = EMPTY;
+		}
+		StringBuilder builder = new StringBuilder();
+		for (int i = 0; i < byteArray.length; i++) {
+			if (i > 0) {
+				builder.append(delim);
+			}
+			String hex = Integer.toHexString(byteArray[i] & 0x00ff).toUpperCase();
+			if (hex.length() < 2) {
+				builder.append(ZERO);
+			}
+			builder.append(hex);
+		}
+		return builder.toString();
+	}
+
+	
+	public static String capitalizeInitial(
+			String value) {
+		if (value == null || EMPTY.equals(value)) {
+			return value;
+		}
+		char[] chars = value.toCharArray();
+		chars[0] = Character.toUpperCase(chars[0]);
+		return new String(chars);
+	}
+
+	
+	public static String hankakuToZenkaku(
+			String value) {
+		return value.toString();
+	}
+
+	
+	public static String zenkakuToHankaku(
+			String value) {
+
+		if (value == null || EMPTY.equals(value)) {
+			return value;
+		}
+
+		char[] chars = value.toCharArray();
+		StringBuilder returnValue = new StringBuilder();
+		String getValue = null;
+
+		for (int i = 0; i < chars.length; i++) {
+
+			getValue = getHankakuMoji(chars[i]);
+
+			if (getValue != null) {
+				returnValue.append(getValue);
+			} else {
+				returnValue.append(String.valueOf(chars[i]));
+			}
+		}
+		return returnValue.toString();
+	}
+
+	
+	private static String getHankakuMoji(
+			char value) {
+		int index = 0;
+		String tmpValue = null;
+		index = ZENKAKU_LST.indexOf(value);
+		if (index >= 0) {
+			return String.valueOf(HANKAKU_LST.charAt(index));
+		}
+
+		index = ZENKAKU_KASATAHA_LST.indexOf(value);
+		if (index >= 0) {
+			
+			return String.valueOf(HANKAKU_KASATAHA_LST.charAt(index));
+		}
+
+		index = ZENKAKU_GAZADABA_LST.indexOf(value);
+		if (index >= 0) {
+			
+			tmpValue = String.valueOf(HANKAKU_KASATAHA_LST.charAt(index));
+			return tmpValue + "锞�";
+		}
+
+		index = ZENKAKU_PA_LST.indexOf(value);
+		if (index >= 0) {
+			
+			tmpValue = String.valueOf(HANKAKU_HA_LST.charAt(index));
+			return tmpValue + "锞�";
+		} else if ((Character.valueOf(value)).equals(ZENKAKU_WA_DAKUTEN_CHR)) {
+			
+			return "锞滐�?";
+		} else if ((Character.valueOf(value)).equals(ZENKAKU_WO_DAKUTEN_CHR)) {
+			
+			return "锝︼�?";
+		} else {
+			
+			return null;
+		}
+	}
+
+	
+	public static String escapeXml(
+			String str) {
+		char[] cbuf = str.toCharArray();
+		StringBuilder sbui = new StringBuilder();
+		for (int i = 0; i < cbuf.length; i++) {
+			if (cbuf[i] == '&') {
+				sbui.append("&amp;");
+			} else if (cbuf[i] == '<') {
+				sbui.append("&lt;");
+			} else if (cbuf[i] == '>') {
+				sbui.append("&gt;");
+			} else if (cbuf[i] == '"') {
+				sbui.append("&quot;");
+			} else if (cbuf[i] == '\'') {
+				sbui.append("&apos;");
+			} else {
+				sbui.append(cbuf[i]);
+			}
+		}
+		return sbui.toString();
+	}
+
+	
+	public static String escapeSqlLike(
+			String condition) {
+		final char esc = (LIKE_ESC_CHAR.toCharArray())[0];
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < condition.length(); i++) {
+			char chr = condition.charAt(i);
+			if (chr == esc) {
+				result.append(esc);
+				result.append(esc);
+			} else if (chr == '%' || chr == '_') {
+				result.append(esc);
+				result.append(chr);
+			} else {
+				result.append(chr);
+			}
+		}
+		result.append('%');
+		return result.toString();
+	}
+
+	
+	public static int getByteLength(
+			String value,
+			String charSet) throws UnsupportedEncodingException {
+		if (value == null || EMPTY.equals(value)) {
+			return 0;
+		}
+
+		byte[] bytes = null;
+		if (charSet == null || EMPTY.equals(charSet)) {
+			bytes = value.getBytes();
+		} else {
+			try {
+				bytes = value.getBytes(charSet);
+			} catch (UnsupportedEncodingException e) {
+				throw e;
+			}
+		}
+		return bytes == null ? 0 : bytes.length;
+	}
+
+	
+	public static boolean isEmpty(
+			String value) {
+		if (value == null || value.trim().equals(EMPTY)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean isNotEmpty(
+			String value) {
+		if (value != null && !value.trim().equals(EMPTY)) {
+			return true;
+		}
+		return false;
+	}
+
+	
+	public static boolean isAllEmpty(
+			String... values) {
+		for (String value : values) {
+			if (value != null && !value.trim().equals(EMPTY)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	
+	public static boolean isAnyEmpty(
+			String... values) {
+		for (String value : values) {
+			if (value == null || value.trim().equals(EMPTY)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	
+	public static Integer toInteger(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+		return Integer.valueOf(value);
+	}
+
+	
+	public static Long toLong(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+		return Long.valueOf(value);
+	}
+
+	
+	public static Short toShort(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+		return Short.valueOf(value);
+	}
+
+	
+	public static Double toDouble(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+		return Double.valueOf(value);
+	}
+
+	
+	public static Float toFloat(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+		return Float.valueOf(value);
+	}
+
+	
+	public static BigInteger toBigInteger(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+		return new BigInteger(value);
+	}
+
+	
+	public static BigDecimal toBigDecimal(
+			String value) {
+		if (isEmpty(value)) {
+			return null;
+		}
+		value = StringUtil.removeAllSpace(value);
+		value = value.startsWith(PLUS_STR) ? value = value.substring(1) : value;
+
+		if (isEmpty(value) || value.endsWith(MINUS_STR)) {
+			return new BigDecimal(0);
+		}
+		return new BigDecimal(value);
+	}
+
+	
+	public static Boolean toBool(
+			String value) {
+		if (value == null) {
+			return false;
+		}
+		value = value.trim();
+		if (ONE.equals(value) || TRUE.equalsIgnoreCase(value)) {
+			return true;
+		}
+		return false;
+	}
+
+	
+	@SuppressWarnings("unchecked")
+	public static <T> T toObject(
+			String value,
+			Class<T> clazz) {
+		if (value == null) {
+			
+			return null;
+		}
+		value = value.trim();
+		
+		if (clazz.equals(Boolean.class) || clazz.equals(boolean.class)) {
+			return (T) toBool(value);
+		} else if (clazz.equals(Integer.class) || clazz.equals(int.class)) {
+			return (T) toInteger(value);
+		} else if (clazz.equals(Long.class) || clazz.equals(long.class)) {
+			return (T) toLong(value);
+		} else if (clazz.equals(Short.class) || clazz.equals(short.class)) {
+			return (T) toShort(value);
+		} else if (clazz.equals(Float.class) || clazz.equals(float.class)) {
+			return (T) toFloat(value);
+		} else if (clazz.equals(Double.class) || clazz.equals(double.class)) {
+			return (T) toDouble(value);
+		} else if (clazz.equals(Character.class) || clazz.equals(char.class)) {
+			return (T) (Character) value.charAt(0);
+		} else if (clazz.equals(BigInteger.class)) {
+			return (T) toBigInteger(value);
+		} else if (clazz.equals(BigDecimal.class)) {
+			return (T) toBigDecimal(value);
+		} else if (clazz.equals(String.class)) {
+			return (T) value;
+		} else {
+			
+			return null;
+		}
+	}
+
+	
+	public static String objectToString(
+			Object value) {
+		if (value == null) {
+			return EMPTY;
+		}
+		if (value instanceof BigDecimal) {
+			return ((BigDecimal) value).toPlainString();
+		} else {
+			return value.toString();
+		}
+	}
+
+	
+	public static byte[] toBytes(
+			String value,
+			String charSet) throws IOException {
+		if (value == null) {
+			return null;
+		}
+		return value.getBytes(charSet);
+	}
+
+	
+	public static String bytesToString(
+			byte[] value,
+			String charSet) {
+		if (value == null) {
+			return null;
+		}
+		try {
+			return new String(value, charSet);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			throw new SystemException(e);
+		}
+	}
+
+	
+	public static byte[] toBytes(
+			String value) throws IOException {
+		if (value == null) {
+			return null;
+		}
+		return value.getBytes(DEFAULT_CHAR_SET);
+	}
+
+	
+	public static String bytesToString(
+			byte[] value) {
+		if (value == null) {
+			return null;
+		}
+		try {
+			return new String(value, DEFAULT_CHAR_SET);
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+			throw new SystemException(e);
+		}
+	}
+
+	
+	public static String rpadding(
+			String value,
+			int size,
+			char useChar) {
+		if (value.length() >= size) {
+			return value;
+		}
+		StringBuilder builder = new StringBuilder(value);
+		for (int i = 0; i < size - value.length(); i++) {
+			builder.append(useChar);
+		}
+		return builder.toString();
+	}
+
+	
+	public static String rpaddingForChar(
+			String value,
+			int num) {
+		return rpaddingForChar(value, num, SPACE_CHR);
+	}
+
+	
+	public static String rpaddingForChar(
+			String value,
+			int num,
+			char useChar) {
+		if (value.length() >= num) {
+			return value;
+		}
+		int zenkakuSize = value.getBytes().length - value.length();
+		int useSize = 1;
+		if (String.valueOf(useChar).getBytes().length > 1) {
+			useSize = 2;
+		}
+
+		StringBuilder builder = new StringBuilder(value);
+		for (int i = 0; i < num - zenkakuSize / 2 - value.length(); i = i + useSize) {
+			builder.append(String.valueOf(useChar));
+		}
+		return builder.toString();
+	}
+
+	
+	public static String rpadding(
+			String value,
+			int size) {
+		return rpadding(value, size, SPACE_CHR);
+	}
+
+	
+	public static String lpadding(
+			String value,
+			int size,
+			char useChar) {
+		if (value.length() >= size) {
+			return value;
+		}
+		StringBuilder builder = new StringBuilder(size);
+		for (int i = 0; i < size - value.length(); i++) {
+			builder.append(useChar);
+		}
+		builder.append(value);
+		return builder.toString();
+	}
+
+	
+	public static String lpaddingForChar(
+			String value,
+			int num) {
+		return lpaddingForChar(value, num, SPACE_CHR);
+	}
+
+	
+	public static String lpaddingForChar(
+			String value,
+			int num,
+			char useChar) {
+		if (value.length() >= num) {
+			return value;
+		}
+		int zenkakuSize = value.getBytes().length - value.length();
+		int useSize = 1;
+		if (String.valueOf(useChar).getBytes().length > 1) {
+			useSize = 2;
+		}
+		StringBuilder builder = new StringBuilder(num);
+		for (int i = 0; i < num - zenkakuSize / 2 - value.length(); i = i + useSize) {
+			builder.append(useChar);
+		}
+		builder.append(value);
+		return builder.toString();
+	}
+
+	
+	public static String lpadding(
+			String value,
+			int size) {
+		return lpadding(value, size, SPACE_CHR);
+	}
+
+	
+	public static byte[] toHashSHA1(
+			String value) {
+		try {
+			return toHash("SHA1", value);
+		} catch (NoSuchAlgorithmException e) {
+			return null;
+		}
+	}
+
+	
+	public static byte[] toHash(
+			String rule,
+			String value) throws NoSuchAlgorithmException {
+		if (rule == null || value == null) {
+			return null;
+		}
+		MessageDigest md = MessageDigest.getInstance(rule.toUpperCase());
+		return md.digest(value.getBytes());
+	}
+
+	
+	public static byte[] encodeBase64(
+			byte[] data) {
+		byte[] bs = org.apache.commons.codec.binary.Base64.encodeBase64(data);
+		return bs;
+	}
+
+	
+	public static byte[] encodeBase64(
+			Blob data) {
+
+		byte[] bs = null;
+		try {
+			byte[] lobByte = data.getBytes(1, (int) data.length());
+			bs = org.apache.commons.codec.binary.Base64.encodeBase64(lobByte);
+		} catch (SQLException e) {
+			throw new SystemException(e);
+		}
+		return bs;
+	}
+
+	
+	public static byte[] decodeBase64(
+			byte[] data) {
+		byte[] bs = org.apache.commons.codec.binary.Base64.decodeBase64(data);
+		return bs;
+	}
+
+	
+	public static String bytesToHexString(
+			byte[] src) {
+		StringBuilder stringBuilder = new StringBuilder("");
+		if (src == null || src.length <= 0) {
+			return null;
+		}
+		for (int i = 0; i < src.length; i++) {
+			int v = src[i] & 0xFF;
+			String hv = Integer.toHexString(v);
+			if (hv.length() < 2) {
+				stringBuilder.append(0);
+			}
+			stringBuilder.append(hv);
+		}
+		return stringBuilder.toString();
+	}
+
+	
+	public static byte[] hexStringToBytes(
+			String hexString) {
+		if (hexString == null || hexString.equals("")) {
+			return null;
+		}
+		hexString = hexString.toUpperCase();
+		int length = hexString.length() / 2;
+		char[] hexChars = hexString.toCharArray();
+		byte[] d = new byte[length];
+		for (int i = 0; i < length; i++) {
+			int pos = i * 2;
+			if (charToByte(hexChars[pos]) == -1) {
+				return null;
+			}
+			d[i] = (byte) (charToByte(hexChars[pos]) << 4 | charToByte(hexChars[pos + 1]));
+		}
+		return d;
+	}
+
+	
+	private static byte charToByte(
+			char c) {
+		return (byte) "0123456789ABCDEF".indexOf(c);
+	}
+
+	
+	public static boolean hasZenkaku(
+			String input) {
+		boolean result = false;
+		String fieldValueStr = input.toString();
+		for (int i = 0; i < fieldValueStr.length(); i++) {
+			char checkChar = fieldValueStr.charAt(i);
+			if (HANKAKU_LST.indexOf(checkChar) < 0 && HANKAKU_KASATAHA_LST.indexOf(checkChar) < 0 && HANKAKU_HA_LST.indexOf(checkChar) < 0) {
+				
+				result = true;
+				break;
+			}
+		}
+		return result;
+	}
+
+	
+	public static boolean isZenkaku(
+			String input) {
+		boolean result = true;
+		String fieldValueStr = input.toString();
+		for (int i = 0; i < fieldValueStr.length(); i++) {
+			char checkChar = fieldValueStr.charAt(i);
+			if (HANKAKU_LST.indexOf(checkChar) < 0 && HANKAKU_KASATAHA_LST.indexOf(checkChar) < 0 && HANKAKU_HA_LST.indexOf(checkChar) < 0) {
+				
+				result = false;
+				break;
+			}
+		}
+		return result;
+	}
+
+	
+	public static String getKanaUpper(
+			String input) {
+		String outText = input;
+		for (int i = 0; i < KANA_LOWER.length; i++) {
+			outText = outText.replace(KANA_LOWER[i], KANA_UPPER[i]);
+		}
+		return outText;
+	}
+
+	
+	public static String[] getArrayByLinefeedCode(
+			String input) {
+		return input == null ? null : input.split(WINDOWS_LINE_SEPARATOR_EXPR);
+	}
+
+	
+	public static String removeLinefeedCode(
+			String input) {
+		return input == null ? null : input.replace(LF, EMPTY);
+	}
+
+	
+	public static String[] splitByNum(
+			String input,
+			int num) {
+
+		int i = Integer.valueOf(new BigDecimal(input.length()).divide(new BigDecimal(num), BigDecimal.ROUND_UP).toString());
+		String[] output = new String[i];
+
+		for (int j = 0; j < i; j++) {
+			if (num > input.length()) {
+				output[j] = input;
+			} else {
+				output[j] = input.substring(0, num);
+				input = input.substring(num);
+			}
+
+		}
+		return output;
+	}
+
+	
+	public static String[] splitByByteNum(
+			String input,
+			int num) {
+
+		byte[] inputByteArray = input.getBytes();
+		int i = Integer.valueOf(new BigDecimal(inputByteArray.length).divide(new BigDecimal(num), BigDecimal.ROUND_UP).toString());
+		String[] output = new String[i];
+		int index = 0;
+		for (int j = 0; j < i; j++) {
+			if (index + num > inputByteArray.length) {
+				output[j] = new String(inputByteArray, index, inputByteArray.length - index);
+			} else {
+				output[j] = new String(inputByteArray, index, num);
+				index = index + num;
+			}
+
+		}
+		return output;
+	}
+
+	
+	public static String trimString(
+			String value,
+			int mode,
+			String trimString) {
+
+		if (value == null || trimString == null || trimString.length() > value.length()) {
+			return value;
+		}
+		if (value.indexOf(trimString) == 0 && mode == 0) {
+			value = value.replaceFirst(trimString, EMPTY);
+		} else if (value.lastIndexOf(trimString) == value.length() - trimString.length() && mode == 1) {
+			value = value.substring(0, value.length() - trimString.length());
+		} else if (mode == 2) {
+			value = value.replace(trimString, EMPTY);
+		}
+
+		return value;
+	}
+
+	
+	public static String blobToString(
+			Blob blob) {
+		if (blob == null) {
+			return null;
+		}
+		try {
+			return new String(blob.getBytes((long) 1, (int) blob.length()));
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new SystemException(e);
+		}
+	}
+
+	
+	public static byte[] blobToBytes(
+			Blob blob) {
+		if (blob == null) {
+			return null;
+		}
+		try {
+			return blob.getBytes((long) 1, (int) blob.length());
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new SystemException(e);
+		}
+	}
+
+	
+	public static String mergeString(
+			String template,
+			final String... keys) {
+		if (keys == null) {
+			return null;
+		}
+		StringBuilder resultString = new StringBuilder();
+		List<Integer> tempList = new ArrayList<Integer>();
+		for (int i = 0; i < keys.length; i++) {
+			if (template == null) {
+				resultString.append(keys[i]);
+			} else {
+				for (int j = 0; j < keys[i].length(); j++) {
+					char c = keys[i].charAt(j);
+					tempList.add(template.indexOf(c));
+				}
+			}
+		}
+		if (CollectionUtil.isNotEmpty(tempList)) {
+			List<Integer> sortedList = CollectionUtil.sortAsc(tempList);
+			for (int k = 0; k < sortedList.size(); k++) {
+				int index = sortedList.get(k);
+				if (index != -1) {
+					resultString.append(template.charAt(index));
+				}
+			}
+		}
+		return resultString.toString();
+	}
+
+	
+	public static List<String> mergeStringToList(
+			String mode,
+			String[]... inputArrays) {
+		List<String> outList = null;
+		if (inputArrays != null) {
+			outList = new ArrayList<String>();
+			for (String[] input : inputArrays) {
+				if (input != null) {
+					for (String value : input) {
+						if (isNotEmpty(value) && !outList.contains(trimRight(value))) {
+							outList.add(trimRight(value));
+						}
+					}
+				}
+			}
+		}
+		if ("1".equals(mode)) {
+			outList = CollectionUtil.sortAsc(outList);
+		} else if ("2".equals(mode)) {
+			outList = CollectionUtil.sortDesc(outList);
+		}
+
+		return outList;
+	}
+	
+	public static String substringBetween(String target, String start, String end ){
+		return StringUtils.substringBetween(target,start,end);
+	}
+}

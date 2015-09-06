@@ -1,0 +1,77 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.view;
+
+import com.maxiaohua.genealogy.main.db.view.support.VLicencePlateDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("VLICENCE_PLATE")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class VLicencePlateDTO extends VLicencePlateDTOSupport implements java.io.Serializable, Comparable<VLicencePlateDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LICENCE_PLATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
+	private String licencePlate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDERBY")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long orderby = null;
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getLicencePlate() {
+		return this.licencePlate;
+	}
+
+	public void setLicencePlate(
+			String licencePlate) {
+		this.licencePlate = licencePlate;
+	}
+
+	public Long getorderby() {
+		return this.orderby;
+	}
+
+	public void setorderby(
+			Long orderby) {
+		this.orderby = orderby;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			VLicencePlateDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

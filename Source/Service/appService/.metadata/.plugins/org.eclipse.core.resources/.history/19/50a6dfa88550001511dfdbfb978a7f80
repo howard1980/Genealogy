@@ -1,0 +1,126 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 上传工作图片的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("上传工作图片")
+public class SsUpdateOrderEvidenceInDTO implements java.io.Serializable, Comparable<SsUpdateOrderEvidenceInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 工作组ID  
+	*/
+	@Alias("工作组ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer workerID = null;
+
+	/**
+	* <code>工作组ID</code>返回
+	* @return <code>工作组ID</code>
+	*/
+	public Integer getWorkerID() {
+		return this.workerID;
+	}
+
+	/**
+	* <code>workerID</code>设定
+	* @param workerID　<code>workerID</code>设定值
+	*/
+	public void setWorkerID(
+			Integer workerID) {
+		this.workerID = workerID;
+	}
+
+	/**
+	* 订单号  
+	*/
+	@Alias("订单号")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long orderNO = null;
+
+	/**
+	* <code>订单号</code>返回
+	* @return <code>订单号</code>
+	*/
+	public Long getOrderNO() {
+		return this.orderNO;
+	}
+
+	/**
+	* <code>orderNO</code>设定
+	* @param orderNO　<code>orderNO</code>设定值
+	*/
+	public void setOrderNO(
+			Long orderNO) {
+		this.orderNO = orderNO;
+	}
+
+	/**
+	* 清洗前证据  
+	*/
+	@Alias("清洗前证据")
+	private String[] beforePic = null;
+
+	/**
+	* <code>清洗前证据</code>返回
+	* @return <code>清洗前证据</code>
+	*/
+	public String[] getBeforePic() {
+		return this.beforePic;
+	}
+
+	/**
+	* <code>beforePic</code>设定
+	* @param beforePic　<code>beforePic</code>设定值
+	*/
+	public void setBeforePic(
+			String[] beforePic) {
+		this.beforePic = beforePic;
+	}
+
+	/**
+	* 清洗后证据  
+	*/
+	@Alias("清洗后证据")
+	private String[] afterPic = null;
+
+	/**
+	* <code>清洗后证据</code>返回
+	* @return <code>清洗后证据</code>
+	*/
+	public String[] getAfterPic() {
+		return this.afterPic;
+	}
+
+	/**
+	* <code>afterPic</code>设定
+	* @param afterPic　<code>afterPic</code>设定值
+	*/
+	public void setAfterPic(
+			String[] afterPic) {
+		this.afterPic = afterPic;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsUpdateOrderEvidenceInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

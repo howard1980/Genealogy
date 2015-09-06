@@ -1,0 +1,16 @@
+package com.beetlestech.nfe.main.biz.a01;
+
+import java.sql.Date;
+
+import com.beetlestech.nfe.main.biz.a01.dto.OrderInfoDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerGroupBizDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerInfoDTO;
+
+public interface HbWorker {
+	WorkerGroupBizDTO Login(String user, String password);
+	void Logout(Integer workerID);
+	void updateGPS(Integer workerID, Double longitude, Double latitude );
+	OrderInfoDTO[] getOrderHistoryArray(Integer workerID, Date start, Date end);
+	OrderInfoDTO[] getOrderWaitArray(Integer workerID);
+	WorkerInfoDTO[] getNearWorker(Float longitude, Float latitude, String cityCode);
+}

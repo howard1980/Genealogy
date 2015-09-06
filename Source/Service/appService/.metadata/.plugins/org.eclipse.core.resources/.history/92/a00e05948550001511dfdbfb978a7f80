@@ -1,0 +1,73 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.CitiesDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class CitiesDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "CITIES_INSERT";
+
+	public static final String FULL_UPDATE = "CITIES_FULL_UPDATE";
+
+	public static final String UPDATE = "CITIES_UPDATE";
+
+	public static final String DELETE = "CITIES_DELETE";
+
+	public static final String FIND = "CITIES_FIND";
+
+	public static final String FIND_FOR_UPDATE = "CITIES_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "CITIES_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "CITIES_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "CITIES_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "CITIES_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "CITIES_SQL_SEARCH";
+
+	public static final String COUNT = "CITIES_COUNT";
+
+	public static final String COUNT_OR = "CITIES_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "CITIES_COUNT_SEARCH";
+
+	public static final String COLUMN_CITY_CODE = "CITY_CODE";
+
+	public static final String COLUMN_NAME = "NAME";
+
+	public static final String COLUMN_LATITUDUE = "LATITUDUE";
+
+	public static final String COLUMN_LONGITUDE = "LONGITUDE";
+
+	public static final String TABLE = "CITIES";
+
+	public static CitiesDTO setDefaultValue() {
+		CitiesDTO defaultDTO = new CitiesDTO();
+
+		defaultDTO.setCityCode(StringUtil.EMPTY);
+
+		defaultDTO.setName(StringUtil.EMPTY);
+
+		defaultDTO.setLatitudue(0.0);
+
+		defaultDTO.setLongitude(0.0);
+
+		return defaultDTO;
+	}
+}

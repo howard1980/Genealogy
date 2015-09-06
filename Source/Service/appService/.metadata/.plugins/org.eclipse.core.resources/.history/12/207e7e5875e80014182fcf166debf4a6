@@ -1,0 +1,32 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.a01.HbAccount;
+import com.beetlestech.nfe.main.service.a01.dto.SsCarkeeperPayInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsCarkeeperPayOutDTO;
+
+public class SsCarkeeperPay extends AbstractService<SsCarkeeperPayOutDTO, SsCarkeeperPayInDTO> {
+	@AutoInject
+	private HbAccount hbAccount;
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsCarkeeperPayOutDTO execute(
+			SsCarkeeperPayInDTO ssCarkeeperPayInDTO) {
+		SsCarkeeperPayOutDTO ssCarkeeperPayOutDTO = new SsCarkeeperPayOutDTO();
+		hbAccount.paySXXC(ssCarkeeperPayInDTO.getCustomerID(), ssCarkeeperPayInDTO.getOrderID());
+		ssCarkeeperPayOutDTO.setResult(true);//TODO check result
+		return ssCarkeeperPayOutDTO;
+	}
+}

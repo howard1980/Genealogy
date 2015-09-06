@@ -1,0 +1,104 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 更新评价的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("更新评价")
+public class SsUpdateEvaluationInDTO implements java.io.Serializable, Comparable<SsUpdateEvaluationInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 客户ID  
+	*/
+	@Alias("客户ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long customerID = null;
+
+	/**
+	* <code>客户ID</code>返回
+	* @return <code>客户ID</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* 订单ID  
+	*/
+	@Alias("订单ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long orderID = null;
+
+	/**
+	* <code>订单ID</code>返回
+	* @return <code>订单ID</code>
+	*/
+	public Long getOrderID() {
+		return this.orderID;
+	}
+
+	/**
+	* <code>orderID</code>设定
+	* @param orderID　<code>orderID</code>设定值
+	*/
+	public void setOrderID(
+			Long orderID) {
+		this.orderID = orderID;
+	}
+
+	/**
+	* 评价等级  
+	*/
+	@Alias("评价等级")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer leve = null;
+
+	/**
+	* <code>评价等级</code>返回
+	* @return <code>评价等级</code>
+	*/
+	public Integer getLeve() {
+		return this.leve;
+	}
+
+	/**
+	* <code>leve</code>设定
+	* @param leve　<code>leve</code>设定值
+	*/
+	public void setLeve(
+			Integer leve) {
+		this.leve = leve;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsUpdateEvaluationInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

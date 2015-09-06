@@ -7,7 +7,8 @@
 //
 
 #import "MXHFrameWork.h"
-#import "IntroductionViewController.h"
+#import "Genealogy-swift.h"
+#import "GuidViewController.h"
 
 @interface MXHFrameWork ()
 @property (nonatomic, readonly) UIWindow *mxhWindow;
@@ -60,12 +61,7 @@
         {
             [[NSUserDefaults standardUserDefaults]setObject:@"false" forKey:@"isFirst"];
             
-            // Added Introduction View Controller
-            NSArray *coverImageNames = [dict objectForKey:@"CoverImage"];
-            NSArray *backgroundImageNames = [dict objectForKey:@"BackgroundImage"];
-            IntroductionViewController *introductionView = [[IntroductionViewController alloc] initWithCoverImageNames:coverImageNames backgroundImageNames:backgroundImageNames];
-            
-            return introductionView;
+            return _guidViewController;
         }
     }
 

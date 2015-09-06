@@ -1,0 +1,37 @@
+package com.maxiaohua.genealogy.fw.core.exception.impl;
+
+import com.maxiaohua.genealogy.fw.core.exception.ValidationException;
+import com.maxiaohua.genealogy.fw.core.message.Message;
+import com.maxiaohua.genealogy.fw.core.service.ServiceResponse;
+import com.maxiaohua.genealogy.fw.core.util.CompareUtil;
+
+
+public class ValidationExceptionHandlerImpl extends AbstractExceptionHandler {
+
+	
+	@Override
+	protected void postAction(
+			ServiceResponse serviceResponse,
+			Throwable e) {
+
+		if (e instanceof ValidationException) {
+			ValidationException vadEx = (ValidationException) e;
+			for (int i = 0; i < vadEx.size(); i++) {
+				String message = messageProperties.get(vadEx.getMessageId(i), vadEx.getParameters(i));
+				String messageContent = messageProperties.get(vadEx.getMessageId(i));
+				String messageType = null;
+				String messageSkip = null;
+				if (!CompareUtil.equalTo(message, messageContent)) {
+					String[] messageArray = messageContent.split(",");
+					messageType = messageArray[0];
+					messageSkip = messageArray[1];
+				}
+				errorLogger.writeErrorLog(new Message(vadEx.getMessageId(i), vadEx.getParameters(i)));
+				appLogger.error(new Message(vadEx.getMessageId(i), vadEx.getParameters(i)), e);
+				debugLogger.error(new Message(vadEx.getMessageId(i), vadEx.getParameters(i)), e);
+				serviceResponse.addExceptionMessage(new Message(message, vadEx.getMessageId(i), vadEx.getParameters(i), messageType, messageSkip));
+			}
+		}
+	}
+
+}

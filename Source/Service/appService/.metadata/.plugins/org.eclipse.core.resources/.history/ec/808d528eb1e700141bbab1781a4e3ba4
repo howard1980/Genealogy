@@ -1,0 +1,52 @@
+package com.beetlestech.nfe.main.biz.a01.impl;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.main.biz.a01.HbGetCidtyCode;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+
+public class HbGetCityCodeImpl extends AbstractDBLogic implements HbGetCidtyCode,
+		HbMessageCode, CommonConstant, CtgCodeConstant {
+
+	@Override
+	public String getCityCode( Double latitude, Double longitude  ) {
+		
+		String urlStr = "http://api.map.baidu.com/geocoder/v2/?ak=2IDbgTIUGjgVpv2rrbQZHY86&location="+latitude+","+longitude+"&output=xml";
+		
+		try {
+			URL url = new URL(urlStr);
+			BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
+			
+			StringBuffer contentBuffer = new StringBuffer();
+			
+			String line = null;
+			while(  (line=in.readLine())!=null ){
+				contentBuffer.append(line);
+			}
+			//TODO
+			//JSONParserImpl jsonUtil = new JSONParserImpl();
+			//jsonUtil.parse(contentBuffer.toString(), HashMap.class, genericType);
+			
+			String content = contentBuffer.toString();
+			if(content.indexOf("cityCode")<0){
+				return null;
+			}
+			content = content.substring(content.indexOf("<cityCode>")+10);
+			content = content.substring(0,content.indexOf("</cityCode>"));
+			
+			return content;
+		} catch ( Exception e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+ 
+ 
+
+}

@@ -1,0 +1,8 @@
+/* NFE
+* (C) Copyright Beetlestech , Ltd. 2014, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.biz.com;
+
+public interface HbJPush {
+	void updateCustomerJPush(Long customerID, String registrationID);
+}

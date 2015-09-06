@@ -1,0 +1,55 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 获得密码的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得密码")
+public class SsGetPasswordInDTO implements java.io.Serializable, Comparable<SsGetPasswordInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 用户名/电话号  
+	*/
+	@Alias("用户名/电话号")
+	private String user = null;
+
+	/**
+	* <code>用户名/电话号</code>返回
+	* @return <code>用户名/电话号</code>
+	*/
+	public String getUser() {
+		return this.user;
+	}
+
+	/**
+	* <code>user</code>设定
+	* @param user　<code>user</code>设定值
+	*/
+	public void setUser(
+			String user) {
+		this.user = user;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetPasswordInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

@@ -1,0 +1,178 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.view.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.view.VOrderInfoDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VOrderInfoDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VORDER_INFO_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VORDER_INFO_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VORDER_INFO_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VORDER_INFO_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VORDER_INFO_SQL_SEARCH";
+
+	public static final String COUNT = "VORDER_INFO_COUNT";
+
+	public static final String COUNT_OR = "VORDER_INFO_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VORDER_INFO_COUNT_SEARCH";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_WASH_ORDER_ID = "WASH_ORDER_ID";
+
+	public static final String COLUMN_ORDER_NO = "ORDER_NO";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
+	public static final String COLUMN_LICENCE_PLATE = "LICENCE_PLATE";
+
+	public static final String COLUMN_REQUEST_DATE = "REQUEST_DATE";
+
+	public static final String COLUMN_REQUEST_TIME = "REQUEST_TIME";
+
+	public static final String COLUMN_CAR_WASH_ID = "CAR_WASH_ID";
+
+	public static final String COLUMN_WASH_DATE = "WASH_DATE";
+
+	public static final String COLUMN_WASH_TIME = "WASH_TIME";
+
+	public static final String COLUMN_PAY_TYPE = "PAY_TYPE";
+
+	public static final String COLUMN_STATUS = "STATUS";
+
+	public static final String COLUMN_WASH_ADDRESS = "WASH_ADDRESS";
+
+	public static final String COLUMN_MOBILENO = "MOBILENO";
+
+	public static final String COLUMN_SCORE = "SCORE";
+
+	public static final String COLUMN_AMMOUNT = "AMMOUNT";
+
+	public static final String COLUMN_PAYMENT = "PAYMENT";
+
+	public static final String COLUMN_WORKER_GROUP_ID = "WORKER_GROUP_ID";
+
+	public static final String COLUMN_GROUP_NAME = "GROUP_NAME";
+
+	public static final String COLUMN_ORDER_STATUS = "ORDER_STATUS";
+
+	public static final String COLUMN_LATITUDE = "LATITUDE";
+
+	public static final String COLUMN_LONGITUDE = "LONGITUDE";
+
+	public static final String COLUMN_GROUP_SERVICE_ID = "GROUP_SERVICE_ID";
+
+	public static final String COLUMN_EVIDENCE_PATH_BEFORE = "EVIDENCE_PATH_BEFORE";
+
+	public static final String COLUMN_CASH_COUPON_ID = "CASH_COUPON_ID";
+
+	public static final String COLUMN_NAME = "NAME";
+
+	public static final String COLUMN_DESCRIPTION = "DESCRIPTION";
+
+	public static final String COLUMN_COUPON_AMMOUNT = "COUPON_AMMOUNT";
+
+	public static final String COLUMN_START_DATE = "START_DATE";
+
+	public static final String COLUMN_END_DATE = "END_DATE";
+
+	public static final String COLUMN_COUPON_STATUS = "COUPON_STATUS";
+
+	public static final String COLUMN_EVIDENCE_PATH_AFTER = "EVIDENCE_PATH_AFTER";
+
+	public static final String TABLE = "VORDER_INFO";
+
+	public static VOrderInfoDTO setDefaultValue() {
+		VOrderInfoDTO defaultDTO = new VOrderInfoDTO();
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setWashOrderID(0l);
+
+		defaultDTO.setOrderNO(StringUtil.EMPTY);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setLicencePlate(StringUtil.EMPTY);
+
+		defaultDTO.setRequestDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setRequestTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setCarWashID(0l);
+
+		defaultDTO.setWashDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setWashTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setPayType(0);
+
+		defaultDTO.setStatus(0);
+
+		defaultDTO.setWashAddress(StringUtil.EMPTY);
+
+		defaultDTO.setMobileNo(StringUtil.EMPTY);
+
+		defaultDTO.setScore(0);
+
+		defaultDTO.setAmmount(new java.math.BigDecimal(0));
+
+		defaultDTO.setPayment(new java.math.BigDecimal(0));
+
+		defaultDTO.setWorkerGroupID(0);
+
+		defaultDTO.setGroupName(StringUtil.EMPTY);
+
+		defaultDTO.setOrderStatus(0);
+
+		defaultDTO.setLatitude(0.0);
+
+		defaultDTO.setLongitude(0.0);
+
+		defaultDTO.setGroupServiceID(StringUtil.EMPTY);
+
+		defaultDTO.setEvidencePathBefore(StringUtil.EMPTY);
+
+		defaultDTO.setCASHCOUPONID(0);
+
+		defaultDTO.setName(StringUtil.EMPTY);
+
+		defaultDTO.setDescription(StringUtil.EMPTY);
+
+		defaultDTO.setCouponAmmount(new java.math.BigDecimal(0));
+
+		defaultDTO.setStartDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setEndDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCouponStatus(0);
+
+		defaultDTO.setEvidencePathAfter(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

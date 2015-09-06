@@ -1,0 +1,79 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.RepairShopProductDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("REPAIR_SHOP_PRODUCT")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class RepairShopProductDTO extends RepairShopProductDTOSupport implements java.io.Serializable, Comparable<RepairShopProductDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SHOP_SERVICE_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long shopServiceID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REPAIR_SHOP_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long repairShopID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_PRODUCT_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long serviceProductID = null;
+
+	public Long getShopServiceID() {
+		return this.shopServiceID;
+	}
+
+	public void setShopServiceID(
+			Long shopServiceID) {
+		this.shopServiceID = shopServiceID;
+	}
+
+	public Long getRepairShopID() {
+		return this.repairShopID;
+	}
+
+	public void setRepairShopID(
+			Long repairShopID) {
+		this.repairShopID = repairShopID;
+	}
+
+	public Long getServiceProductID() {
+		return this.serviceProductID;
+	}
+
+	public void setServiceProductID(
+			Long serviceProductID) {
+		this.serviceProductID = serviceProductID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			RepairShopProductDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

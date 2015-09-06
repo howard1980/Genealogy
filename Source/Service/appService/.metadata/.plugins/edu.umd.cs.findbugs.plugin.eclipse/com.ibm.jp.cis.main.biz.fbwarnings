@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="11" timestamp="1399107057098" analysisTimestamp="1399107056008" release="">
+  <Project projectName="com.ibm.jp.cis.main.biz">
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.biz\bin\com\ibm\jp\cis\main\biz\com\impl\HbAccesslogImpl.class</Jar>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.main.biz\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin</AuxClasspathEntry>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.main.biz\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" name="authenticateLDAP" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/ibm/jp/cis/main/biz/com/dto/AuthResultDTO;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="296" end="436" startBytecode="0" endBytecode="1753" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="319" end="319" startBytecode="156" endBytecode="156" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" name="authenticateLDAP" signature="(Ljava/lang/String;Ljava/lang/String;)Lcom/ibm/jp/cis/main/biz/com/dto/AuthResultDTO;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="296" end="436" startBytecode="0" endBytecode="1753" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="334" end="334" startBytecode="246" endBytecode="246" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" abbrev="Dm" category="I18N" first="1">
+    <Class classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" name="passwordPolicyCheckForLDAP" signature="(Ljava/lang/String;Ljava/lang/String;Lcom/ibm/jp/cis/main/db/view/Vstaffm2DTO;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="714" end="776" startBytecode="0" endBytecode="907" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="&lt;init&gt;" signature="([B)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="732" end="732" startBytecode="132" endBytecode="132" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" first="1">
+    <Class classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" name="updatePasswordLDAP" signature="(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="786" end="823" startBytecode="0" endBytecode="551" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="802" end="802" startBytecode="105" endBytecode="105" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Field classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" name="LDAP_ATTRS_PEOPLE" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Field>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="161" end="161" startBytecode="24" endBytecode="24" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" abbrev="MS" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Field classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" name="LDAP_ATTRS_PWD_POLICY" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Field>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.com.impl.HbAuthenticationImpl" start="166" end="166" startBytecode="68" endBytecode="68" sourcefile="HbAuthenticationImpl.java" sourcepath="com/ibm/jp/cis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" first="9">
+    <Class classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" name="buildMealJisiSummary" signature="(Lcom/ibm/jp/cis/main/db/tbl/Ta31sykDTO;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="1062" end="1151" startBytecode="0" endBytecode="1057" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="1091" end="1091" startBytecode="258" endBytecode="258" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_CTOR" priority="2" abbrev="Dm" category="PERFORMANCE" first="9">
+    <Class classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" name="buildMealJisiSummary" signature="(Lcom/ibm/jp/cis/main/db/tbl/Ta31sykDTO;)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="1062" end="1151" startBytecode="0" endBytecode="1057" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="1092" end="1092" startBytecode="269" endBytecode="269" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" abbrev="RCN" category="STYLE" first="9">
+    <Class classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" name="getSijiUkeSummaryArrayOfPatient" signature="(Ljava/lang/String;Ljava/sql/Date;Ljava/sql/Date;Ljava/sql/Time;Ljava/sql/Time;Ljava/sql/Date;)[Lcom/ibm/jp/cis/main/biz/e05/dto/SijiUkeSummaryDTO;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="519" end="623" startBytecode="0" endBytecode="1087" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Method>
+    <LocalVariable name="executeTime" register="13" pc="160" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" name="getExecTime" signature="(Lcom/ibm/jp/cis/main/db/view/Ve05ndtlDTO;Lcom/ibm/jp/cis/main/db/tbl/TemridxDTO;)Ljava/lang/String;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="2010" end="2101" startBytecode="0" endBytecode="675" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java"/>
+    </Method>
+    <SourceLine classname="com.ibm.jp.cis.main.biz.e05.impl.HbSijiUkeImpl" start="551" end="551" startBytecode="162" endBytecode="162" sourcefile="HbSijiUkeImpl.java" sourcepath="com/ibm/jp/cis/main/biz/e05/impl/HbSijiUkeImpl.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 3 May 2014 16:50:54 +0800" total_classes="1" referenced_classes="175" total_bugs="9" total_size="56" num_packages="2" vm_version="24.0-b56" cpu_seconds="1.11" clock_seconds="1.09" peak_mbytes="328.88" alloc_mbytes="494.94" gc_seconds="0.03" priority_2="6" priority_1="3">
+    <PackageStats package="com.ibm.jp.cis.main.biz.com.impl" total_bugs="6" total_types="2" total_size="56" priority_2="3" priority_1="3">
+      <ClassStats class="com.ibm.jp.cis.main.biz.com.impl.HbAccesslogImpl" sourceFile="HbAccesslogImpl.java" interface="false" size="56" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="592" invocations="909" avgMicrosecondsPerInvocation="651" maxMicrosecondsPerInvocation="21227" standardDeviationMircosecondsPerInvocation="821"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="104" invocations="905" avgMicrosecondsPerInvocation="115" maxMicrosecondsPerInvocation="15814" standardDeviationMircosecondsPerInvocation="566"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="59" invocations="2" avgMicrosecondsPerInvocation="29646" maxMicrosecondsPerInvocation="48471" standardDeviationMircosecondsPerInvocation="18825"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="32" invocations="175" avgMicrosecondsPerInvocation="186" maxMicrosecondsPerInvocation="18204" standardDeviationMircosecondsPerInvocation="1374"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1390365426600" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1390365426609" release="" codeSize="630" numClasses="2"/>
+    <AppVersion sequence="2" timestamp="1320165372380" release="" codeSize="858" numClasses="2"/>
+    <AppVersion sequence="3" timestamp="1397203842004" release="" codeSize="145" numClasses="1"/>
+    <AppVersion sequence="4" timestamp="1397203860303" release="" codeSize="146" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1397203894062" release="" codeSize="148" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1397203926432" release="" codeSize="148" numClasses="1"/>
+    <AppVersion sequence="7" timestamp="1397204015929" release="" codeSize="150" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1397204047847" release="" codeSize="40" numClasses="2"/>
+    <AppVersion sequence="9" timestamp="1398840099197" release="" codeSize="1023" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1398909016106" release="" codeSize="2062" numClasses="2"/>
+  </History>
+</BugCollection>

@@ -1,0 +1,47 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import java.util.List;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.util.CollectionUtil;
+import com.beetlestech.nfe.main.biz.a01.HbCashCoupon;
+import com.beetlestech.nfe.main.biz.a01.dto.CashCouponDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetCashCouponInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetCashCouponOutDTO;
+
+public class SsGetCashCoupon extends
+		AbstractService<SsGetCashCouponOutDTO, SsGetCashCouponInDTO> {
+
+	@AutoInject
+	private HbCashCoupon HbCashCoupon;
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang
+	 * .Object)
+	 */
+	@Override
+	public SsGetCashCouponOutDTO execute(
+			SsGetCashCouponInDTO ssGetCashCouponInDTO) {
+		SsGetCashCouponOutDTO ssGetCashCouponOutDTO = new SsGetCashCouponOutDTO();
+
+		List<CashCouponDTO> list = HbCashCoupon.getCashCoupon(
+				ssGetCashCouponInDTO.getCustomerID(),
+				ssGetCashCouponInDTO.getDate(),
+				ssGetCashCouponInDTO.getServiceItemID(),
+				ssGetCashCouponInDTO.getDataType());
+		if (!CollectionUtil.isEmpty(list)) {
+			CashCouponDTO[] arr = list.toArray(new CashCouponDTO[list.size()]);
+			ssGetCashCouponOutDTO.setCashCouponArray(arr);
+		}
+
+		return ssGetCashCouponOutDTO;
+	}
+}

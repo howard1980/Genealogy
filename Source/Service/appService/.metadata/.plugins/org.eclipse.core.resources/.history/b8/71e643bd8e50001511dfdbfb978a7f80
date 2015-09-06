@@ -1,0 +1,13 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.RepairShopDTO;
+
+public interface HbRepairShop {
+	
+	List<RepairShopDTO>  getRepairShops(Long serviceProductID, Long repairServiceID, Integer modelID);
+	
+	RepairShopDTO getRepairShop(Long repairShopID);
+	
+}

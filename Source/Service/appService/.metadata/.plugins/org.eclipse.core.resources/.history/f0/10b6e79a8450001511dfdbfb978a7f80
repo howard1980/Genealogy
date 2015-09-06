@@ -1,0 +1,134 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.CityAreaDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CITY_AREA")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CityAreaDTO extends CityAreaDTOSupport implements java.io.Serializable, Comparable<CityAreaDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CITY_AREA_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Integer cityAreaID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CITY_CODE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 4, max = 4)
+	private String cityCode = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WORKER_GROUP_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer workerGroupID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OPENFLG")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer openFlg = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NEED")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer need = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CEILING")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer ceiling = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_COUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer orderCount = null;
+
+	public Integer getCityAreaID() {
+		return this.cityAreaID;
+	}
+
+	public void setCityAreaID(
+			Integer cityAreaID) {
+		this.cityAreaID = cityAreaID;
+	}
+
+	public String getCityCode() {
+		return this.cityCode;
+	}
+
+	public void setCityCode(
+			String cityCode) {
+		this.cityCode = cityCode;
+	}
+
+	public Integer getWorkerGroupID() {
+		return this.workerGroupID;
+	}
+
+	public void setWorkerGroupID(
+			Integer workerGroupID) {
+		this.workerGroupID = workerGroupID;
+	}
+
+	public Integer getOpenFlg() {
+		return this.openFlg;
+	}
+
+	public void setOpenFlg(
+			Integer openFlg) {
+		this.openFlg = openFlg;
+	}
+
+	public Integer getNeed() {
+		return this.need;
+	}
+
+	public void setNeed(
+			Integer need) {
+		this.need = need;
+	}
+
+	public Integer getCeiling() {
+		return this.ceiling;
+	}
+
+	public void setCeiling(
+			Integer ceiling) {
+		this.ceiling = ceiling;
+	}
+
+	public Integer getOrderCount() {
+		return this.orderCount;
+	}
+
+	public void setOrderCount(
+			Integer orderCount) {
+		this.orderCount = orderCount;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CityAreaDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

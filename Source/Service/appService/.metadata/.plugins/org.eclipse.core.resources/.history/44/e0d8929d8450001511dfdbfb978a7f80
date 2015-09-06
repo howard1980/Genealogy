@@ -1,0 +1,56 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.beetlestech.nfe.main.biz.a01.dto.TechnicianDTO;
+
+/**
+ * 技师登录的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("技师登录")
+public class SsTechnicianLoginOutDTO implements java.io.Serializable, Comparable<SsTechnicianLoginOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 技师  
+	*/
+	@Alias("技师")
+	private TechnicianDTO technician = null;
+
+	/**
+	* <code>技师</code>返回
+	* @return <code>技师</code>
+	*/
+	public TechnicianDTO getTechnician() {
+		return this.technician;
+	}
+
+	/**
+	* <code>technician</code>设定
+	* @param technician　<code>technician</code>设定值
+	*/
+	public void setTechnician(
+			TechnicianDTO technician) {
+		this.technician = technician;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsTechnicianLoginOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

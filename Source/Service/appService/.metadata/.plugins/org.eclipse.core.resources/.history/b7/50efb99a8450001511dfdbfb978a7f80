@@ -1,0 +1,843 @@
+package com.beetlestech.nfe.main.biz.constant;
+
+import com.maxiaohua.genealogy.fw.core.message.MessageCode;
+
+/**
+ * Biz用メッセージ・コードを収容するインターフェースです。
+ *
+ * @author IBM GDC
+ */
+public interface HbMessageCode extends MessageCode {
+
+    /**
+     * 該当する受付情報が見つかりません。
+     */
+    public static final String M10010WS = "M10010WS";
+
+    /**
+     * 受付情報の更新に失敗しました。
+     */
+    public static final String M10020WS = "M10020WS";
+
+    /**
+     * 予約コメントが既に別の状況に変更されています。
+     */
+    public static final String M10030WS = "M10030WS";
+
+    /**
+     * 予約コメントの更新に失敗しました。
+     */
+    public static final String M10040WS = "M10040WS";
+
+    /**
+     * 予約状況が既に別の状況に変更されています。
+     */
+    public static final String M10050WS = "M10050WS";
+
+    /**
+     * 予約状況の更新に失敗しました。
+     */
+    public static final String M10060WS = "M10060WS";
+
+    /**
+     * 診療科マスターに指定された日付で有効な科が見つかりません。
+     */
+    public static final String M10070WS = "M10070WS";
+
+    /**
+     * 診療予約枠の取得に失敗しました。
+     */
+    public static final String M10080WS = "M10080WS";
+
+    /**
+     * 入院患者情報の取得に失敗しました。
+     */
+    public static final String M10090WS = "M10090WS";
+
+    /**
+     * 病棟マスター情報の取得に失敗しました。
+     */
+    public static final String M10100WS = "M10100WS";
+
+    /**
+     * 診療科マスター情報の取得に失敗しました。
+     */
+    public static final String M10110WS = "M10110WS";
+
+    /**
+     * 患者情報の取得に失敗しました。
+     */
+    public static final String M10120WS = "M10120WS";
+
+    /**
+     * 該当する患者情報が見つかりません。
+     */
+    public static final String M10130WS = "M10130WS";
+
+    /**
+     * 患者プロフィール情報の取得に失敗しました。
+     */
+    public static final String M10140WS = "M10140WS";
+
+    /**
+     * 該当する直近検体検査結果情報が見つかりません。
+     */
+    public static final String M10150WS = "M10150WS";
+
+    /**
+     * パラメーターが無効です。
+     */
+    public static final String M10160WS = "M10160WS";
+
+    /**
+     * {0}が不正です。
+     */
+    public static final String M10170WS = "M10170WS";
+
+    /**
+     * {0}の有効期限が切れています。
+     */
+    public static final String M10180WS = "M10180WS";
+
+    /**
+     * {0}の整合性に問題があります。システム管理者へご連絡ください。
+     */
+    public static final String M10190WS = "M10190WS";
+
+    /**
+     * ホスト「{0}」の端末情報が見つかりません。デフォルト値を使います。
+     */
+    public static final String M10200WS = "M10200WS";
+
+    /**
+     * ホスト「{0}」の端末情報が見つかりません。端末情報は使用できません。
+     */
+    public static final String M10210WS = "M10210WS";
+
+    /**
+     * {0}が見つかりません。
+     */
+    public static final String M10220WS = "M10220WS";
+
+    /**
+     * カスタム設定情報の取得に失敗しました。
+     */
+    public static final String M10230WS = "M10230WS";
+
+    /**
+     * 患者保険情報の取得に失敗しました。
+     */
+    public static final String M10240WS = "M10240WS";
+
+    /**
+     * システムメニューの取得に失敗しました。
+     */
+    public static final String M10250WS = "M10250WS";
+
+    /**
+     * メニュー設定マスター(カスタム設定)が不整合です。
+     */
+    public static final String M10260WS = "M10260WS";
+
+    /**
+     * ユーザーメニュー設定(カスタム設定)の更新に失敗しました。
+     */
+    public static final String M10270WS = "M10270WS";
+
+    /**
+     * 更新対象のメニューIDが不整合です。
+     */
+    public static final String M10280WS = "M10280WS";
+
+    /**
+     * ユーザカスタム設定情報の更新に失敗しました。
+     */
+    public static final String M10290WS = "M10290WS";
+
+    /**
+     * 職種マスター情報の取得に失敗しました。
+     */
+    public static final String M10300WS = "M10300WS";
+
+    /**
+     * 看護チーム情報の取得に失敗しました。
+     */
+    public static final String M10310WS = "M10310WS";
+
+    /**
+     * パラメーターが正しく設定されていません。
+     */
+    public static final String M10320WS = "M10320WS";
+
+    /**
+     * 当該データが他者より更新されたので、最新データを取得してください。
+     */
+    public static final String M10330WS = "M10330WS";
+
+    /**
+     * カスタム設定パターンマスターの取得に失敗しました。
+     */
+    public static final String M10340WS = "M10340WS";
+
+    /**
+     * カスタム設定パターン詳細マスターの取得に失敗しました。
+     */
+    public static final String M10350WS = "M10350WS";
+
+    /**
+     * カスタム設定詳細テーブルの取得に失敗しました。
+     */
+    public static final String M10360WS = "M10360WS";
+
+    /**
+     * 指示受け状況の更新に失敗しました。
+     */
+    public static final String M10370WS = "M10370WS";
+
+    /**
+     * 予約情報の取得に失敗しました。
+     */
+    public static final String M10380WS = "M10380WS";
+
+    /**
+     * 受付情報の取得に失敗しました。
+     */
+    public static final String M10390WS = "M10390WS";
+
+    /**
+     * 現在バックアップデータは存在しません。
+     */
+    public static final String M10400WS = "M10400WS";
+
+    /**
+     * バックアップINDEXデータの更新に失敗しました。
+     */
+    public static final String M10410WS = "M10410WS";
+
+    /**
+     * 添付ファイル開けません。カルテを開いて参照してください。
+     */
+    public static final String M10420WS = "M10420WS";
+
+    /**
+     * カルテ参照歴テーブルの更新に失敗しました。
+     */
+    public static final String M10430WS = "M10430WS";
+
+    /**
+     * {0}の取得に失敗しました。
+     */
+    public static final String M10440WS = "M10440WS";
+
+    /**
+     * {0}の更新に失敗しました。
+     */
+    public static final String M10450WS = "M10450WS";
+
+    /**
+     * 他科依頼返信状況情報が不整合です。
+     */
+    public static final String M10460WS = "M10460WS";
+
+    /**
+     * 他科紹介情報の取得に失敗しました。
+     */
+    public static final String M10470WS = "M10470WS";
+
+    /**
+     * 他科紹介情報の更新に失敗しました。
+     */
+    public static final String M10480WS = "M10480WS";
+
+    /**
+     * この患者の情報を参照する権限がありません
+     */
+    public static final String M10490WS = "M10490WS";
+
+    /**
+     * 採番時にシーケンスIDの指定がありません。
+     */
+    public static final String M10500WS = "M10500WS";
+
+    /**
+     * {0}が採番できませんでした。
+     */
+    public static final String M10510WS = "M10510WS";
+
+    /**
+     * パスワードの有効期限は{0}年{1}月{2}日です。あと{3}日以内に変更してください。
+     */
+    public static final String M10520WS = "M10520WS";
+
+    /**
+     * 初期パスワードを変更してください。
+     */
+    public static final String M10530WS = "M10530WS";
+
+    /**
+     * 旧パスワードが正しくありません。
+     */
+    public static final String M10540WS = "M10540WS";
+
+    /**
+     * 新パスワードが正しくありません。
+     */
+    public static final String M10550WS = "M10550WS";
+
+    /**
+     * ログインせずに直接アクセスしたか、セッションエラーが発生した可能性があります。
+     */
+    public static final String M10560WS = "M10560WS";
+
+    /**
+     * 新パスワードが{0}を満たしていないため、変更できません
+     */
+    public static final String M10570WS = "M10570WS";
+
+    /**
+     * 新パスワードが{0}と一致するため、変更できません
+     */
+    public static final String M10580WS = "M10580WS";
+
+    /**
+     * LDAPの検索に失敗しました。
+     */
+    public static final String M10590WS = "M10590WS";
+
+    /**
+     * LDAPの更新に失敗しました。
+     */
+    public static final String M10600WS = "M10600WS";
+
+    /**
+     * LDAPのアクセスに失敗しました。
+     */
+    public static final String M10610WS = "M10610WS";
+
+    /**
+     * 初再診区分が既に別の状況に変更されています。
+     */
+    public static final String M10620WS = "M10620WS";
+
+    /**
+     * 初再診区分の更新に失敗しました。
+     */
+    public static final String M10630WS = "M10630WS";
+    
+    public static final String M10640WS = "M10640WS";
+
+    /**
+     * CISサービスインスタンス初期化に成功しました。
+     */
+    public static final String M10010CM = "M10010CM";
+
+    /**
+     * CISデータベース接続テストに成功しました。
+     */
+    public static final String M10020CM = "M10020CM";
+
+    /**
+     * CISデータベース接続テストに失敗しました。
+     */
+    public static final String M10030CM = "M10030CM";
+
+    /**
+     * ログインせずに直接アクセスしたか、セッションエラーが発生した可能性があります。
+     */
+    public static final String M10040CM = "M10040CM";
+
+    /**
+     * セッション・タイムアウト・エラーが発生しました。
+     */
+    public static final String M10050CM = "M10050CM";
+
+    /**
+     * ファイルをアップロードした時に不明なエラーが発生しました。
+     */
+    public static final String M10060CM = "M10060CM";
+
+    /**
+     * 不明なシステムエラー {0}が発生しました。
+     */
+    public static final String M10070CM = "M10070CM";
+
+    /**
+     * パスワードが正しくありません。
+     */
+    public static final String M10080CM = "M10080CM";
+
+    /**
+     * パスワードの有効期限が切れています。
+     */
+    public static final String M10090CM = "M10090CM";
+
+    /**
+     * アクセス権限がありません。
+     */
+    public static final String M10100CM = "M10100CM";
+
+    /**
+     * 旧パスワードが正しくありません。
+     */
+    public static final String M10110CM = "M10110CM";
+
+    /**
+     * 新パスワードが正しくありません。
+     */
+    public static final String M10120CM = "M10120CM";
+
+    /**
+     * アクセスキーが正しくありません。
+     */
+    public static final String M10130CM = "M10130CM";
+
+    /**
+     * レコードが存在しません。
+     */
+    public static final String M10140CM = "M10140CM";
+
+    /**
+     * 楽観ロックのエラーが発生しました。
+     */
+    public static final String M10150CM = "M10150CM";
+
+    /**
+     * 入力JSONデータの解析エラーです。
+     */
+    public static final String M10160CM = "M10160CM";
+
+    /**
+     * 無効なシステムIDです。
+     */
+    public static final String M10170CM = "M10170CM";
+
+    /**
+     * CISシステムコンテキスト初期化に失敗しました。
+     */
+    public static final String M10180CM = "M10180CM";
+
+    /**
+     * 無効なサービスIDです。
+     */
+    public static final String M10190CM = "M10190CM";
+
+    /**
+     * {0}に許可値({1})の何れかのみ入力してください。
+     */
+    public static final String M10200CM = "M10200CM";
+
+    /**
+     * {0}に{1}と同じまたは後の日付を入力してください。
+     */
+    public static final String M10210CM = "M10210CM";
+
+    /**
+     * {0}に{1}と同じまたは前の日付を入力してください。
+     */
+    public static final String M10220CM = "M10220CM";
+
+    /**
+     * {0}に{1}より後の日付を入力してください。
+     */
+    public static final String M10230CM = "M10230CM";
+
+    /**
+     * {0}に{1}より前の日付を入力してください。
+     */
+    public static final String M10240CM = "M10240CM";
+
+    /**
+     * {0}に半角英数字を入力してください。
+     */
+    public static final String M10250CM = "M10250CM";
+
+    /**
+     * {0}に有効な郵便番号形式（〒xxx-xxxx）で入力してください。
+     */
+    public static final String M10260CM = "M10260CM";
+
+    /**
+     * {0}に有効な携帯電話番号形式（xxx-xxxx-xxxx）で入力してください。
+     */
+    public static final String M10270CM = "M10270CM";
+
+    /**
+     * {0}にTrue/Falseを入力してください。
+     */
+    public static final String M10280CM = "M10280CM";
+
+    /**
+     * {0}に有効な日付（yyyy-MM-dd）を入力してください。
+     */
+    public static final String M10290CM = "M10290CM";
+
+    /**
+     * {0}に{1}より小さい数字を入力してください。
+     */
+    public static final String M10300CM = "M10300CM";
+
+    /**
+     * {0}に{1}より大きい数字を入力してください。
+     */
+    public static final String M10310CM = "M10310CM";
+
+    /**
+     * {0}に{1}と同じまたは大きい数字を入力してください。
+     */
+    public static final String M10320CM = "M10320CM";
+
+    /**
+     * {0}に有効なメールアドレス（xxxx@xxxx）を入力してください。
+     */
+    public static final String M10330CM = "M10330CM";
+
+    /**
+     * {0}に有効な電話番号形式で入力してください。
+     */
+    public static final String M10340CM = "M10340CM";
+
+    /**
+     * {0}に大文字の半角英数字を入力してください。
+     */
+    public static final String M10350CM = "M10350CM";
+
+    /**
+     * {0}に半角で入力してください。
+     */
+    public static final String M10360CM = "M10360CM";
+
+    /**
+     * {0}に整数を入力してください。
+     */
+    public static final String M10370CM = "M10370CM";
+
+    /**
+     * {0}をブランクにしないでください。
+     */
+    public static final String M10380CM = "M10380CM";
+
+    /**
+     * {0}に禁止文字({1})を入力しないでください。
+     */
+    public static final String M10390CM = "M10390CM";
+
+    /**
+     * {0}が入力必須です。
+     */
+    public static final String M10400CM = "M10400CM";
+
+    /**
+     * {0}に禁止値({1})を入力しないでください。
+     */
+    public static final String M10410CM = "M10410CM";
+
+    /**
+     * {0}に数字を入力してください。
+     */
+    public static final String M10420CM = "M10420CM";
+
+    /**
+     * {0}に指定パターン({1})で入力してください。
+     */
+    public static final String M10430CM = "M10430CM";
+
+    /**
+     * {0}に長さが最小{1}/最大{2}で入力してください。
+     */
+    public static final String M10440CM = "M10440CM";
+
+    /**
+     * {0}に有効な時刻を入力してください。
+     */
+    public static final String M10450CM = "M10450CM";
+
+    /**
+     * {0}に有効な日時を入力してください。
+     */
+    public static final String M10460CM = "M10460CM";
+
+    /**
+     * {0}に全角で入力してください。
+     */
+    public static final String M10470CM = "M10470CM";
+
+    /**
+     * {0}に全角カナで入力してください。
+     */
+    public static final String M10480CM = "M10480CM";
+
+    /**
+     * {0}に長さが最小{1}/最大{2}で入力してください。
+     */
+    public static final String M10490CM = "M10490CM";
+
+    /**
+     * {0}に半角カナで入力くしてください。
+     */
+    public static final String M10500CM = "M10500CM";
+
+    /**
+     * {0}に許可文字({1})の何れかのみ入力してください。
+     */
+    public static final String M10510CM = "M10510CM";
+
+    /**
+     * {0}に{1}と同じまたは小さい数字を入力してください。
+     */
+    public static final String M10520CM = "M10520CM";
+
+    /**
+     * {0}に{1}と同じまたは大きい数字を入力してください。
+     */
+    public static final String M10530CM = "M10530CM";
+
+    /**
+     * {0}に{1}より小さい整数を入力してください。
+     */
+    public static final String M10540CM = "M10540CM";
+
+    /**
+     * {0}に{1}より大きい整数を入力してください。
+     */
+    public static final String M10550CM = "M10550CM";
+
+    /**
+     * {0}に{1}と同じまたは小さい整数を入力してください。
+     */
+    public static final String M10560CM = "M10560CM";
+
+    /**
+     * {0}に{1}と同じまたは大きい整数を入力してください。
+     */
+    public static final String M10570CM = "M10570CM";
+
+    /**
+     * {0}に{1}と同じまたは後の時刻を入力してください。
+     */
+    public static final String M10580CM = "M10580CM";
+
+    /**
+     * {0}に{1}と同じまたは前の時刻を入力してください。
+     */
+    public static final String M10590CM = "M10590CM";
+
+    /**
+     * {0}に{1}より後の時刻を入力してください。
+     */
+    public static final String M10600CM = "M10600CM";
+
+    /**
+     * {0}に{1}より前の時刻を入力してください。
+     */
+    public static final String M10610CM = "M10610CM";
+
+    /**
+     * {0}に{1}と同じまたは後の日時を入力してください。
+     */
+    public static final String M10620CM = "M10620CM";
+
+    /**
+     * {0}に{1}と同じまたは前の日時を入力してください。
+     */
+    public static final String M10630CM = "M10630CM";
+
+    /**
+     * {0}に{1}より後の日時を入力してください。
+     */
+    public static final String M10640CM = "M10640CM";
+
+    /**
+     * {0}に{1}より前の日時を入力してください。
+     */
+    public static final String M10650CM = "M10650CM";
+
+    /**
+     * ユーザーIDまたはパスワードが正しくありません。
+     */
+    public static final String M00010WC = "M00010WC";
+    
+    /**
+     * 请输入用户名
+     */
+    public static final String M00011WC = "M00011WC";
+    
+    /**
+     * 请输入密码
+     */
+    public static final String M00012WC = "M00012WC";
+    
+    /**
+     * 用户不存在
+     */
+    public static final String M00013WC = "M00013WC";
+    
+
+    /**
+     * 検索結果が100件以上あります。
+     */
+    public static final String M00020WC = "M00020WC";
+
+    /**
+     * 検索条件に該当するデータがありません。
+     */
+    public static final String M10010WC = "M10010WC";
+
+    /**
+     * 登陆成功
+     */
+    public static final String M10020WC = "M10020WC";
+
+    /**
+     * エラーが発生しまいました、パラメータをチェックしてください。
+     */
+    public static final String M10030WC = "M10030WC";
+
+    /**
+     * セッションタイムアウトが発生しました。再度ログインしなおしてください。
+     */
+    public static final String M10040WC = "M10040WC";
+
+    /**
+     * 重要なメッセージがあります。
+     */
+    public static final String M00010AP = "M00010AP";
+
+    /**
+     * 未承認の代行オーダーがあります。
+     */
+    public static final String M00020AP = "M00020AP";
+
+    /**
+     * 未確認のカウンターサインがあります。
+     */
+    public static final String M00030AP = "M00030AP";
+
+    /**
+     * 未作成のサマリーがあります。
+     */
+    public static final String M00040AP = "M00040AP";
+
+    /**
+     * 仮登録のカルテがあります。
+     */
+    public static final String M00050AP = "M00050AP";
+    
+    public static final String M10050WC=   "M10050WC";
+    
+    public static final String M10060WC=   "M10060WC";
+    
+    public static final String M10070WC=   "M10070WC";
+    
+    public static final String  M10080WC=   "M10080WC";
+    
+    /**
+     * 用户登出失败
+     */
+    public static final String  M10105WC=   "M10105WC";
+    
+    /**
+     * 更新用户GPS失败
+     */
+    public static final String  M10106WC=   "M10106WC";
+    
+    /**
+     * 请输入GPS经度
+     */
+    public static final String  M10107WC=   "M10107WC";
+    
+    /**
+     * 请输入GPS纬度
+     */
+    public static final String  M10108WC=   "M10108WC";
+    
+    /**
+     * 获取微信PrepayID失败
+     */
+    public static final String  M10109WC=   "M10109WC";
+    
+    
+    /**
+     * 新增工作计划失败
+     */
+    public static final String  M10801WC=   "M10801WC";
+    
+    /**
+     * 更新工作计划失败
+     */
+    public static final String  M10802WC=   "M10802WC";
+    
+    /**
+     * 新增工作计划时间失败
+     */
+    public static final String  M10803WC=   "M10803WC";
+    
+    /**
+     * 删除工作计划时间失败
+     */
+    public static final String  M10804WC=   "M10804WC";
+    
+    /**
+     * 工作计划已审批，无法再进行操作
+     */
+    public static final String  M10805WC=   "M10805WC";
+    
+    /**
+     * 开始时间不能为空
+     */
+    public static final String  M10806WC=   "M10806WC";
+    
+    /**
+     * 结束时间不能为空
+     */
+    public static final String  M10807WC=   "M10807WC";
+    
+    /**
+     * 结束时间需大于开始时间
+     */
+    public static final String  M10808WC=   "M10808WC";
+    
+    /**
+     * 相关信息取得失败。
+     */
+    public static final String  M10809WC=   "M10809WC";
+    
+    /**
+     * 更新订单状态失败。
+     */
+    public static final String  M10901WC=   "M10901WC";
+    
+    /**
+     * 更新订单证明图片失败。
+     */
+    public static final String  M10902WC=   "M10902WC";
+    
+    /**
+     * 订单已支付成功不需再次支付。
+     */
+    public static final String  M11003WC=   "M11003WC";
+    
+    /**
+     * 无法取消已付款订单。
+     */
+    public static final String  M11004WC=   "M11004WC";
+    
+    /**
+     * 此区域暂未开通随行洗车服务，敬请期待。
+     */
+    public static final String  M11005WC=   "M11005WC";
+    
+    /**
+     * 余额不足不能支付订单。
+     */
+    public static final String  M11006WC=	"M11006WC";
+    
+    /**
+     * 订单待支付金额不是0元，不能使用0元订单付款。
+     */
+    public static final String  M11106WC=	"M11106WC";
+    
+    /**
+     * 您的服务项目不能使用此张代金卷。
+     */
+    public static final String  M11107WC=	"M11107WC";
+}

@@ -1,0 +1,181 @@
+package com.maxiaohua.genealogy.main.biz.a01.impl;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.main.biz.a01.HbWorkerPlan;
+import com.maxiaohua.genealogy.main.biz.a01.dto.WorkerPlanInfoDTO;
+import com.maxiaohua.genealogy.main.biz.a01.dto.WorkerPlanTimeDTO;
+import com.maxiaohua.genealogy.main.biz.a01.impl.vo.WorkerPlanQueryVO;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+import com.maxiaohua.genealogy.main.db.constant.SQLID;
+import com.maxiaohua.genealogy.main.db.tbl.GroupWorkplanDTO;
+import com.maxiaohua.genealogy.main.db.tbl.WorkplanTimeDTO;
+import com.maxiaohua.genealogy.main.db.view.VWorkerPlanDTO;
+
+public class HbWorkerPlanImpl extends AbstractDBLogic implements HbWorkerPlan,
+		HbMessageCode, CommonConstant, CtgCodeConstant {
+	/**
+	 * 工作计划情报数据
+	 */
+	protected static final String SH_INFO = "工作计划情报";
+
+	@Override
+	public void updateWorkerPlan(Integer workerID,
+			WorkerPlanInfoDTO[] WorkerPlanInfoDTO,String remarks) {
+		for (WorkerPlanInfoDTO bizDto : WorkerPlanInfoDTO) {
+			Integer flg = bizDto.getFlg();
+			
+			GroupWorkplanDTO dbDto = new GroupWorkplanDTO();
+			
+			dbDto.setWorkerGroutID(workerID);
+			dbDto.setWorkDate(bizDto.getWorkDate());
+			
+			if (flg == Integer.parseInt(WORKER_PLAN_FLAG.DELETE
+					.toString())) { // DELETE
+				
+				//  检查是否已审核
+				GroupWorkplanDTO existWorkerPlan = this.queryDAO.queryForObject(  GroupWorkplanDTO.EQUAL_SEARCH , dbDto);
+				if(existWorkerPlan!=null && (existWorkerPlan.getStatus()== Integer.parseInt(WORKER_PLAN_STATUS.APPROVED.toString() ) || existWorkerPlan.getStatus()== Integer.parseInt(WORKER_PLAN_STATUS.REJECTED.toString() ))  ){ //计划已审批，不能删除
+					createApplicationException(M10805WC, SH_INFO);
+				}
+				
+				//按 workerID 和 workDate进行删除 
+				this.updateDAO.update(SQLID.GROUP_WORKPLAN_DELETE_BY_CONDITIONS, dbDto);//, M10804WC
+				this.updateDAO.update(SQLID.WORKPLAN_TIME_DELETE_BY_CONDITIONS, dbDto);//delete  work time
+			}
+			else{	//update or INSERT
+				// INSERT UPDATE 更改操作为先删除已有记录，再新增记录，所以insert和update 都走insert接口，不走update接口
+				if (flg == Integer.parseInt(WORKER_PLAN_FLAG.INSERT
+						.toString()) ) { //|| flg == Integer.parseInt(WORKER_PLAN_FLAG.UPDATE.toString()) 
+					
+					//  检查是否已审核
+					GroupWorkplanDTO existWorkerPlan = this.queryDAO.queryForObject(  GroupWorkplanDTO.EQUAL_SEARCH , dbDto);
+					if(existWorkerPlan!=null && (existWorkerPlan.getStatus()== Integer.parseInt(WORKER_PLAN_STATUS.APPROVED.toString() ) || existWorkerPlan.getStatus()== Integer.parseInt(WORKER_PLAN_STATUS.REJECTED.toString() ))  ){ //计划已审批，不能删除 
+						//  抛出异常
+						createApplicationException(M10805WC, SH_INFO);
+					}
+					
+					//  delete befor insert
+					this.updateDAO.update(SQLID.GROUP_WORKPLAN_DELETE_BY_CONDITIONS, dbDto);//, M10804WC
+					this.updateDAO.update(SQLID.WORKPLAN_TIME_DELETE_BY_CONDITIONS, dbDto);//delete  work time
+					
+					dbDto.setFlg(bizDto.getFlg());
+					dbDto.setStatus( Integer.parseInt(WORKER_PLAN_STATUS.REQUEST.toString()) );//设置状态为已提出
+					dbDto.setRemarks(remarks);
+					dbDto.setRequestDate(new Date(System.currentTimeMillis())); //提出申请时间
+					
+					//更新工作计划表
+					this.updateDAO.updateOne(GroupWorkplanDTO.INSERT, dbDto, M10801WC);
+					if(bizDto.getWorkerPlanTime()==null){
+						return;
+					}
+					for(WorkerPlanTimeDTO bizWorkerPlanTimeDTO : bizDto.getWorkerPlanTime()){
+						
+						//检验 结束时间 开始时间
+						if(bizWorkerPlanTimeDTO.getStartTime()==null ){
+							createApplicationException(M10806WC, SH_INFO);
+						}
+						if(bizWorkerPlanTimeDTO.getEndTime()==null ){
+							createApplicationException(M10807WC, SH_INFO);
+						}
+						//结束时间需大于开始时间
+						if( bizWorkerPlanTimeDTO.getStartTime().compareTo(bizWorkerPlanTimeDTO.getEndTime())>=0){
+							createApplicationException(M10808WC, SH_INFO);
+						}
+						
+						WorkplanTimeDTO dbWorkplanTimeDTO = new WorkplanTimeDTO();
+						dbWorkplanTimeDTO.setGroupWorkPlanID(dbDto.getGroupWorkPlanID() );
+						dbWorkplanTimeDTO.setWorkTimeStart(bizWorkerPlanTimeDTO.getStartTime()); //开始时间
+						dbWorkplanTimeDTO.setWorkTimeEnd(bizWorkerPlanTimeDTO.getEndTime()); //结束时间
+						
+						//工作计划时间表
+						this.updateDAO.updateOne(WorkplanTimeDTO.INSERT, dbWorkplanTimeDTO, M10803WC);
+					}
+				}
+				//update 目前只有审核的时候才调用这个接口
+				else if (flg == Integer.parseInt(WORKER_PLAN_FLAG.UPDATE
+						.toString())) {
+					 
+					GroupWorkplanDTO existWorkerPlan = this.queryDAO.queryForObject(  GroupWorkplanDTO.EQUAL_SEARCH , dbDto);
+					
+					//dbDto.setFlg(bizDto.getFlg());			
+					existWorkerPlan.setStatus( bizDto.getStatus() );//设置状态为已审批或未通过
+					existWorkerPlan.setRemarks(remarks);
+					//dbDto.setRequestDate(new Date(System.currentTimeMillis())); //提出申请时间
+					existWorkerPlan.setApproveData(new Date(System.currentTimeMillis()));
+					
+					this.updateDAO.updateOne(GroupWorkplanDTO.UPDATE, existWorkerPlan, M10802WC);
+				}
+			}
+		}
+	}
+
+	@Override
+	public List<WorkerPlanInfoDTO> getWorkerPlan(Integer workerID,
+			java.sql.Date start, java.sql.Date end) {
+		
+		List<WorkerPlanInfoDTO> results = new ArrayList<WorkerPlanInfoDTO>();
+		
+		WorkerPlanQueryVO query = new WorkerPlanQueryVO();
+		query.setWorkerGroutID(workerID);
+		query.setStart(start);
+		query.setEnd(end);
+		
+		List<VWorkerPlanDTO>  list =  this.queryDAO.queryForObjectList(SQLID.GROUP_WORKPLAN_SELECT_BETWEEN_START_END, query);
+		
+		addDate(list,results);
+		
+		return results;
+	}
+	
+	private void addDate( List<VWorkerPlanDTO> list, List<WorkerPlanInfoDTO> results ){
+		
+		Date currentDate = null;
+		
+		WorkerPlanInfoDTO element = null;
+		
+		List<WorkerPlanTimeDTO> times = new ArrayList<WorkerPlanTimeDTO>();
+		
+		for(VWorkerPlanDTO dbDTO : list){
+			WorkerPlanTimeDTO timeDto = new WorkerPlanTimeDTO();
+			timeDto.setStartTime( dbDTO.getWorkTimeStart());
+			timeDto.setEndTime(dbDTO.getWorkTimeEnd());
+			
+			if( currentDate==null|| !dbDTO.getWorkDate().equals(currentDate) ){ //日期变化,新建一个
+				
+				//向之前对象 添加子元素（times）
+				if(element!=null){
+					element.setWorkerPlanTime(times.toArray(new WorkerPlanTimeDTO[times.size()]));
+				}
+				
+				currentDate = dbDTO.getWorkDate(); //重新设置 date
+				times = new ArrayList<WorkerPlanTimeDTO>();//重新初始化 times
+				times.add(timeDto);
+				
+				element = new WorkerPlanInfoDTO();
+				element.setFlg(dbDTO.getFlg());
+				element.setStatus(dbDTO.getStatus());
+				element.setWorkDate(dbDTO.getWorkDate());
+				
+				results.add(element);
+			}
+			else{	//已经有了，在原有对象上添加
+				//添加times
+				times.add(timeDto);
+			}
+		}
+		//处理list中最后一个元素
+		if(element!=null){
+			element.setWorkerPlanTime(times.toArray(new WorkerPlanTimeDTO[times.size()]));
+//			results.add(element);
+		}
+	}
+	
+	
+
+}

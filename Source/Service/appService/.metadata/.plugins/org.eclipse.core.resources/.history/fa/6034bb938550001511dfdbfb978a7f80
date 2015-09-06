@@ -1,0 +1,121 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.MobileInfoDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("MOBILE_INFO")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class MobileInfoDTO extends MobileInfoDTOSupport implements java.io.Serializable, Comparable<MobileInfoDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MOBILE_INFO_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long mobileInfoID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("IMSI")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer iMSI = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DEVICE_TOKEN")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 44, max = 44)
+	private String deviceToken = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("VERSION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
+	private String version = null;
+
+	public Long getMobileInfoID() {
+		return this.mobileInfoID;
+	}
+
+	public void setMobileInfoID(
+			Long mobileInfoID) {
+		this.mobileInfoID = mobileInfoID;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Integer getIMSI() {
+		return this.iMSI;
+	}
+
+	public void setIMSI(
+			Integer iMSI) {
+		this.iMSI = iMSI;
+	}
+
+	public String getDeviceToken() {
+		return this.deviceToken;
+	}
+
+	public void setDeviceToken(
+			String deviceToken) {
+		this.deviceToken = deviceToken;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	public String getVersion() {
+		return this.version;
+	}
+
+	public void setVersion(
+			String version) {
+		this.version = version;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			MobileInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

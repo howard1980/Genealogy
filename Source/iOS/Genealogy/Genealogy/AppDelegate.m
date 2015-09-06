@@ -10,6 +10,7 @@
 #import "MXHFrameWork.h"
 #import "MainViewController.h"
 #import "LoginViewController.h"
+#import "GuidViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 欢迎画面
+    MXHFrameWork.obj.guidViewController     = [[GuidViewController alloc] init];
     
     // 登陆画面
     MXHFrameWork.obj.loginViewController    = [[LoginViewController alloc] init];

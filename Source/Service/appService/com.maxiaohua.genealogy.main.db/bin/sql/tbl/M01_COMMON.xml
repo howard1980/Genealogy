@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sql">
+
+  <!-- Table Insert -->
+  <insert id="M01_COMMON_INSERT" parameterType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    INSERT INTO M01_COMMON (
+      CODE1 ,
+      CODE2 ,
+      CODE3 ,
+      VALUE 
+    ) VALUES (
+      #{cODE1} ,
+      #{cODE2} ,
+      #{cODE3} ,
+      #{vALUE} 
+    )
+  </insert>
+
+  <!-- Table Update -->
+  <update id="M01_COMMON_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    UPDATE M01_COMMON SET
+      VALUE = #{vALUE} 
+    WHERE
+      CODE1 = #{cODE1} AND
+      CODE2 = #{cODE2} AND
+      CODE3 = #{cODE3} 
+  </update>
+
+  <update id="M01_COMMON_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    UPDATE M01_COMMON
+    <set>
+      <if test="vALUE!=null">VALUE = #{vALUE},</if>
+    </set>
+    WHERE
+      CODE1 = #{cODE1} AND
+      CODE2 = #{cODE2} AND
+      CODE3 = #{cODE3} 
+  </update>
+
+  <!-- Key Delete -->
+  <delete id="M01_COMMON_DELETE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    DELETE FROM M01_COMMON
+    WHERE
+      CODE1 = #{cODE1} AND
+      CODE2 = #{cODE2} AND
+      CODE3 = #{cODE3} 
+  </delete>
+
+  <!-- Key Search -->
+  <select id="M01_COMMON_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    WHERE
+      CODE1 = #{cODE1} AND
+      CODE2 = #{cODE2} AND
+      CODE3 = #{cODE3} 
+  </select>
+
+  <!-- Key Search（For Update） -->
+  <select id="M01_COMMON_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    WHERE
+      CODE1 = #{cODE1} AND
+      CODE2 = #{cODE2} AND
+      CODE3 = #{cODE3} 
+    FOR UPDATE
+  </select>
+
+  <!-- AND Search -->
+  <select id="M01_COMMON_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    <where>
+      <if test="cODE1 != null">AND CODE1 = #{cODE1}</if>
+      <if test="cODE2 != null">AND CODE2 = #{cODE2}</if>
+      <if test="cODE3 != null">AND CODE3 = #{cODE3}</if>
+      <if test="vALUE != null">AND VALUE = #{vALUE}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY CODE1, CODE2, CODE3</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search(OR) -->
+  <select id="M01_COMMON_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    <where>
+      <if test="cODE1 != null">OR CODE1 = #{cODE1}</if>
+      <if test="cODE2 != null">OR CODE2 = #{cODE2}</if>
+      <if test="cODE3 != null">OR CODE3 = #{cODE3}</if>
+      <if test="vALUE != null">OR VALUE = #{vALUE}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY CODE1, CODE2, CODE3</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE -->
+  <select id="M01_COMMON_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    <where>
+      <if test="cODE1 != null">AND CODE1 LIKE '%'|| #{cODE1} ||'%'</if>
+      <if test="cODE2 != null">AND CODE2 LIKE '%'|| #{cODE2} ||'%'</if>
+      <if test="cODE3 != null">AND CODE3 LIKE '%'|| #{cODE3} ||'%'</if>
+      <if test="vALUE != null">AND VALUE LIKE '%'|| #{vALUE} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY CODE1, CODE2, CODE3</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE(OR) -->
+  <select id="M01_COMMON_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    <where>
+      <if test="cODE1 != null">OR CODE1 LIKE '%'|| #{cODE1} ||'%'</if>
+      <if test="cODE2 != null">OR CODE2 LIKE '%'|| #{cODE2} ||'%'</if>
+      <if test="cODE3 != null">OR CODE3 LIKE '%'|| #{cODE3} ||'%'</if>
+      <if test="vALUE != null">OR VALUE LIKE '%'|| #{vALUE} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY CODE1, CODE2, CODE3</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Customize Search -->
+  <select id="M01_COMMON_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO" parameterType="java.util.Map">
+    SELECT
+      CODE1 AS "cODE1" ,
+      CODE2 AS "cODE2" ,
+      CODE3 AS "cODE3" ,
+      VALUE AS "vALUE" 
+    FROM M01_COMMON
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+    <if test="_orderByCondition == null">ORDER BY CODE1, CODE2, CODE3</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Count -->
+  <select id="M01_COMMON_COUNT" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM M01_COMMON
+    <where>
+      <if test="cODE1 != null">AND CODE1 = #{cODE1}</if>
+      <if test="cODE2 != null">AND CODE2 = #{cODE2}</if>
+      <if test="cODE3 != null">AND CODE3 = #{cODE3}</if>
+      <if test="vALUE != null">AND VALUE = #{vALUE}</if>
+    </where>
+  </select>
+
+  <!-- Count OR -->
+  <select id="M01_COMMON_COUNT_OR" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM M01_COMMON
+    <where>
+      <if test="cODE1 != null">OR CODE1 = #{cODE1}</if>
+      <if test="cODE2 != null">OR CODE2 = #{cODE2}</if>
+      <if test="cODE3 != null">OR CODE3 = #{cODE3}</if>
+      <if test="vALUE != null">OR VALUE = #{vALUE}</if>
+    </where>
+  </select>
+
+  <!-- Count Customize -->
+  <select id="M01_COMMON_COUNT_SEARCH" resultType="java.lang.Integer" parameterType="java.util.Map">
+    SELECT count(*)
+    FROM M01_COMMON
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+  </select>
+</mapper>

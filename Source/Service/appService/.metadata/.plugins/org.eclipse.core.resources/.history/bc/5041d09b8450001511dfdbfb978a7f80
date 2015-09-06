@@ -1,0 +1,91 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.WorkplanTimeDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("WORKPLAN_TIME")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class WorkplanTimeDTO extends WorkplanTimeDTOSupport implements java.io.Serializable, Comparable<WorkplanTimeDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WORKPLAN_TIME_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long workPlanTimeID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("GROUP_WORKPLAN_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long groupWorkPlanID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WORK_TIME_START")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time workTimeStart = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WORK_TIME_END")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time workTimeEnd = null;
+
+	public Long getWorkPlanTimeID() {
+		return this.workPlanTimeID;
+	}
+
+	public void setWorkPlanTimeID(
+			Long workPlanTimeID) {
+		this.workPlanTimeID = workPlanTimeID;
+	}
+
+	public Long getGroupWorkPlanID() {
+		return this.groupWorkPlanID;
+	}
+
+	public void setGroupWorkPlanID(
+			Long groupWorkPlanID) {
+		this.groupWorkPlanID = groupWorkPlanID;
+	}
+
+	public java.sql.Time getWorkTimeStart() {
+		return this.workTimeStart;
+	}
+
+	public void setWorkTimeStart(
+			java.sql.Time workTimeStart) {
+		this.workTimeStart = workTimeStart;
+	}
+
+	public java.sql.Time getWorkTimeEnd() {
+		return this.workTimeEnd;
+	}
+
+	public void setWorkTimeEnd(
+			java.sql.Time workTimeEnd) {
+		this.workTimeEnd = workTimeEnd;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			WorkplanTimeDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

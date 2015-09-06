@@ -1,0 +1,23 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.CarInfoDTO;
+
+
+/**
+ * 取汽车品牌 车系 车型 等信息
+ * @author shaolizhi
+ *
+ */
+public interface HbCarInfo {
+	
+	List<CarInfoDTO> getCustomerCars();
+	
+	CarInfoDTO getOneCustomerCar(Long customerID,Long customerCarID);
+	Integer updateCustomerCar(CarInfoDTO car);
+	Integer deleteCustomerCar(Long customerID, Long customerCarID);
+	
+	
+	
+}

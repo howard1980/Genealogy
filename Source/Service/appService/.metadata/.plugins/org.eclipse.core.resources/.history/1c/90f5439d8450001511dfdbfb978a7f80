@@ -1,0 +1,56 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.beetlestech.nfe.main.biz.a01.dto.RepairServiceDTO;
+
+/**
+ * 获得服务项目详细的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得服务项目详细")
+public class SsGetOneRepairServiceOutDTO implements java.io.Serializable, Comparable<SsGetOneRepairServiceOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 服务项目详细信息  
+	*/
+	@Alias("服务项目详细信息")
+	private RepairServiceDTO repairService = null;
+
+	/**
+	* <code>服务项目详细信息</code>返回
+	* @return <code>服务项目详细信息</code>
+	*/
+	public RepairServiceDTO getRepairService() {
+		return this.repairService;
+	}
+
+	/**
+	* <code>repairService</code>设定
+	* @param repairService　<code>repairService</code>设定值
+	*/
+	public void setRepairService(
+			RepairServiceDTO repairService) {
+		this.repairService = repairService;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetOneRepairServiceOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

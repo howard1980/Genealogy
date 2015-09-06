@@ -1,0 +1,75 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.biz.a01.dto;
+
+/**
+ * WorkerInfoDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("工作车")
+public class WorkerInfoDTO implements java.io.Serializable, Comparable<WorkerInfoDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Integer wokerID = null;
+
+	public Integer getWokerID() {
+		return this.wokerID;
+	}
+
+	public void setWokerID(
+			Integer wokerID) {
+		this.wokerID = wokerID;
+	}
+
+	private String name = null;
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(
+			String name) {
+		this.name = name;
+	}
+
+	private Double longitude = null;
+
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
+	}
+
+	private Double latitude = null;
+
+	public Double getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		WorkerInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

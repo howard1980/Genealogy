@@ -1,0 +1,336 @@
+package com.maxiaohua.genealogy.main.biz.a01.impl;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.fw.core.util.CollectionUtil;
+import com.maxiaohua.genealogy.main.biz.a01.HbCashCoupon;
+import com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO;
+import com.maxiaohua.genealogy.main.biz.a01.dto.CustomerCashCouponDTO;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+import com.maxiaohua.genealogy.main.db.tbl.CashCouponOrderDTO;
+import com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO;
+
+public class HbCashCouponImpl extends AbstractDBLogic implements HbCashCoupon,
+		HbMessageCode, CommonConstant, CtgCodeConstant {
+	/**
+	 * 代金券
+	 */
+	protected static final String SH_INFO = "工作计划情报";
+	
+	// 0锁定 1标识可用  2 不可用
+	private static final int COUPON_LOCK_UP = 0;
+	private static final int COUPON_USEFUL = 1;
+	private static final int COUPON_DIE = 2;
+	
+	private static final int DATA_TYPE_USEFUL = 0;//只返回可用代金券
+	private static final int DATA_TYPE_USEFUL_LOCKUP = 1;//返回可用和锁定代金券
+	
+	
+
+	/**
+	 * 查看可用代金券
+	 * @param customerID
+	 * @param data 使用日期
+	 * @param serviceItemID
+	 * @param dataType 0 
+	 * @return
+	 */
+	@Override
+	public List<CashCouponDTO> getCashCoupon(Long customerID, Date date,
+			String[] serviceItemIDs,Integer dataType) {
+		
+		List<CashCouponDTO> results = new ArrayList<CashCouponDTO>();
+		
+		//从 代金券系统表 取可用代金券
+		StringBuffer where = new StringBuffer();
+		where.append(" Status = "+ CtgCodeConstant.CASH_COUPON_TYPE.EFFECT); //已生效 
+		
+		if(date == null){ //未限定使用日期，则查看当天和以后可用的
+			where.append(" and End_Date>= '" + this.getCurrentDate()+"' ");// 
+		}
+		else{	//限定使用日期
+			where.append(" and End_Date>= '" + date+"' ");// 
+			where.append(" and Start_Date<= '" + date+"' ");// 
+		}
+		
+		if(CollectionUtil.isNotEmpty( serviceItemIDs)   ){ //限定按 serviceID 查询
+			where.append(" and ( ServiceID=0 or ServiceID  is null or ServiceID in " +  arrayToSql(serviceItemIDs) + " ) "); 
+		}
+		else{
+			return getCashCoupon(customerID);
+		}
+		
+		List<com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO> coupons = this.queryDAO.queryBySQL(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO.SQL_SEARCH, 
+			where.toString(), null, null, null, null);
+		
+		//遍历代金券 
+		for(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO dbDto: coupons){
+			
+			int couponID = dbDto.getCASHCOUPONID();
+			CashCouponRecordDTO record = new CashCouponRecordDTO();
+			record.setCASHCOUPONID(couponID);
+			record.setCustomerID(customerID);
+			
+			int usedStatus = COUPON_USEFUL; 
+			List<CashCouponRecordDTO> records = this.queryDAO.queryForObjectList(CashCouponRecordDTO.EQUAL_SEARCH, record);
+
+			//扫描 代金券使用记录，确定 该用户的代金券使用状态
+			for(CashCouponRecordDTO r : records){
+				if(r.getStatus()==null || r.getStatus()== Integer.parseInt( CASH_COUPON_RECORD_TYPE.IN_USE.toString() ) ){ //正在使用的代金券,属于锁定状态   
+					usedStatus = COUPON_LOCK_UP;
+					break;
+				}
+				
+				if(r.getStatus()== Integer.parseInt( CASH_COUPON_RECORD_TYPE.USED.toString() )  ){  
+					usedStatus = COUPON_DIE;
+					break;
+				}
+			}
+			
+			//转换
+			com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO bizDto = convert(dbDto);
+			bizDto.setStatus(usedStatus);
+			
+			//按客户端要求的代金券状态 过滤
+			if(dataType==null ) dataType = DATA_TYPE_USEFUL;//default
+			
+			if( ( dataType==DATA_TYPE_USEFUL) && usedStatus== COUPON_USEFUL    ){//可用 代金券
+					results.add(bizDto);
+			}
+			else if( ( dataType == DATA_TYPE_USEFUL_LOCKUP) && (usedStatus== COUPON_USEFUL || usedStatus== COUPON_LOCK_UP) ){
+					results.add(bizDto);
+			}
+		}
+		
+		return results;
+	}
+	
+	/**
+	 * 查看可用代金券
+	 * @param customerID
+	 * @param data 使用日期
+	 * @param serviceItemID
+	 * @param dataType 0 
+	 * @return
+	 */
+	@Override
+	public List<CashCouponDTO> getCashCoupon(Long customerID) {
+		List<com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO> coupons = 
+				this.queryDAO.queryForObjectList(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO.EQUAL_SEARCH, 
+						new com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO());
+		
+		CashCouponRecordDTO record = new CashCouponRecordDTO();
+		record.setCustomerID(customerID);
+		List<CashCouponRecordDTO> records = 
+				this.queryDAO.queryForObjectList(CashCouponRecordDTO.EQUAL_SEARCH, record);
+		
+		return convertToListCashCouponDTO(coupons, records);
+	}
+	
+	private List<CashCouponDTO> convertToListCashCouponDTO(
+			List<com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO> coupons,
+			List<CashCouponRecordDTO> records) {
+		
+		List<CashCouponDTO> results = new ArrayList<CashCouponDTO>();
+		
+		Map<Integer,List<CashCouponRecordDTO>> map=new HashMap<Integer, List<CashCouponRecordDTO>>();  
+		for(CashCouponRecordDTO  dic:records){  
+			if(dic==null){  
+			    continue;  
+			}
+			List<CashCouponRecordDTO> lst = new ArrayList<CashCouponRecordDTO>();
+			if(map.containsKey(dic.getCASHCOUPONID())){
+				lst = map.get(dic.getCASHCOUPONID());
+			}
+			lst.add(dic);
+			map.put(dic.getCASHCOUPONID(), lst);
+		}
+
+		//遍历代金券 
+		for(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO dbDto: coupons){
+			List<CashCouponRecordDTO> couponRecords = map.get(dbDto.getCASHCOUPONID());
+			
+			if(dbDto.getFlg() != null && dbDto.getFlg() == Integer.parseInt(CASHCOUPON_FLG.PAIED.toString())){
+				if(couponRecords != null){
+					for(CashCouponRecordDTO r : couponRecords){
+						// 购买的代金卷
+						CashCouponDTO bizDto = convert(dbDto, r);
+						results.add(bizDto);
+						
+					}
+				}
+			}
+			else if(dbDto.getStatus() == Integer.parseInt(CtgCodeConstant.CASH_COUPON_TYPE.EFFECT.toString())
+					&& (dbDto.getEndDate().after(this.getCurrentDate()) || dbDto.getEndDate().equals(this.getCurrentDate()))){
+				if(couponRecords == null){
+					// 购买的代金卷
+					CashCouponDTO bizDto = convert(dbDto);
+					results.add(bizDto);
+				}
+				else{
+					for(CashCouponRecordDTO r : couponRecords){
+						// 购买的代金卷
+						CashCouponDTO bizDto = convert(dbDto, r);
+						results.add(bizDto);
+					}
+				}
+			}
+		}
+		
+		return results;
+	}
+	
+	private com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO convert(
+			com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO dbDto, CashCouponRecordDTO record){
+		com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO bizDto = new com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO();
+		bizDto.setCashCouponID(dbDto.getCASHCOUPONID());
+		bizDto.setAmount(dbDto.getAmount().doubleValue());
+		bizDto.setPrice(dbDto.getPrice().doubleValue());
+		bizDto.setCashdescription(dbDto.getDescription());
+		bizDto.setEnd(dbDto.getEndDate());
+		bizDto.setName(dbDto.getName());
+		bizDto.setStart(dbDto.getStartDate());
+		
+		int usedStatus = COUPON_USEFUL; 
+
+		//扫描 代金券使用记录，确定 该用户的代金券使用状态
+		if(record.getStatus()==null || record.getStatus()== 
+				Integer.parseInt(CASH_COUPON_RECORD_TYPE.IN_USE.toString())){ //正在使用的代金券,属于锁定状态   
+			usedStatus = COUPON_LOCK_UP;
+		}
+		else if(record.getStatus()== Integer.parseInt(CASH_COUPON_RECORD_TYPE.USED.toString())){  
+			usedStatus = COUPON_DIE;
+		}
+		
+		bizDto.setStatus(usedStatus);
+	
+		return bizDto;
+	}
+
+	public int InsertCashCouponRecord(Long customerID,Integer cashCouponID,Long orderID,Integer status){
+		com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO dbDto = new com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO();
+		dbDto.setCustomerID(customerID);
+		dbDto.setCASHCOUPONID(cashCouponID);
+		dbDto.setOrderID(orderID);
+		dbDto.setStatus(status);
+		
+		int updateResult =this.updateDAO.updateOne(com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO.INSERT, dbDto,M10190WS);
+		return updateResult;
+	}
+	
+	public int updateCashCouponRecord(Long customerID, Long orderID,Integer status){
+		
+		//查找要更新的记录，只根据orderID即可定位到唯一一条记录
+		com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO dbDto = new com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO();
+		dbDto.setCustomerID(customerID);
+		//dbDto.setCASHCOUPONID(cashCouponID);
+		dbDto.setOrderID(orderID);
+		
+		dbDto = this.queryDAO.queryForObject(com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO.EQUAL_SEARCH, dbDto);
+		
+		if(dbDto==null){ //没有优惠券使用记录
+			 return 2;
+		}
+		 
+		dbDto.setStatus(status);
+		int updateResult =this.updateDAO.updateOne(com.maxiaohua.genealogy.main.db.tbl.CashCouponRecordDTO.UPDATE, dbDto,M10190WS);
+		return updateResult;
+		 
+	}
+	
+	private com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO convert(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO dbDto){
+		com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO bizDto = new com.maxiaohua.genealogy.main.biz.a01.dto.CashCouponDTO();
+		bizDto.setCashCouponID(dbDto.getCASHCOUPONID());
+		bizDto.setAmount(dbDto.getAmount().doubleValue());
+		bizDto.setCashdescription(dbDto.getDescription());
+		bizDto.setEnd(dbDto.getEndDate());
+		bizDto.setName(dbDto.getName());
+		bizDto.setStart(dbDto.getStartDate());
+		bizDto.setStatus(COUPON_USEFUL);
+		return bizDto;
+	}
+	
+	private String arrayToSql(String[] serviceIDs){
+		StringBuffer sql = new StringBuffer();
+		sql.append(" ( ");
+		for(int i=0;i<serviceIDs.length;i++ ){
+			if(i==0){
+				sql.append(serviceIDs[i]);
+			}else{
+				sql.append("," + serviceIDs[i]);
+			}
+			
+		}
+		sql.append(" ) ");
+		return sql.toString();
+	}
+
+	@Override
+	public CustomerCashCouponDTO getCustomCashCoupon(Long customerID) {
+		CustomerCashCouponDTO customerCoupon = new CustomerCashCouponDTO();
+		List<CashCouponDTO> lstCoupon = new ArrayList<CashCouponDTO>();
+		com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO mastCoupon = 
+				new com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO();
+		mastCoupon.setFlg(Integer.parseInt(CASHCOUPON_FLG.PAIED.toString()));
+		List<com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO> coupons = 
+				this.queryDAO.queryForObjectList(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO.EQUAL_SEARCH, 
+						mastCoupon);
+		
+		for(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO dbDTO : coupons){
+			lstCoupon.add(convert(dbDTO));
+		}
+		
+		customerCoupon.setBuyCashCouponArray(lstCoupon.toArray(new CashCouponDTO[lstCoupon.size()]));
+		
+		List<CashCouponDTO> lst = getCashCoupon(customerID);
+//		customerCoupon.setCashCouponArray(lst.toArray(new CashCouponDTO[lst.size()]));
+		
+		Integer count = 0;
+		Double total = 0d;
+		for(CashCouponDTO cashCoupon : lst){
+			if(cashCoupon.getStatus() == COUPON_USEFUL){
+				count += 1;
+				total += cashCoupon.getAmount();
+			}
+		}
+		
+		customerCoupon.setCount(count);
+		customerCoupon.setTotal(total);
+		
+		return customerCoupon;
+	}
+
+	@Override
+	public String createOrder(Long customerID, Integer cashCouponID, Integer count) {
+		com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO cashCouponDTO = 
+				new com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO();
+		cashCouponDTO.setCASHCOUPONID(cashCouponID);
+		cashCouponDTO = 
+				this.queryDAO.queryForObject(com.maxiaohua.genealogy.main.db.tbl.CashCouponDTO.EQUAL_SEARCH, 
+						cashCouponDTO);
+		
+		CashCouponOrderDTO cashCouponOrderDTO = new CashCouponOrderDTO();
+		cashCouponOrderDTO.setCashCouponID(cashCouponID);
+		cashCouponOrderDTO.setCnt(count);
+		cashCouponOrderDTO.setCustomerID(customerID);
+		cashCouponOrderDTO.setAmount(cashCouponDTO.getAmount().multiply(new BigDecimal(count)));
+		cashCouponOrderDTO.setStatus(Integer.parseInt(ORDER_STATUS.CREATEED.toString()));
+		cashCouponOrderDTO.setCreateDate(this.getCurrentDate());
+		cashCouponOrderDTO.setCreateTime(this.getCurrentTime());
+		this.updateDAO.updateOne(CashCouponOrderDTO.INSERT, cashCouponOrderDTO, M10190WS);
+		String dateFormat = (new java.text.SimpleDateFormat("yyMM")).format(this.getCurrentDate());
+		cashCouponOrderDTO.setOrderNO(ORDER_TYPE.SXXC_CASH_COUPON.toString() + dateFormat +  "1" + 
+				String.format("%06d", cashCouponOrderDTO.getCashCouponOrderID()));
+		this.updateDAO.updateOne(CashCouponOrderDTO.UPDATE, cashCouponOrderDTO, M10190WS, SH_INFO);
+		return cashCouponOrderDTO.getOrderNO();
+	}
+
+}

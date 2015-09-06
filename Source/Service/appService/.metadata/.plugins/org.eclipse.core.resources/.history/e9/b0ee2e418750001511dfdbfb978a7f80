@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>CIS</display-name>
+  <servlet>
+    <servlet-name>CIS REST Service</servlet-name>
+    <servlet-class>com.maxiaohua.genealogy.fw.web.rest.CISRestServlet</servlet-class>
+    <init-param>
+      <param-name>applicationConfigLocation</param-name>
+      <param-value>/WEB-INF/resources.properties</param-value>
+    </init-param>
+    <init-param>
+      <param-name>propertiesLocation</param-name>
+      <param-value>/WEB-INF/tasks.properties</param-value>
+    </init-param>
+    <init-param>
+      <param-name>systemContextLocation</param-name>
+      <param-value>systemContext.xml</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CIS REST Service</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+  <resource-ref>
+    <description>Datasource connection to CISDataSourceRefer</description>
+    <res-ref-name>jdbc/CISDataSourceRefer</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  <resource-ref>
+    <description>Datasource connection to CISDataSource</description>
+    <res-ref-name>jdbc/CISDataSource</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+    <res-sharing-scope>Shareable</res-sharing-scope>
+  </resource-ref>
+  <session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+</web-app>

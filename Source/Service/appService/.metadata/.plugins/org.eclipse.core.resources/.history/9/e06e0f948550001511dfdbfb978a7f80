@@ -1,0 +1,181 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.WeixinPayDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class WeixinPayDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "WEIXIN_PAY_INSERT";
+
+	public static final String FULL_UPDATE = "WEIXIN_PAY_FULL_UPDATE";
+
+	public static final String UPDATE = "WEIXIN_PAY_UPDATE";
+
+	public static final String DELETE = "WEIXIN_PAY_DELETE";
+
+	public static final String FIND = "WEIXIN_PAY_FIND";
+
+	public static final String FIND_FOR_UPDATE = "WEIXIN_PAY_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "WEIXIN_PAY_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "WEIXIN_PAY_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "WEIXIN_PAY_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "WEIXIN_PAY_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "WEIXIN_PAY_SQL_SEARCH";
+
+	public static final String COUNT = "WEIXIN_PAY_COUNT";
+
+	public static final String COUNT_OR = "WEIXIN_PAY_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "WEIXIN_PAY_COUNT_SEARCH";
+
+	public static final String COLUMN_WEIXIN_PAY_ID = "WEIXIN_PAY_ID";
+
+	public static final String COLUMN_ORDER_TYPE = "ORDER_TYPE";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_ORDER_ID = "ORDER_ID";
+
+	public static final String COLUMN_SIGN_TYPE = "SIGN_TYPE";
+
+	public static final String COLUMN_SERVICE_VERSION = "SERVICE_VERSION";
+
+	public static final String COLUMN_INPUT_CHARSET = "INPUT_CHARSET";
+
+	public static final String COLUMN_SIGN = "SIGN";
+
+	public static final String COLUMN_SIGN_KEY_INDEX = "SIGN_KEY_INDEX";
+
+	public static final String COLUMN_TRADE_MODE = "TRADE_MODE";
+
+	public static final String COLUMN_TRADE_STATE = "TRADE_STATE";
+
+	public static final String COLUMN_PAY_INFO = "PAY_INFO";
+
+	public static final String COLUMN_PARTNER = "PARTNER";
+
+	public static final String COLUMN_BANK_TYPE = "BANK_TYPE";
+
+	public static final String COLUMN_BANK_BILLNO = "BANK_BILLNO";
+
+	public static final String COLUMN_TOTAL_FEE = "TOTAL_FEE";
+
+	public static final String COLUMN_FEE_TYPE = "FEE_TYPE";
+
+	public static final String COLUMN_NOTIFY_ID = "NOTIFY_ID";
+
+	public static final String COLUMN_TRANSACTION_ID = "TRANSACTION_ID";
+
+	public static final String COLUMN_OUT_TRADE_NO = "OUT_TRADE_NO";
+
+	public static final String COLUMN_ATTACH = "ATTACH";
+
+	public static final String COLUMN_TIME_END = "TIME_END";
+
+	public static final String COLUMN_TRANSPORT_FEE = "TRANSPORT_FEE";
+
+	public static final String COLUMN_PRODUCT_FEE = "PRODUCT_FEE";
+
+	public static final String COLUMN_DISCOUNT = "DISCOUNT";
+
+	public static final String COLUMN_BUYER_ALIAS = "BUYER_ALIAS";
+
+	public static final String COLUMN_IS_SPLIT = "IS_SPLIT";
+
+	public static final String COLUMN_RET_MSG = "RET_MSG";
+
+	public static final String COLUMN_RMB_TOTAL_FEE = "RMB_TOTAL_FEE";
+
+	public static final String COLUMN_RET_CODE = "RET_CODE";
+
+	public static final String COLUMN_IS_REFUND = "IS_REFUND";
+
+	public static final String TABLE = "WEIXIN_PAY";
+
+	public static WeixinPayDTO setDefaultValue() {
+		WeixinPayDTO defaultDTO = new WeixinPayDTO();
+
+		defaultDTO.setWeiXinPayID(0l);
+
+		defaultDTO.setOrderType(0);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setOrderID(0l);
+
+		defaultDTO.setSignType(StringUtil.EMPTY);
+
+		defaultDTO.setServiceVersion(StringUtil.EMPTY);
+
+		defaultDTO.setInputCharset(StringUtil.EMPTY);
+
+		defaultDTO.setSign(StringUtil.EMPTY);
+
+		defaultDTO.setSignKeyIndex(0);
+
+		defaultDTO.setTrademode(0);
+
+		defaultDTO.setTradestate(0);
+
+		defaultDTO.setPayinfo(StringUtil.EMPTY);
+
+		defaultDTO.setPartner(StringUtil.EMPTY);
+
+		defaultDTO.setBankType(StringUtil.EMPTY);
+
+		defaultDTO.setBankBillno(StringUtil.EMPTY);
+
+		defaultDTO.setTotalFee(0);
+
+		defaultDTO.setFeeType(0);
+
+		defaultDTO.setNotifyId(StringUtil.EMPTY);
+
+		defaultDTO.setTransactionId(StringUtil.EMPTY);
+
+		defaultDTO.setOutTradeNo(StringUtil.EMPTY);
+
+		defaultDTO.setAttach(StringUtil.EMPTY);
+
+		defaultDTO.setTimeEnd(StringUtil.EMPTY);
+
+		defaultDTO.setTransportFee(0);
+
+		defaultDTO.setProductFee(0);
+
+		defaultDTO.setDiscount(0);
+
+		defaultDTO.setBuyerAlias(StringUtil.EMPTY);
+
+		defaultDTO.setIsSplit(StringUtil.EMPTY);
+
+		defaultDTO.setRetMsg(StringUtil.EMPTY);
+
+		defaultDTO.setRmbTotalFee(StringUtil.EMPTY);
+
+		defaultDTO.setRetCode(0);
+
+		defaultDTO.setIsRefund(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

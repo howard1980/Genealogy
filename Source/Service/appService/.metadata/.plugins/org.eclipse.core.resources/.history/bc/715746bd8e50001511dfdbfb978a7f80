@@ -1,0 +1,7 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import com.maxiaohua.genealogy.main.biz.a01.dto.ServiceItemDTO;
+
+public interface HbCity {
+	ServiceItemDTO[] getWorkItems(String cityCode,Double longitude, Double latitude);
+}

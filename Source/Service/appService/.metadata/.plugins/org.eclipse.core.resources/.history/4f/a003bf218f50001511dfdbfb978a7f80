@@ -1,0 +1,56 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 技师退出登陆的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("技师退出登陆")
+public class SsTechnicianLogoutInDTO implements java.io.Serializable, Comparable<SsTechnicianLogoutInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 技师ID  
+	*/
+	@Alias("技师ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long technicianID = null;
+
+	/**
+	* <code>技师ID</code>返回
+	* @return <code>技师ID</code>
+	*/
+	public Long getTechnicianID() {
+		return this.technicianID;
+	}
+
+	/**
+	* <code>technicianID</code>设定
+	* @param technicianID　<code>technicianID</code>设定值
+	*/
+	public void setTechnicianID(
+			Long technicianID) {
+		this.technicianID = technicianID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsTechnicianLogoutInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

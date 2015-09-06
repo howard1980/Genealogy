@@ -1,0 +1,20 @@
+/* NFE
+* (C) Copyright Beetlestech , Ltd. 2014, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.biz.com;
+
+import javax.naming.directory.Attributes;
+
+public interface HbLDAPAccess {
+
+	Attributes find(
+			String scope,
+			String filter,
+			String[] attrIDs);
+
+	void update(
+			String scope,
+			int updateType,
+			Attributes attrs);
+
+}

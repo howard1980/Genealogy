@@ -1,0 +1,459 @@
+package com.beetlestech.nfe.main.biz.a01.impl;
+
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.fw.core.sys.impl.SystemHandlerImpl;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.a01.HbAccount;
+import com.beetlestech.nfe.main.biz.a01.HbOrder;
+import com.beetlestech.nfe.main.biz.a01.dto.GroupServiceItemDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.OrderInfoDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.OrderItemDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.OrderResultDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.OrdersDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.ServiceItemDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerAccountDTO;
+import com.beetlestech.nfe.main.biz.com.HbMasterCache;
+import com.beetlestech.nfe.main.biz.com.dto.CityAreaDTO;
+import com.beetlestech.nfe.main.biz.com.dto.CityInfoDTO;
+import com.beetlestech.nfe.main.biz.com.util.GISUtil;
+import com.beetlestech.nfe.main.biz.com.util.RegionalIntegerXY;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.biz.constant.MasterCacheConstant.MASTER_NAME;
+import com.beetlestech.nfe.main.db.tbl.CarInfoDTO;
+import com.beetlestech.nfe.main.db.tbl.CarWashDTO;
+import com.beetlestech.nfe.main.db.tbl.OrderEvidenceDTO;
+import com.beetlestech.nfe.main.db.tbl.WashItemBeyondDTO;
+import com.beetlestech.nfe.main.db.tbl.WashItemDTO;
+import com.beetlestech.nfe.main.db.tbl.WashOrderBeyondDTO;
+import com.beetlestech.nfe.main.db.tbl.WashOrderDTO;
+import com.beetlestech.nfe.main.db.view.VOrderInfoDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerAccountDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerServiceItemsDTO;
+
+public class HbOrderImpl extends AbstractDBLogic implements HbOrder, HbMessageCode, CommonConstant, CtgCodeConstant {
+	/**
+	 * 订单情报数据
+	 */
+	protected static final String SH_INFO = "订单情报数据";
+	
+	/**
+	 * Mast数据缓存Biz类
+	 */
+	@AutoInject
+	protected HbMasterCache hbMasterCache;
+	
+	@AutoInject
+	protected HbAccount hbAccount;
+	
+	@Override
+	public OrderResultDTO createOrder(Long customerID, String licencePlate,
+			String carModel, String carColor, Date date, Time time,
+			String address, ServiceItemDTO[] serviceItems, Double longitude,
+			Double latitude, String cityCode, String remark) {
+		Map<Integer, ServiceItemDTO> workItems = null;
+		// 订单受否可以生成
+		OrderResultDTO orderResult = checkCreateOrder(customerID, cityCode, longitude, latitude);
+		if(orderResult.getResult() == false){
+			if(orderResult.getOpenCap()!=null && orderResult.getOpenCap()>0){
+				// 增加履历订单记录
+				WashOrderBeyondDTO washOrderBeyondDTO = new WashOrderBeyondDTO();
+				washOrderBeyondDTO.setCityCode(cityCode);
+				washOrderBeyondDTO.setCustomerID(customerID);
+				washOrderBeyondDTO.setCreateDate(this.getCurrentDate());
+				washOrderBeyondDTO.setCreateTime(this.getCurrentTime());
+				washOrderBeyondDTO.setRequestDate(date);
+				washOrderBeyondDTO.setRequestTime(time);
+				washOrderBeyondDTO.setLongitude(longitude);
+				washOrderBeyondDTO.setLatitude(latitude);
+				
+				this.updateDAO.updateOne(WashOrderBeyondDTO.INSERT, washOrderBeyondDTO, M10190WS, SH_INFO);
+				
+				for(ServiceItemDTO item: serviceItems){
+					WashItemBeyondDTO sashItemBeyondDTO = new WashItemBeyondDTO();
+					sashItemBeyondDTO.setBeyondID(washOrderBeyondDTO.getBeyondID());
+					sashItemBeyondDTO.setServiceItemsID(item.getServiceItemID());
+					this.updateDAO.updateOne(WashItemBeyondDTO.INSERT, sashItemBeyondDTO, M10190WS, SH_INFO);
+				}
+			}
+			
+			//TODO 返回待开通人数等
+			//orderResult.setLackCount( washOrderBeyondDTO. );
+			
+			return orderResult;
+		}
+		// 车辆信息更新
+		CarInfoDTO carInfo = new CarInfoDTO();
+		carInfo.setLicencePlate(licencePlate);
+		CarInfoDTO carInfoSearch = this.queryDAO.queryForObject(CarInfoDTO.EQUAL_SEARCH, carInfo);
+		if(carInfoSearch == null){
+			carInfo.setCustomerID(customerID);
+			carInfo.setCarModelID(carModel);
+			carInfo.setColorID(carColor);
+			this.updateDAO.updateOne(CarInfoDTO.INSERT, carInfo, M10190WS, SH_INFO);
+		}
+		else
+		{
+			carInfo.setCarID(carInfoSearch.getCarID());
+			if(carInfoSearch.getCustomerID() != customerID
+					|| carInfoSearch.getCarModelID() != carModel
+					|| carInfoSearch.getColorID() != carColor){
+				carInfoSearch.setCustomerID(customerID);
+				carInfoSearch.setCarModelID(carModel);
+				carInfoSearch.setColorID(carColor);
+				this.updateDAO.updateOne(CarInfoDTO.UPDATE, carInfoSearch, M10190WS, SH_INFO);
+			}
+		}
+
+		// 洗车内容追加
+		CarWashDTO carWashDTO = new CarWashDTO();
+		carWashDTO.setCarID(carInfo.getCarID());
+		carWashDTO.setWashDate(date);
+		carWashDTO.setWashTime(time);
+		 
+		
+		workItems = this.getWorkItems(cityCode, longitude, latitude);
+		BigDecimal ammount = new BigDecimal(0d);
+		for(ServiceItemDTO item: serviceItems){
+			Integer key = item.getGroupServiceID(); 
+			
+			if(workItems.containsKey(key)){
+				BigDecimal price = new BigDecimal(workItems.get(key).getPrice());//fix by shaolizhi
+				ammount = ammount.add(price);
+				item.setPrice(workItems.get(key).getPrice());
+			}
+		}
+		
+		carWashDTO.setAmmount(ammount);
+		carWashDTO.setStatus(Integer.parseInt(ORDER_STATUS.CREATEED.toString()));
+		carWashDTO.setFlg(Integer.parseInt(WASH_FLG.SXXC.toString()));
+		this.updateDAO.updateOne(CarWashDTO.INSERT, carWashDTO, M10190WS, SH_INFO);
+		
+		for(ServiceItemDTO item: serviceItems){
+			WashItemDTO washItemDTO = new WashItemDTO();
+			washItemDTO.setCarWashID(carWashDTO.getCarWashID());
+			washItemDTO.setGroupServiceID(item.getGroupServiceID());
+			washItemDTO.setPrice(new BigDecimal(item.getPrice()));
+			washItemDTO.setTotal(new BigDecimal(item.getPrice()));
+			this.updateDAO.updateOne(WashItemDTO.INSERT, washItemDTO, M10190WS, SH_INFO);
+		}
+		
+		// 洗车订单追加
+		WashOrderDTO washOrderDTO = new WashOrderDTO();
+		washOrderDTO.setOrderNO(UUID.randomUUID().toString().replace("-", ""));
+		washOrderDTO.setCustomerID(customerID);
+		washOrderDTO.setCarWashID(carWashDTO.getCarWashID());
+		washOrderDTO.setCreateDate(this.getCurrentDate());
+		washOrderDTO.setCreateTime(this.getCurrentTime());
+		washOrderDTO.setRemarks(remark);
+		washOrderDTO.setRequestDate(date);
+		washOrderDTO.setRequestTime(time);
+		washOrderDTO.setLatitude(latitude);
+		washOrderDTO.setLongitude(longitude);
+		washOrderDTO.setDelFlg(Integer.parseInt(DELETE_FLG.NO_DELETED.toString()));
+		washOrderDTO.setLastDate(this.getCurrentDate());
+		washOrderDTO.setLastTime(this.getDefaultTime());
+		washOrderDTO.setWashAddress(address); //fix by shaolizhi
+		this.updateDAO.updateOne(WashOrderDTO.INSERT, washOrderDTO, M10190WS, SH_INFO);
+		
+		orderResult.setAmmount(carWashDTO.getAmmount().doubleValue());
+		orderResult.setOrderID(washOrderDTO.getWashOrderID());
+		//orderResult.setResult(true);
+		
+		
+		return orderResult;
+	}
+	
+	private Map<Integer, ServiceItemDTO> getWorkItems(String cityCode, Double longitude, Double latitude) {
+		Map<Integer, ServiceItemDTO> serviceItemDTOs = new HashMap<Integer, ServiceItemDTO>();
+		//检索城市划分区域信息
+		CityInfoDTO cityInfo = hbMasterCache.getMasterData(MASTER_NAME.CITYAREA, cityCode);
+
+		if (cityInfo == null) {
+			//1件也不存在的场合、「ApplicationException」返回
+			createApplicationException(M10440WS, "城市划分");
+		}
+		
+		// 根据地理位置显示区域服务项目
+		RegionalIntegerXY regionalXY = GISUtil.millerXY(longitude, latitude, cityInfo.getCenterLongitude(), cityInfo.getCenterLatitudue());
+		for(CityAreaDTO cityArea:cityInfo.getCityAreaDTOArray()){
+			if(cityArea.getGpsGon().contains(regionalXY.getX(), regionalXY.getY())){
+				for(GroupServiceItemDTO item: cityArea.getServiceItems()){
+					ServiceItemDTO serviceItem = new ServiceItemDTO();
+					serviceItem.setServiceItemID(item.getServiceItemID());
+					serviceItem.setGroupServiceID(item.getGroupServiceID());
+					serviceItem.setName(item.getName());
+					serviceItem.setPrice(item.getPrice().doubleValue());
+					serviceItem.setExplain(item.getExplain());
+					serviceItemDTOs.put(item.getGroupServiceID(), serviceItem);
+				}
+				break;
+			}
+		}
+
+		return serviceItemDTOs;
+	}
+
+	private OrderResultDTO checkCreateOrder(Long customerID, String cityCode, Double longitude,
+			Double latitude) {
+		OrderResultDTO result = new OrderResultDTO();
+		result.setResult(false);
+		//检索城市划分区域信息
+		CityInfoDTO cityInfo = hbMasterCache.getMasterData(MASTER_NAME.CITYAREA, cityCode);
+
+		if (cityInfo == null) {
+			//1件也不存在的场合、「ApplicationException」返回
+			createApplicationException(M10440WS, "城市划分");
+		}
+		
+		RegionalIntegerXY regionalXY = GISUtil.millerXY(
+				longitude, latitude, cityInfo.getCenterLongitude(), cityInfo.getCenterLatitudue());
+		for(CityAreaDTO cityArea:cityInfo.getCityAreaDTOArray()){
+			if(cityArea.getGpsGon().contains(regionalXY.getX(), regionalXY.getY())){
+				
+				if (cityArea.getOpenFlg().toString().equals(AREA_OPEN_TYPE.OPENING.toString())){
+					result.setResult(true);
+				}
+				else if(cityArea.getCeiling() <= cityArea.getOrderCount()){
+					com.beetlestech.nfe.main.db.tbl.CityAreaDTO cityAreaDTO = 
+							new com.beetlestech.nfe.main.db.tbl.CityAreaDTO();
+					cityAreaDTO.setCityAreaID(cityArea.getCityAreaID());
+					cityAreaDTO.setOpenFlg(Integer.parseInt(AREA_OPEN_TYPE.OPENING.toString()));
+					this.updateDAO.updateOne(
+							com.beetlestech.nfe.main.db.tbl.CityAreaDTO.UPDATE, 
+							cityAreaDTO, M10190WS, SH_INFO);
+					result.setResult(true);
+				}
+				else{
+					result.setOpenCap(cityArea.getCeiling());
+					
+					// 确认是否在此区域下过单
+					WashOrderBeyondDTO washOrderBeyondDTO = new WashOrderBeyondDTO();
+					washOrderBeyondDTO.setCustomerID(customerID);
+					if(this.queryDAO.count(WashOrderBeyondDTO.COUNT, washOrderBeyondDTO) == 0){
+						// 如果未下过单增加一用户数
+						com.beetlestech.nfe.main.db.tbl.CityAreaDTO cityAreaDTO = 
+								new com.beetlestech.nfe.main.db.tbl.CityAreaDTO();
+						cityAreaDTO.setCityAreaID(cityArea.getCityAreaID());
+						cityAreaDTO.setNeed(cityArea.getNeed() - 1); //TODO +1?
+					}
+					else{
+						result.setLackCount(cityArea.getNeed());
+					}
+				}
+				break;
+			}
+		}
+		return result;
+	}
+
+	@Override
+	public OrdersDTO getOrders(Long customerID, Integer page) {
+		OrdersDTO ordersDTO = new OrdersDTO();
+		Integer firstRow = ((page -1) * 40) + 1;
+		Integer lastRow = (page * 40);
+		
+		List<VOrderInfoDTO> orderInfoArray = this.queryDAO.queryBySQL(
+				VOrderInfoDTO.SQL_SEARCH,  //fix by shaolizhi
+				VOrderInfoDTO.COLUMN_CUSTOMER_ID + " = " + customerID.toString(), 
+				null, null, String.format("%d,%d", firstRow, lastRow), null);
+		if(orderInfoArray.size()<40){
+			ordersDTO.setIsEnd(true);
+		}
+		List<OrderInfoDTO> lst = new ArrayList<OrderInfoDTO>();
+		for(VOrderInfoDTO item : orderInfoArray){
+			OrderInfoDTO orderInfoDTO = new OrderInfoDTO();
+			orderInfoDTO.setOrderID(item.getWashOrderID());
+			orderInfoDTO.setOrderNO(item.getOrderNO());
+			orderInfoDTO.setCreateDate(item.getCreateDate());
+			orderInfoDTO.setCreateTime(item.getCreateTime());
+			orderInfoDTO.setLicencePlate(item.getLicencePlate());
+			orderInfoDTO.setRequestDate(item.getRequestDate());
+			orderInfoDTO.setRequestTime(item.getRequestTime());
+			orderInfoDTO.setWashDate(item.getWashDate());
+			orderInfoDTO.setWashTime(item.getWashTime());
+			orderInfoDTO.setWashAddress(item.getWashAddress());
+			orderInfoDTO.setMobile(item.getMobileNo());
+			orderInfoDTO.setEvaluation(item.getScore());
+			orderInfoDTO.setPrice(item.getAmmount().doubleValue());
+			orderInfoDTO.setWorker(item.getGroupName());
+			orderInfoDTO.setStatus(item.getOrderStatus());
+			orderInfoDTO.setLongitude(item.getLongitude());
+			orderInfoDTO.setLatitude(item.getLatitude());
+			
+			String[] serviceIDs = item.getGroupServiceID().split(",");
+			List<OrderItemDTO> orderItems = new ArrayList<OrderItemDTO>();
+			for(Object serviceID : serviceIDs){
+				OrderItemDTO orderItemDTO = new OrderItemDTO();
+				
+				try {
+					serviceID =   Integer.parseInt( (String)serviceID);
+				} catch (Exception e) {
+				}
+				
+				List<VWorkerServiceItemsDTO> lstServiceItem =
+						hbMasterCache.getMasterData(MASTER_NAME.GROUP_SERVICE, serviceID);
+				if(lstServiceItem != null && lstServiceItem.size()>0){
+					VWorkerServiceItemsDTO workerServiceItemsDTO = lstServiceItem.get(0);
+					orderItemDTO.setName(workerServiceItemsDTO.getItemName());
+					orderItemDTO.setGroupServiceID(workerServiceItemsDTO.getGroupServiceId());
+					orderItemDTO.setPrice(workerServiceItemsDTO.getPrice().doubleValue());
+					orderItemDTO.setExplain(workerServiceItemsDTO.getComment());
+					orderItems.add(orderItemDTO);
+				}
+			}
+			orderInfoDTO.setOrderItems(orderItems.toArray(new OrderItemDTO[orderItems.size()] ));//fix by shaolizhi
+			
+			if(item.getEvidencePath()!=null){ //fix by shaolizhi
+				String[] evidencePaths = item.getEvidencePath().split(",");
+				List<String> paths = new ArrayList<String>();
+				for(String path : evidencePaths){
+					paths.add(path);
+				}
+				orderInfoDTO.setEvidence(paths.toArray(new String[paths.size()]));
+			}
+
+			
+			lst.add(orderInfoDTO);
+		}
+		
+		ordersDTO.setOrderInfoArray(lst.toArray(new OrderInfoDTO[lst.size()]));
+		return ordersDTO;
+	}
+	
+	@Override
+	public void updateEvaluation(Long customerID, Long orderNO, Integer leve) {
+		WashOrderDTO washOrderDTO = new WashOrderDTO();
+		washOrderDTO.setCustomerID(customerID);
+		washOrderDTO.setWashOrderID(orderNO);
+		washOrderDTO = this.queryDAO.queryForObject(WashOrderDTO.EQUAL_SEARCH, washOrderDTO);
+		if(washOrderDTO == null){
+			createApplicationException(M10440WS, "订单");
+		}
+		
+		washOrderDTO.setScore(leve);
+		this.updateDAO.updateOne(WashOrderDTO.UPDATE, washOrderDTO, M10190WS, SH_INFO);
+		
+		CarWashDTO carWashDTO = new CarWashDTO();
+		carWashDTO.setCarWashID(washOrderDTO.getCarWashID());
+		carWashDTO.setStatus(Integer.parseInt(ORDER_STATUS.COMMENTED.toString()));
+		this.updateDAO.updateOne(CarWashDTO.UPDATE, carWashDTO, M10190WS, SH_INFO);
+	}
+
+	/**
+	 * 更新订单状态
+	 * 
+	 */
+	@Override 
+	public void updateOrderStatus(Integer workerID, Long orderNO, Integer status){
+		WashOrderDTO washOrderDTO = new WashOrderDTO();
+		//washOrderDTO.setCustomerID(customerID);
+		washOrderDTO.setWorkerGroupID(workerID);
+		washOrderDTO.setWashOrderID(orderNO);
+		washOrderDTO = this.queryDAO.queryForObject(WashOrderDTO.EQUAL_SEARCH, washOrderDTO);
+		if(washOrderDTO == null){
+			createApplicationException(M10440WS, "订单");
+		}
+		
+		CarWashDTO carWashDTO = new CarWashDTO();
+		carWashDTO.setCarWashID(washOrderDTO.getCarWashID());
+		carWashDTO.setStatus( status);
+		this.updateDAO.updateOne(CarWashDTO.UPDATE, carWashDTO, M10901WC, SH_INFO);
+	}
+	
+	@Override
+	public WorkerAccountDTO getWorkerAccount(Integer workerGroupID) {
+		VWorkerAccountDTO workerAccount = new VWorkerAccountDTO();
+		WorkerAccountDTO resultDTO = new WorkerAccountDTO();
+		workerAccount.setWorkerGroupID(workerGroupID);
+		workerAccount = this.queryDAO.queryForObject(VWorkerAccountDTO.EQUAL_SEARCH, workerAccount);
+		if(workerAccount == null)
+		{
+			createApplicationException(M10809WC );
+		}
+		else{
+			resultDTO.setTodayAccount(workerAccount.getTODAYAccount().doubleValue());
+			resultDTO.setTotelAccount(workerAccount.getTotelAccount().doubleValue());
+		}
+		return resultDTO;
+	}
+
+	@Override
+	public Boolean getQueryOrderPayResult(Long customerID, Long orderNO) {
+		VOrderInfoDTO orderInfoDTO = new VOrderInfoDTO();
+		orderInfoDTO.setCustomerID(customerID);
+		orderInfoDTO.setWashOrderID(orderNO);
+		orderInfoDTO = this.queryDAO.queryForObject(VOrderInfoDTO.EQUAL_SEARCH, orderInfoDTO);
+		if(orderInfoDTO == null){
+			createApplicationException(M10440WS, SH_INFO);
+		}
+		
+		if(orderInfoDTO.getStatus() >= Integer.parseInt(ORDER_STATUS.PAID.toString())){
+			return true;
+		}
+		else{
+			if(orderInfoDTO.getPayType() == Integer.parseInt(PAYMENT_TYPE.CASH.toString())){
+				return false;
+			}
+			else if(orderInfoDTO.getPayType() == Integer.parseInt(PAYMENT_TYPE.SXXC.toString())){
+				return false;
+			}
+			else if(orderInfoDTO.getPayType() == Integer.parseInt(PAYMENT_TYPE.ALIPAY.toString())){
+				return false;
+			}
+			else if(orderInfoDTO.getPayType() == Integer.parseInt(PAYMENT_TYPE.UNIONPAY.toString())){
+				return false;
+			}
+			else if(orderInfoDTO.getPayType() == Integer.parseInt(PAYMENT_TYPE.WECHETPAY.toString())){
+				return hbAccount.getWechetPaied(orderNO);
+			}
+			return false;
+		}
+	}
+
+	@Override
+	public void updateOrderEvidence(Integer workerID, Long orderNO,
+			String[] beforePics, String[] afterPics) {
+		
+		WashOrderDTO washOrderDTO = new WashOrderDTO();
+		washOrderDTO.setWorkerGroupID(workerID);
+		washOrderDTO.setWashOrderID(orderNO);
+		washOrderDTO = this.queryDAO.queryForObject(WashOrderDTO.EQUAL_SEARCH, washOrderDTO);
+		if(washOrderDTO == null){
+			createApplicationException(M10440WS, "订单");
+		}
+		
+		for(String beforePic: beforePics){	//M10902WC
+			OrderEvidenceDTO orderEvidenceDTO = new OrderEvidenceDTO();
+			orderEvidenceDTO.setUpdateDate(new SystemHandlerImpl().getCurrentDate());
+			orderEvidenceDTO.setUpdateTime(new SystemHandlerImpl().getCurrentTime()); 
+			orderEvidenceDTO.setWashOrderID(orderNO);
+			orderEvidenceDTO.setEvidencePath(beforePic);
+			orderEvidenceDTO.setEvidenceFlg(Integer.parseInt( ORDER_EVIDENCE_STATUS.BEFORE.toString()));
+			this.updateDAO.updateOne(OrderEvidenceDTO .INSERT, orderEvidenceDTO, M10902WC, SH_INFO);
+		}
+		
+		for(String afterPic: afterPics){
+			OrderEvidenceDTO orderEvidenceDTO = new OrderEvidenceDTO();
+			orderEvidenceDTO.setUpdateDate(new SystemHandlerImpl().getCurrentDate());
+			orderEvidenceDTO.setUpdateTime(new SystemHandlerImpl().getCurrentTime()); 
+			orderEvidenceDTO.setWashOrderID(orderNO);
+			orderEvidenceDTO.setEvidencePath(afterPic);
+			orderEvidenceDTO.setEvidenceFlg(Integer.parseInt( ORDER_EVIDENCE_STATUS.AFTER.toString()));
+			this.updateDAO.updateOne(OrderEvidenceDTO.INSERT, orderEvidenceDTO, M10902WC, SH_INFO);
+		}
+		
+		
+		
+	}
+}

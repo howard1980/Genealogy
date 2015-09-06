@@ -1,0 +1,31 @@
+/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.main.biz.com.HbValidCode;
+import com.maxiaohua.genealogy.main.service.com.dto.SsSendValidCodeInDTO;
+import com.maxiaohua.genealogy.main.service.com.dto.SsSendValidCodeOutDTO;
+
+public class SsSendValidCode extends AbstractService<SsSendValidCodeOutDTO, SsSendValidCodeInDTO> {
+
+	@AutoInject
+	private HbValidCode hbValidCode;
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsSendValidCodeOutDTO execute(
+			SsSendValidCodeInDTO ssSendValidCodeInDTO) {
+		SsSendValidCodeOutDTO ssGetNearWorkerOutDTO = new SsSendValidCodeOutDTO();
+		hbValidCode.sendValidCode(ssSendValidCodeInDTO.getMobile());
+		return ssGetNearWorkerOutDTO;
+	}
+}

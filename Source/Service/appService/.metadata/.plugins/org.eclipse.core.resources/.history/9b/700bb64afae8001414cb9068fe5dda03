@@ -1,0 +1,38 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.beetlestech.nfe.fw.core.service.AbstractService;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.com.HbCustomer;
+import com.beetlestech.nfe.main.biz.com.dto.LoginDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsCustomerLoginInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsCustomerLoginOutDTO;
+
+public class SsCustomerLogin extends AbstractService<SsCustomerLoginOutDTO, SsCustomerLoginInDTO> {
+	@AutoInject
+	private HbCustomer hbCustomer;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.beetlestech.nfe.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsCustomerLoginOutDTO execute(
+			SsCustomerLoginInDTO ssCustomerLoginInDTO) {
+		SsCustomerLoginOutDTO ssCustomerLoginOutDTO = new SsCustomerLoginOutDTO();
+		LoginDTO login = hbCustomer.login(ssCustomerLoginInDTO.getMobile(), 
+				ssCustomerLoginInDTO.getValidCode(), ssCustomerLoginInDTO.getRegistrationID());
+		ssCustomerLoginOutDTO.setUserID(login.getUserID());
+		ssCustomerLoginOutDTO.setUserName(login.getUserName());
+		ssCustomerLoginOutDTO.setMobile(login.getMobile());
+		ssCustomerLoginOutDTO.setLicensePlates(login.getLicensePlates());
+		return ssCustomerLoginOutDTO;
+	}
+}

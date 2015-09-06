@@ -1,0 +1,41 @@
+package com.beetlestech.nfe.main.biz.com.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.main.biz.com.HbPropaganda;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.db.constant.SQLConstant;
+import com.beetlestech.nfe.main.db.tbl.PropagandaInfoDTO;
+
+public class HbPropagandaImpl extends AbstractDBLogic implements HbPropaganda, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+
+	@Override
+	public String[] getPropagandeList() {
+		List<String> picArray = new ArrayList<String>();
+		List<PropagandaInfoDTO> propagandaInfoArray = this.queryDAO.queryBySQL(
+				PropagandaInfoDTO.SQL_SEARCH,  
+				PropagandaInfoDTO.COLUMN_START_DATE + 
+				SQLConstant.LESS_EQUAL_THAN + 
+				"'" + 
+				this.getCurrentDate() + 
+				"'" + 
+				SQLConstant.SQL_AND +
+				PropagandaInfoDTO.COLUMN_END_DAE +
+				SQLConstant.GREATER_EQUAL_THAN + 
+				"'" + 
+				this.getCurrentDate() +
+				"'", null, null, null, null);
+		
+		if(propagandaInfoArray.size()>0){
+			for(PropagandaInfoDTO item: propagandaInfoArray){
+				picArray.add(item.getPicturePath());
+			}
+		}
+		return picArray.toArray(new String[picArray.size()]);
+	}
+}

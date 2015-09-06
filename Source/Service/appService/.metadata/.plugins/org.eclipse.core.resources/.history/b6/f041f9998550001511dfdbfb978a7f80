@@ -1,0 +1,104 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.view;
+
+import com.maxiaohua.genealogy.main.db.view.support.VOrderAmmountDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("VORDER_AMMOUNT")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class VOrderAmmountDTO extends VOrderAmmountDTOSupport implements java.io.Serializable, Comparable<VOrderAmmountDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WASH_ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long washOrderID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CAR_WASH_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long carWashID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AMMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal ammount = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PAYMENT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal payment = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	public Long getWashOrderID() {
+		return this.washOrderID;
+	}
+
+	public void setWashOrderID(
+			Long washOrderID) {
+		this.washOrderID = washOrderID;
+	}
+
+	public Long getCarWashID() {
+		return this.carWashID;
+	}
+
+	public void setCarWashID(
+			Long carWashID) {
+		this.carWashID = carWashID;
+	}
+
+	public java.math.BigDecimal getAmmount() {
+		return this.ammount;
+	}
+
+	public void setAmmount(
+			java.math.BigDecimal ammount) {
+		this.ammount = ammount;
+	}
+
+	public java.math.BigDecimal getPayment() {
+		return this.payment;
+	}
+
+	public void setPayment(
+			java.math.BigDecimal payment) {
+		this.payment = payment;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			VOrderAmmountDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

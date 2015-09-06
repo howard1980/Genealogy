@@ -1,0 +1,56 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.maxiaohua.genealogy.main.biz.a01.dto.AutoBrandDTO;
+
+/**
+ * 获得汽车品牌列表的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得汽车品牌列表")
+public class SsGetBrandsOutDTO implements java.io.Serializable, Comparable<SsGetBrandsOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 品牌列表  
+	*/
+	@Alias("品牌列表")
+	private AutoBrandDTO[] brandArray = null;
+
+	/**
+	* <code>品牌列表</code>返回
+	* @return <code>品牌列表</code>
+	*/
+	public AutoBrandDTO[] getBrandArray() {
+		return this.brandArray;
+	}
+
+	/**
+	* <code>brandArray</code>设定
+	* @param brandArray　<code>brandArray</code>设定值
+	*/
+	public void setBrandArray(
+			AutoBrandDTO[] brandArray) {
+		this.brandArray = brandArray;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetBrandsOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

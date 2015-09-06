@@ -1,0 +1,42 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.a01.HbAccount;
+import com.beetlestech.nfe.main.biz.a01.dto.WechetInfoDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsWechetPayInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsWechetPayOutDTO;
+
+public class SsWechetPay extends AbstractService<SsWechetPayOutDTO, SsWechetPayInDTO> {
+	
+	@AutoInject
+	private HbAccount hbAccount;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsWechetPayOutDTO execute(
+			SsWechetPayInDTO ssWechetPayInDTO) {
+		SsWechetPayOutDTO ssWechetPayOutDTO = new SsWechetPayOutDTO();
+		WechetInfoDTO wechetInfo = 
+				hbAccount.getWechetPay(
+						ssWechetPayInDTO.getCustomerID(), 
+						ssWechetPayInDTO.getOrderNO());
+		ssWechetPayOutDTO.setAppid(wechetInfo.getAppid());
+		ssWechetPayOutDTO.setNoncestr(wechetInfo.getNoncestr());
+		ssWechetPayOutDTO.setPackageinfo(wechetInfo.getPackageinfo());
+		ssWechetPayOutDTO.setPartnerid(wechetInfo.getPartnerid());
+		ssWechetPayOutDTO.setPrepayid(wechetInfo.getPrepayid());
+		ssWechetPayOutDTO.setSign(wechetInfo.getSign());
+		ssWechetPayOutDTO.setTimestamp(wechetInfo.getTimestamp());
+		return ssWechetPayOutDTO;
+	}
+}

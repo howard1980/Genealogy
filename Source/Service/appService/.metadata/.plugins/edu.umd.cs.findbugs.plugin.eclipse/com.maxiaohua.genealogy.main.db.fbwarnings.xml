@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="2" timestamp="1441100765027" analysisTimestamp="1441100764574" release="">
+  <Project projectName="com.maxiaohua.genealogy.main.db">
+    <Jar>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.db\bin\com\maxiaohua\genealogy\main\db\tbl\TcomblcmDTO.class</Jar>
+    <Jar>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.db\bin\com\maxiaohua\genealogy\main\db\tbl\support\TcomblcmDTOSupport.class</Jar>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.db\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\annotations-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ha.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-tribes.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc_license_cu.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\ecj-3.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\el-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper-el.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jsp-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-coyote.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-es.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-fr.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-ja.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-jdbc.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-util.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jedis-2.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\gson-2.2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jpush-client-3.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\slf4j-api-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_20\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.db\src</SrcDir>
+    <SrcDir>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.main.db\.apt_generated</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO" sourcefile="M01CommonDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/M01CommonDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/M01CommonDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.M01CommonDTO" start="96" end="96" startBytecode="0" endBytecode="76" sourcefile="M01CommonDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/M01CommonDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO" sourcefile="T01GenealogyDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T01GenealogyDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T01GenealogyDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO" start="107" end="107" startBytecode="0" endBytecode="76" sourcefile="T01GenealogyDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T01GenealogyDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="getBIRTHDATE" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="168" end="168" startBytecode="0" endBytecode="46" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="bIRTHDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="168" end="168" startBytecode="4" endBytecode="4" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="168" end="168" startBytecode="4" endBytecode="4" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="getREGEDITTIME" signature="()Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="240" end="240" startBytecode="0" endBytecode="46" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="rEGEDITTIME" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="240" end="240" startBytecode="4" endBytecode="4" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="240" end="240" startBytecode="4" endBytecode="4" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="setBIRTHDATE" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="173" end="174" startBytecode="0" endBytecode="61" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="bIRTHDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Field>
+    <LocalVariable name="bIRTHDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="173" end="173" startBytecode="2" endBytecode="2" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="173" end="173" startBytecode="2" endBytecode="2" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="setREGEDITTIME" signature="(Ljava/sql/Timestamp;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="245" end="246" startBytecode="0" endBytecode="61" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="rEGEDITTIME" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Field>
+    <LocalVariable name="rEGEDITTIME" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="245" end="245" startBytecode="2" endBytecode="2" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="245" end="245" startBytecode="2" endBytecode="2" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" start="254" end="254" startBytecode="0" endBytecode="76" sourcefile="T02PersonalDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T02PersonalDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T03GenMemberDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T03GenMemberDTO" sourcefile="T03GenMemberDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T03GenMemberDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T03GenMemberDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T03GenMemberDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T03GenMemberDTO" start="104" end="104" startBytecode="0" endBytecode="76" sourcefile="T03GenMemberDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T03GenMemberDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO" sourcefile="T04GenHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T04GenHistoryDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T04GenHistoryDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO" start="46" end="46" startBytecode="0" endBytecode="76" sourcefile="T04GenHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T04GenHistoryDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T05GenHistoryInfoDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T05GenHistoryInfoDTO" sourcefile="T05GenHistoryInfoDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T05GenHistoryInfoDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T05GenHistoryInfoDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T05GenHistoryInfoDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T05GenHistoryInfoDTO" start="46" end="46" startBytecode="0" endBytecode="76" sourcefile="T05GenHistoryInfoDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T05GenHistoryInfoDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="getCREATETIME" signature="()Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="198" end="198" startBytecode="0" endBytecode="46" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="cREATETIME" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="198" end="198" startBytecode="4" endBytecode="4" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="198" end="198" startBytecode="4" endBytecode="4" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="getEVENTDATE" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="126" end="126" startBytecode="0" endBytecode="46" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="eVENTDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="126" end="126" startBytecode="4" endBytecode="4" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="126" end="126" startBytecode="4" endBytecode="4" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="setCREATETIME" signature="(Ljava/sql/Timestamp;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="203" end="204" startBytecode="0" endBytecode="61" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="cREATETIME" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Field>
+    <LocalVariable name="cREATETIME" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="203" end="203" startBytecode="2" endBytecode="2" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="203" end="203" startBytecode="2" endBytecode="2" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="setEVENTDATE" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="131" end="132" startBytecode="0" endBytecode="61" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="eVENTDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Field>
+    <LocalVariable name="eVENTDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="131" end="131" startBytecode="2" endBytecode="2" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="131" end="131" startBytecode="2" endBytecode="2" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" start="212" end="212" startBytecode="0" endBytecode="76" sourcefile="T06PerHistoryDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T06PerHistoryDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO" sourcefile="T07PerSetDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T07PerSetDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T07PerSetDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO" start="105" end="105" startBytecode="0" endBytecode="76" sourcefile="T07PerSetDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T07PerSetDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T08PerPushDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T08PerPushDTO" sourcefile="T08PerPushDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T08PerPushDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T08PerPushDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T08PerPushDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T08PerPushDTO" start="92" end="92" startBytecode="0" endBytecode="76" sourcefile="T08PerPushDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T08PerPushDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" name="getCREATETIME" signature="()Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="105" end="105" startBytecode="0" endBytecode="46" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" name="cREATETIME" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="105" end="105" startBytecode="4" endBytecode="4" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="105" end="105" startBytecode="4" endBytecode="4" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" name="setCREATETIME" signature="(Ljava/sql/Timestamp;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="110" end="111" startBytecode="0" endBytecode="61" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" name="cREATETIME" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Field>
+    <LocalVariable name="cREATETIME" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="110" end="110" startBytecode="2" endBytecode="2" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="110" end="110" startBytecode="2" endBytecode="2" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" start="119" end="119" startBytecode="0" endBytecode="76" sourcefile="T09PerHisStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T09PerHisStreamDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO" sourcefile="T10PerStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T10PerStreamDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T10PerStreamDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO" start="105" end="105" startBytecode="0" endBytecode="76" sourcefile="T10PerStreamDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T10PerStreamDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO" sourcefile="T11PerSpouseDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T11PerSpouseDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T11PerSpouseDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO" start="76" end="76" startBytecode="0" endBytecode="76" sourcefile="T11PerSpouseDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T11PerSpouseDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T12PerHisCommentDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T12PerHisCommentDTO" sourcefile="T12PerHisCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T12PerHisCommentDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T12PerHisCommentDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T12PerHisCommentDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T12PerHisCommentDTO" start="89" end="89" startBytecode="0" endBytecode="76" sourcefile="T12PerHisCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T12PerHisCommentDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="getCREATEDATE" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="127" end="127" startBytecode="0" endBytecode="46" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="cREATEDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="127" end="127" startBytecode="4" endBytecode="4" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="127" end="127" startBytecode="4" endBytecode="4" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="getNOTICEDATE" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="91" end="91" startBytecode="0" endBytecode="46" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="nOTICEDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="91" end="91" startBytecode="4" endBytecode="4" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="91" end="91" startBytecode="4" endBytecode="4" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="setCREATEDATE" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="132" end="133" startBytecode="0" endBytecode="61" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="cREATEDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Field>
+    <LocalVariable name="cREATEDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="132" end="132" startBytecode="2" endBytecode="2" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="132" end="132" startBytecode="2" endBytecode="2" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="setNOTICEDATE" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="96" end="97" startBytecode="0" endBytecode="61" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="nOTICEDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Field>
+    <LocalVariable name="nOTICEDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="96" end="96" startBytecode="2" endBytecode="2" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="96" end="96" startBytecode="2" endBytecode="2" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" start="159" end="159" startBytecode="0" endBytecode="76" sourcefile="T13NoticeDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T13NoticeDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T14NoticePerDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T14NoticePerDTO" sourcefile="T14NoticePerDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T14NoticePerDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T14NoticePerDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T14NoticePerDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T14NoticePerDTO" start="74" end="74" startBytecode="0" endBytecode="76" sourcefile="T14NoticePerDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T14NoticePerDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T15NoticeAttentionDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T15NoticeAttentionDTO" sourcefile="T15NoticeAttentionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T15NoticeAttentionDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T15NoticeAttentionDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T15NoticeAttentionDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T15NoticeAttentionDTO" start="74" end="74" startBytecode="0" endBytecode="76" sourcefile="T15NoticeAttentionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T15NoticeAttentionDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" name="getCREATEDATE" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="94" end="94" startBytecode="0" endBytecode="46" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" name="cREATEDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="94" end="94" startBytecode="4" endBytecode="4" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="94" end="94" startBytecode="4" endBytecode="4" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" name="setCREATEDATE" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="99" end="100" startBytecode="0" endBytecode="61" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" name="cREATEDATE" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Field>
+    <LocalVariable name="cREATEDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="99" end="99" startBytecode="2" endBytecode="2" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="99" end="99" startBytecode="2" endBytecode="2" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO" start="117" end="117" startBytecode="0" endBytecode="76" sourcefile="T16NoticeCommentDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T16NoticeCommentDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="getCREATEDATE" signature="()Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="95" end="95" startBytecode="0" endBytecode="46" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="cREATEDATE" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="95" end="95" startBytecode="4" endBytecode="4" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="95" end="95" startBytecode="4" endBytecode="4" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="getUPDATEDATE" signature="()Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="104" end="104" startBytecode="0" endBytecode="46" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="uPDATEDATE" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="104" end="104" startBytecode="4" endBytecode="4" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="104" end="104" startBytecode="4" endBytecode="4" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="setCREATEDATE" signature="(Ljava/sql/Timestamp;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="100" end="101" startBytecode="0" endBytecode="61" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="cREATEDATE" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Field>
+    <LocalVariable name="cREATEDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="100" end="100" startBytecode="2" endBytecode="2" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="100" end="100" startBytecode="2" endBytecode="2" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="setUPDATEDATE" signature="(Ljava/sql/Timestamp;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="109" end="110" startBytecode="0" endBytecode="61" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="uPDATEDATE" signature="Ljava/sql/Timestamp;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Field>
+    <LocalVariable name="uPDATEDATE" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="109" end="109" startBytecode="2" endBytecode="2" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="109" end="109" startBytecode="2" endBytecode="2" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO" start="118" end="118" startBytecode="0" endBytecode="76" sourcefile="T17PerQuestionDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/T17PerQuestionDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="2">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" name="getLastDate" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="136" end="136" startBytecode="0" endBytecode="46" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" name="lastDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Field>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="136" end="136" startBytecode="4" endBytecode="4" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="136" end="136" startBytecode="4" endBytecode="4" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="2">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" name="setLastDate" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="141" end="142" startBytecode="0" endBytecode="61" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Method>
+    <Field classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" name="lastDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Field>
+    <LocalVariable name="lastDate" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="141" end="141" startBytecode="2" endBytecode="2" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="141" end="141" startBytecode="2" endBytecode="2" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="2">
+    <Class classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Class>
+    <Method classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" name="compareTo" signature="(Lcom/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO;)I" isStatic="false">
+      <SourceLine classname="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" start="159" end="159" startBytecode="0" endBytecode="76" sourcefile="TcomblcmDTO.java" sourcepath="com/maxiaohua/genealogy/main/db/tbl/TcomblcmDTO.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 1 Sep 2015 17:46:04 +0800" total_classes="2" referenced_classes="24" total_bugs="41" total_size="101" num_packages="2" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="0.72" clock_seconds="0.45" peak_mbytes="661.71" alloc_mbytes="455.50" gc_seconds="0.02" priority_2="41">
+    <PackageStats package="com.maxiaohua.genealogy.main.db.tbl" total_bugs="41" total_types="19" total_size="64" priority_2="41">
+      <ClassStats class="com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO" sourceFile="TcomblcmDTO.java" interface="false" size="64" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <PackageStats package="com.maxiaohua.genealogy.main.db.tbl.support" total_bugs="0" total_types="1" total_size="37">
+      <ClassStats class="com.maxiaohua.genealogy.main.db.tbl.support.TcomblcmDTOSupport" sourceFile="TcomblcmDTOSupport.java" interface="false" size="37" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="192" invocations="2" avgMicrosecondsPerInvocation="96356" maxMicrosecondsPerInvocation="187022" standardDeviationMircosecondsPerInvocation="90665"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="105" invocations="340" avgMicrosecondsPerInvocation="310" maxMicrosecondsPerInvocation="15245" standardDeviationMircosecondsPerInvocation="1149"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="48" invocations="344" avgMicrosecondsPerInvocation="140" maxMicrosecondsPerInvocation="523" standardDeviationMircosecondsPerInvocation="57"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1441099938971" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1441099938971" release="" codeSize="1395" numClasses="36"/>
+  </History>
+</BugCollection>

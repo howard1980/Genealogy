@@ -1,0 +1,28 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.beetlestech.nfe.main.service.a01.dto.SsCreateRepairInquiryInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsCreateRepairInquiryOutDTO;
+
+public class SsCreateRepairInquiry extends AbstractService<SsCreateRepairInquiryOutDTO, SsCreateRepairInquiryInDTO> {
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsCreateRepairInquiryOutDTO execute(
+			SsCreateRepairInquiryInDTO ssCreateRepairInquiryInDTO) {
+		SsCreateRepairInquiryOutDTO ssCreateRepairInquiryOutDTO = new SsCreateRepairInquiryOutDTO();
+		
+		ssCreateRepairInquiryOutDTO.setRepairInquiryID(1L);
+		
+		return ssCreateRepairInquiryOutDTO;
+	}
+}

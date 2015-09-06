@@ -1,0 +1,57 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.view.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.view.VCustomerLicencePlateDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VCustomerLicencePlateDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VCUSTOMER_LICENCE_PLATE_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VCUSTOMER_LICENCE_PLATE_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VCUSTOMER_LICENCE_PLATE_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VCUSTOMER_LICENCE_PLATE_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VCUSTOMER_LICENCE_PLATE_SQL_SEARCH";
+
+	public static final String COUNT = "VCUSTOMER_LICENCE_PLATE_COUNT";
+
+	public static final String COUNT_OR = "VCUSTOMER_LICENCE_PLATE_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VCUSTOMER_LICENCE_PLATE_COUNT_SEARCH";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_LICENCE_PLATE = "LICENCE_PLATE";
+
+	public static final String COLUMN_ORDERBY = "ORDERBY";
+
+	public static final String TABLE = "VCUSTOMER_LICENCE_PLATE";
+
+	public static VCustomerLicencePlateDTO setDefaultValue() {
+		VCustomerLicencePlateDTO defaultDTO = new VCustomerLicencePlateDTO();
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setLicencePlate(StringUtil.EMPTY);
+
+		defaultDTO.setorderby(0l);
+
+		return defaultDTO;
+	}
+}

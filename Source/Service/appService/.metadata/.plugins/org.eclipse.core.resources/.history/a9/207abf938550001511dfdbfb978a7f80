@@ -1,0 +1,288 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.UniPayDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("UNI_PAY")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class UniPayDTO extends UniPayDTOSupport implements java.io.Serializable, Comparable<UniPayDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UNI_PAY_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long uniPayID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("UID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long uid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long oid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 14, max = 14)
+	private String ordertime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
+	private String orderdate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MER_ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String merorderid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRANS_TYPE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String transtype = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRANS_AMT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer transamt = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String merid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRANS_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String transid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRANS_STATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 2, max = 2)
+	private String transstate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REF_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 12, max = 12)
+	private String refid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ACCOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(12)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
+	private String account = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("TRANS_DESC")
+	@com.maxiaohua.genealogy.fw.core.type.Index(13)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 256, max = 256)
+	private String transdesc = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LIQ_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(14)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
+	private String liqdate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("RESERVE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(15)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 256, max = 256)
+	private String reserve = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SIGNATURE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(16)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 256, max = 256)
+	private String signature = null;
+
+	public Long getUniPayID() {
+		return this.uniPayID;
+	}
+
+	public void setUniPayID(
+			Long uniPayID) {
+		this.uniPayID = uniPayID;
+	}
+
+	public Long getuid() {
+		return this.uid;
+	}
+
+	public void setuid(
+			Long uid) {
+		this.uid = uid;
+	}
+
+	public Long getoid() {
+		return this.oid;
+	}
+
+	public void setoid(
+			Long oid) {
+		this.oid = oid;
+	}
+
+	public String getordertime() {
+		return this.ordertime;
+	}
+
+	public void setordertime(
+			String ordertime) {
+		this.ordertime = ordertime;
+	}
+
+	public String getorderdate() {
+		return this.orderdate;
+	}
+
+	public void setorderdate(
+			String orderdate) {
+		this.orderdate = orderdate;
+	}
+
+	public String getmerorderid() {
+		return this.merorderid;
+	}
+
+	public void setmerorderid(
+			String merorderid) {
+		this.merorderid = merorderid;
+	}
+
+	public String gettranstype() {
+		return this.transtype;
+	}
+
+	public void settranstype(
+			String transtype) {
+		this.transtype = transtype;
+	}
+
+	public Integer gettransamt() {
+		return this.transamt;
+	}
+
+	public void settransamt(
+			Integer transamt) {
+		this.transamt = transamt;
+	}
+
+	public String getmerid() {
+		return this.merid;
+	}
+
+	public void setmerid(
+			String merid) {
+		this.merid = merid;
+	}
+
+	public String gettransid() {
+		return this.transid;
+	}
+
+	public void settransid(
+			String transid) {
+		this.transid = transid;
+	}
+
+	public String gettransstate() {
+		return this.transstate;
+	}
+
+	public void settransstate(
+			String transstate) {
+		this.transstate = transstate;
+	}
+
+	public String getrefid() {
+		return this.refid;
+	}
+
+	public void setrefid(
+			String refid) {
+		this.refid = refid;
+	}
+
+	public String getaccount() {
+		return this.account;
+	}
+
+	public void setaccount(
+			String account) {
+		this.account = account;
+	}
+
+	public String gettransdesc() {
+		return this.transdesc;
+	}
+
+	public void settransdesc(
+			String transdesc) {
+		this.transdesc = transdesc;
+	}
+
+	public String getliqdate() {
+		return this.liqdate;
+	}
+
+	public void setliqdate(
+			String liqdate) {
+		this.liqdate = liqdate;
+	}
+
+	public String getreserve() {
+		return this.reserve;
+	}
+
+	public void setreserve(
+			String reserve) {
+		this.reserve = reserve;
+	}
+
+	public String getsignature() {
+		return this.signature;
+	}
+
+	public void setsignature(
+			String signature) {
+		this.signature = signature;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			UniPayDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

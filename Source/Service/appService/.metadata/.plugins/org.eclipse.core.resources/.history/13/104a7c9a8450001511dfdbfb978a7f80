@@ -1,0 +1,143 @@
+/* CIS
+* (C) Copyright IBM Japan, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.biz.com.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * パスワード期限情報 を格納するDTO
+ *
+ * 変更履歴
+ * REV.         変更日付           変更者              変更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2013/11/19         GD                  新規作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("パスワード期限情報")
+public class PwExpirationInfoDTO implements java.io.Serializable, Comparable<PwExpirationInfoDTO> {
+	/**
+	* シリアルIDです。
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* チェック結果  
+	*/
+	@Alias("パスワード期限情報・チェック結果")
+	private Boolean result = null;
+	/**
+	* パスワード期限年  
+	*/
+	@Alias("パスワード期限情報・パスワード期限年")
+	private String expirationYear = null;
+	/**
+	* パスワード期限月  
+	*/
+	@Alias("パスワード期限情報・パスワード期限月")
+	private String expirationMonth = null;
+	/**
+	* パスワード期限日  
+	*/
+	@Alias("パスワード期限情報・パスワード期限日")
+	private String expirationDay = null;
+	/**
+	* パスワード期限切れまでの日数  
+	*/
+	@Alias("パスワード期限情報・パスワード期限切れまでの日数")
+	private String days = null;
+
+	/**
+	* <code>チェック結果</code>を戻します。
+	* @return <code>チェック結果</code>
+	*/
+	public Boolean getResult() {
+		return this.result;
+	}
+
+	/**
+	* <code>チェック結果</code>を設定します。
+	* @param チェック結果　<code>チェック結果</code>に設定する値
+	*/
+	public void setResult(
+			Boolean result) {
+		this.result = result;
+	}
+
+	/**
+	* <code>パスワード期限年</code>を戻します。
+	* @return <code>パスワード期限年</code>
+	*/
+	public String getExpirationYear() {
+		return this.expirationYear;
+	}
+
+	/**
+	* <code>パスワード期限年</code>を設定します。
+	* @param パスワード期限年　<code>パスワード期限年</code>に設定する値
+	*/
+	public void setExpirationYear(
+			String expirationYear) {
+		this.expirationYear = expirationYear;
+	}
+
+	/**
+	* <code>パスワード期限月</code>を戻します。
+	* @return <code>パスワード期限月</code>
+	*/
+	public String getExpirationMonth() {
+		return this.expirationMonth;
+	}
+
+	/**
+	* <code>パスワード期限月</code>を設定します。
+	* @param パスワード期限月　<code>パスワード期限月</code>に設定する値
+	*/
+	public void setExpirationMonth(
+			String expirationMonth) {
+		this.expirationMonth = expirationMonth;
+	}
+
+	/**
+	* <code>パスワード期限日</code>を戻します。
+	* @return <code>パスワード期限日</code>
+	*/
+	public String getExpirationDay() {
+		return this.expirationDay;
+	}
+
+	/**
+	* <code>パスワード期限日</code>を設定します。
+	* @param パスワード期限日　<code>パスワード期限日</code>に設定する値
+	*/
+	public void setExpirationDay(
+			String expirationDay) {
+		this.expirationDay = expirationDay;
+	}
+
+	/**
+	* <code>パスワード期限切れまでの日数</code>を戻します。
+	* @return <code>パスワード期限切れまでの日数</code>
+	*/
+	public String getDays() {
+		return this.days;
+	}
+
+	/**
+	* <code>パスワード期限切れまでの日数</code>を設定します。
+	* @param パスワード期限切れまでの日数　<code>パスワード期限切れまでの日数</code>に設定する値
+	*/
+	public void setDays(
+			String days) {
+		this.days = days;
+	}
+
+	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			PwExpirationInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

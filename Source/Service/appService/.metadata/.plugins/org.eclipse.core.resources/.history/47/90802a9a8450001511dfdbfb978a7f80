@@ -1,0 +1,196 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.biz.a01.dto;
+
+/**
+ * RepairInquiryDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("修车问诊")
+public class RepairInquiryDTO implements java.io.Serializable, Comparable<RepairInquiryDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Long iD = null;
+
+	public Long getID() {
+		return this.iD;
+	}
+
+	public void setID(
+			Long iD) {
+		this.iD = iD;
+	}
+
+	private String customerName = null;
+
+	public String getCustomerName() {
+		return this.customerName;
+	}
+
+	public void setCustomerName(
+			String customerName) {
+		this.customerName = customerName;
+	}
+
+	private Long customerID = null;
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	private String technicianName = null;
+
+	public String getTechnicianName() {
+		return this.technicianName;
+	}
+
+	public void setTechnicianName(
+			String technicianName) {
+		this.technicianName = technicianName;
+	}
+
+	private Long technicianID = null;
+
+	public Long getTechnicianID() {
+		return this.technicianID;
+	}
+
+	public void setTechnicianID(
+			Long technicianID) {
+		this.technicianID = technicianID;
+	}
+
+	private Integer type = null;
+
+	public Integer getType() {
+		return this.type;
+	}
+
+	public void setType(
+			Integer type) {
+		this.type = type;
+	}
+
+	private String voicePath = null;
+
+	public String getVoicePath() {
+		return this.voicePath;
+	}
+
+	public void setVoicePath(
+			String voicePath) {
+		this.voicePath = voicePath;
+	}
+
+	private java.sql.Date createDate = null;
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	private java.sql.Time createTime = null;
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
+	}
+
+	private String manufacturer = null;
+
+	public String getManufacturer() {
+		return this.manufacturer;
+	}
+
+	public void setManufacturer(
+			String manufacturer) {
+		this.manufacturer = manufacturer;
+	}
+
+	private Integer manufacturerID = null;
+
+	public Integer getManufacturerID() {
+		return this.manufacturerID;
+	}
+
+	public void setManufacturerID(
+			Integer manufacturerID) {
+		this.manufacturerID = manufacturerID;
+	}
+
+	private Integer technicianWorkYears = null;
+
+	public Integer getTechnicianWorkYears() {
+		return this.technicianWorkYears;
+	}
+
+	public void setTechnicianWorkYears(
+			Integer technicianWorkYears) {
+		this.technicianWorkYears = technicianWorkYears;
+	}
+
+	private String technicianComment = null;
+
+	public String getTechnicianComment() {
+		return this.technicianComment;
+	}
+
+	public void setTechnicianComment(
+			String technicianComment) {
+		this.technicianComment = technicianComment;
+	}
+
+	private String technicianPhoto = null;
+
+	public String getTechnicianPhoto() {
+		return this.technicianPhoto;
+	}
+
+	public void setTechnicianPhoto(
+			String technicianPhoto) {
+		this.technicianPhoto = technicianPhoto;
+	}
+
+	private String nativePlace = null;
+
+	public String getNativePlace() {
+		return this.nativePlace;
+	}
+
+	public void setNativePlace(
+			String nativePlace) {
+		this.nativePlace = nativePlace;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		RepairInquiryDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

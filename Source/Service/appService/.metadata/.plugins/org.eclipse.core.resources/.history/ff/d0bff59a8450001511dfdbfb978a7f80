@@ -1,0 +1,210 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.FunctionsModulesDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("FUNCTIONS_MODULES")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class FunctionsModulesDTO extends FunctionsModulesDTOSupport implements java.io.Serializable, Comparable<FunctionsModulesDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("FUNCTIONS_MODULES_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long functionsmodulesid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SYSTEM_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long systemid = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("NAME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
+	private String name = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PARENT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long parent = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("IS_LEAF")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("CHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 1, max = 1)
+	private String isleaf = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("VISIBLE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 10, max = 10)
+	private String visible = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("URL")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 40, max = 40)
+	private String url = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DESCRIPTION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 90, max = 90)
+	private String description = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MODULE_CODE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 5, max = 5)
+	private String modulecode = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATOR")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long creator = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATETIME")
+	private java.sql.Timestamp createdate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DISINDEX")
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 10, max = 10)
+	private String disindex = null;
+
+	public Long getfunctionsmodulesid() {
+		return this.functionsmodulesid;
+	}
+
+	public void setfunctionsmodulesid(
+			Long functionsmodulesid) {
+		this.functionsmodulesid = functionsmodulesid;
+	}
+
+	public Long getsystemid() {
+		return this.systemid;
+	}
+
+	public void setsystemid(
+			Long systemid) {
+		this.systemid = systemid;
+	}
+
+	public String getname() {
+		return this.name;
+	}
+
+	public void setname(
+			String name) {
+		this.name = name;
+	}
+
+	public Long getparent() {
+		return this.parent;
+	}
+
+	public void setparent(
+			Long parent) {
+		this.parent = parent;
+	}
+
+	public String getisleaf() {
+		return this.isleaf;
+	}
+
+	public void setisleaf(
+			String isleaf) {
+		this.isleaf = isleaf;
+	}
+
+	public String getvisible() {
+		return this.visible;
+	}
+
+	public void setvisible(
+			String visible) {
+		this.visible = visible;
+	}
+
+	public String geturl() {
+		return this.url;
+	}
+
+	public void seturl(
+			String url) {
+		this.url = url;
+	}
+
+	public String getdescription() {
+		return this.description;
+	}
+
+	public void setdescription(
+			String description) {
+		this.description = description;
+	}
+
+	public String getmodulecode() {
+		return this.modulecode;
+	}
+
+	public void setmodulecode(
+			String modulecode) {
+		this.modulecode = modulecode;
+	}
+
+	public Long getcreator() {
+		return this.creator;
+	}
+
+	public void setcreator(
+			Long creator) {
+		this.creator = creator;
+	}
+
+	public java.sql.Timestamp getcreatedate() {
+		return this.createdate;
+	}
+
+	public void setcreatedate(
+			java.sql.Timestamp createdate) {
+		this.createdate = createdate;
+	}
+
+	public String getdisindex() {
+		return this.disindex;
+	}
+
+	public void setdisindex(
+			String disindex) {
+		this.disindex = disindex;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			FunctionsModulesDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

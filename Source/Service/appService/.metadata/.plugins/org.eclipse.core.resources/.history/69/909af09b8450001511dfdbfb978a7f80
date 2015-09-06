@@ -1,0 +1,69 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.view.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerServiceItemsDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VWorkerServiceItemsDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VWORKER_SERVICE_ITEMS_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VWORKER_SERVICE_ITEMS_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VWORKER_SERVICE_ITEMS_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VWORKER_SERVICE_ITEMS_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VWORKER_SERVICE_ITEMS_SQL_SEARCH";
+
+	public static final String COUNT = "VWORKER_SERVICE_ITEMS_COUNT";
+
+	public static final String COUNT_OR = "VWORKER_SERVICE_ITEMS_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VWORKER_SERVICE_ITEMS_COUNT_SEARCH";
+
+	public static final String COLUMN_GROUP_SERVICE_ID = "GROUP_SERVICE_ID";
+
+	public static final String COLUMN_WORKER_GROUP_ID = "WORKER_GROUP_ID";
+
+	public static final String COLUMN_SERVICE_ITEMS_ID = "SERVICE_ITEMS_ID";
+
+	public static final String COLUMN_ITEM_NAME = "ITEM_NAME";
+
+	public static final String COLUMN_PRICE = "PRICE";
+
+	public static final String COLUMN_COMMENT = "COMMENT";
+
+	public static final String TABLE = "VWORKER_SERVICE_ITEMS";
+
+	public static VWorkerServiceItemsDTO setDefaultValue() {
+		VWorkerServiceItemsDTO defaultDTO = new VWorkerServiceItemsDTO();
+
+		defaultDTO.setGroupServiceId(0);
+
+		defaultDTO.setWorkerGroupID(0);
+
+		defaultDTO.setServiceItemsID(StringUtil.EMPTY);
+
+		defaultDTO.setItemName(StringUtil.EMPTY);
+
+		defaultDTO.setPrice(new java.math.BigDecimal(0));
+
+		defaultDTO.setComment(StringUtil.EMPTY);
+
+		return defaultDTO;
+	}
+}

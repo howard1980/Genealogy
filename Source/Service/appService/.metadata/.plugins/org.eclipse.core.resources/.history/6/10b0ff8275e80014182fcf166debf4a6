@@ -1,0 +1,32 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.beetlestech.nfe.fw.core.type.Alias;
+
+/**
+ * 更新工作组位置的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/04/21         TOOL                初次作成
+ *
+ */
+@com.beetlestech.nfe.fw.core.type.AliasKanJi("更新工作组位置")
+public class SsUpdateOrderEvidenceOutDTO implements java.io.Serializable, Comparable<SsUpdateOrderEvidenceOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsUpdateOrderEvidenceOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

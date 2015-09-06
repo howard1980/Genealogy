@@ -1,0 +1,37 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.type.Transactional;
+import com.beetlestech.nfe.main.biz.a01.HbCashCoupon;
+import com.beetlestech.nfe.main.service.a01.dto.SsCreateCashCouponOrderInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsCreateCashCouponOrderOutDTO;
+
+public class SsCreateCashCouponOrder extends AbstractService<SsCreateCashCouponOrderOutDTO, SsCreateCashCouponOrderInDTO> {
+
+	@AutoInject
+	private HbCashCoupon hbCashCoupon;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public SsCreateCashCouponOrderOutDTO execute(
+			SsCreateCashCouponOrderInDTO ssCreateCashCouponOrderInDTO) {
+		SsCreateCashCouponOrderOutDTO ssCreateCashCouponOrderOutDTO = new SsCreateCashCouponOrderOutDTO();
+		ssCreateCashCouponOrderOutDTO.setCashCouponNO(
+				hbCashCoupon.createOrder(
+						ssCreateCashCouponOrderInDTO.getCustomerID(), 
+						ssCreateCashCouponOrderInDTO.getCashCouponID(),
+						ssCreateCashCouponOrderInDTO.getCount()));
+		return ssCreateCashCouponOrderOutDTO;
+	}
+}

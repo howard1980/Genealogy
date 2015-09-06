@@ -1,0 +1,78 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 退出的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("退出")
+public class SsUpdateJPushInDTO implements java.io.Serializable, Comparable<SsUpdateJPushInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 客户ID  
+	*/
+	@Alias("客户ID")
+	private Long customerID = null;
+
+	/**
+	* <code>客户ID</code>返回
+	* @return <code>客户ID</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* RegisitrationID  
+	*/
+	@Alias("RegisitrationID")
+	private String regisitrationID = null;
+
+	/**
+	* <code>RegisitrationID</code>返回
+	* @return <code>RegisitrationID</code>
+	*/
+	public String getRegisitrationID() {
+		return this.regisitrationID;
+	}
+
+	/**
+	* <code>regisitrationID</code>设定
+	* @param regisitrationID　<code>regisitrationID</code>设定值
+	*/
+	public void setRegisitrationID(
+			String regisitrationID) {
+		this.regisitrationID = regisitrationID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsUpdateJPushInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

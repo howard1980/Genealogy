@@ -1,0 +1,292 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.WashOrderDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("WASH_ORDER")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class WashOrderDTO extends WashOrderDTOSupport implements java.io.Serializable, Comparable<WashOrderDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WASH_ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long washOrderID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_NO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String orderNO = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CAR_WASH_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long carWashID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WORKER_GROUP_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer workerGroupID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time createTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REMARKS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
+	private String remarks = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REQUEST_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date requestDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REQUEST_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time requestTime = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("WASH_ADDRESS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 500, max = 500)
+	private String washAddress = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
+	private Double latitude = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(12)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
+	private Double longitude = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SCORE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(13)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer score = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("EVALUATION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(14)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
+	private String evaluation = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("DEL_FLG")
+	@com.maxiaohua.genealogy.fw.core.type.Index(15)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer delFlg = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LAST_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(16)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date lastDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("LAST_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(17)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time lastTime = null;
+
+	public Long getWashOrderID() {
+		return this.washOrderID;
+	}
+
+	public void setWashOrderID(
+			Long washOrderID) {
+		this.washOrderID = washOrderID;
+	}
+
+	public String getOrderNO() {
+		return this.orderNO;
+	}
+
+	public void setOrderNO(
+			String orderNO) {
+		this.orderNO = orderNO;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getCarWashID() {
+		return this.carWashID;
+	}
+
+	public void setCarWashID(
+			Long carWashID) {
+		this.carWashID = carWashID;
+	}
+
+	public Integer getWorkerGroupID() {
+		return this.workerGroupID;
+	}
+
+	public void setWorkerGroupID(
+			Integer workerGroupID) {
+		this.workerGroupID = workerGroupID;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
+	}
+
+	public String getRemarks() {
+		return this.remarks;
+	}
+
+	public void setRemarks(
+			String remarks) {
+		this.remarks = remarks;
+	}
+
+	public java.sql.Date getRequestDate() {
+		return this.requestDate;
+	}
+
+	public void setRequestDate(
+			java.sql.Date requestDate) {
+		this.requestDate = requestDate;
+	}
+
+	public java.sql.Time getRequestTime() {
+		return this.requestTime;
+	}
+
+	public void setRequestTime(
+			java.sql.Time requestTime) {
+		this.requestTime = requestTime;
+	}
+
+	public String getWashAddress() {
+		return this.washAddress;
+	}
+
+	public void setWashAddress(
+			String washAddress) {
+		this.washAddress = washAddress;
+	}
+
+	public Double getLatitude() {
+		return this.latitude;
+	}
+
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
+	}
+
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
+	}
+
+	public Integer getScore() {
+		return this.score;
+	}
+
+	public void setScore(
+			Integer score) {
+		this.score = score;
+	}
+
+	public String getEvaluation() {
+		return this.evaluation;
+	}
+
+	public void setEvaluation(
+			String evaluation) {
+		this.evaluation = evaluation;
+	}
+
+	public Integer getDelFlg() {
+		return this.delFlg;
+	}
+
+	public void setDelFlg(
+			Integer delFlg) {
+		this.delFlg = delFlg;
+	}
+
+	public java.sql.Date getLastDate() {
+		return this.lastDate;
+	}
+
+	public void setLastDate(
+			java.sql.Date lastDate) {
+		this.lastDate = lastDate;
+	}
+
+	public java.sql.Time getLastTime() {
+		return this.lastTime;
+	}
+
+	public void setLastTime(
+			java.sql.Time lastTime) {
+		this.lastTime = lastTime;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			WashOrderDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

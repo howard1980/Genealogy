@@ -1,0 +1,25 @@
+
+package com.maxiaohua.genealogy.fw.core.validator.type;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+import com.maxiaohua.genealogy.fw.core.message.MessageCode;
+import com.maxiaohua.genealogy.fw.core.validator.impl.MoneyValidator;
+
+
+@RuleDescriptor("Money")
+@Constraint(validator = MoneyValidator.class)
+@Target({ java.lang.annotation.ElementType.ANNOTATION_TYPE, java.lang.annotation.ElementType.FIELD })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Money {
+    
+    public static final String DEFAULT_ERROR_CODE = MessageCode.E_ARG_INPUT_VALID_MONEY;
+
+    
+    public int junban() default 1;
+
+    
+    public String errorCode() default DEFAULT_ERROR_CODE;
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="1" timestamp="1398265536670" analysisTimestamp="1398265531600" release="">
+  <Project projectName="com.ibm.jp.cis.main.db">
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$1.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$10.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$2.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$3.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$4.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$5.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$6.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$7.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$8.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD$9.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil$KEYWORD.class</Jar>
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin\com\ibm\jp\cis\main\db\base\StatementUtil.class</Jar>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\.apt_generated</SrcDir>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 23 Apr 2014 23:05:31 +0800" total_classes="12" referenced_classes="42" total_bugs="0" total_size="272" num_packages="1" vm_version="24.0-b56" cpu_seconds="2.39" clock_seconds="5.12" peak_mbytes="237.71" alloc_mbytes="494.94" gc_seconds="0.29">
+    <PackageStats package="com.ibm.jp.cis.main.db.base" total_bugs="0" total_types="12" total_size="272">
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil" sourceFile="StatementUtil.java" interface="false" size="183" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD" sourceFile="StatementUtil.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$1" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$10" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$2" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$3" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$4" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$5" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$6" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$7" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$8" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.ibm.jp.cis.main.db.base.StatementUtil$KEYWORD$9" sourceFile="StatementUtil.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="1288" invocations="374" avgMicrosecondsPerInvocation="3444" maxMicrosecondsPerInvocation="85903" standardDeviationMircosecondsPerInvocation="9318"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="985" invocations="2" avgMicrosecondsPerInvocation="492665" maxMicrosecondsPerInvocation="738884" standardDeviationMircosecondsPerInvocation="246218"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindBadCast2" totalMilliseconds="221" invocations="12" avgMicrosecondsPerInvocation="18498" maxMicrosecondsPerInvocation="220565" standardDeviationMircosecondsPerInvocation="60926"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="166" invocations="371" avgMicrosecondsPerInvocation="448" maxMicrosecondsPerInvocation="39802" standardDeviationMircosecondsPerInvocation="2134"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1398265536655" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

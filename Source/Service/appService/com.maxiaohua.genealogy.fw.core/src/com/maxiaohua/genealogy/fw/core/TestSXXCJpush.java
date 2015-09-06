@@ -1,0 +1,12 @@
+package com.maxiaohua.genealogy.fw.core;
+
+import com.maxiaohua.genealogy.fw.core.push.impl.JPushManagerImpl;
+
+public class TestSXXCJpush {
+
+	public static void main(String[] args) {
+		  new JPushManagerImpl().sendAll("SXXC JPUSH 推送");
+		//System.out.println(rs.isResultOK());
+	}
+
+}

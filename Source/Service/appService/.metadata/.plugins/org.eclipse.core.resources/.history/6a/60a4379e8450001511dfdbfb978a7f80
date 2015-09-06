@@ -1,0 +1,33 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.a01;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.a01.HbOrder;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerAccountDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetWorkerAccountInDTO;
+import com.beetlestech.nfe.main.service.a01.dto.SsGetWorkerAccountOutDTO;
+
+public class SsGetWorkerAccount extends AbstractService<SsGetWorkerAccountOutDTO, SsGetWorkerAccountInDTO> {
+	@AutoInject
+	private HbOrder hbOrder;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetWorkerAccountOutDTO execute(
+			SsGetWorkerAccountInDTO ssGetWorkerAccountInDTO) {
+		SsGetWorkerAccountOutDTO ssGetWorkerAccountOutDTO = new SsGetWorkerAccountOutDTO();
+		WorkerAccountDTO workerAccount = hbOrder.getWorkerAccount(ssGetWorkerAccountInDTO.getWorkerID());
+		ssGetWorkerAccountOutDTO.setTodayAccount(workerAccount.getTodayAccount());
+		ssGetWorkerAccountOutDTO.setTotelAccount(workerAccount.getTotelAccount());
+		return ssGetWorkerAccountOutDTO;
+	}
+}

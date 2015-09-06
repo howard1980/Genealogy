@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!ELEMENT beans (bean*)>
+<!ELEMENT bean (constructor-arg*,property*)>
+<!ATTLIST bean
+  name CDATA #REQUIRED
+  type CDATA #REQUIRED
+  scope (prototype|singleton) #IMPLIED
+>
+<!ELEMENT constructor-arg EMPTY>
+<!ATTLIST constructor-arg
+   value CDATA #IMPLIED
+   ref CDATA #IMPLIED
+>
+<!ELEMENT property EMPTY>
+<!ATTLIST property
+   name CDATA #IMPLIED
+   property CDATA #IMPLIED
+   ref CDATA #IMPLIED
+>

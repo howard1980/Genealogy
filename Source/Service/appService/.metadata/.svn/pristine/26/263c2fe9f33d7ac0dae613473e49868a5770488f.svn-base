@@ -1,0 +1,32 @@
+1408343572668	Rename type 'HsUpdateMaintenanceRecordList'
+1408343594987	Rename type 'HsUpdateMaintenanceRecordListInDTO'
+1408343607020	Rename type 'HsUpdateMaintenanceRecordListOutDTO'
+1408354075166	Rename type 'HsCarScore'
+1408357498295	Rename type 'HsCarScoreList'
+1408357510622	Rename type 'HsCarScoreListInDTO'
+1408357521342	Rename type 'HsCarScoreListOutDTO'
+1408358350189	Delete element
+1408428422051	Move compilation unit
+1408430303769	Delete elements
+1408430389543	Delete element
+1408430401004	Delete elements
+1408430409973	Delete element
+1408430437019	Delete element
+1408430463365	Delete element
+1408430517804	Delete elements
+1408430531668	Delete elements
+1408430538761	Delete elements
+1408430618502	Delete elements
+1408430640027	Delete elements
+1408430658718	Delete elements
+1408430777544	Delete element
+1408430790485	Delete elements
+1408430803068	Delete elements
+1408430824418	Delete elements
+1408430849771	Delete element
+1408430893976	Delete elements
+1408430919353	Delete elements
+1408430929294	Delete elements
+1408430944431	Delete elements
+1408431006384	Rename package 'mz.code.ccis.main.service.a11'
+1408431017926	Rename package 'mz.code.ccis.main.service.a11.dto'

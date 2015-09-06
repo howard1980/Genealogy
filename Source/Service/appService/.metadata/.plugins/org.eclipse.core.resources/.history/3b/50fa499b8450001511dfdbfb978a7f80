@@ -1,0 +1,85 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.tbl.CityAreaDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class CityAreaDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "CITY_AREA_INSERT";
+
+	public static final String FULL_UPDATE = "CITY_AREA_FULL_UPDATE";
+
+	public static final String UPDATE = "CITY_AREA_UPDATE";
+
+	public static final String DELETE = "CITY_AREA_DELETE";
+
+	public static final String FIND = "CITY_AREA_FIND";
+
+	public static final String FIND_FOR_UPDATE = "CITY_AREA_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "CITY_AREA_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "CITY_AREA_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "CITY_AREA_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "CITY_AREA_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "CITY_AREA_SQL_SEARCH";
+
+	public static final String COUNT = "CITY_AREA_COUNT";
+
+	public static final String COUNT_OR = "CITY_AREA_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "CITY_AREA_COUNT_SEARCH";
+
+	public static final String COLUMN_CITY_AREA_ID = "CITY_AREA_ID";
+
+	public static final String COLUMN_CITY_CODE = "CITY_CODE";
+
+	public static final String COLUMN_WORKER_GROUP_ID = "WORKER_GROUP_ID";
+
+	public static final String COLUMN_OPENFLG = "OPENFLG";
+
+	public static final String COLUMN_NEED = "NEED";
+
+	public static final String COLUMN_CEILING = "CEILING";
+
+	public static final String COLUMN_ORDER_COUNT = "ORDER_COUNT";
+
+	public static final String TABLE = "CITY_AREA";
+
+	public static CityAreaDTO setDefaultValue() {
+		CityAreaDTO defaultDTO = new CityAreaDTO();
+
+		defaultDTO.setCityAreaID(0);
+
+		defaultDTO.setCityCode(StringUtil.EMPTY);
+
+		defaultDTO.setWorkerGroupID(0);
+
+		defaultDTO.setOpenFlg(0);
+
+		defaultDTO.setNeed(0);
+
+		defaultDTO.setCeiling(0);
+
+		defaultDTO.setOrderCount(0);
+
+		return defaultDTO;
+	}
+}

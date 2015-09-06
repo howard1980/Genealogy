@@ -1,0 +1,5 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+public interface HbCustomer {
+	String[] getLicencePlateArray(Long customerID);
+}

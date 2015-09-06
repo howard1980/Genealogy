@@ -1,0 +1,13 @@
+package com.maxiaohua.genealogy.main.biz.a01;
+
+import java.util.List;
+
+import com.maxiaohua.genealogy.main.db.tbl.TechnicianDTO;
+
+public interface HbTechnician {
+	
+	List<TechnicianDTO> getTechnicians(Integer automotive_Manufacturer_ID, Long repairServiceID);
+	
+	TechnicianDTO getTechnician(Long technicianID);
+	
+}

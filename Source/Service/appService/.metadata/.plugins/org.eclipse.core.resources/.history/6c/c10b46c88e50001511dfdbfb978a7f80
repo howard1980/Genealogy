@@ -1,0 +1,75 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.main.biz.a01.dto.AppVersionDTO;
+import com.maxiaohua.genealogy.main.biz.com.HbSystemInfo;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+import com.maxiaohua.genealogy.main.db.tbl.SystemInfoDTO;
+
+public class HbSystemInfoImpl extends AbstractDBLogic implements HbSystemInfo, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+
+	@Override
+	public AppVersionDTO getAppVersion(Double version, Integer channel,
+			String type) {
+		AppVersionDTO appVersion = new AppVersionDTO();
+		
+		SystemInfoDTO info =  this.queryDAO.queryForObject(SystemInfoDTO.EQUAL_SEARCH, null);
+		
+		if(type.equals(APP_SOFTWARE_TYPE.ANDROID_CLIENT.toString())){
+			// Android客户端
+			if( version.doubleValue() == info.getAndroidCustomerVersion().doubleValue()  ){
+				appVersion.setUpdate(false);
+			}
+			else{
+				appVersion.setUpdate(true);
+				appVersion.setDownloadUrl("http://115.28.140.128:8080/carService/app/download/android/appCar.apk");
+			}
+		}
+		else if(type.equals(APP_SOFTWARE_TYPE.IOS_CLIENT.toString())){
+			// IOS客户端
+			if(version.doubleValue()  ==  info.getIOSVersion().doubleValue()){
+				appVersion.setUpdate(false);
+			}
+			else{
+				appVersion.setUpdate(true);
+				appVersion.setDownloadUrl("http://www.auto7.cn/app/download.php");
+			}
+			
+		}
+		else if(type.equals(APP_SOFTWARE_TYPE.ANDROID_WOKER.toString())){
+			// Android工作端
+			if(version.doubleValue() ==  info.getAndroidWorkerVersion().doubleValue()){
+				appVersion.setUpdate(false);
+			}
+			else{
+				appVersion.setUpdate(true);
+				appVersion.setDownloadUrl("http://115.28.140.128:8080/carService/app/download/android/appWorker.apk");
+			}
+		}
+		else
+		{
+			return null;
+		}
+		
+		return appVersion;
+	}
+	
+	@Override
+	public Map<String, String> getOssKey() {
+		
+		Map<String, String> result = new HashMap<String, String>();
+		
+		result.put("ak", "G519MH7jgh3uuBUJ");
+		result.put("sk", "9wdW5xOupatJiQzY4sLq8TcErg2y4N");
+		result.put("bucketname", "sxxc001");
+		
+		return result;
+	}
+
+}

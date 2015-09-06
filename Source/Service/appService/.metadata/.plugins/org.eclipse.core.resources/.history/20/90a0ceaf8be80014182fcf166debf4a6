@@ -1,0 +1,239 @@
+package com.beetlestech.nfe.main.biz.a01.impl;
+
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.beetlestech.nfe.fw.core.biz.AbstractDBLogic;
+import com.beetlestech.nfe.fw.core.type.AutoInject;
+import com.beetlestech.nfe.fw.core.util.CollectionUtil;
+import com.beetlestech.nfe.main.biz.a01.HbWorker;
+import com.beetlestech.nfe.main.biz.a01.dto.OrderInfoDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.OrderItemDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerGroupBizDTO;
+import com.beetlestech.nfe.main.biz.a01.dto.WorkerInfoDTO;
+import com.beetlestech.nfe.main.biz.com.HbMasterCache;
+import com.beetlestech.nfe.main.biz.constant.CommonConstant;
+import com.beetlestech.nfe.main.biz.constant.CtgCodeConstant;
+import com.beetlestech.nfe.main.biz.constant.HbMessageCode;
+import com.beetlestech.nfe.main.biz.constant.MasterCacheConstant.MASTER_NAME;
+import com.beetlestech.nfe.main.db.base.StatementDTO;
+import com.beetlestech.nfe.main.db.base.StatementUtil;
+import com.beetlestech.nfe.main.db.tbl.WorkerGroupDTO;
+import com.beetlestech.nfe.main.db.view.VOrderInfoDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerCityDTO;
+import com.beetlestech.nfe.main.db.view.VWorkerServiceItemsDTO;
+
+public class HbWorkerImpl extends AbstractDBLogic implements HbWorker, HbMessageCode, CommonConstant, CtgCodeConstant {
+	/**
+	 * 账户情报数据
+	 */
+	protected static final String SH_INFO = "工作组情报";
+	
+	/**
+	 * Mast数据缓存Biz类
+	 */
+	@AutoInject
+	protected HbMasterCache hbMasterCache;
+	
+	@Override
+	public WorkerGroupBizDTO Login( String user, String password) {//check input
+		
+		//检查输入
+		if(user == null ){
+			createApplicationException(M00011WC, SH_INFO);
+		}
+		if(password == null ){
+			createApplicationException(M00012WC, SH_INFO);
+		}
+		
+		WorkerGroupBizDTO bizDTO = new WorkerGroupBizDTO();
+		
+		WorkerGroupDTO workerGroupDTO = new WorkerGroupDTO();
+		workerGroupDTO.setName(user);
+		workerGroupDTO.setPassword(password);
+		workerGroupDTO = this.queryDAO.queryForObject(WorkerGroupDTO.EQUAL_SEARCH, workerGroupDTO);
+		
+		if(workerGroupDTO != null){ //登陆成功
+			workerGroupDTO.setStatus( Integer.parseInt( LOGIN_STATUS.ONLINE.toString() ) );
+			this.updateDAO.updateOneImmediately(WorkerGroupDTO.UPDATE, workerGroupDTO, M10020WC);//更改用户状态为在线
+			bizDTO.setName(workerGroupDTO.getName());
+			bizDTO.setWorkerGroupID(workerGroupDTO.getWorkerGroupID());
+		}
+		else{ //登陆失败
+			createApplicationException(M00010WC, SH_INFO);
+		}
+		return bizDTO;
+		
+	}
+	
+	@Override
+	public void Logout(Integer workerID) {
+		WorkerGroupDTO workerGroupDTO = new WorkerGroupDTO();
+	 
+		workerGroupDTO.setWorkerGroupID(workerID);
+		workerGroupDTO.setStatus( Integer.parseInt( LOGIN_STATUS.OFFLINE.toString() ) );
+		
+		this.updateDAO.updateOneImmediately(WorkerGroupDTO.UPDATE, workerGroupDTO, M10105WC);
+	}
+	
+	@Override
+	public void updateGPS(Integer workerID, Double longitude, Double latitude ) {
+		
+		//检查输入
+		if(longitude == null || longitude == 0 ){
+			createApplicationException(M10107WC, SH_INFO);
+		}
+		if(latitude == null || latitude == 0){
+			createApplicationException(M10108WC, SH_INFO);
+		}
+		
+		WorkerGroupDTO workerGroupDTO = new WorkerGroupDTO();
+		
+		workerGroupDTO.setWorkerGroupID( workerID);
+		workerGroupDTO.setLongitude(longitude);
+		workerGroupDTO.setLatitude(latitude);
+		workerGroupDTO.setStatus( Integer.parseInt( LOGIN_STATUS.ONLINE.toString() ) );//用户状态设置为在线
+		
+		this.updateDAO.updateOneImmediately(WorkerGroupDTO.UPDATE, workerGroupDTO, M10106WC);
+	}
+
+	@Override
+	public OrderInfoDTO[] getOrderHistoryArray(Integer workerID, Date start,
+			Date end) {	
+		StatementDTO statementDTO = new StatementDTO();
+		StatementUtil.andWhere(statementDTO, VOrderInfoDTO.COLUMN_WASH_DATE, StatementUtil.KEYWORD.GREATER_EQUAL_THAN, start);
+		StatementUtil.andWhere(statementDTO, VOrderInfoDTO.COLUMN_WASH_DATE, StatementUtil.KEYWORD.LESS_EQUAL_THAN, end);
+		StatementUtil.andWhere(statementDTO, VOrderInfoDTO.COLUMN_WORKER_GROUP_ID, StatementUtil.KEYWORD.EQUAL, workerID);
+		VOrderInfoDTO ordersDTO = new VOrderInfoDTO();
+		ordersDTO.set_dynamicWhereCondition(statementDTO.getSQLStatement());
+		
+		List<VOrderInfoDTO> orderInfoArray = this.queryDAO.queryForObjectList(VOrderInfoDTO.EQUAL_SEARCH, ordersDTO);
+		List<OrderInfoDTO> lst = convertToOrderInfo(orderInfoArray);
+		
+		return lst.toArray(new OrderInfoDTO[lst.size()]);
+	}
+	
+	private List<OrderInfoDTO> convertToOrderInfo(List<VOrderInfoDTO> orderInfoArray){
+		List<OrderInfoDTO> lst = new ArrayList<OrderInfoDTO>();
+		if (!CollectionUtil.isEmpty(orderInfoArray)) {
+			for(VOrderInfoDTO item : orderInfoArray){
+				OrderInfoDTO orderInfoDTO = new OrderInfoDTO();
+				orderInfoDTO.setOrderID(item.getWashOrderID());
+				orderInfoDTO.setOrderNO(item.getOrderNO());
+				orderInfoDTO.setCreateDate(item.getCreateDate());
+				orderInfoDTO.setCreateTime(item.getCreateTime());
+				orderInfoDTO.setLicencePlate(item.getLicencePlate());
+				orderInfoDTO.setRequestDate(item.getRequestDate());
+				orderInfoDTO.setRequestTime(item.getRequestTime());
+				orderInfoDTO.setWashDate(item.getWashDate());
+				orderInfoDTO.setWashTime(item.getWashTime());
+				orderInfoDTO.setWashAddress(item.getWashAddress());
+				orderInfoDTO.setMobile(item.getMobileNo());
+				orderInfoDTO.setEvaluation(item.getScore());
+				orderInfoDTO.setPrice(item.getAmmount().doubleValue());
+				orderInfoDTO.setWorker(item.getGroupName());
+				orderInfoDTO.setStatus(item.getOrderStatus());
+				orderInfoDTO.setLongitude(item.getLongitude());
+				orderInfoDTO.setLatitude(item.getLatitude());
+				
+				String[] serviceIDs = item.getGroupServiceID().split(",");
+				List<OrderItemDTO> orderItems = new ArrayList<OrderItemDTO>();
+				for(String serviceID : serviceIDs){
+					OrderItemDTO orderItemDTO = new OrderItemDTO();
+					List<VWorkerServiceItemsDTO> lstServiceItem =
+							hbMasterCache.getMasterData(MASTER_NAME.GROUP_SERVICE, serviceID);
+					if(lstServiceItem != null && lstServiceItem.size()>0){
+						VWorkerServiceItemsDTO workerServiceItemsDTO = lstServiceItem.get(0);
+						orderItemDTO.setName(workerServiceItemsDTO.getItemName());
+						orderItemDTO.setGroupServiceID(workerServiceItemsDTO.getGroupServiceId());
+						orderItemDTO.setPrice(workerServiceItemsDTO.getPrice().doubleValue());
+						orderItemDTO.setExplain(workerServiceItemsDTO.getComment());
+						orderItems.add(orderItemDTO);
+					}
+				}
+				
+				String[] evidencePaths = item.getEvidencePath().split(",");
+				List<String> paths = new ArrayList<String>();
+				for(String path : evidencePaths){
+					paths.add(path);
+				}
+				
+				orderInfoDTO.setEvidence(paths.toArray(new String[paths.size()]));
+				
+				lst.add(orderInfoDTO);
+			}
+		}
+		
+		return lst;
+	}
+
+	@Override
+	public OrderInfoDTO[] getOrderWaitArray(Integer workerID) {
+		VOrderInfoDTO ordersDTO = new VOrderInfoDTO();
+		ordersDTO.setWorkerGroupID(workerID);
+		ordersDTO.setRequestDate(this.getCurrentDate());
+		ordersDTO.setStatus(Integer.parseInt(ORDER_STATUS.PAID.toString()));
+
+		List<VOrderInfoDTO> orderInfoArray = this.queryDAO.queryForObjectList(VOrderInfoDTO.EQUAL_SEARCH, ordersDTO);
+		
+		List<OrderInfoDTO> lst = convertToOrderInfo(orderInfoArray);
+		
+		return lst.toArray(new OrderInfoDTO[lst.size()]);
+	}
+
+	@Override
+	public WorkerInfoDTO[] getNearWorker(Float longitude, Float latitude,
+			String cityCode) {
+		List<WorkerInfoDTO> nearWorkerList = new ArrayList<WorkerInfoDTO>();
+		
+		VWorkerCityDTO searchDTO = new VWorkerCityDTO();
+		searchDTO.setStatus(Integer.parseInt(LOGIN_STATUS.ONLINE.toString()));
+		searchDTO.setCityCode(cityCode);
+		List<VWorkerCityDTO> workerGroups = queryDAO.queryForObjectList(VWorkerCityDTO.EQUAL_SEARCH, searchDTO);
+		for(VWorkerCityDTO item : workerGroups){
+			if(getDistance(longitude, latitude, item.getLongitude(), item.getLatitude()) <= 2000){
+				nearWorkerList.add(convertToWorkerGroup(item));
+			}
+		}
+		return nearWorkerList.toArray(new WorkerInfoDTO[nearWorkerList.size()]);
+	}
+	
+	private WorkerInfoDTO convertToWorkerGroup(VWorkerCityDTO item) {
+		WorkerInfoDTO workerDTO = new WorkerInfoDTO();
+		workerDTO.setWokerID(item.getWorkerGroupID());
+		workerDTO.setName(item.getName());
+		workerDTO.setLatitude(item.getLatitude());
+		workerDTO.setLongitude(item.getLongitude());
+		return workerDTO;
+	}
+	
+    private double EARTH_RADIUS = 6378.137;//地球半径
+    private double rad(double d)
+    {
+        return d * Math.PI / 180.0;
+    }
+	
+	/**
+	 * 根据两点间经纬度坐标（double值），计算两点间距离，单位为米
+	 * 
+	 * @param lng1
+	 * @param lat1
+	 * @param lng2
+	 * @param lat2
+	 * @return
+	 */
+	private double getDistance(double lng1, double lat1, double lng2, double lat2) {
+		double radLat1 = rad(lat1);
+		double radLat2 = rad(lat2);
+		double a = radLat1 - radLat2;
+		double b = rad(lng1) - rad(lng2);
+		double s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2)
+				+ Math.cos(radLat1) * Math.cos(radLat2)
+				* Math.pow(Math.sin(b / 2), 2)));
+		s = s * EARTH_RADIUS;
+		s = Math.round(s * 10000) / 10000;
+		return s;
+}
+	
+}

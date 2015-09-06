@@ -1,0 +1,289 @@
+package com.maxiaohua.genealogy.fw.core.wechet.impl;
+
+import java.io.UnsupportedEncodingException;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.wink.json4j.JSONException;
+import org.apache.wink.json4j.JSONObject;
+
+import com.maxiaohua.genealogy.fw.core.context.RequestContext;
+import com.maxiaohua.genealogy.fw.core.log.DebugLogger;
+import com.maxiaohua.genealogy.fw.core.log.ErrorLogger;
+import com.maxiaohua.genealogy.fw.core.log.LogFactory;
+import com.maxiaohua.genealogy.fw.core.log.Logger;
+import com.maxiaohua.genealogy.fw.core.util.MD5Util;
+import com.maxiaohua.genealogy.fw.core.util.Sha1Util;
+import com.maxiaohua.genealogy.fw.core.util.TenpayHttpClient;
+import com.maxiaohua.genealogy.fw.core.util.TenpayUtil;
+import com.maxiaohua.genealogy.fw.core.wechet.WechetPay;
+
+
+public class WechetPayImpl implements WechetPay {
+	protected static final Logger appLogger = LogFactory.getLogger();
+	
+	protected static final DebugLogger debugLogger = LogFactory.getDebugLogger();
+	
+	protected static final ErrorLogger errorLogger = LogFactory.getErrorLogger();
+	
+	@Override
+	public void getPrepayID(String content, String orderID, String aummount){
+		RequestContext requestContext = RequestContext.open();
+		HttpServletRequest request = (HttpServletRequest)requestContext.getElement(RequestContext.Key.Request);
+		// 获取微信token值
+		RequestHandler reqHandler = new RequestHandler(
+				request, 
+				(HttpServletResponse)requestContext.getElement(RequestContext.Key.Response));
+	    //初始化 
+		reqHandler.init();
+		reqHandler.init(WeiXinPayConfig.APP_ID, WeiXinPayConfig.APP_SECRET, WeiXinPayConfig.APP_KEY, WeiXinPayConfig.PARTNER, WeiXinPayConfig.PARTNER_KEY);
+
+		//获取token值 
+		String token = reqHandler.GetToken();
+		
+		this.appID = WeiXinPayConfig.APP_ID;
+		this.partnerID = WeiXinPayConfig.PARTNER;
+		this.noncestr = "";
+		this.packageString = "";
+		this.prepayID = "";
+		this.timestamp = "";
+		this.sign = "";
+		
+		if (!"".equals(token)) {
+			try {
+				//=========================
+				//生成预支付单
+				//=========================
+				//设置package订单参数
+				SortedMap<String, String> packageParams = new TreeMap<String, String>();
+				packageParams.put("bank_type", "WX"); //商品描述   
+				packageParams.put("body", content.toString()); //商品描述   
+				packageParams.put("notify_url", WeiXinPayConfig.NOTIFY_URL); //接收财付通通知的URL  
+				packageParams.put("partner", WeiXinPayConfig.PARTNER); //商户号    
+				packageParams.put("out_trade_no", orderID.toString()); //商家订单号  
+				packageParams.put("total_fee", aummount); //商品金额,以分为单位  
+				//packageParams.put("total_fee", "1"); //商品金额,以分为单位  
+				packageParams.put("spbill_create_ip", request.getRemoteAddr()); //订单生成的机器IP，指用户浏览器端IP  
+				packageParams.put("fee_type", "1"); //币种，1人民币   66
+				packageParams.put("input_charset", "GBK"); //字符编码
+
+				//获取package包
+				String packageValue;
+				
+				packageValue = reqHandler.genPackage(packageParams);
+				
+				String noncestr = Sha1Util.getNonceStr();
+				String timestamp = Sha1Util.getTimeStamp();
+				String traceid = orderID;
+
+				//设置支付参数
+				SortedMap<String, String> signParams = new TreeMap<String, String>();
+				signParams.put("appid", WeiXinPayConfig.APP_ID);
+				signParams.put("appkey", WeiXinPayConfig.APP_KEY);
+				signParams.put("noncestr", noncestr);
+				signParams.put("package", packageValue);
+				signParams.put("timestamp", timestamp);
+				signParams.put("traceid", traceid);
+
+				//生成支付签名，要采用URLENCODER的原始值进行SHA1算法！
+				String sign = Sha1Util.createSHA1Sign(signParams);
+
+				//增加非参与签名的额外参数
+				signParams.put("app_signature", sign);
+				signParams.put("sign_method", "sha1");
+
+				//获取prepayId
+				String prepayid = reqHandler.sendPrepay(signParams);
+
+				if (null != prepayid && !"".equals(prepayid)) {
+					//签名参数列表
+					SortedMap<String, String> prePayParams = new TreeMap<String, String>();
+					prePayParams.put("appid", WeiXinPayConfig.APP_ID);
+					prePayParams.put("appkey", WeiXinPayConfig.APP_KEY);
+					prePayParams.put("noncestr", noncestr);
+					prePayParams.put("package", "Sign=WXPay");
+					prePayParams.put("partnerid", WeiXinPayConfig.PARTNER);
+					prePayParams.put("prepayid", prepayid);
+					prePayParams.put("timestamp", timestamp);
+					//生成签名
+					sign = Sha1Util.createSHA1Sign(prePayParams);
+
+					//输出参数
+					this.appID = WeiXinPayConfig.APP_ID;
+					this.partnerID = WeiXinPayConfig.PARTNER;
+					this.noncestr = noncestr;
+					this.packageString = "Sign=WXPay";
+					this.prepayID = prepayid;
+					this.timestamp = timestamp;
+					this.sign = sign;
+					//测试帐号多个app测试，需要判断Token是否失效，否则重新获取一次 
+					if(reqHandler.getLasterrCode()=="40001"){
+			         token = reqHandler.getTokenReal();
+					}
+				}
+			} catch (UnsupportedEncodingException e) {
+				errorLogger.writeErrorLog(e.getMessage());
+				appLogger.error(e.getMessage(), e);
+				debugLogger.error(e.getMessage(), e);
+				
+			} catch (Exception e) {
+				errorLogger.writeErrorLog(e.getMessage());
+				appLogger.error(e.getMessage(), e);
+				debugLogger.error(e.getMessage(), e);
+			}
+		}
+	}
+	
+	private String prepayID;
+
+	@Override
+	public String getPrepayID() {
+		return prepayID;
+	}
+	
+	private String appID;
+
+	@Override
+	public String getAppID() {
+		return this.appID;
+	}
+
+	private String partnerID;
+	
+	@Override
+	public String getPartnerID() {
+		return this.partnerID;
+	}
+
+	private String noncestr;
+	
+	@Override
+	public String getNoncestr() {
+		return this.noncestr;
+	}
+	
+	private String packageString;
+
+	@Override
+	public String getPackage() {
+		// TODO Auto-generated method stub
+		return this.packageString;
+	}
+	
+	private String timestamp;
+
+	@Override
+	public String getTimestamp() {
+		// TODO Auto-generated method stub
+		return this.timestamp;
+	}
+	
+	private String sign;
+
+	@Override
+	public String getSign() {
+		// TODO Auto-generated method stub
+		return this.sign;
+	}
+
+	@Override
+	public WechetQuery getOrderPaied(String orderID) {
+		RequestContext requestContext = RequestContext.open();
+		HttpServletRequest request = (HttpServletRequest)requestContext.getElement(RequestContext.Key.Request);
+		HttpServletResponse response = (HttpServletResponse)requestContext.getElement(RequestContext.Key.Response);
+		
+		// 获取token值
+		ServletContext context = request.getServletContext();
+		String token = (String) context.getAttribute("token");
+		
+		String enc = TenpayUtil.getCharacterEncoding(request, response);
+		String sign = MD5Util.MD5Encode("out_trade_no=" + orderID + "&partner=" + WeiXinPayConfig.PARTNER + "&key=" + WeiXinPayConfig.PARTNER_KEY, enc).toUpperCase();
+
+		String spackage = "out_trade_no=" + orderID + "&partner=" + WeiXinPayConfig.PARTNER + "&sign=" + sign;
+		String timestamp = Sha1Util.getTimeStamp();
+		String url = "https://api.weixin.qq.com/pay/orderquery?access_token=" + token;
+		String app_signature = Sha1Util.getSha1("appid=" + WeiXinPayConfig.APP_ID + "&appkey=" + WeiXinPayConfig.APP_KEY + "&package=" + spackage + "&timestamp=" + timestamp);
+		String sign_method = "sha1";
+		TenpayHttpClient httpClient = new TenpayHttpClient();
+		httpClient.setReqContent(url);
+		JSONObject jsonParams = new JSONObject();
+		try {
+			jsonParams.put("appid", WeiXinPayConfig.APP_ID);
+			jsonParams.put("package", spackage);
+			jsonParams.put("timestamp", timestamp);
+			jsonParams.put("app_signature", app_signature);
+			jsonParams.put("sign_method", sign_method);
+			String resContent = "";
+			if (httpClient.callHttpPost(url, jsonParams.toString())) {
+				resContent = httpClient.getResContent();
+				JSONObject jsonObject = new JSONObject(resContent);
+				if (jsonObject.getString("errcode").equals("0")) {
+
+					String data = jsonObject.getString("order_info");
+
+					JSONObject jsonObject2 = new JSONObject(data);
+
+					if (jsonObject2.getString("ret_code").equals("0")) {
+						WechetQuery wechetQuery = new WechetQuery();
+//				        "bank_billno": "",
+//				        "transaction_id": "1229213601201504296165669674",
+//				        "trade_state": "0",
+//				        "bank_type": "",
+//				        "input_charset": "GBK",
+//				        "is_split": "false",
+//				        "discount": "0",
+//				        "product_fee": "1",
+//				        "fee_type": "1",
+//				        "ret_msg": "",
+//				        "transport_fee": "0",
+//				        "out_trade_no": "8",
+//				        "partner": "1229213601",
+//				        "rmb_total_fee": "",
+//				        "trade_mode": "1",
+//				        "total_fee": "1",
+//				        "attach": "",
+//				        "time_end": "20150429201246",
+//				        "ret_code": 0,
+//				        "is_refund": "false"
+						wechetQuery.setRet_code(jsonObject2.getString("ret_code"));//是查询结果状态码,0 表明成功,其他表明错误;
+						wechetQuery.setRet_msg(jsonObject2.getString("ret_msg"));// 是查询结果出错信息;
+						wechetQuery.setInput_charset(jsonObject2.getString("input_charset"));// 是返回信息中的编码方式;
+						wechetQuery.setTrade_state(jsonObject2.getString("trade_state"));// 是订单状态,0 为成功,其他为失败;
+						wechetQuery.setTrade_mode(jsonObject2.getString("trade_mode"));// 是交易模式,1 为即时到帐,其他保留;
+						wechetQuery.setPartner(jsonObject2.getString("partner"));// 是财付通商户号,即前文的 partnerid;
+						wechetQuery.setBank_type(jsonObject2.getString("bank_type"));// 是银行类型;
+						wechetQuery.setBank_billno(jsonObject2.getString("bank_billno"));// 是银行订单号;
+						wechetQuery.setTotal_fee(jsonObject2.getString("total_fee"));// 是总金额,单位为分;
+						wechetQuery.setFee_type(jsonObject2.getString("fee_type"));// 是币种,1 为人民币;
+						wechetQuery.setTransaction_id(jsonObject2.getString("transaction_id"));// 是财付通订单号;
+						wechetQuery.setOut_trade_no(jsonObject2.getString("out_trade_no"));// 是第三方订单号;
+						wechetQuery.setIs_split(jsonObject2.getString("is_split"));// 表明是否分账,false 为无分账,true 为有分账;
+						wechetQuery.setIs_refund(jsonObject2.getString("is_refund"));// 表明是否退款,false 为无退款,ture 为退款;
+						wechetQuery.setAttach(jsonObject2.getString("attach"));// 是商户数据包,即生成订单 package 时商户填入的 attach;
+						wechetQuery.setTime_end(jsonObject2.getString("time_end"));// 是支付完成时间;
+						wechetQuery.setTransport_fee(jsonObject2.getString("transport_fee"));// 是物流费用,单位为分;
+						wechetQuery.setProduct_fee(jsonObject2.getString("product_fee"));// 是物品费用,单位为分;
+						wechetQuery.setDiscount(jsonObject2.getString("discount"));// 是折扣价格,单位为分;
+						wechetQuery.setRmb_total_fee(jsonObject2.getString("rmb_total_fee"));// 是换算成人民币之后的总金额,单位为分,一般看 total_fee 即可。
+						return wechetQuery;
+					} else {
+						return null;
+					}
+				} else {
+					return null;
+				}
+			} else {
+				return null;
+			}
+		} catch (JSONException e) {
+			errorLogger.writeErrorLog(e.getMessage());
+			appLogger.error(e.getMessage(), e);
+			debugLogger.error(e.getMessage(), e);
+			return null;
+		}
+	}
+}

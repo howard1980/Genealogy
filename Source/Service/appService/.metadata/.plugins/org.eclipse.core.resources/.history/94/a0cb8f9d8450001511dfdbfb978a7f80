@@ -1,0 +1,126 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 技师登录的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("技师登录")
+public class SsTechnicianLoginInDTO implements java.io.Serializable, Comparable<SsTechnicianLoginInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 用户名  
+	*/
+	@Alias("用户名")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private String user = null;
+
+	/**
+	* <code>用户名</code>返回
+	* @return <code>用户名</code>
+	*/
+	public String getUser() {
+		return this.user;
+	}
+
+	/**
+	* <code>user</code>设定
+	* @param user　<code>user</code>设定值
+	*/
+	public void setUser(
+			String user) {
+		this.user = user;
+	}
+
+	/**
+	* 密码  
+	*/
+	@Alias("密码")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private String password = null;
+
+	/**
+	* <code>密码</code>返回
+	* @return <code>密码</code>
+	*/
+	public String getPassword() {
+		return this.password;
+	}
+
+	/**
+	* <code>password</code>设定
+	* @param password　<code>password</code>设定值
+	*/
+	public void setPassword(
+			String password) {
+		this.password = password;
+	}
+
+	/**
+	* RegisitrationID  
+	*/
+	@Alias("RegisitrationID")
+	private String regisitrationID = null;
+
+	/**
+	* <code>RegisitrationID</code>返回
+	* @return <code>RegisitrationID</code>
+	*/
+	public String getRegisitrationID() {
+		return this.regisitrationID;
+	}
+
+	/**
+	* <code>regisitrationID</code>设定
+	* @param regisitrationID　<code>regisitrationID</code>设定值
+	*/
+	public void setRegisitrationID(
+			String regisitrationID) {
+		this.regisitrationID = regisitrationID;
+	}
+
+	/**
+	* 设备类型  
+	*/
+	@Alias("设备类型")
+	private Integer imsi = null;
+
+	/**
+	* <code>设备类型</code>返回
+	* @return <code>设备类型</code>
+	*/
+	public Integer getImsi() {
+		return this.imsi;
+	}
+
+	/**
+	* <code>imsi</code>设定
+	* @param imsi　<code>imsi</code>设定值
+	*/
+	public void setImsi(
+			Integer imsi) {
+		this.imsi = imsi;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsTechnicianLoginInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

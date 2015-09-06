@@ -1,0 +1,72 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.CustomerAccountDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class CustomerAccountDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "CUSTOMER_ACCOUNT_INSERT";
+
+	public static final String FULL_UPDATE = "CUSTOMER_ACCOUNT_FULL_UPDATE";
+
+	public static final String UPDATE = "CUSTOMER_ACCOUNT_UPDATE";
+
+	public static final String DELETE = "CUSTOMER_ACCOUNT_DELETE";
+
+	public static final String FIND = "CUSTOMER_ACCOUNT_FIND";
+
+	public static final String FIND_FOR_UPDATE = "CUSTOMER_ACCOUNT_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "CUSTOMER_ACCOUNT_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "CUSTOMER_ACCOUNT_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "CUSTOMER_ACCOUNT_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "CUSTOMER_ACCOUNT_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "CUSTOMER_ACCOUNT_SQL_SEARCH";
+
+	public static final String COUNT = "CUSTOMER_ACCOUNT_COUNT";
+
+	public static final String COUNT_OR = "CUSTOMER_ACCOUNT_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "CUSTOMER_ACCOUNT_COUNT_SEARCH";
+
+	public static final String COLUMN_CUSTOMER_ACCOUNT_ID = "CUSTOMER_ACCOUNT_ID";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_AMOUNT = "AMOUNT";
+
+	public static final String COLUMN_TYPE = "TYPE";
+
+	public static final String TABLE = "CUSTOMER_ACCOUNT";
+
+	public static CustomerAccountDTO setDefaultValue() {
+		CustomerAccountDTO defaultDTO = new CustomerAccountDTO();
+
+		defaultDTO.setCustomerAccountID(0l);
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setAmount(new java.math.BigDecimal(0));
+
+		defaultDTO.setType(0);
+
+		return defaultDTO;
+	}
+}

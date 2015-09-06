@@ -1,0 +1,85 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
+import com.maxiaohua.genealogy.main.db.tbl.FranchiseeDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class FranchiseeDTOSupport extends BaseTableDTO {
+
+	public static final String INSERT = "FRANCHISEE_INSERT";
+
+	public static final String FULL_UPDATE = "FRANCHISEE_FULL_UPDATE";
+
+	public static final String UPDATE = "FRANCHISEE_UPDATE";
+
+	public static final String DELETE = "FRANCHISEE_DELETE";
+
+	public static final String FIND = "FRANCHISEE_FIND";
+
+	public static final String FIND_FOR_UPDATE = "FRANCHISEE_FIND_FOR_UPDATE";
+
+	public static final String EQUAL_SEARCH = "FRANCHISEE_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "FRANCHISEE_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "FRANCHISEE_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "FRANCHISEE_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "FRANCHISEE_SQL_SEARCH";
+
+	public static final String COUNT = "FRANCHISEE_COUNT";
+
+	public static final String COUNT_OR = "FRANCHISEE_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "FRANCHISEE_COUNT_SEARCH";
+
+	public static final String COLUMN_FRANCHISEE_ID = "FRANCHISEE_ID";
+
+	public static final String COLUMN_CITY_CODE = "CITY_CODE";
+
+	public static final String COLUMN_COMPANY = "COMPANY";
+
+	public static final String COLUMN_CONTACT = "CONTACT";
+
+	public static final String COLUMN_TELEPHONE = "TELEPHONE";
+
+	public static final String COLUMN_MOBILE = "MOBILE";
+
+	public static final String COLUMN_STATUS = "STATUS";
+
+	public static final String TABLE = "FRANCHISEE";
+
+	public static FranchiseeDTO setDefaultValue() {
+		FranchiseeDTO defaultDTO = new FranchiseeDTO();
+
+		defaultDTO.setFranchiseeID(0);
+
+		defaultDTO.setCityCode(StringUtil.EMPTY);
+
+		defaultDTO.setCompany(StringUtil.EMPTY);
+
+		defaultDTO.setContact(StringUtil.EMPTY);
+
+		defaultDTO.setTelephone(StringUtil.EMPTY);
+
+		defaultDTO.setMobile(StringUtil.EMPTY);
+
+		defaultDTO.setStatus(0);
+
+		return defaultDTO;
+	}
+}

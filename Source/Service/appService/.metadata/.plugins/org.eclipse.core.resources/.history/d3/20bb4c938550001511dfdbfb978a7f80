@@ -1,0 +1,134 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.db.tbl;
+
+import com.maxiaohua.genealogy.main.db.tbl.support.SystemInfoDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("SYSTEM_INFO")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class SystemInfoDTO extends SystemInfoDTOSupport implements java.io.Serializable, Comparable<SystemInfoDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SYSTEM_INFO_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Integer systemInfoID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("IOS_VERSION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float iOSVersion = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ANDROID_CUSTOMER_VERSION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float androidCustomerVersion = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ANDROID_WORKER_VERSION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float androidWorkerVersion = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SERVICE_VERSION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float serviceVersion = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("MANAGER_VERSION")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("FLOAT")
+	private Float managerVersion = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SHARE_MESSAGE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 500, max = 500)
+	private String shareMessage = null;
+
+	public Integer getSystemInfoID() {
+		return this.systemInfoID;
+	}
+
+	public void setSystemInfoID(
+			Integer systemInfoID) {
+		this.systemInfoID = systemInfoID;
+	}
+
+	public Float getIOSVersion() {
+		return this.iOSVersion;
+	}
+
+	public void setIOSVersion(
+			Float iOSVersion) {
+		this.iOSVersion = iOSVersion;
+	}
+
+	public Float getAndroidCustomerVersion() {
+		return this.androidCustomerVersion;
+	}
+
+	public void setAndroidCustomerVersion(
+			Float androidCustomerVersion) {
+		this.androidCustomerVersion = androidCustomerVersion;
+	}
+
+	public Float getAndroidWorkerVersion() {
+		return this.androidWorkerVersion;
+	}
+
+	public void setAndroidWorkerVersion(
+			Float androidWorkerVersion) {
+		this.androidWorkerVersion = androidWorkerVersion;
+	}
+
+	public Float getServiceVersion() {
+		return this.serviceVersion;
+	}
+
+	public void setServiceVersion(
+			Float serviceVersion) {
+		this.serviceVersion = serviceVersion;
+	}
+
+	public Float getManagerVersion() {
+		return this.managerVersion;
+	}
+
+	public void setManagerVersion(
+			Float managerVersion) {
+		this.managerVersion = managerVersion;
+	}
+
+	public String getShareMessage() {
+		return this.shareMessage;
+	}
+
+	public void setShareMessage(
+			String shareMessage) {
+		this.shareMessage = shareMessage;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			SystemInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

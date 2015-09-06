@@ -1,0 +1,176 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.tbl;
+
+import com.beetlestech.nfe.main.db.tbl.support.CashCouponOrderDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_ORDER")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class CashCouponOrderDTO extends CashCouponOrderDTOSupport implements java.io.Serializable, Comparable<CashCouponOrderDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_ORDER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	@com.maxiaohua.genealogy.fw.core.type.IsPK
+	private Long cashCouponOrderID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer cashCouponID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer cnt = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CASH_COUPON_RECORD_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long cASHCOUPONRECORDID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ORDER_NO")
+	@com.maxiaohua.genealogy.fw.core.type.Index(4)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 32, max = 32)
+	private String orderNO = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("AMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal amount = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATUS")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer status = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time createTime = null;
+
+	public Long getCashCouponOrderID() {
+		return this.cashCouponOrderID;
+	}
+
+	public void setCashCouponOrderID(
+			Long cashCouponOrderID) {
+		this.cashCouponOrderID = cashCouponOrderID;
+	}
+
+	public Integer getCashCouponID() {
+		return this.cashCouponID;
+	}
+
+	public void setCashCouponID(
+			Integer cashCouponID) {
+		this.cashCouponID = cashCouponID;
+	}
+
+	public Integer getCnt() {
+		return this.cnt;
+	}
+
+	public void setCnt(
+			Integer cnt) {
+		this.cnt = cnt;
+	}
+
+	public Long getCASHCOUPONRECORDID() {
+		return this.cASHCOUPONRECORDID;
+	}
+
+	public void setCASHCOUPONRECORDID(
+			Long cASHCOUPONRECORDID) {
+		this.cASHCOUPONRECORDID = cASHCOUPONRECORDID;
+	}
+
+	public String getOrderNO() {
+		return this.orderNO;
+	}
+
+	public void setOrderNO(
+			String orderNO) {
+		this.orderNO = orderNO;
+	}
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public java.math.BigDecimal getAmount() {
+		return this.amount;
+	}
+
+	public void setAmount(
+			java.math.BigDecimal amount) {
+		this.amount = amount;
+	}
+
+	public Integer getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(
+			Integer status) {
+		this.status = status;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			CashCouponOrderDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+

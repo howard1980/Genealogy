@@ -1,0 +1,79 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+import com.maxiaohua.genealogy.main.biz.a01.dto.OrderWorkSheetDTO;
+
+/**
+ * 创建修车工单详细的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("创建修车工单详细")
+public class SsCreateOrderWorksheetInDTO implements java.io.Serializable, Comparable<SsCreateOrderWorksheetInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 客户id  
+	*/
+	@Alias("客户id")
+	private Long customerID = null;
+
+	/**
+	* <code>客户id</code>返回
+	* @return <code>客户id</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* 修车施工单详细  
+	*/
+	@Alias("修车施工单详细")
+	private OrderWorkSheetDTO workSheet = null;
+
+	/**
+	* <code>修车施工单详细</code>返回
+	* @return <code>修车施工单详细</code>
+	*/
+	public OrderWorkSheetDTO getWorkSheet() {
+		return this.workSheet;
+	}
+
+	/**
+	* <code>workSheet</code>设定
+	* @param workSheet　<code>workSheet</code>设定值
+	*/
+	public void setWorkSheet(
+			OrderWorkSheetDTO workSheet) {
+		this.workSheet = workSheet;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsCreateOrderWorksheetInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

@@ -1,0 +1,53 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * CarkeeperAccountDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("车管家账户信息")
+public class CarkeeperAccountDTO implements java.io.Serializable, Comparable<CarkeeperAccountDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private Double balance = null;
+
+	public Double getBalance() {
+		return this.balance;
+	}
+
+	public void setBalance(
+			Double balance) {
+		this.balance = balance;
+	}
+
+	private AccountHistoryDTO[] accountHistory = null;
+
+	public AccountHistoryDTO[] getAccountHistory() {
+		return this.accountHistory;
+	}
+
+	public void setAccountHistory(
+			AccountHistoryDTO[] accountHistory) {
+		this.accountHistory = accountHistory;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		CarkeeperAccountDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

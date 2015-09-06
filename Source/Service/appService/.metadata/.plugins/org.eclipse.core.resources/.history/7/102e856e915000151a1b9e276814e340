@@ -1,0 +1,53 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * PeopleInfoDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/09/01             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("个人信息")
+public class PeopleInfoDTO implements java.io.Serializable, Comparable<PeopleInfoDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private UserInfoDTO userInfo = null;
+
+	public UserInfoDTO getUserInfo() {
+		return this.userInfo;
+	}
+
+	public void setUserInfo(
+			UserInfoDTO userInfo) {
+		this.userInfo = userInfo;
+	}
+
+	private ThingDTO[] things = null;
+
+	public ThingDTO[] getThings() {
+		return this.things;
+	}
+
+	public void setThings(
+			ThingDTO[] things) {
+		this.things = things;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		PeopleInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

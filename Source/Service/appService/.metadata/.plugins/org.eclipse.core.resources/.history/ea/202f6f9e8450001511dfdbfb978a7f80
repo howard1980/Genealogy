@@ -1,0 +1,331 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 获得支付宝相关Key的OutDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得支付宝相关Key")
+public class SsGetAliPayKeyOutDTO implements java.io.Serializable, Comparable<SsGetAliPayKeyOutDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 合作者身份ID  
+	*/
+	@Alias("合作者身份ID")
+	private String partner = null;
+
+	/**
+	* <code>合作者身份ID</code>返回
+	* @return <code>合作者身份ID</code>
+	*/
+	public String getPartner() {
+		return this.partner;
+	}
+
+	/**
+	* <code>partner</code>设定
+	* @param partner　<code>partner</code>设定值
+	*/
+	public void setPartner(
+			String partner) {
+		this.partner = partner;
+	}
+
+	/**
+	* 收款支付宝帐号  
+	*/
+	@Alias("收款支付宝帐号")
+	private String seller = null;
+
+	/**
+	* <code>收款支付宝帐号</code>返回
+	* @return <code>收款支付宝帐号</code>
+	*/
+	public String getSeller() {
+		return this.seller;
+	}
+
+	/**
+	* <code>seller</code>设定
+	* @param seller　<code>seller</code>设定值
+	*/
+	public void setSeller(
+			String seller) {
+		this.seller = seller;
+	}
+
+	/**
+	* 私钥  
+	*/
+	@Alias("私钥")
+	private String privateKey = null;
+
+	/**
+	* <code>私钥</code>返回
+	* @return <code>私钥</code>
+	*/
+	public String getPrivateKey() {
+		return this.privateKey;
+	}
+
+	/**
+	* <code>privateKey</code>设定
+	* @param privateKey　<code>privateKey</code>设定值
+	*/
+	public void setPrivateKey(
+			String privateKey) {
+		this.privateKey = privateKey;
+	}
+
+	/**
+	* 公钥  
+	*/
+	@Alias("公钥")
+	private String publicKey = null;
+
+	/**
+	* <code>公钥</code>返回
+	* @return <code>公钥</code>
+	*/
+	public String getPublicKey() {
+		return this.publicKey;
+	}
+
+	/**
+	* <code>publicKey</code>设定
+	* @param publicKey　<code>publicKey</code>设定值
+	*/
+	public void setPublicKey(
+			String publicKey) {
+		this.publicKey = publicKey;
+	}
+
+	/**
+	* 商品名  
+	*/
+	@Alias("商品名")
+	private String productName = null;
+
+	/**
+	* <code>商品名</code>返回
+	* @return <code>商品名</code>
+	*/
+	public String getProductName() {
+		return this.productName;
+	}
+
+	/**
+	* <code>productName</code>设定
+	* @param productName　<code>productName</code>设定值
+	*/
+	public void setProductName(
+			String productName) {
+		this.productName = productName;
+	}
+
+	/**
+	* 商品描述  
+	*/
+	@Alias("商品描述")
+	private String productDescription = null;
+
+	/**
+	* <code>商品描述</code>返回
+	* @return <code>商品描述</code>
+	*/
+	public String getProductDescription() {
+		return this.productDescription;
+	}
+
+	/**
+	* <code>productDescription</code>设定
+	* @param productDescription　<code>productDescription</code>设定值
+	*/
+	public void setProductDescription(
+			String productDescription) {
+		this.productDescription = productDescription;
+	}
+
+	/**
+	* 商品价格  
+	*/
+	@Alias("商品价格")
+	private String orderprice = null;
+
+	/**
+	* <code>商品价格</code>返回
+	* @return <code>商品价格</code>
+	*/
+	public String getOrderprice() {
+		return this.orderprice;
+	}
+
+	/**
+	* <code>orderprice</code>设定
+	* @param orderprice　<code>orderprice</code>设定值
+	*/
+	public void setOrderprice(
+			String orderprice) {
+		this.orderprice = orderprice;
+	}
+
+	/**
+	* 回调URL  
+	*/
+	@Alias("回调URL")
+	private String notifyURL = null;
+
+	/**
+	* <code>回调URL</code>返回
+	* @return <code>回调URL</code>
+	*/
+	public String getNotifyURL() {
+		return this.notifyURL;
+	}
+
+	/**
+	* <code>notifyURL</code>设定
+	* @param notifyURL　<code>notifyURL</code>设定值
+	*/
+	public void setNotifyURL(
+			String notifyURL) {
+		this.notifyURL = notifyURL;
+	}
+
+	/**
+	* 服务名称  
+	*/
+	@Alias("服务名称")
+	private String service = null;
+
+	/**
+	* <code>服务名称</code>返回
+	* @return <code>服务名称</code>
+	*/
+	public String getService() {
+		return this.service;
+	}
+
+	/**
+	* <code>service</code>设定
+	* @param service　<code>service</code>设定值
+	*/
+	public void setService(
+			String service) {
+		this.service = service;
+	}
+
+	/**
+	* 支付宝类型  
+	*/
+	@Alias("支付宝类型")
+	private String paymentType = null;
+
+	/**
+	* <code>支付宝类型</code>返回
+	* @return <code>支付宝类型</code>
+	*/
+	public String getPaymentType() {
+		return this.paymentType;
+	}
+
+	/**
+	* <code>paymentType</code>设定
+	* @param paymentType　<code>paymentType</code>设定值
+	*/
+	public void setPaymentType(
+			String paymentType) {
+		this.paymentType = paymentType;
+	}
+
+	/**
+	* 编码类型  
+	*/
+	@Alias("编码类型")
+	private String inputCharset = null;
+
+	/**
+	* <code>编码类型</code>返回
+	* @return <code>编码类型</code>
+	*/
+	public String getInputCharset() {
+		return this.inputCharset;
+	}
+
+	/**
+	* <code>inputCharset</code>设定
+	* @param inputCharset　<code>inputCharset</code>设定值
+	*/
+	public void setInputCharset(
+			String inputCharset) {
+		this.inputCharset = inputCharset;
+	}
+
+	/**
+	* 过期时间  
+	*/
+	@Alias("过期时间")
+	private String itBPay = null;
+
+	/**
+	* <code>过期时间</code>返回
+	* @return <code>过期时间</code>
+	*/
+	public String getItBPay() {
+		return this.itBPay;
+	}
+
+	/**
+	* <code>itBPay</code>设定
+	* @param itBPay　<code>itBPay</code>设定值
+	*/
+	public void setItBPay(
+			String itBPay) {
+		this.itBPay = itBPay;
+	}
+
+	/**
+	* 展示地址  
+	*/
+	@Alias("展示地址")
+	private String showUrl = null;
+
+	/**
+	* <code>展示地址</code>返回
+	* @return <code>展示地址</code>
+	*/
+	public String getShowUrl() {
+		return this.showUrl;
+	}
+
+	/**
+	* <code>showUrl</code>设定
+	* @param showUrl　<code>showUrl</code>设定值
+	*/
+	public void setShowUrl(
+			String showUrl) {
+		this.showUrl = showUrl;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetAliPayKeyOutDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

@@ -1,0 +1,104 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 更新工作组位置的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/20         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("更新工作组位置")
+public class SsUpdateWorkerGPSInDTO implements java.io.Serializable, Comparable<SsUpdateWorkerGPSInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 工作组ID  
+	*/
+	@Alias("工作组ID")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Integer workerID = null;
+
+	/**
+	* <code>工作组ID</code>返回
+	* @return <code>工作组ID</code>
+	*/
+	public Integer getWorkerID() {
+		return this.workerID;
+	}
+
+	/**
+	* <code>workerID</code>设定
+	* @param workerID　<code>workerID</code>设定值
+	*/
+	public void setWorkerID(
+			Integer workerID) {
+		this.workerID = workerID;
+	}
+
+	/**
+	* 经度  
+	*/
+	@Alias("经度")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Double longitude = null;
+
+	/**
+	* <code>经度</code>返回
+	* @return <code>经度</code>
+	*/
+	public Double getLongitude() {
+		return this.longitude;
+	}
+
+	/**
+	* <code>longitude</code>设定
+	* @param longitude　<code>longitude</code>设定值
+	*/
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
+	}
+
+	/**
+	* 维度  
+	*/
+	@Alias("维度")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Double latitude = null;
+
+	/**
+	* <code>维度</code>返回
+	* @return <code>维度</code>
+	*/
+	public Double getLatitude() {
+		return this.latitude;
+	}
+
+	/**
+	* <code>latitude</code>设定
+	* @param latitude　<code>latitude</code>设定值
+	*/
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsUpdateWorkerGPSInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

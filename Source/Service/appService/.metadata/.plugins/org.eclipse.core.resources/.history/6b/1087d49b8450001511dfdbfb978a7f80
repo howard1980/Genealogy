@@ -1,0 +1,74 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.view.support;
+
+import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
+import com.beetlestech.nfe.main.db.base.BaseTableDTO;
+import com.beetlestech.nfe.main.db.view.VAccountHistoryDTO;
+
+/**
+ *Service DB Support DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+public abstract class VAccountHistoryDTOSupport extends BaseTableDTO {
+
+	public static final String EQUAL_SEARCH = "VACCOUNT_HISTORY_EQUAL_SEARCH";
+
+	public static final String EQUAL_SEARCH_OR = "VACCOUNT_HISTORY_EQUAL_SEARCH_OR";
+
+	public static final String LIKE_SEARCH = "VACCOUNT_HISTORY_LIKE_SEARCH";
+
+	public static final String LIKE_SEARCH_OR = "VACCOUNT_HISTORY_LIKE_SEARCH_OR";
+
+	public static final String SQL_SEARCH = "VACCOUNT_HISTORY_SQL_SEARCH";
+
+	public static final String COUNT = "VACCOUNT_HISTORY_COUNT";
+
+	public static final String COUNT_OR = "VACCOUNT_HISTORY_COUNT_OR";
+
+	public static final String COUNT_SEARCH = "VACCOUNT_HISTORY_COUNT_SEARCH";
+
+	public static final String COLUMN_CUSTOMER_ID = "CUSTOMER_ID";
+
+	public static final String COLUMN_ORDER_DATE = "ORDER_DATE";
+
+	public static final String COLUMN_ORDER_TIME = "ORDER_TIME";
+
+	public static final String COLUMN_RECHARGE = "RECHARGE";
+
+	public static final String COLUMN_ORDERID = "ORDERID";
+
+	public static final String COLUMN_ORDER_NO = "ORDER_NO";
+
+	public static final String COLUMN_AMMOUNT = "AMMOUNT";
+
+	public static final String TABLE = "VACCOUNT_HISTORY";
+
+	public static VAccountHistoryDTO setDefaultValue() {
+		VAccountHistoryDTO defaultDTO = new VAccountHistoryDTO();
+
+		defaultDTO.setCustomerID(0l);
+
+		defaultDTO.setOrderDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setOrderTime(DateUtil.getDefaultTime());
+
+		defaultDTO.setRecharge(0l);
+
+		defaultDTO.setOrderID(0l);
+
+		defaultDTO.setOrderNO(StringUtil.EMPTY);
+
+		defaultDTO.setAmmount(new java.math.BigDecimal(0));
+
+		return defaultDTO;
+	}
+}

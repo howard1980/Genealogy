@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="2" timestamp="1398650275861" analysisTimestamp="1398650274787" release="">
+  <Project projectName="com.ibm.jp.cis.main.service">
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.main.service\bin\com\ibm\jp\cis\main\service\k22\dto\HsGetKarteViewerRecordInDTO.class</Jar>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.main.service\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.main.biz\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.main.db\bin</AuxClasspathEntry>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.main.service\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" abbrev="EI" category="MALICIOUS_CODE" first="2">
+    <Class classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" name="getStartDate" signature="()Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" start="106" end="106" startBytecode="0" endBytecode="46" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Method>
+    <Field classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" name="startDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Field>
+    <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" start="106" end="106" startBytecode="4" endBytecode="4" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" abbrev="EI2" category="MALICIOUS_CODE" first="2">
+    <Class classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" name="setStartDate" signature="(Ljava/sql/Date;)V" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" start="115" end="116" startBytecode="0" endBytecode="61" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Method>
+    <Field classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" name="startDate" signature="Ljava/sql/Date;" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Field>
+    <LocalVariable name="startDate" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" start="115" end="115" startBytecode="2" endBytecode="2" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE" first="2">
+    <Class classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" name="compareTo" signature="(Lcom/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO;)I" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" start="243" end="243" startBytecode="0" endBytecode="76" sourcefile="HsGetKarteViewerRecordInDTO.java" sourcepath="com/ibm/jp/cis/main/service/k22/dto/HsGetKarteViewerRecordInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 28 Apr 2014 09:57:54 +0800" total_classes="1" referenced_classes="19" total_bugs="3" total_size="71" num_packages="1" vm_version="24.0-b56" cpu_seconds="0.89" clock_seconds="1.08" peak_mbytes="267.38" alloc_mbytes="494.94" gc_seconds="0.04" priority_2="3">
+    <PackageStats package="com.ibm.jp.cis.main.service.k22.dto" total_bugs="3" total_types="1" total_size="71" priority_2="3">
+      <ClassStats class="com.ibm.jp.cis.main.service.k22.dto.HsGetKarteViewerRecordInDTO" sourceFile="HsGetKarteViewerRecordInDTO.java" interface="false" size="71" bugs="3" priority_2="3"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="600" invocations="314" avgMicrosecondsPerInvocation="1911" maxMicrosecondsPerInvocation="21591" standardDeviationMircosecondsPerInvocation="2238"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="93" invocations="311" avgMicrosecondsPerInvocation="300" maxMicrosecondsPerInvocation="19008" standardDeviationMircosecondsPerInvocation="1122"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1396249275770" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1396249275773" release="" codeSize="44" numClasses="2"/>
+  </History>
+</BugCollection>

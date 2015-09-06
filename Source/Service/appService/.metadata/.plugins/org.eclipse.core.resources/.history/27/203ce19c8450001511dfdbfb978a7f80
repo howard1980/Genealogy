@@ -1,0 +1,147 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 创建养车订单的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("创建养车订单")
+public class SsCreateCareOrderInDTO implements java.io.Serializable, Comparable<SsCreateCareOrderInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 客户id  
+	*/
+	@Alias("客户id")
+	private Long customerID = null;
+
+	/**
+	* <code>客户id</code>返回
+	* @return <code>客户id</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* 产品id  
+	*/
+	@Alias("产品id")
+	private Long productID = null;
+
+	/**
+	* <code>产品id</code>返回
+	* @return <code>产品id</code>
+	*/
+	public Long getProductID() {
+		return this.productID;
+	}
+
+	/**
+	* <code>productID</code>设定
+	* @param productID　<code>productID</code>设定值
+	*/
+	public void setProductID(
+			Long productID) {
+		this.productID = productID;
+	}
+
+	/**
+	* 车厂id  
+	*/
+	@Alias("车厂id")
+	private Long shopID = null;
+
+	/**
+	* <code>车厂id</code>返回
+	* @return <code>车厂id</code>
+	*/
+	public Long getShopID() {
+		return this.shopID;
+	}
+
+	/**
+	* <code>shopID</code>设定
+	* @param shopID　<code>shopID</code>设定值
+	*/
+	public void setShopID(
+			Long shopID) {
+		this.shopID = shopID;
+	}
+
+	/**
+	* 预约日期  
+	*/
+	@Alias("预约日期")
+	private java.sql.Date appointmentDate = null;
+
+	/**
+	* <code>预约日期</code>返回
+	* @return <code>预约日期</code>
+	*/
+	public java.sql.Date getAppointmentDate() {
+		return this.appointmentDate;
+	}
+
+	/**
+	* <code>appointmentDate</code>设定
+	* @param appointmentDate　<code>appointmentDate</code>设定值
+	*/
+	public void setAppointmentDate(
+			java.sql.Date appointmentDate) {
+		this.appointmentDate = appointmentDate;
+	}
+
+	/**
+	* 预约时间  
+	*/
+	@Alias("预约时间")
+	private java.sql.Time appointmentTime = null;
+
+	/**
+	* <code>预约时间</code>返回
+	* @return <code>预约时间</code>
+	*/
+	public java.sql.Time getAppointmentTime() {
+		return this.appointmentTime;
+	}
+
+	/**
+	* <code>appointmentTime</code>设定
+	* @param appointmentTime　<code>appointmentTime</code>设定值
+	*/
+	public void setAppointmentTime(
+			java.sql.Time appointmentTime) {
+		this.appointmentTime = appointmentTime;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsCreateCareOrderInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

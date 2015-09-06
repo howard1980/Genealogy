@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="148" key="DifferencesDialog.location.y"/>
+	<item value="216" key="HistoryTableProvider.SVNHistoryPage.作者"/>
+	<item value="542" key="HistoryTableProvider.SVNHistoryPage.注释"/>
+	<item value="367" key="RevertDialog.size.y"/>
+	<item value="973" key="DifferencesDialog.size.x"/>
+	<item value="272" key="HistoryTableProvider.SVNHistoryPage.日期"/>
+	<item value="525" key="RevertDialog.size.x"/>
+	<item value="564" key="passwordStores.size.y"/>
+	<item value="952" key="passwordStores.size.x"/>
+	<item value="422" key="DifferencesDialog.size.y"/>
+	<item value="525" key="GenerateDiffFileWizard.size.x"/>
+	<item value="234" key="DifferencesDialog.location.x"/>
+	<item value="452" key="GenerateDiffFileWizard.size.y"/>
+	<item value="23" key="passwordStores.location.y"/>
+	<item value="23" key="CommitDialog.location.y"/>
+	<item value="78" key="passwordStores.location.x"/>
+	<item value="0" key="CommitDialog.location.x"/>
+	<item value="" key="DirectorySelectionPage.lastParent_https://howard19980.oicp.net/svn/sxxc/src/appService"/>
+	<item value="500" key="CommitDialog.weights.0"/>
+	<item value="458" key="RevertDialog.location.x"/>
+	<item value="500" key="CommitDialog.weights.1"/>
+	<item value="186" key="RevertDialog.location.y"/>
+	<item value="" key="DirectorySelectionPage.lastParent_https://192.168.1.113/svn/sxxc/src/appService"/>
+	<item value="809" key="CommitDialog.size.y"/>
+	<item value="1440" key="CommitDialog.size.x"/>
+	<item value="458" key="GenerateDiffFileWizard.location.x"/>
+	<item value="https://howard19980.oicp.net/svn/sxxc/src/appService" key="RepositorySelectionPage.lastRepository"/>
+	<item value="128" key="GenerateDiffFileWizard.location.y"/>
+	<item value="109" key="HistoryTableProvider.SVNHistoryPage.修订"/>
+	<section name="CommitWizard">
+		<item value="500" key="VWeight2"/>
+		<item value="500" key="VWeight1"/>
+		<item value="false" key="ShowCompare"/>
+	</section>
+	<section name="NewLocationWizard">
+	</section>
+</section>

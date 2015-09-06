@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="1" timestamp="1441095938309" analysisTimestamp="1441095937205" release="">
+  <Project projectName="com.beetlestech.nfe.fw.dao">
+    <Jar>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.dao\bin</Jar>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.dao\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.maxiaohua.genealogy.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jedis-2.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\gson-2.2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jpush-client-3.2.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\slf4j-api-1.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\mxh\Desktop\Genealogy_Service\appService\mxh-jar\jdom.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Program Files\Java\jre1.8.0_20\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.dao\src</SrcDir>
+    <SrcDir>C:\Users\mxh\Desktop\Genealogy_Service\appService\com.beetlestech.nfe.fw.dao\.apt_generated</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="cisSqlSessionFactory" signature="Lcom/maxiaohua/genealogy/fw/core/dao/CISSqlSessionFactory;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="retryCount" signature="I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="retryCountFlag" signature="Z" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="retryTimeout" signature="J" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="retryTimeoutFlag" signature="Z" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="targetException" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="validFlg" signature="Z" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="validationQuery" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" name="debugLogger" signature="Lcom/maxiaohua/genealogy/fw/core/log/DebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.impl.MyBatisDAOSupport">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.impl.MyBatisDAOSupport" sourcefile="MyBatisDAOSupport.java" sourcepath="com/beetlestech/nfe/fw/core/dao/impl/MyBatisDAOSupport.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.impl.MyBatisDAOSupport" name="debugLogger" signature="Lcom/maxiaohua/genealogy/fw/core/log/DebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.impl.MyBatisDAOSupport" sourcefile="MyBatisDAOSupport.java" sourcepath="com/beetlestech/nfe/fw/core/dao/impl/MyBatisDAOSupport.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourcefile="CISSqlSessionFactoryImpl.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/CISSqlSessionFactoryImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" name="configFileName" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourcefile="CISSqlSessionFactoryImpl.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/CISSqlSessionFactoryImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourcefile="CISSqlSessionFactoryImpl.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/CISSqlSessionFactoryImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" name="environmentIds" signature="Ljava/util/List;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourcefile="CISSqlSessionFactoryImpl.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/CISSqlSessionFactoryImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourcefile="CISSqlSessionFactoryImpl.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/CISSqlSessionFactoryImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" name="sqlSessionFactories" signature="Ljava/util/Map;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourcefile="CISSqlSessionFactoryImpl.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/CISSqlSessionFactoryImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.ConfigurationEx">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.ConfigurationEx" sourcefile="ConfigurationEx.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/ConfigurationEx.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.ConfigurationEx" name="configuration" signature="Lorg/apache/ibatis/session/Configuration;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.ConfigurationEx" sourcefile="ConfigurationEx.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/ConfigurationEx.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.SimpleExecutorEx">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.SimpleExecutorEx" sourcefile="SimpleExecutorEx.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/SimpleExecutorEx.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.SimpleExecutorEx" name="debugLogger" signature="Lcom/maxiaohua/genealogy/fw/core/log/DebugLogger;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.mybatis.ex.SimpleExecutorEx" sourcefile="SimpleExecutorEx.java" sourcepath="com/beetlestech/nfe/fw/core/dao/mybatis/ex/SimpleExecutorEx.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" sourcefile="MyBatisConfigUtil.java" sourcepath="com/beetlestech/nfe/fw/core/dao/util/MyBatisConfigUtil.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" name="environmentIds" signature="Ljava/util/List;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" sourcefile="MyBatisConfigUtil.java" sourcepath="com/beetlestech/nfe/fw/core/dao/util/MyBatisConfigUtil.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" sourcefile="MyBatisConfigUtil.java" sourcepath="com/beetlestech/nfe/fw/core/dao/util/MyBatisConfigUtil.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" name="sqlSessionFactories" signature="Ljava/util/Map;" isStatic="true">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" sourcefile="MyBatisConfigUtil.java" sourcepath="com/beetlestech/nfe/fw/core/dao/util/MyBatisConfigUtil.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="com.beetlestech.nfe.fw.core.transaction.impl.TransactionManagerImpl">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.transaction.impl.TransactionManagerImpl" sourcefile="TransactionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/transaction/impl/TransactionManagerImpl.java"/>
+    </Class>
+    <Field classname="com.beetlestech.nfe.fw.core.transaction.impl.TransactionManagerImpl" name="txFactory" signature="Lorg/apache/ibatis/transaction/TransactionFactory;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.fw.core.transaction.impl.TransactionManagerImpl" sourcefile="TransactionManagerImpl.java" sourcepath="com/beetlestech/nfe/fw/core/transaction/impl/TransactionManagerImpl.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 1 Sep 2015 16:25:37 +0800" total_classes="13" referenced_classes="119" total_bugs="18" total_size="364" num_packages="6" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="2.91" clock_seconds="1.11" peak_mbytes="608.46" alloc_mbytes="455.50" gc_seconds="0.04" priority_2="18">
+    <PackageStats package="com.beetlestech.nfe.fw.core.connection.impl" total_bugs="9" total_types="1" total_size="32" priority_2="9">
+      <ClassStats class="com.beetlestech.nfe.fw.core.connection.impl.ConnectionManagerImpl" sourceFile="ConnectionManagerImpl.java" interface="false" size="32" bugs="9" priority_2="9"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.core.dao.impl" total_bugs="1" total_types="3" total_size="48" priority_2="1">
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.impl.MyBatisDAOSupport" sourceFile="MyBatisDAOSupport.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.impl.QueryDAOImpl" sourceFile="QueryDAOImpl.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.impl.UpdateDAOImpl" sourceFile="UpdateDAOImpl.java" interface="false" size="15" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.core.dao.lob.ex" total_bugs="0" total_types="2" total_size="22">
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.lob.ex.CISBlobTypeHandler" sourceFile="CISBlobTypeHandler.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.lob.ex.CISClobTypeHandler" sourceFile="CISClobTypeHandler.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.core.dao.mybatis.ex" total_bugs="5" total_types="4" total_size="229" priority_2="5">
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.mybatis.ex.CISSqlSessionFactoryImpl" sourceFile="CISSqlSessionFactoryImpl.java" interface="false" size="26" bugs="3" priority_2="3"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.mybatis.ex.ConfigurationEx" sourceFile="ConfigurationEx.java" interface="false" size="188" bugs="1" priority_2="1"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.mybatis.ex.SimpleExecutorEx" sourceFile="SimpleExecutorEx.java" interface="false" size="10" bugs="1" priority_2="1"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.mybatis.ex.SqlSessionFactoryBuilderEx" sourceFile="SqlSessionFactoryBuilderEx.java" interface="false" size="5" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.core.dao.util" total_bugs="2" total_types="2" total_size="23" priority_2="2">
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.util.MyBatisConfigUtil" sourceFile="MyBatisConfigUtil.java" interface="false" size="14" bugs="2" priority_2="2"/>
+      <ClassStats class="com.beetlestech.nfe.fw.core.dao.util.ThreadCallStackUtil" sourceFile="ThreadCallStackUtil.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.beetlestech.nfe.fw.core.transaction.impl" total_bugs="1" total_types="1" total_size="10" priority_2="1">
+      <ClassStats class="com.beetlestech.nfe.fw.core.transaction.impl.TransactionManagerImpl" sourceFile="TransactionManagerImpl.java" interface="false" size="10" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="366" invocations="2" avgMicrosecondsPerInvocation="183321" maxMicrosecondsPerInvocation="355261" standardDeviationMircosecondsPerInvocation="171939"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="167" invocations="712" avgMicrosecondsPerInvocation="234" maxMicrosecondsPerInvocation="11993" standardDeviationMircosecondsPerInvocation="660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="123" invocations="717" avgMicrosecondsPerInvocation="171" maxMicrosecondsPerInvocation="4239" standardDeviationMircosecondsPerInvocation="177"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="68" invocations="430" avgMicrosecondsPerInvocation="158" maxMicrosecondsPerInvocation="28725" standardDeviationMircosecondsPerInvocation="1387"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="50" invocations="119" avgMicrosecondsPerInvocation="427" maxMicrosecondsPerInvocation="4676" standardDeviationMircosecondsPerInvocation="750"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindFieldSelfAssignment" totalMilliseconds="21" invocations="13" avgMicrosecondsPerInvocation="1678" maxMicrosecondsPerInvocation="20833" standardDeviationMircosecondsPerInvocation="5530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="14" invocations="673" avgMicrosecondsPerInvocation="21" maxMicrosecondsPerInvocation="642" standardDeviationMircosecondsPerInvocation="40"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1441095938309" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

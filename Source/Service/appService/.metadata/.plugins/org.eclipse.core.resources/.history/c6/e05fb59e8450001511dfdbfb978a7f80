@@ -1,0 +1,38 @@
+/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.beetlestech.nfe.main.biz.a01.dto.AppVersionDTO;
+import com.beetlestech.nfe.main.biz.com.HbSystemInfo;
+import com.beetlestech.nfe.main.service.com.dto.SsGetAppVersionInDTO;
+import com.beetlestech.nfe.main.service.com.dto.SsGetAppVersionOutDTO;
+
+public class SsGetAppVersion extends AbstractService<SsGetAppVersionOutDTO, SsGetAppVersionInDTO> {
+
+	@AutoInject
+	private HbSystemInfo hbSystemInfo;
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	public SsGetAppVersionOutDTO execute(
+			SsGetAppVersionInDTO ssGetAppVersionInDTO) {
+		SsGetAppVersionOutDTO ssGetAppVersionOutDTO = new SsGetAppVersionOutDTO();
+		AppVersionDTO appVersion = hbSystemInfo.getAppVersion(
+				ssGetAppVersionInDTO.getVersion(), 
+				ssGetAppVersionInDTO.getChannel(), 
+				ssGetAppVersionInDTO.getType());
+		ssGetAppVersionOutDTO.setUpdate(appVersion.getUpdate());
+		ssGetAppVersionOutDTO.setDescrip(appVersion.getDescrip());
+		ssGetAppVersionOutDTO.setDownloadUrl(appVersion.getDownloadUrl());
+		return ssGetAppVersionOutDTO;
+	}
+}

@@ -1,0 +1,101 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.com.dto;
+
+import com.beetlestech.nfe.fw.core.type.Alias;
+
+/**
+ * 登录的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/04/21         TOOL                初次作成
+ *
+ */
+@com.beetlestech.nfe.fw.core.type.AliasKanJi("登录")
+public class SsCustomerLoginInDTO implements java.io.Serializable, Comparable<SsCustomerLoginInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 电话号  
+	*/
+	@Alias("电话号")
+	private String mobile = null;
+
+	/**
+	* <code>电话号</code>返回
+	* @return <code>电话号</code>
+	*/
+	public String getMobile() {
+		return this.mobile;
+	}
+
+	/**
+	* <code>mobile</code>设定
+	* @param mobile　<code>mobile</code>设定值
+	*/
+	public void setMobile(
+			String mobile) {
+		this.mobile = mobile;
+	}
+
+	/**
+	* 验证码  
+	*/
+	@Alias("验证码")
+	private String validCode = null;
+
+	/**
+	* <code>验证码</code>返回
+	* @return <code>验证码</code>
+	*/
+	public String getValidCode() {
+		return this.validCode;
+	}
+
+	/**
+	* <code>validCode</code>设定
+	* @param validCode　<code>validCode</code>设定值
+	*/
+	public void setValidCode(
+			String validCode) {
+		this.validCode = validCode;
+	}
+
+	/**
+	* RegisitrationID  
+	*/
+	@Alias("RegisitrationID")
+	private Long registrationID = null;
+
+	/**
+	* <code>RegisitrationID</code>返回
+	* @return <code>RegisitrationID</code>
+	*/
+	public Long getRegistrationID() {
+		return this.registrationID;
+	}
+
+	/**
+	* <code>registrationID</code>设定
+	* @param registrationID　<code>registrationID</code>设定值
+	*/
+	public void setRegistrationID(
+			Long registrationID) {
+		this.registrationID = registrationID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsCustomerLoginInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

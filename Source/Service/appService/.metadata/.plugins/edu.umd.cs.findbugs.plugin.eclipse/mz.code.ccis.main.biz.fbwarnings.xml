@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="1" timestamp="1414724791362" analysisTimestamp="1414724747597" release="">
+  <Project projectName="mz.code.ccis.main.biz">
+    <Jar>C:\ccis\NFEService\mz.code.ccis.main.biz\bin</Jar>
+    <AuxClasspathEntry>C:\ccis\NFEService\mz.code.ccis.main.biz\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.main.db\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\annotations-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ha.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-tribes.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc_license_cu.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\ecj-3.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\el-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper-el.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jsp-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-coyote.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-es.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-fr.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-ja.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-jdbc.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-util.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\eclipse\j9-6\jre\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\ccis\NFEService\mz.code.ccis.main.biz\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.AuthResultDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.AuthResultDTO" sourcefile="AuthResultDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/AuthResultDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.AuthResultDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/AuthResultDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.AuthResultDTO" start="73" end="73" startBytecode="0" endBytecode="51" sourcefile="AuthResultDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/AuthResultDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.CodeWithValueDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.CodeWithValueDTO" sourcefile="CodeWithValueDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/CodeWithValueDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.CodeWithValueDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/CodeWithValueDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.CodeWithValueDTO" start="95" end="95" startBytecode="0" endBytecode="51" sourcefile="CodeWithValueDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/CodeWithValueDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.EmployeeInfoDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.EmployeeInfoDTO" sourcefile="EmployeeInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/EmployeeInfoDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.EmployeeInfoDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/EmployeeInfoDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.EmployeeInfoDTO" start="69" end="69" startBytecode="0" endBytecode="51" sourcefile="EmployeeInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/EmployeeInfoDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.ExaminationGroupInfoDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.ExaminationGroupInfoDTO" sourcefile="ExaminationGroupInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/ExaminationGroupInfoDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.ExaminationGroupInfoDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/ExaminationGroupInfoDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.ExaminationGroupInfoDTO" start="72" end="72" startBytecode="0" endBytecode="51" sourcefile="ExaminationGroupInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/ExaminationGroupInfoDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.ExaminationInfoDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.ExaminationInfoDTO" sourcefile="ExaminationInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/ExaminationInfoDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.ExaminationInfoDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/ExaminationInfoDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.ExaminationInfoDTO" start="102" end="102" startBytecode="0" endBytecode="51" sourcefile="ExaminationInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/ExaminationInfoDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.MastValueDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.MastValueDTO" sourcefile="MastValueDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/MastValueDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.MastValueDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/MastValueDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.MastValueDTO" start="50" end="50" startBytecode="0" endBytecode="51" sourcefile="MastValueDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/MastValueDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="CO_SELF_NO_OBJECT" priority="2" rank="16" abbrev="Co" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" sourcefile="NumberingForSqlDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/NumberingForSqlDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/NumberingForSqlDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" start="52" end="52" startBytecode="0" endBytecode="51" sourcefile="NumberingForSqlDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/NumberingForSqlDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" sourcefile="NumberingForSqlDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/NumberingForSqlDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/NumberingForSqlDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" start="52" end="52" startBytecode="0" endBytecode="51" sourcefile="NumberingForSqlDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/NumberingForSqlDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.dto.PwExpirationInfoDTO">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.PwExpirationInfoDTO" sourcefile="PwExpirationInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/PwExpirationInfoDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.biz.com.dto.PwExpirationInfoDTO" name="compareTo" signature="(Lmz/code/ccis/main/biz/com/dto/PwExpirationInfoDTO;)I" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.dto.PwExpirationInfoDTO" start="139" end="139" startBytecode="0" endBytecode="51" sourcefile="PwExpirationInfoDTO.java" sourcepath="mz/code/ccis/main/biz/com/dto/PwExpirationInfoDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" name="LDAP_ATTRS_PEOPLE" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" name="LDAP_ATTRS_PWD_POLICY" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" sourcefile="HbAuthenticationImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbAuthenticationImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourcefile="HbLDAPFactoryImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbLDAPFactoryImpl.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" name="adminPassword" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourcefile="HbLDAPFactoryImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbLDAPFactoryImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourcefile="HbLDAPFactoryImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbLDAPFactoryImpl.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" name="ldapHostIP" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourcefile="HbLDAPFactoryImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbLDAPFactoryImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourcefile="HbLDAPFactoryImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbLDAPFactoryImpl.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" name="root" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourcefile="HbLDAPFactoryImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbLDAPFactoryImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" first="1">
+    <Class classname="mz.code.ccis.main.biz.com.impl.HbMasterCacheImpl">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbMasterCacheImpl" sourcefile="HbMasterCacheImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbMasterCacheImpl.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.com.impl.HbMasterCacheImpl" name="tcomblcmMap" signature="Ljava/util/HashMap;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.com.impl.HbMasterCacheImpl" sourcefile="HbMasterCacheImpl.java" sourcepath="mz/code/ccis/main/biz/com/impl/HbMasterCacheImpl.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.constant.CommonConstant">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.constant.CommonConstant" name="CHAR_SPACE" signature="Ljava/lang/Character;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.constant.CommonConstant">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.constant.CommonConstant" name="CHAR_ZERO" signature="Ljava/lang/Character;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.constant.CommonConstant">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.constant.CommonConstant" name="MONTH_AMOUNT" signature="Ljava/lang/Integer;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.constant.CommonConstant">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.constant.CommonConstant" name="SEQ_MIN_NO" signature="Ljava/lang/Integer;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.constant.CommonConstant">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.constant.CommonConstant" name="SEQ_NO_ONE" signature="Ljava/lang/Integer;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Field>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" priority="2" rank="17" abbrev="UuF" category="STYLE" first="1">
+    <Class classname="mz.code.ccis.main.biz.constant.CommonConstant">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Class>
+    <Field classname="mz.code.ccis.main.biz.constant.CommonConstant" name="SORT_SEQ_ONE" signature="Ljava/lang/Integer;" isStatic="true">
+      <SourceLine classname="mz.code.ccis.main.biz.constant.CommonConstant" sourcefile="CommonConstant.java" sourcepath="mz/code/ccis/main/biz/constant/CommonConstant.java"/>
+    </Field>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Fri, 31 Oct 2014 11:05:47 +0800" total_classes="280" referenced_classes="302" total_bugs="21" total_size="2217" num_packages="4" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="31.50" clock_seconds="43.77" peak_mbytes="517.02" alloc_mbytes="455.50" gc_seconds="0.44" priority_2="21">
+    <PackageStats package="mz.code.ccis.main.biz.com" total_bugs="0" total_types="10" total_size="52">
+      <ClassStats class="mz.code.ccis.main.biz.com.HbAccesslog" sourceFile="HbAccesslog.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbAuthentication" sourceFile="HbAuthentication.java" interface="true" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbComblcmMaster" sourceFile="HbComblcmMaster.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbEmployeeList" sourceFile="HbEmployeeList.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbExaminationMaster" sourceFile="HbExaminationMaster.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbLDAPAccess" sourceFile="HbLDAPAccess.java" interface="true" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbLogin" sourceFile="HbLogin.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbLogout" sourceFile="HbLogout.java" interface="true" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbMasterCache" sourceFile="HbMasterCache.java" interface="true" size="3" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.HbUser" sourceFile="HbUser.java" interface="true" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="mz.code.ccis.main.biz.com.dto" total_bugs="9" total_types="8" total_size="188" priority_2="9">
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.AuthResultDTO" sourceFile="AuthResultDTO.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.CodeWithValueDTO" sourceFile="CodeWithValueDTO.java" interface="false" size="21" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.EmployeeInfoDTO" sourceFile="EmployeeInfoDTO.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.ExaminationGroupInfoDTO" sourceFile="ExaminationGroupInfoDTO.java" interface="false" size="26" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.ExaminationInfoDTO" sourceFile="ExaminationInfoDTO.java" interface="false" size="41" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.MastValueDTO" sourceFile="MastValueDTO.java" interface="false" size="16" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.NumberingForSqlDTO" sourceFile="NumberingForSqlDTO.java" interface="false" size="11" bugs="2" priority_2="2"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.dto.PwExpirationInfoDTO" sourceFile="PwExpirationInfoDTO.java" interface="false" size="31" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <PackageStats package="mz.code.ccis.main.biz.com.impl" total_bugs="6" total_types="11" total_size="183" priority_2="6">
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbAccesslogImpl" sourceFile="HbAccesslogImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbAuthenticationImpl" sourceFile="HbAuthenticationImpl.java" interface="false" size="46" bugs="2" priority_2="2"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbComblcmMasterImpl" sourceFile="HbComblcmMasterImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbEmployeeListImpl" sourceFile="HbEmployeeListImpl.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbExaminationMasterImpl" sourceFile="HbExaminationMasterImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbLDAPAccessImpl" sourceFile="HbLDAPAccessImpl.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbLDAPFactoryImpl" sourceFile="HbLDAPFactoryImpl.java" interface="false" size="28" bugs="3" priority_2="3"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbLoginImpl" sourceFile="HbLoginImpl.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbLogoutImpl" sourceFile="HbLogoutImpl.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbMasterCacheImpl" sourceFile="HbMasterCacheImpl.java" interface="false" size="28" bugs="1" priority_2="1"/>
+      <ClassStats class="mz.code.ccis.main.biz.com.impl.HbUserImpl" sourceFile="HbUserImpl.java" interface="false" size="21" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="mz.code.ccis.main.biz.constant" total_bugs="6" total_types="251" total_size="1794" priority_2="6">
+      <ClassStats class="mz.code.ccis.main.biz.constant.CommonConstant" sourceFile="CommonConstant.java" interface="true" size="50" bugs="6" priority_2="6"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant" sourceFile="CtgCodeConstant.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$NUMBERING_SEQUENCE" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TA31SYK_CHG_ED_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TA31SYK_CHG_ST_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TA31SYK_ODR_TNI" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TA31SYK_SYKR_NO" sourceFile="CtgCodeConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TA31SYR_STOP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TACCAUT_PERMISSION" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TACCLOG_ACC_INFO" sourceFile="CtgCodeConstant.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TACCLOG_ACC_STATUS" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TACCPATM_ACCTYPE" sourceFile="CtgCodeConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TACCPATM_ACTIVE_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TACCUSR_PERMISSION" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TAUTHCKM_CATEGORY" sourceFile="CtgCodeConstant.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_C26KSI_LEVEL" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_CONTINUE_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_ENT_NO_FUBAN_TYPE" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_MODE_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_NOTATION_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_PROF_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_SYOSAIKBN_MODE" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TBYPROF_YOYAKU_MODE" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC22YKH_MAYAKU_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC22YKH_TOKU_SJI_BYTE1" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC24YKB_FLOW_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC24YKB_ZAIRYO_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC25ORD_ORD_FLG2" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC27ORD_STOP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TC27ORD_XX_SYBT" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCANOPEN_ACTIVE_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMBLCM_AUTHENTICATION_CONDITION" sourceFile="CtgCodeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMBLCM_MODE" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMBLCM_PASSWORD_POLICY" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMBLCM_PWSYNC" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCDT_APPL_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCDT_CONF_VALUE1" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCDT_CONF_VALUE2" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCHD_APPL_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCHD_CPTN_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCHD_CPTN_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCHD_FUNCTION_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCHD_ITEM_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCPDM_CONF_VALUE2" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCPM_APPL_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCPM_CTPN_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCPM_FUNCTION_ID" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCCPM_ITEM_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCPDM_APPL_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCPDM_CONF_VALUE1" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCPDM_CONF_VALUE2" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCPDM_CPTN_ID" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCPDM_FUNCTION_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMCPDM_ITEM_ID" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMMENT_CODE1" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMMST_COM_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCOMMST_COM_KYE1" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCSYBT_YOYAKU_F" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCTLINPM_CTL_FLD" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCTLINPM_ITEM_NAME" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCTLINPM_NYUGAI_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCTLINPM_PHASE_NAME" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TCTLINPM_XX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TD97SGM_DISP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TDPCSELM_SEL_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05MSTC_DISP_SEQ" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05MSTC_SIJI_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05SIJIR_OTH_FLG5" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05SIJIR_SIJI_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05SIJI_INDEX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05SIJI_SIJI_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05SIJI_STOP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TE05SIJI_XX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRCS_IRAI_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRDAIKO_APPROVAL_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRDAIKO_DAIKO_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRDAIKO_INDEX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRDAIKO_XX_SYBT" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDXLNK_XX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_BUMON_FLG2_C32" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_BUMON_FLG5" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_DAIKO_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_DISP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_INDEX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_NYUGAI_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_ORDER_MODE" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_STOP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_XX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRIDX_XX_SEQ" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRMSTK_FORMAT_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRMSTK_KA_CD" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRMSTK_SOAP_SYBT" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMRSTOP_XX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="19" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMR_CANCEL_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMR_RECORD_TYPE" sourceFile="CtgCodeConstant.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMR_XX_SYBT" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TEMR_YOBI_FLD" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$THOKEN_KEIZOKU_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TINTRARF_CONS_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TINTRARF_INTER_RF_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TINTRARF_REPLY_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TINTRARF_REPLY_STATUS" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TKACDM_DISP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TKANJA_PT_STATUS" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TKYKMST_XX_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TLOGINLG_RESULT" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TMSGNTFY_NTFY_STATUS" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNSBASM_DISP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNSBASM_NURS_MS_LVL" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYKNRI_ACTIVE_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYKNRI_CHG_REASON_CD" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYKNRI_YOTEI_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYTDR_ACTIVE_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYTDR_S_DR_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYTNS_ACTIVE_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TNYTNS_P_NS_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TPROFIL_WEIGHTT" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSC21RPC41_YOHO_SYBT" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSC21YKHC41_MAYAKU_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSC21YKHC41_TOKU_SJI" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSC21YKHC41_WARN_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSC24YKBC41_FLOW_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSC24YKBC41_ZAIRYO_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSELMST_SEL_SYBT" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSEMRIDXC41_XX_SUM" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSHTYPE_SH_KBN3" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSKCANCEL_STOP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSMRYDR_ROLE_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSMRYLST_CHG_REASON_CD" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSMRYLST_SMRY_STATUS" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSMRYLST_STOP_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TSTAFFM_ACTIVE_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TUKLOG_UK_STS" sourceFile="CtgCodeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TUKLOG_UK_STS_FLG1" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TUKLOG_UK_STS_FLG2" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TWSPROF_NYUGAI_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYKKMST_YK_SN_KBN" sourceFile="CtgCodeConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYOYAKU_YK_CHIKOKU" sourceFile="CtgCodeConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYOYAKU_YK_HEYA" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYOYAKU_YK_KJ_ST1" sourceFile="CtgCodeConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYOYAKU_YK_KJ_ZK1" sourceFile="CtgCodeConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYOYAKU_YK_OD_KIND" sourceFile="CtgCodeConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeConstant$TYOYAKU_YK_PREKEN_FLG" sourceFile="CtgCodeConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant" sourceFile="CtgCodeForSceneConstant.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$APPROVAL_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$APPROVAL_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$BLOOD_PROF_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$BLOOD_PROF_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$BLOOD_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$BLOOD_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$BUMON_FLG2_D82" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$BUMON_FLG2_D82_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$CHEMO_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$CHEMO_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$CHG_REASON_CD" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$CHG_REASON_CD_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$CONS_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$CONS_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$DAIKO_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$DAIKO_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$DIET_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$DIET_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$EXAM_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$EXAM_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$GERM_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$GERM_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$HOKEN_MARK" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$HOKEN_MARK_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$IRAI_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$IRAI_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$KEIZOKU_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$KEIZOKU_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MAIN_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MAIN_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT1" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT1_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT2" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT2_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT3" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT3_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT4" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT4_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT5" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT5_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT6" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$MASUI_SYBT6_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$NYUGAI_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$NYUGAI_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$NYUIN_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$NYUIN_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$OPE_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$OPE_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$PATHOL_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$PATHOL_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$PHYSIO_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$PHYSIO_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RAD_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RAD_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RECORD_FLG" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RECORD_FLG_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$REFERRAL_STATUS" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$REFERRAL_STATUS_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$REHABILI_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$REHABILI_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RI_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RI_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RT_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$RT_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SCOPE_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SCOPE_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SEIBETU_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SEIBETU_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SHINRYO_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SHINRYO_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SHOT_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SHOT_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SH_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SH_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SIJI_FLG" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SIJI_FLG_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SMRY_STATUS" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SMRY_STATUS_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$STOP_RSN_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$STOP_RSN_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$STOP_STATUS" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$STOP_STATUS_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SYOUKAI_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$SYOUKAI_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TAKA_YOYAKU_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TAKA_YOYAKU_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TIME_KBN" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TIME_KBN_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TO_REFERRAL_STATUS" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TO_REFERRAL_STATUS_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TREAT_UKETUKE" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$TREAT_UKETUKE_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$VISIT_COUNT" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$VISIT_COUNT_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_KJ_ST5" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_KJ_ST5_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_OD_KIND" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_OD_KIND_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_PREKEN_FLG" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_PREKEN_FLG_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_TIME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YK_TIME_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YUKETU_ORD_FLG" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.CtgCodeForSceneConstant$YUKETU_ORD_FLG_NAME" sourceFile="CtgCodeForSceneConstant.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.HbMessageCode" sourceFile="HbMessageCode.java" interface="true" size="142" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.MasterCacheConstant" sourceFile="MasterCacheConstant.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="mz.code.ccis.main.biz.constant.MasterCacheConstant$MASTER_NAME" sourceFile="MasterCacheConstant.java" interface="false" size="8" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="41940" invocations="2" avgMicrosecondsPerInvocation="20970446" maxMicrosecondsPerInvocation="41871474" standardDeviationMircosecondsPerInvocation="20901028"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1414724791362" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

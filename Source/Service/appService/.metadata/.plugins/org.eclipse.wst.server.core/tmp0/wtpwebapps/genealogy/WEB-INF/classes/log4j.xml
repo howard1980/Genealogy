@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="appender_debug" class="com.maxiaohua.genealogy.fw.core.log.impl.NodeRollingLogAppender">
+		<param name="Threshold" value="debug" />
+		<param name="File" value="C:/ccis/log/debug_$nodeId$.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="4096KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss.SSS} %5p %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="appender_applog" class="com.maxiaohua.genealogy.fw.core.log.impl.NodeRollingLogAppender">
+		<param name="Threshold" value="debug" />
+		<param name="File" value="C:/ccis/log/application_$nodeId$.log" />
+		<!--<param name="Encoding" value="Shift-JIS" />  -->
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2048KB" />
+		<param name="MaxBackupIndex" value="3" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss.SSS} %5p %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="appender_errorlog" class="com.maxiaohua.genealogy.fw.core.log.impl.NodeRollingLogAppender">
+		<param name="Threshold" value="error" />
+		<param name="File" value="C:/ccis/log/error_$nodeId$.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2048KB" />
+		<param name="MaxBackupIndex" value="3" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss.SSS} %5p %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="appender_console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="error" />
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy/MM/dd HH:mm:ss.SSS} %5p %m%n" />
+		</layout>
+	</appender>
+
+	<category name="applog">
+		<level value="debug" />
+		<appender-ref ref="appender_applog" />
+		<!-- <appender-ref ref="appender_console" /> -->
+	</category>
+
+	<category name="debuglog">
+		<level value="debug" />
+		<appender-ref ref="appender_debug" />
+	</category>
+
+	<category name="errorlog">
+		<level value="error" />
+		<appender-ref ref="appender_errorlog" />
+	</category>
+
+	<root></root>
+</log4j:configuration>

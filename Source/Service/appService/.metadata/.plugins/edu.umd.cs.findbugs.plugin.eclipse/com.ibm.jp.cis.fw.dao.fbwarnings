@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.1" sequence="3" timestamp="1399260812225" analysisTimestamp="1399260811146" release="">
+  <Project projectName="com.ibm.jp.cis.fw.dao">
+    <Jar>C:\uehm\JavaWS\com.ibm.jp.cis.fw.dao\bin\com\ibm\jp\cis\fw\core\dao\impl\UpdateDAOImpl.class</Jar>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.fw.dao\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\com.ibm.jp.cis.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\uehm\JavaWS\cis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.fw.dao\.apt_generated</SrcDir>
+    <SrcDir>C:\uehm\JavaWS\com.ibm.jp.cis.fw.dao\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION" priority="2" abbrev="OBL" category="EXPERIMENTAL" first="1">
+    <Class classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" name="checkConnection" signature="(Lorg/apache/ibatis/session/SqlSession;)Z" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" start="182" end="199" startBytecode="0" endBytecode="249" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Method>
+    <Class classname="java.sql.Statement" role="CLASS_REFTYPE">
+      <SourceLine classname="java.sql.Statement"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" start="187" end="187" startBytecode="28" endBytecode="28" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" start="188" end="188" startBytecode="35" endBytecode="35" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" start="199" end="199" startBytecode="77" endBytecode="77" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{Statement x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="ODR_OPEN_DATABASE_RESOURCE" priority="2" abbrev="ODR" category="BAD_PRACTICE" first="1">
+    <Class classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl">
+      <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Class>
+    <Method classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" name="checkConnection" signature="(Lorg/apache/ibatis/session/SqlSession;)Z" isStatic="false">
+      <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" start="182" end="199" startBytecode="0" endBytecode="34" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+    </Method>
+    <Type descriptor="Ljava/sql/PreparedStatement;" role="TYPE_CLOSEIT">
+      <SourceLine classname="java.sql.PreparedStatement"/>
+    </Type>
+    <SourceLine classname="com.ibm.jp.cis.fw.core.connection.impl.ConnectionManagerImpl" start="187" end="187" startBytecode="28" endBytecode="28" sourcefile="ConnectionManagerImpl.java" sourcepath="com/ibm/jp/cis/fw/core/connection/impl/ConnectionManagerImpl.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 5 May 2014 11:33:31 +0800" total_classes="1" referenced_classes="19" total_bugs="2" total_size="52" num_packages="2" vm_version="24.55-b03" cpu_seconds="1.22" clock_seconds="1.08" peak_mbytes="314.36" alloc_mbytes="494.94" gc_seconds="0.28" priority_2="2">
+    <PackageStats package="com.ibm.jp.cis.fw.core.dao.impl" total_bugs="0" total_types="1" total_size="52">
+      <ClassStats class="com.ibm.jp.cis.fw.core.dao.impl.UpdateDAOImpl" sourceFile="UpdateDAOImpl.java" interface="false" size="52" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="338" invocations="344" avgMicrosecondsPerInvocation="984" maxMicrosecondsPerInvocation="20951" standardDeviationMircosecondsPerInvocation="1374"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="105" invocations="341" avgMicrosecondsPerInvocation="309" maxMicrosecondsPerInvocation="17656" standardDeviationMircosecondsPerInvocation="1299"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="56" invocations="2" avgMicrosecondsPerInvocation="28337" maxMicrosecondsPerInvocation="48089" standardDeviationMircosecondsPerInvocation="19752"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="38" invocations="39" avgMicrosecondsPerInvocation="993" maxMicrosecondsPerInvocation="28917" standardDeviationMircosecondsPerInvocation="4530"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="26" invocations="6" avgMicrosecondsPerInvocation="4437" maxMicrosecondsPerInvocation="25176" standardDeviationMircosecondsPerInvocation="9275"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="21" invocations="333" avgMicrosecondsPerInvocation="65" maxMicrosecondsPerInvocation="714" standardDeviationMircosecondsPerInvocation="113"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1395970005856" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1395970005858" release="" codeSize="208" numClasses="2"/>
+    <AppVersion sequence="2" timestamp="1399107054162" release="" codeSize="94" numClasses="2"/>
+  </History>
+</BugCollection>

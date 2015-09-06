@@ -1,0 +1,79 @@
+﻿/* SXXC
+* (C) Red Dirver, Ltd. 2013, All Rights Reserved.
+*/
+package com.beetlestech.nfe.main.service.a01.dto;
+
+import com.maxiaohua.genealogy.fw.core.type.Alias;
+
+/**
+ * 获得修车厂详细的InDTO
+ *
+ * 变更履历
+ * REV.         变更日期           变更者              变更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2015/05/22         TOOL                初次作成
+ *
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("获得修车厂详细")
+public class SsGetOneRepairShopInDTO implements java.io.Serializable, Comparable<SsGetOneRepairShopInDTO> {
+	/**
+	* Serial ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	/**
+	* 顾客id  
+	*/
+	@Alias("顾客id")
+	private Long customerID = null;
+
+	/**
+	* <code>顾客id</code>返回
+	* @return <code>顾客id</code>
+	*/
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	/**
+	* <code>customerID</code>设定
+	* @param customerID　<code>customerID</code>设定值
+	*/
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	/**
+	* 修车厂id  
+	*/
+	@Alias("修车厂id")
+	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
+	private Long repairShopID = null;
+
+	/**
+	* <code>修车厂id</code>返回
+	* @return <code>修车厂id</code>
+	*/
+	public Long getRepairShopID() {
+		return this.repairShopID;
+	}
+
+	/**
+	* <code>repairShopID</code>设定
+	* @param repairShopID　<code>repairShopID</code>设定值
+	*/
+	public void setRepairShopID(
+			Long repairShopID) {
+		this.repairShopID = repairShopID;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		SsGetOneRepairShopInDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

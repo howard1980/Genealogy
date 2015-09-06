@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1%0 - - [22/Feb/2015:10:42:36 -0800] "POST /nfe-rest/rest/sxxc/SsGetNearWorker HTTP/1.1" 415 -
+127.0.0.1 - - [22/Feb/2015:10:43:52 -0800] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1%0 - - [22/Feb/2015:10:44:23 -0800] "POST /nfe-rest/rest/sxxc/SsGetNearWorker HTTP/1.1" 415 -
+0:0:0:0:0:0:0:1%0 - - [22/Feb/2015:10:45:05 -0800] "GET /nfe-rest/rest/sxxc/SsGetNearWorker/{%22longitude%22:%20121.600088,%20%22latitude%22:%2038.932988,%20%22cityCode%22:%20%22167%22} HTTP/1.1" 200 122
+0:0:0:0:0:0:0:1%0 - - [22/Feb/2015:10:47:20 -0800] "POST /nfe-rest/rest/sxxc/SsGetNearWorker HTTP/1.1" 415 -
+0:0:0:0:0:0:0:1%0 - - [22/Feb/2015:10:48:18 -0800] "POST /nfe-rest/rest/sxxc/SsGetNearWorker HTTP/1.1" 415 -
+0:0:0:0:0:0:0:1%0 - - [22/Feb/2015:10:48:55 -0800] "GET /nfe-rest/rest/sxxc/SsGetNearWorker HTTP/1.1" 200 460

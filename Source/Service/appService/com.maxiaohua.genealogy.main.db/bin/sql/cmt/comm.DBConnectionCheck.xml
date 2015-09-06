@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="comm">
+  <select id="INIT_CHECK_DB_CONNECTION" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM TCOMBLCM
+  </select>
+</mapper>

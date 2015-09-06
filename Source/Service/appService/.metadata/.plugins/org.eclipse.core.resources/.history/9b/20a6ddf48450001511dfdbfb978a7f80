@@ -1,0 +1,108 @@
+﻿/*
+ * SXXC
+ * (C) Copyright RedDirver, Ltd. 2015,  All Rights Reserved.
+ */
+package com.maxiaohua.genealogy.main.biz.a01.dto;
+
+/**
+ * WechetInfoDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/22             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("微信相关信息")
+public class WechetInfoDTO implements java.io.Serializable, Comparable<WechetInfoDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private String appid = null;
+
+	public String getAppid() {
+		return this.appid;
+	}
+
+	public void setAppid(
+			String appid) {
+		this.appid = appid;
+	}
+
+	private String partnerid = null;
+
+	public String getPartnerid() {
+		return this.partnerid;
+	}
+
+	public void setPartnerid(
+			String partnerid) {
+		this.partnerid = partnerid;
+	}
+
+	private String noncestr = null;
+
+	public String getNoncestr() {
+		return this.noncestr;
+	}
+
+	public void setNoncestr(
+			String noncestr) {
+		this.noncestr = noncestr;
+	}
+
+	private String packageinfo = null;
+
+	public String getPackageinfo() {
+		return this.packageinfo;
+	}
+
+	public void setPackageinfo(
+			String packageinfo) {
+		this.packageinfo = packageinfo;
+	}
+
+	private String prepayid = null;
+
+	public String getPrepayid() {
+		return this.prepayid;
+	}
+
+	public void setPrepayid(
+			String prepayid) {
+		this.prepayid = prepayid;
+	}
+
+	private String timestamp = null;
+
+	public String getTimestamp() {
+		return this.timestamp;
+	}
+
+	public void setTimestamp(
+			String timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	private String sign = null;
+
+	public String getSign() {
+		return this.sign;
+	}
+
+	public void setSign(
+			String sign) {
+		this.sign = sign;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		WechetInfoDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

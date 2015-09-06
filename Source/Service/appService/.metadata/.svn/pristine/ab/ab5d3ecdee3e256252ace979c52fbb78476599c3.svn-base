@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.0" sequence="73" timestamp="1415849388382" analysisTimestamp="1415849386935" release="">
+  <Project projectName="com.beetlestech.nfe.main.service">
+    <Jar>C:\ccis\NFEService\com.beetlestech.nfe.main.service\bin\com\beetlestech\nfe\main\service\com\HsGetStudent.class</Jar>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.main.service\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.fw.core\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\activation-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\aspectj-1.6.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-beanutils-1.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-codec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-collections-3.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-digester-2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-fileupload-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-httpclient-3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-io-1.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-lang-2.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-logging-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-pool.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\commons-validator-1.3.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jsr311-api-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\log4j-1.2.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jakarta-oro-2.0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\wink-json4j-provider-1.2.0-incubating.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\jai_imageio.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\ccis-jar\mybatis-3.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\annotations-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ant.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-ha.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina-tribes.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\catalina.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\db2jcc_license_cu.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\ecj-3.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\el-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper-el.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jasper.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\jsp-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\servlet-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-api.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-coyote.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-dbcp.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-es.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-fr.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-i18n-ja.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-jdbc.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\apache-tomcat-7.0.28\lib\tomcat-util.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.main.biz\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\NFEService\com.beetlestech.nfe.main.db\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\ccis\eclipse\j9-6\jre\lib\rt.jar</AuxClasspathEntry>
+    <SrcDir>C:\ccis\NFEService\com.beetlestech.nfe.main.service\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListInDTO" sourcefile="HsGetEmployeeListInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListInDTO" start="56" end="56" startBytecode="0" endBytecode="76" sourcefile="HsGetEmployeeListInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="3">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" name="getEmployeeInfoDTOArray" signature="()[Lcom/beetlestech/nfe/main/biz/com/dto/EmployeeInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="31" end="31" startBytecode="0" endBytecode="46" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" name="employeeInfoDTOArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/EmployeeInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="31" end="31" startBytecode="4" endBytecode="4" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="31" end="31" startBytecode="4" endBytecode="4" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="3">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" name="setEmployeeInfoDTOArray" signature="([Lcom/beetlestech/nfe/main/biz/com/dto/EmployeeInfoDTO;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="36" end="37" startBytecode="0" endBytecode="61" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" name="employeeInfoDTOArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/EmployeeInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Field>
+    <LocalVariable name="employeeInfoDTOArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="36" end="36" startBytecode="2" endBytecode="2" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="36" end="36" startBytecode="2" endBytecode="2" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetEmployeeListOutDTO" start="44" end="44" startBytecode="0" endBytecode="76" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheInDTO" sourcefile="HsGetMasterCacheInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="HsGetMasterCacheInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="3">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" name="getMastValueDTOArray" signature="()[Lcom/beetlestech/nfe/main/biz/com/dto/MastValueDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" name="mastValueDTOArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MastValueDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="3">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" name="setMastValueDTOArray" signature="([Lcom/beetlestech/nfe/main/biz/com/dto/MastValueDTO;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" name="mastValueDTOArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MastValueDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Field>
+    <LocalVariable name="mastValueDTOArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMasterCacheOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="23">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageInDTO" sourcefile="HsGetMessageInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetMessageInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageInDTO" start="99" end="99" startBytecode="0" endBytecode="76" sourcefile="HsGetMessageInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="30">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="getMessageInfoArray" signature="()[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="messageInfoArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="31">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="setMessageInfoArray" signature="([Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="messageInfoArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Field>
+    <LocalVariable name="messageInfoArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="27">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="SA_FIELD_SELF_ASSIGNMENT" priority="1" rank="1" abbrev="SA" category="CORRECTNESS" first="30" last="30" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="setMessageInfoArray" signature="([Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="47" end="48" startBytecode="0" endBytecode="64" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" name="messageInfoArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+    </Field>
+    <LocalVariable name="userInfo" register="1" pc="0" role="LOCAL_VARIABLE_DID_YOU_MEAN"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetMessageOutDTO" start="47" end="47" startBytecode="5" endBytecode="5" sourcefile="HsGetMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetMessageOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="61">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentInDTO" sourcefile="HsGetStudentInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetStudentInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentInDTO" start="53" end="53" startBytecode="0" endBytecode="76" sourcefile="HsGetStudentInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="62" last="63" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" name="getMessageInfoArray" signature="()[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" name="messageInfoArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Field>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="62" last="63" removedByChange="true">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" name="setMessageInfoArray" signature="([Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;)V" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Method>
+    <Field classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" name="messageInfoArray" signature="[Lcom/beetlestech/nfe/main/biz/com/dto/MessageInfoDTO;" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Field>
+    <LocalVariable name="messageInfoArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="62">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetStudentOutDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="HsGetStudentOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetStudentOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="12">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoInDTO" sourcefile="HsGetUserInfoInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetUserInfoInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetUserInfoInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoInDTO" start="52" end="52" startBytecode="0" endBytecode="76" sourcefile="HsGetUserInfoInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetUserInfoInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="10">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoOutDTO" sourcefile="HsGetUserInfoOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetUserInfoOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsGetUserInfoOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsGetUserInfoOutDTO" start="52" end="52" startBytecode="0" endBytecode="76" sourcefile="HsGetUserInfoOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsGetUserInfoOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsLoginInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLoginInDTO" sourcefile="HsLoginInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLoginInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsLoginInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsLoginInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLoginInDTO" start="77" end="77" startBytecode="0" endBytecode="76" sourcefile="HsLoginInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLoginInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsLoginOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLoginOutDTO" sourcefile="HsLoginOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLoginOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsLoginOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsLoginOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLoginOutDTO" start="30" end="30" startBytecode="0" endBytecode="76" sourcefile="HsLoginOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLoginOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutInDTO" sourcefile="HsLogoutInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLogoutInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsLogoutInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutInDTO" start="30" end="30" startBytecode="0" endBytecode="76" sourcefile="HsLogoutInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLogoutInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutOutDTO" sourcefile="HsLogoutOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLogoutOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsLogoutOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsLogoutOutDTO" start="30" end="30" startBytecode="0" endBytecode="76" sourcefile="HsLogoutOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsLogoutOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheInDTO" sourcefile="HsRefreshMasterCacheInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsRefreshMasterCacheInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsRefreshMasterCacheInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheInDTO" start="53" end="53" startBytecode="0" endBytecode="76" sourcefile="HsRefreshMasterCacheInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsRefreshMasterCacheInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheOutDTO" sourcefile="HsRefreshMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsRefreshMasterCacheOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsRefreshMasterCacheOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsRefreshMasterCacheOutDTO" start="30" end="30" startBytecode="0" endBytecode="76" sourcefile="HsRefreshMasterCacheOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsRefreshMasterCacheOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="42">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageInDTO" sourcefile="HsUpdateMessageInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdateMessageInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsUpdateMessageInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageInDTO" start="54" end="54" startBytecode="0" endBytecode="76" sourcefile="HsUpdateMessageInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdateMessageInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="44">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageOutDTO" sourcefile="HsUpdateMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdateMessageOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsUpdateMessageOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdateMessageOutDTO" start="22" end="22" startBytecode="0" endBytecode="76" sourcefile="HsUpdateMessageOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdateMessageOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordInDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordInDTO" sourcefile="HsUpdatePasswordInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdatePasswordInDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordInDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsUpdatePasswordInDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordInDTO" start="77" end="77" startBytecode="0" endBytecode="76" sourcefile="HsUpdatePasswordInDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdatePasswordInDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" rank="16" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordOutDTO">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordOutDTO" sourcefile="HsUpdatePasswordOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdatePasswordOutDTO.java"/>
+    </Class>
+    <Method classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordOutDTO" name="compareTo" signature="(Lcom/beetlestech/nfe/main/service/com/dto/HsUpdatePasswordOutDTO;)I" isStatic="false">
+      <SourceLine classname="com.beetlestech.nfe.main.service.com.dto.HsUpdatePasswordOutDTO" start="30" end="30" startBytecode="0" endBytecode="76" sourcefile="HsUpdatePasswordOutDTO.java" sourcepath="com/beetlestech/nfe/main/service/com/dto/HsUpdatePasswordOutDTO.java"/>
+    </Method>
+  </BugInstance>
+  <BugInstance type="EC_NULL_ARG" priority="2" rank="9" abbrev="EC" category="CORRECTNESS" first="1" last="1" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.HsUpdatePassword">
+      <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.HsUpdatePassword" name="execute" signature="(Lmz/code/ccis/main/service/com/dto/HsUpdatePasswordInDTO;)Lmz/code/ccis/main/service/com/dto/HsUpdatePasswordOutDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="111" end="142" startBytecode="0" endBytecode="119" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    </Method>
+    <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="125" end="125" startBytecode="118" endBytecode="118" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="125" end="125" startBytecode="118" endBytecode="118" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+  </BugInstance>
+  <BugInstance type="NP_LOAD_OF_KNOWN_NULL_VALUE" priority="2" rank="16" abbrev="NP" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.HsUpdatePassword">
+      <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.HsUpdatePassword" name="execute" signature="(Lmz/code/ccis/main/service/com/dto/HsUpdatePasswordInDTO;)Lmz/code/ccis/main/service/com/dto/HsUpdatePasswordOutDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="111" end="142" startBytecode="0" endBytecode="119" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    </Method>
+    <LocalVariable name="authenticationType" register="3" pc="59" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="116" end="116" startBytecode="62" endBytecode="62" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="116" end="116" startBytecode="62" endBytecode="62" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE" first="1" last="1" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.HsUpdatePassword">
+      <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.HsUpdatePassword" name="execute" signature="(Lmz/code/ccis/main/service/com/dto/HsUpdatePasswordInDTO;)Lmz/code/ccis/main/service/com/dto/HsUpdatePasswordOutDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="111" end="142" startBytecode="0" endBytecode="438" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java"/>
+    </Method>
+    <LocalVariable name="authenticationType" register="3" pc="62" role="LOCAL_VARIABLE_VALUE_OF"/>
+    <Method classname="mz.code.ccis.main.biz.com.HbComblcmMaster" name="getComblcmInfo" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lmz/code/ccis/main/db/tbl/TcomblcmDTO;" isStatic="false" role="METHOD_RETURN_VALUE_OF">
+      <SourceLine classname="mz.code.ccis.main.biz.com.HbComblcmMaster"/>
+    </Method>
+    <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="116" end="116" startBytecode="63" endBytecode="63" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.HsUpdatePassword" start="116" end="116" startBytecode="63" endBytecode="63" sourcefile="HsUpdatePassword.java" sourcepath="mz/code/ccis/main/service/com/HsUpdatePassword.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1" last="2" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" name="getEmployeeInfoDTOArray" signature="()[Lmz/code/ccis/main/biz/com/dto/EmployeeInfoDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" start="31" end="31" startBytecode="0" endBytecode="46" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Method>
+    <Field classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" name="employeeInfoDTOArray" signature="[Lmz/code/ccis/main/biz/com/dto/EmployeeInfoDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Field>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" start="31" end="31" startBytecode="4" endBytecode="4" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" start="31" end="31" startBytecode="4" endBytecode="4" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1" last="2" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" name="setEmployeeInfoDTOArray" signature="([Lmz/code/ccis/main/biz/com/dto/EmployeeInfoDTO;)V" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" start="36" end="37" startBytecode="0" endBytecode="61" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Method>
+    <Field classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" name="employeeInfoDTOArray" signature="[Lmz/code/ccis/main/biz/com/dto/EmployeeInfoDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    </Field>
+    <LocalVariable name="employeeInfoDTOArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" start="36" end="36" startBytecode="2" endBytecode="2" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetEmployeeListOutDTO" start="36" end="36" startBytecode="2" endBytecode="2" sourcefile="HsGetEmployeeListOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetEmployeeListOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" first="1" last="2" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" name="getMastValueDTOArray" signature="()[Lmz/code/ccis/main/biz/com/dto/MastValueDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" start="36" end="36" startBytecode="0" endBytecode="46" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Method>
+    <Field classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" name="mastValueDTOArray" signature="[Lmz/code/ccis/main/biz/com/dto/MastValueDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Field>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" start="36" end="36" startBytecode="4" endBytecode="4" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" first="1" last="2" removedByChange="true">
+    <Class classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Class>
+    <Method classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" name="setMastValueDTOArray" signature="([Lmz/code/ccis/main/biz/com/dto/MastValueDTO;)V" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" start="45" end="46" startBytecode="0" endBytecode="61" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Method>
+    <Field classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" name="mastValueDTOArray" signature="[Lmz/code/ccis/main/biz/com/dto/MastValueDTO;" isStatic="false">
+      <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    </Field>
+    <LocalVariable name="mastValueDTOArray" register="1" pc="2" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+    <SourceLine classname="mz.code.ccis.main.service.com.dto.HsGetMasterCacheOutDTO" start="45" end="45" startBytecode="2" endBytecode="2" sourcefile="HsGetMasterCacheOutDTO.java" sourcepath="mz/code/ccis/main/service/com/dto/HsGetMasterCacheOutDTO.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 13 Nov 2014 11:29:46 +0800" total_classes="1" referenced_classes="169" total_bugs="26" total_size="10" num_packages="2" java_version="1.8.0_20" vm_version="25.20-b23" cpu_seconds="2.73" clock_seconds="1.46" peak_mbytes="593.68" alloc_mbytes="455.50" gc_seconds="0.02" priority_2="26">
+    <PackageStats package="com.beetlestech.nfe.main.service.com" total_bugs="0" total_types="1" total_size="10">
+      <ClassStats class="com.beetlestech.nfe.main.service.com.HsGetStudent" sourceFile="HsGetStudent.java" interface="false" size="10" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="668" invocations="2" avgMicrosecondsPerInvocation="334270" maxMicrosecondsPerInvocation="656677" standardDeviationMircosecondsPerInvocation="322407"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="443" invocations="907" avgMicrosecondsPerInvocation="488" maxMicrosecondsPerInvocation="1633" standardDeviationMircosecondsPerInvocation="197"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1414724788643" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1414724788643" release="" codeSize="289" numClasses="18"/>
+    <AppVersion sequence="2" timestamp="1414725630756" release="" codeSize="123" numClasses="6"/>
+    <AppVersion sequence="3" timestamp="1414725631037" release="" codeSize="578" numClasses="36"/>
+    <AppVersion sequence="4" timestamp="1414832436660" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="5" timestamp="1414832696690" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="6" timestamp="1414840167894" release="" codeSize="20" numClasses="2"/>
+    <AppVersion sequence="7" timestamp="1415597679096" release="" codeSize="3" numClasses="1"/>
+    <AppVersion sequence="8" timestamp="1415597735559" release="" codeSize="3" numClasses="1"/>
+    <AppVersion sequence="9" timestamp="1415597752776" release="" codeSize="3" numClasses="1"/>
+    <AppVersion sequence="10" timestamp="1415597880612" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="11" timestamp="1415597986641" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="12" timestamp="1415598075310" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="13" timestamp="1415598128229" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="14" timestamp="1415598138989" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="15" timestamp="1415598381303" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="16" timestamp="1415598596483" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="17" timestamp="1415598652973" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="18" timestamp="1415603779797" release="" codeSize="14" numClasses="1"/>
+    <AppVersion sequence="19" timestamp="1415603784900" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="20" timestamp="1415605039237" release="" codeSize="30" numClasses="2"/>
+    <AppVersion sequence="21" timestamp="1415690846608" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="22" timestamp="1415690872381" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="23" timestamp="1415690912921" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="24" timestamp="1415691035521" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="25" timestamp="1415691042997" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="26" timestamp="1415691077853" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="27" timestamp="1415691122023" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="28" timestamp="1415691166023" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="29" timestamp="1415691169632" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="30" timestamp="1415691286553" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="31" timestamp="1415691299290" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="32" timestamp="1415691304651" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="33" timestamp="1415691309729" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="34" timestamp="1415691330627" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="35" timestamp="1415691351783" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="36" timestamp="1415691372742" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="37" timestamp="1415691430303" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="38" timestamp="1415691458951" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="39" timestamp="1415691488116" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="40" timestamp="1415691497581" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="41" timestamp="1415691570553" release="" codeSize="20" numClasses="2"/>
+    <AppVersion sequence="42" timestamp="1415761463281" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="43" timestamp="1415761512201" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="44" timestamp="1415761551885" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="45" timestamp="1415761580682" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="46" timestamp="1415761588304" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="47" timestamp="1415761590914" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="48" timestamp="1415761607632" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="49" timestamp="1415761637754" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="50" timestamp="1415761687595" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="51" timestamp="1415762032469" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="52" timestamp="1415762134289" release="" codeSize="9" numClasses="1"/>
+    <AppVersion sequence="53" timestamp="1415762143821" release="" codeSize="9" numClasses="1"/>
+    <AppVersion sequence="54" timestamp="1415771584196" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="55" timestamp="1415771606665" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="56" timestamp="1415772763920" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="57" timestamp="1415776561068" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="58" timestamp="1415776768203" release="" codeSize="22" numClasses="1"/>
+    <AppVersion sequence="59" timestamp="1415777446479" release="" codeSize="29" numClasses="1"/>
+    <AppVersion sequence="60" timestamp="1415777539007" release="" codeSize="28" numClasses="2"/>
+    <AppVersion sequence="61" timestamp="1415848844723" release="" codeSize="29" numClasses="1"/>
+    <AppVersion sequence="62" timestamp="1415848861091" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="63" timestamp="1415848939179" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="64" timestamp="1415849042621" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="65" timestamp="1415849115581" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="66" timestamp="1415849135221" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="67" timestamp="1415849169528" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="68" timestamp="1415849183497" release="" codeSize="6" numClasses="1"/>
+    <AppVersion sequence="69" timestamp="1415849194205" release="" codeSize="8" numClasses="1"/>
+    <AppVersion sequence="70" timestamp="1415849301945" release="" codeSize="15" numClasses="1"/>
+    <AppVersion sequence="71" timestamp="1415849321322" release="" codeSize="10" numClasses="1"/>
+    <AppVersion sequence="72" timestamp="1415849365450" release="" codeSize="10" numClasses="1"/>
+  </History>
+</BugCollection>

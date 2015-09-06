@@ -1,0 +1,90 @@
+﻿/*
+ * CCIS
+ * (C) Copyright Code MZ, Ltd. 2014,  All Rights Reserved.
+ */
+package com.beetlestech.nfe.main.db.view;
+
+import com.beetlestech.nfe.main.db.view.support.VCustomerAccountDTOSupport;
+
+/**
+ *Service DB DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/05/25             TOOL                 Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.Alias("VCUSTOMER_ACCOUNT")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("")
+public class VCustomerAccountDTO extends VCustomerAccountDTOSupport implements java.io.Serializable, Comparable<VCustomerAccountDTO> {
+
+	private static final long serialVersionUID = 1L;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CUSTOMER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(0)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long customerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OLDUID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(1)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long oldUID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("RECHARGEAMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(2)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal rechargeAmount = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PAYAMOUNT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DECIMAL")
+	private java.math.BigDecimal payAmount = null;
+
+	public Long getCustomerID() {
+		return this.customerID;
+	}
+
+	public void setCustomerID(
+			Long customerID) {
+		this.customerID = customerID;
+	}
+
+	public Long getOldUID() {
+		return this.oldUID;
+	}
+
+	public void setOldUID(
+			Long oldUID) {
+		this.oldUID = oldUID;
+	}
+
+	public java.math.BigDecimal getRechargeAmount() {
+		return this.rechargeAmount;
+	}
+
+	public void setRechargeAmount(
+			java.math.BigDecimal rechargeAmount) {
+		this.rechargeAmount = rechargeAmount;
+	}
+
+	public java.math.BigDecimal getPayAmount() {
+		return this.payAmount;
+	}
+
+	public void setPayAmount(
+			java.math.BigDecimal payAmount) {
+		this.payAmount = payAmount;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+			VCustomerAccountDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}
+
