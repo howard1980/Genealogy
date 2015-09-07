@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "GetValidCode.h"
+#import "ActivityControl.h"
 
 @interface LoginViewController ()
 
@@ -29,6 +30,8 @@
     
     GetValidCode *vc = [[GetValidCode alloc] init];
     vc.delegate = self;
+    
+    [[ActivityControl sharedControl] show];
     [vc postData:self.txtPhone.text];
 }
 
@@ -40,10 +43,11 @@
     if([model.className isEqualToString:@"XXXXX"]){
         
     }
+    [[ActivityControl sharedControl] unShow];
 }
 
 - (void)errorMethd{
-    
+    [[ActivityControl sharedControl] unShow];
 }
 
 /*

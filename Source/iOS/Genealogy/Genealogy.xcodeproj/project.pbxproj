@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		291843911B9D2E9E00720334 /* GetAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918438F1B9D2E9E00720334 /* GetAppVersion.m */; };
 		291843991B9D403A00720334 /* VersionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 291843981B9D403A00720334 /* VersionController.m */; };
+		291FDDA41B9D7B1F00536E7B /* ActivityControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 291FDDA31B9D7B1F00536E7B /* ActivityControl.m */; };
 		292814511B8E029A008AEC55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814501B8E029A008AEC55 /* main.m */; };
 		292814541B8E029A008AEC55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814531B8E029A008AEC55 /* AppDelegate.m */; };
 		2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2928145E1B8E029A008AEC55 /* Images.xcassets */; };
 		292814621B8E029A008AEC55 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 292814601B8E029A008AEC55 /* LaunchScreen.xib */; };
 		2928146E1B8E029A008AEC55 /* GenealogyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2928146D1B8E029A008AEC55 /* GenealogyTests.m */; };
-		296FE8491B9347F00029CD2F /* FileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FE8481B9347F00029CD2F /* FileTest.swift */; };
 		296FE84B1B934A9F0029CD2F /* ParallaxItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FE84A1B934A9F0029CD2F /* ParallaxItem.swift */; };
 		296FE84D1B934ACB0029CD2F /* RMParallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FE84C1B934ACB0029CD2F /* RMParallax.swift */; };
 		296FE8531B934D900029CD2F /* GuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296FE8521B934D900029CD2F /* GuidViewController.m */; };
@@ -62,6 +62,8 @@
 		2918438F1B9D2E9E00720334 /* GetAppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetAppVersion.m; path = Model/COM/GetAppVersion.m; sourceTree = "<group>"; };
 		291843971B9D403A00720334 /* VersionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionController.h; path = Controller/VersionController.h; sourceTree = "<group>"; };
 		291843981B9D403A00720334 /* VersionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionController.m; path = Controller/VersionController.m; sourceTree = "<group>"; };
+		291FDDA21B9D7B1F00536E7B /* ActivityControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityControl.h; path = FrameWork/ViewController/ActivityControl.h; sourceTree = "<group>"; };
+		291FDDA31B9D7B1F00536E7B /* ActivityControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityControl.m; path = FrameWork/ViewController/ActivityControl.m; sourceTree = "<group>"; };
 		2928144B1B8E029A008AEC55 /* Genealogy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genealogy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2928144F1B8E029A008AEC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		292814501B8E029A008AEC55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,7 +75,6 @@
 		2928146C1B8E029A008AEC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2928146D1B8E029A008AEC55 /* GenealogyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenealogyTests.m; sourceTree = "<group>"; };
 		296FE8471B9347F00029CD2F /* Genealogy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Genealogy-Bridging-Header.h"; sourceTree = "<group>"; };
-		296FE8481B9347F00029CD2F /* FileTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTest.swift; sourceTree = "<group>"; };
 		296FE84A1B934A9F0029CD2F /* ParallaxItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxItem.swift; path = FrameWork/UtilityViewController/GuidViewController/ParallaxItem.swift; sourceTree = "<group>"; };
 		296FE84C1B934ACB0029CD2F /* RMParallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMParallax.swift; path = FrameWork/UtilityViewController/GuidViewController/RMParallax.swift; sourceTree = "<group>"; };
 		296FE8511B934D900029CD2F /* GuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GuidViewController.h; path = Layout/Guid/GuidViewController.h; sourceTree = "<group>"; };
@@ -161,6 +162,13 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		291FDD9B1B9D781700536E7B /* UtilityView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UtilityView;
+			sourceTree = "<group>";
+		};
 		292814421B8E029A008AEC55 = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +201,6 @@
 				2928144E1B8E029A008AEC55 /* Supporting Files */,
 				29A1BC541B9040AB001AE4B5 /* MainViewController.h */,
 				29A1BC551B9040AB001AE4B5 /* MainViewController.m */,
-				296FE8481B9347F00029CD2F /* FileTest.swift */,
 				296FE8471B9347F00029CD2F /* Genealogy-Bridging-Header.h */,
 			);
 			path = Genealogy;
@@ -229,6 +236,7 @@
 		2928149D1B8EAA22008AEC55 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				291FDD9B1B9D781700536E7B /* UtilityView */,
 				29EC19C61B91B28B002204D9 /* ViewController */,
 				29EC193A1B9094DF002204D9 /* OpenSource */,
 				29EC19361B9087BB002204D9 /* Model */,
@@ -391,6 +399,8 @@
 			children = (
 				29EC19C71B91B2C3002204D9 /* BaseViewController.h */,
 				29EC19C81B91B2C3002204D9 /* BaseViewController.m */,
+				291FDDA21B9D7B1F00536E7B /* ActivityControl.h */,
+				291FDDA31B9D7B1F00536E7B /* ActivityControl.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -505,7 +515,6 @@
 				297F870C1B8ED34E0056A89A /* MXHFrameWork.m in Sources */,
 				29EC19A81B9095ED002204D9 /* UIAlertView+AFNetworking.m in Sources */,
 				29EC199E1B9095ED002204D9 /* AFHTTPRequestOperationManager.m in Sources */,
-				296FE8491B9347F00029CD2F /* FileTest.swift in Sources */,
 				29A1BC561B9040AB001AE4B5 /* MainViewController.m in Sources */,
 				296FE84D1B934ACB0029CD2F /* RMParallax.swift in Sources */,
 				29EC19391B9087F3002204D9 /* BaseModel.m in Sources */,
@@ -523,6 +532,7 @@
 				291843991B9D403A00720334 /* VersionController.m in Sources */,
 				292814541B8E029A008AEC55 /* AppDelegate.m in Sources */,
 				29EC19A31B9095ED002204D9 /* AFURLRequestSerialization.m in Sources */,
+				291FDDA41B9D7B1F00536E7B /* ActivityControl.m in Sources */,
 				29EC19A01B9095ED002204D9 /* AFNetworkReachabilityManager.m in Sources */,
 				29EC19AD1B9095ED002204D9 /* UIWebView+AFNetworking.m in Sources */,
 				29EC19A41B9095ED002204D9 /* AFURLResponseSerialization.m in Sources */,

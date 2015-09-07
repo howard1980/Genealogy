@@ -6,7 +6,6 @@
 //  Copyright (c) 2015年 xiao huama. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "ServiceBaseModel.h"
 
 @interface GetValidCode : ServiceBaseModel
