@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.WorkerInfoDTO"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.view.VWorkerCityDTO"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.HbWorker"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.HbGetCityCode"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.com.HbJPush"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.fw.core.validator.type.NotNull"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.fw.core.validator.type.NotEmpty"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.constant.AlipayConfigConstant"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.view.VOrderInfoDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.HbAliPay"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.AliPayInfoDTO"/>
@@ -15,7 +7,6 @@
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.WechetInfoDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.OrderInfoDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.CarInfoDTO"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.view.VCustomerLicencePlateDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.ServiceItemsDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.WashOrderDTO"/>
@@ -23,8 +14,6 @@
 <fullyQualifiedTypeName name="com.beetlestech.nfe.fw.core.wechet.WechetPay.WechetQuery"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.WeixinPayDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.CashCouponDTO"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.service.a01.dto.SsCreateCashCouponOrderOutDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.service.a01.dto.SsCreateCashCouponOrderInDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.support.CashCouponOrderDTOSupport"/>
@@ -60,4 +49,15 @@
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.CustomerCashCouponDTO"/>
 <fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO"/>
 <fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.com.dto.AddressInfoDTO"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.constant.CommonConstant"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.constant.HbMessageCode"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.fw.core.type.AutoInject"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.com.HbSystemInfo"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.com.dto.AppVersionDTO"/>
 </qualifiedTypeNameHistroy>

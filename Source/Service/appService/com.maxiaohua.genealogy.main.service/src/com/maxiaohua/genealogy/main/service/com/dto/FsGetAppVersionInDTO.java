@@ -74,13 +74,13 @@ public class FsGetAppVersionInDTO implements java.io.Serializable, Comparable<Fs
 	*/
 	@Alias("类型")
 	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
-	private String type = null;
+	private Integer type = null;
 
 	/**
 	* <code>类型</code>返回
 	* @return <code>类型</code>
 	*/
-	public String getType() {
+	public Integer getType() {
 		return this.type;
 	}
 
@@ -89,7 +89,7 @@ public class FsGetAppVersionInDTO implements java.io.Serializable, Comparable<Fs
 	* @param type　<code>type</code>设定值
 	*/
 	public void setType(
-			String type) {
+			Integer type) {
 		this.type = type;
 	}
 

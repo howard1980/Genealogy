@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ServiceBaseModel.h"
 
-@interface ValidCode : ServiceBaseModel
+@interface GetValidCode : ServiceBaseModel
 
-- (void)postData:(NSString *)phone;
+- (void)postData:(NSString *)mobile;
 
 @end

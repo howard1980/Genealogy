@@ -37,6 +37,10 @@
     
 }
 
+-(void) checkVersion{
+    [self.checkVersionController checkVersion];
+}
+
 -(UIWindow*) window{
 
     _mxhWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -11,8 +11,11 @@
 #import "MainViewController.h"
 #import "LoginViewController.h"
 #import "GuidViewController.h"
+#import "VersionController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+    NSString * downloadUrl;
+}
 
 @end
 
@@ -29,8 +32,14 @@
     // 主画面
     MXHFrameWork.obj.mainViewController     = [[MainViewController alloc] init];
     
+    MXHFrameWork.obj.checkVersionController = [[VersionController alloc] init];
+    
+    [MXHFrameWork.obj checkVersion];
+    
     // 启动程序
     self.window = MXHFrameWork.obj.window;
+    NSString *url;
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:url]];
     
     return YES;
 }

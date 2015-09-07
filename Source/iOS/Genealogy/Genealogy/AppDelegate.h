@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CheckVersionProtocol.h"
+#import "ModelProtocol.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

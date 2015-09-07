@@ -6,26 +6,26 @@
 //  Copyright (c) 2015年 xiao huama. All rights reserved.
 //
 
-#import "ValidCode.h"
+#import "GetValidCode.h"
 
-@interface ValidCode()
-@property (strong, nonatomic) NSString* phone;
+@interface GetValidCode()
+@property (strong, nonatomic) NSString* mobile;
 @end
 
-@implementation ValidCode
+@implementation GetValidCode
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        serviceMethod = @"SsValidCode";
-        self.className = @"ValidCode";
+        serviceMethod = @"FsGetValidCode";
+        self.className = @"GetValidCode";
     }
     return self;
 }
 
-- (void)postData:(NSString *)phone{
-    self.phone = phone;
+- (void)postData:(NSString *)mobile{
+    self.mobile = mobile;
     [self requestWebService:^{
         if (delegate) {
             [delegate successMethd:self];
@@ -39,8 +39,8 @@
 
 - (NSMutableDictionary *)buildRequestData{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    if (self.phone) {
-        dic[@"phone"] = self.phone;
+    if (self.mobile) {
+        dic[@"mobile"] = self.mobile;
     }
     return dic;
 }

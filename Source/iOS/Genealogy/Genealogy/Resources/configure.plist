@@ -7,7 +7,7 @@
 	<key>IsLogin</key>
 	<integer>1</integer>
 	<key>BaseURL</key>
-	<string>http://115.28.140.128:8080/nfe-rest/rest/sxxc/</string>
+	<string>http://localhost:8080/genealogy/app/</string>
 	<key>CoverImage</key>
 	<array>
 		<string>img_index_01txt</string>

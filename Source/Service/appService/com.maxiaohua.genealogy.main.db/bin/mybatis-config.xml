@@ -32,6 +32,7 @@
 		<mapper resource="sql/cmt/custom.xml" />
 		<!-- Automatic generation -->
 		<mapper resource="sql/tbl/M01_COMMON.xml" />
+		<mapper resource="sql/tbl/M02_SYSTEM_VERSION.xml" />
 		<mapper resource="sql/tbl/T01_GENEALOGY.xml" />
 		<mapper resource="sql/tbl/T02_PERSONAL.xml" />
 		<mapper resource="sql/tbl/T03_GEN_MEMBER.xml" />

@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sql">
+
+  <!-- Table Insert -->
+  <insert id="M02_SYSTEM_VERSION_INSERT" parameterType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    INSERT INTO M02_SYSTEM_VERSION (
+      IMSI ,
+      CHANNEL ,
+      VERSION ,
+      LOAD_PATH ,
+      DESCRIP ,
+      DEL_FLG 
+    ) VALUES (
+      #{iMSI} ,
+      #{cHANNEL} ,
+      #{vERSION} ,
+      #{lOADPATH} ,
+      #{dESCRIP} ,
+      #{dELFLG} 
+    )
+    <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty = "iD">
+    SELECT LAST_INSERT_ID() AS ID
+    </selectKey>
+  </insert>
+
+  <!-- Table Update -->
+  <update id="M02_SYSTEM_VERSION_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    UPDATE M02_SYSTEM_VERSION SET
+      IMSI = #{iMSI} ,
+      CHANNEL = #{cHANNEL} ,
+      VERSION = #{vERSION} ,
+      LOAD_PATH = #{lOADPATH} ,
+      DESCRIP = #{dESCRIP} ,
+      DEL_FLG = #{dELFLG} 
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <update id="M02_SYSTEM_VERSION_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    UPDATE M02_SYSTEM_VERSION
+    <set>
+      <if test="iMSI!=null">IMSI = #{iMSI},</if>
+      <if test="cHANNEL!=null">CHANNEL = #{cHANNEL},</if>
+      <if test="vERSION!=null">VERSION = #{vERSION},</if>
+      <if test="lOADPATH!=null">LOAD_PATH = #{lOADPATH},</if>
+      <if test="dESCRIP!=null">DESCRIP = #{dESCRIP},</if>
+      <if test="dELFLG!=null">DEL_FLG = #{dELFLG},</if>
+    </set>
+    WHERE
+      ID = #{iD} 
+  </update>
+
+  <!-- Key Delete -->
+  <delete id="M02_SYSTEM_VERSION_DELETE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    DELETE FROM M02_SYSTEM_VERSION
+    WHERE
+      ID = #{iD} 
+  </delete>
+
+  <!-- Key Search -->
+  <select id="M02_SYSTEM_VERSION_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    WHERE
+      ID = #{iD} 
+  </select>
+
+  <!-- Key Search（For Update） -->
+  <select id="M02_SYSTEM_VERSION_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    WHERE
+      ID = #{iD} 
+    FOR UPDATE
+  </select>
+
+  <!-- AND Search -->
+  <select id="M02_SYSTEM_VERSION_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+      <if test="iMSI != null">AND IMSI = #{iMSI}</if>
+      <if test="cHANNEL != null">AND CHANNEL = #{cHANNEL}</if>
+      <if test="vERSION != null">AND VERSION = #{vERSION}</if>
+      <if test="lOADPATH != null">AND LOAD_PATH = #{lOADPATH}</if>
+      <if test="dESCRIP != null">AND DESCRIP = #{dESCRIP}</if>
+      <if test="dELFLG != null">AND DEL_FLG = #{dELFLG}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search(OR) -->
+  <select id="M02_SYSTEM_VERSION_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+      <if test="iMSI != null">OR IMSI = #{iMSI}</if>
+      <if test="cHANNEL != null">OR CHANNEL = #{cHANNEL}</if>
+      <if test="vERSION != null">OR VERSION = #{vERSION}</if>
+      <if test="lOADPATH != null">OR LOAD_PATH = #{lOADPATH}</if>
+      <if test="dESCRIP != null">OR DESCRIP = #{dESCRIP}</if>
+      <if test="dELFLG != null">OR DEL_FLG = #{dELFLG}</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE -->
+  <select id="M02_SYSTEM_VERSION_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    <where>
+      <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
+      <if test="iMSI != null">AND IMSI LIKE '%'|| #{iMSI} ||'%'</if>
+      <if test="cHANNEL != null">AND CHANNEL LIKE '%'|| #{cHANNEL} ||'%'</if>
+      <if test="vERSION != null">AND VERSION LIKE '%'|| #{vERSION} ||'%'</if>
+      <if test="lOADPATH != null">AND LOAD_PATH LIKE '%'|| #{lOADPATH} ||'%'</if>
+      <if test="dESCRIP != null">AND DESCRIP LIKE '%'|| #{dESCRIP} ||'%'</if>
+      <if test="dELFLG != null">AND DEL_FLG LIKE '%'|| #{dELFLG} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Search LIKE(OR) -->
+  <select id="M02_SYSTEM_VERSION_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    <where>
+      <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
+      <if test="iMSI != null">OR IMSI LIKE '%'|| #{iMSI} ||'%'</if>
+      <if test="cHANNEL != null">OR CHANNEL LIKE '%'|| #{cHANNEL} ||'%'</if>
+      <if test="vERSION != null">OR VERSION LIKE '%'|| #{vERSION} ||'%'</if>
+      <if test="lOADPATH != null">OR LOAD_PATH LIKE '%'|| #{lOADPATH} ||'%'</if>
+      <if test="dESCRIP != null">OR DESCRIP LIKE '%'|| #{dESCRIP} ||'%'</if>
+      <if test="dELFLG != null">OR DEL_FLG LIKE '%'|| #{dELFLG} ||'%'</if>
+    </where>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Customize Search -->
+  <select id="M02_SYSTEM_VERSION_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO" parameterType="java.util.Map">
+    SELECT
+      ID AS "iD" ,
+      IMSI AS "iMSI" ,
+      CHANNEL AS "cHANNEL" ,
+      VERSION AS "vERSION" ,
+      LOAD_PATH AS "lOADPATH" ,
+      DESCRIP AS "dESCRIP" ,
+      DEL_FLG AS "dELFLG" 
+    FROM M02_SYSTEM_VERSION
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+    <if test="_orderByCondition == null">ORDER BY ID</if>
+    <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
+    <if test="_fetchFirstCondition != null">FETCH FIRST ${_fetchFirstCondition} ROWS ONLY</if>
+    <if test="_limitCondition != null">LIMIT ${_limitCondition}</if>
+    <if test="_offsetCondition != null">OFFSET ${_offsetCondition}</if>
+  </select>
+
+  <!-- Count -->
+  <select id="M02_SYSTEM_VERSION_COUNT" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM M02_SYSTEM_VERSION
+    <where>
+      <if test="iD != null">AND ID = #{iD}</if>
+      <if test="iMSI != null">AND IMSI = #{iMSI}</if>
+      <if test="cHANNEL != null">AND CHANNEL = #{cHANNEL}</if>
+      <if test="vERSION != null">AND VERSION = #{vERSION}</if>
+      <if test="lOADPATH != null">AND LOAD_PATH = #{lOADPATH}</if>
+      <if test="dESCRIP != null">AND DESCRIP = #{dESCRIP}</if>
+      <if test="dELFLG != null">AND DEL_FLG = #{dELFLG}</if>
+    </where>
+  </select>
+
+  <!-- Count OR -->
+  <select id="M02_SYSTEM_VERSION_COUNT_OR" resultType="java.lang.Integer">
+    SELECT count(*)
+    FROM M02_SYSTEM_VERSION
+    <where>
+      <if test="iD != null">OR ID = #{iD}</if>
+      <if test="iMSI != null">OR IMSI = #{iMSI}</if>
+      <if test="cHANNEL != null">OR CHANNEL = #{cHANNEL}</if>
+      <if test="vERSION != null">OR VERSION = #{vERSION}</if>
+      <if test="lOADPATH != null">OR LOAD_PATH = #{lOADPATH}</if>
+      <if test="dESCRIP != null">OR DESCRIP = #{dESCRIP}</if>
+      <if test="dELFLG != null">OR DEL_FLG = #{dELFLG}</if>
+    </where>
+  </select>
+
+  <!-- Count Customize -->
+  <select id="M02_SYSTEM_VERSION_COUNT_SEARCH" resultType="java.lang.Integer" parameterType="java.util.Map">
+    SELECT count(*)
+    FROM M02_SYSTEM_VERSION
+    <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
+  </select>
+</mapper>

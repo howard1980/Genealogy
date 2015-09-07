@@ -1,0 +1,14 @@
+127.0.0.1 - - [07/Sep/2015:09:47:50 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:09:47:51 +0800] "GET /genealogy/ HTTP/1.1" 200 510
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:09:48:05 +0800] "GET /genealogy/app/FsGetAppVersion/{%22version%22:3,%22channel%22:2,%22type%22:%221%22} HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:11:32:48 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:11:33:50 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:11:44:59 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:20:32 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:21:05 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:23:02 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:23:21 +0800] "POST /genealogy/app/FsGetValidCode HTTP/1.1" 200 191
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:24:55 +0800] "POST /genealogy/app/FsGetValidCode HTTP/1.1" 200 191
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:25:18 +0800] "GET /genealogy/app/FsGetValidCode/{%22mobile%22:%2215566868438%22} HTTP/1.1" 200 39
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:26:42 +0800] "POST /genealogy/app/FsGetAppVersion HTTP/1.1" 200 96
+0:0:0:0:0:0:0:1 - - [07/Sep/2015:13:26:57 +0800] "POST /genealogy/app/FsGetValidCode HTTP/1.1" 200 39

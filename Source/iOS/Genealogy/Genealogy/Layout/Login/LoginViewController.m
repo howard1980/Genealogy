@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "ValidCode.h"
+#import "GetValidCode.h"
 
 @interface LoginViewController ()
 
@@ -27,7 +27,7 @@
 
 - (IBAction)getValidCode:(id)sender {
     
-    ValidCode *vc = [[ValidCode alloc] init];
+    GetValidCode *vc = [[GetValidCode alloc] init];
     vc.delegate = self;
     [vc postData:self.txtPhone.text];
 }

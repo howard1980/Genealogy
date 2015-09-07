@@ -1,7 +1,7 @@
 ﻿#Default (product)
 http://localhost:8080/nfe-rest/rest/sxxc/SsLogin/{"loginName": "jspService", "password": "JSPPassword"}
 http://localhost:8080/genealogy/app/FsGetValidCode/{"mobile":"15566868438"}
-http://localhost:8080/nfe-rest/rest/sxxc/SsGetAppVersion/{"version":3,"channel":2,"type":"1"}
+http://localhost:8080/genealogy/app/FsGetAppVersion/{"version":3,"channel":2,"type":"1"}
 
 http://localhost:8080/nfe-rest/rest/sxxc/SsGetPassword/{"user":"15566868438"}
 http://localhost:8080/nfe-rest/rest/sxxc/SsUpdatePassword/{"customerID":"1", "password":"1234"}
