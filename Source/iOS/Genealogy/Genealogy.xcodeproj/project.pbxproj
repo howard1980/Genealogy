@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291843911B9D2E9E00720334 /* GetAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2918438F1B9D2E9E00720334 /* GetAppVersion.m */; };
+		291843991B9D403A00720334 /* VersionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 291843981B9D403A00720334 /* VersionController.m */; };
 		292814511B8E029A008AEC55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814501B8E029A008AEC55 /* main.m */; };
 		292814541B8E029A008AEC55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 292814531B8E029A008AEC55 /* AppDelegate.m */; };
 		2928145F1B8E029A008AEC55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2928145E1B8E029A008AEC55 /* Images.xcassets */; };
@@ -21,7 +23,7 @@
 		29A1BC561B9040AB001AE4B5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1BC551B9040AB001AE4B5 /* MainViewController.m */; };
 		29A1BC5C1B904421001AE4B5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1BC5A1B904421001AE4B5 /* LoginViewController.m */; };
 		29A1BC5D1B904421001AE4B5 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29A1BC5B1B904421001AE4B5 /* LoginViewController.xib */; };
-		29A1BC611B904E7B001AE4B5 /* ValidCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1BC601B904E7B001AE4B5 /* ValidCode.m */; };
+		29A1BC611B904E7B001AE4B5 /* GetValidCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A1BC601B904E7B001AE4B5 /* GetValidCode.m */; };
 		29EC19391B9087F3002204D9 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC19381B9087F3002204D9 /* BaseModel.m */; };
 		29EC199D1B9095ED002204D9 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC19791B9095ED002204D9 /* AFHTTPRequestOperation.m */; };
 		29EC199E1B9095ED002204D9 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29EC197B1B9095ED002204D9 /* AFHTTPRequestOperationManager.m */; };
@@ -55,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2918438D1B9D2E1800720334 /* CheckVersionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CheckVersionProtocol.h; path = Protocal/CheckVersionProtocol.h; sourceTree = "<group>"; };
+		2918438E1B9D2E9E00720334 /* GetAppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetAppVersion.h; path = Model/COM/GetAppVersion.h; sourceTree = "<group>"; };
+		2918438F1B9D2E9E00720334 /* GetAppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetAppVersion.m; path = Model/COM/GetAppVersion.m; sourceTree = "<group>"; };
+		291843971B9D403A00720334 /* VersionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VersionController.h; path = Controller/VersionController.h; sourceTree = "<group>"; };
+		291843981B9D403A00720334 /* VersionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VersionController.m; path = Controller/VersionController.m; sourceTree = "<group>"; };
 		2928144B1B8E029A008AEC55 /* Genealogy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genealogy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2928144F1B8E029A008AEC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		292814501B8E029A008AEC55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -80,8 +87,8 @@
 		29A1BC591B904421001AE4B5 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Layout/Login/LoginViewController.h; sourceTree = "<group>"; };
 		29A1BC5A1B904421001AE4B5 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Layout/Login/LoginViewController.m; sourceTree = "<group>"; };
 		29A1BC5B1B904421001AE4B5 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Layout/Login/LoginViewController.xib; sourceTree = "<group>"; };
-		29A1BC5F1B904E7B001AE4B5 /* ValidCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValidCode.h; path = Model/COM/ValidCode.h; sourceTree = "<group>"; };
-		29A1BC601B904E7B001AE4B5 /* ValidCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValidCode.m; path = Model/COM/ValidCode.m; sourceTree = "<group>"; };
+		29A1BC5F1B904E7B001AE4B5 /* GetValidCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetValidCode.h; path = Model/COM/GetValidCode.h; sourceTree = "<group>"; };
+		29A1BC601B904E7B001AE4B5 /* GetValidCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GetValidCode.m; path = Model/COM/GetValidCode.m; sourceTree = "<group>"; };
 		29EC19371B9087F3002204D9 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseModel.h; path = FrameWork/Model/BaseModel.h; sourceTree = "<group>"; };
 		29EC19381B9087F3002204D9 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseModel.m; path = FrameWork/Model/BaseModel.m; sourceTree = "<group>"; };
 		29EC19781B9095ED002204D9 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -145,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291843951B9D3E2B00720334 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				291843971B9D403A00720334 /* VersionController.h */,
+				291843981B9D403A00720334 /* VersionController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		292814421B8E029A008AEC55 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +182,7 @@
 		2928144D1B8E029A008AEC55 /* Genealogy */ = {
 			isa = PBXGroup;
 			children = (
+				291843951B9D3E2B00720334 /* Controller */,
 				29A1BC5E1B904DD0001AE4B5 /* Model */,
 				29A1BC571B904399001AE4B5 /* Layout */,
 				2928149D1B8EAA22008AEC55 /* FrameWork */,
@@ -254,6 +271,7 @@
 			children = (
 				297F87271B8F46DE0056A89A /* Constant.h */,
 				29EC19C21B91A674002204D9 /* ModelProtocol.h */,
+				2918438D1B9D2E1800720334 /* CheckVersionProtocol.h */,
 			);
 			name = Protocal;
 			sourceTree = "<group>";
@@ -280,8 +298,10 @@
 		29A1BC5E1B904DD0001AE4B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				29A1BC5F1B904E7B001AE4B5 /* ValidCode.h */,
-				29A1BC601B904E7B001AE4B5 /* ValidCode.m */,
+				29A1BC5F1B904E7B001AE4B5 /* GetValidCode.h */,
+				29A1BC601B904E7B001AE4B5 /* GetValidCode.m */,
+				2918438E1B9D2E9E00720334 /* GetAppVersion.h */,
+				2918438F1B9D2E9E00720334 /* GetAppVersion.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -494,11 +514,13 @@
 				29EC19A71B9095ED002204D9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				29EC19C51B91AB79002204D9 /* ServiceBaseModel.m in Sources */,
 				29EC19A61B9095ED002204D9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				291843911B9D2E9E00720334 /* GetAppVersion.m in Sources */,
 				296FE84B1B934A9F0029CD2F /* ParallaxItem.swift in Sources */,
 				29A1BC5C1B904421001AE4B5 /* LoginViewController.m in Sources */,
-				29A1BC611B904E7B001AE4B5 /* ValidCode.m in Sources */,
+				29A1BC611B904E7B001AE4B5 /* GetValidCode.m in Sources */,
 				29EC19C91B91B2C3002204D9 /* BaseViewController.m in Sources */,
 				29EC19A11B9095ED002204D9 /* AFSecurityPolicy.m in Sources */,
+				291843991B9D403A00720334 /* VersionController.m in Sources */,
 				292814541B8E029A008AEC55 /* AppDelegate.m in Sources */,
 				29EC19A31B9095ED002204D9 /* AFURLRequestSerialization.m in Sources */,
 				29EC19A01B9095ED002204D9 /* AFNetworkReachabilityManager.m in Sources */,
