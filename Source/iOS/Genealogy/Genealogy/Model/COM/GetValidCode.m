@@ -1,17 +1,16 @@
-//
-//  ValidCode.m
+﻿//
+//  GetValidCode.m
 //  Genealogy
 //
-//  Created by xiao huama on 15/8/28.
-//  Copyright (c) 2015年 xiao huama. All rights reserved.
+//  Created by xiao huama on 15/09/10.
+//  Xiao Hua Ma personal studio 2015.
 //
 
 #import "GetValidCode.h"
 
 @interface GetValidCode()
-@property (strong, nonatomic) NSString* mobile;
+@property(nonatomic,strong)NSString *mobile; /**< 手机号*/
 @end
-
 @implementation GetValidCode
 
 - (instancetype)init
@@ -37,7 +36,8 @@
     }];
 }
 
-- (NSMutableDictionary *)buildRequestData{
+-(NSMutableDictionary *)buildRequestData
+{
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     if (self.mobile) {
         dic[@"mobile"] = self.mobile;
@@ -45,10 +45,8 @@
     return dic;
 }
 
-- (void)loadDataWithJsonData:(id)jsonData{
-    if ([jsonData isKindOfClass:[NSData class]]) {
-        jsonData = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
-    }
+- (void)loadDataWithJsonData:(id)jsonData
+{
     if (![jsonData isKindOfClass:[NSDictionary class]]) {
         return;
     }
@@ -56,4 +54,20 @@
         return;
     }
 }
+
+-(BOOL)checkRequired
+{
+    NSMutableArray *muArray = [[NSMutableArray alloc] init];
+    BOOL rest = YES;
+    if (self.mobile.length<1) {
+        [muArray addObject:@"手机号不能为空!"];
+        rest = NO;
+    }
+    
+    if (!rest){
+        self.exceptions = muArray;
+    }
+    return rest;
+}
+
 @end

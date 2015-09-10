@@ -5,11 +5,16 @@
 package com.maxiaohua.genealogy.main.service.com;
 
 import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.main.biz.com.GbValidCode;
 import com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeInDTO;
 import com.maxiaohua.genealogy.main.service.com.dto.FsGetValidCodeOutDTO;
 
 public class FsGetValidCode extends AbstractService<FsGetValidCodeOutDTO, FsGetValidCodeInDTO> {
-
+	
+	@AutoInject
+	private GbValidCode gbValidCode;
+	
 	/*
 	 * (non-Javadoc)
 	 *
@@ -20,6 +25,7 @@ public class FsGetValidCode extends AbstractService<FsGetValidCodeOutDTO, FsGetV
 	public FsGetValidCodeOutDTO execute(
 			FsGetValidCodeInDTO fsGetValidCodeInDTO) {
 		FsGetValidCodeOutDTO fsGetValidCodeOutDTO = new FsGetValidCodeOutDTO();
+		gbValidCode.sendValidCode(fsGetValidCodeInDTO.getMobile());
 		return fsGetValidCodeOutDTO;
 	}
 }

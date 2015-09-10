@@ -1,14 +1,14 @@
-//
-//  ValidCode.h
+﻿//
+//  GetValidCode.h
 //  Genealogy
 //
-//  Created by xiao huama on 15/8/28.
-//  Copyright (c) 2015年 xiao huama. All rights reserved.
+//  Created by xiao huama on 15/09/10.
+//  Xiao Hua Ma personal studio 2015.
 //
-
 #import "ServiceBaseModel.h"
 
 @interface GetValidCode : ServiceBaseModel
+
 
 - (void)postData:(NSString *)mobile;
 

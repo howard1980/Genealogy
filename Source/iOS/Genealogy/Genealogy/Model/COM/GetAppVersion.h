@@ -1,11 +1,10 @@
-//
-//  CheckVersion.h
+﻿//
+//  GetAppVersion.h
 //  Genealogy
 //
-//  Created by xiao huama on 15/9/7.
-//  Copyright (c) 2015年 xiao huama. All rights reserved.
+//  Created by xiao huama on 15/09/10.
+//  Xiao Hua Ma personal studio 2015.
 //
-
 #import "ServiceBaseModel.h"
 
 @interface GetAppVersion : ServiceBaseModel
@@ -15,4 +14,5 @@
 @property(nonatomic,strong)NSMutableString *downloadUrl; /**< 下载地址*/
 
 - (void)postData:(NSNumber *)version channel:(NSNumber *)channel type:(NSNumber *)type;
+
 @end

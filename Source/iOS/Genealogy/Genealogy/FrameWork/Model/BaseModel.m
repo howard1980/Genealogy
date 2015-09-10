@@ -13,6 +13,15 @@
 
 @implementation BaseModel
 
+- (instancetype)initWithJsonData:(id)jsonData
+{
+    self = [super init];
+    if (self) {
+        [self loadDataWithJsonData:jsonData];
+    }
+    return self;
+}
+
 - (void)loadDataWithJsonData:(id)jsonData
 {
     
@@ -22,7 +31,18 @@
     return nil;
 }
 
+- (BOOL)checkRequired{
+    return YES;
+}
+
 -(void)requestWebService:(void (^)(void))block faild:(void (^)(void))faild{
+    if (![self checkRequired]) {
+        if (faild) {
+            faild();
+        }
+        return;
+    }
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.requestSerializer=[AFJSONRequestSerializer serializer];

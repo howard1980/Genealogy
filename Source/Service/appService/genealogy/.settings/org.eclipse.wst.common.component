@@ -128,6 +128,9 @@
         <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/com.maxiaohua.genealogy.main.db/com.maxiaohua.genealogy.main.db">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="CCP_REST_SDK_JAVA_v2.7r.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/mxh-jar/CCP_REST_SDK_JAVA_v2.7r.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/genealogy/build/classes"/>
         <property name="context-root" value="genealogy"/>
     </wb-module>

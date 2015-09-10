@@ -23,5 +23,6 @@
 - (NSMutableDictionary *)buildRequestData;
 - (void)loadDataWithJsonData:(id)jsonData;
 - (void)requestWebService:(void (^)(void))block faild:(void (^)(void))faild;
-
+- (BOOL)checkRequired;
+- (instancetype)initWithJsonData:(id)jsonData;
 @end
