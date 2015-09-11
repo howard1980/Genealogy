@@ -1,0 +1,5 @@
+package com.maxiaohua.genealogy.main.biz.com;
+
+public interface GbCustomer {
+	void sendValidCode(String mobile);
+}

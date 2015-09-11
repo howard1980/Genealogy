@@ -1,0 +1,19 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import java.util.Random;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.fw.core.sms.SMSManager;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.main.biz.com.GbCustomer;
+import com.maxiaohua.genealogy.main.biz.com.GbValidCode;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+
+public class GbCustomerImpl extends AbstractDBLogic implements GbCustomer, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+	public void sendValidCode(String mobile){
+
+	}
+}

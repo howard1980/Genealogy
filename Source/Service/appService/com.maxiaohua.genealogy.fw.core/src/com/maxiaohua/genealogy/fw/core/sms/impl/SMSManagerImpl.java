@@ -73,7 +73,7 @@ public class SMSManagerImpl implements SMSManager{
 		// 请配置"控制台-应用-测试DEMO"中的APPID。如切换到生产环境，请使用自己创建应用的APPID
 		result = restAPI.voiceVerify(verifyCode, mobile, "", "3", "http://localhost:8080/genealogy/app/FsGetValidCode", 
 				"", "", "", "");
-		System.out.println("SDKTestVoiceVerify result=" + result);
+//		System.out.println("SDKTestVoiceVerify result=" + result);
 		if ("000000".equals(result.get("statusCode"))) {
 			// 正常返回输出data包体信息（map）
 			@SuppressWarnings("unchecked")
@@ -85,8 +85,8 @@ public class SMSManagerImpl implements SMSManager{
 			}
 		} else {
 			// 异常返回输出错误码和错误信息
-			System.out.println("错误码=" + result.get("statusCode") + " 错误信息= "
-					+ result.get("statusMsg"));
+//			System.out.println("错误码=" + result.get("statusCode") + " 错误信息= "
+//					+ result.get("statusMsg"));
 		}
 		return true;
 	}

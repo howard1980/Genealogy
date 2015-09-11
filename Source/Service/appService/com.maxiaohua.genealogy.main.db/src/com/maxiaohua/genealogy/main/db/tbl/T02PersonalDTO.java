@@ -109,6 +109,11 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATETIME")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	private java.sql.Timestamp rEGEDITTIME = null;
+	
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OWNER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(15)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long oWNER_ID = null;
 
 	public Long getID() {
 		return this.iD;
@@ -244,7 +249,16 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 			java.sql.Timestamp rEGEDITTIME) {
 		this.rEGEDITTIME = rEGEDITTIME;
 	}
+	
+	public Long getOWNERID() {
+		return this.oWNER_ID;
+	}
 
+	public void setOWNERID(
+			Long oWNER_ID) {
+		this.oWNER_ID = oWNER_ID;
+	}
+	
   	/* (non-Javadoc)
      * @see java.lang.Comparable#compareTo(java.lang.Object)
      */

@@ -41,9 +41,9 @@
 	<bean name="updateDAO" type="com.maxiaohua.genealogy.fw.core.dao.impl.UpdateDAOImpl" scope="singleton"/>
 	
 	<!-- redis用DAO定义 -->
-<!--	<bean name="queryKeyValue" type="com.maxiaohua.genealogy.fw.core.memory.db.impl.QueryKeyValueImpl" scope="singleton"/>
+	<bean name="queryKeyValue" type="com.maxiaohua.genealogy.fw.core.memory.db.impl.QueryKeyValueImpl" scope="singleton"/>
 	<bean name="updateKeyValue" type="com.maxiaohua.genealogy.fw.core.memory.db.impl.UpdateKeyValueImpl" scope="singleton"/>
--->
+
 	
 	<!-- SMS用类定义 -->
 	<bean name="sMSManger" type="com.maxiaohua.genealogy.fw.core.sms.impl.SMSManagerImpl" scope="singleton"/>

@@ -1,0 +1,31 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import java.util.Random;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.fw.core.sms.SMSManager;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.main.biz.com.GbValidCode;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+
+public class GbValidCodeImpl extends AbstractDBLogic implements GbValidCode, HbMessageCode, CommonConstant, 
+		CtgCodeConstant {
+    @AutoInject(name = "sMSManger")
+    protected SMSManager sMSManger;
+    
+	public void sendValidCode(String mobile){
+		String code = null;
+		code = queryKeyValue.queryForString(mobile);
+		if(code == null){
+			Random random=new Random();
+			code=String.valueOf(random.nextInt(8999)+1000);
+		}
+
+		String message="尊敬的用户，您本次在时记族谱的验证码是"+code+",20分钟内有效,请妥善保管；祝您生活愉快！【时记】";
+		if(sMSManger.sendSMS(mobile, message)){
+			updateKeyValue.update(mobile, code);
+		}
+	}
+}

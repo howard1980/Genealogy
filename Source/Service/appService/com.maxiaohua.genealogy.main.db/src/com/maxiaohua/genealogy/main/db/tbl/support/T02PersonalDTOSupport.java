@@ -77,6 +77,8 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 	public static final String COLUMN_LONGITUDE = "LONGITUDE";
 
 	public static final String COLUMN_REGEDIT_TIME = "REGEDIT_TIME";
+	
+	public static final String COLUMN_OWNER_ID = "OWNER_ID";
 
 	public static final String TABLE = "T02_PERSONAL";
 
@@ -112,6 +114,8 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 		defaultDTO.setLONGITUDE(0.0);
 
 		defaultDTO.setREGEDITTIME(new java.sql.Timestamp(System.currentTimeMillis()));
+		
+		defaultDTO.setOWNERID(0l);
 
 		return defaultDTO;
 	}

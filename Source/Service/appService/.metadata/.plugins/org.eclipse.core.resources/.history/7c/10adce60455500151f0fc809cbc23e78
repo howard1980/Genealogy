@@ -1,0 +1,38 @@
+﻿/*
+ * Genealogy
+ * Xiao Hua Ma personal studio 2015.
+ */
+package com.maxiaohua.genealogy.main.service.com;
+
+import com.maxiaohua.genealogy.fw.core.service.AbstractService;
+import com.maxiaohua.genealogy.fw.core.type.AutoInject;
+import com.maxiaohua.genealogy.fw.core.type.Transactional;
+import com.maxiaohua.genealogy.main.biz.com.GbValidCode;
+import com.maxiaohua.genealogy.main.service.com.dto.FsRegistInDTO;
+import com.maxiaohua.genealogy.main.service.com.dto.FsRegistOutDTO;
+
+public class FsRegist extends AbstractService<FsRegistOutDTO, FsRegistInDTO> {
+	@AutoInject
+	private GbCustomer gbCustomer;
+	
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.maxiaohua.genealogy.fw.core.service.AbstractService#execute(java.lang.Object)
+	 */
+	@Override
+	@Transactional
+	public FsRegistOutDTO execute(
+			FsRegistInDTO fsRegistInDTO) {
+		FsRegistOutDTO fsRegistOutDTO = new FsRegistOutDTO();
+		fsRegistOutDTO.setUserID(gbCustomer.registCustomer(fsRegistInDTO.getMobile(),
+				fsRegistInDTO.getValidCode(),
+				fsRegistInDTO.getImsi(),
+				fsRegistInDTO.getCityCode(),
+				fsRegistInDTO.getRegisitrationID(),
+				fsRegistInDTO.getLatitude(),
+				fsRegistInDTO.getLongitude()));
+		return fsRegistOutDTO;
+	}
+}

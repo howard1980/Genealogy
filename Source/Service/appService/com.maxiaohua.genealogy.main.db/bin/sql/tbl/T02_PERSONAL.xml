@@ -19,7 +19,8 @@
       INFOMATION ,
       LATITUDE ,
       LONGITUDE ,
-      REGEDIT_TIME 
+      REGEDIT_TIME ,
+      OWNER_ID
     ) VALUES (
       #{fIRSTNAME} ,
       #{lASTNAME} ,
@@ -34,7 +35,8 @@
       #{iNFOMATION} ,
       #{lATITUDE} ,
       #{lONGITUDE} ,
-      #{rEGEDITTIME} 
+      #{rEGEDITTIME} ,
+      #{oWNERID} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -57,7 +59,8 @@
       INFOMATION = #{iNFOMATION} ,
       LATITUDE = #{lATITUDE} ,
       LONGITUDE = #{lONGITUDE} ,
-      REGEDIT_TIME = #{rEGEDITTIME} 
+      REGEDIT_TIME = #{rEGEDITTIME} ,
+      OWNER_ID = #{oWNERID} 
     WHERE
       ID = #{iD} 
   </update>
@@ -79,6 +82,7 @@
       <if test="lATITUDE!=null">LATITUDE = #{lATITUDE},</if>
       <if test="lONGITUDE!=null">LONGITUDE = #{lONGITUDE},</if>
       <if test="rEGEDITTIME!=null">REGEDIT_TIME = #{rEGEDITTIME},</if>
+      <if test="oWNERID!=null">OWNER_ID = #{oWNERID},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -108,7 +112,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     WHERE
       ID = #{iD} 
@@ -131,7 +136,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     WHERE
       ID = #{iD} 
@@ -155,7 +161,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
@@ -173,6 +180,7 @@
       <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
       <if test="rEGEDITTIME != null">AND REGEDIT_TIME = #{rEGEDITTIME}</if>
+      <if test="oWNERID != null">AND OWNER_ID = #{oWNERID}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -198,7 +206,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
@@ -216,6 +225,7 @@
       <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
       <if test="rEGEDITTIME != null">OR REGEDIT_TIME = #{rEGEDITTIME}</if>
+      <if test="oWNERID != null">OR OWNER_ID = #{oWNERID}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -241,7 +251,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
@@ -284,7 +295,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
@@ -327,7 +339,8 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" 
+      REGEDIT_TIME AS "rEGEDITTIME" ,
+      OWNER_ID AS "oWNERID" 
     FROM T02_PERSONAL
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>

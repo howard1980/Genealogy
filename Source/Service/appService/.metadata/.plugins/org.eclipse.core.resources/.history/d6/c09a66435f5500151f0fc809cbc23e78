@@ -1,0 +1,6 @@
+package com.maxiaohua.genealogy.main.biz.com;
+
+public interface GbCustomer {
+	String regist(String mobile, String validCode, 
+			Double longitude, Double latitude, String cityCode, String registrationID,Integer ismi);
+}

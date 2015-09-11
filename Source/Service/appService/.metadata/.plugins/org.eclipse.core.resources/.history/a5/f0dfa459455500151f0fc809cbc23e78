@@ -1,0 +1,11 @@
+package com.maxiaohua.genealogy.main.biz.com;
+
+public interface GbCustomer {
+	Integer regist(String mobile,
+			fsRegistInDTO.getValidCode(),
+			fsRegistInDTO.getImsi(),
+			fsRegistInDTO.getCityCode(),
+			fsRegistInDTO.getRegisitrationID(),
+			fsRegistInDTO.getLatitude(),
+			fsRegistInDTO.getLongitude()));
+}

@@ -31,26 +31,26 @@ public class UserInfoDTO implements java.io.Serializable, Comparable<UserInfoDTO
 		this.userID = userID;
 	}
 
-	private String familyCode = null;
+	private String fisrtName = null;
 
-	public String getFamilyCode() {
-		return this.familyCode;
+	public String getFisrtName() {
+		return this.fisrtName;
 	}
 
-	public void setFamilyCode(
-			String familyCode) {
-		this.familyCode = familyCode;
+	public void setFisrtName(
+			String fisrtName) {
+		this.fisrtName = fisrtName;
 	}
 
-	private String name = null;
+	private String lastName = null;
 
-	public String getName() {
-		return this.name;
+	public String getLastName() {
+		return this.lastName;
 	}
 
-	public void setName(
-			String name) {
-		this.name = name;
+	public void setLastName(
+			String lastName) {
+		this.lastName = lastName;
 	}
 
 	private Integer sex = null;
