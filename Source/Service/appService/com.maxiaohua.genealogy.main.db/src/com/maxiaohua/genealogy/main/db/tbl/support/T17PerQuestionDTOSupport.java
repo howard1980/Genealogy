@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T17PerQuestionDTOSupport extends BaseTableDTO {
@@ -71,19 +71,19 @@ public abstract class T17PerQuestionDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setQUESTION(StringUtil.EMPTY);
+		defaultDTO.setQuestion(StringUtil.EMPTY);
 
-		defaultDTO.setSTATE(StringUtil.EMPTY);
+		defaultDTO.setState(StringUtil.EMPTY);
 
-		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
-		defaultDTO.setUPDATEDATE(new java.sql.Timestamp(System.currentTimeMillis()));
+		defaultDTO.setUpdateDate(new java.sql.Timestamp(System.currentTimeMillis()));
 
-		defaultDTO.setUPDATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setUpdateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

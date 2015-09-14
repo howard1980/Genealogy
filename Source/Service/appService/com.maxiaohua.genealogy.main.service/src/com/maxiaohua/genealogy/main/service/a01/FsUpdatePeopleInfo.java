@@ -25,8 +25,21 @@ public class FsUpdatePeopleInfo extends AbstractService<FsUpdatePeopleInfoOutDTO
 	@Transactional
 	public FsUpdatePeopleInfoOutDTO execute(
 			FsUpdatePeopleInfoInDTO fsUpdatePeopleInfoInDTO) {
-		gbCustomer.updateInfo(fsUpdatePeopleInfoInDTO.getUserID(), fsUpdatePeopleInfoInDTO.getUserInfo());
 		FsUpdatePeopleInfoOutDTO fsUpdatePeopleInfoOutDTO = new FsUpdatePeopleInfoOutDTO();
+		gbCustomer.updateInfo(fsUpdatePeopleInfoInDTO.getUserID(),
+				fsUpdatePeopleInfoInDTO.getClansmanID(), 
+				fsUpdatePeopleInfoInDTO.getFisrtName(), 
+				fsUpdatePeopleInfoInDTO.getLastName(), 
+				fsUpdatePeopleInfoInDTO.getSex(), 
+				fsUpdatePeopleInfoInDTO.getBirthday(), 
+				fsUpdatePeopleInfoInDTO.getBirthTime(), 
+				fsUpdatePeopleInfoInDTO.getMobile(), 
+				fsUpdatePeopleInfoInDTO.getMaile(), 
+				fsUpdatePeopleInfoInDTO.getBackPath(), 
+				fsUpdatePeopleInfoInDTO.getSelfPath(), 
+				fsUpdatePeopleInfoInDTO.getPicture(), 
+				fsUpdatePeopleInfoInDTO.getVideo(), 
+				fsUpdatePeopleInfoInDTO.getProfile());
 		return fsUpdatePeopleInfoOutDTO;
 	}
 }

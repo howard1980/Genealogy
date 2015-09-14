@@ -13,7 +13,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T15NoticeAttentionDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T15NoticeAttentionDTOSupport extends BaseTableDTO {
@@ -52,6 +52,8 @@ public abstract class T15NoticeAttentionDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_PER_ID = "PER_ID";
 
+	public static final String COLUMN_STATE = "STATE";
+
 	public static final String TABLE = "T15_NOTICE_ATTENTION";
 
 	public static T15NoticeAttentionDTO setDefaultValue() {
@@ -59,9 +61,11 @@ public abstract class T15NoticeAttentionDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setNOTID(0l);
+		defaultDTO.setNotID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
+
+		defaultDTO.setState(0);
 
 		return defaultDTO;
 	}

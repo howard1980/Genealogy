@@ -4,6 +4,7 @@
  */
 package com.maxiaohua.genealogy.main.db.tbl.support;
 
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
 import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
 import com.maxiaohua.genealogy.main.db.tbl.T03GenMemberDTO;
 
@@ -13,7 +14,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T03GenMemberDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T03GenMemberDTOSupport extends BaseTableDTO {
@@ -56,6 +57,12 @@ public abstract class T03GenMemberDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_MOT_ID = "MOT_ID";
 
+	public static final String COLUMN_ONWER_ID = "ONWER_ID";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
 	public static final String TABLE = "T03_GEN_MEMBER";
 
 	public static T03GenMemberDTO setDefaultValue() {
@@ -63,13 +70,19 @@ public abstract class T03GenMemberDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setGENID(0l);
+		defaultDTO.setGenID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setFARID(0l);
+		defaultDTO.setFarID(0l);
 
-		defaultDTO.setMOTID(0l);
+		defaultDTO.setMotID(0l);
+
+		defaultDTO.setOnwerID(0l);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

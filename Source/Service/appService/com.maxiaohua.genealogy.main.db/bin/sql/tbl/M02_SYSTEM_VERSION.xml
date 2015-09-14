@@ -14,11 +14,11 @@
       DEL_FLG 
     ) VALUES (
       #{iMSI} ,
-      #{cHANNEL} ,
-      #{vERSION} ,
-      #{lOADPATH} ,
-      #{dESCRIP} ,
-      #{dELFLG} 
+      #{channel} ,
+      #{version} ,
+      #{loadPath} ,
+      #{descrip} ,
+      #{delFlg} 
     )
     <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -29,11 +29,11 @@
   <update id="M02_SYSTEM_VERSION_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO">
     UPDATE M02_SYSTEM_VERSION SET
       IMSI = #{iMSI} ,
-      CHANNEL = #{cHANNEL} ,
-      VERSION = #{vERSION} ,
-      LOAD_PATH = #{lOADPATH} ,
-      DESCRIP = #{dESCRIP} ,
-      DEL_FLG = #{dELFLG} 
+      CHANNEL = #{channel} ,
+      VERSION = #{version} ,
+      LOAD_PATH = #{loadPath} ,
+      DESCRIP = #{descrip} ,
+      DEL_FLG = #{delFlg} 
     WHERE
       ID = #{iD} 
   </update>
@@ -42,11 +42,11 @@
     UPDATE M02_SYSTEM_VERSION
     <set>
       <if test="iMSI!=null">IMSI = #{iMSI},</if>
-      <if test="cHANNEL!=null">CHANNEL = #{cHANNEL},</if>
-      <if test="vERSION!=null">VERSION = #{vERSION},</if>
-      <if test="lOADPATH!=null">LOAD_PATH = #{lOADPATH},</if>
-      <if test="dESCRIP!=null">DESCRIP = #{dESCRIP},</if>
-      <if test="dELFLG!=null">DEL_FLG = #{dELFLG},</if>
+      <if test="channel!=null">CHANNEL = #{channel},</if>
+      <if test="version!=null">VERSION = #{version},</if>
+      <if test="loadPath!=null">LOAD_PATH = #{loadPath},</if>
+      <if test="descrip!=null">DESCRIP = #{descrip},</if>
+      <if test="delFlg!=null">DEL_FLG = #{delFlg},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -64,11 +64,11 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     WHERE
       ID = #{iD} 
@@ -79,11 +79,11 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     WHERE
       ID = #{iD} 
@@ -95,20 +95,20 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
       <if test="iMSI != null">AND IMSI = #{iMSI}</if>
-      <if test="cHANNEL != null">AND CHANNEL = #{cHANNEL}</if>
-      <if test="vERSION != null">AND VERSION = #{vERSION}</if>
-      <if test="lOADPATH != null">AND LOAD_PATH = #{lOADPATH}</if>
-      <if test="dESCRIP != null">AND DESCRIP = #{dESCRIP}</if>
-      <if test="dELFLG != null">AND DEL_FLG = #{dELFLG}</if>
+      <if test="channel != null">AND CHANNEL = #{channel}</if>
+      <if test="version != null">AND VERSION = #{version}</if>
+      <if test="loadPath != null">AND LOAD_PATH = #{loadPath}</if>
+      <if test="descrip != null">AND DESCRIP = #{descrip}</if>
+      <if test="delFlg != null">AND DEL_FLG = #{delFlg}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -122,20 +122,20 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
       <if test="iMSI != null">OR IMSI = #{iMSI}</if>
-      <if test="cHANNEL != null">OR CHANNEL = #{cHANNEL}</if>
-      <if test="vERSION != null">OR VERSION = #{vERSION}</if>
-      <if test="lOADPATH != null">OR LOAD_PATH = #{lOADPATH}</if>
-      <if test="dESCRIP != null">OR DESCRIP = #{dESCRIP}</if>
-      <if test="dELFLG != null">OR DEL_FLG = #{dELFLG}</if>
+      <if test="channel != null">OR CHANNEL = #{channel}</if>
+      <if test="version != null">OR VERSION = #{version}</if>
+      <if test="loadPath != null">OR LOAD_PATH = #{loadPath}</if>
+      <if test="descrip != null">OR DESCRIP = #{descrip}</if>
+      <if test="delFlg != null">OR DEL_FLG = #{delFlg}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -149,20 +149,20 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
       <if test="iMSI != null">AND IMSI LIKE '%'|| #{iMSI} ||'%'</if>
-      <if test="cHANNEL != null">AND CHANNEL LIKE '%'|| #{cHANNEL} ||'%'</if>
-      <if test="vERSION != null">AND VERSION LIKE '%'|| #{vERSION} ||'%'</if>
-      <if test="lOADPATH != null">AND LOAD_PATH LIKE '%'|| #{lOADPATH} ||'%'</if>
-      <if test="dESCRIP != null">AND DESCRIP LIKE '%'|| #{dESCRIP} ||'%'</if>
-      <if test="dELFLG != null">AND DEL_FLG LIKE '%'|| #{dELFLG} ||'%'</if>
+      <if test="channel != null">AND CHANNEL LIKE '%'|| #{channel} ||'%'</if>
+      <if test="version != null">AND VERSION LIKE '%'|| #{version} ||'%'</if>
+      <if test="loadPath != null">AND LOAD_PATH LIKE '%'|| #{loadPath} ||'%'</if>
+      <if test="descrip != null">AND DESCRIP LIKE '%'|| #{descrip} ||'%'</if>
+      <if test="delFlg != null">AND DEL_FLG LIKE '%'|| #{delFlg} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -176,20 +176,20 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
       <if test="iMSI != null">OR IMSI LIKE '%'|| #{iMSI} ||'%'</if>
-      <if test="cHANNEL != null">OR CHANNEL LIKE '%'|| #{cHANNEL} ||'%'</if>
-      <if test="vERSION != null">OR VERSION LIKE '%'|| #{vERSION} ||'%'</if>
-      <if test="lOADPATH != null">OR LOAD_PATH LIKE '%'|| #{lOADPATH} ||'%'</if>
-      <if test="dESCRIP != null">OR DESCRIP LIKE '%'|| #{dESCRIP} ||'%'</if>
-      <if test="dELFLG != null">OR DEL_FLG LIKE '%'|| #{dELFLG} ||'%'</if>
+      <if test="channel != null">OR CHANNEL LIKE '%'|| #{channel} ||'%'</if>
+      <if test="version != null">OR VERSION LIKE '%'|| #{version} ||'%'</if>
+      <if test="loadPath != null">OR LOAD_PATH LIKE '%'|| #{loadPath} ||'%'</if>
+      <if test="descrip != null">OR DESCRIP LIKE '%'|| #{descrip} ||'%'</if>
+      <if test="delFlg != null">OR DEL_FLG LIKE '%'|| #{delFlg} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -203,11 +203,11 @@
     SELECT
       ID AS "iD" ,
       IMSI AS "iMSI" ,
-      CHANNEL AS "cHANNEL" ,
-      VERSION AS "vERSION" ,
-      LOAD_PATH AS "lOADPATH" ,
-      DESCRIP AS "dESCRIP" ,
-      DEL_FLG AS "dELFLG" 
+      CHANNEL AS "channel" ,
+      VERSION AS "version" ,
+      LOAD_PATH AS "loadPath" ,
+      DESCRIP AS "descrip" ,
+      DEL_FLG AS "delFlg" 
     FROM M02_SYSTEM_VERSION
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -224,11 +224,11 @@
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
       <if test="iMSI != null">AND IMSI = #{iMSI}</if>
-      <if test="cHANNEL != null">AND CHANNEL = #{cHANNEL}</if>
-      <if test="vERSION != null">AND VERSION = #{vERSION}</if>
-      <if test="lOADPATH != null">AND LOAD_PATH = #{lOADPATH}</if>
-      <if test="dESCRIP != null">AND DESCRIP = #{dESCRIP}</if>
-      <if test="dELFLG != null">AND DEL_FLG = #{dELFLG}</if>
+      <if test="channel != null">AND CHANNEL = #{channel}</if>
+      <if test="version != null">AND VERSION = #{version}</if>
+      <if test="loadPath != null">AND LOAD_PATH = #{loadPath}</if>
+      <if test="descrip != null">AND DESCRIP = #{descrip}</if>
+      <if test="delFlg != null">AND DEL_FLG = #{delFlg}</if>
     </where>
   </select>
 
@@ -239,11 +239,11 @@
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
       <if test="iMSI != null">OR IMSI = #{iMSI}</if>
-      <if test="cHANNEL != null">OR CHANNEL = #{cHANNEL}</if>
-      <if test="vERSION != null">OR VERSION = #{vERSION}</if>
-      <if test="lOADPATH != null">OR LOAD_PATH = #{lOADPATH}</if>
-      <if test="dESCRIP != null">OR DESCRIP = #{dESCRIP}</if>
-      <if test="dELFLG != null">OR DEL_FLG = #{dELFLG}</if>
+      <if test="channel != null">OR CHANNEL = #{channel}</if>
+      <if test="version != null">OR VERSION = #{version}</if>
+      <if test="loadPath != null">OR LOAD_PATH = #{loadPath}</if>
+      <if test="descrip != null">OR DESCRIP = #{descrip}</if>
+      <if test="delFlg != null">OR DEL_FLG = #{delFlg}</if>
     </where>
   </select>
 

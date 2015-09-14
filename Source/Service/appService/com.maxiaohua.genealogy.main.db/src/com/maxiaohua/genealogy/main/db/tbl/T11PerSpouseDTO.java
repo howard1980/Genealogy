@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T11PerSpouseDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T11_PER_SPOUSE")
@@ -32,13 +32,13 @@ public class T11PerSpouseDTO extends T11PerSpouseDTOSupport implements java.io.S
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("SPO_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Long sPOID = null;
+	private Long spoID = null;
 
 	public Long getID() {
 		return this.iD;
@@ -49,22 +49,22 @@ public class T11PerSpouseDTO extends T11PerSpouseDTOSupport implements java.io.S
 		this.iD = iD;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public Long getSPOID() {
-		return this.sPOID;
+	public Long getSpoID() {
+		return this.spoID;
 	}
 
-	public void setSPOID(
-			Long sPOID) {
-		this.sPOID = sPOID;
+	public void setSpoID(
+			Long spoID) {
+		this.spoID = spoID;
 	}
 
   	/* (non-Javadoc)

@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T02PersonalDTOSupport extends BaseTableDTO {
@@ -95,43 +95,43 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setFIRSTNAME(StringUtil.EMPTY);
+		defaultDTO.setFirstName(StringUtil.EMPTY);
 
-		defaultDTO.setLASTNAME(StringUtil.EMPTY);
+		defaultDTO.setLastName(StringUtil.EMPTY);
 
 		defaultDTO.setNO(StringUtil.EMPTY);
 
-		defaultDTO.setMOBILE(StringUtil.EMPTY);
+		defaultDTO.setMobile(StringUtil.EMPTY);
 
-		defaultDTO.setMAILE(StringUtil.EMPTY);
+		defaultDTO.setMaile(StringUtil.EMPTY);
 
-		defaultDTO.setBIRTHDATE(DateUtil.getDefaultDate());
+		defaultDTO.setBirthDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setBIRTHTIME(DateUtil.getDefaultTime());
+		defaultDTO.setBirthTime(DateUtil.getDefaultTime());
 
-		defaultDTO.setSEX(0);
+		defaultDTO.setSex(0);
 
-		defaultDTO.setCOVER(StringUtil.EMPTY);
+		defaultDTO.setCover(StringUtil.EMPTY);
 
-		defaultDTO.setHEADPORTRAIT(StringUtil.EMPTY);
+		defaultDTO.setHeadPortrait(StringUtil.EMPTY);
 
-		defaultDTO.setVIDEO(StringUtil.EMPTY);
+		defaultDTO.setVideo(StringUtil.EMPTY);
 
-		defaultDTO.setINFOMATION(StringUtil.EMPTY);
+		defaultDTO.setInfomation(StringUtil.EMPTY);
 
-		defaultDTO.setLATITUDE(0.0);
+		defaultDTO.setLatitude(0.0);
 
-		defaultDTO.setLONGITUDE(0.0);
+		defaultDTO.setLongitude(0.0);
 
-		defaultDTO.setREGEDITDATE(DateUtil.getDefaultDate());
+		defaultDTO.setRegeditDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setREGEDITTIME(DateUtil.getDefaultTime());
+		defaultDTO.setRegeditTime(DateUtil.getDefaultTime());
 
-		defaultDTO.setOWNERID(0l);
+		defaultDTO.setOwnerID(0l);
 
-		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

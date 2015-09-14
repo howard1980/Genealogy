@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T09PerHisStreamDTOSupport extends BaseTableDTO {
@@ -69,17 +69,17 @@ public abstract class T09PerHisStreamDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setHISID(0l);
+		defaultDTO.setHisID(0l);
 
-		defaultDTO.setTYPE(StringUtil.EMPTY);
+		defaultDTO.setType(StringUtil.EMPTY);
 
-		defaultDTO.setPATH(StringUtil.EMPTY);
+		defaultDTO.setPath(StringUtil.EMPTY);
 
-		defaultDTO.setREMARKS(StringUtil.EMPTY);
+		defaultDTO.setRemarks(StringUtil.EMPTY);
 
-		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

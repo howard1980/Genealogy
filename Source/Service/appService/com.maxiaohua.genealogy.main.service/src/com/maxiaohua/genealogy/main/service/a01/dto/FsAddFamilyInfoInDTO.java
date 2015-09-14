@@ -4,18 +4,17 @@
 package com.maxiaohua.genealogy.main.service.a01.dto;
 
 import com.maxiaohua.genealogy.fw.core.type.Alias;
-import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
 
 /**
- * 新增族人信息的InDTO
+ * 增加家族信息的InDTO
  *
  * 变更履历
  * REV.         变更日期           变更者              变更内容
  * -------      ---------------    ----------------    ------------------
- * 1.0          2015/09/06         TOOL                初次作成
+ * 1.0          2015/09/14         TOOL                初次作成
  *
  */
-@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("新增族人信息")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("增加家族信息")
 public class FsAddFamilyInfoInDTO implements java.io.Serializable, Comparable<FsAddFamilyInfoInDTO> {
 	/**
 	* Serial ID
@@ -47,51 +46,119 @@ public class FsAddFamilyInfoInDTO implements java.io.Serializable, Comparable<Fs
 	}
 
 	/**
-	* 家族ID  
+	* 族徽  
 	*/
-	@Alias("家族ID")
+	@Alias("族徽")
+	private String arms = null;
+
+	/**
+	* <code>族徽</code>返回
+	* @return <code>族徽</code>
+	*/
+	public String getArms() {
+		return this.arms;
+	}
+
+	/**
+	* <code>arms</code>设定
+	* @param arms　<code>arms</code>设定值
+	*/
+	public void setArms(
+			String arms) {
+		this.arms = arms;
+	}
+
+	/**
+	* 族姓  
+	*/
+	@Alias("族姓")
 	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
-	private String familyID = null;
+	private String famileyName = null;
 
 	/**
-	* <code>家族ID</code>返回
-	* @return <code>家族ID</code>
+	* <code>族姓</code>返回
+	* @return <code>族姓</code>
 	*/
-	public String getFamilyID() {
-		return this.familyID;
+	public String getFamileyName() {
+		return this.famileyName;
 	}
 
 	/**
-	* <code>familyID</code>设定
-	* @param familyID　<code>familyID</code>设定值
+	* <code>famileyName</code>设定
+	* @param famileyName　<code>famileyName</code>设定值
 	*/
-	public void setFamilyID(
-			String familyID) {
-		this.familyID = familyID;
+	public void setFamileyName(
+			String famileyName) {
+		this.famileyName = famileyName;
 	}
 
 	/**
-	* 族人信息  
+	* 介绍（文字）  
 	*/
-	@Alias("族人信息")
-	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
-	private UserInfoDTO userInfo = null;
+	@Alias("介绍（文字）")
+	private String introductionText = null;
 
 	/**
-	* <code>族人信息</code>返回
-	* @return <code>族人信息</code>
+	* <code>介绍（文字）</code>返回
+	* @return <code>介绍（文字）</code>
 	*/
-	public UserInfoDTO getUserInfo() {
-		return this.userInfo;
+	public String getIntroductionText() {
+		return this.introductionText;
 	}
 
 	/**
-	* <code>userInfo</code>设定
-	* @param userInfo　<code>userInfo</code>设定值
+	* <code>IntroductionText</code>设定
+	* @param IntroductionText　<code>IntroductionText</code>设定值
 	*/
-	public void setUserInfo(
-			UserInfoDTO userInfo) {
-		this.userInfo = userInfo;
+	public void setIntroductionText(
+			String introductionText) {
+		this.introductionText = introductionText;
+	}
+
+	/**
+	* 介绍（图片）  
+	*/
+	@Alias("介绍（图片）")
+	private String introductionPicture = null;
+
+	/**
+	* <code>介绍（图片）</code>返回
+	* @return <code>介绍（图片）</code>
+	*/
+	public String getIntroductionPicture() {
+		return this.introductionPicture;
+	}
+
+	/**
+	* <code>IntroductionPicture</code>设定
+	* @param IntroductionPicture　<code>IntroductionPicture</code>设定值
+	*/
+	public void setIntroductionPicture(
+			String introductionPicture) {
+		this.introductionPicture = introductionPicture;
+	}
+
+	/**
+	* 介绍（视频）  
+	*/
+	@Alias("介绍（视频）")
+	private String introductionVideo = null;
+
+	/**
+	* <code>介绍（视频）</code>返回
+	* @return <code>介绍（视频）</code>
+	*/
+	public String getIntroductionVideo() {
+		return this.introductionVideo;
+	}
+
+	/**
+	* <code>IntroductionVideo</code>设定
+	* @param IntroductionVideo　<code>IntroductionVideo</code>设定值
+	*/
+	public void setIntroductionVideo(
+			String introductionVideo) {
+		this.introductionVideo = introductionVideo;
 	}
 
   	/* (non-Javadoc)

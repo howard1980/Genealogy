@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T09PerHisStreamDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T09_PER_HIS_STREAM")
@@ -31,35 +31,35 @@ public class T09PerHisStreamDTO extends T09PerHisStreamDTOSupport implements jav
 	@com.maxiaohua.genealogy.fw.core.type.Alias("HIS_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long hISID = null;
+	private Long hisID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String tYPE = null;
+	private String type = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PATH")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String pATH = null;
+	private String path = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REMARKS")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
-	private String rEMARKS = null;
+	private String remarks = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date cREATEDATE = null;
+	private java.sql.Date createDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(6)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time cREATETIME = null;
+	private java.sql.Time createTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -70,58 +70,58 @@ public class T09PerHisStreamDTO extends T09PerHisStreamDTOSupport implements jav
 		this.iD = iD;
 	}
 
-	public Long getHISID() {
-		return this.hISID;
+	public Long getHisID() {
+		return this.hisID;
 	}
 
-	public void setHISID(
-			Long hISID) {
-		this.hISID = hISID;
+	public void setHisID(
+			Long hisID) {
+		this.hisID = hisID;
 	}
 
-	public String getTYPE() {
-		return this.tYPE;
+	public String getType() {
+		return this.type;
 	}
 
-	public void setTYPE(
-			String tYPE) {
-		this.tYPE = tYPE;
+	public void setType(
+			String type) {
+		this.type = type;
 	}
 
-	public String getPATH() {
-		return this.pATH;
+	public String getPath() {
+		return this.path;
 	}
 
-	public void setPATH(
-			String pATH) {
-		this.pATH = pATH;
+	public void setPath(
+			String path) {
+		this.path = path;
 	}
 
-	public String getREMARKS() {
-		return this.rEMARKS;
+	public String getRemarks() {
+		return this.remarks;
 	}
 
-	public void setREMARKS(
-			String rEMARKS) {
-		this.rEMARKS = rEMARKS;
+	public void setRemarks(
+			String remarks) {
+		this.remarks = remarks;
 	}
 
-	public java.sql.Date getCREATEDATE() {
-		return this.cREATEDATE;
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
 	}
 
-	public void setCREATEDATE(
-			java.sql.Date cREATEDATE) {
-		this.cREATEDATE = cREATEDATE;
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
 	}
 
-	public java.sql.Time getCREATETIME() {
-		return this.cREATETIME;
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
 	}
 
-	public void setCREATETIME(
-			java.sql.Time cREATETIME) {
-		this.cREATETIME = cREATETIME;
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
   	/* (non-Javadoc)

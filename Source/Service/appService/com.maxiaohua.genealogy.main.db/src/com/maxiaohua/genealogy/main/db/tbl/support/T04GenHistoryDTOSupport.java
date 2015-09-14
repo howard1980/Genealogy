@@ -13,7 +13,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T04GenHistoryDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T04GenHistoryDTOSupport extends BaseTableDTO {

@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T13NoticeDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T13_NOTICE")
@@ -32,42 +32,42 @@ public class T13NoticeDTO extends T13NoticeDTOSupport implements java.io.Seriali
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 4000, max = 4000)
-	private String nOTICE = null;
+	private String notice = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("NOTICE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date nOTICEDATE = null;
+	private java.sql.Date noticeDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("NOTICE_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time nOTICETIME = null;
+	private java.sql.Time noticeTime = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double lATITUDE = null;
+	private Double latitude = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double lONGITUDE = null;
-
-	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
-	@com.maxiaohua.genealogy.fw.core.type.Index(6)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date cREATEDATE = null;
-
-	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
-	@com.maxiaohua.genealogy.fw.core.type.Index(7)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time cREATETIME = null;
+	private Double longitude = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_PER")
-	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long cREATEPER = null;
+	private Long createPer = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time createTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -78,76 +78,76 @@ public class T13NoticeDTO extends T13NoticeDTOSupport implements java.io.Seriali
 		this.iD = iD;
 	}
 
-	public String getNOTICE() {
-		return this.nOTICE;
+	public String getNotice() {
+		return this.notice;
 	}
 
-	public void setNOTICE(
-			String nOTICE) {
-		this.nOTICE = nOTICE;
+	public void setNotice(
+			String notice) {
+		this.notice = notice;
 	}
 
-	public java.sql.Date getNOTICEDATE() {
-		return this.nOTICEDATE;
+	public java.sql.Date getNoticeDate() {
+		return this.noticeDate;
 	}
 
-	public void setNOTICEDATE(
-			java.sql.Date nOTICEDATE) {
-		this.nOTICEDATE = nOTICEDATE;
+	public void setNoticeDate(
+			java.sql.Date noticeDate) {
+		this.noticeDate = noticeDate;
 	}
 
-	public java.sql.Time getNOTICETIME() {
-		return this.nOTICETIME;
+	public java.sql.Time getNoticeTime() {
+		return this.noticeTime;
 	}
 
-	public void setNOTICETIME(
-			java.sql.Time nOTICETIME) {
-		this.nOTICETIME = nOTICETIME;
+	public void setNoticeTime(
+			java.sql.Time noticeTime) {
+		this.noticeTime = noticeTime;
 	}
 
-	public Double getLATITUDE() {
-		return this.lATITUDE;
+	public Double getLatitude() {
+		return this.latitude;
 	}
 
-	public void setLATITUDE(
-			Double lATITUDE) {
-		this.lATITUDE = lATITUDE;
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
 	}
 
-	public Double getLONGITUDE() {
-		return this.lONGITUDE;
+	public Double getLongitude() {
+		return this.longitude;
 	}
 
-	public void setLONGITUDE(
-			Double lONGITUDE) {
-		this.lONGITUDE = lONGITUDE;
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
 	}
 
-	public java.sql.Date getCREATEDATE() {
-		return this.cREATEDATE;
+	public Long getCreatePer() {
+		return this.createPer;
 	}
 
-	public void setCREATEDATE(
-			java.sql.Date cREATEDATE) {
-		this.cREATEDATE = cREATEDATE;
+	public void setCreatePer(
+			Long createPer) {
+		this.createPer = createPer;
 	}
 
-	public java.sql.Time getCREATETIME() {
-		return this.cREATETIME;
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
 	}
 
-	public void setCREATETIME(
-			java.sql.Time cREATETIME) {
-		this.cREATETIME = cREATETIME;
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
 	}
 
-	public Long getCREATEPER() {
-		return this.cREATEPER;
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
 	}
 
-	public void setCREATEPER(
-			Long cREATEPER) {
-		this.cREATEPER = cREATEPER;
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
   	/* (non-Javadoc)

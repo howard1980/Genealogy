@@ -4,7 +4,6 @@
 package com.maxiaohua.genealogy.main.service.a01.dto;
 
 import com.maxiaohua.genealogy.fw.core.type.Alias;
-import com.maxiaohua.genealogy.main.biz.a01.dto.FamilyInfoDTO;
 
 /**
  * 更改家族情况的InDTO
@@ -12,7 +11,7 @@ import com.maxiaohua.genealogy.main.biz.a01.dto.FamilyInfoDTO;
  * 变更履历
  * REV.         变更日期           变更者              变更内容
  * -------      ---------------    ----------------    ------------------
- * 1.0          2015/09/06         TOOL                初次作成
+ * 1.0          2015/09/14         TOOL                初次作成
  *
  */
 @com.maxiaohua.genealogy.fw.core.type.AliasKanJi("更改家族情况")
@@ -47,27 +46,142 @@ public class FsUpdateFamilyInfoInDTO implements java.io.Serializable, Comparable
 	}
 
 	/**
-	* 家族信息  
+	* 家族ID  
 	*/
-	@Alias("家族信息")
+	@Alias("家族ID")
 	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
-	private FamilyInfoDTO familyInfo = null;
+	private String familyID = null;
 
 	/**
-	* <code>家族信息</code>返回
-	* @return <code>家族信息</code>
+	* <code>家族ID</code>返回
+	* @return <code>家族ID</code>
 	*/
-	public FamilyInfoDTO getFamilyInfo() {
-		return this.familyInfo;
+	public String getFamilyID() {
+		return this.familyID;
 	}
 
 	/**
-	* <code>familyInfo</code>设定
-	* @param familyInfo　<code>familyInfo</code>设定值
+	* <code>familyID</code>设定
+	* @param familyID　<code>familyID</code>设定值
 	*/
-	public void setFamilyInfo(
-			FamilyInfoDTO familyInfo) {
-		this.familyInfo = familyInfo;
+	public void setFamilyID(
+			String familyID) {
+		this.familyID = familyID;
+	}
+
+	/**
+	* 族徽  
+	*/
+	@Alias("族徽")
+	private String arms = null;
+
+	/**
+	* <code>族徽</code>返回
+	* @return <code>族徽</code>
+	*/
+	public String getArms() {
+		return this.arms;
+	}
+
+	/**
+	* <code>arms</code>设定
+	* @param arms　<code>arms</code>设定值
+	*/
+	public void setArms(
+			String arms) {
+		this.arms = arms;
+	}
+
+	/**
+	* 族姓  
+	*/
+	@Alias("族姓")
+	private String famileyName = null;
+
+	/**
+	* <code>族姓</code>返回
+	* @return <code>族姓</code>
+	*/
+	public String getFamileyName() {
+		return this.famileyName;
+	}
+
+	/**
+	* <code>famileyName</code>设定
+	* @param famileyName　<code>famileyName</code>设定值
+	*/
+	public void setFamileyName(
+			String famileyName) {
+		this.famileyName = famileyName;
+	}
+
+	/**
+	* 介绍（文字）  
+	*/
+	@Alias("介绍（文字）")
+	private String introductionText = null;
+
+	/**
+	* <code>介绍（文字）</code>返回
+	* @return <code>介绍（文字）</code>
+	*/
+	public String getIntroductionText() {
+		return this.introductionText;
+	}
+
+	/**
+	* <code>IntroductionText</code>设定
+	* @param IntroductionText　<code>IntroductionText</code>设定值
+	*/
+	public void setIntroductionText(
+			String introductionText) {
+		this.introductionText = introductionText;
+	}
+
+	/**
+	* 介绍（图片）  
+	*/
+	@Alias("介绍（图片）")
+	private String introductionPicture = null;
+
+	/**
+	* <code>介绍（图片）</code>返回
+	* @return <code>介绍（图片）</code>
+	*/
+	public String getIntroductionPicture() {
+		return this.introductionPicture;
+	}
+
+	/**
+	* <code>IntroductionPicture</code>设定
+	* @param IntroductionPicture　<code>IntroductionPicture</code>设定值
+	*/
+	public void setIntroductionPicture(
+			String introductionPicture) {
+		this.introductionPicture = introductionPicture;
+	}
+
+	/**
+	* 介绍（视频）  
+	*/
+	@Alias("介绍（视频）")
+	private String introductionVideo = null;
+
+	/**
+	* <code>介绍（视频）</code>返回
+	* @return <code>介绍（视频）</code>
+	*/
+	public String getIntroductionVideo() {
+		return this.introductionVideo;
+	}
+
+	/**
+	* <code>IntroductionVideo</code>设定
+	* @param IntroductionVideo　<code>IntroductionVideo</code>设定值
+	*/
+	public void setIntroductionVideo(
+			String introductionVideo) {
+		this.introductionVideo = introductionVideo;
 	}
 
   	/* (non-Javadoc)

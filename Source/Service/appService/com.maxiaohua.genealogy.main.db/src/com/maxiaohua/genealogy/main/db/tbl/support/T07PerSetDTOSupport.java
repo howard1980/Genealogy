@@ -13,7 +13,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T07PerSetDTOSupport extends BaseTableDTO {
@@ -63,13 +63,13 @@ public abstract class T07PerSetDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setSHOWTYPE(0);
+		defaultDTO.setShowType(0);
 
-		defaultDTO.setCONTACTSHOW(0);
+		defaultDTO.setContactShow(0);
 
-		defaultDTO.setVOICETYPE(0);
+		defaultDTO.setVoiceType(0);
 
 		return defaultDTO;
 	}

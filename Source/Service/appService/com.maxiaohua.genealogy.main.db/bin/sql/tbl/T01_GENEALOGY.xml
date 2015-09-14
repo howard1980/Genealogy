@@ -10,13 +10,17 @@
       ARMS ,
       VIDEO ,
       INFOMATION ,
-      BIGINT 
+      OWNER_ID ,
+      CREATE_DATE ,
+      CREATE_TIME 
     ) VALUES (
-      #{fIRSTNAME} ,
-      #{aRMS} ,
-      #{vIDEO} ,
-      #{iNFOMATION} ,
-      #{bIGINT} 
+      #{firstName} ,
+      #{arms} ,
+      #{video} ,
+      #{infomation} ,
+      #{ownerID} ,
+      #{createDate} ,
+      #{createTime} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -26,11 +30,13 @@
   <!-- Table Update -->
   <update id="T01_GENEALOGY_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     UPDATE T01_GENEALOGY SET
-      FIRST_NAME = #{fIRSTNAME} ,
-      ARMS = #{aRMS} ,
-      VIDEO = #{vIDEO} ,
-      INFOMATION = #{iNFOMATION} ,
-      BIGINT = #{bIGINT} 
+      FIRST_NAME = #{firstName} ,
+      ARMS = #{arms} ,
+      VIDEO = #{video} ,
+      INFOMATION = #{infomation} ,
+      OWNER_ID = #{ownerID} ,
+      CREATE_DATE = #{createDate} ,
+      CREATE_TIME = #{createTime} 
     WHERE
       ID = #{iD} 
   </update>
@@ -38,11 +44,13 @@
   <update id="T01_GENEALOGY_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     UPDATE T01_GENEALOGY
     <set>
-      <if test="fIRSTNAME!=null">FIRST_NAME = #{fIRSTNAME},</if>
-      <if test="aRMS!=null">ARMS = #{aRMS},</if>
-      <if test="vIDEO!=null">VIDEO = #{vIDEO},</if>
-      <if test="iNFOMATION!=null">INFOMATION = #{iNFOMATION},</if>
-      <if test="bIGINT!=null">BIGINT = #{bIGINT},</if>
+      <if test="firstName!=null">FIRST_NAME = #{firstName},</if>
+      <if test="arms!=null">ARMS = #{arms},</if>
+      <if test="video!=null">VIDEO = #{video},</if>
+      <if test="infomation!=null">INFOMATION = #{infomation},</if>
+      <if test="ownerID!=null">OWNER_ID = #{ownerID},</if>
+      <if test="createDate!=null">CREATE_DATE = #{createDate},</if>
+      <if test="createTime!=null">CREATE_TIME = #{createTime},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -59,11 +67,13 @@
   <select id="T01_GENEALOGY_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     WHERE
       ID = #{iD} 
@@ -73,11 +83,13 @@
   <select id="T01_GENEALOGY_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     WHERE
       ID = #{iD} 
@@ -88,19 +100,23 @@
   <select id="T01_GENEALOGY_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="fIRSTNAME != null">AND FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="aRMS != null">AND ARMS = #{aRMS}</if>
-      <if test="vIDEO != null">AND VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
-      <if test="bIGINT != null">AND BIGINT = #{bIGINT}</if>
+      <if test="firstName != null">AND FIRST_NAME = #{firstName}</if>
+      <if test="arms != null">AND ARMS = #{arms}</if>
+      <if test="video != null">AND VIDEO = #{video}</if>
+      <if test="infomation != null">AND INFOMATION = #{infomation}</if>
+      <if test="ownerID != null">AND OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -113,19 +129,23 @@
   <select id="T01_GENEALOGY_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="fIRSTNAME != null">OR FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="aRMS != null">OR ARMS = #{aRMS}</if>
-      <if test="vIDEO != null">OR VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
-      <if test="bIGINT != null">OR BIGINT = #{bIGINT}</if>
+      <if test="firstName != null">OR FIRST_NAME = #{firstName}</if>
+      <if test="arms != null">OR ARMS = #{arms}</if>
+      <if test="video != null">OR VIDEO = #{video}</if>
+      <if test="infomation != null">OR INFOMATION = #{infomation}</if>
+      <if test="ownerID != null">OR OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -138,19 +158,23 @@
   <select id="T01_GENEALOGY_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="fIRSTNAME != null">AND FIRST_NAME LIKE '%'|| #{fIRSTNAME} ||'%'</if>
-      <if test="aRMS != null">AND ARMS LIKE '%'|| #{aRMS} ||'%'</if>
-      <if test="vIDEO != null">AND VIDEO LIKE '%'|| #{vIDEO} ||'%'</if>
-      <if test="iNFOMATION != null">AND INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
-      <if test="bIGINT != null">AND BIGINT LIKE '%'|| #{bIGINT} ||'%'</if>
+      <if test="firstName != null">AND FIRST_NAME LIKE '%'|| #{firstName} ||'%'</if>
+      <if test="arms != null">AND ARMS LIKE '%'|| #{arms} ||'%'</if>
+      <if test="video != null">AND VIDEO LIKE '%'|| #{video} ||'%'</if>
+      <if test="infomation != null">AND INFOMATION LIKE '%'|| #{infomation} ||'%'</if>
+      <if test="ownerID != null">AND OWNER_ID LIKE '%'|| #{ownerID} ||'%'</if>
+      <if test="createDate != null">AND CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">AND CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -163,19 +187,23 @@
   <select id="T01_GENEALOGY_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="fIRSTNAME != null">OR FIRST_NAME LIKE '%'|| #{fIRSTNAME} ||'%'</if>
-      <if test="aRMS != null">OR ARMS LIKE '%'|| #{aRMS} ||'%'</if>
-      <if test="vIDEO != null">OR VIDEO LIKE '%'|| #{vIDEO} ||'%'</if>
-      <if test="iNFOMATION != null">OR INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
-      <if test="bIGINT != null">OR BIGINT LIKE '%'|| #{bIGINT} ||'%'</if>
+      <if test="firstName != null">OR FIRST_NAME LIKE '%'|| #{firstName} ||'%'</if>
+      <if test="arms != null">OR ARMS LIKE '%'|| #{arms} ||'%'</if>
+      <if test="video != null">OR VIDEO LIKE '%'|| #{video} ||'%'</if>
+      <if test="infomation != null">OR INFOMATION LIKE '%'|| #{infomation} ||'%'</if>
+      <if test="ownerID != null">OR OWNER_ID LIKE '%'|| #{ownerID} ||'%'</if>
+      <if test="createDate != null">OR CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">OR CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -188,11 +216,13 @@
   <select id="T01_GENEALOGY_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO" parameterType="java.util.Map">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      ARMS AS "aRMS" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      BIGINT AS "bIGINT" 
+      FIRST_NAME AS "firstName" ,
+      ARMS AS "arms" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T01_GENEALOGY
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -208,11 +238,13 @@
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="fIRSTNAME != null">AND FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="aRMS != null">AND ARMS = #{aRMS}</if>
-      <if test="vIDEO != null">AND VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
-      <if test="bIGINT != null">AND BIGINT = #{bIGINT}</if>
+      <if test="firstName != null">AND FIRST_NAME = #{firstName}</if>
+      <if test="arms != null">AND ARMS = #{arms}</if>
+      <if test="video != null">AND VIDEO = #{video}</if>
+      <if test="infomation != null">AND INFOMATION = #{infomation}</if>
+      <if test="ownerID != null">AND OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 
@@ -222,11 +254,13 @@
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="fIRSTNAME != null">OR FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="aRMS != null">OR ARMS = #{aRMS}</if>
-      <if test="vIDEO != null">OR VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
-      <if test="bIGINT != null">OR BIGINT = #{bIGINT}</if>
+      <if test="firstName != null">OR FIRST_NAME = #{firstName}</if>
+      <if test="arms != null">OR ARMS = #{arms}</if>
+      <if test="video != null">OR VIDEO = #{video}</if>
+      <if test="infomation != null">OR INFOMATION = #{infomation}</if>
+      <if test="ownerID != null">OR OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 

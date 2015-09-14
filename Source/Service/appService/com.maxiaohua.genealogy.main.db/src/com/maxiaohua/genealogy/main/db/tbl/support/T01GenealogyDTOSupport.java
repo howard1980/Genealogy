@@ -5,6 +5,7 @@
 package com.maxiaohua.genealogy.main.db.tbl.support;
 
 import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
 import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
 import com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO;
 
@@ -14,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T01GenealogyDTOSupport extends BaseTableDTO {
@@ -57,7 +58,11 @@ public abstract class T01GenealogyDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_INFOMATION = "INFOMATION";
 
-	public static final String COLUMN_BIGINT = "BIGINT";
+	public static final String COLUMN_OWNER_ID = "OWNER_ID";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
 
 	public static final String TABLE = "T01_GENEALOGY";
 
@@ -66,15 +71,19 @@ public abstract class T01GenealogyDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setFIRSTNAME(StringUtil.EMPTY);
+		defaultDTO.setFirstName(StringUtil.EMPTY);
 
-		defaultDTO.setARMS(StringUtil.EMPTY);
+		defaultDTO.setArms(StringUtil.EMPTY);
 
-		defaultDTO.setVIDEO(StringUtil.EMPTY);
+		defaultDTO.setVideo(StringUtil.EMPTY);
 
-		defaultDTO.setINFOMATION(StringUtil.EMPTY);
+		defaultDTO.setInfomation(StringUtil.EMPTY);
 
-		defaultDTO.setBIGINT(0l);
+		defaultDTO.setOwnerID(0l);
+
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
+
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

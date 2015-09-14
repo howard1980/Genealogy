@@ -11,18 +11,18 @@
       NOTICE_TIME ,
       LATITUDE ,
       LONGITUDE ,
+      CREATE_PER ,
       CREATE_DATE ,
-      CREATE_TIME ,
-      CREATE_PER 
+      CREATE_TIME 
     ) VALUES (
-      #{nOTICE} ,
-      #{nOTICEDATE} ,
-      #{nOTICETIME} ,
-      #{lATITUDE} ,
-      #{lONGITUDE} ,
-      #{cREATEDATE} ,
-      #{cREATETIME} ,
-      #{cREATEPER} 
+      #{notice} ,
+      #{noticeDate} ,
+      #{noticeTime} ,
+      #{latitude} ,
+      #{longitude} ,
+      #{createPer} ,
+      #{createDate} ,
+      #{createTime} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -32,14 +32,14 @@
   <!-- Table Update -->
   <update id="T13_NOTICE_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     UPDATE T13_NOTICE SET
-      NOTICE = #{nOTICE} ,
-      NOTICE_DATE = #{nOTICEDATE} ,
-      NOTICE_TIME = #{nOTICETIME} ,
-      LATITUDE = #{lATITUDE} ,
-      LONGITUDE = #{lONGITUDE} ,
-      CREATE_DATE = #{cREATEDATE} ,
-      CREATE_TIME = #{cREATETIME} ,
-      CREATE_PER = #{cREATEPER} 
+      NOTICE = #{notice} ,
+      NOTICE_DATE = #{noticeDate} ,
+      NOTICE_TIME = #{noticeTime} ,
+      LATITUDE = #{latitude} ,
+      LONGITUDE = #{longitude} ,
+      CREATE_PER = #{createPer} ,
+      CREATE_DATE = #{createDate} ,
+      CREATE_TIME = #{createTime} 
     WHERE
       ID = #{iD} 
   </update>
@@ -47,14 +47,14 @@
   <update id="T13_NOTICE_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     UPDATE T13_NOTICE
     <set>
-      <if test="nOTICE!=null">NOTICE = #{nOTICE},</if>
-      <if test="nOTICEDATE!=null">NOTICE_DATE = #{nOTICEDATE},</if>
-      <if test="nOTICETIME!=null">NOTICE_TIME = #{nOTICETIME},</if>
-      <if test="lATITUDE!=null">LATITUDE = #{lATITUDE},</if>
-      <if test="lONGITUDE!=null">LONGITUDE = #{lONGITUDE},</if>
-      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
-      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
-      <if test="cREATEPER!=null">CREATE_PER = #{cREATEPER},</if>
+      <if test="notice!=null">NOTICE = #{notice},</if>
+      <if test="noticeDate!=null">NOTICE_DATE = #{noticeDate},</if>
+      <if test="noticeTime!=null">NOTICE_TIME = #{noticeTime},</if>
+      <if test="latitude!=null">LATITUDE = #{latitude},</if>
+      <if test="longitude!=null">LONGITUDE = #{longitude},</if>
+      <if test="createPer!=null">CREATE_PER = #{createPer},</if>
+      <if test="createDate!=null">CREATE_DATE = #{createDate},</if>
+      <if test="createTime!=null">CREATE_TIME = #{createTime},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -71,14 +71,14 @@
   <select id="T13_NOTICE_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     WHERE
       ID = #{iD} 
@@ -88,14 +88,14 @@
   <select id="T13_NOTICE_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     WHERE
       ID = #{iD} 
@@ -106,25 +106,25 @@
   <select id="T13_NOTICE_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="nOTICE != null">AND NOTICE = #{nOTICE}</if>
-      <if test="nOTICEDATE != null">AND NOTICE_DATE = #{nOTICEDATE}</if>
-      <if test="nOTICETIME != null">AND NOTICE_TIME = #{nOTICETIME}</if>
-      <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
-      <if test="cREATEPER != null">AND CREATE_PER = #{cREATEPER}</if>
+      <if test="notice != null">AND NOTICE = #{notice}</if>
+      <if test="noticeDate != null">AND NOTICE_DATE = #{noticeDate}</if>
+      <if test="noticeTime != null">AND NOTICE_TIME = #{noticeTime}</if>
+      <if test="latitude != null">AND LATITUDE = #{latitude}</if>
+      <if test="longitude != null">AND LONGITUDE = #{longitude}</if>
+      <if test="createPer != null">AND CREATE_PER = #{createPer}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -137,25 +137,25 @@
   <select id="T13_NOTICE_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="nOTICE != null">OR NOTICE = #{nOTICE}</if>
-      <if test="nOTICEDATE != null">OR NOTICE_DATE = #{nOTICEDATE}</if>
-      <if test="nOTICETIME != null">OR NOTICE_TIME = #{nOTICETIME}</if>
-      <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
-      <if test="cREATEPER != null">OR CREATE_PER = #{cREATEPER}</if>
+      <if test="notice != null">OR NOTICE = #{notice}</if>
+      <if test="noticeDate != null">OR NOTICE_DATE = #{noticeDate}</if>
+      <if test="noticeTime != null">OR NOTICE_TIME = #{noticeTime}</if>
+      <if test="latitude != null">OR LATITUDE = #{latitude}</if>
+      <if test="longitude != null">OR LONGITUDE = #{longitude}</if>
+      <if test="createPer != null">OR CREATE_PER = #{createPer}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -168,25 +168,25 @@
   <select id="T13_NOTICE_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="nOTICE != null">AND NOTICE LIKE '%'|| #{nOTICE} ||'%'</if>
-      <if test="nOTICEDATE != null">AND NOTICE_DATE LIKE '%'|| #{nOTICEDATE} ||'%'</if>
-      <if test="nOTICETIME != null">AND NOTICE_TIME LIKE '%'|| #{nOTICETIME} ||'%'</if>
-      <if test="lATITUDE != null">AND LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
-      <if test="lONGITUDE != null">AND LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
-      <if test="cREATEPER != null">AND CREATE_PER LIKE '%'|| #{cREATEPER} ||'%'</if>
+      <if test="notice != null">AND NOTICE LIKE '%'|| #{notice} ||'%'</if>
+      <if test="noticeDate != null">AND NOTICE_DATE LIKE '%'|| #{noticeDate} ||'%'</if>
+      <if test="noticeTime != null">AND NOTICE_TIME LIKE '%'|| #{noticeTime} ||'%'</if>
+      <if test="latitude != null">AND LATITUDE LIKE '%'|| #{latitude} ||'%'</if>
+      <if test="longitude != null">AND LONGITUDE LIKE '%'|| #{longitude} ||'%'</if>
+      <if test="createPer != null">AND CREATE_PER LIKE '%'|| #{createPer} ||'%'</if>
+      <if test="createDate != null">AND CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">AND CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -199,25 +199,25 @@
   <select id="T13_NOTICE_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="nOTICE != null">OR NOTICE LIKE '%'|| #{nOTICE} ||'%'</if>
-      <if test="nOTICEDATE != null">OR NOTICE_DATE LIKE '%'|| #{nOTICEDATE} ||'%'</if>
-      <if test="nOTICETIME != null">OR NOTICE_TIME LIKE '%'|| #{nOTICETIME} ||'%'</if>
-      <if test="lATITUDE != null">OR LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
-      <if test="lONGITUDE != null">OR LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
-      <if test="cREATEPER != null">OR CREATE_PER LIKE '%'|| #{cREATEPER} ||'%'</if>
+      <if test="notice != null">OR NOTICE LIKE '%'|| #{notice} ||'%'</if>
+      <if test="noticeDate != null">OR NOTICE_DATE LIKE '%'|| #{noticeDate} ||'%'</if>
+      <if test="noticeTime != null">OR NOTICE_TIME LIKE '%'|| #{noticeTime} ||'%'</if>
+      <if test="latitude != null">OR LATITUDE LIKE '%'|| #{latitude} ||'%'</if>
+      <if test="longitude != null">OR LONGITUDE LIKE '%'|| #{longitude} ||'%'</if>
+      <if test="createPer != null">OR CREATE_PER LIKE '%'|| #{createPer} ||'%'</if>
+      <if test="createDate != null">OR CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">OR CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -230,14 +230,14 @@
   <select id="T13_NOTICE_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO" parameterType="java.util.Map">
     SELECT
       ID AS "iD" ,
-      NOTICE AS "nOTICE" ,
-      NOTICE_DATE AS "nOTICEDATE" ,
-      NOTICE_TIME AS "nOTICETIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" ,
-      CREATE_PER AS "cREATEPER" 
+      NOTICE AS "notice" ,
+      NOTICE_DATE AS "noticeDate" ,
+      NOTICE_TIME AS "noticeTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      CREATE_PER AS "createPer" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T13_NOTICE
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -253,14 +253,14 @@
     FROM T13_NOTICE
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="nOTICE != null">AND NOTICE = #{nOTICE}</if>
-      <if test="nOTICEDATE != null">AND NOTICE_DATE = #{nOTICEDATE}</if>
-      <if test="nOTICETIME != null">AND NOTICE_TIME = #{nOTICETIME}</if>
-      <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
-      <if test="cREATEPER != null">AND CREATE_PER = #{cREATEPER}</if>
+      <if test="notice != null">AND NOTICE = #{notice}</if>
+      <if test="noticeDate != null">AND NOTICE_DATE = #{noticeDate}</if>
+      <if test="noticeTime != null">AND NOTICE_TIME = #{noticeTime}</if>
+      <if test="latitude != null">AND LATITUDE = #{latitude}</if>
+      <if test="longitude != null">AND LONGITUDE = #{longitude}</if>
+      <if test="createPer != null">AND CREATE_PER = #{createPer}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 
@@ -270,14 +270,14 @@
     FROM T13_NOTICE
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="nOTICE != null">OR NOTICE = #{nOTICE}</if>
-      <if test="nOTICEDATE != null">OR NOTICE_DATE = #{nOTICEDATE}</if>
-      <if test="nOTICETIME != null">OR NOTICE_TIME = #{nOTICETIME}</if>
-      <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
-      <if test="cREATEPER != null">OR CREATE_PER = #{cREATEPER}</if>
+      <if test="notice != null">OR NOTICE = #{notice}</if>
+      <if test="noticeDate != null">OR NOTICE_DATE = #{noticeDate}</if>
+      <if test="noticeTime != null">OR NOTICE_TIME = #{noticeTime}</if>
+      <if test="latitude != null">OR LATITUDE = #{latitude}</if>
+      <if test="longitude != null">OR LONGITUDE = #{longitude}</if>
+      <if test="createPer != null">OR CREATE_PER = #{createPer}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 

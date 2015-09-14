@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.view.VCustomerLicencePlateDTO"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.ServiceItemsDTO"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.WashOrderDTO"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.base.StatementUtil.KEYWORD"/>
-<fullyQualifiedTypeName name="com.beetlestech.nfe.fw.core.wechet.WechetPay.WechetQuery"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.db.tbl.WeixinPayDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.biz.a01.dto.CashCouponDTO"/>
 <fullyQualifiedTypeName name="com.beetlestech.nfe.main.service.a01.dto.SsCreateCashCouponOrderOutDTO"/>
@@ -60,4 +55,9 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="com.cloopen.rest.sdk.CCPRestSDK"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.a01.dto.FamilyInfoDTO"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.biz.a01.GbFamily"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.db.constant.SQLID"/>
+<fullyQualifiedTypeName name="com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO"/>
 </qualifiedTypeNameHistroy>

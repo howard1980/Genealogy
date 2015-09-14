@@ -14,7 +14,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T12PerHisCommentDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T12PerHisCommentDTOSupport extends BaseTableDTO {
@@ -62,11 +62,11 @@ public abstract class T12PerHisCommentDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setHISID(0l);
+		defaultDTO.setHisID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setCOMMENT(StringUtil.EMPTY);
+		defaultDTO.setComment(StringUtil.EMPTY);
 
 		return defaultDTO;
 	}

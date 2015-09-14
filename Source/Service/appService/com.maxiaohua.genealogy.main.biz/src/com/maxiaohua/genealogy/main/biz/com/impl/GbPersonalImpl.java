@@ -2,11 +2,12 @@ package com.maxiaohua.genealogy.main.biz.com.impl;
 
 import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
 import com.maxiaohua.genealogy.main.biz.com.GbPersonal;
-import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
 import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
 import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
 import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+import com.maxiaohua.genealogy.main.db.constant.SQLID;
 import com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO;
+import com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO;
 
 public class GbPersonalImpl extends AbstractDBLogic implements GbPersonal, HbMessageCode, CommonConstant, 
 		CtgCodeConstant {
@@ -24,15 +25,15 @@ public class GbPersonalImpl extends AbstractDBLogic implements GbPersonal, HbMes
 		}
 		
 		T02PersonalDTO personal = new T02PersonalDTO();
-		personal.setMOBILE(mobile);
+		personal.setMobile(mobile);
 		if(queryDAO.queryForObject(T02PersonalDTO.EQUAL_SEARCH, personal) != null){
 			createApplicationException(M10050WC);
 		}
 		
-		personal.setLONGITUDE(longitude);
-		personal.setLATITUDE(latitude);
-		personal.setREGEDITDATE(getCurrentDate());
-		personal.setREGEDITTIME(getCurrentTime());
+		personal.setLongitude(longitude);
+		personal.setLatitude(latitude);
+		personal.setRegeditDate(getCurrentDate());
+		personal.setRegeditTime(getCurrentTime());
 		updateDAO.updateOne(T02PersonalDTO.INSERT, personal, M10190WS, SH_INFO);
 		
 //		hbJPush.updateCustomerJPush(personal.getID(), registrationID, ismi);
@@ -41,32 +42,56 @@ public class GbPersonalImpl extends AbstractDBLogic implements GbPersonal, HbMes
 	}
 
 	@Override
-	public void updateInfo(String userID, UserInfoDTO userInfo) {
+	public void updateInfo(String userID, String clansmanID, String fisrtName, String lastName, Integer sex, 
+			java.sql.Date birthday, java.sql.Time birthTime, String mobile, String maile, String backPath, 
+			String selfPath, String[] picture, String[] video, String getProfile){
 		T02PersonalDTO personal = new T02PersonalDTO();
-		if(userID.equals(userInfo.getUserID())){
-			personal.setID(Long.parseLong(userInfo.getUserID()));
+		if(userID.equals(clansmanID)){
+			personal.setID(Long.parseLong(clansmanID));
 			if(queryDAO.queryForObject(T02PersonalDTO.EQUAL_SEARCH, personal) != null){
 				createApplicationException(M10140CM);
 			}
 		}
 		else{
-			personal.setID(Long.parseLong(userInfo.getUserID()));
-			personal.setOWNERID(Long.parseLong(userID));
+			personal.setID(Long.parseLong(clansmanID));
+			personal.setOwnerID(Long.parseLong(userID));
 			if(queryDAO.queryForObject(T02PersonalDTO.EQUAL_SEARCH, personal) != null){
 				createApplicationException(M10100CM);
 			}
 		}
 
-		personal.setFIRSTNAME(userInfo.getFisrtName());
-		personal.setLASTNAME(userInfo.getLastName());
-		personal.setSEX(userInfo.getSex());
-		personal.setBIRTHDATE(userInfo.getBirthday());
-		personal.setMOBILE(userInfo.getMobile());
-		personal.setMAILE(userInfo.getMaile());
-		personal.setCOVER(userInfo.getBackPath());
-		personal.setHEADPORTRAIT(userInfo.getSelfPath());
-		personal.setINFOMATION(userInfo.getProfile());
+		personal.setFirstName(fisrtName);
+		personal.setLastName(lastName);
+		personal.setSex(sex);
+		personal.setBirthDate(birthday);
+		personal.setBirthTime(birthTime);
+		personal.setMobile(mobile);
+		personal.setMaile(maile);
+		personal.setCover(backPath);
+		personal.setHeadPortrait(selfPath);
+		personal.setInfomation(getProfile);
 
 		this.updateDAO.update(T02PersonalDTO.UPDATE, personal);
+		
+		T10PerStreamDTO perStreamDTO = new T10PerStreamDTO();
+		perStreamDTO.setPerID(personal.getID());
+		this.updateDAO.update(SQLID.DELETE_PERSTREAM, perStreamDTO);
+		
+		for(String item : picture){
+			perStreamDTO = new T10PerStreamDTO();
+			perStreamDTO.setPerID(personal.getID());
+			perStreamDTO.setPath(item);
+			perStreamDTO.setType(STREAMTYPE.PICTURE.toString());
+			this.updateDAO.update(T10PerStreamDTO.INSERT, perStreamDTO);
+		}
+		
+		for(String item : video){
+			perStreamDTO = new T10PerStreamDTO();
+			perStreamDTO.setPerID(personal.getID());
+			perStreamDTO.setPath(item);
+			perStreamDTO.setType(STREAMTYPE.VIDEO.toString());
+			this.updateDAO.update(T10PerStreamDTO.INSERT, perStreamDTO);
+		}
+		
 	}
 }

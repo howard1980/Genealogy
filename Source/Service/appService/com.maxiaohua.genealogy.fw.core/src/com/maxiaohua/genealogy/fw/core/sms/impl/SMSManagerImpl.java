@@ -7,8 +7,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Set;
 
 import com.cloopen.rest.sdk.CCPRestSDK;
 import com.maxiaohua.genealogy.fw.core.log.DebugLogger;
@@ -60,7 +58,7 @@ public class SMSManagerImpl implements SMSManager{
 	
 	@Override
 	public boolean sendVerifyCode(String mobile, String verifyCode) {
-		HashMap<String, Object> result = null;
+//		HashMap<String, Object> result = null;
 
 		CCPRestSDK restAPI = new CCPRestSDK();
 		restAPI.init("sandboxapp.cloopen.com", "8883");
@@ -71,23 +69,25 @@ public class SMSManagerImpl implements SMSManager{
 		restAPI.setAppId("8a48b5514fa577af014faab6c1400e60");
 		// 初始化应用ID，如果是在沙盒环境开发，
 		// 请配置"控制台-应用-测试DEMO"中的APPID。如切换到生产环境，请使用自己创建应用的APPID
-		result = restAPI.voiceVerify(verifyCode, mobile, "", "3", "http://localhost:8080/genealogy/app/FsGetValidCode", 
+		restAPI.voiceVerify(verifyCode, mobile, "", "3", "http://localhost:8080/genealogy/app/FsGetValidCode", 
 				"", "", "", "");
+//		result = restAPI.voiceVerify(verifyCode, mobile, "", "3", "http://localhost:8080/genealogy/app/FsGetValidCode", 
+//				"", "", "", "");
 //		System.out.println("SDKTestVoiceVerify result=" + result);
-		if ("000000".equals(result.get("statusCode"))) {
-			// 正常返回输出data包体信息（map）
-			@SuppressWarnings("unchecked")
-			HashMap<String, Object> data = (HashMap<String, Object>) result.get("data");
-			Set<String> keySet = data.keySet();
-			for (String key : keySet) {
-				Object object = data.get(key);
-				System.out.println(key + " = " + object);
-			}
-		} else {
-			// 异常返回输出错误码和错误信息
-//			System.out.println("错误码=" + result.get("statusCode") + " 错误信息= "
-//					+ result.get("statusMsg"));
-		}
+//		if ("000000".equals(result.get("statusCode"))) {
+//			// 正常返回输出data包体信息（map）
+//			@SuppressWarnings("unchecked")
+//			HashMap<String, Object> data = (HashMap<String, Object>) result.get("data");
+//			Set<String> keySet = data.keySet();
+//			for (String key : keySet) {
+//				Object object = data.get(key);
+//				System.out.println(key + " = " + object);
+//			}
+//		} else {
+//			// 异常返回输出错误码和错误信息
+////			System.out.println("错误码=" + result.get("statusCode") + " 错误信息= "
+////					+ result.get("statusMsg"));
+//		}
 		return true;
 	}
 

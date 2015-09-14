@@ -14,7 +14,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T10PerStreamDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T10PerStreamDTOSupport extends BaseTableDTO {
@@ -64,13 +64,13 @@ public abstract class T10PerStreamDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setTYPE(StringUtil.EMPTY);
+		defaultDTO.setType(StringUtil.EMPTY);
 
-		defaultDTO.setPATH(StringUtil.EMPTY);
+		defaultDTO.setPath(StringUtil.EMPTY);
 
-		defaultDTO.setREMARKS(StringUtil.EMPTY);
+		defaultDTO.setRemarks(StringUtil.EMPTY);
 
 		return defaultDTO;
 	}

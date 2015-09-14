@@ -13,7 +13,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T11PerSpouseDTOSupport extends BaseTableDTO {
@@ -59,9 +59,9 @@ public abstract class T11PerSpouseDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setSPOID(0l);
+		defaultDTO.setSpoID(0l);
 
 		return defaultDTO;
 	}

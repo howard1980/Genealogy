@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T03GenMemberDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T03_GEN_MEMBER")
@@ -32,23 +32,41 @@ public class T03GenMemberDTO extends T03GenMemberDTOSupport implements java.io.S
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Long gENID = null;
+	private Long genID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("FAR_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long fARID = null;
+	private Long farID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("MOT_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long mOTID = null;
+	private Long motID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ONWER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long onwerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Time createTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -59,40 +77,67 @@ public class T03GenMemberDTO extends T03GenMemberDTOSupport implements java.io.S
 		this.iD = iD;
 	}
 
-	public Long getGENID() {
-		return this.gENID;
+	public Long getGenID() {
+		return this.genID;
 	}
 
-	public void setGENID(
-			Long gENID) {
-		this.gENID = gENID;
+	public void setGenID(
+			Long genID) {
+		this.genID = genID;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public Long getFARID() {
-		return this.fARID;
+	public Long getFarID() {
+		return this.farID;
 	}
 
-	public void setFARID(
-			Long fARID) {
-		this.fARID = fARID;
+	public void setFarID(
+			Long farID) {
+		this.farID = farID;
 	}
 
-	public Long getMOTID() {
-		return this.mOTID;
+	public Long getMotID() {
+		return this.motID;
 	}
 
-	public void setMOTID(
-			Long mOTID) {
-		this.mOTID = mOTID;
+	public void setMotID(
+			Long motID) {
+		this.motID = motID;
+	}
+
+	public Long getOnwerID() {
+		return this.onwerID;
+	}
+
+	public void setOnwerID(
+			Long onwerID) {
+		this.onwerID = onwerID;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
   	/* (non-Javadoc)

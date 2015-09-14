@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T13NoticeDTOSupport extends BaseTableDTO {
@@ -60,11 +60,11 @@ public abstract class T13NoticeDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_LONGITUDE = "LONGITUDE";
 
+	public static final String COLUMN_CREATE_PER = "CREATE_PER";
+
 	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
 
 	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
-
-	public static final String COLUMN_CREATE_PER = "CREATE_PER";
 
 	public static final String TABLE = "T13_NOTICE";
 
@@ -73,21 +73,21 @@ public abstract class T13NoticeDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setNOTICE(StringUtil.EMPTY);
+		defaultDTO.setNotice(StringUtil.EMPTY);
 
-		defaultDTO.setNOTICEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setNoticeDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setNOTICETIME(DateUtil.getDefaultTime());
+		defaultDTO.setNoticeTime(DateUtil.getDefaultTime());
 
-		defaultDTO.setLATITUDE(0.0);
+		defaultDTO.setLatitude(0.0);
 
-		defaultDTO.setLONGITUDE(0.0);
+		defaultDTO.setLongitude(0.0);
 
-		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setCreatePer(0l);
 
-		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setCREATEPER(0l);
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

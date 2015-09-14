@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T06PerHistoryDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T06_PER_HISTORY")
@@ -32,77 +32,77 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("EVENT_TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Integer eVENTTYPE = null;
+	private Integer eventType = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("EVENT_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Date eVENTDATE = null;
+	private java.sql.Date eventDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("EVENT_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Time eVENTTIME = null;
+	private java.sql.Time eventTime = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double lATITUDE = null;
+	private Double latitude = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(6)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double lONGITUDE = null;
+	private Double longitude = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("TITLE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(7)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String tITLE = null;
+	private String title = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("COVERIMAGE")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("COVER_IMAGE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(8)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String cOVERIMAGE = null;
+	private String coverImage = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PRAISE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(9)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer pRAISE = null;
+	private Integer praise = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("ISPUBLIC")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("IS_PUBLIC")
 	@com.maxiaohua.genealogy.fw.core.type.Index(10)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Integer iSPUBLIC = null;
+	private Integer isPublic = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REMARKS")
 	@com.maxiaohua.genealogy.fw.core.type.Index(11)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 4000, max = 4000)
-	private String rEMARKS = null;
+	private String remarks = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(12)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Date cREATEDATE = null;
+	private java.sql.Date createDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(13)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Time cREATETIME = null;
+	private java.sql.Time createTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -113,121 +113,121 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 		this.iD = iD;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public Integer getEVENTTYPE() {
-		return this.eVENTTYPE;
+	public Integer getEventType() {
+		return this.eventType;
 	}
 
-	public void setEVENTTYPE(
-			Integer eVENTTYPE) {
-		this.eVENTTYPE = eVENTTYPE;
+	public void setEventType(
+			Integer eventType) {
+		this.eventType = eventType;
 	}
 
-	public java.sql.Date getEVENTDATE() {
-		return this.eVENTDATE;
+	public java.sql.Date getEventDate() {
+		return this.eventDate;
 	}
 
-	public void setEVENTDATE(
-			java.sql.Date eVENTDATE) {
-		this.eVENTDATE = eVENTDATE;
+	public void setEventDate(
+			java.sql.Date eventDate) {
+		this.eventDate = eventDate;
 	}
 
-	public java.sql.Time getEVENTTIME() {
-		return this.eVENTTIME;
+	public java.sql.Time getEventTime() {
+		return this.eventTime;
 	}
 
-	public void setEVENTTIME(
-			java.sql.Time eVENTTIME) {
-		this.eVENTTIME = eVENTTIME;
+	public void setEventTime(
+			java.sql.Time eventTime) {
+		this.eventTime = eventTime;
 	}
 
-	public Double getLATITUDE() {
-		return this.lATITUDE;
+	public Double getLatitude() {
+		return this.latitude;
 	}
 
-	public void setLATITUDE(
-			Double lATITUDE) {
-		this.lATITUDE = lATITUDE;
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
 	}
 
-	public Double getLONGITUDE() {
-		return this.lONGITUDE;
+	public Double getLongitude() {
+		return this.longitude;
 	}
 
-	public void setLONGITUDE(
-			Double lONGITUDE) {
-		this.lONGITUDE = lONGITUDE;
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
 	}
 
-	public String getTITLE() {
-		return this.tITLE;
+	public String getTitle() {
+		return this.title;
 	}
 
-	public void setTITLE(
-			String tITLE) {
-		this.tITLE = tITLE;
+	public void setTitle(
+			String title) {
+		this.title = title;
 	}
 
-	public String getCOVERIMAGE() {
-		return this.cOVERIMAGE;
+	public String getCoverImage() {
+		return this.coverImage;
 	}
 
-	public void setCOVERIMAGE(
-			String cOVERIMAGE) {
-		this.cOVERIMAGE = cOVERIMAGE;
+	public void setCoverImage(
+			String coverImage) {
+		this.coverImage = coverImage;
 	}
 
-	public Integer getPRAISE() {
-		return this.pRAISE;
+	public Integer getPraise() {
+		return this.praise;
 	}
 
-	public void setPRAISE(
-			Integer pRAISE) {
-		this.pRAISE = pRAISE;
+	public void setPraise(
+			Integer praise) {
+		this.praise = praise;
 	}
 
-	public Integer getISPUBLIC() {
-		return this.iSPUBLIC;
+	public Integer getIsPublic() {
+		return this.isPublic;
 	}
 
-	public void setISPUBLIC(
-			Integer iSPUBLIC) {
-		this.iSPUBLIC = iSPUBLIC;
+	public void setIsPublic(
+			Integer isPublic) {
+		this.isPublic = isPublic;
 	}
 
-	public String getREMARKS() {
-		return this.rEMARKS;
+	public String getRemarks() {
+		return this.remarks;
 	}
 
-	public void setREMARKS(
-			String rEMARKS) {
-		this.rEMARKS = rEMARKS;
+	public void setRemarks(
+			String remarks) {
+		this.remarks = remarks;
 	}
 
-	public java.sql.Date getCREATEDATE() {
-		return this.cREATEDATE;
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
 	}
 
-	public void setCREATEDATE(
-			java.sql.Date cREATEDATE) {
-		this.cREATEDATE = cREATEDATE;
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
 	}
 
-	public java.sql.Time getCREATETIME() {
-		return this.cREATETIME;
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
 	}
 
-	public void setCREATETIME(
-			java.sql.Time cREATETIME) {
-		this.cREATETIME = cREATETIME;
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
   	/* (non-Javadoc)

@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T15NoticeAttentionDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T15_NOTICE_ATTENTION")
@@ -31,12 +31,20 @@ public class T15NoticeAttentionDTO extends T15NoticeAttentionDTOSupport implemen
 	@com.maxiaohua.genealogy.fw.core.type.Alias("NOT_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long nOTID = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long notID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long pERID = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long perID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("STATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(3)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Integer state = null;
 
 	public Long getID() {
 		return this.iD;
@@ -47,22 +55,31 @@ public class T15NoticeAttentionDTO extends T15NoticeAttentionDTOSupport implemen
 		this.iD = iD;
 	}
 
-	public Long getNOTID() {
-		return this.nOTID;
+	public Long getNotID() {
+		return this.notID;
 	}
 
-	public void setNOTID(
-			Long nOTID) {
-		this.nOTID = nOTID;
+	public void setNotID(
+			Long notID) {
+		this.notID = notID;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
+	}
+
+	public Integer getState() {
+		return this.state;
+	}
+
+	public void setState(
+			Integer state) {
+		this.state = state;
 	}
 
   	/* (non-Javadoc)

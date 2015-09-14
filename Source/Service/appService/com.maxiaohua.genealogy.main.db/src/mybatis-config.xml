@@ -46,7 +46,7 @@
 		<mapper resource="sql/tbl/T11_PER_SPOUSE.xml" />
 		<mapper resource="sql/tbl/T12_PER_HIS_COMMENT.xml" />
 		<mapper resource="sql/tbl/T13_NOTICE.xml" />
-		<mapper resource="sql/tbl/T14_NOTICE_PER.xml" />
+		<mapper resource="sql/tbl/T14_NOTICE_PRAISE.xml" />
 		<mapper resource="sql/tbl/T15_NOTICE_ATTENTION.xml" />
 		<mapper resource="sql/tbl/T16_NOTICE_COMMENT.xml" />
 		<mapper resource="sql/tbl/T17_PER_QUESTION.xml" />

@@ -9,8 +9,8 @@
       PER_ID ,
       SPO_ID 
     ) VALUES (
-      #{pERID} ,
-      #{sPOID} 
+      #{perID} ,
+      #{spoID} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -20,8 +20,8 @@
   <!-- Table Update -->
   <update id="T11_PER_SPOUSE_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     UPDATE T11_PER_SPOUSE SET
-      PER_ID = #{pERID} ,
-      SPO_ID = #{sPOID} 
+      PER_ID = #{perID} ,
+      SPO_ID = #{spoID} 
     WHERE
       ID = #{iD} 
   </update>
@@ -29,8 +29,8 @@
   <update id="T11_PER_SPOUSE_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     UPDATE T11_PER_SPOUSE
     <set>
-      <if test="pERID!=null">PER_ID = #{pERID},</if>
-      <if test="sPOID!=null">SPO_ID = #{sPOID},</if>
+      <if test="perID!=null">PER_ID = #{perID},</if>
+      <if test="spoID!=null">SPO_ID = #{spoID},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -47,8 +47,8 @@
   <select id="T11_PER_SPOUSE_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     WHERE
       ID = #{iD} 
@@ -58,8 +58,8 @@
   <select id="T11_PER_SPOUSE_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     WHERE
       ID = #{iD} 
@@ -70,13 +70,13 @@
   <select id="T11_PER_SPOUSE_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="pERID != null">AND PER_ID = #{pERID}</if>
-      <if test="sPOID != null">AND SPO_ID = #{sPOID}</if>
+      <if test="perID != null">AND PER_ID = #{perID}</if>
+      <if test="spoID != null">AND SPO_ID = #{spoID}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -89,13 +89,13 @@
   <select id="T11_PER_SPOUSE_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="pERID != null">OR PER_ID = #{pERID}</if>
-      <if test="sPOID != null">OR SPO_ID = #{sPOID}</if>
+      <if test="perID != null">OR PER_ID = #{perID}</if>
+      <if test="spoID != null">OR SPO_ID = #{spoID}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -108,13 +108,13 @@
   <select id="T11_PER_SPOUSE_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="pERID != null">AND PER_ID LIKE '%'|| #{pERID} ||'%'</if>
-      <if test="sPOID != null">AND SPO_ID LIKE '%'|| #{sPOID} ||'%'</if>
+      <if test="perID != null">AND PER_ID LIKE '%'|| #{perID} ||'%'</if>
+      <if test="spoID != null">AND SPO_ID LIKE '%'|| #{spoID} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -127,13 +127,13 @@
   <select id="T11_PER_SPOUSE_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="pERID != null">OR PER_ID LIKE '%'|| #{pERID} ||'%'</if>
-      <if test="sPOID != null">OR SPO_ID LIKE '%'|| #{sPOID} ||'%'</if>
+      <if test="perID != null">OR PER_ID LIKE '%'|| #{perID} ||'%'</if>
+      <if test="spoID != null">OR SPO_ID LIKE '%'|| #{spoID} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -146,8 +146,8 @@
   <select id="T11_PER_SPOUSE_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T11PerSpouseDTO" parameterType="java.util.Map">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      SPO_ID AS "sPOID" 
+      PER_ID AS "perID" ,
+      SPO_ID AS "spoID" 
     FROM T11_PER_SPOUSE
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -163,8 +163,8 @@
     FROM T11_PER_SPOUSE
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="pERID != null">AND PER_ID = #{pERID}</if>
-      <if test="sPOID != null">AND SPO_ID = #{sPOID}</if>
+      <if test="perID != null">AND PER_ID = #{perID}</if>
+      <if test="spoID != null">AND SPO_ID = #{spoID}</if>
     </where>
   </select>
 
@@ -174,8 +174,8 @@
     FROM T11_PER_SPOUSE
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="pERID != null">OR PER_ID = #{pERID}</if>
-      <if test="sPOID != null">OR SPO_ID = #{sPOID}</if>
+      <if test="perID != null">OR PER_ID = #{perID}</if>
+      <if test="spoID != null">OR SPO_ID = #{spoID}</if>
     </where>
   </select>
 

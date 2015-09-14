@@ -22,20 +22,20 @@ public class HbSystemInfoImpl extends AbstractDBLogic implements HbSystemInfo,
 		AppVersionDTO appVersion = new AppVersionDTO();
 		
 		M02SystemVersionDTO systemVersionSearch = new M02SystemVersionDTO();
-		systemVersionSearch.setDELFLG(Integer.parseInt(DELETE_FLG.NO_DELETED.toString()));
+		systemVersionSearch.setDelFlg(Integer.parseInt(DELETE_FLG.NO_DELETED.toString()));
 		systemVersionSearch.setIMSI(type);
 
 		List<M02SystemVersionDTO> versionArray = this.queryDAO.queryForObjectList(
 				M02SystemVersionDTO.EQUAL_SEARCH, systemVersionSearch);
 		
 		if (CollectionUtil.isNotEmpty(versionArray)) {
-			if(versionArray.get(0).getVERSION() == version){
+			if(versionArray.get(0).getVersion().compareTo(version) == 0){
 				appVersion.setUpdate(false);
 			}
 			else{
 				appVersion.setUpdate(true);
-				appVersion.setDownloadUrl(versionArray.get(0).getLOADPATH());
-				appVersion.setDescrip(versionArray.get(0).getDESCRIP());
+				appVersion.setDownloadUrl(versionArray.get(0).getLoadPath());
+				appVersion.setDescrip(versionArray.get(0).getDescrip());
 			}
 		}
 		else{

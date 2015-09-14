@@ -14,7 +14,7 @@ import com.maxiaohua.genealogy.main.db.tbl.M02SystemVersionDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class M02SystemVersionDTOSupport extends BaseTableDTO {
@@ -70,15 +70,15 @@ public abstract class M02SystemVersionDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setIMSI(0);
 
-		defaultDTO.setCHANNEL(0);
+		defaultDTO.setChannel(0);
 
-		defaultDTO.setVERSION(0.0);
+		defaultDTO.setVersion(0.0);
 
-		defaultDTO.setLOADPATH(StringUtil.EMPTY);
+		defaultDTO.setLoadPath(StringUtil.EMPTY);
 
-		defaultDTO.setDESCRIP(StringUtil.EMPTY);
+		defaultDTO.setDescrip(StringUtil.EMPTY);
 
-		defaultDTO.setDELFLG(0);
+		defaultDTO.setDelFlg(0);
 
 		return defaultDTO;
 	}

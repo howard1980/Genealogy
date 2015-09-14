@@ -5,15 +5,15 @@ package com.maxiaohua.genealogy.main.service.a01.dto;
 
 
 /**
- * 新增族人信息的OutDTO
+ * 增加家族信息的OutDTO
  *
  * 变更履历
  * REV.         变更日期           变更者              变更内容
  * -------      ---------------    ----------------    ------------------
- * 1.0          2015/09/06         TOOL                初次作成
+ * 1.0          2015/09/14         TOOL                初次作成
  *
  */
-@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("新增族人信息")
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("增加家族信息")
 public class FsAddFamilyInfoOutDTO implements java.io.Serializable, Comparable<FsAddFamilyInfoOutDTO> {
 	/**
 	* Serial ID

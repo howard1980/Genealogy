@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T07PerSetDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T07_PER_SET")
@@ -31,22 +31,22 @@ public class T07PerSetDTO extends T07PerSetDTOSupport implements java.io.Seriali
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("SHOW_TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer sHOWTYPE = null;
+	private Integer showType = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CONTACT_SHOW")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer cONTACTSHOW = null;
+	private Integer contactShow = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("VOICE_TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer vOICETYPE = null;
+	private Integer voiceType = null;
 
 	public Long getID() {
 		return this.iD;
@@ -57,40 +57,40 @@ public class T07PerSetDTO extends T07PerSetDTOSupport implements java.io.Seriali
 		this.iD = iD;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public Integer getSHOWTYPE() {
-		return this.sHOWTYPE;
+	public Integer getShowType() {
+		return this.showType;
 	}
 
-	public void setSHOWTYPE(
-			Integer sHOWTYPE) {
-		this.sHOWTYPE = sHOWTYPE;
+	public void setShowType(
+			Integer showType) {
+		this.showType = showType;
 	}
 
-	public Integer getCONTACTSHOW() {
-		return this.cONTACTSHOW;
+	public Integer getContactShow() {
+		return this.contactShow;
 	}
 
-	public void setCONTACTSHOW(
-			Integer cONTACTSHOW) {
-		this.cONTACTSHOW = cONTACTSHOW;
+	public void setContactShow(
+			Integer contactShow) {
+		this.contactShow = contactShow;
 	}
 
-	public Integer getVOICETYPE() {
-		return this.vOICETYPE;
+	public Integer getVoiceType() {
+		return this.voiceType;
 	}
 
-	public void setVOICETYPE(
-			Integer vOICETYPE) {
-		this.vOICETYPE = vOICETYPE;
+	public void setVoiceType(
+			Integer voiceType) {
+		this.voiceType = voiceType;
 	}
 
   	/* (non-Javadoc)

@@ -26,25 +26,25 @@
       CREATE_DATE ,
       CREATE_TIME 
     ) VALUES (
-      #{fIRSTNAME} ,
-      #{lASTNAME} ,
+      #{firstName} ,
+      #{lastName} ,
       #{nO} ,
-      #{mOBILE} ,
-      #{mAILE} ,
-      #{bIRTHDATE} ,
-      #{bIRTHTIME} ,
-      #{sEX} ,
-      #{cOVER} ,
-      #{hEADPORTRAIT} ,
-      #{vIDEO} ,
-      #{iNFOMATION} ,
-      #{lATITUDE} ,
-      #{lONGITUDE} ,
-      #{rEGEDITDATE} ,
-      #{rEGEDITTIME} ,
-      #{oWNERID} ,
-      #{cREATEDATE} ,
-      #{cREATETIME} 
+      #{mobile} ,
+      #{maile} ,
+      #{birthDate} ,
+      #{birthTime} ,
+      #{sex} ,
+      #{cover} ,
+      #{headPortrait} ,
+      #{video} ,
+      #{infomation} ,
+      #{latitude} ,
+      #{longitude} ,
+      #{regeditDate} ,
+      #{regeditTime} ,
+      #{ownerID} ,
+      #{createDate} ,
+      #{createTime} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -54,25 +54,25 @@
   <!-- Table Update -->
   <update id="T02_PERSONAL_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     UPDATE T02_PERSONAL SET
-      FIRST_NAME = #{fIRSTNAME} ,
-      LAST_NAME = #{lASTNAME} ,
+      FIRST_NAME = #{firstName} ,
+      LAST_NAME = #{lastName} ,
       NO = #{nO} ,
-      MOBILE = #{mOBILE} ,
-      MAILE = #{mAILE} ,
-      BIRTH_DATE = #{bIRTHDATE} ,
-      BIRTH_TIME = #{bIRTHTIME} ,
-      SEX = #{sEX} ,
-      COVER = #{cOVER} ,
-      HEAD_PORTRAIT = #{hEADPORTRAIT} ,
-      VIDEO = #{vIDEO} ,
-      INFOMATION = #{iNFOMATION} ,
-      LATITUDE = #{lATITUDE} ,
-      LONGITUDE = #{lONGITUDE} ,
-      REGEDIT_DATE = #{rEGEDITDATE} ,
-      REGEDIT_TIME = #{rEGEDITTIME} ,
-      OWNER_ID = #{oWNERID} ,
-      CREATE_DATE = #{cREATEDATE} ,
-      CREATE_TIME = #{cREATETIME} 
+      MOBILE = #{mobile} ,
+      MAILE = #{maile} ,
+      BIRTH_DATE = #{birthDate} ,
+      BIRTH_TIME = #{birthTime} ,
+      SEX = #{sex} ,
+      COVER = #{cover} ,
+      HEAD_PORTRAIT = #{headPortrait} ,
+      VIDEO = #{video} ,
+      INFOMATION = #{infomation} ,
+      LATITUDE = #{latitude} ,
+      LONGITUDE = #{longitude} ,
+      REGEDIT_DATE = #{regeditDate} ,
+      REGEDIT_TIME = #{regeditTime} ,
+      OWNER_ID = #{ownerID} ,
+      CREATE_DATE = #{createDate} ,
+      CREATE_TIME = #{createTime} 
     WHERE
       ID = #{iD} 
   </update>
@@ -80,25 +80,25 @@
   <update id="T02_PERSONAL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     UPDATE T02_PERSONAL
     <set>
-      <if test="fIRSTNAME!=null">FIRST_NAME = #{fIRSTNAME},</if>
-      <if test="lASTNAME!=null">LAST_NAME = #{lASTNAME},</if>
+      <if test="firstName!=null">FIRST_NAME = #{firstName},</if>
+      <if test="lastName!=null">LAST_NAME = #{lastName},</if>
       <if test="nO!=null">NO = #{nO},</if>
-      <if test="mOBILE!=null">MOBILE = #{mOBILE},</if>
-      <if test="mAILE!=null">MAILE = #{mAILE},</if>
-      <if test="bIRTHDATE!=null">BIRTH_DATE = #{bIRTHDATE},</if>
-      <if test="bIRTHTIME!=null">BIRTH_TIME = #{bIRTHTIME},</if>
-      <if test="sEX!=null">SEX = #{sEX},</if>
-      <if test="cOVER!=null">COVER = #{cOVER},</if>
-      <if test="hEADPORTRAIT!=null">HEAD_PORTRAIT = #{hEADPORTRAIT},</if>
-      <if test="vIDEO!=null">VIDEO = #{vIDEO},</if>
-      <if test="iNFOMATION!=null">INFOMATION = #{iNFOMATION},</if>
-      <if test="lATITUDE!=null">LATITUDE = #{lATITUDE},</if>
-      <if test="lONGITUDE!=null">LONGITUDE = #{lONGITUDE},</if>
-      <if test="rEGEDITDATE!=null">REGEDIT_DATE = #{rEGEDITDATE},</if>
-      <if test="rEGEDITTIME!=null">REGEDIT_TIME = #{rEGEDITTIME},</if>
-      <if test="oWNERID!=null">OWNER_ID = #{oWNERID},</if>
-      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
-      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
+      <if test="mobile!=null">MOBILE = #{mobile},</if>
+      <if test="maile!=null">MAILE = #{maile},</if>
+      <if test="birthDate!=null">BIRTH_DATE = #{birthDate},</if>
+      <if test="birthTime!=null">BIRTH_TIME = #{birthTime},</if>
+      <if test="sex!=null">SEX = #{sex},</if>
+      <if test="cover!=null">COVER = #{cover},</if>
+      <if test="headPortrait!=null">HEAD_PORTRAIT = #{headPortrait},</if>
+      <if test="video!=null">VIDEO = #{video},</if>
+      <if test="infomation!=null">INFOMATION = #{infomation},</if>
+      <if test="latitude!=null">LATITUDE = #{latitude},</if>
+      <if test="longitude!=null">LONGITUDE = #{longitude},</if>
+      <if test="regeditDate!=null">REGEDIT_DATE = #{regeditDate},</if>
+      <if test="regeditTime!=null">REGEDIT_TIME = #{regeditTime},</if>
+      <if test="ownerID!=null">OWNER_ID = #{ownerID},</if>
+      <if test="createDate!=null">CREATE_DATE = #{createDate},</if>
+      <if test="createTime!=null">CREATE_TIME = #{createTime},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -115,25 +115,25 @@
   <select id="T02_PERSONAL_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     WHERE
       ID = #{iD} 
@@ -143,25 +143,25 @@
   <select id="T02_PERSONAL_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     WHERE
       ID = #{iD} 
@@ -172,47 +172,47 @@
   <select id="T02_PERSONAL_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="fIRSTNAME != null">AND FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="lASTNAME != null">AND LAST_NAME = #{lASTNAME}</if>
+      <if test="firstName != null">AND FIRST_NAME = #{firstName}</if>
+      <if test="lastName != null">AND LAST_NAME = #{lastName}</if>
       <if test="nO != null">AND NO = #{nO}</if>
-      <if test="mOBILE != null">AND MOBILE = #{mOBILE}</if>
-      <if test="mAILE != null">AND MAILE = #{mAILE}</if>
-      <if test="bIRTHDATE != null">AND BIRTH_DATE = #{bIRTHDATE}</if>
-      <if test="bIRTHTIME != null">AND BIRTH_TIME = #{bIRTHTIME}</if>
-      <if test="sEX != null">AND SEX = #{sEX}</if>
-      <if test="cOVER != null">AND COVER = #{cOVER}</if>
-      <if test="hEADPORTRAIT != null">AND HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
-      <if test="vIDEO != null">AND VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
-      <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
-      <if test="rEGEDITDATE != null">AND REGEDIT_DATE = #{rEGEDITDATE}</if>
-      <if test="rEGEDITTIME != null">AND REGEDIT_TIME = #{rEGEDITTIME}</if>
-      <if test="oWNERID != null">AND OWNER_ID = #{oWNERID}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+      <if test="mobile != null">AND MOBILE = #{mobile}</if>
+      <if test="maile != null">AND MAILE = #{maile}</if>
+      <if test="birthDate != null">AND BIRTH_DATE = #{birthDate}</if>
+      <if test="birthTime != null">AND BIRTH_TIME = #{birthTime}</if>
+      <if test="sex != null">AND SEX = #{sex}</if>
+      <if test="cover != null">AND COVER = #{cover}</if>
+      <if test="headPortrait != null">AND HEAD_PORTRAIT = #{headPortrait}</if>
+      <if test="video != null">AND VIDEO = #{video}</if>
+      <if test="infomation != null">AND INFOMATION = #{infomation}</if>
+      <if test="latitude != null">AND LATITUDE = #{latitude}</if>
+      <if test="longitude != null">AND LONGITUDE = #{longitude}</if>
+      <if test="regeditDate != null">AND REGEDIT_DATE = #{regeditDate}</if>
+      <if test="regeditTime != null">AND REGEDIT_TIME = #{regeditTime}</if>
+      <if test="ownerID != null">AND OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -225,47 +225,47 @@
   <select id="T02_PERSONAL_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="fIRSTNAME != null">OR FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="lASTNAME != null">OR LAST_NAME = #{lASTNAME}</if>
+      <if test="firstName != null">OR FIRST_NAME = #{firstName}</if>
+      <if test="lastName != null">OR LAST_NAME = #{lastName}</if>
       <if test="nO != null">OR NO = #{nO}</if>
-      <if test="mOBILE != null">OR MOBILE = #{mOBILE}</if>
-      <if test="mAILE != null">OR MAILE = #{mAILE}</if>
-      <if test="bIRTHDATE != null">OR BIRTH_DATE = #{bIRTHDATE}</if>
-      <if test="bIRTHTIME != null">OR BIRTH_TIME = #{bIRTHTIME}</if>
-      <if test="sEX != null">OR SEX = #{sEX}</if>
-      <if test="cOVER != null">OR COVER = #{cOVER}</if>
-      <if test="hEADPORTRAIT != null">OR HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
-      <if test="vIDEO != null">OR VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
-      <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
-      <if test="rEGEDITDATE != null">OR REGEDIT_DATE = #{rEGEDITDATE}</if>
-      <if test="rEGEDITTIME != null">OR REGEDIT_TIME = #{rEGEDITTIME}</if>
-      <if test="oWNERID != null">OR OWNER_ID = #{oWNERID}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+      <if test="mobile != null">OR MOBILE = #{mobile}</if>
+      <if test="maile != null">OR MAILE = #{maile}</if>
+      <if test="birthDate != null">OR BIRTH_DATE = #{birthDate}</if>
+      <if test="birthTime != null">OR BIRTH_TIME = #{birthTime}</if>
+      <if test="sex != null">OR SEX = #{sex}</if>
+      <if test="cover != null">OR COVER = #{cover}</if>
+      <if test="headPortrait != null">OR HEAD_PORTRAIT = #{headPortrait}</if>
+      <if test="video != null">OR VIDEO = #{video}</if>
+      <if test="infomation != null">OR INFOMATION = #{infomation}</if>
+      <if test="latitude != null">OR LATITUDE = #{latitude}</if>
+      <if test="longitude != null">OR LONGITUDE = #{longitude}</if>
+      <if test="regeditDate != null">OR REGEDIT_DATE = #{regeditDate}</if>
+      <if test="regeditTime != null">OR REGEDIT_TIME = #{regeditTime}</if>
+      <if test="ownerID != null">OR OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -278,47 +278,47 @@
   <select id="T02_PERSONAL_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="fIRSTNAME != null">AND FIRST_NAME LIKE '%'|| #{fIRSTNAME} ||'%'</if>
-      <if test="lASTNAME != null">AND LAST_NAME LIKE '%'|| #{lASTNAME} ||'%'</if>
+      <if test="firstName != null">AND FIRST_NAME LIKE '%'|| #{firstName} ||'%'</if>
+      <if test="lastName != null">AND LAST_NAME LIKE '%'|| #{lastName} ||'%'</if>
       <if test="nO != null">AND NO LIKE '%'|| #{nO} ||'%'</if>
-      <if test="mOBILE != null">AND MOBILE LIKE '%'|| #{mOBILE} ||'%'</if>
-      <if test="mAILE != null">AND MAILE LIKE '%'|| #{mAILE} ||'%'</if>
-      <if test="bIRTHDATE != null">AND BIRTH_DATE LIKE '%'|| #{bIRTHDATE} ||'%'</if>
-      <if test="bIRTHTIME != null">AND BIRTH_TIME LIKE '%'|| #{bIRTHTIME} ||'%'</if>
-      <if test="sEX != null">AND SEX LIKE '%'|| #{sEX} ||'%'</if>
-      <if test="cOVER != null">AND COVER LIKE '%'|| #{cOVER} ||'%'</if>
-      <if test="hEADPORTRAIT != null">AND HEAD_PORTRAIT LIKE '%'|| #{hEADPORTRAIT} ||'%'</if>
-      <if test="vIDEO != null">AND VIDEO LIKE '%'|| #{vIDEO} ||'%'</if>
-      <if test="iNFOMATION != null">AND INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
-      <if test="lATITUDE != null">AND LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
-      <if test="lONGITUDE != null">AND LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
-      <if test="rEGEDITDATE != null">AND REGEDIT_DATE LIKE '%'|| #{rEGEDITDATE} ||'%'</if>
-      <if test="rEGEDITTIME != null">AND REGEDIT_TIME LIKE '%'|| #{rEGEDITTIME} ||'%'</if>
-      <if test="oWNERID != null">AND OWNER_ID LIKE '%'|| #{oWNERID} ||'%'</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+      <if test="mobile != null">AND MOBILE LIKE '%'|| #{mobile} ||'%'</if>
+      <if test="maile != null">AND MAILE LIKE '%'|| #{maile} ||'%'</if>
+      <if test="birthDate != null">AND BIRTH_DATE LIKE '%'|| #{birthDate} ||'%'</if>
+      <if test="birthTime != null">AND BIRTH_TIME LIKE '%'|| #{birthTime} ||'%'</if>
+      <if test="sex != null">AND SEX LIKE '%'|| #{sex} ||'%'</if>
+      <if test="cover != null">AND COVER LIKE '%'|| #{cover} ||'%'</if>
+      <if test="headPortrait != null">AND HEAD_PORTRAIT LIKE '%'|| #{headPortrait} ||'%'</if>
+      <if test="video != null">AND VIDEO LIKE '%'|| #{video} ||'%'</if>
+      <if test="infomation != null">AND INFOMATION LIKE '%'|| #{infomation} ||'%'</if>
+      <if test="latitude != null">AND LATITUDE LIKE '%'|| #{latitude} ||'%'</if>
+      <if test="longitude != null">AND LONGITUDE LIKE '%'|| #{longitude} ||'%'</if>
+      <if test="regeditDate != null">AND REGEDIT_DATE LIKE '%'|| #{regeditDate} ||'%'</if>
+      <if test="regeditTime != null">AND REGEDIT_TIME LIKE '%'|| #{regeditTime} ||'%'</if>
+      <if test="ownerID != null">AND OWNER_ID LIKE '%'|| #{ownerID} ||'%'</if>
+      <if test="createDate != null">AND CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">AND CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -331,47 +331,47 @@
   <select id="T02_PERSONAL_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="fIRSTNAME != null">OR FIRST_NAME LIKE '%'|| #{fIRSTNAME} ||'%'</if>
-      <if test="lASTNAME != null">OR LAST_NAME LIKE '%'|| #{lASTNAME} ||'%'</if>
+      <if test="firstName != null">OR FIRST_NAME LIKE '%'|| #{firstName} ||'%'</if>
+      <if test="lastName != null">OR LAST_NAME LIKE '%'|| #{lastName} ||'%'</if>
       <if test="nO != null">OR NO LIKE '%'|| #{nO} ||'%'</if>
-      <if test="mOBILE != null">OR MOBILE LIKE '%'|| #{mOBILE} ||'%'</if>
-      <if test="mAILE != null">OR MAILE LIKE '%'|| #{mAILE} ||'%'</if>
-      <if test="bIRTHDATE != null">OR BIRTH_DATE LIKE '%'|| #{bIRTHDATE} ||'%'</if>
-      <if test="bIRTHTIME != null">OR BIRTH_TIME LIKE '%'|| #{bIRTHTIME} ||'%'</if>
-      <if test="sEX != null">OR SEX LIKE '%'|| #{sEX} ||'%'</if>
-      <if test="cOVER != null">OR COVER LIKE '%'|| #{cOVER} ||'%'</if>
-      <if test="hEADPORTRAIT != null">OR HEAD_PORTRAIT LIKE '%'|| #{hEADPORTRAIT} ||'%'</if>
-      <if test="vIDEO != null">OR VIDEO LIKE '%'|| #{vIDEO} ||'%'</if>
-      <if test="iNFOMATION != null">OR INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
-      <if test="lATITUDE != null">OR LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
-      <if test="lONGITUDE != null">OR LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
-      <if test="rEGEDITDATE != null">OR REGEDIT_DATE LIKE '%'|| #{rEGEDITDATE} ||'%'</if>
-      <if test="rEGEDITTIME != null">OR REGEDIT_TIME LIKE '%'|| #{rEGEDITTIME} ||'%'</if>
-      <if test="oWNERID != null">OR OWNER_ID LIKE '%'|| #{oWNERID} ||'%'</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+      <if test="mobile != null">OR MOBILE LIKE '%'|| #{mobile} ||'%'</if>
+      <if test="maile != null">OR MAILE LIKE '%'|| #{maile} ||'%'</if>
+      <if test="birthDate != null">OR BIRTH_DATE LIKE '%'|| #{birthDate} ||'%'</if>
+      <if test="birthTime != null">OR BIRTH_TIME LIKE '%'|| #{birthTime} ||'%'</if>
+      <if test="sex != null">OR SEX LIKE '%'|| #{sex} ||'%'</if>
+      <if test="cover != null">OR COVER LIKE '%'|| #{cover} ||'%'</if>
+      <if test="headPortrait != null">OR HEAD_PORTRAIT LIKE '%'|| #{headPortrait} ||'%'</if>
+      <if test="video != null">OR VIDEO LIKE '%'|| #{video} ||'%'</if>
+      <if test="infomation != null">OR INFOMATION LIKE '%'|| #{infomation} ||'%'</if>
+      <if test="latitude != null">OR LATITUDE LIKE '%'|| #{latitude} ||'%'</if>
+      <if test="longitude != null">OR LONGITUDE LIKE '%'|| #{longitude} ||'%'</if>
+      <if test="regeditDate != null">OR REGEDIT_DATE LIKE '%'|| #{regeditDate} ||'%'</if>
+      <if test="regeditTime != null">OR REGEDIT_TIME LIKE '%'|| #{regeditTime} ||'%'</if>
+      <if test="ownerID != null">OR OWNER_ID LIKE '%'|| #{ownerID} ||'%'</if>
+      <if test="createDate != null">OR CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">OR CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -384,25 +384,25 @@
   <select id="T02_PERSONAL_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO" parameterType="java.util.Map">
     SELECT
       ID AS "iD" ,
-      FIRST_NAME AS "fIRSTNAME" ,
-      LAST_NAME AS "lASTNAME" ,
+      FIRST_NAME AS "firstName" ,
+      LAST_NAME AS "lastName" ,
       NO AS "nO" ,
-      MOBILE AS "mOBILE" ,
-      MAILE AS "mAILE" ,
-      BIRTH_DATE AS "bIRTHDATE" ,
-      BIRTH_TIME AS "bIRTHTIME" ,
-      SEX AS "sEX" ,
-      COVER AS "cOVER" ,
-      HEAD_PORTRAIT AS "hEADPORTRAIT" ,
-      VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      REGEDIT_DATE AS "rEGEDITDATE" ,
-      REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      MOBILE AS "mobile" ,
+      MAILE AS "maile" ,
+      BIRTH_DATE AS "birthDate" ,
+      BIRTH_TIME AS "birthTime" ,
+      SEX AS "sex" ,
+      COVER AS "cover" ,
+      HEAD_PORTRAIT AS "headPortrait" ,
+      VIDEO AS "video" ,
+      INFOMATION AS "infomation" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      REGEDIT_DATE AS "regeditDate" ,
+      REGEDIT_TIME AS "regeditTime" ,
+      OWNER_ID AS "ownerID" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T02_PERSONAL
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -418,25 +418,25 @@
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="fIRSTNAME != null">AND FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="lASTNAME != null">AND LAST_NAME = #{lASTNAME}</if>
+      <if test="firstName != null">AND FIRST_NAME = #{firstName}</if>
+      <if test="lastName != null">AND LAST_NAME = #{lastName}</if>
       <if test="nO != null">AND NO = #{nO}</if>
-      <if test="mOBILE != null">AND MOBILE = #{mOBILE}</if>
-      <if test="mAILE != null">AND MAILE = #{mAILE}</if>
-      <if test="bIRTHDATE != null">AND BIRTH_DATE = #{bIRTHDATE}</if>
-      <if test="bIRTHTIME != null">AND BIRTH_TIME = #{bIRTHTIME}</if>
-      <if test="sEX != null">AND SEX = #{sEX}</if>
-      <if test="cOVER != null">AND COVER = #{cOVER}</if>
-      <if test="hEADPORTRAIT != null">AND HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
-      <if test="vIDEO != null">AND VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
-      <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
-      <if test="rEGEDITDATE != null">AND REGEDIT_DATE = #{rEGEDITDATE}</if>
-      <if test="rEGEDITTIME != null">AND REGEDIT_TIME = #{rEGEDITTIME}</if>
-      <if test="oWNERID != null">AND OWNER_ID = #{oWNERID}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+      <if test="mobile != null">AND MOBILE = #{mobile}</if>
+      <if test="maile != null">AND MAILE = #{maile}</if>
+      <if test="birthDate != null">AND BIRTH_DATE = #{birthDate}</if>
+      <if test="birthTime != null">AND BIRTH_TIME = #{birthTime}</if>
+      <if test="sex != null">AND SEX = #{sex}</if>
+      <if test="cover != null">AND COVER = #{cover}</if>
+      <if test="headPortrait != null">AND HEAD_PORTRAIT = #{headPortrait}</if>
+      <if test="video != null">AND VIDEO = #{video}</if>
+      <if test="infomation != null">AND INFOMATION = #{infomation}</if>
+      <if test="latitude != null">AND LATITUDE = #{latitude}</if>
+      <if test="longitude != null">AND LONGITUDE = #{longitude}</if>
+      <if test="regeditDate != null">AND REGEDIT_DATE = #{regeditDate}</if>
+      <if test="regeditTime != null">AND REGEDIT_TIME = #{regeditTime}</if>
+      <if test="ownerID != null">AND OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 
@@ -446,25 +446,25 @@
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="fIRSTNAME != null">OR FIRST_NAME = #{fIRSTNAME}</if>
-      <if test="lASTNAME != null">OR LAST_NAME = #{lASTNAME}</if>
+      <if test="firstName != null">OR FIRST_NAME = #{firstName}</if>
+      <if test="lastName != null">OR LAST_NAME = #{lastName}</if>
       <if test="nO != null">OR NO = #{nO}</if>
-      <if test="mOBILE != null">OR MOBILE = #{mOBILE}</if>
-      <if test="mAILE != null">OR MAILE = #{mAILE}</if>
-      <if test="bIRTHDATE != null">OR BIRTH_DATE = #{bIRTHDATE}</if>
-      <if test="bIRTHTIME != null">OR BIRTH_TIME = #{bIRTHTIME}</if>
-      <if test="sEX != null">OR SEX = #{sEX}</if>
-      <if test="cOVER != null">OR COVER = #{cOVER}</if>
-      <if test="hEADPORTRAIT != null">OR HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
-      <if test="vIDEO != null">OR VIDEO = #{vIDEO}</if>
-      <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
-      <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
-      <if test="rEGEDITDATE != null">OR REGEDIT_DATE = #{rEGEDITDATE}</if>
-      <if test="rEGEDITTIME != null">OR REGEDIT_TIME = #{rEGEDITTIME}</if>
-      <if test="oWNERID != null">OR OWNER_ID = #{oWNERID}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+      <if test="mobile != null">OR MOBILE = #{mobile}</if>
+      <if test="maile != null">OR MAILE = #{maile}</if>
+      <if test="birthDate != null">OR BIRTH_DATE = #{birthDate}</if>
+      <if test="birthTime != null">OR BIRTH_TIME = #{birthTime}</if>
+      <if test="sex != null">OR SEX = #{sex}</if>
+      <if test="cover != null">OR COVER = #{cover}</if>
+      <if test="headPortrait != null">OR HEAD_PORTRAIT = #{headPortrait}</if>
+      <if test="video != null">OR VIDEO = #{video}</if>
+      <if test="infomation != null">OR INFOMATION = #{infomation}</if>
+      <if test="latitude != null">OR LATITUDE = #{latitude}</if>
+      <if test="longitude != null">OR LONGITUDE = #{longitude}</if>
+      <if test="regeditDate != null">OR REGEDIT_DATE = #{regeditDate}</if>
+      <if test="regeditTime != null">OR REGEDIT_TIME = #{regeditTime}</if>
+      <if test="ownerID != null">OR OWNER_ID = #{ownerID}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 

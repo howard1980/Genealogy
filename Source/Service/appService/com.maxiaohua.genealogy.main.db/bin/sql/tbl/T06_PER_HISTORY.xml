@@ -13,26 +13,26 @@
       LATITUDE ,
       LONGITUDE ,
       TITLE ,
-      COVERIMAGE ,
+      COVER_IMAGE ,
       PRAISE ,
-      ISPUBLIC ,
+      IS_PUBLIC ,
       REMARKS ,
       CREATE_DATE ,
       CREATE_TIME 
     ) VALUES (
-      #{pERID} ,
-      #{eVENTTYPE} ,
-      #{eVENTDATE} ,
-      #{eVENTTIME} ,
-      #{lATITUDE} ,
-      #{lONGITUDE} ,
-      #{tITLE} ,
-      #{cOVERIMAGE} ,
-      #{pRAISE} ,
-      #{iSPUBLIC} ,
-      #{rEMARKS} ,
-      #{cREATEDATE} ,
-      #{cREATETIME} 
+      #{perID} ,
+      #{eventType} ,
+      #{eventDate} ,
+      #{eventTime} ,
+      #{latitude} ,
+      #{longitude} ,
+      #{title} ,
+      #{coverImage} ,
+      #{praise} ,
+      #{isPublic} ,
+      #{remarks} ,
+      #{createDate} ,
+      #{createTime} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -42,19 +42,19 @@
   <!-- Table Update -->
   <update id="T06_PER_HISTORY_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     UPDATE T06_PER_HISTORY SET
-      PER_ID = #{pERID} ,
-      EVENT_TYPE = #{eVENTTYPE} ,
-      EVENT_DATE = #{eVENTDATE} ,
-      EVENT_TIME = #{eVENTTIME} ,
-      LATITUDE = #{lATITUDE} ,
-      LONGITUDE = #{lONGITUDE} ,
-      TITLE = #{tITLE} ,
-      COVERIMAGE = #{cOVERIMAGE} ,
-      PRAISE = #{pRAISE} ,
-      ISPUBLIC = #{iSPUBLIC} ,
-      REMARKS = #{rEMARKS} ,
-      CREATE_DATE = #{cREATEDATE} ,
-      CREATE_TIME = #{cREATETIME} 
+      PER_ID = #{perID} ,
+      EVENT_TYPE = #{eventType} ,
+      EVENT_DATE = #{eventDate} ,
+      EVENT_TIME = #{eventTime} ,
+      LATITUDE = #{latitude} ,
+      LONGITUDE = #{longitude} ,
+      TITLE = #{title} ,
+      COVER_IMAGE = #{coverImage} ,
+      PRAISE = #{praise} ,
+      IS_PUBLIC = #{isPublic} ,
+      REMARKS = #{remarks} ,
+      CREATE_DATE = #{createDate} ,
+      CREATE_TIME = #{createTime} 
     WHERE
       ID = #{iD} 
   </update>
@@ -62,19 +62,19 @@
   <update id="T06_PER_HISTORY_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     UPDATE T06_PER_HISTORY
     <set>
-      <if test="pERID!=null">PER_ID = #{pERID},</if>
-      <if test="eVENTTYPE!=null">EVENT_TYPE = #{eVENTTYPE},</if>
-      <if test="eVENTDATE!=null">EVENT_DATE = #{eVENTDATE},</if>
-      <if test="eVENTTIME!=null">EVENT_TIME = #{eVENTTIME},</if>
-      <if test="lATITUDE!=null">LATITUDE = #{lATITUDE},</if>
-      <if test="lONGITUDE!=null">LONGITUDE = #{lONGITUDE},</if>
-      <if test="tITLE!=null">TITLE = #{tITLE},</if>
-      <if test="cOVERIMAGE!=null">COVERIMAGE = #{cOVERIMAGE},</if>
-      <if test="pRAISE!=null">PRAISE = #{pRAISE},</if>
-      <if test="iSPUBLIC!=null">ISPUBLIC = #{iSPUBLIC},</if>
-      <if test="rEMARKS!=null">REMARKS = #{rEMARKS},</if>
-      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
-      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
+      <if test="perID!=null">PER_ID = #{perID},</if>
+      <if test="eventType!=null">EVENT_TYPE = #{eventType},</if>
+      <if test="eventDate!=null">EVENT_DATE = #{eventDate},</if>
+      <if test="eventTime!=null">EVENT_TIME = #{eventTime},</if>
+      <if test="latitude!=null">LATITUDE = #{latitude},</if>
+      <if test="longitude!=null">LONGITUDE = #{longitude},</if>
+      <if test="title!=null">TITLE = #{title},</if>
+      <if test="coverImage!=null">COVER_IMAGE = #{coverImage},</if>
+      <if test="praise!=null">PRAISE = #{praise},</if>
+      <if test="isPublic!=null">IS_PUBLIC = #{isPublic},</if>
+      <if test="remarks!=null">REMARKS = #{remarks},</if>
+      <if test="createDate!=null">CREATE_DATE = #{createDate},</if>
+      <if test="createTime!=null">CREATE_TIME = #{createTime},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -91,19 +91,19 @@
   <select id="T06_PER_HISTORY_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     WHERE
       ID = #{iD} 
@@ -113,19 +113,19 @@
   <select id="T06_PER_HISTORY_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     WHERE
       ID = #{iD} 
@@ -136,35 +136,35 @@
   <select id="T06_PER_HISTORY_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="pERID != null">AND PER_ID = #{pERID}</if>
-      <if test="eVENTTYPE != null">AND EVENT_TYPE = #{eVENTTYPE}</if>
-      <if test="eVENTDATE != null">AND EVENT_DATE = #{eVENTDATE}</if>
-      <if test="eVENTTIME != null">AND EVENT_TIME = #{eVENTTIME}</if>
-      <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
-      <if test="tITLE != null">AND TITLE = #{tITLE}</if>
-      <if test="cOVERIMAGE != null">AND COVERIMAGE = #{cOVERIMAGE}</if>
-      <if test="pRAISE != null">AND PRAISE = #{pRAISE}</if>
-      <if test="iSPUBLIC != null">AND ISPUBLIC = #{iSPUBLIC}</if>
-      <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+      <if test="perID != null">AND PER_ID = #{perID}</if>
+      <if test="eventType != null">AND EVENT_TYPE = #{eventType}</if>
+      <if test="eventDate != null">AND EVENT_DATE = #{eventDate}</if>
+      <if test="eventTime != null">AND EVENT_TIME = #{eventTime}</if>
+      <if test="latitude != null">AND LATITUDE = #{latitude}</if>
+      <if test="longitude != null">AND LONGITUDE = #{longitude}</if>
+      <if test="title != null">AND TITLE = #{title}</if>
+      <if test="coverImage != null">AND COVER_IMAGE = #{coverImage}</if>
+      <if test="praise != null">AND PRAISE = #{praise}</if>
+      <if test="isPublic != null">AND IS_PUBLIC = #{isPublic}</if>
+      <if test="remarks != null">AND REMARKS = #{remarks}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -177,35 +177,35 @@
   <select id="T06_PER_HISTORY_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="pERID != null">OR PER_ID = #{pERID}</if>
-      <if test="eVENTTYPE != null">OR EVENT_TYPE = #{eVENTTYPE}</if>
-      <if test="eVENTDATE != null">OR EVENT_DATE = #{eVENTDATE}</if>
-      <if test="eVENTTIME != null">OR EVENT_TIME = #{eVENTTIME}</if>
-      <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
-      <if test="tITLE != null">OR TITLE = #{tITLE}</if>
-      <if test="cOVERIMAGE != null">OR COVERIMAGE = #{cOVERIMAGE}</if>
-      <if test="pRAISE != null">OR PRAISE = #{pRAISE}</if>
-      <if test="iSPUBLIC != null">OR ISPUBLIC = #{iSPUBLIC}</if>
-      <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+      <if test="perID != null">OR PER_ID = #{perID}</if>
+      <if test="eventType != null">OR EVENT_TYPE = #{eventType}</if>
+      <if test="eventDate != null">OR EVENT_DATE = #{eventDate}</if>
+      <if test="eventTime != null">OR EVENT_TIME = #{eventTime}</if>
+      <if test="latitude != null">OR LATITUDE = #{latitude}</if>
+      <if test="longitude != null">OR LONGITUDE = #{longitude}</if>
+      <if test="title != null">OR TITLE = #{title}</if>
+      <if test="coverImage != null">OR COVER_IMAGE = #{coverImage}</if>
+      <if test="praise != null">OR PRAISE = #{praise}</if>
+      <if test="isPublic != null">OR IS_PUBLIC = #{isPublic}</if>
+      <if test="remarks != null">OR REMARKS = #{remarks}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -218,35 +218,35 @@
   <select id="T06_PER_HISTORY_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="pERID != null">AND PER_ID LIKE '%'|| #{pERID} ||'%'</if>
-      <if test="eVENTTYPE != null">AND EVENT_TYPE LIKE '%'|| #{eVENTTYPE} ||'%'</if>
-      <if test="eVENTDATE != null">AND EVENT_DATE LIKE '%'|| #{eVENTDATE} ||'%'</if>
-      <if test="eVENTTIME != null">AND EVENT_TIME LIKE '%'|| #{eVENTTIME} ||'%'</if>
-      <if test="lATITUDE != null">AND LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
-      <if test="lONGITUDE != null">AND LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
-      <if test="tITLE != null">AND TITLE LIKE '%'|| #{tITLE} ||'%'</if>
-      <if test="cOVERIMAGE != null">AND COVERIMAGE LIKE '%'|| #{cOVERIMAGE} ||'%'</if>
-      <if test="pRAISE != null">AND PRAISE LIKE '%'|| #{pRAISE} ||'%'</if>
-      <if test="iSPUBLIC != null">AND ISPUBLIC LIKE '%'|| #{iSPUBLIC} ||'%'</if>
-      <if test="rEMARKS != null">AND REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+      <if test="perID != null">AND PER_ID LIKE '%'|| #{perID} ||'%'</if>
+      <if test="eventType != null">AND EVENT_TYPE LIKE '%'|| #{eventType} ||'%'</if>
+      <if test="eventDate != null">AND EVENT_DATE LIKE '%'|| #{eventDate} ||'%'</if>
+      <if test="eventTime != null">AND EVENT_TIME LIKE '%'|| #{eventTime} ||'%'</if>
+      <if test="latitude != null">AND LATITUDE LIKE '%'|| #{latitude} ||'%'</if>
+      <if test="longitude != null">AND LONGITUDE LIKE '%'|| #{longitude} ||'%'</if>
+      <if test="title != null">AND TITLE LIKE '%'|| #{title} ||'%'</if>
+      <if test="coverImage != null">AND COVER_IMAGE LIKE '%'|| #{coverImage} ||'%'</if>
+      <if test="praise != null">AND PRAISE LIKE '%'|| #{praise} ||'%'</if>
+      <if test="isPublic != null">AND IS_PUBLIC LIKE '%'|| #{isPublic} ||'%'</if>
+      <if test="remarks != null">AND REMARKS LIKE '%'|| #{remarks} ||'%'</if>
+      <if test="createDate != null">AND CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">AND CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -259,35 +259,35 @@
   <select id="T06_PER_HISTORY_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="pERID != null">OR PER_ID LIKE '%'|| #{pERID} ||'%'</if>
-      <if test="eVENTTYPE != null">OR EVENT_TYPE LIKE '%'|| #{eVENTTYPE} ||'%'</if>
-      <if test="eVENTDATE != null">OR EVENT_DATE LIKE '%'|| #{eVENTDATE} ||'%'</if>
-      <if test="eVENTTIME != null">OR EVENT_TIME LIKE '%'|| #{eVENTTIME} ||'%'</if>
-      <if test="lATITUDE != null">OR LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
-      <if test="lONGITUDE != null">OR LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
-      <if test="tITLE != null">OR TITLE LIKE '%'|| #{tITLE} ||'%'</if>
-      <if test="cOVERIMAGE != null">OR COVERIMAGE LIKE '%'|| #{cOVERIMAGE} ||'%'</if>
-      <if test="pRAISE != null">OR PRAISE LIKE '%'|| #{pRAISE} ||'%'</if>
-      <if test="iSPUBLIC != null">OR ISPUBLIC LIKE '%'|| #{iSPUBLIC} ||'%'</if>
-      <if test="rEMARKS != null">OR REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+      <if test="perID != null">OR PER_ID LIKE '%'|| #{perID} ||'%'</if>
+      <if test="eventType != null">OR EVENT_TYPE LIKE '%'|| #{eventType} ||'%'</if>
+      <if test="eventDate != null">OR EVENT_DATE LIKE '%'|| #{eventDate} ||'%'</if>
+      <if test="eventTime != null">OR EVENT_TIME LIKE '%'|| #{eventTime} ||'%'</if>
+      <if test="latitude != null">OR LATITUDE LIKE '%'|| #{latitude} ||'%'</if>
+      <if test="longitude != null">OR LONGITUDE LIKE '%'|| #{longitude} ||'%'</if>
+      <if test="title != null">OR TITLE LIKE '%'|| #{title} ||'%'</if>
+      <if test="coverImage != null">OR COVER_IMAGE LIKE '%'|| #{coverImage} ||'%'</if>
+      <if test="praise != null">OR PRAISE LIKE '%'|| #{praise} ||'%'</if>
+      <if test="isPublic != null">OR IS_PUBLIC LIKE '%'|| #{isPublic} ||'%'</if>
+      <if test="remarks != null">OR REMARKS LIKE '%'|| #{remarks} ||'%'</if>
+      <if test="createDate != null">OR CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">OR CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -300,19 +300,19 @@
   <select id="T06_PER_HISTORY_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO" parameterType="java.util.Map">
     SELECT
       ID AS "iD" ,
-      PER_ID AS "pERID" ,
-      EVENT_TYPE AS "eVENTTYPE" ,
-      EVENT_DATE AS "eVENTDATE" ,
-      EVENT_TIME AS "eVENTTIME" ,
-      LATITUDE AS "lATITUDE" ,
-      LONGITUDE AS "lONGITUDE" ,
-      TITLE AS "tITLE" ,
-      COVERIMAGE AS "cOVERIMAGE" ,
-      PRAISE AS "pRAISE" ,
-      ISPUBLIC AS "iSPUBLIC" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      PER_ID AS "perID" ,
+      EVENT_TYPE AS "eventType" ,
+      EVENT_DATE AS "eventDate" ,
+      EVENT_TIME AS "eventTime" ,
+      LATITUDE AS "latitude" ,
+      LONGITUDE AS "longitude" ,
+      TITLE AS "title" ,
+      COVER_IMAGE AS "coverImage" ,
+      PRAISE AS "praise" ,
+      IS_PUBLIC AS "isPublic" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T06_PER_HISTORY
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -328,19 +328,19 @@
     FROM T06_PER_HISTORY
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="pERID != null">AND PER_ID = #{pERID}</if>
-      <if test="eVENTTYPE != null">AND EVENT_TYPE = #{eVENTTYPE}</if>
-      <if test="eVENTDATE != null">AND EVENT_DATE = #{eVENTDATE}</if>
-      <if test="eVENTTIME != null">AND EVENT_TIME = #{eVENTTIME}</if>
-      <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
-      <if test="tITLE != null">AND TITLE = #{tITLE}</if>
-      <if test="cOVERIMAGE != null">AND COVERIMAGE = #{cOVERIMAGE}</if>
-      <if test="pRAISE != null">AND PRAISE = #{pRAISE}</if>
-      <if test="iSPUBLIC != null">AND ISPUBLIC = #{iSPUBLIC}</if>
-      <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+      <if test="perID != null">AND PER_ID = #{perID}</if>
+      <if test="eventType != null">AND EVENT_TYPE = #{eventType}</if>
+      <if test="eventDate != null">AND EVENT_DATE = #{eventDate}</if>
+      <if test="eventTime != null">AND EVENT_TIME = #{eventTime}</if>
+      <if test="latitude != null">AND LATITUDE = #{latitude}</if>
+      <if test="longitude != null">AND LONGITUDE = #{longitude}</if>
+      <if test="title != null">AND TITLE = #{title}</if>
+      <if test="coverImage != null">AND COVER_IMAGE = #{coverImage}</if>
+      <if test="praise != null">AND PRAISE = #{praise}</if>
+      <if test="isPublic != null">AND IS_PUBLIC = #{isPublic}</if>
+      <if test="remarks != null">AND REMARKS = #{remarks}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 
@@ -350,19 +350,19 @@
     FROM T06_PER_HISTORY
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="pERID != null">OR PER_ID = #{pERID}</if>
-      <if test="eVENTTYPE != null">OR EVENT_TYPE = #{eVENTTYPE}</if>
-      <if test="eVENTDATE != null">OR EVENT_DATE = #{eVENTDATE}</if>
-      <if test="eVENTTIME != null">OR EVENT_TIME = #{eVENTTIME}</if>
-      <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
-      <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
-      <if test="tITLE != null">OR TITLE = #{tITLE}</if>
-      <if test="cOVERIMAGE != null">OR COVERIMAGE = #{cOVERIMAGE}</if>
-      <if test="pRAISE != null">OR PRAISE = #{pRAISE}</if>
-      <if test="iSPUBLIC != null">OR ISPUBLIC = #{iSPUBLIC}</if>
-      <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+      <if test="perID != null">OR PER_ID = #{perID}</if>
+      <if test="eventType != null">OR EVENT_TYPE = #{eventType}</if>
+      <if test="eventDate != null">OR EVENT_DATE = #{eventDate}</if>
+      <if test="eventTime != null">OR EVENT_TIME = #{eventTime}</if>
+      <if test="latitude != null">OR LATITUDE = #{latitude}</if>
+      <if test="longitude != null">OR LONGITUDE = #{longitude}</if>
+      <if test="title != null">OR TITLE = #{title}</if>
+      <if test="coverImage != null">OR COVER_IMAGE = #{coverImage}</if>
+      <if test="praise != null">OR PRAISE = #{praise}</if>
+      <if test="isPublic != null">OR IS_PUBLIC = #{isPublic}</if>
+      <if test="remarks != null">OR REMARKS = #{remarks}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 

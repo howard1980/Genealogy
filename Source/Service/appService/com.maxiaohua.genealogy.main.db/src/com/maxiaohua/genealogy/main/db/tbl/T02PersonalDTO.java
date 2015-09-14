@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T02PersonalDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T02_PERSONAL")
@@ -32,13 +32,13 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
-	private String fIRSTNAME = null;
+	private String firstName = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LAST_NAME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
-	private String lASTNAME = null;
+	private String lastName = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("NO")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
@@ -49,90 +49,89 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 	@com.maxiaohua.genealogy.fw.core.type.Alias("MOBILE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
-	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 13, max = 13)
-	private String mOBILE = null;
+	private String mobile = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("MAILE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 100, max = 100)
-	private String mAILE = null;
+	private String maile = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("BIRTH_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(6)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date bIRTHDATE = null;
+	private java.sql.Date birthDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("BIRTH_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(7)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time bIRTHTIME = null;
+	private java.sql.Time birthTime = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("SEX")
 	@com.maxiaohua.genealogy.fw.core.type.Index(8)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer sEX = null;
+	private Integer sex = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("COVER")
 	@com.maxiaohua.genealogy.fw.core.type.Index(9)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String cOVER = null;
+	private String cover = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("HEAD_PORTRAIT")
 	@com.maxiaohua.genealogy.fw.core.type.Index(10)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String hEADPORTRAIT = null;
+	private String headPortrait = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("VIDEO")
 	@com.maxiaohua.genealogy.fw.core.type.Index(11)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String vIDEO = null;
+	private String video = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("INFOMATION")
 	@com.maxiaohua.genealogy.fw.core.type.Index(12)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
-	private String iNFOMATION = null;
+	private String infomation = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(13)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double lATITUDE = null;
+	private Double latitude = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(14)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double lONGITUDE = null;
+	private Double longitude = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDIT_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(15)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date rEGEDITDATE = null;
+	private java.sql.Date regeditDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDIT_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(16)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Time rEGEDITTIME = null;
+	private java.sql.Time regeditTime = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("OWNER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(17)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long oWNERID = null;
+	private Long ownerID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(18)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date cREATEDATE = null;
+	private java.sql.Date createDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(19)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time cREATETIME = null;
+	private java.sql.Time createTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -143,22 +142,22 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 		this.iD = iD;
 	}
 
-	public String getFIRSTNAME() {
-		return this.fIRSTNAME;
+	public String getFirstName() {
+		return this.firstName;
 	}
 
-	public void setFIRSTNAME(
-			String fIRSTNAME) {
-		this.fIRSTNAME = fIRSTNAME;
+	public void setFirstName(
+			String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLASTNAME() {
-		return this.lASTNAME;
+	public String getLastName() {
+		return this.lastName;
 	}
 
-	public void setLASTNAME(
-			String lASTNAME) {
-		this.lASTNAME = lASTNAME;
+	public void setLastName(
+			String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getNO() {
@@ -170,148 +169,148 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 		this.nO = nO;
 	}
 
-	public String getMOBILE() {
-		return this.mOBILE;
+	public String getMobile() {
+		return this.mobile;
 	}
 
-	public void setMOBILE(
-			String mOBILE) {
-		this.mOBILE = mOBILE;
+	public void setMobile(
+			String mobile) {
+		this.mobile = mobile;
 	}
 
-	public String getMAILE() {
-		return this.mAILE;
+	public String getMaile() {
+		return this.maile;
 	}
 
-	public void setMAILE(
-			String mAILE) {
-		this.mAILE = mAILE;
+	public void setMaile(
+			String maile) {
+		this.maile = maile;
 	}
 
-	public java.sql.Date getBIRTHDATE() {
-		return this.bIRTHDATE;
+	public java.sql.Date getBirthDate() {
+		return this.birthDate;
 	}
 
-	public void setBIRTHDATE(
-			java.sql.Date bIRTHDATE) {
-		this.bIRTHDATE = bIRTHDATE;
+	public void setBirthDate(
+			java.sql.Date birthDate) {
+		this.birthDate = birthDate;
 	}
 
-	public java.sql.Time getBIRTHTIME() {
-		return this.bIRTHTIME;
+	public java.sql.Time getBirthTime() {
+		return this.birthTime;
 	}
 
-	public void setBIRTHTIME(
-			java.sql.Time bIRTHTIME) {
-		this.bIRTHTIME = bIRTHTIME;
+	public void setBirthTime(
+			java.sql.Time birthTime) {
+		this.birthTime = birthTime;
 	}
 
-	public Integer getSEX() {
-		return this.sEX;
+	public Integer getSex() {
+		return this.sex;
 	}
 
-	public void setSEX(
-			Integer sEX) {
-		this.sEX = sEX;
+	public void setSex(
+			Integer sex) {
+		this.sex = sex;
 	}
 
-	public String getCOVER() {
-		return this.cOVER;
+	public String getCover() {
+		return this.cover;
 	}
 
-	public void setCOVER(
-			String cOVER) {
-		this.cOVER = cOVER;
+	public void setCover(
+			String cover) {
+		this.cover = cover;
 	}
 
-	public String getHEADPORTRAIT() {
-		return this.hEADPORTRAIT;
+	public String getHeadPortrait() {
+		return this.headPortrait;
 	}
 
-	public void setHEADPORTRAIT(
-			String hEADPORTRAIT) {
-		this.hEADPORTRAIT = hEADPORTRAIT;
+	public void setHeadPortrait(
+			String headPortrait) {
+		this.headPortrait = headPortrait;
 	}
 
-	public String getVIDEO() {
-		return this.vIDEO;
+	public String getVideo() {
+		return this.video;
 	}
 
-	public void setVIDEO(
-			String vIDEO) {
-		this.vIDEO = vIDEO;
+	public void setVideo(
+			String video) {
+		this.video = video;
 	}
 
-	public String getINFOMATION() {
-		return this.iNFOMATION;
+	public String getInfomation() {
+		return this.infomation;
 	}
 
-	public void setINFOMATION(
-			String iNFOMATION) {
-		this.iNFOMATION = iNFOMATION;
+	public void setInfomation(
+			String infomation) {
+		this.infomation = infomation;
 	}
 
-	public Double getLATITUDE() {
-		return this.lATITUDE;
+	public Double getLatitude() {
+		return this.latitude;
 	}
 
-	public void setLATITUDE(
-			Double lATITUDE) {
-		this.lATITUDE = lATITUDE;
+	public void setLatitude(
+			Double latitude) {
+		this.latitude = latitude;
 	}
 
-	public Double getLONGITUDE() {
-		return this.lONGITUDE;
+	public Double getLongitude() {
+		return this.longitude;
 	}
 
-	public void setLONGITUDE(
-			Double lONGITUDE) {
-		this.lONGITUDE = lONGITUDE;
+	public void setLongitude(
+			Double longitude) {
+		this.longitude = longitude;
 	}
 
-	public java.sql.Date getREGEDITDATE() {
-		return this.rEGEDITDATE;
+	public java.sql.Date getRegeditDate() {
+		return this.regeditDate;
 	}
 
-	public void setREGEDITDATE(
-			java.sql.Date rEGEDITDATE) {
-		this.rEGEDITDATE = rEGEDITDATE;
+	public void setRegeditDate(
+			java.sql.Date regeditDate) {
+		this.regeditDate = regeditDate;
 	}
 
-	public java.sql.Time getREGEDITTIME() {
-		return this.rEGEDITTIME;
+	public java.sql.Time getRegeditTime() {
+		return this.regeditTime;
 	}
 
-	public void setREGEDITTIME(
-			java.sql.Time rEGEDITTIME) {
-		this.rEGEDITTIME = rEGEDITTIME;
+	public void setRegeditTime(
+			java.sql.Time regeditTime) {
+		this.regeditTime = regeditTime;
 	}
 
-	public Long getOWNERID() {
-		return this.oWNERID;
+	public Long getOwnerID() {
+		return this.ownerID;
 	}
 
-	public void setOWNERID(
-			Long oWNERID) {
-		this.oWNERID = oWNERID;
+	public void setOwnerID(
+			Long ownerID) {
+		this.ownerID = ownerID;
 	}
 
-	public java.sql.Date getCREATEDATE() {
-		return this.cREATEDATE;
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
 	}
 
-	public void setCREATEDATE(
-			java.sql.Date cREATEDATE) {
-		this.cREATEDATE = cREATEDATE;
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
 	}
 
-	public java.sql.Time getCREATETIME() {
-		return this.cREATETIME;
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
 	}
 
-	public void setCREATETIME(
-			java.sql.Time cREATETIME) {
-		this.cREATETIME = cREATETIME;
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
   	/* (non-Javadoc)

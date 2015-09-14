@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T10PerStreamDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T10_PER_STREAM")
@@ -31,25 +31,25 @@ public class T10PerStreamDTO extends T10PerStreamDTOSupport implements java.io.S
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String tYPE = null;
+	private String type = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PATH")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String pATH = null;
+	private String path = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REMARKS")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
-	private String rEMARKS = null;
+	private String remarks = null;
 
 	public Long getID() {
 		return this.iD;
@@ -60,40 +60,40 @@ public class T10PerStreamDTO extends T10PerStreamDTOSupport implements java.io.S
 		this.iD = iD;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public String getTYPE() {
-		return this.tYPE;
+	public String getType() {
+		return this.type;
 	}
 
-	public void setTYPE(
-			String tYPE) {
-		this.tYPE = tYPE;
+	public void setType(
+			String type) {
+		this.type = type;
 	}
 
-	public String getPATH() {
-		return this.pATH;
+	public String getPath() {
+		return this.path;
 	}
 
-	public void setPATH(
-			String pATH) {
-		this.pATH = pATH;
+	public void setPath(
+			String path) {
+		this.path = path;
 	}
 
-	public String getREMARKS() {
-		return this.rEMARKS;
+	public String getRemarks() {
+		return this.remarks;
 	}
 
-	public void setREMARKS(
-			String rEMARKS) {
-		this.rEMARKS = rEMARKS;
+	public void setRemarks(
+			String remarks) {
+		this.remarks = remarks;
 	}
 
   	/* (non-Javadoc)

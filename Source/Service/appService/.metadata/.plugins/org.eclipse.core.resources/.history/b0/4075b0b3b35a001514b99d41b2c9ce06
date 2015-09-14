@@ -1,0 +1,10 @@
+package com.maxiaohua.genealogy.main.biz.com;
+
+import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
+
+public interface GbFamily {
+	String regist(String mobile, String validCode, 
+			Double longitude, Double latitude, String registrationID,Integer ismi);
+	
+	void updateInfo(String userID, UserInfoDTO userInfo);
+}

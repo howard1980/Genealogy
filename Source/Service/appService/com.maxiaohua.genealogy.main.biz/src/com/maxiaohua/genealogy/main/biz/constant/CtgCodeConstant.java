@@ -18,21 +18,9 @@ public interface CtgCodeConstant {
 	*/
 	public static enum SEX {
 		/**
-		* 1:TopID
+		* 0:其他
 		*/
-		OWNER {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		},
-		/**
-		* 0:男
-		*/
-		MALE {
+		OTHER {
 			/* (non-Javadoc)
 			 * @see java.lang.Enum#toString()
 			 */
@@ -52,95 +40,29 @@ public interface CtgCodeConstant {
 			public String toString() {
 				return "1";
 			}
-		}
-	}
-
-	/**
-	* PAYMENT_TYPE 支付分类
-	*/
-	public static enum PAYMENT_TYPE {
+		},
 		/**
-		* 2:TopID
+		* 2:男
 		*/
-		OWNER {
+		MALE {
 			/* (non-Javadoc)
 			 * @see java.lang.Enum#toString()
 			 */
 			@Override
 			public String toString() {
 				return "2";
-			}
-		},
-		/**
-		* 0:现金
-		*/
-		CASH {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-		},
-		/**
-		* 1:车管家
-		*/
-		SXXC {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		},
-		/**
-		* 2:支付宝
-		*/
-		ALIPAY {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "2";
-			}
-		},
-		/**
-		* 3:银联
-		*/
-		UNIONPAY {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "3";
-			}
-		},
-		/**
-		* 4:微信
-		*/
-		WECHETPAY {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "4";
 			}
 		}
 	}
 	
 	/**
-	* TACCLOG_ACC_STATUS アクセス・ステータス TACCLOG.ACC_STATUS
+	* SEX 性别
 	*/
-	public static enum TACCLOG_ACC_STATUS {
+	public static enum STREAMTYPE {
 		/**
-		* 0:アクセス終了
+		* 0:图片
 		*/
-		ACC_STATUS_0 {
+		PICTURE {
 			/* (non-Javadoc)
 			 * @see java.lang.Enum#toString()
 			 */
@@ -150,9 +72,9 @@ public interface CtgCodeConstant {
 			}
 		},
 		/**
-		* 1:アクセス中
+		* 1:视频
 		*/
-		ACC_STATUS_1 {
+		VIDEO {
 			/* (non-Javadoc)
 			 * @see java.lang.Enum#toString()
 			 */
@@ -163,113 +85,143 @@ public interface CtgCodeConstant {
 		}
 	}
 	
-	/**
-	* TCOMBLCM_MODE ユーザー認証の方法 TCOMBLCM.MODE
-	*/
-	public static enum TCOMBLCM_MODE {
-		/**
-		* 0:CIS
-		*/
-		AUTHENTICATION_TYPE_CIS {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-		},
-		/**
-		* 1:LDAP
-		*/
-		AUTHENTICATION_TYPE_LDAP {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		}
-	}
+//	/**
+//	* TACCLOG_ACC_STATUS アクセス・ステータス TACCLOG.ACC_STATUS
+//	*/
+//	public static enum TACCLOG_ACC_STATUS {
+//		/**
+//		* 0:アクセス終了
+//		*/
+//		ACC_STATUS_0 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:アクセス中
+//		*/
+//		ACC_STATUS_1 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
 	
-	/**
-	* TLOGINLG_RESULT ログインアウト成否 TLOGINLG.RESULT
-	*/
-	public static enum TLOGINLG_RESULT {
-		/**
-		* 0:認証成功
-		*/
-		LOGIN_SUCCESS {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-		},
-		/**
-		* 1:認証失敗
-		*/
-		LOGIN_FAIL {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		},
-		/**
-		* 2:初期パスワード未変更
-		*/
-		NOT_UPDATE {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "2";
-			}
-		},
-		/**
-		* 3:パスワード有効期限切れ
-		*/
-		EXPIRED {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "3";
-			}
-		},
-		/**
-		* 8:ログアウト成功
-		*/
-		LOGOUT_SUCCESS {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "8";
-			}
-		},
-		/**
-		* 9:ログアウト失敗
-		*/
-		LOGOUT_FAIL {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "9";
-			}
-		}
-	}
+//	/**
+//	* TCOMBLCM_MODE ユーザー認証の方法 TCOMBLCM.MODE
+//	*/
+//	public static enum TCOMBLCM_MODE {
+//		/**
+//		* 0:CIS
+//		*/
+//		AUTHENTICATION_TYPE_CIS {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:LDAP
+//		*/
+//		AUTHENTICATION_TYPE_LDAP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+	
+//	/**
+//	* TLOGINLG_RESULT ログインアウト成否 TLOGINLG.RESULT
+//	*/
+//	public static enum TLOGINLG_RESULT {
+//		/**
+//		* 0:認証成功
+//		*/
+//		LOGIN_SUCCESS {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:認証失敗
+//		*/
+//		LOGIN_FAIL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:初期パスワード未変更
+//		*/
+//		NOT_UPDATE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		},
+//		/**
+//		* 3:パスワード有効期限切れ
+//		*/
+//		EXPIRED {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		},
+//		/**
+//		* 8:ログアウト成功
+//		*/
+//		LOGOUT_SUCCESS {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "8";
+//			}
+//		},
+//		/**
+//		* 9:ログアウト失敗
+//		*/
+//		LOGOUT_FAIL {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		}
+//	}
 	
 	/**
 	* APP_SOFTWARE_TYPE 终端类型
@@ -481,47 +433,47 @@ public interface CtgCodeConstant {
 		}
 	}
 	
-	/**
-	* WASH_FLG 清洗区分
-	*/
-	public static enum WASH_FLG {
-		/**
-		* 9:TopID
-		*/
-		OWNER {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "9";
-			}
-		},
-		/**
-		* 0:随行洗车
-		*/
-		SXXC {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-		},		
-		/**
-		* 1:到店洗车
-		*/
-		SHOP {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		},
-	}
+//	/**
+//	* WASH_FLG 清洗区分
+//	*/
+//	public static enum WASH_FLG {
+//		/**
+//		* 9:TopID
+//		*/
+//		OWNER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "9";
+//			}
+//		},
+//		/**
+//		* 0:随行洗车
+//		*/
+//		SXXC {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},		
+//		/**
+//		* 1:到店洗车
+//		*/
+//		SHOP {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//	}
 	
 	/**
 	* DELETE_FLG 删除区分
@@ -595,47 +547,47 @@ public interface CtgCodeConstant {
 //		}
 //	}
 	
-	/**
-	* RECHARGE_TYPE 充值区分
-	*/
-	public static enum RECHARGE_TYPE {
-		/**
-		* 12:TopID
-		*/
-		OWNER {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "12";
-			}
-		},
-		/**
-		* 0:消费
-		*/
-		CONSUMPTION {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-		},
-		/**
-		* 1:充值
-		*/
-		RECHARGE {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		}
-	}
+//	/**
+//	* RECHARGE_TYPE 充值区分
+//	*/
+//	public static enum RECHARGE_TYPE {
+//		/**
+//		* 12:TopID
+//		*/
+//		OWNER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "12";
+//			}
+//		},
+//		/**
+//		* 0:消费
+//		*/
+//		CONSUMPTION {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//		},
+//		/**
+//		* 1:充值
+//		*/
+//		RECHARGE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
 	
 	/**
 	* LOGIN_STATUS 登陆状态
@@ -670,265 +622,265 @@ public interface CtgCodeConstant {
 		 
 	}
 	
-	/**
-	* WORKER_PLAN_UPDATE_FLAG 更新 WorkerPlan 
-	*/
-	public static enum WORKER_PLAN_FLAG {
-		
-		/**
-		* 0:删除
-		*/		
-		DELETE {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		/**
-		* 1:新增
-		*/
-		INSERT {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		},
-		/**
-		* 2:修改
-		*/
-		UPDATE {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "2";
-			}
-		}		 
-	}
-	
-	/**
-	* WORKER_PLAN_UPDATE_FLAG 更新 WorkerPlan 
-	*/
-	public static enum WORKER_PLAN_STATUS {
-		
-		/**
-		* 0:未通过
-		*/		
-		REJECTED {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		REQUEST
-		/**
-		* 1:已提出
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		},
-		/**
-		* 2:已审批
-		*/
-		APPROVED {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "2";
-			}
-		}		 
-	}
-	
-	/**
-	* 洗车证明图片，0标识洗车前的图片 1标识洗车后的图片
-	*/
-	public static enum ORDER_EVIDENCE_STATUS {
-		
-		/**
-		* 0:洗车前
-		*/		
-		BEFORE {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		AFTER
-		/**
-		* 1:洗车后
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		} 	 
-	}
-	
-	/**
-	* 用户类型 0:用户端 1:服务端
-	*/
-	public static enum PUSH_USER_TYPE {
-		
-		/**
-		* 0:用户端
-		*/		
-		CLIENT {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		SERVICE
-		/**
-		* 1:服务端
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		} 	 
-	}
-	
-	/**
-	* 代金券状态
-	*/
-	public static enum CASH_COUPON_TYPE {
-		
-		/**
-		* 0: 刚创建，未生效 关闭 不可用
-		*/		
-		closed {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		EFFECT
-		/**
-		* 1:已生效
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		} 	 ,
-		OVERTIME
-		/**
-		* 2:已过期
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "2";
-			}
-		} 
-	}
-	
-	/**
-	* 代金券使用记录
-	*/
-	public static enum CASH_COUPON_RECORD_TYPE {
-		
-		/**
-		* 0: 已使用成功，已消耗，不可再用
-		*/		
-		USED {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		RETURNED 
-		/**
-		* 1:使用失败返还用户，未消耗，可再次使用，如退单
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		} 	 ,
-		IN_USE
-		/**
-		* 2:使用中，如 订单已创建中 待付款
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "2";
-			}
-		} 	 ,
-		CAN_USE
-		/**
-		* 3:可使用
-		*/
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "3";
-			}
-		}
-	}
+//	/**
+//	* WORKER_PLAN_UPDATE_FLAG 更新 WorkerPlan 
+//	*/
+//	public static enum WORKER_PLAN_FLAG {
+//		
+//		/**
+//		* 0:删除
+//		*/		
+//		DELETE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		/**
+//		* 1:新增
+//		*/
+//		INSERT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:修改
+//		*/
+//		UPDATE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}		 
+//	}
+//	
+//	/**
+//	* WORKER_PLAN_UPDATE_FLAG 更新 WorkerPlan 
+//	*/
+//	public static enum WORKER_PLAN_STATUS {
+//		
+//		/**
+//		* 0:未通过
+//		*/		
+//		REJECTED {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		REQUEST
+//		/**
+//		* 1:已提出
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		},
+//		/**
+//		* 2:已审批
+//		*/
+//		APPROVED {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		}		 
+//	}
+//	
+//	/**
+//	* 洗车证明图片，0标识洗车前的图片 1标识洗车后的图片
+//	*/
+//	public static enum ORDER_EVIDENCE_STATUS {
+//		
+//		/**
+//		* 0:洗车前
+//		*/		
+//		BEFORE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		AFTER
+//		/**
+//		* 1:洗车后
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		} 	 
+//	}
+//	
+//	/**
+//	* 用户类型 0:用户端 1:服务端
+//	*/
+//	public static enum PUSH_USER_TYPE {
+//		
+//		/**
+//		* 0:用户端
+//		*/		
+//		CLIENT {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		SERVICE
+//		/**
+//		* 1:服务端
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		} 	 
+//	}
+//	
+//	/**
+//	* 代金券状态
+//	*/
+//	public static enum CASH_COUPON_TYPE {
+//		
+//		/**
+//		* 0: 刚创建，未生效 关闭 不可用
+//		*/		
+//		closed {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		EFFECT
+//		/**
+//		* 1:已生效
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		} 	 ,
+//		OVERTIME
+//		/**
+//		* 2:已过期
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		} 
+//	}
+//	
+//	/**
+//	* 代金券使用记录
+//	*/
+//	public static enum CASH_COUPON_RECORD_TYPE {
+//		
+//		/**
+//		* 0: 已使用成功，已消耗，不可再用
+//		*/		
+//		USED {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		RETURNED 
+//		/**
+//		* 1:使用失败返还用户，未消耗，可再次使用，如退单
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		} 	 ,
+//		IN_USE
+//		/**
+//		* 2:使用中，如 订单已创建中 待付款
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "2";
+//			}
+//		} 	 ,
+//		CAN_USE
+//		/**
+//		* 3:可使用
+//		*/
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "3";
+//			}
+//		}
+//	}
 	/**
 	* 识别码：
 	* 0：Android
@@ -979,75 +931,75 @@ public interface CtgCodeConstant {
 		} 
 	}
 	
-	/**
-	* 代金券支付区分：
-	* 0：非付款购买
-	* 1：付款购买
-	*/
-	public static enum CASHCOUPON_FLG {
-		
-		/**
-		* 0:  非付款购买
-		*/		
-		NO_PAY {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "0";
-			}
-			
-		},
-		/**
-		* 1:  付款购买
-		*/
-		PAIED
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "1";
-			}
-		}
-	}
-	
-	/**
-	* 订单类型：
-	* 101：随行洗车订单
-	* 102：洗车代金卷
-	*/
-	public static enum ORDER_TYPE {
-		
-		/**
-		* 101:  洗车订单
-		*/		
-		SXXC_ORDER {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "101";
-			}
-			
-		},
-		/**
-		* 102:  洗车代金卷
-		*/
-		SXXC_CASH_COUPON
-		 {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "102";
-			}
-		}
-	}
+//	/**
+//	* 代金券支付区分：
+//	* 0：非付款购买
+//	* 1：付款购买
+//	*/
+//	public static enum CASHCOUPON_FLG {
+//		
+//		/**
+//		* 0:  非付款购买
+//		*/		
+//		NO_PAY {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "0";
+//			}
+//			
+//		},
+//		/**
+//		* 1:  付款购买
+//		*/
+//		PAIED
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "1";
+//			}
+//		}
+//	}
+//	
+//	/**
+//	* 订单类型：
+//	* 101：随行洗车订单
+//	* 102：洗车代金卷
+//	*/
+//	public static enum ORDER_TYPE {
+//		
+//		/**
+//		* 101:  洗车订单
+//		*/		
+//		SXXC_ORDER {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "101";
+//			}
+//			
+//		},
+//		/**
+//		* 102:  洗车代金卷
+//		*/
+//		SXXC_CASH_COUPON
+//		 {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "102";
+//			}
+//		}
+//	}
 	
 	/*
 	public static final Integer CATAGORY_P_MESSAGE_STATE =2;

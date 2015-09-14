@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T17PerQuestionDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T17_PER_QUESTION")
@@ -31,39 +31,46 @@ public class T17PerQuestionDTO extends T17PerQuestionDTOSupport implements java.
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long pERID = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("QUESTION")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
-	private String qUESTION = null;
+	private String question = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("STATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String sTATE = null;
+	private String state = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
-	private java.sql.Date cREATEDATE = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Date createDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time cREATETIME = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Time createTime = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("UPDATE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(6)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATETIME")
-	private java.sql.Timestamp uPDATEDATE = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Timestamp updateDate = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("UPDATE_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(7)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
-	private java.sql.Time uPDATETIME = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Time updateTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -74,67 +81,67 @@ public class T17PerQuestionDTO extends T17PerQuestionDTOSupport implements java.
 		this.iD = iD;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public String getQUESTION() {
-		return this.qUESTION;
+	public String getQuestion() {
+		return this.question;
 	}
 
-	public void setQUESTION(
-			String qUESTION) {
-		this.qUESTION = qUESTION;
+	public void setQuestion(
+			String question) {
+		this.question = question;
 	}
 
-	public String getSTATE() {
-		return this.sTATE;
+	public String getState() {
+		return this.state;
 	}
 
-	public void setSTATE(
-			String sTATE) {
-		this.sTATE = sTATE;
+	public void setState(
+			String state) {
+		this.state = state;
 	}
 
-	public java.sql.Date getCREATEDATE() {
-		return this.cREATEDATE;
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
 	}
 
-	public void setCREATEDATE(
-			java.sql.Date cREATEDATE) {
-		this.cREATEDATE = cREATEDATE;
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
 	}
 
-	public java.sql.Time getCREATETIME() {
-		return this.cREATETIME;
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
 	}
 
-	public void setCREATETIME(
-			java.sql.Time cREATETIME) {
-		this.cREATETIME = cREATETIME;
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
-	public java.sql.Timestamp getUPDATEDATE() {
-		return this.uPDATEDATE;
+	public java.sql.Timestamp getUpdateDate() {
+		return this.updateDate;
 	}
 
-	public void setUPDATEDATE(
-			java.sql.Timestamp uPDATEDATE) {
-		this.uPDATEDATE = uPDATEDATE;
+	public void setUpdateDate(
+			java.sql.Timestamp updateDate) {
+		this.updateDate = updateDate;
 	}
 
-	public java.sql.Time getUPDATETIME() {
-		return this.uPDATETIME;
+	public java.sql.Time getUpdateTime() {
+		return this.updateTime;
 	}
 
-	public void setUPDATETIME(
-			java.sql.Time uPDATETIME) {
-		this.uPDATETIME = uPDATETIME;
+	public void setUpdateTime(
+			java.sql.Time updateTime) {
+		this.updateTime = updateTime;
 	}
 
   	/* (non-Javadoc)

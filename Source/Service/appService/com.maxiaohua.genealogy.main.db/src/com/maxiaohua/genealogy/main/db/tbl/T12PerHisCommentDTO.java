@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T12PerHisCommentDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T12_PER_HIS_COMMENT")
@@ -31,18 +31,18 @@ public class T12PerHisCommentDTO extends T12PerHisCommentDTOSupport implements j
 	@com.maxiaohua.genealogy.fw.core.type.Alias("HIS_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long hISID = null;
+	private Long hisID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("COMMENT")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 400, max = 400)
-	private String cOMMENT = null;
+	private String comment = null;
 
 	public Long getID() {
 		return this.iD;
@@ -53,31 +53,31 @@ public class T12PerHisCommentDTO extends T12PerHisCommentDTOSupport implements j
 		this.iD = iD;
 	}
 
-	public Long getHISID() {
-		return this.hISID;
+	public Long getHisID() {
+		return this.hisID;
 	}
 
-	public void setHISID(
-			Long hISID) {
-		this.hISID = hISID;
+	public void setHisID(
+			Long hisID) {
+		this.hisID = hisID;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
-	public String getCOMMENT() {
-		return this.cOMMENT;
+	public String getComment() {
+		return this.comment;
 	}
 
-	public void setCOMMENT(
-			String cOMMENT) {
-		this.cOMMENT = cOMMENT;
+	public void setComment(
+			String comment) {
+		this.comment = comment;
 	}
 
   	/* (non-Javadoc)

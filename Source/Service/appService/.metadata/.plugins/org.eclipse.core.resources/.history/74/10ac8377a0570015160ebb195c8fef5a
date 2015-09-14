@@ -1,6 +1,0 @@
-package com.maxiaohua.genealogy.main.biz.com;
-
-public interface GbPersonal {
-	String regist(String mobile, String validCode, 
-			Double longitude, Double latitude, String cityCode, String registrationID,Integer ismi);
-}

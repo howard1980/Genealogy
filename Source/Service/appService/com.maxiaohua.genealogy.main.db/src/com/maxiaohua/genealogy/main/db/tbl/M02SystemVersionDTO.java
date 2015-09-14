@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.M02SystemVersionDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("M02_SYSTEM_VERSION")
@@ -36,29 +36,29 @@ public class M02SystemVersionDTO extends M02SystemVersionDTOSupport implements j
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CHANNEL")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer cHANNEL = null;
+	private Integer channel = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("VERSION")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
-	private Double vERSION = null;
+	private Double version = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LOAD_PATH")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 1000, max = 1000)
-	private String lOADPATH = null;
+	private String loadPath = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("DESCRIP")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 2000, max = 2000)
-	private String dESCRIP = null;
+	private String descrip = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("DEL_FLG")
 	@com.maxiaohua.genealogy.fw.core.type.Index(6)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
-	private Integer dELFLG = null;
+	private Integer delFlg = null;
 
 	public Integer getID() {
 		return this.iD;
@@ -78,49 +78,49 @@ public class M02SystemVersionDTO extends M02SystemVersionDTOSupport implements j
 		this.iMSI = iMSI;
 	}
 
-	public Integer getCHANNEL() {
-		return this.cHANNEL;
+	public Integer getChannel() {
+		return this.channel;
 	}
 
-	public void setCHANNEL(
-			Integer cHANNEL) {
-		this.cHANNEL = cHANNEL;
+	public void setChannel(
+			Integer channel) {
+		this.channel = channel;
 	}
 
-	public Double getVERSION() {
-		return this.vERSION;
+	public Double getVersion() {
+		return this.version;
 	}
 
-	public void setVERSION(
-			Double vERSION) {
-		this.vERSION = vERSION;
+	public void setVersion(
+			Double version) {
+		this.version = version;
 	}
 
-	public String getLOADPATH() {
-		return this.lOADPATH;
+	public String getLoadPath() {
+		return this.loadPath;
 	}
 
-	public void setLOADPATH(
-			String lOADPATH) {
-		this.lOADPATH = lOADPATH;
+	public void setLoadPath(
+			String loadPath) {
+		this.loadPath = loadPath;
 	}
 
-	public String getDESCRIP() {
-		return this.dESCRIP;
+	public String getDescrip() {
+		return this.descrip;
 	}
 
-	public void setDESCRIP(
-			String dESCRIP) {
-		this.dESCRIP = dESCRIP;
+	public void setDescrip(
+			String descrip) {
+		this.descrip = descrip;
 	}
 
-	public Integer getDELFLG() {
-		return this.dELFLG;
+	public Integer getDelFlg() {
+		return this.delFlg;
 	}
 
-	public void setDELFLG(
-			Integer dELFLG) {
-		this.dELFLG = dELFLG;
+	public void setDelFlg(
+			Integer delFlg) {
+		this.delFlg = delFlg;
 	}
 
   	/* (non-Javadoc)

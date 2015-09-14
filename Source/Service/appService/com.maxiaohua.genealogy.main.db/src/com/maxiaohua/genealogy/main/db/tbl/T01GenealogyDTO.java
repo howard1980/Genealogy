@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T01GenealogyDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T01_GENEALOGY")
@@ -33,30 +33,43 @@ public class T01GenealogyDTO extends T01GenealogyDTOSupport implements java.io.S
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
-	private String fIRSTNAME = null;
+	private String firstName = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("ARMS")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String aRMS = null;
+	private String arms = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("VIDEO")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
-	private String vIDEO = null;
+	private String video = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("INFOMATION")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
-	private String iNFOMATION = null;
+	private String infomation = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OWNER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long bIGINT = null;
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private Long ownerID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Date createDate = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Time createTime = null;
 
 	public Long getID() {
 		return this.iD;
@@ -67,49 +80,67 @@ public class T01GenealogyDTO extends T01GenealogyDTOSupport implements java.io.S
 		this.iD = iD;
 	}
 
-	public String getFIRSTNAME() {
-		return this.fIRSTNAME;
+	public String getFirstName() {
+		return this.firstName;
 	}
 
-	public void setFIRSTNAME(
-			String fIRSTNAME) {
-		this.fIRSTNAME = fIRSTNAME;
+	public void setFirstName(
+			String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getARMS() {
-		return this.aRMS;
+	public String getArms() {
+		return this.arms;
 	}
 
-	public void setARMS(
-			String aRMS) {
-		this.aRMS = aRMS;
+	public void setArms(
+			String arms) {
+		this.arms = arms;
 	}
 
-	public String getVIDEO() {
-		return this.vIDEO;
+	public String getVideo() {
+		return this.video;
 	}
 
-	public void setVIDEO(
-			String vIDEO) {
-		this.vIDEO = vIDEO;
+	public void setVideo(
+			String video) {
+		this.video = video;
 	}
 
-	public String getINFOMATION() {
-		return this.iNFOMATION;
+	public String getInfomation() {
+		return this.infomation;
 	}
 
-	public void setINFOMATION(
-			String iNFOMATION) {
-		this.iNFOMATION = iNFOMATION;
+	public void setInfomation(
+			String infomation) {
+		this.infomation = infomation;
 	}
 
-	public Long getBIGINT() {
-		return this.bIGINT;
+	public Long getOwnerID() {
+		return this.ownerID;
 	}
 
-	public void setBIGINT(
-			Long bIGINT) {
-		this.bIGINT = bIGINT;
+	public void setOwnerID(
+			Long ownerID) {
+		this.ownerID = ownerID;
+	}
+
+	public java.sql.Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(
+			java.sql.Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public java.sql.Time getCreateTime() {
+		return this.createTime;
+	}
+
+	public void setCreateTime(
+			java.sql.Time createTime) {
+		this.createTime = createTime;
 	}
 
   	/* (non-Javadoc)

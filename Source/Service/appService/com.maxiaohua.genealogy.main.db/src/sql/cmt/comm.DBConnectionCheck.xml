@@ -4,6 +4,6 @@
 <mapper namespace="comm">
   <select id="INIT_CHECK_DB_CONNECTION" resultType="java.lang.Integer">
     SELECT count(*)
-    FROM M01_COMMON
+    FROM TCOMBLCM
   </select>
 </mapper>

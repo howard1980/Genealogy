@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T16NoticeCommentDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T16NoticeCommentDTOSupport extends BaseTableDTO {
@@ -67,15 +67,15 @@ public abstract class T16NoticeCommentDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setNOTID(0l);
+		defaultDTO.setNotID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setCOMMENT(StringUtil.EMPTY);
+		defaultDTO.setComment(StringUtil.EMPTY);
 
-		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

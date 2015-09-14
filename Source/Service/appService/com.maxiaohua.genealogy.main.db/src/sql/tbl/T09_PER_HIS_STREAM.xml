@@ -13,12 +13,12 @@
       CREATE_DATE ,
       CREATE_TIME 
     ) VALUES (
-      #{hISID} ,
-      #{tYPE} ,
-      #{pATH} ,
-      #{rEMARKS} ,
-      #{cREATEDATE} ,
-      #{cREATETIME} 
+      #{hisID} ,
+      #{type} ,
+      #{path} ,
+      #{remarks} ,
+      #{createDate} ,
+      #{createTime} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -28,12 +28,12 @@
   <!-- Table Update -->
   <update id="T09_PER_HIS_STREAM_FULL_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     UPDATE T09_PER_HIS_STREAM SET
-      HIS_ID = #{hISID} ,
-      TYPE = #{tYPE} ,
-      PATH = #{pATH} ,
-      REMARKS = #{rEMARKS} ,
-      CREATE_DATE = #{cREATEDATE} ,
-      CREATE_TIME = #{cREATETIME} 
+      HIS_ID = #{hisID} ,
+      TYPE = #{type} ,
+      PATH = #{path} ,
+      REMARKS = #{remarks} ,
+      CREATE_DATE = #{createDate} ,
+      CREATE_TIME = #{createTime} 
     WHERE
       ID = #{iD} 
   </update>
@@ -41,12 +41,12 @@
   <update id="T09_PER_HIS_STREAM_UPDATE" parameterType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     UPDATE T09_PER_HIS_STREAM
     <set>
-      <if test="hISID!=null">HIS_ID = #{hISID},</if>
-      <if test="tYPE!=null">TYPE = #{tYPE},</if>
-      <if test="pATH!=null">PATH = #{pATH},</if>
-      <if test="rEMARKS!=null">REMARKS = #{rEMARKS},</if>
-      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
-      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
+      <if test="hisID!=null">HIS_ID = #{hisID},</if>
+      <if test="type!=null">TYPE = #{type},</if>
+      <if test="path!=null">PATH = #{path},</if>
+      <if test="remarks!=null">REMARKS = #{remarks},</if>
+      <if test="createDate!=null">CREATE_DATE = #{createDate},</if>
+      <if test="createTime!=null">CREATE_TIME = #{createTime},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -63,12 +63,12 @@
   <select id="T09_PER_HIS_STREAM_FIND" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     WHERE
       ID = #{iD} 
@@ -78,12 +78,12 @@
   <select id="T09_PER_HIS_STREAM_FIND_FOR_UPDATE" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     WHERE
       ID = #{iD} 
@@ -94,21 +94,21 @@
   <select id="T09_PER_HIS_STREAM_EQUAL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="hISID != null">AND HIS_ID = #{hISID}</if>
-      <if test="tYPE != null">AND TYPE = #{tYPE}</if>
-      <if test="pATH != null">AND PATH = #{pATH}</if>
-      <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+      <if test="hisID != null">AND HIS_ID = #{hisID}</if>
+      <if test="type != null">AND TYPE = #{type}</if>
+      <if test="path != null">AND PATH = #{path}</if>
+      <if test="remarks != null">AND REMARKS = #{remarks}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -121,21 +121,21 @@
   <select id="T09_PER_HIS_STREAM_EQUAL_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="hISID != null">OR HIS_ID = #{hISID}</if>
-      <if test="tYPE != null">OR TYPE = #{tYPE}</if>
-      <if test="pATH != null">OR PATH = #{pATH}</if>
-      <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+      <if test="hisID != null">OR HIS_ID = #{hisID}</if>
+      <if test="type != null">OR TYPE = #{type}</if>
+      <if test="path != null">OR PATH = #{path}</if>
+      <if test="remarks != null">OR REMARKS = #{remarks}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -148,21 +148,21 @@
   <select id="T09_PER_HIS_STREAM_LIKE_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="hISID != null">AND HIS_ID LIKE '%'|| #{hISID} ||'%'</if>
-      <if test="tYPE != null">AND TYPE LIKE '%'|| #{tYPE} ||'%'</if>
-      <if test="pATH != null">AND PATH LIKE '%'|| #{pATH} ||'%'</if>
-      <if test="rEMARKS != null">AND REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+      <if test="hisID != null">AND HIS_ID LIKE '%'|| #{hisID} ||'%'</if>
+      <if test="type != null">AND TYPE LIKE '%'|| #{type} ||'%'</if>
+      <if test="path != null">AND PATH LIKE '%'|| #{path} ||'%'</if>
+      <if test="remarks != null">AND REMARKS LIKE '%'|| #{remarks} ||'%'</if>
+      <if test="createDate != null">AND CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">AND CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -175,21 +175,21 @@
   <select id="T09_PER_HIS_STREAM_LIKE_SEARCH_OR" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
-      <if test="hISID != null">OR HIS_ID LIKE '%'|| #{hISID} ||'%'</if>
-      <if test="tYPE != null">OR TYPE LIKE '%'|| #{tYPE} ||'%'</if>
-      <if test="pATH != null">OR PATH LIKE '%'|| #{pATH} ||'%'</if>
-      <if test="rEMARKS != null">OR REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
-      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
+      <if test="hisID != null">OR HIS_ID LIKE '%'|| #{hisID} ||'%'</if>
+      <if test="type != null">OR TYPE LIKE '%'|| #{type} ||'%'</if>
+      <if test="path != null">OR PATH LIKE '%'|| #{path} ||'%'</if>
+      <if test="remarks != null">OR REMARKS LIKE '%'|| #{remarks} ||'%'</if>
+      <if test="createDate != null">OR CREATE_DATE LIKE '%'|| #{createDate} ||'%'</if>
+      <if test="createTime != null">OR CREATE_TIME LIKE '%'|| #{createTime} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -202,12 +202,12 @@
   <select id="T09_PER_HIS_STREAM_SQL_SEARCH" resultType="com.maxiaohua.genealogy.main.db.tbl.T09PerHisStreamDTO" parameterType="java.util.Map">
     SELECT
       ID AS "iD" ,
-      HIS_ID AS "hISID" ,
-      TYPE AS "tYPE" ,
-      PATH AS "pATH" ,
-      REMARKS AS "rEMARKS" ,
-      CREATE_DATE AS "cREATEDATE" ,
-      CREATE_TIME AS "cREATETIME" 
+      HIS_ID AS "hisID" ,
+      TYPE AS "type" ,
+      PATH AS "path" ,
+      REMARKS AS "remarks" ,
+      CREATE_DATE AS "createDate" ,
+      CREATE_TIME AS "createTime" 
     FROM T09_PER_HIS_STREAM
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -223,12 +223,12 @@
     FROM T09_PER_HIS_STREAM
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
-      <if test="hISID != null">AND HIS_ID = #{hISID}</if>
-      <if test="tYPE != null">AND TYPE = #{tYPE}</if>
-      <if test="pATH != null">AND PATH = #{pATH}</if>
-      <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
+      <if test="hisID != null">AND HIS_ID = #{hisID}</if>
+      <if test="type != null">AND TYPE = #{type}</if>
+      <if test="path != null">AND PATH = #{path}</if>
+      <if test="remarks != null">AND REMARKS = #{remarks}</if>
+      <if test="createDate != null">AND CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">AND CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 
@@ -238,12 +238,12 @@
     FROM T09_PER_HIS_STREAM
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
-      <if test="hISID != null">OR HIS_ID = #{hISID}</if>
-      <if test="tYPE != null">OR TYPE = #{tYPE}</if>
-      <if test="pATH != null">OR PATH = #{pATH}</if>
-      <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
-      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
-      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
+      <if test="hisID != null">OR HIS_ID = #{hisID}</if>
+      <if test="type != null">OR TYPE = #{type}</if>
+      <if test="path != null">OR PATH = #{path}</if>
+      <if test="remarks != null">OR REMARKS = #{remarks}</if>
+      <if test="createDate != null">OR CREATE_DATE = #{createDate}</if>
+      <if test="createTime != null">OR CREATE_TIME = #{createTime}</if>
     </where>
   </select>
 

@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
@@ -64,11 +64,11 @@ public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_TITLE = "TITLE";
 
-	public static final String COLUMN_COVERIMAGE = "COVERIMAGE";
+	public static final String COLUMN_COVER_IMAGE = "COVER_IMAGE";
 
 	public static final String COLUMN_PRAISE = "PRAISE";
 
-	public static final String COLUMN_ISPUBLIC = "ISPUBLIC";
+	public static final String COLUMN_IS_PUBLIC = "IS_PUBLIC";
 
 	public static final String COLUMN_REMARKS = "REMARKS";
 
@@ -83,31 +83,31 @@ public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setPERID(0l);
+		defaultDTO.setPerID(0l);
 
-		defaultDTO.setEVENTTYPE(0);
+		defaultDTO.setEventType(0);
 
-		defaultDTO.setEVENTDATE(DateUtil.getDefaultDate());
+		defaultDTO.setEventDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setEVENTTIME(DateUtil.getDefaultTime());
+		defaultDTO.setEventTime(DateUtil.getDefaultTime());
 
-		defaultDTO.setLATITUDE(0.0);
+		defaultDTO.setLatitude(0.0);
 
-		defaultDTO.setLONGITUDE(0.0);
+		defaultDTO.setLongitude(0.0);
 
-		defaultDTO.setTITLE(StringUtil.EMPTY);
+		defaultDTO.setTitle(StringUtil.EMPTY);
 
-		defaultDTO.setCOVERIMAGE(StringUtil.EMPTY);
+		defaultDTO.setCoverImage(StringUtil.EMPTY);
 
-		defaultDTO.setPRAISE(0);
+		defaultDTO.setPraise(0);
 
-		defaultDTO.setISPUBLIC(0);
+		defaultDTO.setIsPublic(0);
 
-		defaultDTO.setREMARKS(StringUtil.EMPTY);
+		defaultDTO.setRemarks(StringUtil.EMPTY);
 
-		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+		defaultDTO.setCreateDate(DateUtil.getDefaultDate());
 
-		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
+		defaultDTO.setCreateTime(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T08PerPushDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/14             TOOL                 Create
+ * 1.0          2015/09/15             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T08_PER_PUSH")
@@ -32,7 +32,7 @@ public class T08PerPushDTO extends T08PerPushDTOSupport implements java.io.Seria
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private Long pERID = null;
+	private Long perID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REGISITRATIONID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
@@ -56,13 +56,13 @@ public class T08PerPushDTO extends T08PerPushDTOSupport implements java.io.Seria
 		this.iD = iD;
 	}
 
-	public Long getPERID() {
-		return this.pERID;
+	public Long getPerID() {
+		return this.perID;
 	}
 
-	public void setPERID(
-			Long pERID) {
-		this.pERID = pERID;
+	public void setPerID(
+			Long perID) {
+		this.perID = perID;
 	}
 
 	public String getRegisitrationID() {
