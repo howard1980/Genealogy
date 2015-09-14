@@ -86,6 +86,17 @@ public class FamilyInfoDTO implements java.io.Serializable, Comparable<FamilyInf
 		this.introductionVideo = introductionVideo;
 	}
 
+	private Boolean readOnly = null;
+
+	public Boolean getReadOnly() {
+		return this.readOnly;
+	}
+
+	public void setReadOnly(
+			Boolean readOnly) {
+		this.readOnly = readOnly;
+	}
+
   	/* (non-Javadoc)
      * @see java.lang.Comparable#compareTo(java.lang.Object)
      */

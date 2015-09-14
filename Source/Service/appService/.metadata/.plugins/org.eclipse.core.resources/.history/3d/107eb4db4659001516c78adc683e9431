@@ -1,0 +1,331 @@
+/* CIS
+* (C) Copyright IBM Japan, Ltd. 2013, All Rights Reserved.
+*/
+package com.maxiaohua.genealogy.main.biz.constant;
+
+/**
+ * 类别管理class
+ *
+ * 変更履歴
+ * REV.         変更日付           変更者              変更内容
+ * -------      ---------------    ----------------    ------------------
+ * 1.0          2014/04/29         GD                  新規作成
+ *
+ */
+public interface CtgCodeConstant {
+	/**
+	* SEX 性别
+	*/
+	public static enum SEX {
+		/**
+		* 0:男
+		*/
+		MALE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:女
+		*/
+		FEMALE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+
+	/**
+	* TACCLOG_ACC_STATUS アクセス・ステータス TACCLOG.ACC_STATUS
+	*/
+	public static enum TACCLOG_ACC_STATUS {
+		/**
+		* 0:アクセス終了
+		*/
+		ACC_STATUS_0 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:アクセス中
+		*/
+		ACC_STATUS_1 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+	
+	/**
+	* TCOMBLCM_MODE ユーザー認証の方法 TCOMBLCM.MODE
+	*/
+	public static enum TCOMBLCM_MODE {
+		/**
+		* 0:CIS
+		*/
+		AUTHENTICATION_TYPE_CIS {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:LDAP
+		*/
+		AUTHENTICATION_TYPE_LDAP {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		}
+	}
+	
+	/**
+	* TLOGINLG_RESULT ログインアウト成否 TLOGINLG.RESULT
+	*/
+	public static enum TLOGINLG_RESULT {
+		/**
+		* 0:認証成功
+		*/
+		LOGIN_SUCCESS {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},
+		/**
+		* 1:認証失敗
+		*/
+		LOGIN_FAIL {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+		/**
+		* 2:初期パスワード未変更
+		*/
+		NOT_UPDATE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		},
+		/**
+		* 3:パスワード有効期限切れ
+		*/
+		EXPIRED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "3";
+			}
+		},
+		/**
+		* 8:ログアウト成功
+		*/
+		LOGOUT_SUCCESS {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "8";
+			}
+		},
+		/**
+		* 9:ログアウト失敗
+		*/
+		LOGOUT_FAIL {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "9";
+			}
+		}
+	}
+	
+	/**
+	* DELETE_FLG 删除区分
+	*/
+	public static enum DELETE_FLG {
+		/**
+		* 0:未删除
+		*/
+		NO_DELETED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		},		
+		/**
+		* 1:删除
+		*/
+		DELETED {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		},
+	}
+	
+	/**
+	* LOGIN_STATUS 登陆状态
+	*/
+	public static enum LOGIN_STATUS {
+		
+		/**
+		* 1:在线
+		*/		
+		ONLINE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+			
+		},
+		/**
+		* 0:离线
+		*/
+		OFFLINE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+		}
+		 
+	}
+	
+	/**
+	* 识别码：
+	* 0：Android
+	* 1：Ios
+	* 2：Windows Phone
+	* 3：其他
+	*/
+	public static enum IMSI_TYPE {
+		
+		/**
+		* 0:  
+		*/		
+		ANDROID {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+			
+		},
+		IOS
+		/**
+		* 1 
+		*/
+		 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		} 	 ,
+		WP
+		/**
+		* 2: 
+		*/
+		 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "2";
+			}
+		} 
+	}
+	
+	/**
+	* 显示类型：
+	* 0：非公开
+	* 1：公开
+	*/
+	public static enum SHOW_TYPE {
+		
+		/**
+		* 0:  
+		*/		
+		PRIVATE {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "0";
+			}
+			
+		},
+		PUBLIC
+		/**
+		* 1 
+		*/
+		 {
+			/* (non-Javadoc)
+			 * @see java.lang.Enum#toString()
+			 */
+			@Override
+			public String toString() {
+				return "1";
+			}
+		} 	 ,
+	}
+}

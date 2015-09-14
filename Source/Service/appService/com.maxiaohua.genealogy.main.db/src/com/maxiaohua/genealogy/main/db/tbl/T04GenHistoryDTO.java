@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T04GenHistoryDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T04_GEN_HISTORY")

@@ -16,7 +16,7 @@ public class GbPersonalImpl extends AbstractDBLogic implements GbPersonal, HbMes
 //	private HbJPush hbJPush;
 	
 	public String regist(String mobile, String validCode, 
-			Double longitude, Double latitude, String cityCode, String registrationID,Integer ismi){
+			Double longitude, Double latitude, String registrationID,Integer ismi){
 		String code = null;
 		code = queryKeyValue.queryForString(mobile);
 		if(code == null || !code.equals(validCode)){
@@ -31,7 +31,8 @@ public class GbPersonalImpl extends AbstractDBLogic implements GbPersonal, HbMes
 		
 		personal.setLONGITUDE(longitude);
 		personal.setLATITUDE(latitude);
-		personal.setREGEDITTIME(getCurrentTimestamp());
+		personal.setREGEDITDATE(getCurrentDate());
+		personal.setREGEDITTIME(getCurrentTime());
 		updateDAO.updateOne(T02PersonalDTO.INSERT, personal, M10190WS, SH_INFO);
 		
 //		hbJPush.updateCustomerJPush(personal.getID(), registrationID, ismi);

@@ -1,0 +1,144 @@
+﻿/*
+ * Genealogy
+ * Xiao Hua Ma personal studio 2015.
+ */
+package com.maxiaohua.genealogy.main.biz.a02.dto;
+
+import com.maxiaohua.genealogy.main.biz.com.dto.AddressInfoDTO;
+import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
+
+/**
+ * ViewActionDTO DTO
+ *
+ * History
+ * REV.         Updated Date           Updater              Infomation
+ * -------      ---------------        ----------------     ------------------
+ * 1.0          2015/09/14             TOOL                Create
+*
+ */
+@com.maxiaohua.genealogy.fw.core.type.AliasKanJi("家族事件数据")
+public class ViewActionDTO implements java.io.Serializable, Comparable<ViewActionDTO> {
+	/**
+	* System ID
+	*/
+	private static final long serialVersionUID = 1L;
+
+	private String actionID = null;
+
+	public String getActionID() {
+		return this.actionID;
+	}
+
+	public void setActionID(
+			String actionID) {
+		this.actionID = actionID;
+	}
+
+	private UserInfoDTO userInfo = null;
+
+	public UserInfoDTO getUserInfo() {
+		return this.userInfo;
+	}
+
+	public void setUserInfo(
+			UserInfoDTO userInfo) {
+		this.userInfo = userInfo;
+	}
+
+	private java.sql.Date actionDate = null;
+
+	public java.sql.Date getActionDate() {
+		return this.actionDate;
+	}
+
+	public void setActionDate(
+			java.sql.Date actionDate) {
+		this.actionDate = actionDate;
+	}
+
+	private java.sql.Time actionTime = null;
+
+	public java.sql.Time getActionTime() {
+		return this.actionTime;
+	}
+
+	public void setActionTime(
+			java.sql.Time actionTime) {
+		this.actionTime = actionTime;
+	}
+
+	private AddressInfoDTO address = null;
+
+	public AddressInfoDTO getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(
+			AddressInfoDTO address) {
+		this.address = address;
+	}
+
+	private Integer praise = null;
+
+	public Integer getPraise() {
+		return this.praise;
+	}
+
+	public void setPraise(
+			Integer praise) {
+		this.praise = praise;
+	}
+
+	private String picture = null;
+
+	public String getPicture() {
+		return this.picture;
+	}
+
+	public void setPicture(
+			String picture) {
+		this.picture = picture;
+	}
+
+	private String introduction = null;
+
+	public String getIntroduction() {
+		return this.introduction;
+	}
+
+	public void setIntroduction(
+			String introduction) {
+		this.introduction = introduction;
+	}
+
+	private String[] pictures = null;
+
+	public String[] getPictures() {
+		return this.pictures;
+	}
+
+	public void setPictures(
+			String[] pictures) {
+		this.pictures = pictures;
+	}
+
+	private String[] videos = null;
+
+	public String[] getVideos() {
+		return this.videos;
+	}
+
+	public void setVideos(
+			String[] videos) {
+		this.videos = videos;
+	}
+
+  	/* (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     */
+    @Override
+    public int compareTo(
+    		ViewActionDTO compareToDTO) {
+        return this.equals(compareToDTO) ? 0 : -1;
+    }
+}

@@ -5,6 +5,7 @@
 package com.maxiaohua.genealogy.main.db.tbl.support;
 
 import com.maxiaohua.genealogy.fw.core.util.StringUtil;
+import com.maxiaohua.genealogy.fw.core.util.DateUtil;
 import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
 import com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO;
 
@@ -14,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T17PerQuestionDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 public abstract class T17PerQuestionDTOSupport extends BaseTableDTO {
@@ -57,7 +58,11 @@ public abstract class T17PerQuestionDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
 
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
+
 	public static final String COLUMN_UPDATE_DATE = "UPDATE_DATE";
+
+	public static final String COLUMN_UPDATE_TIME = "UPDATE_TIME";
 
 	public static final String TABLE = "T17_PER_QUESTION";
 
@@ -72,9 +77,13 @@ public abstract class T17PerQuestionDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setSTATE(StringUtil.EMPTY);
 
-		defaultDTO.setCREATEDATE(new java.sql.Timestamp(System.currentTimeMillis()));
+		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+
+		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
 
 		defaultDTO.setUPDATEDATE(new java.sql.Timestamp(System.currentTimeMillis()));
+
+		defaultDTO.setUPDATETIME(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

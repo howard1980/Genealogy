@@ -10,12 +10,14 @@
       TYPE ,
       PATH ,
       REMARKS ,
+      CREATE_DATE ,
       CREATE_TIME 
     ) VALUES (
       #{hISID} ,
       #{tYPE} ,
       #{pATH} ,
       #{rEMARKS} ,
+      #{cREATEDATE} ,
       #{cREATETIME} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
@@ -30,6 +32,7 @@
       TYPE = #{tYPE} ,
       PATH = #{pATH} ,
       REMARKS = #{rEMARKS} ,
+      CREATE_DATE = #{cREATEDATE} ,
       CREATE_TIME = #{cREATETIME} 
     WHERE
       ID = #{iD} 
@@ -42,6 +45,7 @@
       <if test="tYPE!=null">TYPE = #{tYPE},</if>
       <if test="pATH!=null">PATH = #{pATH},</if>
       <if test="rEMARKS!=null">REMARKS = #{rEMARKS},</if>
+      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
       <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
     </set>
     WHERE
@@ -63,6 +67,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     WHERE
@@ -77,6 +82,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     WHERE
@@ -92,6 +98,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     <where>
@@ -100,6 +107,7 @@
       <if test="tYPE != null">AND TYPE = #{tYPE}</if>
       <if test="pATH != null">AND PATH = #{pATH}</if>
       <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -117,6 +125,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     <where>
@@ -125,6 +134,7 @@
       <if test="tYPE != null">OR TYPE = #{tYPE}</if>
       <if test="pATH != null">OR PATH = #{pATH}</if>
       <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -142,6 +152,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     <where>
@@ -150,6 +161,7 @@
       <if test="tYPE != null">AND TYPE LIKE '%'|| #{tYPE} ||'%'</if>
       <if test="pATH != null">AND PATH LIKE '%'|| #{pATH} ||'%'</if>
       <if test="rEMARKS != null">AND REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
       <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -167,6 +179,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     <where>
@@ -175,6 +188,7 @@
       <if test="tYPE != null">OR TYPE LIKE '%'|| #{tYPE} ||'%'</if>
       <if test="pATH != null">OR PATH LIKE '%'|| #{pATH} ||'%'</if>
       <if test="rEMARKS != null">OR REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
       <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -192,6 +206,7 @@
       TYPE AS "tYPE" ,
       PATH AS "pATH" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T09_PER_HIS_STREAM
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
@@ -212,6 +227,7 @@
       <if test="tYPE != null">AND TYPE = #{tYPE}</if>
       <if test="pATH != null">AND PATH = #{pATH}</if>
       <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
     </where>
   </select>
@@ -226,6 +242,7 @@
       <if test="tYPE != null">OR TYPE = #{tYPE}</if>
       <if test="pATH != null">OR PATH = #{pATH}</if>
       <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
     </where>
   </select>

@@ -50,13 +50,13 @@ public class FsRemovPeopleInDTO implements java.io.Serializable, Comparable<FsRe
 	*/
 	@Alias("家族ID")
 	@com.maxiaohua.genealogy.fw.core.validator.type.NotNull
-	private Integer familyID = null;
+	private String familyID = null;
 
 	/**
 	* <code>家族ID</code>返回
 	* @return <code>家族ID</code>
 	*/
-	public Integer getFamilyID() {
+	public String getFamilyID() {
 		return this.familyID;
 	}
 
@@ -65,7 +65,7 @@ public class FsRemovPeopleInDTO implements java.io.Serializable, Comparable<FsRe
 	* @param familyID　<code>familyID</code>设定值
 	*/
 	public void setFamilyID(
-			Integer familyID) {
+			String familyID) {
 		this.familyID = familyID;
 	}
 

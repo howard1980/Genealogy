@@ -10,13 +10,17 @@
       QUESTION ,
       STATE ,
       CREATE_DATE ,
-      UPDATE_DATE 
+      CREATE_TIME ,
+      UPDATE_DATE ,
+      UPDATE_TIME 
     ) VALUES (
       #{pERID} ,
       #{qUESTION} ,
       #{sTATE} ,
       #{cREATEDATE} ,
-      #{uPDATEDATE} 
+      #{cREATETIME} ,
+      #{uPDATEDATE} ,
+      #{uPDATETIME} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -30,7 +34,9 @@
       QUESTION = #{qUESTION} ,
       STATE = #{sTATE} ,
       CREATE_DATE = #{cREATEDATE} ,
-      UPDATE_DATE = #{uPDATEDATE} 
+      CREATE_TIME = #{cREATETIME} ,
+      UPDATE_DATE = #{uPDATEDATE} ,
+      UPDATE_TIME = #{uPDATETIME} 
     WHERE
       ID = #{iD} 
   </update>
@@ -42,7 +48,9 @@
       <if test="qUESTION!=null">QUESTION = #{qUESTION},</if>
       <if test="sTATE!=null">STATE = #{sTATE},</if>
       <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
+      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
       <if test="uPDATEDATE!=null">UPDATE_DATE = #{uPDATEDATE},</if>
+      <if test="uPDATETIME!=null">UPDATE_TIME = #{uPDATETIME},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -63,7 +71,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     WHERE
       ID = #{iD} 
@@ -77,7 +87,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     WHERE
       ID = #{iD} 
@@ -92,7 +104,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
@@ -100,7 +114,9 @@
       <if test="qUESTION != null">AND QUESTION = #{qUESTION}</if>
       <if test="sTATE != null">AND STATE = #{sTATE}</if>
       <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
       <if test="uPDATEDATE != null">AND UPDATE_DATE = #{uPDATEDATE}</if>
+      <if test="uPDATETIME != null">AND UPDATE_TIME = #{uPDATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -117,7 +133,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
@@ -125,7 +143,9 @@
       <if test="qUESTION != null">OR QUESTION = #{qUESTION}</if>
       <if test="sTATE != null">OR STATE = #{sTATE}</if>
       <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
       <if test="uPDATEDATE != null">OR UPDATE_DATE = #{uPDATEDATE}</if>
+      <if test="uPDATETIME != null">OR UPDATE_TIME = #{uPDATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -142,7 +162,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
@@ -150,7 +172,9 @@
       <if test="qUESTION != null">AND QUESTION LIKE '%'|| #{qUESTION} ||'%'</if>
       <if test="sTATE != null">AND STATE LIKE '%'|| #{sTATE} ||'%'</if>
       <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
+      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
       <if test="uPDATEDATE != null">AND UPDATE_DATE LIKE '%'|| #{uPDATEDATE} ||'%'</if>
+      <if test="uPDATETIME != null">AND UPDATE_TIME LIKE '%'|| #{uPDATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -167,7 +191,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
@@ -175,7 +201,9 @@
       <if test="qUESTION != null">OR QUESTION LIKE '%'|| #{qUESTION} ||'%'</if>
       <if test="sTATE != null">OR STATE LIKE '%'|| #{sTATE} ||'%'</if>
       <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
+      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
       <if test="uPDATEDATE != null">OR UPDATE_DATE LIKE '%'|| #{uPDATEDATE} ||'%'</if>
+      <if test="uPDATETIME != null">OR UPDATE_TIME LIKE '%'|| #{uPDATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -192,7 +220,9 @@
       QUESTION AS "qUESTION" ,
       STATE AS "sTATE" ,
       CREATE_DATE AS "cREATEDATE" ,
-      UPDATE_DATE AS "uPDATEDATE" 
+      CREATE_TIME AS "cREATETIME" ,
+      UPDATE_DATE AS "uPDATEDATE" ,
+      UPDATE_TIME AS "uPDATETIME" 
     FROM T17_PER_QUESTION
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -212,7 +242,9 @@
       <if test="qUESTION != null">AND QUESTION = #{qUESTION}</if>
       <if test="sTATE != null">AND STATE = #{sTATE}</if>
       <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
       <if test="uPDATEDATE != null">AND UPDATE_DATE = #{uPDATEDATE}</if>
+      <if test="uPDATETIME != null">AND UPDATE_TIME = #{uPDATETIME}</if>
     </where>
   </select>
 
@@ -226,7 +258,9 @@
       <if test="qUESTION != null">OR QUESTION = #{qUESTION}</if>
       <if test="sTATE != null">OR STATE = #{sTATE}</if>
       <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
       <if test="uPDATEDATE != null">OR UPDATE_DATE = #{uPDATEDATE}</if>
+      <if test="uPDATETIME != null">OR UPDATE_TIME = #{uPDATETIME}</if>
     </where>
   </select>
 

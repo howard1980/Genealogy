@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T02PersonalDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 public abstract class T02PersonalDTOSupport extends BaseTableDTO {
@@ -62,6 +62,8 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_BIRTH_DATE = "BIRTH_DATE";
 
+	public static final String COLUMN_BIRTH_TIME = "BIRTH_TIME";
+
 	public static final String COLUMN_SEX = "SEX";
 
 	public static final String COLUMN_COVER = "COVER";
@@ -76,9 +78,15 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_LONGITUDE = "LONGITUDE";
 
+	public static final String COLUMN_REGEDIT_DATE = "REGEDIT_DATE";
+
 	public static final String COLUMN_REGEDIT_TIME = "REGEDIT_TIME";
-	
+
 	public static final String COLUMN_OWNER_ID = "OWNER_ID";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
+
+	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
 
 	public static final String TABLE = "T02_PERSONAL";
 
@@ -99,6 +107,8 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setBIRTHDATE(DateUtil.getDefaultDate());
 
+		defaultDTO.setBIRTHTIME(DateUtil.getDefaultTime());
+
 		defaultDTO.setSEX(0);
 
 		defaultDTO.setCOVER(StringUtil.EMPTY);
@@ -113,9 +123,15 @@ public abstract class T02PersonalDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setLONGITUDE(0.0);
 
-		defaultDTO.setREGEDITTIME(new java.sql.Timestamp(System.currentTimeMillis()));
-		
+		defaultDTO.setREGEDITDATE(DateUtil.getDefaultDate());
+
+		defaultDTO.setREGEDITTIME(DateUtil.getDefaultTime());
+
 		defaultDTO.setOWNERID(0l);
+
+		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+
+		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

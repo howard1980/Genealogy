@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T03GenMemberDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T03_GEN_MEMBER")

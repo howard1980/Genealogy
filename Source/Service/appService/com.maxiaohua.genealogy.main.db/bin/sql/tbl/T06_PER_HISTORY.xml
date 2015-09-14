@@ -13,9 +13,11 @@
       LATITUDE ,
       LONGITUDE ,
       TITLE ,
+      COVERIMAGE ,
       PRAISE ,
-      SHOW_TYPE ,
+      ISPUBLIC ,
       REMARKS ,
+      CREATE_DATE ,
       CREATE_TIME 
     ) VALUES (
       #{pERID} ,
@@ -25,9 +27,11 @@
       #{lATITUDE} ,
       #{lONGITUDE} ,
       #{tITLE} ,
+      #{cOVERIMAGE} ,
       #{pRAISE} ,
-      #{sHOWTYPE} ,
+      #{iSPUBLIC} ,
       #{rEMARKS} ,
+      #{cREATEDATE} ,
       #{cREATETIME} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
@@ -45,9 +49,11 @@
       LATITUDE = #{lATITUDE} ,
       LONGITUDE = #{lONGITUDE} ,
       TITLE = #{tITLE} ,
+      COVERIMAGE = #{cOVERIMAGE} ,
       PRAISE = #{pRAISE} ,
-      SHOW_TYPE = #{sHOWTYPE} ,
+      ISPUBLIC = #{iSPUBLIC} ,
       REMARKS = #{rEMARKS} ,
+      CREATE_DATE = #{cREATEDATE} ,
       CREATE_TIME = #{cREATETIME} 
     WHERE
       ID = #{iD} 
@@ -63,9 +69,11 @@
       <if test="lATITUDE!=null">LATITUDE = #{lATITUDE},</if>
       <if test="lONGITUDE!=null">LONGITUDE = #{lONGITUDE},</if>
       <if test="tITLE!=null">TITLE = #{tITLE},</if>
+      <if test="cOVERIMAGE!=null">COVERIMAGE = #{cOVERIMAGE},</if>
       <if test="pRAISE!=null">PRAISE = #{pRAISE},</if>
-      <if test="sHOWTYPE!=null">SHOW_TYPE = #{sHOWTYPE},</if>
+      <if test="iSPUBLIC!=null">ISPUBLIC = #{iSPUBLIC},</if>
       <if test="rEMARKS!=null">REMARKS = #{rEMARKS},</if>
+      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
       <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
     </set>
     WHERE
@@ -90,9 +98,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     WHERE
@@ -110,9 +120,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     WHERE
@@ -131,9 +143,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     <where>
@@ -145,9 +159,11 @@
       <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
       <if test="tITLE != null">AND TITLE = #{tITLE}</if>
+      <if test="cOVERIMAGE != null">AND COVERIMAGE = #{cOVERIMAGE}</if>
       <if test="pRAISE != null">AND PRAISE = #{pRAISE}</if>
-      <if test="sHOWTYPE != null">AND SHOW_TYPE = #{sHOWTYPE}</if>
+      <if test="iSPUBLIC != null">AND ISPUBLIC = #{iSPUBLIC}</if>
       <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -168,9 +184,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     <where>
@@ -182,9 +200,11 @@
       <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
       <if test="tITLE != null">OR TITLE = #{tITLE}</if>
+      <if test="cOVERIMAGE != null">OR COVERIMAGE = #{cOVERIMAGE}</if>
       <if test="pRAISE != null">OR PRAISE = #{pRAISE}</if>
-      <if test="sHOWTYPE != null">OR SHOW_TYPE = #{sHOWTYPE}</if>
+      <if test="iSPUBLIC != null">OR ISPUBLIC = #{iSPUBLIC}</if>
       <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -205,9 +225,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     <where>
@@ -219,9 +241,11 @@
       <if test="lATITUDE != null">AND LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
       <if test="lONGITUDE != null">AND LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
       <if test="tITLE != null">AND TITLE LIKE '%'|| #{tITLE} ||'%'</if>
+      <if test="cOVERIMAGE != null">AND COVERIMAGE LIKE '%'|| #{cOVERIMAGE} ||'%'</if>
       <if test="pRAISE != null">AND PRAISE LIKE '%'|| #{pRAISE} ||'%'</if>
-      <if test="sHOWTYPE != null">AND SHOW_TYPE LIKE '%'|| #{sHOWTYPE} ||'%'</if>
+      <if test="iSPUBLIC != null">AND ISPUBLIC LIKE '%'|| #{iSPUBLIC} ||'%'</if>
       <if test="rEMARKS != null">AND REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
       <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -242,9 +266,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     <where>
@@ -256,9 +282,11 @@
       <if test="lATITUDE != null">OR LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
       <if test="lONGITUDE != null">OR LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
       <if test="tITLE != null">OR TITLE LIKE '%'|| #{tITLE} ||'%'</if>
+      <if test="cOVERIMAGE != null">OR COVERIMAGE LIKE '%'|| #{cOVERIMAGE} ||'%'</if>
       <if test="pRAISE != null">OR PRAISE LIKE '%'|| #{pRAISE} ||'%'</if>
-      <if test="sHOWTYPE != null">OR SHOW_TYPE LIKE '%'|| #{sHOWTYPE} ||'%'</if>
+      <if test="iSPUBLIC != null">OR ISPUBLIC LIKE '%'|| #{iSPUBLIC} ||'%'</if>
       <if test="rEMARKS != null">OR REMARKS LIKE '%'|| #{rEMARKS} ||'%'</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
       <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -279,9 +307,11 @@
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
       TITLE AS "tITLE" ,
+      COVERIMAGE AS "cOVERIMAGE" ,
       PRAISE AS "pRAISE" ,
-      SHOW_TYPE AS "sHOWTYPE" ,
+      ISPUBLIC AS "iSPUBLIC" ,
       REMARKS AS "rEMARKS" ,
+      CREATE_DATE AS "cREATEDATE" ,
       CREATE_TIME AS "cREATETIME" 
     FROM T06_PER_HISTORY
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
@@ -305,9 +335,11 @@
       <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
       <if test="tITLE != null">AND TITLE = #{tITLE}</if>
+      <if test="cOVERIMAGE != null">AND COVERIMAGE = #{cOVERIMAGE}</if>
       <if test="pRAISE != null">AND PRAISE = #{pRAISE}</if>
-      <if test="sHOWTYPE != null">AND SHOW_TYPE = #{sHOWTYPE}</if>
+      <if test="iSPUBLIC != null">AND ISPUBLIC = #{iSPUBLIC}</if>
       <if test="rEMARKS != null">AND REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
     </where>
   </select>
@@ -325,9 +357,11 @@
       <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
       <if test="tITLE != null">OR TITLE = #{tITLE}</if>
+      <if test="cOVERIMAGE != null">OR COVERIMAGE = #{cOVERIMAGE}</if>
       <if test="pRAISE != null">OR PRAISE = #{pRAISE}</if>
-      <if test="sHOWTYPE != null">OR SHOW_TYPE = #{sHOWTYPE}</if>
+      <if test="iSPUBLIC != null">OR ISPUBLIC = #{iSPUBLIC}</if>
       <if test="rEMARKS != null">OR REMARKS = #{rEMARKS}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
       <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
     </where>
   </select>

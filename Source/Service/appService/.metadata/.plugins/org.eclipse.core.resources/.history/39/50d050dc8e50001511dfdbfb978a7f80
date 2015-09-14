@@ -1,8 +1,0 @@
-/* NFE
-* (C) Copyright Beetlestech , Ltd. 2014, All Rights Reserved.
-*/
-package com.maxiaohua.genealogy.main.biz.com;
-
-public interface HbPropaganda {
-	String[] getPropagandeList();
-}

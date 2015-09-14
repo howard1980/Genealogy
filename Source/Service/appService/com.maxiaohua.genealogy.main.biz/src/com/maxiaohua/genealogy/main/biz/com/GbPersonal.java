@@ -4,7 +4,7 @@ import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
 
 public interface GbPersonal {
 	String regist(String mobile, String validCode, 
-			Double longitude, Double latitude, String cityCode, String registrationID,Integer ismi);
+			Double longitude, Double latitude, String registrationID,Integer ismi);
 	
 	void updateInfo(String userID, UserInfoDTO userInfo);
 }

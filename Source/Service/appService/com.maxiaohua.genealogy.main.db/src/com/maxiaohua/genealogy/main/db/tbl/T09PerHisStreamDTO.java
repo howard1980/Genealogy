@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T09PerHisStreamDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T09_PER_HIS_STREAM")
@@ -51,10 +51,15 @@ public class T09PerHisStreamDTO extends T09PerHisStreamDTOSupport implements jav
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
 	private String rEMARKS = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(5)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("DATETIME")
-	private java.sql.Timestamp cREATETIME = null;
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date cREATEDATE = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(6)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time cREATETIME = null;
 
 	public Long getID() {
 		return this.iD;
@@ -101,12 +106,21 @@ public class T09PerHisStreamDTO extends T09PerHisStreamDTOSupport implements jav
 		this.rEMARKS = rEMARKS;
 	}
 
-	public java.sql.Timestamp getCREATETIME() {
+	public java.sql.Date getCREATEDATE() {
+		return this.cREATEDATE;
+	}
+
+	public void setCREATEDATE(
+			java.sql.Date cREATEDATE) {
+		this.cREATEDATE = cREATEDATE;
+	}
+
+	public java.sql.Time getCREATETIME() {
 		return this.cREATETIME;
 	}
 
 	public void setCREATETIME(
-			java.sql.Timestamp cREATETIME) {
+			java.sql.Time cREATETIME) {
 		this.cREATETIME = cREATETIME;
 	}
 

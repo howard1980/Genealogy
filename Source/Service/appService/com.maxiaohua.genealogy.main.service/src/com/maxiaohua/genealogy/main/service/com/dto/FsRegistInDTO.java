@@ -162,29 +162,6 @@ public class FsRegistInDTO implements java.io.Serializable, Comparable<FsRegistI
 		this.latitude = latitude;
 	}
 
-	/**
-	* 城市CD  
-	*/
-	@Alias("城市CD")
-	private String cityCode = null;
-
-	/**
-	* <code>城市CD</code>返回
-	* @return <code>城市CD</code>
-	*/
-	public String getCityCode() {
-		return this.cityCode;
-	}
-
-	/**
-	* <code>cityCode</code>设定
-	* @param cityCode　<code>cityCode</code>设定值
-	*/
-	public void setCityCode(
-			String cityCode) {
-		this.cityCode = cityCode;
-	}
-
   	/* (non-Javadoc)
      * @see java.lang.Comparable#compareTo(java.lang.Object)
      */

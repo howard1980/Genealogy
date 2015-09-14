@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T06PerHistoryDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T06_PER_HISTORY")
@@ -30,17 +30,15 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("PER_ID")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
-	private String pERID = null;
+	private Long pERID = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("EVENT_TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String eVENTTYPE = null;
+	private Integer eVENTTYPE = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("EVENT_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
@@ -71,29 +69,40 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
 	private String tITLE = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("PRAISE")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("COVERIMAGE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
+	private String cOVERIMAGE = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("PRAISE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
 	private Integer pRAISE = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("SHOW_TYPE")
-	@com.maxiaohua.genealogy.fw.core.type.Index(9)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("ISPUBLIC")
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String sHOWTYPE = null;
+	private Integer iSPUBLIC = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("REMARKS")
-	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 4000, max = 4000)
 	private String rEMARKS = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
-	@com.maxiaohua.genealogy.fw.core.type.Index(11)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("DATETIME")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(12)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
 	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Timestamp cREATETIME = null;
+	private java.sql.Date cREATEDATE = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(13)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Time cREATETIME = null;
 
 	public Long getID() {
 		return this.iD;
@@ -104,21 +113,21 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 		this.iD = iD;
 	}
 
-	public String getPERID() {
+	public Long getPERID() {
 		return this.pERID;
 	}
 
 	public void setPERID(
-			String pERID) {
+			Long pERID) {
 		this.pERID = pERID;
 	}
 
-	public String getEVENTTYPE() {
+	public Integer getEVENTTYPE() {
 		return this.eVENTTYPE;
 	}
 
 	public void setEVENTTYPE(
-			String eVENTTYPE) {
+			Integer eVENTTYPE) {
 		this.eVENTTYPE = eVENTTYPE;
 	}
 
@@ -167,6 +176,15 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 		this.tITLE = tITLE;
 	}
 
+	public String getCOVERIMAGE() {
+		return this.cOVERIMAGE;
+	}
+
+	public void setCOVERIMAGE(
+			String cOVERIMAGE) {
+		this.cOVERIMAGE = cOVERIMAGE;
+	}
+
 	public Integer getPRAISE() {
 		return this.pRAISE;
 	}
@@ -176,13 +194,13 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 		this.pRAISE = pRAISE;
 	}
 
-	public String getSHOWTYPE() {
-		return this.sHOWTYPE;
+	public Integer getISPUBLIC() {
+		return this.iSPUBLIC;
 	}
 
-	public void setSHOWTYPE(
-			String sHOWTYPE) {
-		this.sHOWTYPE = sHOWTYPE;
+	public void setISPUBLIC(
+			Integer iSPUBLIC) {
+		this.iSPUBLIC = iSPUBLIC;
 	}
 
 	public String getREMARKS() {
@@ -194,12 +212,21 @@ public class T06PerHistoryDTO extends T06PerHistoryDTOSupport implements java.io
 		this.rEMARKS = rEMARKS;
 	}
 
-	public java.sql.Timestamp getCREATETIME() {
+	public java.sql.Date getCREATEDATE() {
+		return this.cREATEDATE;
+	}
+
+	public void setCREATEDATE(
+			java.sql.Date cREATEDATE) {
+		this.cREATEDATE = cREATEDATE;
+	}
+
+	public java.sql.Time getCREATETIME() {
 		return this.cREATETIME;
 	}
 
 	public void setCREATETIME(
-			java.sql.Timestamp cREATETIME) {
+			java.sql.Time cREATETIME) {
 		this.cREATETIME = cREATETIME;
 	}
 

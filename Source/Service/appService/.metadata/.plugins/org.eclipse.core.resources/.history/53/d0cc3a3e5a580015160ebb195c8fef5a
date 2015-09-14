@@ -1,0 +1,18 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.main.biz.a04.dto.ActionDTO;
+import com.maxiaohua.genealogy.main.biz.com.GbAction;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+
+public class GbActionImpl extends AbstractDBLogic implements GbAction, HbMessageCode, CommonConstant, CtgCodeConstant {
+
+	@Override
+	public void Add(String userID, ActionDTO action) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

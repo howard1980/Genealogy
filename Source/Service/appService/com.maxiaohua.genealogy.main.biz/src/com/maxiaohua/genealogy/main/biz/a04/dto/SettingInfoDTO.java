@@ -10,7 +10,7 @@ package com.maxiaohua.genealogy.main.biz.a04.dto;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                Create
+ * 1.0          2015/09/14             TOOL                Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.AliasKanJi("家族足迹数据")

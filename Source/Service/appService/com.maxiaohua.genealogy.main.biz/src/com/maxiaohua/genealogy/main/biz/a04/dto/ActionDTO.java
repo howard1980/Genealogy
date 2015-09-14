@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.biz.com.dto.AddressInfoDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                Create
+ * 1.0          2015/09/14             TOOL                Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.AliasKanJi("事件信息")
@@ -64,6 +64,17 @@ public class ActionDTO implements java.io.Serializable, Comparable<ActionDTO> {
 	public void setDate(
 			java.sql.Date date) {
 		this.date = date;
+	}
+
+	private java.sql.Time time = null;
+
+	public java.sql.Time getTime() {
+		return this.time;
+	}
+
+	public void setTime(
+			java.sql.Time time) {
+		this.time = time;
 	}
 
 	private AddressInfoDTO location = null;

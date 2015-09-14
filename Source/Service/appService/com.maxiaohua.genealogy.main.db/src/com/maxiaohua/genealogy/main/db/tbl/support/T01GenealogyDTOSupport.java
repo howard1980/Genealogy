@@ -14,7 +14,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T01GenealogyDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 public abstract class T01GenealogyDTOSupport extends BaseTableDTO {
@@ -57,6 +57,8 @@ public abstract class T01GenealogyDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_INFOMATION = "INFOMATION";
 
+	public static final String COLUMN_BIGINT = "BIGINT";
+
 	public static final String TABLE = "T01_GENEALOGY";
 
 	public static T01GenealogyDTO setDefaultValue() {
@@ -71,6 +73,8 @@ public abstract class T01GenealogyDTOSupport extends BaseTableDTO {
 		defaultDTO.setVIDEO(StringUtil.EMPTY);
 
 		defaultDTO.setINFOMATION(StringUtil.EMPTY);
+
+		defaultDTO.setBIGINT(0l);
 
 		return defaultDTO;
 	}

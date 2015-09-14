@@ -12,6 +12,7 @@
       MOBILE ,
       MAILE ,
       BIRTH_DATE ,
+      BIRTH_TIME ,
       SEX ,
       COVER ,
       HEAD_PORTRAIT ,
@@ -19,8 +20,11 @@
       INFOMATION ,
       LATITUDE ,
       LONGITUDE ,
+      REGEDIT_DATE ,
       REGEDIT_TIME ,
-      OWNER_ID
+      OWNER_ID ,
+      CREATE_DATE ,
+      CREATE_TIME 
     ) VALUES (
       #{fIRSTNAME} ,
       #{lASTNAME} ,
@@ -28,6 +32,7 @@
       #{mOBILE} ,
       #{mAILE} ,
       #{bIRTHDATE} ,
+      #{bIRTHTIME} ,
       #{sEX} ,
       #{cOVER} ,
       #{hEADPORTRAIT} ,
@@ -35,8 +40,11 @@
       #{iNFOMATION} ,
       #{lATITUDE} ,
       #{lONGITUDE} ,
+      #{rEGEDITDATE} ,
       #{rEGEDITTIME} ,
-      #{oWNERID} 
+      #{oWNERID} ,
+      #{cREATEDATE} ,
+      #{cREATETIME} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -52,6 +60,7 @@
       MOBILE = #{mOBILE} ,
       MAILE = #{mAILE} ,
       BIRTH_DATE = #{bIRTHDATE} ,
+      BIRTH_TIME = #{bIRTHTIME} ,
       SEX = #{sEX} ,
       COVER = #{cOVER} ,
       HEAD_PORTRAIT = #{hEADPORTRAIT} ,
@@ -59,8 +68,11 @@
       INFOMATION = #{iNFOMATION} ,
       LATITUDE = #{lATITUDE} ,
       LONGITUDE = #{lONGITUDE} ,
+      REGEDIT_DATE = #{rEGEDITDATE} ,
       REGEDIT_TIME = #{rEGEDITTIME} ,
-      OWNER_ID = #{oWNERID} 
+      OWNER_ID = #{oWNERID} ,
+      CREATE_DATE = #{cREATEDATE} ,
+      CREATE_TIME = #{cREATETIME} 
     WHERE
       ID = #{iD} 
   </update>
@@ -74,6 +86,7 @@
       <if test="mOBILE!=null">MOBILE = #{mOBILE},</if>
       <if test="mAILE!=null">MAILE = #{mAILE},</if>
       <if test="bIRTHDATE!=null">BIRTH_DATE = #{bIRTHDATE},</if>
+      <if test="bIRTHTIME!=null">BIRTH_TIME = #{bIRTHTIME},</if>
       <if test="sEX!=null">SEX = #{sEX},</if>
       <if test="cOVER!=null">COVER = #{cOVER},</if>
       <if test="hEADPORTRAIT!=null">HEAD_PORTRAIT = #{hEADPORTRAIT},</if>
@@ -81,8 +94,11 @@
       <if test="iNFOMATION!=null">INFOMATION = #{iNFOMATION},</if>
       <if test="lATITUDE!=null">LATITUDE = #{lATITUDE},</if>
       <if test="lONGITUDE!=null">LONGITUDE = #{lONGITUDE},</if>
+      <if test="rEGEDITDATE!=null">REGEDIT_DATE = #{rEGEDITDATE},</if>
       <if test="rEGEDITTIME!=null">REGEDIT_TIME = #{rEGEDITTIME},</if>
       <if test="oWNERID!=null">OWNER_ID = #{oWNERID},</if>
+      <if test="cREATEDATE!=null">CREATE_DATE = #{cREATEDATE},</if>
+      <if test="cREATETIME!=null">CREATE_TIME = #{cREATETIME},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -105,6 +121,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -112,8 +129,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     WHERE
       ID = #{iD} 
@@ -129,6 +149,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -136,8 +157,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     WHERE
       ID = #{iD} 
@@ -154,6 +178,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -161,8 +186,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
@@ -172,6 +200,7 @@
       <if test="mOBILE != null">AND MOBILE = #{mOBILE}</if>
       <if test="mAILE != null">AND MAILE = #{mAILE}</if>
       <if test="bIRTHDATE != null">AND BIRTH_DATE = #{bIRTHDATE}</if>
+      <if test="bIRTHTIME != null">AND BIRTH_TIME = #{bIRTHTIME}</if>
       <if test="sEX != null">AND SEX = #{sEX}</if>
       <if test="cOVER != null">AND COVER = #{cOVER}</if>
       <if test="hEADPORTRAIT != null">AND HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
@@ -179,8 +208,11 @@
       <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
       <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
+      <if test="rEGEDITDATE != null">AND REGEDIT_DATE = #{rEGEDITDATE}</if>
       <if test="rEGEDITTIME != null">AND REGEDIT_TIME = #{rEGEDITTIME}</if>
       <if test="oWNERID != null">AND OWNER_ID = #{oWNERID}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -199,6 +231,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -206,8 +239,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
@@ -217,6 +253,7 @@
       <if test="mOBILE != null">OR MOBILE = #{mOBILE}</if>
       <if test="mAILE != null">OR MAILE = #{mAILE}</if>
       <if test="bIRTHDATE != null">OR BIRTH_DATE = #{bIRTHDATE}</if>
+      <if test="bIRTHTIME != null">OR BIRTH_TIME = #{bIRTHTIME}</if>
       <if test="sEX != null">OR SEX = #{sEX}</if>
       <if test="cOVER != null">OR COVER = #{cOVER}</if>
       <if test="hEADPORTRAIT != null">OR HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
@@ -224,8 +261,11 @@
       <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
       <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
+      <if test="rEGEDITDATE != null">OR REGEDIT_DATE = #{rEGEDITDATE}</if>
       <if test="rEGEDITTIME != null">OR REGEDIT_TIME = #{rEGEDITTIME}</if>
       <if test="oWNERID != null">OR OWNER_ID = #{oWNERID}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -244,6 +284,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -251,8 +292,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
@@ -262,6 +306,7 @@
       <if test="mOBILE != null">AND MOBILE LIKE '%'|| #{mOBILE} ||'%'</if>
       <if test="mAILE != null">AND MAILE LIKE '%'|| #{mAILE} ||'%'</if>
       <if test="bIRTHDATE != null">AND BIRTH_DATE LIKE '%'|| #{bIRTHDATE} ||'%'</if>
+      <if test="bIRTHTIME != null">AND BIRTH_TIME LIKE '%'|| #{bIRTHTIME} ||'%'</if>
       <if test="sEX != null">AND SEX LIKE '%'|| #{sEX} ||'%'</if>
       <if test="cOVER != null">AND COVER LIKE '%'|| #{cOVER} ||'%'</if>
       <if test="hEADPORTRAIT != null">AND HEAD_PORTRAIT LIKE '%'|| #{hEADPORTRAIT} ||'%'</if>
@@ -269,7 +314,11 @@
       <if test="iNFOMATION != null">AND INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
       <if test="lATITUDE != null">AND LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
       <if test="lONGITUDE != null">AND LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
+      <if test="rEGEDITDATE != null">AND REGEDIT_DATE LIKE '%'|| #{rEGEDITDATE} ||'%'</if>
       <if test="rEGEDITTIME != null">AND REGEDIT_TIME LIKE '%'|| #{rEGEDITTIME} ||'%'</if>
+      <if test="oWNERID != null">AND OWNER_ID LIKE '%'|| #{oWNERID} ||'%'</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
+      <if test="cREATETIME != null">AND CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -288,6 +337,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -295,8 +345,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
@@ -306,6 +359,7 @@
       <if test="mOBILE != null">OR MOBILE LIKE '%'|| #{mOBILE} ||'%'</if>
       <if test="mAILE != null">OR MAILE LIKE '%'|| #{mAILE} ||'%'</if>
       <if test="bIRTHDATE != null">OR BIRTH_DATE LIKE '%'|| #{bIRTHDATE} ||'%'</if>
+      <if test="bIRTHTIME != null">OR BIRTH_TIME LIKE '%'|| #{bIRTHTIME} ||'%'</if>
       <if test="sEX != null">OR SEX LIKE '%'|| #{sEX} ||'%'</if>
       <if test="cOVER != null">OR COVER LIKE '%'|| #{cOVER} ||'%'</if>
       <if test="hEADPORTRAIT != null">OR HEAD_PORTRAIT LIKE '%'|| #{hEADPORTRAIT} ||'%'</if>
@@ -313,7 +367,11 @@
       <if test="iNFOMATION != null">OR INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
       <if test="lATITUDE != null">OR LATITUDE LIKE '%'|| #{lATITUDE} ||'%'</if>
       <if test="lONGITUDE != null">OR LONGITUDE LIKE '%'|| #{lONGITUDE} ||'%'</if>
+      <if test="rEGEDITDATE != null">OR REGEDIT_DATE LIKE '%'|| #{rEGEDITDATE} ||'%'</if>
       <if test="rEGEDITTIME != null">OR REGEDIT_TIME LIKE '%'|| #{rEGEDITTIME} ||'%'</if>
+      <if test="oWNERID != null">OR OWNER_ID LIKE '%'|| #{oWNERID} ||'%'</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE LIKE '%'|| #{cREATEDATE} ||'%'</if>
+      <if test="cREATETIME != null">OR CREATE_TIME LIKE '%'|| #{cREATETIME} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -332,6 +390,7 @@
       MOBILE AS "mOBILE" ,
       MAILE AS "mAILE" ,
       BIRTH_DATE AS "bIRTHDATE" ,
+      BIRTH_TIME AS "bIRTHTIME" ,
       SEX AS "sEX" ,
       COVER AS "cOVER" ,
       HEAD_PORTRAIT AS "hEADPORTRAIT" ,
@@ -339,8 +398,11 @@
       INFOMATION AS "iNFOMATION" ,
       LATITUDE AS "lATITUDE" ,
       LONGITUDE AS "lONGITUDE" ,
+      REGEDIT_DATE AS "rEGEDITDATE" ,
       REGEDIT_TIME AS "rEGEDITTIME" ,
-      OWNER_ID AS "oWNERID" 
+      OWNER_ID AS "oWNERID" ,
+      CREATE_DATE AS "cREATEDATE" ,
+      CREATE_TIME AS "cREATETIME" 
     FROM T02_PERSONAL
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -362,6 +424,7 @@
       <if test="mOBILE != null">AND MOBILE = #{mOBILE}</if>
       <if test="mAILE != null">AND MAILE = #{mAILE}</if>
       <if test="bIRTHDATE != null">AND BIRTH_DATE = #{bIRTHDATE}</if>
+      <if test="bIRTHTIME != null">AND BIRTH_TIME = #{bIRTHTIME}</if>
       <if test="sEX != null">AND SEX = #{sEX}</if>
       <if test="cOVER != null">AND COVER = #{cOVER}</if>
       <if test="hEADPORTRAIT != null">AND HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
@@ -369,7 +432,11 @@
       <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
       <if test="lATITUDE != null">AND LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">AND LONGITUDE = #{lONGITUDE}</if>
+      <if test="rEGEDITDATE != null">AND REGEDIT_DATE = #{rEGEDITDATE}</if>
       <if test="rEGEDITTIME != null">AND REGEDIT_TIME = #{rEGEDITTIME}</if>
+      <if test="oWNERID != null">AND OWNER_ID = #{oWNERID}</if>
+      <if test="cREATEDATE != null">AND CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">AND CREATE_TIME = #{cREATETIME}</if>
     </where>
   </select>
 
@@ -385,6 +452,7 @@
       <if test="mOBILE != null">OR MOBILE = #{mOBILE}</if>
       <if test="mAILE != null">OR MAILE = #{mAILE}</if>
       <if test="bIRTHDATE != null">OR BIRTH_DATE = #{bIRTHDATE}</if>
+      <if test="bIRTHTIME != null">OR BIRTH_TIME = #{bIRTHTIME}</if>
       <if test="sEX != null">OR SEX = #{sEX}</if>
       <if test="cOVER != null">OR COVER = #{cOVER}</if>
       <if test="hEADPORTRAIT != null">OR HEAD_PORTRAIT = #{hEADPORTRAIT}</if>
@@ -392,7 +460,11 @@
       <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
       <if test="lATITUDE != null">OR LATITUDE = #{lATITUDE}</if>
       <if test="lONGITUDE != null">OR LONGITUDE = #{lONGITUDE}</if>
+      <if test="rEGEDITDATE != null">OR REGEDIT_DATE = #{rEGEDITDATE}</if>
       <if test="rEGEDITTIME != null">OR REGEDIT_TIME = #{rEGEDITTIME}</if>
+      <if test="oWNERID != null">OR OWNER_ID = #{oWNERID}</if>
+      <if test="cREATEDATE != null">OR CREATE_DATE = #{cREATEDATE}</if>
+      <if test="cREATETIME != null">OR CREATE_TIME = #{cREATETIME}</if>
     </where>
   </select>
 

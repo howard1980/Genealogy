@@ -1,8 +1,0 @@
-package com.maxiaohua.genealogy.main.biz.com;
-
-import java.math.BigDecimal;
-
-public interface HbCustomerAccount {
-	void insetCustomerAccountDetail(Long customerID, BigDecimal payment, Long orderID, 
-			String orderType, Integer type);
-}

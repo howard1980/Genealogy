@@ -9,12 +9,14 @@
       FIRST_NAME ,
       ARMS ,
       VIDEO ,
-      INFOMATION 
+      INFOMATION ,
+      BIGINT 
     ) VALUES (
       #{fIRSTNAME} ,
       #{aRMS} ,
       #{vIDEO} ,
-      #{iNFOMATION} 
+      #{iNFOMATION} ,
+      #{bIGINT} 
     )
     <selectKey resultType="java.lang.Long" order="AFTER" keyProperty = "iD">
     SELECT LAST_INSERT_ID() AS ID
@@ -27,7 +29,8 @@
       FIRST_NAME = #{fIRSTNAME} ,
       ARMS = #{aRMS} ,
       VIDEO = #{vIDEO} ,
-      INFOMATION = #{iNFOMATION} 
+      INFOMATION = #{iNFOMATION} ,
+      BIGINT = #{bIGINT} 
     WHERE
       ID = #{iD} 
   </update>
@@ -39,6 +42,7 @@
       <if test="aRMS!=null">ARMS = #{aRMS},</if>
       <if test="vIDEO!=null">VIDEO = #{vIDEO},</if>
       <if test="iNFOMATION!=null">INFOMATION = #{iNFOMATION},</if>
+      <if test="bIGINT!=null">BIGINT = #{bIGINT},</if>
     </set>
     WHERE
       ID = #{iD} 
@@ -58,7 +62,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     WHERE
       ID = #{iD} 
@@ -71,7 +76,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     WHERE
       ID = #{iD} 
@@ -85,7 +91,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">AND ID = #{iD}</if>
@@ -93,6 +100,7 @@
       <if test="aRMS != null">AND ARMS = #{aRMS}</if>
       <if test="vIDEO != null">AND VIDEO = #{vIDEO}</if>
       <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
+      <if test="bIGINT != null">AND BIGINT = #{bIGINT}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -108,7 +116,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">OR ID = #{iD}</if>
@@ -116,6 +125,7 @@
       <if test="aRMS != null">OR ARMS = #{aRMS}</if>
       <if test="vIDEO != null">OR VIDEO = #{vIDEO}</if>
       <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
+      <if test="bIGINT != null">OR BIGINT = #{bIGINT}</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -131,7 +141,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">AND ID LIKE '%'|| #{iD} ||'%'</if>
@@ -139,6 +150,7 @@
       <if test="aRMS != null">AND ARMS LIKE '%'|| #{aRMS} ||'%'</if>
       <if test="vIDEO != null">AND VIDEO LIKE '%'|| #{vIDEO} ||'%'</if>
       <if test="iNFOMATION != null">AND INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
+      <if test="bIGINT != null">AND BIGINT LIKE '%'|| #{bIGINT} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -154,7 +166,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     <where>
       <if test="iD != null">OR ID LIKE '%'|| #{iD} ||'%'</if>
@@ -162,6 +175,7 @@
       <if test="aRMS != null">OR ARMS LIKE '%'|| #{aRMS} ||'%'</if>
       <if test="vIDEO != null">OR VIDEO LIKE '%'|| #{vIDEO} ||'%'</if>
       <if test="iNFOMATION != null">OR INFOMATION LIKE '%'|| #{iNFOMATION} ||'%'</if>
+      <if test="bIGINT != null">OR BIGINT LIKE '%'|| #{bIGINT} ||'%'</if>
     </where>
     <if test="_orderByCondition == null">ORDER BY ID</if>
     <if test="_orderByCondition != null">ORDER BY ${_orderByCondition}</if>
@@ -177,7 +191,8 @@
       FIRST_NAME AS "fIRSTNAME" ,
       ARMS AS "aRMS" ,
       VIDEO AS "vIDEO" ,
-      INFOMATION AS "iNFOMATION" 
+      INFOMATION AS "iNFOMATION" ,
+      BIGINT AS "bIGINT" 
     FROM T01_GENEALOGY
     <if test="_dynamicWhereCondition != null">WHERE ${_dynamicWhereCondition}</if>
     <if test="_orderByCondition == null">ORDER BY ID</if>
@@ -197,6 +212,7 @@
       <if test="aRMS != null">AND ARMS = #{aRMS}</if>
       <if test="vIDEO != null">AND VIDEO = #{vIDEO}</if>
       <if test="iNFOMATION != null">AND INFOMATION = #{iNFOMATION}</if>
+      <if test="bIGINT != null">AND BIGINT = #{bIGINT}</if>
     </where>
   </select>
 
@@ -210,6 +226,7 @@
       <if test="aRMS != null">OR ARMS = #{aRMS}</if>
       <if test="vIDEO != null">OR VIDEO = #{vIDEO}</if>
       <if test="iNFOMATION != null">OR INFOMATION = #{iNFOMATION}</if>
+      <if test="bIGINT != null">OR BIGINT = #{bIGINT}</if>
     </where>
   </select>
 

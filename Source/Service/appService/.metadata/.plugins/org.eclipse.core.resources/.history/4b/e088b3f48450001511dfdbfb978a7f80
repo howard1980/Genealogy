@@ -1,6 +1,0 @@
-package com.maxiaohua.genealogy.main.biz.a01;
-
-public interface HbGetCityCode {
-	String getCode( Double latitude, Double longitude );
-
-}

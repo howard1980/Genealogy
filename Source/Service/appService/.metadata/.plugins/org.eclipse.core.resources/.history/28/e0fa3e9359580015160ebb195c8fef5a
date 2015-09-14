@@ -1,0 +1,7 @@
+package com.maxiaohua.genealogy.main.biz.com;
+
+import com.maxiaohua.genealogy.main.biz.com.dto.UserInfoDTO;
+
+public interface GbAction {
+
+}

@@ -1,0 +1,29 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractDBLogic;
+import com.maxiaohua.genealogy.main.biz.a04.dto.ActionDTO;
+import com.maxiaohua.genealogy.main.biz.com.GbAction;
+import com.maxiaohua.genealogy.main.biz.constant.CommonConstant;
+import com.maxiaohua.genealogy.main.biz.constant.CtgCodeConstant;
+import com.maxiaohua.genealogy.main.biz.constant.HbMessageCode;
+import com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO;
+
+public class GbActionImpl extends AbstractDBLogic implements GbAction, HbMessageCode, CommonConstant, CtgCodeConstant {
+
+	@Override
+	public void Add(String userID, ActionDTO action) {
+		T06PerHistoryDTO perHistory = new T06PerHistoryDTO();
+		perHistory.setPERID(userID);
+		perHistory.setEVENTTYPE(action.getType().toString());
+		perHistory.setEVENTDATE(action.getDate());
+		//perHistory.setEVENTTIME(action.getTime());
+		perHistory.setLATITUDE(action.getLocation().getLatitude());
+		perHistory.setLONGITUDE(action.getLocation().getLongitude());
+		perHistory.setTITLE(action.getDescriptions());
+		perHistory.setREMARKS(action.getIntroduction());
+		this.updateDAO.update(T06PerHistoryDTO.INSERT, perHistory);
+		
+		for()
+	}
+
+}

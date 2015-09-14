@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T07PerSetDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T07_PER_SET")
@@ -35,21 +35,18 @@ public class T07PerSetDTO extends T07PerSetDTOSupport implements java.io.Seriali
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("SHOW_TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(2)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
-	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String sHOWTYPE = null;
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer sHOWTYPE = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("CONTACT_SHOW")
 	@com.maxiaohua.genealogy.fw.core.type.Index(3)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
-	@com.maxiaohua.genealogy.fw.core.type.Length(min = 8, max = 8)
-	private String cONTACTSHOW = null;
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer cONTACTSHOW = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("VOICE_TYPE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(4)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
-	@com.maxiaohua.genealogy.fw.core.type.Length(min = 45, max = 45)
-	private String vOICETYPE = null;
+	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
+	private Integer vOICETYPE = null;
 
 	public Long getID() {
 		return this.iD;
@@ -69,30 +66,30 @@ public class T07PerSetDTO extends T07PerSetDTOSupport implements java.io.Seriali
 		this.pERID = pERID;
 	}
 
-	public String getSHOWTYPE() {
+	public Integer getSHOWTYPE() {
 		return this.sHOWTYPE;
 	}
 
 	public void setSHOWTYPE(
-			String sHOWTYPE) {
+			Integer sHOWTYPE) {
 		this.sHOWTYPE = sHOWTYPE;
 	}
 
-	public String getCONTACTSHOW() {
+	public Integer getCONTACTSHOW() {
 		return this.cONTACTSHOW;
 	}
 
 	public void setCONTACTSHOW(
-			String cONTACTSHOW) {
+			Integer cONTACTSHOW) {
 		this.cONTACTSHOW = cONTACTSHOW;
 	}
 
-	public String getVOICETYPE() {
+	public Integer getVOICETYPE() {
 		return this.vOICETYPE;
 	}
 
 	public void setVOICETYPE(
-			String vOICETYPE) {
+			Integer vOICETYPE) {
 		this.vOICETYPE = vOICETYPE;
 	}
 

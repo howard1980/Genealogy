@@ -10,7 +10,7 @@ package com.maxiaohua.genealogy.main.biz.com.dto;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                Create
+ * 1.0          2015/09/14             TOOL                Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.AliasKanJi("用户信息")
@@ -73,6 +73,17 @@ public class UserInfoDTO implements java.io.Serializable, Comparable<UserInfoDTO
 	public void setBirthday(
 			java.sql.Date birthday) {
 		this.birthday = birthday;
+	}
+
+	private java.sql.Time birthTime = null;
+
+	public java.sql.Time getBirthTime() {
+		return this.birthTime;
+	}
+
+	public void setBirthTime(
+			java.sql.Time birthTime) {
+		this.birthTime = birthTime;
 	}
 
 	private String mobile = null;
@@ -161,6 +172,17 @@ public class UserInfoDTO implements java.io.Serializable, Comparable<UserInfoDTO
 	public void setAddress(
 			AddressInfoDTO address) {
 		this.address = address;
+	}
+
+	private Boolean readOnlay = null;
+
+	public Boolean getReadOnlay() {
+		return this.readOnlay;
+	}
+
+	public void setReadOnlay(
+			Boolean readOnlay) {
+		this.readOnlay = readOnlay;
 	}
 
   	/* (non-Javadoc)

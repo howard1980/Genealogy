@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T02PersonalDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T02_PERSONAL")
@@ -31,7 +31,6 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 	@com.maxiaohua.genealogy.fw.core.type.Alias("FIRST_NAME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(1)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
-	@com.maxiaohua.genealogy.fw.core.type.NotNull
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 30, max = 30)
 	private String fIRSTNAME = null;
 
@@ -65,55 +64,75 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
 	private java.sql.Date bIRTHDATE = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("SEX")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("BIRTH_TIME")
 	@com.maxiaohua.genealogy.fw.core.type.Index(7)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time bIRTHTIME = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("SEX")
+	@com.maxiaohua.genealogy.fw.core.type.Index(8)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("INTEGER")
 	private Integer sEX = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("COVER")
-	@com.maxiaohua.genealogy.fw.core.type.Index(8)
+	@com.maxiaohua.genealogy.fw.core.type.Index(9)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
 	private String cOVER = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("HEAD_PORTRAIT")
-	@com.maxiaohua.genealogy.fw.core.type.Index(9)
+	@com.maxiaohua.genealogy.fw.core.type.Index(10)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
 	private String hEADPORTRAIT = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("VIDEO")
-	@com.maxiaohua.genealogy.fw.core.type.Index(10)
+	@com.maxiaohua.genealogy.fw.core.type.Index(11)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("VARCHAR")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 200, max = 200)
 	private String vIDEO = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("INFOMATION")
-	@com.maxiaohua.genealogy.fw.core.type.Index(11)
+	@com.maxiaohua.genealogy.fw.core.type.Index(12)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
 	private String iNFOMATION = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LATITUDE")
-	@com.maxiaohua.genealogy.fw.core.type.Index(12)
+	@com.maxiaohua.genealogy.fw.core.type.Index(13)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
 	private Double lATITUDE = null;
 
 	@com.maxiaohua.genealogy.fw.core.type.Alias("LONGITUDE")
-	@com.maxiaohua.genealogy.fw.core.type.Index(13)
+	@com.maxiaohua.genealogy.fw.core.type.Index(14)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("DOUBLE")
 	private Double lONGITUDE = null;
 
-	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDIT_TIME")
-	@com.maxiaohua.genealogy.fw.core.type.Index(14)
-	@com.maxiaohua.genealogy.fw.core.type.DataType("DATETIME")
-	@com.maxiaohua.genealogy.fw.core.type.NotNull
-	private java.sql.Timestamp rEGEDITTIME = null;
-	
-	@com.maxiaohua.genealogy.fw.core.type.Alias("OWNER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDIT_DATE")
 	@com.maxiaohua.genealogy.fw.core.type.Index(15)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date rEGEDITDATE = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("REGEDIT_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(16)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	@com.maxiaohua.genealogy.fw.core.type.NotNull
+	private java.sql.Time rEGEDITTIME = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("OWNER_ID")
+	@com.maxiaohua.genealogy.fw.core.type.Index(17)
 	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
-	private Long oWNER_ID = null;
+	private Long oWNERID = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_DATE")
+	@com.maxiaohua.genealogy.fw.core.type.Index(18)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("DATE")
+	private java.sql.Date cREATEDATE = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("CREATE_TIME")
+	@com.maxiaohua.genealogy.fw.core.type.Index(19)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("TIME")
+	private java.sql.Time cREATETIME = null;
 
 	public Long getID() {
 		return this.iD;
@@ -176,6 +195,15 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 	public void setBIRTHDATE(
 			java.sql.Date bIRTHDATE) {
 		this.bIRTHDATE = bIRTHDATE;
+	}
+
+	public java.sql.Time getBIRTHTIME() {
+		return this.bIRTHTIME;
+	}
+
+	public void setBIRTHTIME(
+			java.sql.Time bIRTHTIME) {
+		this.bIRTHTIME = bIRTHTIME;
 	}
 
 	public Integer getSEX() {
@@ -241,24 +269,51 @@ public class T02PersonalDTO extends T02PersonalDTOSupport implements java.io.Ser
 		this.lONGITUDE = lONGITUDE;
 	}
 
-	public java.sql.Timestamp getREGEDITTIME() {
+	public java.sql.Date getREGEDITDATE() {
+		return this.rEGEDITDATE;
+	}
+
+	public void setREGEDITDATE(
+			java.sql.Date rEGEDITDATE) {
+		this.rEGEDITDATE = rEGEDITDATE;
+	}
+
+	public java.sql.Time getREGEDITTIME() {
 		return this.rEGEDITTIME;
 	}
 
 	public void setREGEDITTIME(
-			java.sql.Timestamp rEGEDITTIME) {
+			java.sql.Time rEGEDITTIME) {
 		this.rEGEDITTIME = rEGEDITTIME;
 	}
-	
+
 	public Long getOWNERID() {
-		return this.oWNER_ID;
+		return this.oWNERID;
 	}
 
 	public void setOWNERID(
-			Long oWNER_ID) {
-		this.oWNER_ID = oWNER_ID;
+			Long oWNERID) {
+		this.oWNERID = oWNERID;
 	}
-	
+
+	public java.sql.Date getCREATEDATE() {
+		return this.cREATEDATE;
+	}
+
+	public void setCREATEDATE(
+			java.sql.Date cREATEDATE) {
+		this.cREATEDATE = cREATEDATE;
+	}
+
+	public java.sql.Time getCREATETIME() {
+		return this.cREATETIME;
+	}
+
+	public void setCREATETIME(
+			java.sql.Time cREATETIME) {
+		this.cREATETIME = cREATETIME;
+	}
+
   	/* (non-Javadoc)
      * @see java.lang.Comparable#compareTo(java.lang.Object)
      */

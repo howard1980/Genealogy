@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T06PerHistoryDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
@@ -64,11 +64,15 @@ public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
 
 	public static final String COLUMN_TITLE = "TITLE";
 
+	public static final String COLUMN_COVERIMAGE = "COVERIMAGE";
+
 	public static final String COLUMN_PRAISE = "PRAISE";
 
-	public static final String COLUMN_SHOW_TYPE = "SHOW_TYPE";
+	public static final String COLUMN_ISPUBLIC = "ISPUBLIC";
 
 	public static final String COLUMN_REMARKS = "REMARKS";
+
+	public static final String COLUMN_CREATE_DATE = "CREATE_DATE";
 
 	public static final String COLUMN_CREATE_TIME = "CREATE_TIME";
 
@@ -79,9 +83,9 @@ public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setID(0l);
 
-		defaultDTO.setPERID(StringUtil.EMPTY);
+		defaultDTO.setPERID(0l);
 
-		defaultDTO.setEVENTTYPE(StringUtil.EMPTY);
+		defaultDTO.setEVENTTYPE(0);
 
 		defaultDTO.setEVENTDATE(DateUtil.getDefaultDate());
 
@@ -93,13 +97,17 @@ public abstract class T06PerHistoryDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setTITLE(StringUtil.EMPTY);
 
+		defaultDTO.setCOVERIMAGE(StringUtil.EMPTY);
+
 		defaultDTO.setPRAISE(0);
 
-		defaultDTO.setSHOWTYPE(StringUtil.EMPTY);
+		defaultDTO.setISPUBLIC(0);
 
 		defaultDTO.setREMARKS(StringUtil.EMPTY);
 
-		defaultDTO.setCREATETIME(new java.sql.Timestamp(System.currentTimeMillis()));
+		defaultDTO.setCREATEDATE(DateUtil.getDefaultDate());
+
+		defaultDTO.setCREATETIME(DateUtil.getDefaultTime());
 
 		return defaultDTO;
 	}

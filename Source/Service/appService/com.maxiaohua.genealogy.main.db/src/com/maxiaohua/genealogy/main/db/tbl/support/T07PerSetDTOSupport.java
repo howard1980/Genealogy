@@ -4,7 +4,6 @@
  */
 package com.maxiaohua.genealogy.main.db.tbl.support;
 
-import com.maxiaohua.genealogy.fw.core.util.StringUtil;
 import com.maxiaohua.genealogy.main.db.base.BaseTableDTO;
 import com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO;
 
@@ -14,7 +13,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T07PerSetDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 public abstract class T07PerSetDTOSupport extends BaseTableDTO {
@@ -66,11 +65,11 @@ public abstract class T07PerSetDTOSupport extends BaseTableDTO {
 
 		defaultDTO.setPERID(0l);
 
-		defaultDTO.setSHOWTYPE(StringUtil.EMPTY);
+		defaultDTO.setSHOWTYPE(0);
 
-		defaultDTO.setCONTACTSHOW(StringUtil.EMPTY);
+		defaultDTO.setCONTACTSHOW(0);
 
-		defaultDTO.setVOICETYPE(StringUtil.EMPTY);
+		defaultDTO.setVOICETYPE(0);
 
 		return defaultDTO;
 	}

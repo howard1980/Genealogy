@@ -31,8 +31,7 @@ public class FsRegist extends AbstractService<FsRegistOutDTO, FsRegistInDTO> {
 						fsRegistInDTO.getMobile(), 
 						fsRegistInDTO.getValidCode(), 
 						fsRegistInDTO.getLongitude(), 
-						fsRegistInDTO.getLatitude(), 
-						fsRegistInDTO.getCityCode(), 
+						fsRegistInDTO.getLatitude(),  
 						fsRegistInDTO.getRegisitrationID(), 
 						fsRegistInDTO.getImsi()));
 		return fsRegistOutDTO;

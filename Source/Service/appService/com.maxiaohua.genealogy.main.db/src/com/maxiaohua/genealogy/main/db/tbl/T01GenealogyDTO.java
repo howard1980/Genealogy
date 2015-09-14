@@ -12,7 +12,7 @@ import com.maxiaohua.genealogy.main.db.tbl.support.T01GenealogyDTOSupport;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 @com.maxiaohua.genealogy.fw.core.type.Alias("T01_GENEALOGY")
@@ -52,6 +52,11 @@ public class T01GenealogyDTO extends T01GenealogyDTOSupport implements java.io.S
 	@com.maxiaohua.genealogy.fw.core.type.DataType("TEXT")
 	@com.maxiaohua.genealogy.fw.core.type.Length(min = 65535, max = 65535)
 	private String iNFOMATION = null;
+
+	@com.maxiaohua.genealogy.fw.core.type.Alias("BIGINT")
+	@com.maxiaohua.genealogy.fw.core.type.Index(5)
+	@com.maxiaohua.genealogy.fw.core.type.DataType("BIGINT")
+	private Long bIGINT = null;
 
 	public Long getID() {
 		return this.iD;
@@ -96,6 +101,15 @@ public class T01GenealogyDTO extends T01GenealogyDTOSupport implements java.io.S
 	public void setINFOMATION(
 			String iNFOMATION) {
 		this.iNFOMATION = iNFOMATION;
+	}
+
+	public Long getBIGINT() {
+		return this.bIGINT;
+	}
+
+	public void setBIGINT(
+			Long bIGINT) {
+		this.bIGINT = bIGINT;
 	}
 
   	/* (non-Javadoc)

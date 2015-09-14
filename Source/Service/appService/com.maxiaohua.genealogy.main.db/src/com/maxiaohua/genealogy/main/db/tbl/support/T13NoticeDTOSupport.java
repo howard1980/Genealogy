@@ -15,7 +15,7 @@ import com.maxiaohua.genealogy.main.db.tbl.T13NoticeDTO;
  * History
  * REV.         Updated Date           Updater              Infomation
  * -------      ---------------        ----------------     ------------------
- * 1.0          2015/09/06             TOOL                 Create
+ * 1.0          2015/09/14             TOOL                 Create
 *
  */
 public abstract class T13NoticeDTOSupport extends BaseTableDTO {
