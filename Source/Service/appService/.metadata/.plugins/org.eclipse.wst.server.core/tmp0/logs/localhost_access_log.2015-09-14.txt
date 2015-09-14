@@ -46,3 +46,7 @@
 127.0.0.1 - - [14/Sep/2015:15:08:39 +0800] "GET / HTTP/1.1" 404 994
 0:0:0:0:0:0:0:1 - - [14/Sep/2015:15:08:59 +0800] "GET /genealogy/app/FsGetAppVersion/%7B%22version%22:3,%22channel%22:2,%22type%22:1%7D HTTP/1.1" 200 98
 127.0.0.1 - - [14/Sep/2015:15:09:26 +0800] "GET / HTTP/1.1" 404 994
+127.0.0.1 - - [14/Sep/2015:15:12:40 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [14/Sep/2015:15:12:46 +0800] "GET /genealogy/app/FsGetAppVersion/%7B%22version%22:3,%22channel%22:2,%22type%22:1%7D HTTP/1.1" 200 98
+127.0.0.1 - - [14/Sep/2015:15:14:35 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [14/Sep/2015:15:14:43 +0800] "GET /genealogy/app/FsGetAppVersion/%7B%22version%22:3,%22channel%22:2,%22type%22:1%7D HTTP/1.1" 200 98
