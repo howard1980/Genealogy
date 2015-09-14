@@ -102,15 +102,11 @@
 	<bean name="serviceOutputParamInterceptor" type="com.maxiaohua.genealogy.fw.web.interceptor.impl.ServiceOutputParamInterceptor" scope="singleton">
 		<property name="ajaxRender" ref="ajaxRender"/>
 	</bean>
-	<bean name="ldapInterceptor" type="com.maxiaohua.genealogy.fw.web.interceptor.impl.LDAPInterceptor" scope="singleton" >
-		<property name="ldapFactory" ref="ldapFactory"/>
-	</bean>
 	<bean name="wechetPayControlInterceptor" type="com.maxiaohua.genealogy.fw.web.interceptor.impl.WechetPayControlInterceptor" scope="singleton" />
 	<bean name="interceptors" type="java.util.ArrayList" scope="singleton">
 		<property ref="wechetPayControlInterceptor"/>
 		<property ref="contextSessionControlInterceptor"/>
 		<property ref="sqlSessionControlInterceptor"/>
-		<property ref="ldapInterceptor"/>
 		<property ref="serviceInputParamInterceptor"/>
 		<property ref="serviceInterceptor"/>
 		<property ref="serviceOutputParamInterceptor"/>
@@ -127,12 +123,6 @@
 		<property name="exceptionHandlers" ref="exceptionHandlers"/>
 		<property name="ajaxRender" ref="ajaxRender"/>
 		<property name="connectionManager" ref="connectionManager"/>
-	</bean>
-
-	<bean name="ldapFactory" type="com.maxiaohua.genealogy.main.biz.com.impl.HbLDAPFactoryImpl" scope="singleton">
-		<property name="root" value="dc=cisp,dc=com"/>
-		<property name="ldapHostIP" value="127.0.0.1"/>
-		<property name="adminPassword" value="password"/>
 	</bean>
 
 	<bean name="connectionManager" type="com.maxiaohua.genealogy.fw.core.connection.impl.ConnectionManagerImpl" scope="singleton">

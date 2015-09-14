@@ -1,20 +1,9 @@
 package com.maxiaohua.genealogy.main.biz.com.impl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import com.maxiaohua.genealogy.fw.core.biz.AbstractMasterCache;
-import com.maxiaohua.genealogy.fw.core.util.CollectionUtil;
-import com.maxiaohua.genealogy.fw.core.util.StringUtil;
 import com.maxiaohua.genealogy.main.biz.com.HbMasterCache;
 import com.maxiaohua.genealogy.main.biz.com.dto.CodeWithValueDTO;
 import com.maxiaohua.genealogy.main.biz.constant.MasterCacheConstant;
-import com.maxiaohua.genealogy.main.db.base.StatementDTO;
-import com.maxiaohua.genealogy.main.db.base.StatementUtil;
-import com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO;
 
 /**
  * Mase数据缓存实现逻辑
@@ -26,10 +15,10 @@ import com.maxiaohua.genealogy.main.db.tbl.TcomblcmDTO;
  */
 public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCache, MasterCacheConstant {
 
-	/** 
-	 * 业务逻辑设定mast的Map
-	 */
-	private static HashMap<String, Object> tcomblcmMap = null;
+//	/** 
+//	 * 业务逻辑设定mast的Map
+//	 */
+//	private static HashMap<String, Object> tcomblcmMap = null;
 	
 //	/** 
 //	 * 城市区域规划mast的Map
@@ -44,7 +33,7 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 	/* (non-Javadoc)
 	 * @see com.maxiaohua.genealogy.main.biz.com.HbMasterCache#getMasterData(com.maxiaohua.genealogy.main.biz.com.HbMasterCache.MASTER_NAME, java.lang.Object[])
 	 */
-	@SuppressWarnings("unchecked")
+//	@SuppressWarnings("unchecked")
 	@Override
 	public <E> E getMasterData(
 			MASTER_NAME name,
@@ -53,9 +42,9 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 		E result = null;
 
 		switch (name) {
-		case TCOMBLCM:
-			result = (E) getTcomblcmData(parameters);
-			break;
+//		case TCOMBLCM:
+//			result = (E) getTcomblcmData(parameters);
+//			break;
 //		case CITYAREA:
 //			result = (E) getCityAreaData(parameters);
 //			break;
@@ -76,9 +65,9 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 			MASTER_NAME name) {
 
 		switch (name) {
-		case TCOMBLCM:
-			refreshTcomblcmData();
-			break;
+//		case TCOMBLCM:
+//			refreshTcomblcmData();
+//			break;
 //		case CITYAREA:
 //			refreshCityAreaData();
 //			break;
@@ -99,9 +88,9 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 	public void loadMasterData(
 			MASTER_NAME name) {
 		switch (name) {
-		case TCOMBLCM:
-			loadTcomblcmData();
-			break;
+//		case TCOMBLCM:
+//			loadTcomblcmData();
+//			break;
 //		case GROUP_SERVICE:
 //			loadWorkerServiceData();
 //			break;
@@ -116,85 +105,85 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 		CodeWithValueDTO[] result = null;
 
 		switch (name) {
-		//ビジネスロジック設定マスターの場合
-		case TCOMBLCM:
-			result = getTcomblcmList();
-			break;
+//		//ビジネスロジック設定マスターの場合
+//		case TCOMBLCM:
+//			result = getTcomblcmList();
+//			break;
 		default:
 			break;
 		}
 		return result;
 	}
 
-	/**
-	 * 次のパラメーターを取得
-	 *
-	 * @param parameters	パラメーター
-	 *
-	 * @return	Object[]	次のパラメーター
-	 */
-	private Object[] getNextParameters(
-			Object[] parameters) {
-		Object[] nextParameters = null;
-		if (parameters != null && parameters.length >= 2) {
-			nextParameters = new Object[parameters.length - 1];
-			for (int i = 1; i < parameters.length; i++) {
-				nextParameters[i - 1] = parameters[i];
-			}
-		}
-		return nextParameters;
-	}
+//	/**
+//	 * 次のパラメーターを取得
+//	 *
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	Object[]	次のパラメーター
+//	 */
+//	private Object[] getNextParameters(
+//			Object[] parameters) {
+//		Object[] nextParameters = null;
+//		if (parameters != null && parameters.length >= 2) {
+//			nextParameters = new Object[parameters.length - 1];
+//			for (int i = 1; i < parameters.length; i++) {
+//				nextParameters[i - 1] = parameters[i];
+//			}
+//		}
+//		return nextParameters;
+//	}
 
-	/**
-	 * ビジネスロジック設定マスターをロードする
-	 *
-	 */
-	private void loadTcomblcmData() {
-		StatementDTO statementDTO = new StatementDTO();
-		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_APPL_ID, null);
-		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_FUNCTION_ID, null);
-		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_ITEM_ID, null);
-		TcomblcmDTO tcomblcmDTO = new TcomblcmDTO();
-		tcomblcmDTO.set_orderByCondition(statementDTO.getSQLOrderByStatement());
-		//ビジネスロジック設定マスター情報を取得
-		List<TcomblcmDTO> resultDTOs = queryDAO.queryForObjectList(TcomblcmDTO.EQUAL_SEARCH, tcomblcmDTO);
-		if (CollectionUtil.isNotEmpty(resultDTOs)) {
-			HashMap<String, Object> resultMap = new HashMap<String, Object>();
-			HashMap<String, Object> functionIDMap = null;
-			HashMap<String, TcomblcmDTO> itemIDMap = null;
-			String applID = null;
-			String functionID = null;
-			for (TcomblcmDTO resultDTO : resultDTOs) {
-				if (!resultDTO.getApplId().equals(applID)) {
-					applID = resultDTO.getApplId();
-					functionIDMap = new HashMap<String, Object>();
-					functionID = resultDTO.getFunctionId();
-					itemIDMap = new HashMap<String, TcomblcmDTO>();
-					//アプリケーションIDをキーとしてマップにレコードをセットする
-					resultMap.put(StringUtil.trimRight(resultDTO.getApplId()), functionIDMap);
-					//機能IDをキーとしてマップにレコードをセットする
-					functionIDMap.put(StringUtil.trimRight(resultDTO.getFunctionId()), itemIDMap);
-					//項目IDをキーとしてマップにレコードをセットする
-					itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
-					continue;
-				}
-
-				if (resultDTO.getApplId().equals(applID) && !resultDTO.getFunctionId().equals(functionID)) {
-					functionID = resultDTO.getFunctionId();
-					itemIDMap = new HashMap<String, TcomblcmDTO>();
-					//機能IDをキーとしてマップにレコードをセットする
-					functionIDMap.put(StringUtil.trimRight(resultDTO.getFunctionId()), itemIDMap);
-					//項目IDをキーとしてマップにレコードをセットする
-					itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
-					continue;
-				}
-
-				//項目IDをキーとしてマップにレコードをセットする
-				itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
-			}
-			tcomblcmMap = resultMap;
-		}
-	}
+//	/**
+//	 * ビジネスロジック設定マスターをロードする
+//	 *
+//	 */
+//	private void loadTcomblcmData() {
+//		StatementDTO statementDTO = new StatementDTO();
+//		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_APPL_ID, null);
+//		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_FUNCTION_ID, null);
+//		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_ITEM_ID, null);
+//		TcomblcmDTO tcomblcmDTO = new TcomblcmDTO();
+//		tcomblcmDTO.set_orderByCondition(statementDTO.getSQLOrderByStatement());
+//		//ビジネスロジック設定マスター情報を取得
+//		List<TcomblcmDTO> resultDTOs = queryDAO.queryForObjectList(TcomblcmDTO.EQUAL_SEARCH, tcomblcmDTO);
+//		if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//			HashMap<String, Object> resultMap = new HashMap<String, Object>();
+//			HashMap<String, Object> functionIDMap = null;
+//			HashMap<String, TcomblcmDTO> itemIDMap = null;
+//			String applID = null;
+//			String functionID = null;
+//			for (TcomblcmDTO resultDTO : resultDTOs) {
+//				if (!resultDTO.getApplId().equals(applID)) {
+//					applID = resultDTO.getApplId();
+//					functionIDMap = new HashMap<String, Object>();
+//					functionID = resultDTO.getFunctionId();
+//					itemIDMap = new HashMap<String, TcomblcmDTO>();
+//					//アプリケーションIDをキーとしてマップにレコードをセットする
+//					resultMap.put(StringUtil.trimRight(resultDTO.getApplId()), functionIDMap);
+//					//機能IDをキーとしてマップにレコードをセットする
+//					functionIDMap.put(StringUtil.trimRight(resultDTO.getFunctionId()), itemIDMap);
+//					//項目IDをキーとしてマップにレコードをセットする
+//					itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
+//					continue;
+//				}
+//
+//				if (resultDTO.getApplId().equals(applID) && !resultDTO.getFunctionId().equals(functionID)) {
+//					functionID = resultDTO.getFunctionId();
+//					itemIDMap = new HashMap<String, TcomblcmDTO>();
+//					//機能IDをキーとしてマップにレコードをセットする
+//					functionIDMap.put(StringUtil.trimRight(resultDTO.getFunctionId()), itemIDMap);
+//					//項目IDをキーとしてマップにレコードをセットする
+//					itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
+//					continue;
+//				}
+//
+//				//項目IDをキーとしてマップにレコードをセットする
+//				itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
+//			}
+//			tcomblcmMap = resultMap;
+//		}
+//	}
 	
 //	private void loadWorkerServiceData(){
 //		StatementDTO statementDTO = new StatementDTO();
@@ -310,26 +299,26 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 //		return serviceItems.toArray(new GroupServiceItemDTO[serviceItems.size()]);
 //	}
 
-	/**
-	 * ビジネスロジック設定マスターを取得する
-	 *
-	 * @param parameters パラメーター
-	 * @return キャッシュデータ
-	 */
-	private List<TcomblcmDTO> getTcomblcmData(
-			Object... parameters) {
-
-		List<TcomblcmDTO> resultDTOs = null;
-		if (parameters != null) {
-			//パラメーターでレコードを取得
-			resultDTOs = getAllTcomblcmInfo(parameters);
-		} else {
-			//全件取得
-			resultDTOs = getAllTcomblcmInfo();
-		}
-
-		return resultDTOs;
-	}
+//	/**
+//	 * ビジネスロジック設定マスターを取得する
+//	 *
+//	 * @param parameters パラメーター
+//	 * @return キャッシュデータ
+//	 */
+//	private List<TcomblcmDTO> getTcomblcmData(
+//			Object... parameters) {
+//
+//		List<TcomblcmDTO> resultDTOs = null;
+//		if (parameters != null) {
+//			//パラメーターでレコードを取得
+//			resultDTOs = getAllTcomblcmInfo(parameters);
+//		} else {
+//			//全件取得
+//			resultDTOs = getAllTcomblcmInfo();
+//		}
+//
+//		return resultDTOs;
+//	}
 	
 //	private List<VWorkerServiceItemsDTO> getGroupService(
 //			Object... parameters){
@@ -358,46 +347,46 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 //		return resultDTO;
 //	}
 	
-	/**
-	 * 
-	 *
-	 * @return 
-	 */
-	private CodeWithValueDTO[] getTcomblcmList() {
+//	/**
+//	 * 
+//	 *
+//	 * @return 
+//	 */
+//	private CodeWithValueDTO[] getTcomblcmList() {
+//
+//		CodeWithValueDTO[] codeWithValueDTOs = null;
+//
+//		if (tcomblcmMap == null || tcomblcmMap.isEmpty()) {
+//			loadTcomblcmData();
+//		}
+//		
+//		codeWithValueDTOs = new CodeWithValueDTO[tcomblcmMap.entrySet().size()];
+//		int i = 0;
+//		
+//		for(Map.Entry<String, Object> entry: tcomblcmMap.entrySet()) {
+//			CodeWithValueDTO codeWithValueDTO = new CodeWithValueDTO();
+//			codeWithValueDTO.setCode(entry.getKey());
+//			codeWithValueDTO.setValue(entry.getKey());
+//			codeWithValueDTOs[i] = codeWithValueDTO;
+//			i++;
+//		}
+//
+//		return codeWithValueDTOs;
+//	}
 
-		CodeWithValueDTO[] codeWithValueDTOs = null;
-
-		if (tcomblcmMap == null || tcomblcmMap.isEmpty()) {
-			loadTcomblcmData();
-		}
-		
-		codeWithValueDTOs = new CodeWithValueDTO[tcomblcmMap.entrySet().size()];
-		int i = 0;
-		
-		for(Map.Entry<String, Object> entry: tcomblcmMap.entrySet()) {
-			CodeWithValueDTO codeWithValueDTO = new CodeWithValueDTO();
-			codeWithValueDTO.setCode(entry.getKey());
-			codeWithValueDTO.setValue(entry.getKey());
-			codeWithValueDTOs[i] = codeWithValueDTO;
-			i++;
-		}
-
-		return codeWithValueDTOs;
-	}
-
-	/**
-	 * ビジネスロジック設定マスターを再作成する
-	 *
-	 */
-	private void refreshTcomblcmData() {
-		if (tcomblcmMap != null && !tcomblcmMap.isEmpty()) {
-			tcomblcmMap.clear();
-			loadTcomblcmData();
-		} else {
-			loadTcomblcmData();
-		}
-
-	}
+//	/**
+//	 * ビジネスロジック設定マスターを再作成する
+//	 *
+//	 */
+//	private void refreshTcomblcmData() {
+//		if (tcomblcmMap != null && !tcomblcmMap.isEmpty()) {
+//			tcomblcmMap.clear();
+//			loadTcomblcmData();
+//		} else {
+//			loadTcomblcmData();
+//		}
+//
+//	}
 	
 //	private void refreshGroupService() {
 //		if (workerServiceMap != null && !workerServiceMap.isEmpty()) {
@@ -427,43 +416,43 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 //		
 //	}
 
-	/**
-	 * すべてのビジネスロジック設定マスター情報を取得
-	 *
-	 * @param parameters	パラメーター
-	 *
-	 * @return	List<TcomblcmDTO>	ビジネスロジック設定マスター情報
-	 */
-	@SuppressWarnings("unchecked")
-	private List<TcomblcmDTO> getAllTcomblcmInfo(
-			Object... parameters) {
-		List<TcomblcmDTO> tcomblcmDTOs = null;
-
-		if (tcomblcmMap == null || tcomblcmMap.isEmpty()) {
-			loadTcomblcmData();
-		}
-
-		if (tcomblcmMap != null && !tcomblcmMap.isEmpty()) {
-			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
-			if (parameters != null && parameters.length > 1) {
-
-				List<TcomblcmDTO> resultDTOs = getTcomblcmInfoByApplicationID((HashMap<String, Object>) tcomblcmMap.get(parameters[0]),
-						getNextParameters(parameters));
-				if (CollectionUtil.isNotEmpty(resultDTOs)) {
-					//アプリケーションIDでレコードを取得
-					tcomblcmDTOs.addAll(resultDTOs);
-				}
-			} else {
-				Iterator<Map.Entry<String, Object>> resultIter = tcomblcmMap.entrySet().iterator();
-				while (resultIter.hasNext()) {
-					Map.Entry<String, Object> resultMap = resultIter.next();
-					tcomblcmDTOs.addAll(getTcomblcmInfoByApplicationID((HashMap<String, Object>) resultMap.getValue(), null));
-				}
-			}
-		}
-
-		return tcomblcmDTOs;
-	}
+//	/**
+//	 * すべてのビジネスロジック設定マスター情報を取得
+//	 *
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	List<TcomblcmDTO>	ビジネスロジック設定マスター情報
+//	 */
+//	@SuppressWarnings("unchecked")
+//	private List<TcomblcmDTO> getAllTcomblcmInfo(
+//			Object... parameters) {
+//		List<TcomblcmDTO> tcomblcmDTOs = null;
+//
+//		if (tcomblcmMap == null || tcomblcmMap.isEmpty()) {
+//			loadTcomblcmData();
+//		}
+//
+//		if (tcomblcmMap != null && !tcomblcmMap.isEmpty()) {
+//			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
+//			if (parameters != null && parameters.length > 1) {
+//
+//				List<TcomblcmDTO> resultDTOs = getTcomblcmInfoByApplicationID((HashMap<String, Object>) tcomblcmMap.get(parameters[0]),
+//						getNextParameters(parameters));
+//				if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//					//アプリケーションIDでレコードを取得
+//					tcomblcmDTOs.addAll(resultDTOs);
+//				}
+//			} else {
+//				Iterator<Map.Entry<String, Object>> resultIter = tcomblcmMap.entrySet().iterator();
+//				while (resultIter.hasNext()) {
+//					Map.Entry<String, Object> resultMap = resultIter.next();
+//					tcomblcmDTOs.addAll(getTcomblcmInfoByApplicationID((HashMap<String, Object>) resultMap.getValue(), null));
+//				}
+//			}
+//		}
+//
+//		return tcomblcmDTOs;
+//	}
 	
 //	private List<VWorkerServiceItemsDTO> getAllWorkerService(
 //			Object... parameters){
@@ -515,73 +504,73 @@ public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCa
 //		return cityInfoDTO;
 //	}
 
-	/**
-	 * アプリケーションIDで共通項目マスター情報を取得
-	 *
-	 * @param functionIDMap 	アプリケーションIDのマップ
-	 * @param parameters	パラメーター
-	 *
-	 * @return	List<TcomblcmDTO>	共通項目マスター情報
-	 */
-	@SuppressWarnings("unchecked")
-	private List<TcomblcmDTO> getTcomblcmInfoByApplicationID(
-			HashMap<String, Object> functionIDMap,
-			Object[] parameters) {
-		List<TcomblcmDTO> tcomblcmDTOs = null;
-		if (functionIDMap != null && !functionIDMap.isEmpty()) {
-			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
-			if (parameters != null && parameters.length > 1) {
+//	/**
+//	 * アプリケーションIDで共通項目マスター情報を取得
+//	 *
+//	 * @param functionIDMap 	アプリケーションIDのマップ
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	List<TcomblcmDTO>	共通項目マスター情報
+//	 */
+//	@SuppressWarnings("unchecked")
+//	private List<TcomblcmDTO> getTcomblcmInfoByApplicationID(
+//			HashMap<String, Object> functionIDMap,
+//			Object[] parameters) {
+//		List<TcomblcmDTO> tcomblcmDTOs = null;
+//		if (functionIDMap != null && !functionIDMap.isEmpty()) {
+//			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
+//			if (parameters != null && parameters.length > 1) {
+//
+//				List<TcomblcmDTO> resultDTOs = getTcomblcmDTOInfoByFunctionID((HashMap<String, TcomblcmDTO>) functionIDMap.get(parameters[0]),
+//						getNextParameters(parameters));
+//				if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//					//機能IDでレコードを取得
+//					tcomblcmDTOs.addAll(resultDTOs);
+//				}
+//			} else {
+//				Iterator<Map.Entry<String, Object>> comKey1Iter = functionIDMap.entrySet().iterator();
+//				while (comKey1Iter.hasNext()) {
+//					Map.Entry<String, Object> key2Map = comKey1Iter.next();
+//					tcomblcmDTOs.addAll(getTcomblcmDTOInfoByFunctionID((HashMap<String, TcomblcmDTO>) key2Map.getValue(), null));
+//				}
+//			}
+//
+//		}
+//		return tcomblcmDTOs;
+//	}
 
-				List<TcomblcmDTO> resultDTOs = getTcomblcmDTOInfoByFunctionID((HashMap<String, TcomblcmDTO>) functionIDMap.get(parameters[0]),
-						getNextParameters(parameters));
-				if (CollectionUtil.isNotEmpty(resultDTOs)) {
-					//機能IDでレコードを取得
-					tcomblcmDTOs.addAll(resultDTOs);
-				}
-			} else {
-				Iterator<Map.Entry<String, Object>> comKey1Iter = functionIDMap.entrySet().iterator();
-				while (comKey1Iter.hasNext()) {
-					Map.Entry<String, Object> key2Map = comKey1Iter.next();
-					tcomblcmDTOs.addAll(getTcomblcmDTOInfoByFunctionID((HashMap<String, TcomblcmDTO>) key2Map.getValue(), null));
-				}
-			}
-
-		}
-		return tcomblcmDTOs;
-	}
-
-	/**
-	 * 機能IDで共通項目マスター情報を取得
-	 *
-	 * @param itemIDMap	 機能IDのマップ
-	 * @param parameters	パラメーター
-	 *
-	 * @return	List<TcomblcmDTO>	共通項目マスター情報
-	 */
-	private List<TcomblcmDTO> getTcomblcmDTOInfoByFunctionID(
-			HashMap<String, TcomblcmDTO> itemIDMap,
-			Object[] parameters) {
-		List<TcomblcmDTO> tcomblcmDTOs = null;
-		if (itemIDMap != null && !itemIDMap.isEmpty()) {
-			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
-			if (parameters != null && parameters.length == 1) {
-
-				TcomblcmDTO resultDTO = itemIDMap.get(parameters[0]);
-				if (resultDTO != null) {
-					//項目IDでレコードを取得
-					tcomblcmDTOs.add(resultDTO);
-				}
-			} else {
-				Iterator<Map.Entry<String, TcomblcmDTO>> dtoIter = itemIDMap.entrySet().iterator();
-				while (dtoIter.hasNext()) {
-					Map.Entry<String, TcomblcmDTO> key3Map = dtoIter.next();
-					TcomblcmDTO resultDTO = key3Map.getValue();
-					tcomblcmDTOs.add(resultDTO);
-				}
-			}
-
-		}
-		return tcomblcmDTOs;
-	}
+//	/**
+//	 * 機能IDで共通項目マスター情報を取得
+//	 *
+//	 * @param itemIDMap	 機能IDのマップ
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	List<TcomblcmDTO>	共通項目マスター情報
+//	 */
+//	private List<TcomblcmDTO> getTcomblcmDTOInfoByFunctionID(
+//			HashMap<String, TcomblcmDTO> itemIDMap,
+//			Object[] parameters) {
+//		List<TcomblcmDTO> tcomblcmDTOs = null;
+//		if (itemIDMap != null && !itemIDMap.isEmpty()) {
+//			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
+//			if (parameters != null && parameters.length == 1) {
+//
+//				TcomblcmDTO resultDTO = itemIDMap.get(parameters[0]);
+//				if (resultDTO != null) {
+//					//項目IDでレコードを取得
+//					tcomblcmDTOs.add(resultDTO);
+//				}
+//			} else {
+//				Iterator<Map.Entry<String, TcomblcmDTO>> dtoIter = itemIDMap.entrySet().iterator();
+//				while (dtoIter.hasNext()) {
+//					Map.Entry<String, TcomblcmDTO> key3Map = dtoIter.next();
+//					TcomblcmDTO resultDTO = key3Map.getValue();
+//					tcomblcmDTOs.add(resultDTO);
+//				}
+//			}
+//
+//		}
+//		return tcomblcmDTOs;
+//	}
 
 }

@@ -1,0 +1,578 @@
+package com.maxiaohua.genealogy.main.biz.com.impl;
+
+import java.util.HashMap;
+
+import com.maxiaohua.genealogy.fw.core.biz.AbstractMasterCache;
+import com.maxiaohua.genealogy.main.biz.com.HbMasterCache;
+import com.maxiaohua.genealogy.main.biz.com.dto.CodeWithValueDTO;
+import com.maxiaohua.genealogy.main.biz.constant.MasterCacheConstant;
+
+/**
+ * Mase数据缓存实现逻辑
+ *
+ * 変更履歴
+ * REV.         変更日付           変更者              変更内容
+ * -------      ---------------    ----------------    ------------------
+ *
+ */
+public class HbMasterCacheImpl extends AbstractMasterCache implements HbMasterCache, MasterCacheConstant {
+
+	/** 
+	 * 业务逻辑设定mast的Map
+	 */
+	private static HashMap<String, Object> tcomblcmMap = null;
+	
+//	/** 
+//	 * 城市区域规划mast的Map
+//	 */
+//	private static HashMap<String, CityInfoDTO> cityAreaMap = null;
+//	
+//	/** 
+//	 * 工作组服务项目的Map
+//	 */
+//	private static HashMap<Integer, VWorkerServiceItemsDTO> workerServiceMap = null;
+
+	/* (non-Javadoc)
+	 * @see com.maxiaohua.genealogy.main.biz.com.HbMasterCache#getMasterData(com.maxiaohua.genealogy.main.biz.com.HbMasterCache.MASTER_NAME, java.lang.Object[])
+	 */
+//	@SuppressWarnings("unchecked")
+	@Override
+	public <E> E getMasterData(
+			MASTER_NAME name,
+			Object... parameters) {
+
+		E result = null;
+
+		switch (name) {
+//		case TCOMBLCM:
+//			result = (E) getTcomblcmData(parameters);
+//			break;
+//		case CITYAREA:
+//			result = (E) getCityAreaData(parameters);
+//			break;
+//		case GROUP_SERVICE:
+//			result = (E) getGroupService(parameters);
+//			break;
+		default:
+			break;
+		}
+		return result;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.maxiaohua.genealogy.main.biz.com.HbMasterCache#refreshMasterData(com.maxiaohua.genealogy.main.biz.com.HbMasterCache.MASTER_NAME)
+	 */
+	@Override
+	public void refreshMasterData(
+			MASTER_NAME name) {
+
+		switch (name) {
+//		case TCOMBLCM:
+//			refreshTcomblcmData();
+//			break;
+//		case CITYAREA:
+//			refreshCityAreaData();
+//			break;
+//		case GROUP_SERVICE:
+//			refreshGroupService();
+//			break;
+		default:
+			break;
+		}
+
+		return;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.maxiaohua.genealogy.main.biz.com.HbMasterCache#loadMasterData(com.maxiaohua.genealogy.main.biz.com.HbMasterCache.MASTER_NAME)
+	 */
+	@Override
+	public void loadMasterData(
+			MASTER_NAME name) {
+		switch (name) {
+//		case TCOMBLCM:
+//			loadTcomblcmData();
+//			break;
+//		case GROUP_SERVICE:
+//			loadWorkerServiceData();
+//			break;
+		default:
+			break;
+		}
+		return;
+	}
+	
+	public CodeWithValueDTO[] getMasterList(
+			MasterCacheConstant.MASTER_NAME name){
+		CodeWithValueDTO[] result = null;
+
+		switch (name) {
+//		//ビジネスロジック設定マスターの場合
+//		case TCOMBLCM:
+//			result = getTcomblcmList();
+//			break;
+		default:
+			break;
+		}
+		return result;
+	}
+
+//	/**
+//	 * 次のパラメーターを取得
+//	 *
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	Object[]	次のパラメーター
+//	 */
+//	private Object[] getNextParameters(
+//			Object[] parameters) {
+//		Object[] nextParameters = null;
+//		if (parameters != null && parameters.length >= 2) {
+//			nextParameters = new Object[parameters.length - 1];
+//			for (int i = 1; i < parameters.length; i++) {
+//				nextParameters[i - 1] = parameters[i];
+//			}
+//		}
+//		return nextParameters;
+//	}
+
+//	/**
+//	 * ビジネスロジック設定マスターをロードする
+//	 *
+//	 */
+//	private void loadTcomblcmData() {
+//		StatementDTO statementDTO = new StatementDTO();
+//		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_APPL_ID, null);
+//		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_FUNCTION_ID, null);
+//		StatementUtil.addOrderBy(statementDTO, TcomblcmDTO.COLUMN_ITEM_ID, null);
+//		TcomblcmDTO tcomblcmDTO = new TcomblcmDTO();
+//		tcomblcmDTO.set_orderByCondition(statementDTO.getSQLOrderByStatement());
+//		//ビジネスロジック設定マスター情報を取得
+//		List<TcomblcmDTO> resultDTOs = queryDAO.queryForObjectList(TcomblcmDTO.EQUAL_SEARCH, tcomblcmDTO);
+//		if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//			HashMap<String, Object> resultMap = new HashMap<String, Object>();
+//			HashMap<String, Object> functionIDMap = null;
+//			HashMap<String, TcomblcmDTO> itemIDMap = null;
+//			String applID = null;
+//			String functionID = null;
+//			for (TcomblcmDTO resultDTO : resultDTOs) {
+//				if (!resultDTO.getApplId().equals(applID)) {
+//					applID = resultDTO.getApplId();
+//					functionIDMap = new HashMap<String, Object>();
+//					functionID = resultDTO.getFunctionId();
+//					itemIDMap = new HashMap<String, TcomblcmDTO>();
+//					//アプリケーションIDをキーとしてマップにレコードをセットする
+//					resultMap.put(StringUtil.trimRight(resultDTO.getApplId()), functionIDMap);
+//					//機能IDをキーとしてマップにレコードをセットする
+//					functionIDMap.put(StringUtil.trimRight(resultDTO.getFunctionId()), itemIDMap);
+//					//項目IDをキーとしてマップにレコードをセットする
+//					itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
+//					continue;
+//				}
+//
+//				if (resultDTO.getApplId().equals(applID) && !resultDTO.getFunctionId().equals(functionID)) {
+//					functionID = resultDTO.getFunctionId();
+//					itemIDMap = new HashMap<String, TcomblcmDTO>();
+//					//機能IDをキーとしてマップにレコードをセットする
+//					functionIDMap.put(StringUtil.trimRight(resultDTO.getFunctionId()), itemIDMap);
+//					//項目IDをキーとしてマップにレコードをセットする
+//					itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
+//					continue;
+//				}
+//
+//				//項目IDをキーとしてマップにレコードをセットする
+//				itemIDMap.put(StringUtil.trimRight(resultDTO.getItemId()), resultDTO);
+//			}
+//			tcomblcmMap = resultMap;
+//		}
+//	}
+	
+//	private void loadWorkerServiceData(){
+//		StatementDTO statementDTO = new StatementDTO();
+//		StatementUtil.addOrderBy(statementDTO, VWorkerServiceItemsDTO.COLUMN_GROUP_SERVICE_ID, null);
+//		VWorkerServiceItemsDTO workerServiceDTO = new VWorkerServiceItemsDTO();
+//		workerServiceDTO.set_orderByCondition(statementDTO.getSQLOrderByStatement());
+//		//
+//		List<VWorkerServiceItemsDTO> resultDTOs = queryDAO.queryForObjectList(VWorkerServiceItemsDTO.EQUAL_SEARCH, workerServiceDTO);
+//		if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//			HashMap<Integer, VWorkerServiceItemsDTO> resultMap = new HashMap<Integer, VWorkerServiceItemsDTO>();
+//			
+//			for (VWorkerServiceItemsDTO resultDTO : resultDTOs) {
+//				resultMap.put(resultDTO.getGroupServiceId(), resultDTO);
+//			}
+//			workerServiceMap = resultMap;
+//		}
+//	}
+	
+//	private void loadCityAreaData(String cityCode) {
+//
+//		// 城市中心点
+//		CitiesDTO citiesSearch = new CitiesDTO();
+//		citiesSearch.setCityCode(cityCode);
+//		CitiesDTO cityDto = this.queryDAO.queryForObject(CitiesDTO.EQUAL_SEARCH, citiesSearch);
+//		
+//		if(cityDto == null){
+//			return;
+//		}
+//		
+//		RegionalDoubleXY regionalXY = 
+//				GISUtil.millerXY(cityDto.getLongitude(), cityDto.getLatitudue());
+//		
+//		
+//		// 城市服务区
+//		StatementDTO statementDTO = new StatementDTO();
+//		StatementUtil.addOrderBy(statementDTO, VCityAreaDTO.COLUMN_CITY_AREA_ID, null);
+//		StatementUtil.addOrderBy(statementDTO, VCityAreaDTO.COLUMN_SORT, null);
+//		VCityAreaDTO cityareaDTO = new VCityAreaDTO();
+//		cityareaDTO.setcitycode(cityCode);
+//		cityareaDTO.set_orderByCondition(statementDTO.getSQLOrderByStatement());
+//		//城市区域mast数据情报取得
+//		List<VCityAreaDTO> resultDTOs = queryDAO.queryForObjectList(VCityAreaDTO.EQUAL_SEARCH, cityareaDTO);
+//		
+//		if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//			HashMap<String, CityInfoDTO> resultMap = 
+//					new HashMap<String, CityInfoDTO>();
+//			CityInfoDTO cityInfo = new CityInfoDTO();
+//			cityInfo.setCityCode(cityCode);
+//			
+//
+//			cityInfo.setCenterLongitude(regionalXY.getX());
+//			cityInfo.setCenterLatitudue(regionalXY.getY());
+//			
+//			Integer cityAreaID = null;
+//			List<CityAreaDTO> cityAreas = new ArrayList<CityAreaDTO>();
+//			Polygon gpsGon = null;
+//			CityAreaDTO cityArea = null;
+//			for (VCityAreaDTO resultDTO : resultDTOs) {
+//				if(cityAreaID == null || cityAreaID != resultDTO.getCityAreaID()){
+//					if(cityArea != null){
+//						cityArea.setGpsGon(gpsGon);
+//						cityAreas.add(cityArea);
+//					}
+//					cityArea = new CityAreaDTO();
+//					cityArea.setCityAreaID(resultDTO.getCityAreaID());
+//					cityArea.setWorkerGroupID(resultDTO.getWorkerGroupID());
+//					cityArea.setOpenFlg(resultDTO.getOpenFlg());
+//					cityArea.setCeiling(resultDTO.getCeiling());
+//					cityArea.setNeed(resultDTO.getNeed());
+//					cityArea.setOrderCount(resultDTO.getOrderCount());
+//					cityArea.setServiceItems(getServiceItems(resultDTO.getWorkerGroupID()));
+//					gpsGon = new Polygon();
+//				}
+//				
+//				RegionalIntegerXY regionalIntegerXY = 
+//						GISUtil.millerXY(
+//								resultDTO.getLongitude(), 
+//								resultDTO.getLatitude(),
+//								regionalXY.getX(),
+//								regionalXY.getY());
+//				gpsGon.addPoint(regionalIntegerXY.getX(), regionalIntegerXY.getY());
+//				
+//				cityAreaID = resultDTO.getCityAreaID();
+//			}
+//			
+//			if(cityArea != null){
+//				cityArea.setGpsGon(gpsGon);
+//				cityAreas.add(cityArea);
+//			}
+//			
+//			cityInfo.setCityAreaDTOArray(cityAreas.toArray(new CityAreaDTO[cityAreas.size()]));
+//			
+//			resultMap.put(cityCode, cityInfo);
+//			cityAreaMap = resultMap;
+//		}
+//	}
+//
+//	private GroupServiceItemDTO[] getServiceItems(Integer workerGroupID) {
+//		VWorkerServiceItemsDTO workerserviceitemsDTO = new VWorkerServiceItemsDTO();
+//		List<GroupServiceItemDTO> serviceItems = new ArrayList<GroupServiceItemDTO>();
+//		workerserviceitemsDTO.setWorkerGroupID(workerGroupID);
+//		List<VWorkerServiceItemsDTO> workerServiceItems = 
+//				queryDAO.queryForObjectList(VWorkerServiceItemsDTO.EQUAL_SEARCH, workerserviceitemsDTO);
+//		for(VWorkerServiceItemsDTO vServiceItemDTO : workerServiceItems){
+//			GroupServiceItemDTO serviceItemDTO = new GroupServiceItemDTO();
+//			serviceItemDTO.setGroupServiceID(vServiceItemDTO.getGroupServiceId());
+//			serviceItemDTO.setServiceItemID(vServiceItemDTO.getServiceItemsID());
+//			serviceItemDTO.setName(vServiceItemDTO.getItemName());
+//			serviceItemDTO.setPrice(vServiceItemDTO.getPrice().doubleValue());
+//			serviceItemDTO.setExplain(vServiceItemDTO.getComment());
+//			serviceItems.add(serviceItemDTO);
+//		}
+//		return serviceItems.toArray(new GroupServiceItemDTO[serviceItems.size()]);
+//	}
+
+//	/**
+//	 * ビジネスロジック設定マスターを取得する
+//	 *
+//	 * @param parameters パラメーター
+//	 * @return キャッシュデータ
+//	 */
+//	private List<TcomblcmDTO> getTcomblcmData(
+//			Object... parameters) {
+//
+//		List<TcomblcmDTO> resultDTOs = null;
+//		if (parameters != null) {
+//			//パラメーターでレコードを取得
+//			resultDTOs = getAllTcomblcmInfo(parameters);
+//		} else {
+//			//全件取得
+//			resultDTOs = getAllTcomblcmInfo();
+//		}
+//
+//		return resultDTOs;
+//	}
+	
+//	private List<VWorkerServiceItemsDTO> getGroupService(
+//			Object... parameters){
+//		List<VWorkerServiceItemsDTO> resultDTOs = null;
+//		if (parameters != null) {
+//			//パラメーターでレコードを取得
+//			resultDTOs = getAllWorkerService(parameters);
+//		} else {
+//			//全件取得
+//			resultDTOs = getAllWorkerService();
+//		}
+//
+//		return resultDTOs;
+//	}
+//	
+//	private CityInfoDTO getCityAreaData(
+//			Object... parameters) {
+//		CityInfoDTO resultDTO = null;
+//		if (parameters != null) {
+//			//パラメーターでレコードを取得
+//			resultDTO = getCityAreaInfo(parameters);
+//		} else {
+//			//全件取得
+//			resultDTO = getCityAreaInfo();
+//		}
+//		return resultDTO;
+//	}
+	
+//	/**
+//	 * 
+//	 *
+//	 * @return 
+//	 */
+//	private CodeWithValueDTO[] getTcomblcmList() {
+//
+//		CodeWithValueDTO[] codeWithValueDTOs = null;
+//
+//		if (tcomblcmMap == null || tcomblcmMap.isEmpty()) {
+//			loadTcomblcmData();
+//		}
+//		
+//		codeWithValueDTOs = new CodeWithValueDTO[tcomblcmMap.entrySet().size()];
+//		int i = 0;
+//		
+//		for(Map.Entry<String, Object> entry: tcomblcmMap.entrySet()) {
+//			CodeWithValueDTO codeWithValueDTO = new CodeWithValueDTO();
+//			codeWithValueDTO.setCode(entry.getKey());
+//			codeWithValueDTO.setValue(entry.getKey());
+//			codeWithValueDTOs[i] = codeWithValueDTO;
+//			i++;
+//		}
+//
+//		return codeWithValueDTOs;
+//	}
+
+//	/**
+//	 * ビジネスロジック設定マスターを再作成する
+//	 *
+//	 */
+//	private void refreshTcomblcmData() {
+//		if (tcomblcmMap != null && !tcomblcmMap.isEmpty()) {
+//			tcomblcmMap.clear();
+//			loadTcomblcmData();
+//		} else {
+//			loadTcomblcmData();
+//		}
+//
+//	}
+	
+//	private void refreshGroupService() {
+//		if (workerServiceMap != null && !workerServiceMap.isEmpty()) {
+//			workerServiceMap.clear();
+//			loadWorkerServiceData();
+//		} else {
+//			loadWorkerServiceData();
+//		}
+//
+//	}
+//	
+//	private void refreshCityAreaData() {
+//		if (cityAreaMap != null && !cityAreaMap.isEmpty()) {
+//			List<String> cities = new ArrayList<String>();
+//			Iterator<?> iter = cityAreaMap.entrySet().iterator();
+//			while(iter.hasNext()){
+//				@SuppressWarnings("unchecked")
+//				Map.Entry<String, VCityAreaDTO> entry = (Map.Entry<String, VCityAreaDTO>)iter.next();
+//				cities.add(entry.getKey());
+//			}
+//			cityAreaMap.clear();
+//			
+//			for(String str:cities){
+//				loadCityAreaData(str);
+//			}
+//		}
+//		
+//	}
+
+//	/**
+//	 * すべてのビジネスロジック設定マスター情報を取得
+//	 *
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	List<TcomblcmDTO>	ビジネスロジック設定マスター情報
+//	 */
+//	@SuppressWarnings("unchecked")
+//	private List<TcomblcmDTO> getAllTcomblcmInfo(
+//			Object... parameters) {
+//		List<TcomblcmDTO> tcomblcmDTOs = null;
+//
+//		if (tcomblcmMap == null || tcomblcmMap.isEmpty()) {
+//			loadTcomblcmData();
+//		}
+//
+//		if (tcomblcmMap != null && !tcomblcmMap.isEmpty()) {
+//			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
+//			if (parameters != null && parameters.length > 1) {
+//
+//				List<TcomblcmDTO> resultDTOs = getTcomblcmInfoByApplicationID((HashMap<String, Object>) tcomblcmMap.get(parameters[0]),
+//						getNextParameters(parameters));
+//				if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//					//アプリケーションIDでレコードを取得
+//					tcomblcmDTOs.addAll(resultDTOs);
+//				}
+//			} else {
+//				Iterator<Map.Entry<String, Object>> resultIter = tcomblcmMap.entrySet().iterator();
+//				while (resultIter.hasNext()) {
+//					Map.Entry<String, Object> resultMap = resultIter.next();
+//					tcomblcmDTOs.addAll(getTcomblcmInfoByApplicationID((HashMap<String, Object>) resultMap.getValue(), null));
+//				}
+//			}
+//		}
+//
+//		return tcomblcmDTOs;
+//	}
+	
+//	private List<VWorkerServiceItemsDTO> getAllWorkerService(
+//			Object... parameters){
+//		List<VWorkerServiceItemsDTO> workerService = null;
+//		
+//		if (workerServiceMap == null || workerServiceMap.isEmpty()) {
+//			loadWorkerServiceData();
+//		}
+//
+//		if (workerServiceMap != null && !workerServiceMap.isEmpty()) {
+//			workerService = new ArrayList<VWorkerServiceItemsDTO>();
+//			if (parameters != null) {
+//				workerService.add(workerServiceMap.get(parameters[0]));
+//			} else {
+//				Iterator<Map.Entry<Integer, VWorkerServiceItemsDTO>> resultIter = 
+//						workerServiceMap.entrySet().iterator();
+//				while (resultIter.hasNext()) {
+//					Map.Entry<Integer, VWorkerServiceItemsDTO> resultMap = resultIter.next();
+//					workerService.add(resultMap.getValue());
+//				}
+//			}
+//		}
+//		
+//		return workerService;
+//	}
+//	
+//	private CityInfoDTO getCityAreaInfo(
+//			Object... parameters) {
+//		CityInfoDTO cityInfoDTO = null;
+//		if (cityAreaMap == null || cityAreaMap.isEmpty()) {
+//			if (parameters != null && parameters.length >= 1) {
+//				loadCityAreaData(parameters[0].toString());
+//			}
+//		}
+//
+//		if (cityAreaMap != null && !cityAreaMap.isEmpty()) {
+//			if (parameters != null && parameters.length >= 1) {
+//				if(cityAreaMap.containsKey(parameters[0].toString())){
+//					cityInfoDTO = cityAreaMap.get(parameters[0].toString());
+//				}
+//				else{
+//					loadCityAreaData(parameters[0].toString());
+//					if(cityAreaMap.containsKey(parameters[0].toString())){
+//						cityInfoDTO = cityAreaMap.get(parameters[0].toString());
+//					}
+//				}
+//			}
+//		}
+//		return cityInfoDTO;
+//	}
+
+//	/**
+//	 * アプリケーションIDで共通項目マスター情報を取得
+//	 *
+//	 * @param functionIDMap 	アプリケーションIDのマップ
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	List<TcomblcmDTO>	共通項目マスター情報
+//	 */
+//	@SuppressWarnings("unchecked")
+//	private List<TcomblcmDTO> getTcomblcmInfoByApplicationID(
+//			HashMap<String, Object> functionIDMap,
+//			Object[] parameters) {
+//		List<TcomblcmDTO> tcomblcmDTOs = null;
+//		if (functionIDMap != null && !functionIDMap.isEmpty()) {
+//			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
+//			if (parameters != null && parameters.length > 1) {
+//
+//				List<TcomblcmDTO> resultDTOs = getTcomblcmDTOInfoByFunctionID((HashMap<String, TcomblcmDTO>) functionIDMap.get(parameters[0]),
+//						getNextParameters(parameters));
+//				if (CollectionUtil.isNotEmpty(resultDTOs)) {
+//					//機能IDでレコードを取得
+//					tcomblcmDTOs.addAll(resultDTOs);
+//				}
+//			} else {
+//				Iterator<Map.Entry<String, Object>> comKey1Iter = functionIDMap.entrySet().iterator();
+//				while (comKey1Iter.hasNext()) {
+//					Map.Entry<String, Object> key2Map = comKey1Iter.next();
+//					tcomblcmDTOs.addAll(getTcomblcmDTOInfoByFunctionID((HashMap<String, TcomblcmDTO>) key2Map.getValue(), null));
+//				}
+//			}
+//
+//		}
+//		return tcomblcmDTOs;
+//	}
+
+//	/**
+//	 * 機能IDで共通項目マスター情報を取得
+//	 *
+//	 * @param itemIDMap	 機能IDのマップ
+//	 * @param parameters	パラメーター
+//	 *
+//	 * @return	List<TcomblcmDTO>	共通項目マスター情報
+//	 */
+//	private List<TcomblcmDTO> getTcomblcmDTOInfoByFunctionID(
+//			HashMap<String, TcomblcmDTO> itemIDMap,
+//			Object[] parameters) {
+//		List<TcomblcmDTO> tcomblcmDTOs = null;
+//		if (itemIDMap != null && !itemIDMap.isEmpty()) {
+//			tcomblcmDTOs = new ArrayList<TcomblcmDTO>();
+//			if (parameters != null && parameters.length == 1) {
+//
+//				TcomblcmDTO resultDTO = itemIDMap.get(parameters[0]);
+//				if (resultDTO != null) {
+//					//項目IDでレコードを取得
+//					tcomblcmDTOs.add(resultDTO);
+//				}
+//			} else {
+//				Iterator<Map.Entry<String, TcomblcmDTO>> dtoIter = itemIDMap.entrySet().iterator();
+//				while (dtoIter.hasNext()) {
+//					Map.Entry<String, TcomblcmDTO> key3Map = dtoIter.next();
+//					TcomblcmDTO resultDTO = key3Map.getValue();
+//					tcomblcmDTOs.add(resultDTO);
+//				}
+//			}
+//
+//		}
+//		return tcomblcmDTOs;
+//	}
+
+}

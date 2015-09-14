@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;com.maxiaohua.genealogy.fw.web&apos;&#x0A;- Original project: &apos;com.maxiaohua.genealogy.fw.web&apos;&#x0A;- Original element: &apos;com.maxiaohua.genealogy.fw.web.interceptor.impl.LDAPInterceptor.java&apos;" description="Delete element" element1="/src&lt;com.maxiaohua.genealogy.fw.web.interceptor.impl{LDAPInterceptor.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1442214492112" subPackages="false" version="1.0"/>
+</session>

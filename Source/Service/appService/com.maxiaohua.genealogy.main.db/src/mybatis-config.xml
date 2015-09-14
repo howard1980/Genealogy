@@ -50,6 +50,5 @@
 		<mapper resource="sql/tbl/T15_NOTICE_ATTENTION.xml" />
 		<mapper resource="sql/tbl/T16_NOTICE_COMMENT.xml" />
 		<mapper resource="sql/tbl/T17_PER_QUESTION.xml" />
-		<mapper resource="sql/tbl/TCOMBLCM.xml" />
 	</mappers>
 </configuration>

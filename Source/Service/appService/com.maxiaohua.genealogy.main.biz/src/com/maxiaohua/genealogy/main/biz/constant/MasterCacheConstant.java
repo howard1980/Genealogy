@@ -14,42 +14,42 @@ public interface MasterCacheConstant {
 	* MASTER_NAME 
 	*/
 	public static enum MASTER_NAME {
-		/**
-		* 业务逻辑设定
-		*/
-		TCOMBLCM {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "TCOMBLCM";
-			}
-		},
-		/**
-		* 城市区域
-		*/
-		CITYAREA {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "CITYAREA";
-			}
-		},
-		/**
-		* 工作组服务内容
-		*/
-		GROUP_SERVICE {
-			/* (non-Javadoc)
-			 * @see java.lang.Enum#toString()
-			 */
-			@Override
-			public String toString() {
-				return "GROUP_SERVICE";
-			}
-		},
+//		/**
+//		* 业务逻辑设定
+//		*/
+//		TCOMBLCM {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "TCOMBLCM";
+//			}
+//		},
+//		/**
+//		* 城市区域
+//		*/
+//		CITYAREA {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "CITYAREA";
+//			}
+//		},
+//		/**
+//		* 工作组服务内容
+//		*/
+//		GROUP_SERVICE {
+//			/* (non-Javadoc)
+//			 * @see java.lang.Enum#toString()
+//			 */
+//			@Override
+//			public String toString() {
+//				return "GROUP_SERVICE";
+//			}
+//		},
 //		/**
 //		* 检查字典
 //		*/

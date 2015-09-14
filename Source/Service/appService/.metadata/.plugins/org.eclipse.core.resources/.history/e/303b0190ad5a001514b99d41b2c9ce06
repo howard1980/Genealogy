@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="false"/>
+	</settings>
+	<typeHandlers>
+		<typeHandler javaType="java.sql.Blob" handler="com.maxiaohua.genealogy.fw.core.dao.lob.ex.CISBlobTypeHandler"/>
+		<typeHandler javaType="java.sql.Clob" handler="com.maxiaohua.genealogy.fw.core.dao.lob.ex.CISClobTypeHandler"/>
+	</typeHandlers>
+	<environments default="product">
+		<environment id="product">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/GenealogyDataSource" />
+			</dataSource>
+		</environment>
+
+		<environment id="refer">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/GenealogyDataSourceRefer" />
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<!-- Common -->
+		<mapper resource="sql/cmt/comm.DBConnectionCheck.xml" />
+		<!-- Customize -->
+		<mapper resource="sql/cmt/custom.xml" />
+		<!-- Automatic generation -->
+		<mapper resource="sql/tbl/M01_COMMON.xml" />
+		<mapper resource="sql/tbl/M02_SYSTEM_VERSION.xml" />
+		<mapper resource="sql/tbl/T01_GENEALOGY.xml" />
+		<mapper resource="sql/tbl/T02_PERSONAL.xml" />
+		<mapper resource="sql/tbl/T03_GEN_MEMBER.xml" />
+		<mapper resource="sql/tbl/T04_GEN_HISTORY.xml" />
+		<mapper resource="sql/tbl/T05_GEN_HISTORY_INFO.xml" />
+		<mapper resource="sql/tbl/T06_PER_HISTORY.xml" />
+		<mapper resource="sql/tbl/T07_PER_SET.xml" />
+		<mapper resource="sql/tbl/T08_PER_PUSH.xml" />
+		<mapper resource="sql/tbl/T09_PER_HIS_STREAM.xml" />
+		<mapper resource="sql/tbl/T10_PER_STREAM.xml" />
+		<mapper resource="sql/tbl/T11_PER_SPOUSE.xml" />
+		<mapper resource="sql/tbl/T12_PER_HIS_COMMENT.xml" />
+		<mapper resource="sql/tbl/T13_NOTICE.xml" />
+		<mapper resource="sql/tbl/T14_NOTICE_PER.xml" />
+		<mapper resource="sql/tbl/T15_NOTICE_ATTENTION.xml" />
+		<mapper resource="sql/tbl/T16_NOTICE_COMMENT.xml" />
+		<mapper resource="sql/tbl/T17_PER_QUESTION.xml" />
+		<mapper resource="sql/tbl/TCOMBLCM.xml" />
+	</mappers>
+</configuration>
